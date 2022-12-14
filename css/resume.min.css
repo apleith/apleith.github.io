@@ -4,11 +4,23 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Changa&display=swap');
+
+
+:root{
+	--c: #088;
+	--m: #808;
+	--y: #880;
+	--dg: #222;
+	--lg: #bbb;
+	--ca: "Changa";
+	--ps2: "Press Start 2P";
+}
+
 body{
-	font-family: PT Sans "PT Sans regular";
-	padding-top:54px;
-	color:#000000;
-	background-color: #ffffff
+	font-family: var(--ca);
+	color: var(--lg);
+	background-color: var(--dg)
 }
 
 @media (min-width:992px){
@@ -20,40 +32,54 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6{
-	font-family: Minecraft;
+	font-family: var(--ps2);
 	font-weight:700;
 	text-transform:uppercase;
-	color:#000000
 }
 
 h1{
-	font-size:6rem;
-	line-height:5.5rem
+	font-size:6.5rem;
+	line-height:5.5rem;
+	color: var(--c);
 }
 
 h2{
-	font-size:3.5rem
+	font-size:3.5rem;
+	color: var(--c);
+}
+
+h3 {
+	color: var(--m);
+}
+
+h6 {
+	color: var(--y);
+}
+
+ul li .author{
+	color: var(--c);
+	font-weight: 900;
 }
 
 .d-block{
-	font-family: Minecraft;
+	font-family: var(--ps2);
 	color: #555555;
 }
 
 .subheading{
 	text-transform:uppercase;
 	font-weight:500;
-	font-family: Minecraft;
-	font-size:1.2rem;
-	color: #555555
+	font-family: var(--ps2);
+	font-size:1rem;
+	color:  var(--y);
 }
 
 .list-social-icons a{
-	color:#000000
+	color: var(--c);
 }
 
 .list-social-icons a:hover{
-	color:#ff0000
+	color: var(--m);
 }
 
 .list-social-icons a .fa-lg{
@@ -64,23 +90,31 @@ h2{
 	font-size:3rem;
 }
 
+.list-inline-item {
+	color: var(--lg);
+}
+
+.list-inline-item:hover {
+	color: var(--m);
+}
+
 #sideNav .list-icons .list-inline-item i:hover{
-	color:#ff0000
+	color: var(--m);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link{
-	font-weight:600;
+	font-weight: 600;
 	text-transform:uppercase;
-	font-family: Minecraft;
-	color: #000000
+	font-family:  var(--ps2);
+	color: var(--lg);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link:hover{
-	color: #ff0000
+	color: var(--m);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link:focus{
-	color: #ff0000
+	color: var(--m);
 }
 
 @media (min-width:992px){
@@ -123,7 +157,7 @@ h2{
 }
 
 section.resume-section{
-	border-bottom:1px solid #ffffff;
+	border-bottom:1px solid  var(--lg);
 	padding-top:5rem!important;
 	padding-bottom:5rem!important
 }
@@ -149,17 +183,18 @@ section.resume-section .resume-item .resume-date{
 }
 
 .bg-primary{
-	background-color:#ffffff!important
+	background-color: var(--dg)!important
 }
 
 .text-primary{
-	color:#000000!important
+	color: var(--m) !important;
 }
 
 a{
-	color:#000000
+	color: var(--lg);
 }
 
 a:active,a:focus,a:hover{
-	color:#ff0000
+	color: var(--m);
+	text-decoration: none;
 }
