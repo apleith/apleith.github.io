@@ -1,0 +1,34 @@
+.container{
+	display: grid;
+	min-width: 540px;
+}
+
+.images-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.profile-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: -.5em;
+}
+
+.link-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2em;
+	border: 1px solid #eee;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0;
+}
+
+h6 {
+	font-size: .75em;
+	padding-top: .5em
+}
