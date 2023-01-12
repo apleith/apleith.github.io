@@ -1,6 +1,7 @@
-.container{
+section {
 	display: grid;
-	min-width: 540px;
+	width: 480px;
+	margin: auto;
 }
 
 .images-div {
