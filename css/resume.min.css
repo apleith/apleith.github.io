@@ -4,17 +4,17 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Changa&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Changa&display=swap');
 
 
 :root{
-	--c: #088;
-	--m: #808;
-	--y: #880;
-	--dg: #222;
-	--lg: #bbb;
+	--c: #025474;
+	--m: #eb943e;
+	--y: #4b4f5f;
+	--dg: #e8d6b9;
+	--lg: #5c544e;
 	--ca: "Changa";
-	--ps2: "Press Start 2P";
+	--ps2: "Changa One";
 }
 
 body{
