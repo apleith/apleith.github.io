@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=PT+Sans&display=swap');
+
 
 body {
 	font-family: 'Space Mono';
@@ -13,30 +15,15 @@ h1, h2, h3, h4 {
 	font-family: 'Poppins';
 }
 
-.btn {
-	background-color: #000000 !important;
-}
 .btn-link, a {
-	font-family: 'Poppins';
-	color: #ffffff !important;
-	text-decoration: none;
-	background-color: transparent;
+  color: #888888;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .btn-link:hover, a:hover {
-  color: #999999 !important;
+  color: #ffffff;
   text-decoration: strikethrough;
-}
-
-.card-text a {
-	font-family: 'Poppins';
-	color: #999999 !important;
-}
-
-.card-text a:hover {
-	color: #000000 !important;
-	font-weight: 900;
-	text-decoration: none;	
 }
 
 .bg-dark {
@@ -51,7 +38,7 @@ h1, h2, h3, h4 {
 
 .navbar-nav .nav-item {
     border: 1px solid #ffffff;
-    width: 150px;
+    width: 120px;
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
@@ -59,7 +46,6 @@ h1, h2, h3, h4 {
 
 .navbar-brand {
 	margin-top: .5em;
-	width: 150px;
 }
 
 header {
@@ -125,6 +111,7 @@ th {
 	border-bottom: 1px solid #000000;
 	border-top: 1px solid #000000;
 	text-align: left;
+	font-weight: bolder;
 }
 
 .year {

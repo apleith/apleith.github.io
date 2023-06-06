@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Space+Mono&display=swap');
 
+
 body {
 	font-family: 'Space Mono';
 	font-weight: 400;
@@ -51,7 +52,7 @@ h1, h2, h3, h4 {
 
 .navbar-nav .nav-item {
     border: 1px solid #ffffff;
-    width: 150px;
+    width: 120px;
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
@@ -59,7 +60,6 @@ h1, h2, h3, h4 {
 
 .navbar-brand {
 	margin-top: .5em;
-	width: 150px;
 }
 
 header {
