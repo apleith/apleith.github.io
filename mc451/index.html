@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Introduction to Communication and Media Research with R [WIP] | Introduction to Communication and Media Research with R</title>
+<meta name="author" content="Alex P. Leith, PhD">
+<meta name="description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess.">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="Introduction to Communication and Media Research with R [WIP] | Introduction to Communication and Media Research with R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction to Communication and Media Research with R [WIP] | Introduction to Communication and Media Research with R">
+<meta name="twitter:description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess.">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to Communication and Media Research with R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="active" href="index.html"></a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="research-ethics-1.html"><span class="header-section-number">2</span> Research Ethics</a></li>
+<li><a class="" href="research-papers-1.html"><span class="header-section-number">3</span> Research Papers</a></li>
+<li><a class="" href="communication-theories-1.html"><span class="header-section-number">4</span> Communication Theories</a></li>
+<li><a class="" href="interviews-1.html"><span class="header-section-number">5</span> Interviews</a></li>
+<li><a class="" href="focus-groups-1.html"><span class="header-section-number">6</span> Focus Groups</a></li>
+<li><a class="" href="ethnography-1.html"><span class="header-section-number">7</span> Ethnography</a></li>
+<li><a class="" href="qualitative-content-analysis-1.html"><span class="header-section-number">8</span> Qualitative Content Analysis</a></li>
+<li><a class="" href="quantitative-content-analysis-1.html"><span class="header-section-number">9</span> Quantitative Content Analysis</a></li>
+<li><a class="" href="surveys-1.html"><span class="header-section-number">10</span> Surveys</a></li>
+<li><a class="" href="experiment-1.html"><span class="header-section-number">11</span> Experiment</a></li>
+<li><a class="" href="introduction-to-r-1.html"><span class="header-section-number">12</span> Introduction to R</a></li>
+<li><a class="" href="working-with-data-1.html"><span class="header-section-number">13</span> Working with Data</a></li>
+<li><a class="" href="visuals-1.html"><span class="header-section-number">14</span> Visuals</a></li>
+<li><a class="" href="analyses-1.html"><span class="header-section-number">15</span> Analyses</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">16</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="section" class="section level1 unlisted unnumbered">
+<h1 class="unlisted unnumbered"><a class="anchor" aria-label="anchor" href="#section"><i class="fas fa-link"></i></a></h1>
+<div id="introduction-to-communication-and-media-research-with-r-wip" class="section level2 unlisted unnumbered">
+<h2>Introduction to Communication and Media Research with R [WIP]<a class="anchor" aria-label="anchor" href="#introduction-to-communication-and-media-research-with-r-wip"><i class="fas fa-link"></i></a>
+</h2>
+<p>By: Alex P. Leith, Ph.D.</p>
+<p><a href="Current%20Book%20Cover%20(Art%20created%20with%20R's%20aRtsy%20package)"><img src="cover_2.png" style="width:50.0%"></a></p>
+<p>This is an open-access textbook primarily created for my MC 451 course at Southern Illinois University Edwardsville (SIUE). I believe that it is important for our media and communication students to learn skills like R to better prepare them for the future of this industry.</p>
+<p>Because coding is so frustrating to new learners, I hope this book will demystify the R language enough that they can use it to separate themselves in their future career. I also hope to make them more willing to tackle new complex systems on their own to continue to grow into the future of the communication and media fields.</p>
+<p>This is a living document that will be continually adjusted according to feedback from other scholars and students. The current version of this book is a result of multiple semesters of teaching R to students in the Mass Communications department at SIUE, at both the undergraduate and graduate levels.</p>
+<p>I would like to thank, and apologize to, each student that has trudged their way through this process with me. Your feedback has been greatly appreciated and instructive. I hope that each semester continues to become more approachable to students.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="empty"></div>
+<div class="next"><a href="introduction.html"><span class="header-section-number">1</span> Introduction</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#section"></a></li>
+<li><a class="nav-link" href="#introduction-to-communication-and-media-research-with-r-wip">Introduction to Communication and Media Research with R [WIP]</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-08-19.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

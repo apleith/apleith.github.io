@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 6 Focus Groups | Introduction to Communication and Media Research with R</title>
+<meta name="author" content="Alex P. Leith, PhD">
+<meta name="description" content="6.0.1 What is a focus group?  A focus group is a type of qualitative research that involves gathering a small group of people together to discuss a particular topic. The goal of a focus group is...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="Chapter 6 Focus Groups | Introduction to Communication and Media Research with R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="6.0.1 What is a focus group?  A focus group is a type of qualitative research that involves gathering a small group of people together to discuss a particular topic. The goal of a focus group is...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 6 Focus Groups | Introduction to Communication and Media Research with R">
+<meta name="twitter:description" content="6.0.1 What is a focus group?  A focus group is a type of qualitative research that involves gathering a small group of people together to discuss a particular topic. The goal of a focus group is...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to Communication and Media Research with R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="research-ethics.html"><span class="header-section-number">2</span> Research Ethics</a></li>
+<li><a class="" href="introduction-to-research-papers.html"><span class="header-section-number">3</span> Introduction to Research Papers</a></li>
+<li><a class="" href="communication-theories.html"><span class="header-section-number">4</span> Communication Theories</a></li>
+<li><a class="" href="interviews.html"><span class="header-section-number">5</span> Interviews</a></li>
+<li><a class="active" href="focus-groups.html"><span class="header-section-number">6</span> Focus Groups</a></li>
+<li><a class="" href="ethnography.html"><span class="header-section-number">7</span> Ethnography</a></li>
+<li><a class="" href="qualitative-content-analysis.html"><span class="header-section-number">8</span> Qualitative Content Analysis</a></li>
+<li><a class="" href="quantitative-content-analysis.html"><span class="header-section-number">9</span> Quantitative Content Analysis</a></li>
+<li><a class="" href="surveys.html"><span class="header-section-number">10</span> Surveys</a></li>
+<li><a class="" href="experiment.html"><span class="header-section-number">11</span> Experiment</a></li>
+<li><a class="" href="introduction-to-r.html"><span class="header-section-number">12</span> Introduction to R</a></li>
+<li><a class="" href="working-with-data.html"><span class="header-section-number">13</span> Working with Data</a></li>
+<li><a class="" href="visuals.html"><span class="header-section-number">14</span> Visuals</a></li>
+<li><a class="" href="analyses.html"><span class="header-section-number">15</span> Analyses</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">16</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="focus-groups" class="section level1" number="6">
+<h1>
+<span class="header-section-number">6</span> Focus Groups<a class="anchor" aria-label="anchor" href="#focus-groups"><i class="fas fa-link"></i></a>
+</h1>
+<div id="what-is-a-focus-group" class="section level3" number="6.0.1">
+<h3>
+<span class="header-section-number">6.0.1</span> What is a focus group?<a class="anchor" aria-label="anchor" href="#what-is-a-focus-group"><i class="fas fa-link"></i></a>
+</h3>
+<p><br>
+A focus group is a type of qualitative research that involves gathering a small group of people together to discuss a particular topic. The goal of a focus group is to get insights into the thoughts, feelings, and experiences of the participants on the topic.</p>
+<p>Focus groups are often used in marketing research to get feedback on new products or services. They can also be used in other fields, such as education, healthcare, and social sciences.</p>
+<p>Here are some of the benefits of using focus groups:</p>
+<ul>
+<li><p>They can provide valuable insights into the thoughts, feelings, and experiences of a target audience.</p></li>
+<li><p>They can be used to generate new ideas and concepts.</p></li>
+<li><p>They can be used to test hypotheses and assumptions.</p></li>
+<li><p>They can be used to get feedback on products, services, and marketing campaigns.</p></li>
+<li><p>They can be used to build relationships with stakeholders.</p></li>
+</ul>
+<p>Here are some of the limitations of using focus groups:</p>
+<ul>
+<li><p>They can be time-consuming and expensive to conduct.</p></li>
+<li><p>They can be difficult to recruit participants who are representative of the target audience.</p></li>
+<li><p>The results of focus groups can be subjective and may not be generalizable to a larger population.</p></li>
+<li><p>The moderator can influence the results of the focus group.</p></li>
+</ul>
+<p>Overall, focus groups are a valuable tool for qualitative research. They can provide insights into the thoughts, feelings, and experiences of a target audience. However, it is important to be aware of the limitations of focus groups and to use them in conjunction with other research methods.</p>
+<p>Here are some additional tips for conducting focus groups:</p>
+<ul>
+<li><p><strong>Choose the right participants.</strong> The participants in your focus group should be representative of the target audience for your research.</p></li>
+<li><p><strong>Plan the questions carefully.</strong> The questions you ask should be clear, concise, and open-ended.</p></li>
+<li><p><strong>Create a comfortable environment.</strong> The focus group should be held in a comfortable and private setting.</p></li>
+<li><p><strong>Be a good moderator.</strong> The moderator should be impartial and should encourage all participants to contribute.</p></li>
+<li><p><strong>Take notes.</strong> Take notes during the focus group to ensure that you don’t forget anything important.</p></li>
+<li><p><strong>Transcribe the focus group.</strong> Transcribe the focus group verbatim as soon as possible after the focus group is completed.</p></li>
+<li><p><strong>Analyze the data.</strong> Analyze the data to identify patterns and themes.</p></li>
+<li><p><strong>Write a report.</strong> Write a report that describes the focus group, the questions asked, the findings, and the implications of the findings.</p></li>
+</ul>
+</div>
+<div id="why-use-a-focus-group" class="section level3" number="6.0.2">
+<h3>
+<span class="header-section-number">6.0.2</span> Why use a focus group?<a class="anchor" aria-label="anchor" href="#why-use-a-focus-group"><i class="fas fa-link"></i></a>
+</h3>
+<p>There are many reasons why you might use a focus group in research. Here are some of the most common reasons:</p>
+<ul>
+<li><p><strong>To get insights into the thoughts, feelings, and experiences of a target audience.</strong> Focus groups can be a great way to get a deep understanding of how people think about a particular topic. This can be helpful for understanding customer needs, developing new products or services, or evaluating marketing campaigns.</p></li>
+<li><p><strong>To generate new ideas and concepts.</strong> Focus groups can be a great way to generate new ideas and concepts. By bringing together a group of people with different perspectives, you can get a wide range of ideas that you might not have thought of on your own.</p></li>
+<li><p><strong>To test hypotheses and assumptions.</strong> Focus groups can be a great way to test hypotheses and assumptions. By asking participants questions about their thoughts and feelings, you can get a better understanding of whether or not your assumptions are correct.</p></li>
+<li><p><strong>To get feedback on products, services, and marketing campaigns.</strong> Focus groups can be a great way to get feedback on products, services, and marketing campaigns. By asking participants about their thoughts and feelings, you can get valuable insights into how they perceive your offerings and how you can improve them.</p></li>
+<li><p><strong>To build relationships with stakeholders.</strong> Focus groups can be a great way to build relationships with stakeholders. By bringing together a group of people who are interested in your work, you can get to know them better and understand their needs and concerns.</p></li>
+</ul>
+<p>Overall, focus groups can be a valuable tool for research. They can provide insights into the thoughts, feelings, and experiences of a target audience. They can also be used to generate new ideas and concepts, test hypotheses and assumptions, get feedback on products, services, and marketing campaigns, and build relationships with stakeholders.</p>
+<p>However, it is important to note that focus groups are not without their limitations. They can be time-consuming and expensive to conduct, and the results of focus groups can be subjective and may not be generalizable to a larger population. It is also important to be aware of the role of the moderator in a focus group, as they can influence the results of the discussion.</p>
+<p>Despite these limitations, focus groups can be a valuable tool for research when used appropriately. If you are considering using focus groups in your research, be sure to carefully consider the pros and cons before making a decision.</p>
+</div>
+<div id="preparing-for-a-focus-group" class="section level3" number="6.0.3">
+<h3>
+<span class="header-section-number">6.0.3</span> Preparing for a Focus Group<a class="anchor" aria-label="anchor" href="#preparing-for-a-focus-group"><i class="fas fa-link"></i></a>
+</h3>
+<p>Preparing for a focus group in research is an important step in ensuring that the focus group is conducted effectively and that the data collected is reliable. Here are some tips for preparing for a focus group in research:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Define the purpose of the focus group.</strong> What do you hope to learn from the focus group? What are the specific questions you want to ask? Once you have a clear understanding of the purpose of the focus group, you can start to develop a plan.</p></li>
+<li><p><strong>Identify the participants.</strong> Who do you want to interview? What are their characteristics? Once you have identified the participants, you can start to reach out to them and schedule interviews.</p></li>
+<li><p><strong>Develop the focus group questions.</strong> The questions should be clear, concise, and open-ended. They should also be relevant to the research question.</p></li>
+<li><p><strong>Pilot the focus group questions.</strong> Once you have developed the focus group questions, you should pilot them with a small group of people to get feedback. This will help you to identify any areas that need to be clarified or improved.</p></li>
+<li><p><strong>Select a location for the focus group.</strong> The location should be comfortable and private for the participants. It should also be quiet so that the focus group can be conducted without interruptions.</p></li>
+<li><p><strong>Recruit a moderator.</strong> The moderator is responsible for leading the focus group and ensuring that the discussion is productive. The moderator should be impartial and should encourage all participants to contribute.</p></li>
+<li><p><strong>Prepare materials for the focus group.</strong> This may include handouts, questionnaires, or other materials that you want to share with the participants.</p></li>
+<li><p><strong>Practice moderating the focus group.</strong> This will help you to feel confident and prepared when the actual focus group takes place.</p></li>
+</ol>
+<p>By following these tips, you can prepare for a focus group in research that is effective and that produces reliable data.</p>
+<p>Here are some additional tips for preparing for a focus group in research:</p>
+<ul>
+<li><p><strong>Be flexible.</strong> Things don’t always go according to plan, so it’s important to be flexible when conducting a focus group. For example, if a participant doesn’t show up, you may need to adjust the discussion or invite another participant to join the group.</p></li>
+<li><p><strong>Be prepared for unexpected questions or situations.</strong> It’s also important to be prepared for unexpected questions or situations that may arise during the focus group. For example, a participant may ask a question that you are not prepared to answer. In this case, it’s important to be honest and to say that you don’t know the answer.</p></li>
+<li><p><strong>End the focus group on a positive note.</strong> Thank the participants for their time and let them know that you appreciate their participation in the study.</p></li>
+</ul>
+</div>
+<div id="conducting-a-focus-group" class="section level3" number="6.0.4">
+<h3>
+<span class="header-section-number">6.0.4</span> Conducting a Focus Group<a class="anchor" aria-label="anchor" href="#conducting-a-focus-group"><i class="fas fa-link"></i></a>
+</h3>
+<p>Conducting a focus group for research is an important step in gathering data and insights from a group of people. Here are some tips for conducting a focus group for research:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Start with an introduction.</strong> Introduce yourself and the purpose of the focus group. Explain that the participants’ thoughts and opinions are important to you and that you value their participation.</p></li>
+<li><p><strong>Ask open-ended questions.</strong> Avoid asking questions that can be answered with a simple yes or no. Instead, ask questions that will encourage the participants to share their thoughts and opinions.</p></li>
+<li><p><strong>Be an active listener.</strong> Pay attention to what the participants are saying and ask follow-up questions to clarify their answers.</p></li>
+<li><p><strong>Encourage everyone to participate.</strong> Make sure that everyone has a chance to contribute to the discussion. If one participant is dominating the conversation, gently redirect the conversation to other participants.</p></li>
+<li><p><strong>Take notes.</strong> Take notes during the focus group to ensure that you don’t forget anything important.</p></li>
+<li><p><strong>Summarize the discussion.</strong> At the end of the focus group, summarize the main points that were discussed. This will help to ensure that everyone is on the same page and that the data is accurate.</p></li>
+<li><p><strong>Thank the participants.</strong> Thank the participants for their time and let them know that you appreciate their participation in the study.</p></li>
+</ol>
+<p>By following these tips, you can conduct a focus group for research that is effective and that produces reliable data.</p>
+<p>Here are some additional tips for conducting a focus group for research:</p>
+<ul>
+<li><p><strong>Be impartial.</strong> The moderator should be impartial and should not express their own opinions or beliefs during the focus group.</p></li>
+<li><p><strong>Create a safe space.</strong> The focus group should be held in a comfortable and safe space where the participants feel comfortable sharing their thoughts and opinions.</p></li>
+<li><p><strong>Be respectful.</strong> The moderator should be respectful of the participants and their opinions.</p></li>
+<li><p><strong>Be patient.</strong> The focus group may take some time to get started, so be patient and allow the participants to warm up to the discussion.</p></li>
+<li><p><strong>Be flexible.</strong> Things don’t always go according to plan, so be flexible and adapt the discussion as needed.</p></li>
+<li><p><strong>End the focus group on time.</strong> Thank the participants for their time and let them know that the focus group is over.</p></li>
+</ul>
+<p>Conducting a focus group for research can be a valuable tool for gathering data and insights from a group of people. By following these tips, you can conduct a focus group that is effective and that produces reliable data.</p>
+</div>
+<div id="analyzing-focus-group-data" class="section level3" number="6.0.5">
+<h3>
+<span class="header-section-number">6.0.5</span> Analyzing Focus Group Data<a class="anchor" aria-label="anchor" href="#analyzing-focus-group-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>Analyzing focus group data for research is an important step in making sense of the information that was gathered and drawing conclusions. Here are some tips for analyzing focus group data for research:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Transcribe the focus group verbatim.</strong> This will make it easier to analyze the data and to identify patterns and themes.</p></li>
+<li><p><strong>Read through the transcripts carefully.</strong> Pay attention to the tone of the conversation, the body language of the participants, and the overall flow of the discussion.</p></li>
+<li><p><strong>Identify patterns and themes.</strong> Look for patterns in the participants’ responses. What are the common themes that emerge?</p></li>
+<li><p><strong>Code the data.</strong> This involves assigning codes to different parts of the transcripts. This will help you to organize the data and to identify patterns and themes more easily.</p></li>
+<li><p><strong>Write memos.</strong> As you are analyzing the data, write memos to yourself to capture your thoughts and insights. This will help you to stay organized and to make sense of the data.</p></li>
+<li><p><strong>Interpret the data.</strong> Once you have identified patterns and themes, interpret the data. What do the patterns and themes mean? What do they tell you about the topic of your research?</p></li>
+<li><p><strong>Write a report.</strong> Write a report that describes the focus group, the questions asked, the findings, and the implications of the findings.</p></li>
+</ol>
+<p>By following these tips, you can analyze focus group data for research in a systematic and objective way. This will help you to draw conclusions that are valid and reliable.</p>
+<p>Here are some additional tips for analyzing focus group data for research:</p>
+<ul>
+<li><p><strong>Use a coding system.</strong> A coding system is a way of organizing the data into categories. This can make it easier to identify patterns and themes.</p></li>
+<li><p><strong>Use a computer program.</strong> There are a number of computer programs that can be used to analyze focus group data. These programs can help you to code the data, identify patterns and themes, and write a report.</p></li>
+<li><p><strong>Get feedback from others.</strong> Once you have analyzed the data, get feedback from others. This can help you to identify any areas where your analysis may be flawed.</p></li>
+<li><p><strong>Be open to new ideas.</strong> As you are analyzing the data, be open to new ideas. Don’t be afraid to change your mind if the data suggests that your original interpretation was wrong.</p></li>
+</ul>
+<p>Analyzing focus group data for research can be a challenging task, but it is an important one. By following these tips, you can analyze the data in a systematic and objective way. This will help you to draw conclusions that are valid and reliable.</p>
+</div>
+<div id="pros-and-cons-of-focus-groups" class="section level3" number="6.0.6">
+<h3>
+<span class="header-section-number">6.0.6</span> Pros and Cons of Focus Groups<a class="anchor" aria-label="anchor" href="#pros-and-cons-of-focus-groups"><i class="fas fa-link"></i></a>
+</h3>
+<p>Here are some of the pros and cons of focus groups for research:</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li><p><strong>They can provide insights into the thoughts, feelings, and experiences of a target audience.</strong> Focus groups can be a great way to get a deep understanding of how people think about a particular topic. This can be helpful for understanding customer needs, developing new products or services, or evaluating marketing campaigns.</p></li>
+<li><p><strong>They can be used to generate new ideas and concepts.</strong> By bringing together a group of people with different perspectives, you can get a wide range of ideas that you might not have thought of on your own.</p></li>
+<li><p><strong>They can be used to test hypotheses and assumptions.</strong> By asking participants questions about their thoughts and feelings, you can get a better understanding of whether or not your assumptions are correct.</p></li>
+<li><p><strong>They can be used to get feedback on products, services, and marketing campaigns.</strong> By asking participants about their thoughts and feelings, you can get valuable insights into how they perceive your offerings and how you can improve them.</p></li>
+<li><p><strong>They can be used to build relationships with stakeholders.</strong> By bringing together a group of people who are interested in your work, you can get to know them better and understand their needs and concerns.</p></li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li><p><strong>They can be time-consuming and expensive to conduct.</strong> Focus groups require a lot of planning and coordination, and they can be expensive to pay for participants’ time and travel expenses.</p></li>
+<li><p><strong>They can be difficult to recruit participants who are representative of the target audience.</strong> It can be difficult to find people who are willing to participate in a focus group, and it can be even more difficult to find people who are representative of the target audience.</p></li>
+<li><p><strong>The results of focus groups can be subjective and may not be generalizable to a larger population.</strong> The results of focus groups can be influenced by the moderator, the participants, and the environment in which the focus group is conducted. This can make it difficult to generalize the results to a larger population.</p></li>
+<li><p><strong>The moderator can influence the results of the focus group.</strong> The moderator plays a key role in a focus group, and they can influence the results of the discussion. This is why it is important to have a moderator who is impartial and who has experience conducting focus groups.</p></li>
+</ul>
+<p>Overall, focus groups can be a valuable tool for qualitative research. They can provide insights into the thoughts, feelings, and experiences of a target audience. However, it is important to be aware of the limitations of focus groups and to use them in conjunction with other research methods.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="interviews.html"><span class="header-section-number">5</span> Interviews</a></div>
+<div class="next"><a href="ethnography.html"><span class="header-section-number">7</span> Ethnography</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li>
+<a class="nav-link" href="#focus-groups"><span class="header-section-number">6</span> Focus Groups</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#what-is-a-focus-group"><span class="header-section-number">6.0.1</span> What is a focus group?</a></li>
+<li><a class="nav-link" href="#why-use-a-focus-group"><span class="header-section-number">6.0.2</span> Why use a focus group?</a></li>
+<li><a class="nav-link" href="#preparing-for-a-focus-group"><span class="header-section-number">6.0.3</span> Preparing for a Focus Group</a></li>
+<li><a class="nav-link" href="#conducting-a-focus-group"><span class="header-section-number">6.0.4</span> Conducting a Focus Group</a></li>
+<li><a class="nav-link" href="#analyzing-focus-group-data"><span class="header-section-number">6.0.5</span> Analyzing Focus Group Data</a></li>
+<li><a class="nav-link" href="#pros-and-cons-of-focus-groups"><span class="header-section-number">6.0.6</span> Pros and Cons of Focus Groups</a></li>
+</ul>
+</li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-08-19.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 7 Ethnography | Introduction to Communication and Media Research with R</title>
+<meta name="author" content="Alex P. Leith, PhD">
+<meta name="description" content="fill  7.1 Ethnography Defined fill  7.2 Ethnography of Communication fill  7.3 Autoethnography fill  7.4 Types of Claims fill Descriptive Claims fill  Interpretive Claims fill  Evaluative &amp;...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="Chapter 7 Ethnography | Introduction to Communication and Media Research with R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="fill  7.1 Ethnography Defined fill  7.2 Ethnography of Communication fill  7.3 Autoethnography fill  7.4 Types of Claims fill Descriptive Claims fill  Interpretive Claims fill  Evaluative &amp;...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 7 Ethnography | Introduction to Communication and Media Research with R">
+<meta name="twitter:description" content="fill  7.1 Ethnography Defined fill  7.2 Ethnography of Communication fill  7.3 Autoethnography fill  7.4 Types of Claims fill Descriptive Claims fill  Interpretive Claims fill  Evaluative &amp;...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to Communication and Media Research with R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="research-ethics-1.html"><span class="header-section-number">2</span> Research Ethics</a></li>
+<li><a class="" href="research-papers-1.html"><span class="header-section-number">3</span> Research Papers</a></li>
+<li><a class="" href="communication-theories-1.html"><span class="header-section-number">4</span> Communication Theories</a></li>
+<li><a class="" href="interviews-1.html"><span class="header-section-number">5</span> Interviews</a></li>
+<li><a class="" href="focus-groups-1.html"><span class="header-section-number">6</span> Focus Groups</a></li>
+<li><a class="active" href="ethnography-1.html"><span class="header-section-number">7</span> Ethnography</a></li>
+<li><a class="" href="qualitative-content-analysis-1.html"><span class="header-section-number">8</span> Qualitative Content Analysis</a></li>
+<li><a class="" href="quantitative-content-analysis-1.html"><span class="header-section-number">9</span> Quantitative Content Analysis</a></li>
+<li><a class="" href="surveys-1.html"><span class="header-section-number">10</span> Surveys</a></li>
+<li><a class="" href="experiment-1.html"><span class="header-section-number">11</span> Experiment</a></li>
+<li><a class="" href="introduction-to-r-1.html"><span class="header-section-number">12</span> Introduction to R</a></li>
+<li><a class="" href="working-with-data-1.html"><span class="header-section-number">13</span> Working with Data</a></li>
+<li><a class="" href="visuals-1.html"><span class="header-section-number">14</span> Visuals</a></li>
+<li><a class="" href="analyses-1.html"><span class="header-section-number">15</span> Analyses</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">16</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="ethnography-1" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> Ethnography<a class="anchor" aria-label="anchor" href="#ethnography-1"><i class="fas fa-link"></i></a>
+</h1>
+<p>fill</p>
+<div id="ethnography-defined" class="section level2" number="7.1">
+<h2>
+<span class="header-section-number">7.1</span> Ethnography Defined<a class="anchor" aria-label="anchor" href="#ethnography-defined"><i class="fas fa-link"></i></a>
+</h2>
+<p>fill</p>
+</div>
+<div id="ethnography-of-communication" class="section level2" number="7.2">
+<h2>
+<span class="header-section-number">7.2</span> Ethnography of Communication<a class="anchor" aria-label="anchor" href="#ethnography-of-communication"><i class="fas fa-link"></i></a>
+</h2>
+<p>fill</p>
+</div>
+<div id="autoethnography" class="section level2" number="7.3">
+<h2>
+<span class="header-section-number">7.3</span> Autoethnography<a class="anchor" aria-label="anchor" href="#autoethnography"><i class="fas fa-link"></i></a>
+</h2>
+<p>fill</p>
+</div>
+<div id="types-of-claims" class="section level2" number="7.4">
+<h2>
+<span class="header-section-number">7.4</span> Types of Claims<a class="anchor" aria-label="anchor" href="#types-of-claims"><i class="fas fa-link"></i></a>
+</h2>
+<p>fill</p>
+<div id="descriptive-claims" class="section level3 unnumbered">
+<h3>Descriptive Claims<a class="anchor" aria-label="anchor" href="#descriptive-claims"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+<div id="interpretive-claims" class="section level3 unnumbered">
+<h3>Interpretive Claims<a class="anchor" aria-label="anchor" href="#interpretive-claims"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+<div id="evaluative-reformist-claims" class="section level3 unnumbered">
+<h3>Evaluative &amp; Reformist Claims<a class="anchor" aria-label="anchor" href="#evaluative-reformist-claims"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+</div>
+<div id="ethnographic-data" class="section level2" number="7.5">
+<h2>
+<span class="header-section-number">7.5</span> Ethnographic Data<a class="anchor" aria-label="anchor" href="#ethnographic-data"><i class="fas fa-link"></i></a>
+</h2>
+<p>fill</p>
+<div id="participant-observation" class="section level3 unnumbered">
+<h3>Participant Observation<a class="anchor" aria-label="anchor" href="#participant-observation"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+<div id="interviews-2" class="section level3 unnumbered">
+<h3>Interviews<a class="anchor" aria-label="anchor" href="#interviews-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+<div id="gatekeepers" class="section level3 unnumbered">
+<h3>Gatekeepers<a class="anchor" aria-label="anchor" href="#gatekeepers"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+</div>
+<div id="ethnographic-fieldwork" class="section level2" number="7.6">
+<h2>
+<span class="header-section-number">7.6</span> Ethnographic Fieldwork<a class="anchor" aria-label="anchor" href="#ethnographic-fieldwork"><i class="fas fa-link"></i></a>
+</h2>
+<p>fill</p>
+</div>
+<div id="evaluating-an-ethnography" class="section level2" number="7.7">
+<h2>
+<span class="header-section-number">7.7</span> Evaluating an Ethnography<a class="anchor" aria-label="anchor" href="#evaluating-an-ethnography"><i class="fas fa-link"></i></a>
+</h2>
+<p>fill</p>
+<div id="warrants" class="section level3 unnumbered">
+<h3>Warrants<a class="anchor" aria-label="anchor" href="#warrants"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+<div id="researcher-credibility" class="section level3 unnumbered">
+<h3>Researcher Credibility<a class="anchor" aria-label="anchor" href="#researcher-credibility"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+<div id="adequacy-and-coherence" class="section level3 unnumbered">
+<h3>Adequacy and Coherence<a class="anchor" aria-label="anchor" href="#adequacy-and-coherence"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+</div>
+<div id="thick-descriptions" class="section level3 unnumbered">
+<h3>Thick Descriptions<a class="anchor" aria-label="anchor" href="#thick-descriptions"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="focus-groups-1.html"><span class="header-section-number">6</span> Focus Groups</a></div>
+<div class="next"><a href="qualitative-content-analysis-1.html"><span class="header-section-number">8</span> Qualitative Content Analysis</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ethnography-1"><span class="header-section-number">7</span> Ethnography</a></li>
+<li><a class="nav-link" href="#ethnography-defined"><span class="header-section-number">7.1</span> Ethnography Defined</a></li>
+<li><a class="nav-link" href="#ethnography-of-communication"><span class="header-section-number">7.2</span> Ethnography of Communication</a></li>
+<li><a class="nav-link" href="#autoethnography"><span class="header-section-number">7.3</span> Autoethnography</a></li>
+<li>
+<a class="nav-link" href="#types-of-claims"><span class="header-section-number">7.4</span> Types of Claims</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#descriptive-claims">Descriptive Claims</a></li>
+<li><a class="nav-link" href="#interpretive-claims">Interpretive Claims</a></li>
+<li><a class="nav-link" href="#evaluative-reformist-claims">Evaluative &amp; Reformist Claims</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#ethnographic-data"><span class="header-section-number">7.5</span> Ethnographic Data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#participant-observation">Participant Observation</a></li>
+<li><a class="nav-link" href="#interviews-2">Interviews</a></li>
+<li><a class="nav-link" href="#gatekeepers">Gatekeepers</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#ethnographic-fieldwork"><span class="header-section-number">7.6</span> Ethnographic Fieldwork</a></li>
+<li>
+<a class="nav-link" href="#evaluating-an-ethnography"><span class="header-section-number">7.7</span> Evaluating an Ethnography</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#warrants">Warrants</a></li>
+<li><a class="nav-link" href="#researcher-credibility">Researcher Credibility</a></li>
+<li><a class="nav-link" href="#adequacy-and-coherence">Adequacy and Coherence</a></li>
+<li><a class="nav-link" href="#thick-descriptions">Thick Descriptions</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-08-19.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

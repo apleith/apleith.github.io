@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Mono&display=swap');
+
+p {
+  font-family: 'Merriweather', sans-serif;
+}
+
+.summary{
+  font-family: 'Merriweather', sans-serif;
+
+}
+.book.font-family-1 {
+  font-family: 'Merriweather', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  color: #222222;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-size: 3em !important;
+  color: #222222;
+ }
+
+.subtitle {
+  font-family: 'Merriweather', serif;
+  color: #222222;
+}
+
+ p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+	background-color: #aaffaa
+  white-space: inherit;
+}
+.fu, .st, .co {
+  font-family: 'Noto Sans Mono';
+
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.book-summary {
+	background-color: #aaffaa
+}
