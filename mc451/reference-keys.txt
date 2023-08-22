@@ -77,11 +77,6 @@ casaul-arguments
 data-for-experiments
 data-settings
 research-designs
-control
-pre-experimental-design
-quasi-experimental-design
-true-experimental-design
-sololmn-four-group
 threats-to-validity
 time-effects
 reactivity-effects
