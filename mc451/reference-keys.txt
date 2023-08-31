@@ -5,10 +5,10 @@ current-ethical-challenges-in-social-science-research
 institutional-review-board
 references
 research-papers-1
-how-to-find-research-papers
-how-to-read-research-papers
-how-to-write-research-papers
-how-to-cite-research-papers
+find
+read
+write
+cite
 communication-theories-1
 agenda-setting-theory
 cognitive-dissonance
