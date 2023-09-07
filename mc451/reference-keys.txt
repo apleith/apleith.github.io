@@ -9,6 +9,7 @@ find
 read
 write
 cite
+why-citing-is-important
 communication-theories-1
 agenda-setting-theory
 cognitive-dissonance
