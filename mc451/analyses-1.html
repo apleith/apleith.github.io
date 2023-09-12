@@ -1,574 +1,192 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 15 Analyses | Introduction to Communication and Media Research with R</title>
-  <meta name="description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess." />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 15 Analyses | Introduction to Communication and Media Research with R" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 15 Analyses | Introduction to Communication and Media Research with R" />
-  
-  <meta name="twitter:description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess." />
-  
-
-<meta name="author" content="Alex P. Leith, PhD" />
-
-
-<meta name="date" content="2023-09-10" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="visuals-1.html"/>
-<link rel="next" href="appendix.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 15 Analyses | Introduction to Communication and Media Research with R</title>
+<meta name="author" content="Alex P. Leith, PhD">
+<meta name="description" content="fill  15.1 Descriptive Statistics  Distribution fill Simple fill  Grouped fill  Central Tendency fill Mean fill  Median fill  Mode fill  Variability fill Range Standard Deviation Variance fill  ...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="Chapter 15 Analyses | Introduction to Communication and Media Research with R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="fill  15.1 Descriptive Statistics  Distribution fill Simple fill  Grouped fill  Central Tendency fill Mean fill  Median fill  Mode fill  Variability fill Range Standard Deviation Variance fill  ...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 15 Analyses | Introduction to Communication and Media Research with R">
+<meta name="twitter:description" content="fill  15.1 Descriptive Statistics  Distribution fill Simple fill  Grouped fill  Central Tendency fill Mean fill  Median fill  Mode fill  Variability fill Range Standard Deviation Variance fill  ...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="#"><img src="https://apleith.github.io/images/c_me.png"></a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#research-ethics"><i class="fa fa-check"></i>Research Ethics</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#research-papers"><i class="fa fa-check"></i>Research Papers</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#communication-theories"><i class="fa fa-check"></i>Communication Theories</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#interviews"><i class="fa fa-check"></i>Interviews</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#focus-groups"><i class="fa fa-check"></i>Focus Groups</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#ethnography"><i class="fa fa-check"></i>Ethnography</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#qualitative-content-analysis"><i class="fa fa-check"></i>Qualitative Content Analysis</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#quantitative-content-analysis"><i class="fa fa-check"></i>Quantitative Content Analysis</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#surveys"><i class="fa fa-check"></i>Surveys</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#experiment"><i class="fa fa-check"></i>Experiment</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#introduction-to-r"><i class="fa fa-check"></i>Introduction to R</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#working-with-data"><i class="fa fa-check"></i>Working with Data</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#visuals"><i class="fa fa-check"></i>Visuals</a></li>
-<li class="chapter" data-level="" data-path="introduction.html"><a href="introduction.html#analyses"><i class="fa fa-check"></i>Analyses</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="research-ethics-1.html"><a href="research-ethics-1.html"><i class="fa fa-check"></i><b>2</b> Research Ethics</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="research-ethics-1.html"><a href="research-ethics-1.html#history"><i class="fa fa-check"></i><b>2.1</b> History</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#key-events"><i class="fa fa-check"></i>Key Events</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#unethical-research"><i class="fa fa-check"></i>Unethical Research</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#key-components"><i class="fa fa-check"></i>Key Components</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#informed-consent"><i class="fa fa-check"></i>Informed Consent</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#confidentiality"><i class="fa fa-check"></i>Confidentiality</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#debriefing"><i class="fa fa-check"></i>Debriefing</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#avoidance-of-harm"><i class="fa fa-check"></i>Avoidance of Harm</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#justice"><i class="fa fa-check"></i>Justice</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#ethical-considerations"><i class="fa fa-check"></i>Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#deception"><i class="fa fa-check"></i>Deception</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#risks-to-participants"><i class="fa fa-check"></i>Risks to Participants</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#vulnerable-populations"><i class="fa fa-check"></i>Vulnerable Populations</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#intellectual-property"><i class="fa fa-check"></i>Intellectual Property</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="research-ethics-1.html"><a href="research-ethics-1.html#current-ethical-challenges-in-social-science-research"><i class="fa fa-check"></i><b>2.2</b> Current Ethical Challenges in Social Science Research</a></li>
-<li class="chapter" data-level="2.3" data-path="research-ethics-1.html"><a href="research-ethics-1.html#institutional-review-board"><i class="fa fa-check"></i><b>2.3</b> Institutional Review Board</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#history-of-the-institutional-review-board"><i class="fa fa-check"></i>History of the Institutional Review Board</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#purpose-of-the-institutional-review-board"><i class="fa fa-check"></i>Purpose of the Institutional Review Board</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#levels-of-risk"><i class="fa fa-check"></i>Levels of Risk</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="research-ethics-1.html"><a href="research-ethics-1.html#references"><i class="fa fa-check"></i><b>2.4</b> References</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="research-papers-1.html"><a href="research-papers-1.html"><i class="fa fa-check"></i><b>3</b> Research Papers</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="research-papers-1.html"><a href="research-papers-1.html#find"><i class="fa fa-check"></i><b>3.1</b> How to Find Research Papers</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#use-a-specialized-search-engine."><i class="fa fa-check"></i>Use a specialized search engine.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#check-your-university-library."><i class="fa fa-check"></i>Check your university library.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#search-for-preprints."><i class="fa fa-check"></i>Search for preprints.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#use-social-media."><i class="fa fa-check"></i>Use social media.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#contact-experts-in-your-field."><i class="fa fa-check"></i>Contact experts in your field.</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="research-papers-1.html"><a href="research-papers-1.html#read"><i class="fa fa-check"></i><b>3.2</b> How to Read Research Papers</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-three-pass-approach."><i class="fa fa-check"></i>The three-pass approach.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-question-based-approach."><i class="fa fa-check"></i>The question-based approach.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-active-reading-approach."><i class="fa fa-check"></i>The active reading approach.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-collaborative-reading-approach."><i class="fa fa-check"></i>The collaborative reading approach.</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="research-papers-1.html"><a href="research-papers-1.html#write"><i class="fa fa-check"></i><b>3.3</b> How to Write Research Papers</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#choose-an-interesting-topic-you-know."><i class="fa fa-check"></i>Choose an interesting topic you know.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#do-your-research-thoroughly."><i class="fa fa-check"></i>Do your research thoroughly.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#write-a-clear-and-concise-thesis-statement."><i class="fa fa-check"></i>Write a clear and concise thesis statement.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#organize-your-paper-carefully."><i class="fa fa-check"></i>Organize your paper carefully.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#write-in-a-clear-and-concise-style."><i class="fa fa-check"></i>Write in a clear and concise style.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#use-evidence-to-support-your-arguments."><i class="fa fa-check"></i>Use evidence to support your arguments.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#proofread-your-paper-carefully."><i class="fa fa-check"></i>Proofread your paper carefully.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#additional-tips"><i class="fa fa-check"></i>Additional Tips</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#academic-examples"><i class="fa fa-check"></i>Academic Examples</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#industry-examples"><i class="fa fa-check"></i>Industry Examples</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#sections-of-an-academic-paper"><i class="fa fa-check"></i>Sections of an Academic Paper</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="research-papers-1.html"><a href="research-papers-1.html#cite"><i class="fa fa-check"></i><b>3.4</b> How to Cite Research Papers</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="research-papers-1.html"><a href="research-papers-1.html#why-citing-is-important"><i class="fa fa-check"></i><b>3.4.1</b> Why Citing is Important</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#two-types-in-apa"><i class="fa fa-check"></i>Two Types in APA</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#additional-tips-1"><i class="fa fa-check"></i>Additional Tips</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="communication-theories-1.html"><a href="communication-theories-1.html"><i class="fa fa-check"></i><b>4</b> Communication Theories</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="communication-theories-1.html"><a href="communication-theories-1.html#agenda-setting-theory"><i class="fa fa-check"></i><b>4.1</b> Agenda Setting Theory</a></li>
-<li class="chapter" data-level="4.2" data-path="communication-theories-1.html"><a href="communication-theories-1.html#cognitive-dissonance"><i class="fa fa-check"></i><b>4.2</b> Cognitive Dissonance</a></li>
-<li class="chapter" data-level="4.3" data-path="communication-theories-1.html"><a href="communication-theories-1.html#cultivation-theory"><i class="fa fa-check"></i><b>4.3</b> Cultivation Theory</a></li>
-<li class="chapter" data-level="4.4" data-path="communication-theories-1.html"><a href="communication-theories-1.html#elaboration-likelihood-model"><i class="fa fa-check"></i><b>4.4</b> Elaboration Likelihood Model</a></li>
-<li class="chapter" data-level="4.5" data-path="communication-theories-1.html"><a href="communication-theories-1.html#framing-theory"><i class="fa fa-check"></i><b>4.5</b> Framing Theory</a></li>
-<li class="chapter" data-level="4.6" data-path="communication-theories-1.html"><a href="communication-theories-1.html#gatekeeping-theory"><i class="fa fa-check"></i><b>4.6</b> Gatekeeping Theory</a></li>
-<li class="chapter" data-level="4.7" data-path="communication-theories-1.html"><a href="communication-theories-1.html#hyperpersonal-model"><i class="fa fa-check"></i><b>4.7</b> Hyperpersonal Model</a></li>
-<li class="chapter" data-level="4.8" data-path="communication-theories-1.html"><a href="communication-theories-1.html#knowledge-gap-hypothesis"><i class="fa fa-check"></i><b>4.8</b> Knowledge Gap Hypothesis</a></li>
-<li class="chapter" data-level="4.9" data-path="communication-theories-1.html"><a href="communication-theories-1.html#online-disinhibition-effect"><i class="fa fa-check"></i><b>4.9</b> Online Disinhibition Effect</a></li>
-<li class="chapter" data-level="4.10" data-path="communication-theories-1.html"><a href="communication-theories-1.html#parasocial-interaction"><i class="fa fa-check"></i><b>4.10</b> Parasocial Interaction</a></li>
-<li class="chapter" data-level="4.11" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-learning-theory"><i class="fa fa-check"></i><b>4.11</b> Social Learning Theory</a></li>
-<li class="chapter" data-level="4.12" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-constructionism"><i class="fa fa-check"></i><b>4.12</b> Social Constructionism</a></li>
-<li class="chapter" data-level="4.13" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-exchange-theory"><i class="fa fa-check"></i><b>4.13</b> Social Exchange Theory</a></li>
-<li class="chapter" data-level="4.14" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-identity-theory"><i class="fa fa-check"></i><b>4.14</b> Social Identity Theory</a></li>
-<li class="chapter" data-level="4.15" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-information-processing-theory"><i class="fa fa-check"></i><b>4.15</b> Social Information Processing Theory</a></li>
-<li class="chapter" data-level="4.16" data-path="communication-theories-1.html"><a href="communication-theories-1.html#uses-and-gratification-theory"><i class="fa fa-check"></i><b>4.16</b> Uses and Gratification Theory</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="interviews-1.html"><a href="interviews-1.html"><i class="fa fa-check"></i><b>5</b> Interviews</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="interviews-1.html"><a href="interviews-1.html#interviewing-purpose"><i class="fa fa-check"></i><b>5.1</b> Interviewing Purpose</a></li>
-<li class="chapter" data-level="5.2" data-path="interviews-1.html"><a href="interviews-1.html#approaches-of-interviews"><i class="fa fa-check"></i><b>5.2</b> Approaches of Interviews</a></li>
-<li class="chapter" data-level="5.3" data-path="interviews-1.html"><a href="interviews-1.html#negotiating-access"><i class="fa fa-check"></i><b>5.3</b> Negotiating Access</a></li>
-<li class="chapter" data-level="5.4" data-path="interviews-1.html"><a href="interviews-1.html#sampling"><i class="fa fa-check"></i><b>5.4</b> Sampling</a></li>
-<li class="chapter" data-level="5.5" data-path="interviews-1.html"><a href="interviews-1.html#role-of-researcher"><i class="fa fa-check"></i><b>5.5</b> Role of Researcher</a></li>
-<li class="chapter" data-level="5.6" data-path="interviews-1.html"><a href="interviews-1.html#planning-interviews"><i class="fa fa-check"></i><b>5.6</b> Planning Interviews</a></li>
-<li class="chapter" data-level="5.7" data-path="interviews-1.html"><a href="interviews-1.html#taking-notes"><i class="fa fa-check"></i><b>5.7</b> Taking Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="focus-groups-1.html"><a href="focus-groups-1.html"><i class="fa fa-check"></i><b>6</b> Focus Groups</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#what-is-a-focus-group"><i class="fa fa-check"></i>What is a focus group?</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#why-use-a-focus-group"><i class="fa fa-check"></i>Why use a focus group?</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#preparing-for-a-focus-group"><i class="fa fa-check"></i>Preparing for a Focus Group</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#conducting-a-focus-group"><i class="fa fa-check"></i>Conducting a Focus Group</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#analyzing-focus-group-data"><i class="fa fa-check"></i>Analyzing Focus Group Data</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#pros-and-cons-of-focus-groups"><i class="fa fa-check"></i>Pros and Cons of Focus Groups</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#pros"><i class="fa fa-check"></i>Pros</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#cons"><i class="fa fa-check"></i>Cons</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="ethnography-1.html"><a href="ethnography-1.html"><i class="fa fa-check"></i><b>7</b> Ethnography</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="ethnography-1.html"><a href="ethnography-1.html#ethnography-defined"><i class="fa fa-check"></i><b>7.1</b> Ethnography Defined</a></li>
-<li class="chapter" data-level="7.2" data-path="ethnography-1.html"><a href="ethnography-1.html#ethnography-of-communication"><i class="fa fa-check"></i><b>7.2</b> Ethnography of Communication</a></li>
-<li class="chapter" data-level="7.3" data-path="ethnography-1.html"><a href="ethnography-1.html#autoethnography"><i class="fa fa-check"></i><b>7.3</b> Autoethnography</a></li>
-<li class="chapter" data-level="7.4" data-path="ethnography-1.html"><a href="ethnography-1.html#types-of-claims"><i class="fa fa-check"></i><b>7.4</b> Types of Claims</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#descriptive-claims"><i class="fa fa-check"></i>Descriptive Claims</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#interpretive-claims"><i class="fa fa-check"></i>Interpretive Claims</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#evaluative-reformist-claims"><i class="fa fa-check"></i>Evaluative &amp; Reformist Claims</a></li>
-</ul></li>
-<li class="chapter" data-level="7.5" data-path="ethnography-1.html"><a href="ethnography-1.html#ethnographic-data"><i class="fa fa-check"></i><b>7.5</b> Ethnographic Data</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#participant-observation"><i class="fa fa-check"></i>Participant Observation</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#interviews-2"><i class="fa fa-check"></i>Interviews</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#gatekeepers"><i class="fa fa-check"></i>Gatekeepers</a></li>
-</ul></li>
-<li class="chapter" data-level="7.6" data-path="ethnography-1.html"><a href="ethnography-1.html#evaluating-an-ethnography"><i class="fa fa-check"></i><b>7.6</b> Evaluating an Ethnography</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#warrants"><i class="fa fa-check"></i>Warrants</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#researcher-credibility"><i class="fa fa-check"></i>Researcher Credibility</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#adequacy-and-coherence"><i class="fa fa-check"></i>Adequacy and Coherence</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#thick-descriptions"><i class="fa fa-check"></i>Thick Descriptions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html"><i class="fa fa-check"></i><b>8</b> Qualitative Content Analysis</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#qualitative-specifics"><i class="fa fa-check"></i><b>8.1</b> Qualitative Specifics</a></li>
-<li class="chapter" data-level="8.2" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#three-approaches"><i class="fa fa-check"></i><b>8.2</b> Three Approaches</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#conventional-content-analysis"><i class="fa fa-check"></i><strong>Conventional Content Analysis:</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#directed-content-analysis"><i class="fa fa-check"></i><strong>Directed Content Analysis:</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#summative-content-analysis"><i class="fa fa-check"></i><strong>Summative Content Analysis:</strong></a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#grounded-theory"><i class="fa fa-check"></i><b>8.3</b> Grounded Theory</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#open-coding"><i class="fa fa-check"></i>Open Coding</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#axial-coding"><i class="fa fa-check"></i>Axial Coding</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#selective-coding"><i class="fa fa-check"></i>Selective Coding</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#thematic-analysis"><i class="fa fa-check"></i><b>8.4</b> Thematic Analysis</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#data-familiarization"><i class="fa fa-check"></i><strong>Data Familiarization</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#initial-coding"><i class="fa fa-check"></i><strong>Initial Coding</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#generating-initial-themes"><i class="fa fa-check"></i><strong>Generating Initial Themes</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#reviewing-and-defining-themes"><i class="fa fa-check"></i><strong>Reviewing and Defining Themes</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#data-retrieval"><i class="fa fa-check"></i><strong>Data Retrieval</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#data-analysis"><i class="fa fa-check"></i><strong>Data Analysis</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#report-writing"><i class="fa fa-check"></i><strong>Report Writing</strong></a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#reflexivity-and-quality-assurance"><i class="fa fa-check"></i><strong>Reflexivity and Quality Assurance</strong></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html"><i class="fa fa-check"></i><b>9</b> Quantitative Content Analysis</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#history-1"><i class="fa fa-check"></i><b>9.1</b> History</a></li>
-<li class="chapter" data-level="9.2" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#types"><i class="fa fa-check"></i><b>9.2</b> Types</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#deductive-content-analysis"><i class="fa fa-check"></i>Deductive Content Analysis</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#inductive-content-analysis"><i class="fa fa-check"></i>Inductive Content Analysis</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#comparison"><i class="fa fa-check"></i>Comparison</a></li>
-</ul></li>
-<li class="chapter" data-level="9.3" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#coding-sheet"><i class="fa fa-check"></i><b>9.3</b> Coding Sheet</a></li>
-<li class="chapter" data-level="9.4" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#intercoder-reliability"><i class="fa fa-check"></i><b>9.4</b> Intercoder Reliability</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#cohens-kappa-κ"><i class="fa fa-check"></i><strong>Cohen’s Kappa (κ)</strong></a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#spearmans-rho-ρ"><i class="fa fa-check"></i><strong>Spearman’s Rho (ρ)</strong></a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#pearsons-correlation-r"><i class="fa fa-check"></i><strong>Pearson’s Correlation (r)</strong></a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#krippendorffs-alpha-α"><i class="fa fa-check"></i><strong>Krippendorff’s Alpha (α):</strong></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="surveys-1.html"><a href="surveys-1.html"><i class="fa fa-check"></i><b>10</b> Surveys</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="surveys-1.html"><a href="surveys-1.html#definition"><i class="fa fa-check"></i><b>10.1</b> Definition</a></li>
-<li class="chapter" data-level="10.2" data-path="surveys-1.html"><a href="surveys-1.html#appropriateness"><i class="fa fa-check"></i><b>10.2</b> Appropriateness</a></li>
-<li class="chapter" data-level="10.3" data-path="surveys-1.html"><a href="surveys-1.html#how-to-create"><i class="fa fa-check"></i><b>10.3</b> How to create</a></li>
-<li class="chapter" data-level="10.4" data-path="surveys-1.html"><a href="surveys-1.html#theoretical-framework"><i class="fa fa-check"></i><b>10.4</b> Theoretical Framework</a></li>
-<li class="chapter" data-level="10.5" data-path="surveys-1.html"><a href="surveys-1.html#hypothesis-or-research-questions"><i class="fa fa-check"></i><b>10.5</b> Hypothesis or Research Questions</a></li>
-<li class="chapter" data-level="10.6" data-path="surveys-1.html"><a href="surveys-1.html#new-or-existing-survey"><i class="fa fa-check"></i><b>10.6</b> New or Existing Survey</a></li>
-<li class="chapter" data-level="10.7" data-path="surveys-1.html"><a href="surveys-1.html#survey-types"><i class="fa fa-check"></i><b>10.7</b> Survey Types</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#paper-based"><i class="fa fa-check"></i>Paper-based</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#web-based"><i class="fa fa-check"></i>Web-based</a></li>
-</ul></li>
-<li class="chapter" data-level="10.8" data-path="surveys-1.html"><a href="surveys-1.html#clarity"><i class="fa fa-check"></i><b>10.8</b> Clarity</a></li>
-<li class="chapter" data-level="10.9" data-path="surveys-1.html"><a href="surveys-1.html#key-questions-to-administer"><i class="fa fa-check"></i><b>10.9</b> Key Questions to Administer</a></li>
-<li class="chapter" data-level="10.10" data-path="surveys-1.html"><a href="surveys-1.html#types-of-surveys"><i class="fa fa-check"></i><b>10.10</b> Types of Surveys</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#one-shot"><i class="fa fa-check"></i>One-Shot</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#longitudinal"><i class="fa fa-check"></i>Longitudinal</a></li>
-</ul></li>
-<li class="chapter" data-level="10.11" data-path="surveys-1.html"><a href="surveys-1.html#analyzing-surveys"><i class="fa fa-check"></i><b>10.11</b> Analyzing Surveys</a></li>
-<li class="chapter" data-level="10.12" data-path="surveys-1.html"><a href="surveys-1.html#advantages-and-disadvantages"><i class="fa fa-check"></i><b>10.12</b> Advantages and Disadvantages</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#advantages"><i class="fa fa-check"></i>Advantages</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#disadvantages"><i class="fa fa-check"></i>Disadvantages</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="experiment-1.html"><a href="experiment-1.html"><i class="fa fa-check"></i><b>11</b> Experiment</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="experiment-1.html"><a href="experiment-1.html#definition-1"><i class="fa fa-check"></i><b>11.1</b> Definition</a></li>
-<li class="chapter" data-level="11.2" data-path="experiment-1.html"><a href="experiment-1.html#deductive-process"><i class="fa fa-check"></i><b>11.2</b> Deductive Process</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#design"><i class="fa fa-check"></i>Design</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#observation"><i class="fa fa-check"></i>Observation</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#analysis"><i class="fa fa-check"></i>Analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="11.3" data-path="experiment-1.html"><a href="experiment-1.html#casaul-arguments"><i class="fa fa-check"></i><b>11.3</b> Casaul Arguments</a></li>
-<li class="chapter" data-level="11.4" data-path="experiment-1.html"><a href="experiment-1.html#data-for-experiments"><i class="fa fa-check"></i><b>11.4</b> Data for Experiments</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#observation-variables"><i class="fa fa-check"></i>Observation variables</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#stimulus-variables"><i class="fa fa-check"></i>Stimulus variables</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#mixed-model-paradigm"><i class="fa fa-check"></i>Mixed-model paradigm</a></li>
-</ul></li>
-<li class="chapter" data-level="11.5" data-path="experiment-1.html"><a href="experiment-1.html#data-settings"><i class="fa fa-check"></i><b>11.5</b> Data Settings</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#location"><i class="fa fa-check"></i>Location</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#confederates"><i class="fa fa-check"></i>Confederates</a></li>
-</ul></li>
-<li class="chapter" data-level="11.6" data-path="experiment-1.html"><a href="experiment-1.html#research-designs"><i class="fa fa-check"></i><b>11.6</b> Research Designs</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#control"><i class="fa fa-check"></i>Control</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#pre-experimental-design"><i class="fa fa-check"></i>Pre-Experimental Design</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#quasi-experimental-design"><i class="fa fa-check"></i>Quasi-Experimental Design</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#true-experimental-design"><i class="fa fa-check"></i>True Experimental Design</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#sololmn-four-group"><i class="fa fa-check"></i>Sololmn Four-Group</a></li>
-</ul></li>
-<li class="chapter" data-level="11.7" data-path="experiment-1.html"><a href="experiment-1.html#threats-to-validity"><i class="fa fa-check"></i><b>11.7</b> Threats to Validity</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#confounding-variables"><i class="fa fa-check"></i>Confounding Variables</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#bias"><i class="fa fa-check"></i>Bias</a></li>
-</ul></li>
-<li class="chapter" data-level="11.8" data-path="experiment-1.html"><a href="experiment-1.html#time-effects"><i class="fa fa-check"></i><b>11.8</b> Time Effects</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#history-2"><i class="fa fa-check"></i>History</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#maturation"><i class="fa fa-check"></i>Maturation</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#mortality"><i class="fa fa-check"></i>Mortality</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#testing"><i class="fa fa-check"></i>Testing</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#instrumentation"><i class="fa fa-check"></i>Instrumentation</a></li>
-</ul></li>
-<li class="chapter" data-level="11.9" data-path="experiment-1.html"><a href="experiment-1.html#reactivity-effects"><i class="fa fa-check"></i><b>11.9</b> Reactivity Effects</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#selection"><i class="fa fa-check"></i>Selection</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#treatment-diffusion"><i class="fa fa-check"></i>Treatment Diffusion</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#compensatory-behavior"><i class="fa fa-check"></i>Compensatory Behavior</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#research-attributes"><i class="fa fa-check"></i>Research Attributes</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#demand-characteristics"><i class="fa fa-check"></i>Demand Characteristics</a></li>
-<li class="chapter" data-level="" data-path="experiment-1.html"><a href="experiment-1.html#apprehension"><i class="fa fa-check"></i>Apprehension</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html"><i class="fa fa-check"></i><b>12</b> Introduction to R</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#getting-started"><i class="fa fa-check"></i><b>12.1</b> Getting Started</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#downloading-installing"><i class="fa fa-check"></i>Downloading + Installing</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#creating-a-project"><i class="fa fa-check"></i>Creating a Project</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#file-management"><i class="fa fa-check"></i>File Management</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#basic-of-language"><i class="fa fa-check"></i><b>12.2</b> Basic of Language</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#downloading-installing-1"><i class="fa fa-check"></i>Downloading + Installing</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#syntax"><i class="fa fa-check"></i>Syntax</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#comments"><i class="fa fa-check"></i>Comments</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#variables"><i class="fa fa-check"></i>Variables</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#data-types"><i class="fa fa-check"></i>Data types</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#numbers"><i class="fa fa-check"></i>Numbers</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#math"><i class="fa fa-check"></i>Math</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#strings"><i class="fa fa-check"></i>Strings</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#operators"><i class="fa fa-check"></i>Operators</a></li>
-</ul></li>
-<li class="chapter" data-level="12.3" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#data-structures"><i class="fa fa-check"></i><b>12.3</b> Data Structures</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#lists"><i class="fa fa-check"></i>Lists</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#arrays"><i class="fa fa-check"></i>Arrays</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#data-frames"><i class="fa fa-check"></i>Data Frames</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-1.html"><a href="introduction-to-r-1.html#factors"><i class="fa fa-check"></i>Factors</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="working-with-data-1.html"><a href="working-with-data-1.html"><i class="fa fa-check"></i><b>13</b> Working with Data</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="working-with-data-1.html"><a href="working-with-data-1.html#defining-data"><i class="fa fa-check"></i><b>13.1</b> Defining Data</a></li>
-<li class="chapter" data-level="13.2" data-path="working-with-data-1.html"><a href="working-with-data-1.html#collecting-data"><i class="fa fa-check"></i><b>13.2</b> Collecting Data</a></li>
-<li class="chapter" data-level="13.3" data-path="working-with-data-1.html"><a href="working-with-data-1.html#preparing-data"><i class="fa fa-check"></i><b>13.3</b> Preparing Data</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="visuals-1.html"><a href="visuals-1.html"><i class="fa fa-check"></i><b>14</b> Visuals</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="visuals-1.html"><a href="visuals-1.html#tables"><i class="fa fa-check"></i><b>14.1</b> Tables</a></li>
-<li class="chapter" data-level="14.2" data-path="visuals-1.html"><a href="visuals-1.html#plots"><i class="fa fa-check"></i><b>14.2</b> Plots</a>
-<ul>
-<li class="chapter" data-level="" data-path="visuals-1.html"><a href="visuals-1.html#distribution"><i class="fa fa-check"></i>Distribution</a></li>
-<li class="chapter" data-level="" data-path="visuals-1.html"><a href="visuals-1.html#correlation"><i class="fa fa-check"></i>Correlation</a></li>
-<li class="chapter" data-level="" data-path="visuals-1.html"><a href="visuals-1.html#ranking"><i class="fa fa-check"></i>Ranking</a></li>
-<li class="chapter" data-level="" data-path="visuals-1.html"><a href="visuals-1.html#part-of-a-whole"><i class="fa fa-check"></i>Part of a whole</a></li>
-</ul></li>
-<li class="chapter" data-level="14.3" data-path="visuals-1.html"><a href="visuals-1.html#illustrations"><i class="fa fa-check"></i><b>14.3</b> Illustrations</a>
-<ul>
-<li><a href="visuals-1.html#section-1" id="toc-section-1"></a></li>
-<li><a href="visuals-1.html#section-2" id="toc-section-2"></a></li>
-<li><a href="visuals-1.html#section-3" id="toc-section-3"></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="analyses-1.html"><a href="analyses-1.html"><i class="fa fa-check"></i><b>15</b> Analyses</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="analyses-1.html"><a href="analyses-1.html#descriptive-statistics"><i class="fa fa-check"></i><b>15.1</b> Descriptive Statistics</a>
-<ul>
-<li class="chapter" data-level="" data-path="analyses-1.html"><a href="analyses-1.html#distribution-1"><i class="fa fa-check"></i>Distribution</a></li>
-<li class="chapter" data-level="" data-path="analyses-1.html"><a href="analyses-1.html#central-tendency"><i class="fa fa-check"></i>Central Tendency</a></li>
-<li class="chapter" data-level="" data-path="analyses-1.html"><a href="analyses-1.html#variability"><i class="fa fa-check"></i>Variability</a></li>
-</ul></li>
-<li class="chapter" data-level="15.2" data-path="analyses-1.html"><a href="analyses-1.html#inferential-statistics"><i class="fa fa-check"></i><b>15.2</b> Inferential Statistics</a>
-<ul>
-<li class="chapter" data-level="" data-path="analyses-1.html"><a href="analyses-1.html#t-tests"><i class="fa fa-check"></i>t-tests</a></li>
-<li class="chapter" data-level="" data-path="analyses-1.html"><a href="analyses-1.html#anovas"><i class="fa fa-check"></i>ANOVAs</a></li>
-<li class="chapter" data-level="" data-path="analyses-1.html"><a href="analyses-1.html#regressions"><i class="fa fa-check"></i>Regressions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>16</b> Appendix</a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="appendix.html"><a href="appendix.html#assignments"><i class="fa fa-check"></i><b>16.1</b> Assignments</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#individual"><i class="fa fa-check"></i>Individual</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#team"><i class="fa fa-check"></i>Team</a></li>
-</ul></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to Communication and Media Research with R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Communication and Media Research with R</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="research-ethics-1.html"><span class="header-section-number">2</span> Research Ethics</a></li>
+<li><a class="" href="research-papers-1.html"><span class="header-section-number">3</span> Research Papers</a></li>
+<li><a class="" href="communication-theories-1.html"><span class="header-section-number">4</span> Communication Theories</a></li>
+<li><a class="" href="interviews-1.html"><span class="header-section-number">5</span> Interviews</a></li>
+<li><a class="" href="focus-groups-1.html"><span class="header-section-number">6</span> Focus Groups</a></li>
+<li><a class="" href="ethnography-1.html"><span class="header-section-number">7</span> Ethnography</a></li>
+<li><a class="" href="qualitative-content-analysis-1.html"><span class="header-section-number">8</span> Qualitative Content Analysis</a></li>
+<li><a class="" href="quantitative-content-analysis-1.html"><span class="header-section-number">9</span> Quantitative Content Analysis</a></li>
+<li><a class="" href="surveys-1.html"><span class="header-section-number">10</span> Surveys</a></li>
+<li><a class="" href="experiment-1.html"><span class="header-section-number">11</span> Experiment</a></li>
+<li><a class="" href="introduction-to-r-1.html"><span class="header-section-number">12</span> Introduction to R</a></li>
+<li><a class="" href="working-with-data-1.html"><span class="header-section-number">13</span> Working with Data</a></li>
+<li><a class="" href="visuals-1.html"><span class="header-section-number">14</span> Visuals</a></li>
+<li><a class="active" href="analyses-1.html"><span class="header-section-number">15</span> Analyses</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">16</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="analyses-1" class="section level1 hasAnchor" number="15">
-<h1><span class="header-section-number">Chapter 15</span> Analyses<a href="analyses-1.html#analyses-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="analyses-1" class="section level1" number="15">
+<h1>
+<span class="header-section-number">15</span> Analyses<a class="anchor" aria-label="anchor" href="#analyses-1"><i class="fas fa-link"></i></a>
+</h1>
 <p>fill</p>
-<div id="descriptive-statistics" class="section level2 hasAnchor" number="15.1">
-<h2><span class="header-section-number">15.1</span> Descriptive Statistics<a href="analyses-1.html#descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="Descriptive%20Stats%20Graphic"><img src="images/desc_stats.jpg" style="width:100.0%" /></a></p>
-<div id="distribution-1" class="section level3 unnumbered hasAnchor">
-<h3>Distribution<a href="analyses-1.html#distribution-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="descriptive-statistics" class="section level2" number="15.1">
+<h2>
+<span class="header-section-number">15.1</span> Descriptive Statistics<a class="anchor" aria-label="anchor" href="#descriptive-statistics"><i class="fas fa-link"></i></a>
+</h2>
+<p><a href="Descriptive%20Stats%20Graphic"><img src="images/desc_stats.jpg" style="width:100.0%"></a></p>
+<div id="distribution-1" class="section level3 unnumbered">
+<h3>Distribution<a class="anchor" aria-label="anchor" href="#distribution-1"><i class="fas fa-link"></i></a>
+</h3>
 <p>fill</p>
-<div id="simple" class="section level4 unnumbered hasAnchor">
-<h4>Simple<a href="analyses-1.html#simple" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="simple" class="section level4 unnumbered">
+<h4>Simple<a class="anchor" aria-label="anchor" href="#simple"><i class="fas fa-link"></i></a>
+</h4>
 <p>fill</p>
 </div>
-<div id="grouped" class="section level4 unnumbered hasAnchor">
-<h4>Grouped<a href="analyses-1.html#grouped" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>fill</p>
-</div>
-</div>
-<div id="central-tendency" class="section level3 unnumbered hasAnchor">
-<h3>Central Tendency<a href="analyses-1.html#central-tendency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>fill</p>
-<div id="mean" class="section level4 unnumbered hasAnchor">
-<h4>Mean<a href="analyses-1.html#mean" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>fill</p>
-</div>
-<div id="median" class="section level4 unnumbered hasAnchor">
-<h4>Median<a href="analyses-1.html#median" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>fill</p>
-</div>
-<div id="mode" class="section level4 unnumbered hasAnchor">
-<h4>Mode<a href="analyses-1.html#mode" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="grouped" class="section level4 unnumbered">
+<h4>Grouped<a class="anchor" aria-label="anchor" href="#grouped"><i class="fas fa-link"></i></a>
+</h4>
 <p>fill</p>
 </div>
 </div>
-<div id="variability" class="section level3 unnumbered hasAnchor">
-<h3>Variability<a href="analyses-1.html#variability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="central-tendency" class="section level3 unnumbered">
+<h3>Central Tendency<a class="anchor" aria-label="anchor" href="#central-tendency"><i class="fas fa-link"></i></a>
+</h3>
+<p>fill</p>
+<div id="mean" class="section level4 unnumbered">
+<h4>Mean<a class="anchor" aria-label="anchor" href="#mean"><i class="fas fa-link"></i></a>
+</h4>
+<p>fill</p>
+</div>
+<div id="median" class="section level4 unnumbered">
+<h4>Median<a class="anchor" aria-label="anchor" href="#median"><i class="fas fa-link"></i></a>
+</h4>
+<p>fill</p>
+</div>
+<div id="mode" class="section level4 unnumbered">
+<h4>Mode<a class="anchor" aria-label="anchor" href="#mode"><i class="fas fa-link"></i></a>
+</h4>
+<p>fill</p>
+</div>
+</div>
+<div id="variability" class="section level3 unnumbered">
+<h3>Variability<a class="anchor" aria-label="anchor" href="#variability"><i class="fas fa-link"></i></a>
+</h3>
 <p>fill</p>
 <p>Range Standard Deviation Variance</p>
 <p>fill</p>
 </div>
 </div>
-<div id="inferential-statistics" class="section level2 hasAnchor" number="15.2">
-<h2><span class="header-section-number">15.2</span> Inferential Statistics<a href="analyses-1.html#inferential-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="inferential-statistics" class="section level2" number="15.2">
+<h2>
+<span class="header-section-number">15.2</span> Inferential Statistics<a class="anchor" aria-label="anchor" href="#inferential-statistics"><i class="fas fa-link"></i></a>
+</h2>
 <p>fill</p>
-<div id="t-tests" class="section level3 unnumbered hasAnchor">
-<h3>t-tests<a href="analyses-1.html#t-tests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="t-tests" class="section level3 unnumbered">
+<h3>t-tests<a class="anchor" aria-label="anchor" href="#t-tests"><i class="fas fa-link"></i></a>
+</h3>
 <p>fill</p>
 </div>
-<div id="anovas" class="section level3 unnumbered hasAnchor">
-<h3>ANOVAs<a href="analyses-1.html#anovas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="anovas" class="section level3 unnumbered">
+<h3>ANOVAs<a class="anchor" aria-label="anchor" href="#anovas"><i class="fas fa-link"></i></a>
+</h3>
 <p>fill</p>
 </div>
-<div id="regressions" class="section level3 unnumbered hasAnchor">
-<h3>Regressions<a href="analyses-1.html#regressions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="regressions" class="section level3 unnumbered">
+<h3>Regressions<a class="anchor" aria-label="anchor" href="#regressions"><i class="fas fa-link"></i></a>
+</h3>
 <p>fill</p>
 
 </div>
 </div>
 </div>
-            </section>
+  <div class="chapter-nav">
+<div class="prev"><a href="visuals-1.html"><span class="header-section-number">14</span> Visuals</a></div>
+<div class="next"><a href="appendix.html"><span class="header-section-number">16</span> Appendix</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#analyses-1"><span class="header-section-number">15</span> Analyses</a></li>
+<li>
+<a class="nav-link" href="#descriptive-statistics"><span class="header-section-number">15.1</span> Descriptive Statistics</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#distribution-1">Distribution</a></li>
+<li><a class="nav-link" href="#central-tendency">Central Tendency</a></li>
+<li><a class="nav-link" href="#variability">Variability</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#inferential-statistics"><span class="header-section-number">15.2</span> Inferential Statistics</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#t-tests">t-tests</a></li>
+<li><a class="nav-link" href="#anovas">ANOVAs</a></li>
+<li><a class="nav-link" href="#regressions">Regressions</a></li>
+</ul>
+</li>
+</ul>
 
-          </div>
-        </div>
-      </div>
-<a href="visuals-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-09-10.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/15-analysis.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection",
-"scroll_highlight": true
-}
-});
-});
-</script>
 
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
 </body>
-
 </html>
