@@ -70,11 +70,6 @@ challenges-and-limitations
 case-studies-2
 conclusion-2
 quantitative-content-analysis-1
-history-1
-types
-coding-sheet
-intercoder-reliability-1
-quantitative-content-analysis-2
 introduction-4
 theoretical-foundations-1
 planning-and-preparing-for-qnca
