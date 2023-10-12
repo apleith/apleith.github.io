@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Countdown Math Game</title>
+	<!-- Linking the CSS -->
+	<link rel="stylesheet" type="text/css" href="css/countdown.css">
+	<!-- Linking the JavaScript -->
+	<script src="js/countdown.js" defer></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Countdown Math Game</h1>
+		<div>
+			<label for="largeNumbers">Number of large numbers:</label>
+			<select id="largeNumbers">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+		</div>
+		<button id="generate">Generate Numbers and Target</button>
+		<div id="givenNumbers"></div>
+		<div id="targetNumber"></div>
+		<input type="text" id="userInput" placeholder="Enter your equation">
+		<button id="submit">Submit</button>
+		<div id="result"></div>
+	</div>
+</body>
+
+</html>

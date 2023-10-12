@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 15 Cleaning Data for Visualizations and Analyses | Dr. Who</title>
+<meta name="author" content="Alex P. Leith, PhD">
+<meta name="description" content="15.1 Handling Missing Data  15.1.1 Methods for Dealing with Missing Values in the spotify_songs Dataset  Read in Data: To read in the necessary web data, you must first load the required packaage...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="Chapter 15 Cleaning Data for Visualizations and Analyses | Dr. Who">
+<meta property="og:type" content="book">
+<meta property="og:description" content="15.1 Handling Missing Data  15.1.1 Methods for Dealing with Missing Values in the spotify_songs Dataset  Read in Data: To read in the necessary web data, you must first load the required packaage...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 15 Cleaning Data for Visualizations and Analyses | Dr. Who">
+<meta name="twitter:description" content="15.1 Handling Missing Data  15.1.1 Methods for Dealing with Missing Values in the spotify_songs Dataset  Read in Data: To read in the necessary web data, you must first load the required packaage...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Dr. Who</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="research-ethics-1.html"><span class="header-section-number">2</span> Research Ethics</a></li>
+<li><a class="" href="research-papers-1.html"><span class="header-section-number">3</span> Research Papers</a></li>
+<li><a class="" href="communication-theories-1.html"><span class="header-section-number">4</span> Communication Theories</a></li>
+<li><a class="" href="interviews-1.html"><span class="header-section-number">5</span> Interviews</a></li>
+<li><a class="" href="focus-groups-1.html"><span class="header-section-number">6</span> Focus Groups</a></li>
+<li><a class="" href="ethnography-1.html"><span class="header-section-number">7</span> Ethnography</a></li>
+<li><a class="" href="qualitative-content-analysis-1.html"><span class="header-section-number">8</span> Qualitative Content Analysis</a></li>
+<li><a class="" href="quantitative-content-analysis-1.html"><span class="header-section-number">9</span> Quantitative Content Analysis</a></li>
+<li><a class="" href="surveys-1.html"><span class="header-section-number">10</span> Surveys</a></li>
+<li><a class="" href="experiments.html"><span class="header-section-number">11</span> Experiments</a></li>
+<li><a class="" href="introduction-to-r-and-rstudio.html"><span class="header-section-number">12</span> Introduction to R and RStudio</a></li>
+<li><a class="" href="defining-data.html"><span class="header-section-number">13</span> Defining Data</a></li>
+<li><a class="" href="collecting-data.html"><span class="header-section-number">14</span> Collecting Data</a></li>
+<li><a class="active" href="cleaning-data-for-visualizations-and-analyses.html"><span class="header-section-number">15</span> Cleaning Data for Visualizations and Analyses</a></li>
+<li><a class="" href="visualizations.html"><span class="header-section-number">16</span> Visualizations</a></li>
+<li><a class="" href="data-analysis.html"><span class="header-section-number">17</span> Data Analysis</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">18</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="cleaning-data-for-visualizations-and-analyses" class="section level1" number="15">
+<h1>
+<span class="header-section-number">15</span> Cleaning Data for Visualizations and Analyses<a class="anchor" aria-label="anchor" href="#cleaning-data-for-visualizations-and-analyses"><i class="fas fa-link"></i></a>
+</h1>
+<div id="handling-missing-data" class="section level2" number="15.1">
+<h2>
+<span class="header-section-number">15.1</span> Handling Missing Data<a class="anchor" aria-label="anchor" href="#handling-missing-data"><i class="fas fa-link"></i></a>
+</h2>
+<div id="methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset" class="section level3" number="15.1.1">
+<h3>
+<span class="header-section-number">15.1.1</span> Methods for Dealing with Missing Values in the <code>spotify_songs</code> Dataset<a class="anchor" aria-label="anchor" href="#methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<strong>Read in Data</strong>: To read in the necessary web data, you must first load the required packaage and then import the CSV file.</li>
+</ul>
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Check if the package is already installed before trying to install it</span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="st">"readr"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Package"</span><span class="op">]</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"readr"</span>, repos <span class="op">=</span> <span class="st">'http://cran.us.r-project.org'</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Load the package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Define the raw GitHub URL of the dataset</span></span>
+<span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify_songs.csv"</span></span>
+<span></span>
+<span><span class="co"># Read the CSV file from the URL</span></span>
+<span><span class="va">spotify_songs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Rows: 32833 Columns: 23
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (10): track_id, track_name, track_artist, track_album_id, track_album_na...
+## dbl (13): track_popularity, danceability, energy, key, loudness, mode, speec...
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>Handling missing data is a critical step in the data cleaning process. Missing data can introduce bias or lead to inaccurate inferences. There are several ways to handle missing values:</p>
+<ul>
+<li>
+<strong>Complete Case Analysis</strong>: This is the simplest method where you remove observations where any of the variables are missing. However, this method may lead to a loss of valuable data (Rubin, 1987).</li>
+</ul>
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs_complete</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>
+<strong>Mean/Median/Mode Imputation</strong>: Replace the missing values with the mean, median, or mode of that variable. It’s a quick solution but can potentially introduce bias (Little &amp; Rubin, 2002).</li>
+</ul>
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+## Attaching package: 'dplyr'</code></pre>
+<pre><code>## The following objects are masked from 'package:stats':
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>track_popularity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">track_popularity</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">track_popularity</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>
+<strong>Multiple Imputation</strong>: More sophisticated than mean imputation, it creates multiple datasets and averages the imputed values (Schafer &amp; Graham, 2002).</li>
+</ul>
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amices/mice">mice</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: package 'mice' was built under R version 4.3.1</code></pre>
+<pre><code>## 
+## Attaching package: 'mice'</code></pre>
+<pre><code>## The following object is masked from 'package:stats':
+## 
+##     filter</code></pre>
+<pre><code>## The following objects are masked from 'package:base':
+## 
+##     cbind, rbind</code></pre>
+<div class="sourceCode" id="cb84"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">imputed_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://amices.org/mice/reference/mice.html">mice</a></span><span class="op">(</span><span class="va">spotify_songs</span>, m<span class="op">=</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## 
+##  iter imp variable
+##   1   1
+##   1   2
+##   1   3
+##   1   4
+##   1   5
+##   2   1
+##   2   2
+##   2   3
+##   2   4
+##   2   5
+##   3   1
+##   3   2
+##   3   3
+##   3   4
+##   3   5
+##   4   1
+##   4   2
+##   4   3
+##   4   4
+##   4   5
+##   5   1
+##   5   2
+##   5   3
+##   5   4
+##   5   5</code></pre>
+<pre><code>## Warning: Number of logged events: 10</code></pre>
+<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs_complete</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/complete.html">complete</a></span><span class="op">(</span><span class="va">imputed_data</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="data-transformation" class="section level2" number="15.2">
+<h2>
+<span class="header-section-number">15.2</span> Data Transformation<a class="anchor" aria-label="anchor" href="#data-transformation"><i class="fas fa-link"></i></a>
+</h2>
+<div id="using-dplyr-for-filtering-selecting-and-mutating-data" class="section level3" number="15.2.1">
+<h3>
+<span class="header-section-number">15.2.1</span> Using <code>dplyr</code> for Filtering, Selecting, and Mutating Data<a class="anchor" aria-label="anchor" href="#using-dplyr-for-filtering-selecting-and-mutating-data"><i class="fas fa-link"></i></a>
+</h3>
+<p><code>dplyr</code> is a package that provides a set of tools for efficiently manipulating datasets in R. Below are some code snippets updated to use the <code>spotify_songs</code> dataset:</p>
+<ul>
+<li><strong>Filtering Data</strong></li>
+</ul>
+<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">pop_songs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="va">playlist_genre</span> <span class="op">==</span> <span class="st">'pop'</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li><strong>Selecting Columns</strong></li>
+</ul>
+<div class="sourceCode" id="cb89"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">song_details</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="va">track_name</span>, <span class="va">playlist_genre</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li><strong>Creating New Variables (Mutate)</strong></li>
+</ul>
+<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs_enhanced</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">spotify_songs</span>, is_popular <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">track_popularity</span> <span class="op">&gt;</span> <span class="fl">50</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="outliers-and-normalization" class="section level2" number="15.3">
+<h2>
+<span class="header-section-number">15.3</span> Outliers and Normalization<a class="anchor" aria-label="anchor" href="#outliers-and-normalization"><i class="fas fa-link"></i></a>
+</h2>
+<div id="identifying-and-treating-outliers-in-the-spotify_songs-dataset" class="section level3" number="15.3.1">
+<h3>
+<span class="header-section-number">15.3.1</span> Identifying and Treating Outliers in the <code>spotify_songs</code> Dataset<a class="anchor" aria-label="anchor" href="#identifying-and-treating-outliers-in-the-spotify_songs-dataset"><i class="fas fa-link"></i></a>
+</h3>
+<p>Outliers are data points that are significantly different from most of the other data. They can distort the representation and analysis.</p>
+<ul>
+<li><strong>Identifying Outliers</strong></li>
+</ul>
+<div class="sourceCode" id="cb91"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-39-1.png" width="672"></div>
+<ul>
+<li>
+<strong>Treating Outliers</strong>: Common methods include transformation, binning, or removing the outliers (Tukey, 1977).</li>
+</ul>
+<div class="sourceCode" id="cb92"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs_no_outliers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="va">track_popularity</span> <span class="op">&lt;</span> <span class="fl">100</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="normalization-techniques" class="section level3" number="15.3.2">
+<h3>
+<span class="header-section-number">15.3.2</span> Normalization Techniques<a class="anchor" aria-label="anchor" href="#normalization-techniques"><i class="fas fa-link"></i></a>
+</h3>
+<p>Data normalization is crucial when variables have different scales, as it can bias the results. Common methods include:</p>
+<ul>
+<li><strong>Min-Max Scaling</strong></li>
+</ul>
+<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">normalized_popularity</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li><strong>Z-score Normalization</strong></li>
+</ul>
+<div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">z_score_popularity</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="references-2" class="section level2" number="15.4">
+<h2>
+<span class="header-section-number">15.4</span> References<a class="anchor" aria-label="anchor" href="#references-2"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Little, R. J., &amp; Rubin, D. B. (2002). Statistical analysis with missing data. John Wiley &amp; Sons.</li>
+<li>Rubin, D. B. (1987). Multiple imputation for nonresponse in surveys. John Wiley &amp; Sons.</li>
+<li>Schafer, J. L., &amp; Graham, J. W. (2002). Missing data: our view of the state of the art. Psychological methods, 7(2), 147-177.</li>
+<li>Tukey, J. W. (1977). Exploratory data analysis. Addison-Wesley.</li>
+<li>Fink, A. (2013). How to conduct surveys: A step-by-step guide. Sage Publications.</li>
+<li>Johnston, L. (2017). Secondary data analysis: A method of which the time has come. Qualitative and Quantitative Methods in Libraries, 3(3), 619-626.</li>
+<li>Marres, N., &amp; Weltevrede, E. (2013). Scraping the Social? Issues in live social research. Journal of Cultural Economy, 6(3), 313-335.</li>
+<li>Boyles, J. L. (2013). 100 Years of Data. Computer, 46(7), 22-23.</li>
+<li>Silverman, D. (2016). Qualitative research. Sage.</li>
+<li>Neuendorf, K. A. (2016). The content analysis guidebook. Sage.</li>
+<li>Wrench, J. S., Thomas-Maddox, C., Richmond, V. P., &amp; McCroskey, J. C. (2008). Quantitative research methods for communication: A hands-on approach. Oxford University Press.</li>
+<li>Wickham, H., &amp; Grolemund, G. (2017). R for data science: Import, tidy, transform, visualize, and model data. O’Reilly Media.</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="collecting-data.html"><span class="header-section-number">14</span> Collecting Data</a></div>
+<div class="next"><a href="visualizations.html"><span class="header-section-number">16</span> Visualizations</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#cleaning-data-for-visualizations-and-analyses"><span class="header-section-number">15</span> Cleaning Data for Visualizations and Analyses</a></li>
+<li>
+<a class="nav-link" href="#handling-missing-data"><span class="header-section-number">15.1</span> Handling Missing Data</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset"><span class="header-section-number">15.1.1</span> Methods for Dealing with Missing Values in the spotify_songs Dataset</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#data-transformation"><span class="header-section-number">15.2</span> Data Transformation</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#using-dplyr-for-filtering-selecting-and-mutating-data"><span class="header-section-number">15.2.1</span> Using dplyr for Filtering, Selecting, and Mutating Data</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#outliers-and-normalization"><span class="header-section-number">15.3</span> Outliers and Normalization</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#identifying-and-treating-outliers-in-the-spotify_songs-dataset"><span class="header-section-number">15.3.1</span> Identifying and Treating Outliers in the spotify_songs Dataset</a></li>
+<li><a class="nav-link" href="#normalization-techniques"><span class="header-section-number">15.3.2</span> Normalization Techniques</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#references-2"><span class="header-section-number">15.4</span> References</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Dr. Who</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-08.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
