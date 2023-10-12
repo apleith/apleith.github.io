@@ -4486,15 +4486,19 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
 \begin{verbatim}
-## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
-## The downloaded binary packages are in
-##  C:\Users\AP Leith\AppData\Local\Temp\RtmpA3GAF4\downloaded_packages
+##   There is a binary version available but the source version is later:
+##         binary source needs_compilation
+## ggplot2  3.4.3  3.4.4             FALSE
+\end{verbatim}
+
+\begin{verbatim}
+## installing the source package 'ggplot2'
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -4563,9 +4567,10 @@ Arithmetic operations form the basis of numerical calculations in R. These opera
 
 You can execute these basic arithmetic operations directly in the R console.
 
+\emph{Addition}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Addition}
 \DecValTok{5} \SpecialCharTok{+} \DecValTok{3}
 \end{Highlighting}
 \end{Shaded}
@@ -4574,11 +4579,10 @@ You can execute these basic arithmetic operations directly in the R console.
 ## [1] 8
 \end{verbatim}
 
+\emph{Subtraction}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# 8}
-
-\CommentTok{\# Subtraction}
 \DecValTok{5} \SpecialCharTok{{-}} \DecValTok{3}
 \end{Highlighting}
 \end{Shaded}
@@ -4587,11 +4591,10 @@ You can execute these basic arithmetic operations directly in the R console.
 ## [1] 2
 \end{verbatim}
 
+\emph{Multiplication}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# 2}
-
-\CommentTok{\# Multiplication}
 \DecValTok{5} \SpecialCharTok{*} \DecValTok{3}
 \end{Highlighting}
 \end{Shaded}
@@ -4600,11 +4603,10 @@ You can execute these basic arithmetic operations directly in the R console.
 ## [1] 15
 \end{verbatim}
 
+\emph{Division}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\#15}
-
-\CommentTok{\# Division}
 \DecValTok{5} \SpecialCharTok{/} \DecValTok{3}
 \end{Highlighting}
 \end{Shaded}
@@ -4613,11 +4615,10 @@ You can execute these basic arithmetic operations directly in the R console.
 ## [1] 1.666667
 \end{verbatim}
 
+\emph{Exponentiation}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# 1.666667}
-
-\CommentTok{\# Exponentiation}
 \DecValTok{5} \SpecialCharTok{\^{}} \DecValTok{3}
 \end{Highlighting}
 \end{Shaded}
@@ -4626,11 +4627,10 @@ You can execute these basic arithmetic operations directly in the R console.
 ## [1] 125
 \end{verbatim}
 
+\emph{Modulus}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\#125}
-
-\CommentTok{\# Modulus}
 \DecValTok{5} \SpecialCharTok{\%\%} \DecValTok{3}
 \end{Highlighting}
 \end{Shaded}
@@ -4638,12 +4638,6 @@ You can execute these basic arithmetic operations directly in the R console.
 \begin{verbatim}
 ## [1] 2
 \end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\#2}
-\end{Highlighting}
-\end{Shaded}
 
 \hypertarget{variables}{%
 \subsection*{Variables}\label{variables}}
@@ -4719,9 +4713,10 @@ dz
 - \textbf{\texttt{mean()}}: Calculates the arithmetic mean of a numeric vector.
 - \textbf{\texttt{sqrt()}}: Calculates the square root of a number.
 
+\emph{Using sum function}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Using sum function}
 \FunctionTok{sum}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -4730,11 +4725,10 @@ dz
 ## [1] 6
 \end{verbatim}
 
+\emph{Using mean function}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# 6}
-
-\CommentTok{\# Using mean function}
 \FunctionTok{mean}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{))}
 \end{Highlighting}
 \end{Shaded}
@@ -4743,11 +4737,10 @@ dz
 ## [1] 2.5
 \end{verbatim}
 
+\emph{Using sqrt function}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# 2.5}
-
-\CommentTok{\# Using sqrt function}
 \FunctionTok{sqrt}\NormalTok{(}\DecValTok{16}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -4755,12 +4748,6 @@ dz
 \begin{verbatim}
 ## [1] 4
 \end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# 4}
-\end{Highlighting}
-\end{Shaded}
 
 \hypertarget{user-defined-functions}{%
 \subsubsection*{User-Defined Functions}\label{user-defined-functions}}
@@ -4783,12 +4770,6 @@ You can also create your own functions in R. These are particularly useful for t
 \begin{verbatim}
 ## [1] 16
 \end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# 16}
-\end{Highlighting}
-\end{Shaded}
 
 By understanding the basics of arithmetic operations, variable assignment, and function usage, you can lay a strong foundation for more complex statistical analyses and computational research in mass communications.
 
@@ -4817,15 +4798,27 @@ Vectors can be created using the \texttt{c()} function, which combines elements 
 \paragraph*{Examples}\label{examples-2}}
 \addcontentsline{toc}{paragraph}{Examples}
 
+\emph{Creating a numeric vector}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Creating a numeric vector}
+\CommentTok{\# }
 \NormalTok{numeric\_vector }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-\CommentTok{\# Creating a character vector}
+\emph{Creating a character vector}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{character\_vector }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"apple"}\NormalTok{, }\StringTok{"banana"}\NormalTok{, }\StringTok{"cherry"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-\CommentTok{\# Creating a logical vector}
+\emph{Creating a logical vector}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{logical\_vector }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\ConstantTok{TRUE}\NormalTok{, }\ConstantTok{FALSE}\NormalTok{, }\ConstantTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -5054,10 +5047,6 @@ You can load an installed package using the \texttt{library()} function:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
 \hypertarget{unloading-a-package}{%
 \subsubsection*{Unloading a Package}\label{unloading-a-package}}
 \addcontentsline{toc}{subsubsection}{Unloading a Package}
@@ -5085,9 +5074,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.0 (2023-04-21 ucrt)
+## R version 4.3.1 (2023-06-16 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 11 x64 (build 22621)
+## Running under: Windows 10 x64 (build 19045)
 ## 
 ## Matrix products: default
 ## 
@@ -5106,15 +5095,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
-##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
-##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
-## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
-## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
-## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
-## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
-## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
-## [33] tools_4.3.0      gtable_0.3.3
+##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
+##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
+##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
+## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
+## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
+## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
+## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
+## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
+## [33] gtable_0.3.4
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5296,19 +5285,21 @@ Wickham, H., \& Grolemund, G. (2017). R for data science: Import, tidy, transfor
 
 Xie, Y., Allaire, J., \& Grolemund, G. (2018). R Markdown: The definitive guide. CRC Press.
 
-\hypertarget{defining-data}{%
-\chapter{Defining Data}\label{defining-data}}
+\hypertarget{data}{%
+\chapter{Data}\label{data}}
 
-\hypertarget{what-is-data}{%
-\section{What is Data?}\label{what-is-data}}
+\hypertarget{defining-data}{%
+\section{Defining Data?}\label{defining-data}}
 
 \hypertarget{explanation-of-data-in-the-context-of-research}{%
-\subsection{Explanation of Data in the Context of Research}\label{explanation-of-data-in-the-context-of-research}}
+\subsection*{Explanation of Data in the Context of Research}\label{explanation-of-data-in-the-context-of-research}}
+\addcontentsline{toc}{subsection}{Explanation of Data in the Context of Research}
 
 In the realm of academic research, data can be broadly defined as a collection of facts, statistics, or observations represented in various forms, such as numbers, text, or images. Data serves as the empirical foundation upon which hypotheses can be tested, theories can be validated, and meaningful insights can be drawn. For researchers in the field of Communication and Media Studies, data might include viewer ratings for television shows, text from social media posts, or timestamps indicating when a user interacted with a media platform, among other examples (Neuendorf, 2016).
 
 \hypertarget{types-of-data-qualitative-vs.-quantitative}{%
-\subsubsection{Types of Data: Qualitative vs.~Quantitative}\label{types-of-data-qualitative-vs.-quantitative}}
+\subsubsection*{Types of Data: Qualitative vs.~Quantitative}\label{types-of-data-qualitative-vs.-quantitative}}
+\addcontentsline{toc}{subsubsection}{Types of Data: Qualitative vs.~Quantitative}
 
 Data is often classified into two overarching categories: qualitative and quantitative.
 
@@ -5322,8 +5313,9 @@ Data is often classified into two overarching categories: qualitative and quanti
 \hypertarget{variables-and-observations}{%
 \section{Variables and Observations}\label{variables-and-observations}}
 
-\hypertarget{define-variables-and-observations-using-the-spotify_songs-dataset}{%
-\subsection{\texorpdfstring{Define Variables and Observations Using the \texttt{spotify\_songs} Dataset}{Define Variables and Observations Using the spotify\_songs Dataset}}\label{define-variables-and-observations-using-the-spotify_songs-dataset}}
+\hypertarget{define-variables-and-observations}{%
+\subsection*{Define Variables and Observations}\label{define-variables-and-observations}}
+\addcontentsline{toc}{subsection}{Define Variables and Observations}
 
 In data analysis, ``variables'' refer to the different aspects or dimensions that data can have, while ``observations'' refer to individual data points within each variable.
 
@@ -5336,8 +5328,9 @@ In data analysis, ``variables'' refer to the different aspects or dimensions tha
 
 It's crucial to understand the variables and observations in your dataset, as they serve as the basic units in your data analysis workflow.
 
-\hypertarget{explanation-of-data-types-e.g.-integers-factors-strings}{%
-\subsection{Explanation of Data Types (e.g., Integers, Factors, Strings)}\label{explanation-of-data-types-e.g.-integers-factors-strings}}
+\hypertarget{explanation-of-data-types}{%
+\subsection*{Explanation of Data Types}\label{explanation-of-data-types}}
+\addcontentsline{toc}{subsection}{Explanation of Data Types}
 
 Understanding data types is crucial for effective data manipulation and analysis in R. Incorrect data types can lead to errors and might produce misleading results. Here are some common data types in R, illustrated with examples from the \texttt{spotify\_songs} dataset:
 
@@ -5355,13 +5348,15 @@ Understanding data types is crucial for effective data manipulation and analysis
 Knowing the data types of your variables is crucial for performing appropriate analyses and avoiding errors in your R code (Wickham \& Grolemund, 2017).
 
 \hypertarget{collecting-data}{%
-\chapter{Collecting Data}\label{collecting-data}}
+\section{Collecting Data}\label{collecting-data}}
 
 \hypertarget{primary-and-secondary-data}{%
-\section{Primary and Secondary Data}\label{primary-and-secondary-data}}
+\subsection*{Primary and Secondary Data}\label{primary-and-secondary-data}}
+\addcontentsline{toc}{subsection}{Primary and Secondary Data}
 
 \hypertarget{discussion-of-primary-vs.-secondary-data-collection-methods}{%
-\subsection{Discussion of Primary vs.~Secondary Data Collection Methods}\label{discussion-of-primary-vs.-secondary-data-collection-methods}}
+\subsection*{Discussion of Primary vs.~Secondary Data Collection Methods}\label{discussion-of-primary-vs.-secondary-data-collection-methods}}
+\addcontentsline{toc}{subsection}{Discussion of Primary vs.~Secondary Data Collection Methods}
 
 Collecting accurate and reliable data is pivotal for generating meaningful research conclusions. Two key types of data collection methods are used in academic research: primary and secondary.
 
@@ -5373,7 +5368,8 @@ Collecting accurate and reliable data is pivotal for generating meaningful resea
 \end{itemize}
 
 \hypertarget{the-spotify_songs-dataset-as-an-example-of-secondary-data}{%
-\subsubsection{\texorpdfstring{The \texttt{spotify\_songs} Dataset as an Example of Secondary Data}{The spotify\_songs Dataset as an Example of Secondary Data}}\label{the-spotify_songs-dataset-as-an-example-of-secondary-data}}
+\subsubsection*{\texorpdfstring{The \texttt{spotify\_songs} Dataset as an Example of Secondary Data}{The spotify\_songs Dataset as an Example of Secondary Data}}\label{the-spotify_songs-dataset-as-an-example-of-secondary-data}}
+\addcontentsline{toc}{subsubsection}{The \texttt{spotify\_songs} Dataset as an Example of Secondary Data}
 
 The \texttt{spotify\_songs} dataset serves as an excellent example of secondary data. It comprises various variables such as \texttt{track\_name}, \texttt{playlist\_genre}, and \texttt{track\_popularity}, among others, that have been previously collected by Spotify for their business analytics or user recommendations. Researchers can use this dataset to answer a myriad of questions about music preferences, playlist creation, or even socio-cultural trends in music consumption. The preexisting nature of this dataset saves researchers the time and resources that primary data collection would require.
 
@@ -5381,7 +5377,8 @@ The \texttt{spotify\_songs} dataset serves as an excellent example of secondary 
 \section{Data Sources}\label{data-sources-1}}
 
 \hypertarget{web-scraping-apis-and-existing-databases}{%
-\subsection{Web Scraping, APIs, and Existing Databases}\label{web-scraping-apis-and-existing-databases}}
+\subsection*{Web Scraping, APIs, and Existing Databases}\label{web-scraping-apis-and-existing-databases}}
+\addcontentsline{toc}{subsection}{Web Scraping, APIs, and Existing Databases}
 
 Data sources can vary widely, and the choice of source often depends on the research question, available resources, and required data types. Here are some commonly used methods:
 
@@ -5395,18 +5392,21 @@ Data sources can vary widely, and the choice of source often depends on the rese
 \end{itemize}
 
 \hypertarget{importance-of-credible-data-sources}{%
-\subsection{Importance of Credible Data Sources}\label{importance-of-credible-data-sources}}
+\subsection*{Importance of Credible Data Sources}\label{importance-of-credible-data-sources}}
+\addcontentsline{toc}{subsection}{Importance of Credible Data Sources}
 
 The credibility of your data source significantly impacts the reliability and validity of your research findings. Unreliable data can not only lead to incorrect conclusions but can also diminish the scholarly impact and credibility of the research. Therefore, it is imperative to choose data sources that are reputable, peer-reviewed when possible, and align with your research objectives (Silverman, 2016).
 
 \hypertarget{cleaning-data-for-visualizations-and-analyses}{%
-\chapter{Cleaning Data for Visualizations and Analyses}\label{cleaning-data-for-visualizations-and-analyses}}
+\section*{Cleaning Data for Visualizations and Analyses}\label{cleaning-data-for-visualizations-and-analyses}}
+\addcontentsline{toc}{section}{Cleaning Data for Visualizations and Analyses}
 
 \hypertarget{handling-missing-data}{%
-\section{Handling Missing Data}\label{handling-missing-data}}
+\subsection{Handling Missing Data}\label{handling-missing-data}}
 
 \hypertarget{methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset}{%
-\subsection{\texorpdfstring{Methods for Dealing with Missing Values in the \texttt{spotify\_songs} Dataset}{Methods for Dealing with Missing Values in the spotify\_songs Dataset}}\label{methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset}}
+\subsubsection*{\texorpdfstring{Methods for Dealing with Missing Values in the \texttt{spotify\_songs} Dataset}{Methods for Dealing with Missing Values in the spotify\_songs Dataset}}\label{methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset}}
+\addcontentsline{toc}{subsubsection}{Methods for Dealing with Missing Values in the \texttt{spotify\_songs} Dataset}
 
 \begin{itemize}
 \tightlist
@@ -5506,10 +5506,6 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: package 'mice' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{verbatim}
 ## 
 ## Attaching package: 'mice'
 \end{verbatim}
@@ -5573,10 +5569,12 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \hypertarget{data-transformation}{%
-\section{Data Transformation}\label{data-transformation}}
+\subsection*{Data Transformation}\label{data-transformation}}
+\addcontentsline{toc}{subsection}{Data Transformation}
 
 \hypertarget{using-dplyr-for-filtering-selecting-and-mutating-data}{%
-\subsection{\texorpdfstring{Using \texttt{dplyr} for Filtering, Selecting, and Mutating Data}{Using dplyr for Filtering, Selecting, and Mutating Data}}\label{using-dplyr-for-filtering-selecting-and-mutating-data}}
+\subsubsection*{\texorpdfstring{Using \texttt{dplyr} for Filtering, Selecting, and Mutating Data}{Using dplyr for Filtering, Selecting, and Mutating Data}}\label{using-dplyr-for-filtering-selecting-and-mutating-data}}
+\addcontentsline{toc}{subsubsection}{Using \texttt{dplyr} for Filtering, Selecting, and Mutating Data}
 
 \texttt{dplyr} is a package that provides a set of tools for efficiently manipulating datasets in R. Below are some code snippets updated to use the \texttt{spotify\_songs} dataset:
 
@@ -5617,10 +5615,12 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \hypertarget{outliers-and-normalization}{%
-\section{Outliers and Normalization}\label{outliers-and-normalization}}
+\subsection*{Outliers and Normalization}\label{outliers-and-normalization}}
+\addcontentsline{toc}{subsection}{Outliers and Normalization}
 
 \hypertarget{identifying-and-treating-outliers-in-the-spotify_songs-dataset}{%
-\subsection{\texorpdfstring{Identifying and Treating Outliers in the \texttt{spotify\_songs} Dataset}{Identifying and Treating Outliers in the spotify\_songs Dataset}}\label{identifying-and-treating-outliers-in-the-spotify_songs-dataset}}
+\subsubsection*{\texorpdfstring{Identifying and Treating Outliers in the \texttt{spotify\_songs} Dataset}{Identifying and Treating Outliers in the spotify\_songs Dataset}}\label{identifying-and-treating-outliers-in-the-spotify_songs-dataset}}
+\addcontentsline{toc}{subsubsection}{Identifying and Treating Outliers in the \texttt{spotify\_songs} Dataset}
 
 Outliers are data points that are significantly different from most of the other data. They can distort the representation and analysis.
 
@@ -5636,7 +5636,7 @@ Outliers are data points that are significantly different from most of the other
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-39-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-48-1.pdf}
 
 \begin{itemize}
 \tightlist
@@ -5651,7 +5651,8 @@ Outliers are data points that are significantly different from most of the other
 \end{Shaded}
 
 \hypertarget{normalization-techniques}{%
-\subsection{Normalization Techniques}\label{normalization-techniques}}
+\subsection*{Normalization Techniques}\label{normalization-techniques}}
+\addcontentsline{toc}{subsection}{Normalization Techniques}
 
 Data normalization is crucial when variables have different scales, as it can bias the results. Common methods include:
 
@@ -5968,15 +5969,6 @@ A histogram is particularly useful for visualizing the frequency distribution of
 \begin{Shaded}
 \begin{Highlighting}[]
   \FunctionTok{library}\NormalTok{(ggplot2)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
   \FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
     \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{binwidth=}\DecValTok{5}\NormalTok{, }\AttributeTok{fill=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.7}\NormalTok{) }\SpecialCharTok{+}
     \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Distribution of Track Popularity"}\NormalTok{) }\SpecialCharTok{+}
@@ -5985,7 +5977,7 @@ A histogram is particularly useful for visualizing the frequency distribution of
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-43-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-52-1.pdf}
 
 By using this histogram code snippet, one can visualize the distribution of \texttt{track\_popularity} within the \texttt{spotify\_songs} dataset, gaining insights into how often songs with various popularity levels appear in the dataset.
 
@@ -6004,7 +5996,7 @@ Scatter plots are invaluable for depicting the relationship between two continuo
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-44-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-53-1.pdf}
 
 Using this scatter plot, researchers could investigate whether there's a noticeable relationship between a song's duration (\texttt{duration\_ms}) and its popularity (\texttt{track\_popularity}).
 
@@ -6023,7 +6015,7 @@ Box plots, or box-and-whisker plots, are effective for summarizing the central t
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-45-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-54-1.pdf}
 
 With this box plot, one can compare the distribution of \texttt{track\_popularity} across different \texttt{playlist\_genre} categories. It provides an effective way to see the median, quartiles, and potential outliers in track popularity for each genre.
 
@@ -6065,7 +6057,7 @@ Once the date conversion is done, you can proceed with the line chart plotting:
 ## Warning: Removed 1886 rows containing missing values (`geom_line()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-47-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-56-1.pdf}
 
 In this updated line chart, we use \texttt{track\_album\_release\_date} after converting it to a Date type. The graph will depict how track popularity (\texttt{track\_popularity}) has evolved over time based on their album's release date (\texttt{track\_album\_release\_date}).
 
@@ -6229,7 +6221,7 @@ Histograms and bar plots are graphical methods for visualizing distributions. Wh
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-48-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-57-1.pdf}
 
 \hypertarget{grouped}{%
 \subsubsection{Grouped}\label{grouped}}
@@ -6346,8 +6338,8 @@ Inferential statistics extend the reach of descriptive statistics by allowing re
 \begin{verbatim}
 ## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
 ## v forcats   1.0.0     v stringr   1.5.0
-## v lubridate 1.9.2     v tibble    3.2.1
-## v purrr     1.0.1     v tidyr     1.3.0
+## v lubridate 1.9.3     v tibble    3.2.1
+## v purrr     1.0.2     v tidyr     1.3.0
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x mice::filter() masks dplyr::filter(), stats::filter()
 ## x dplyr::lag()   masks stats::lag()
@@ -6725,10 +6717,6 @@ Submit your PowerPoint slides on Blackboard. You must also submit your partner c
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'tidytuesdayR' was built under R version 4.3.1
-\end{verbatim}
-
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{tuesdata }\OtherTok{\textless{}{-}}\NormalTok{ tidytuesdayR}\SpecialCharTok{::}\FunctionTok{tt\_load}\NormalTok{(}\DecValTok{2021}\NormalTok{, }\AttributeTok{week =} \DecValTok{48}\NormalTok{)}
@@ -6750,9 +6738,34 @@ Submit your PowerPoint slides on Blackboard. You must also submit your partner c
 \begin{verbatim}
 ## 
 ##  Downloading file 1 of 4: `writers.csv`
+\end{verbatim}
+
+\begin{verbatim}
+## Only 10 Github queries remaining until 2023-10-12 10:27:55 AM CDT.
+\end{verbatim}
+
+\begin{verbatim}
 ##  Downloading file 2 of 4: `directors.csv`
+\end{verbatim}
+
+\begin{verbatim}
+## Only 9 Github queries remaining until 2023-10-12 10:27:54 AM CDT.
+\end{verbatim}
+
+\begin{verbatim}
 ##  Downloading file 3 of 4: `episodes.csv`
+\end{verbatim}
+
+\begin{verbatim}
+## Only 8 Github queries remaining until 2023-10-12 10:27:54 AM CDT.
+\end{verbatim}
+
+\begin{verbatim}
 ##  Downloading file 4 of 4: `imdb.csv`
+\end{verbatim}
+
+\begin{verbatim}
+## Only 7 Github queries remaining until 2023-10-12 10:27:55 AM CDT.
 \end{verbatim}
 
 \begin{verbatim}
