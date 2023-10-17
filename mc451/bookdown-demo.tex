@@ -121,14 +121,14 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Dr.~Who},
+  pdftitle={Introduction to Communication and Media Research with R},
   pdfauthor={Alex P. Leith, PhD},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Dr.~Who}
+\title{Introduction to Communication and Media Research with R}
 \author{Alex P. Leith, PhD}
-\date{2023-10-08}
+\date{2023-10-17}
 
 \begin{document}
 \maketitle
@@ -4486,19 +4486,15 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
 \begin{verbatim}
+## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
-##   There is a binary version available but the source version is later:
-##         binary source needs_compilation
-## ggplot2  3.4.3  3.4.4             FALSE
-\end{verbatim}
-
-\begin{verbatim}
-## installing the source package 'ggplot2'
+## The downloaded binary packages are in
+##  C:\Users\AP Leith\AppData\Local\Temp\Rtmpmk3YqF\downloaded_packages
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -5047,6 +5043,10 @@ You can load an installed package using the \texttt{library()} function:
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.3.1
+\end{verbatim}
+
 \hypertarget{unloading-a-package}{%
 \subsubsection*{Unloading a Package}\label{unloading-a-package}}
 \addcontentsline{toc}{subsubsection}{Unloading a Package}
@@ -5074,9 +5074,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.1 (2023-06-16 ucrt)
+## R version 4.3.0 (2023-04-21 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 10 x64 (build 19045)
+## Running under: Windows 11 x64 (build 22621)
 ## 
 ## Matrix products: default
 ## 
@@ -5095,15 +5095,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
-##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
-##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
-## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
-## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
-## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
-## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
-## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
-## [33] gtable_0.3.4
+##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
+##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
+##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
+## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
+## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
+## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
+## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
+## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
+## [33] tools_4.3.0      gtable_0.3.3
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5398,11 +5398,11 @@ Data sources can vary widely, and the choice of source often depends on the rese
 The credibility of your data source significantly impacts the reliability and validity of your research findings. Unreliable data can not only lead to incorrect conclusions but can also diminish the scholarly impact and credibility of the research. Therefore, it is imperative to choose data sources that are reputable, peer-reviewed when possible, and align with your research objectives (Silverman, 2016).
 
 \hypertarget{cleaning-data-for-visualizations-and-analyses}{%
-\section*{Cleaning Data for Visualizations and Analyses}\label{cleaning-data-for-visualizations-and-analyses}}
-\addcontentsline{toc}{section}{Cleaning Data for Visualizations and Analyses}
+\section{Cleaning Data for Visualizations and Analyses}\label{cleaning-data-for-visualizations-and-analyses}}
 
 \hypertarget{handling-missing-data}{%
-\subsection{Handling Missing Data}\label{handling-missing-data}}
+\subsection*{Handling Missing Data}\label{handling-missing-data}}
+\addcontentsline{toc}{subsection}{Handling Missing Data}
 
 \hypertarget{methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset}{%
 \subsubsection*{\texorpdfstring{Methods for Dealing with Missing Values in the \texttt{spotify\_songs} Dataset}{Methods for Dealing with Missing Values in the spotify\_songs Dataset}}\label{methods-for-dealing-with-missing-values-in-the-spotify_songs-dataset}}
@@ -5504,6 +5504,10 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \FunctionTok{library}\NormalTok{(mice)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'mice' was built under R version 4.3.1
+\end{verbatim}
 
 \begin{verbatim}
 ## 
@@ -5969,6 +5973,15 @@ A histogram is particularly useful for visualizing the frequency distribution of
 \begin{Shaded}
 \begin{Highlighting}[]
   \FunctionTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
   \FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
     \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{binwidth=}\DecValTok{5}\NormalTok{, }\AttributeTok{fill=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.7}\NormalTok{) }\SpecialCharTok{+}
     \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Distribution of Track Popularity"}\NormalTok{) }\SpecialCharTok{+}
@@ -6338,8 +6351,8 @@ Inferential statistics extend the reach of descriptive statistics by allowing re
 \begin{verbatim}
 ## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
 ## v forcats   1.0.0     v stringr   1.5.0
-## v lubridate 1.9.3     v tibble    3.2.1
-## v purrr     1.0.2     v tidyr     1.3.0
+## v lubridate 1.9.2     v tibble    3.2.1
+## v purrr     1.0.1     v tidyr     1.3.0
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x mice::filter() masks dplyr::filter(), stats::filter()
 ## x dplyr::lag()   masks stats::lag()
@@ -6709,78 +6722,6 @@ The presentation will be done during our scheduled time for our final (December 
 Beyond that, your presentation is up to you.
 
 Submit your PowerPoint slides on Blackboard. You must also submit your partner contract with any important changes and commentary to reflect an imbalance in workload.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\#install.packages("tidytuesdayR")}
-\FunctionTok{library}\NormalTok{(}\StringTok{"tidytuesdayR"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{tuesdata }\OtherTok{\textless{}{-}}\NormalTok{ tidytuesdayR}\SpecialCharTok{::}\FunctionTok{tt\_load}\NormalTok{(}\DecValTok{2021}\NormalTok{, }\AttributeTok{week =} \DecValTok{48}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## --- Compiling #TidyTuesday Information for 2021-11-23 ----
-\end{verbatim}
-
-\begin{verbatim}
-## --- There are 4 files available ---
-\end{verbatim}
-
-\begin{verbatim}
-## --- Starting Download ---
-\end{verbatim}
-
-\begin{verbatim}
-## 
-##  Downloading file 1 of 4: `writers.csv`
-\end{verbatim}
-
-\begin{verbatim}
-## Only 10 Github queries remaining until 2023-10-12 10:27:55 AM CDT.
-\end{verbatim}
-
-\begin{verbatim}
-##  Downloading file 2 of 4: `directors.csv`
-\end{verbatim}
-
-\begin{verbatim}
-## Only 9 Github queries remaining until 2023-10-12 10:27:54 AM CDT.
-\end{verbatim}
-
-\begin{verbatim}
-##  Downloading file 3 of 4: `episodes.csv`
-\end{verbatim}
-
-\begin{verbatim}
-## Only 8 Github queries remaining until 2023-10-12 10:27:54 AM CDT.
-\end{verbatim}
-
-\begin{verbatim}
-##  Downloading file 4 of 4: `imdb.csv`
-\end{verbatim}
-
-\begin{verbatim}
-## Only 7 Github queries remaining until 2023-10-12 10:27:55 AM CDT.
-\end{verbatim}
-
-\begin{verbatim}
-## --- Download complete ---
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{writers }\OtherTok{\textless{}{-}}\NormalTok{ tuesdata}\SpecialCharTok{$}\NormalTok{writers}
-\NormalTok{directors }\OtherTok{\textless{}{-}}\NormalTok{ tuesdata}\SpecialCharTok{$}\NormalTok{directors}
-\NormalTok{episodes }\OtherTok{\textless{}{-}}\NormalTok{ tuesdata}\SpecialCharTok{$}\NormalTok{episodes}
-\NormalTok{imdb }\OtherTok{\textless{}{-}}\NormalTok{ tuesdata}\SpecialCharTok{$}\NormalTok{imdb}
-\end{Highlighting}
-\end{Shaded}
-
 
   \bibliography{book.bib,packages.bib}
 

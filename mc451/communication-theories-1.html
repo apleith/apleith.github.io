@@ -1,776 +1,79 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Communication Theories | Dr. Who</title>
-  <meta name="description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess." />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 4 Communication Theories | Dr. Who" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Communication Theories | Dr. Who" />
-  
-  <meta name="twitter:description" content="This book is presently a living document being using by Dr. Leith to teach MC 451. Elements of other courses may also appear in this book for each of acccess." />
-  
-
-<meta name="author" content="Alex P. Leith, PhD" />
-
-
-<meta name="date" content="2023-10-08" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="research-papers-1.html"/>
-<link rel="next" href="interviews-1.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 4 Communication Theories | Introduction to Communication and Media Research with R</title>
+<meta name="author" content="Alex P. Leith, PhD">
+<meta name="description" content="4.1 Agenda Setting Theory Agenda setting theory is a communication theory that examines the relationship between the media and public opinion. The theory suggests that the media does not simply...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta property="og:title" content="Chapter 4 Communication Theories | Introduction to Communication and Media Research with R">
+<meta property="og:type" content="book">
+<meta property="og:description" content="4.1 Agenda Setting Theory Agenda setting theory is a communication theory that examines the relationship between the media and public opinion. The theory suggests that the media does not simply...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 4 Communication Theories | Introduction to Communication and Media Research with R">
+<meta name="twitter:description" content="4.1 Agenda Setting Theory Agenda setting theory is a communication theory that examines the relationship between the media and public opinion. The theory suggests that the media does not simply...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="#"><img src="https://apleith.github.io/images/c_me.png" style="width=200px"></a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="research-ethics-1.html"><a href="research-ethics-1.html"><i class="fa fa-check"></i><b>2</b> Research Ethics</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="research-ethics-1.html"><a href="research-ethics-1.html#history"><i class="fa fa-check"></i><b>2.1</b> History</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#key-events"><i class="fa fa-check"></i>Key Events</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#unethical-research"><i class="fa fa-check"></i>Unethical Research</a></li>
-</ul></li>
-<li class="chapter" data-level="2.2" data-path="research-ethics-1.html"><a href="research-ethics-1.html#key-components"><i class="fa fa-check"></i><b>2.2</b> Key Components</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#informed-consent"><i class="fa fa-check"></i>Informed Consent</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#confidentiality"><i class="fa fa-check"></i>Confidentiality</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#debriefing"><i class="fa fa-check"></i>Debriefing</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#avoidance-of-harm"><i class="fa fa-check"></i>Avoidance of Harm</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#justice"><i class="fa fa-check"></i>Justice</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="research-ethics-1.html"><a href="research-ethics-1.html#ethical-considerations"><i class="fa fa-check"></i><b>2.3</b> Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#deception"><i class="fa fa-check"></i>Deception</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#risks-to-participants"><i class="fa fa-check"></i>Risks to Participants</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#vulnerable-populations"><i class="fa fa-check"></i>Vulnerable Populations</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#intellectual-property"><i class="fa fa-check"></i>Intellectual Property</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="research-ethics-1.html"><a href="research-ethics-1.html#current-ethical-challenges-in-social-science-research"><i class="fa fa-check"></i><b>2.4</b> Current Ethical Challenges in Social Science Research</a></li>
-<li class="chapter" data-level="2.5" data-path="research-ethics-1.html"><a href="research-ethics-1.html#institutional-review-board"><i class="fa fa-check"></i><b>2.5</b> Institutional Review Board</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#history-of-the-institutional-review-board"><i class="fa fa-check"></i>History of the Institutional Review Board</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#purpose-of-the-institutional-review-board"><i class="fa fa-check"></i>Purpose of the Institutional Review Board</a></li>
-<li class="chapter" data-level="" data-path="research-ethics-1.html"><a href="research-ethics-1.html#levels-of-risk"><i class="fa fa-check"></i>Levels of Risk</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="research-ethics-1.html"><a href="research-ethics-1.html#references"><i class="fa fa-check"></i><b>2.6</b> References</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="research-papers-1.html"><a href="research-papers-1.html"><i class="fa fa-check"></i><b>3</b> Research Papers</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="research-papers-1.html"><a href="research-papers-1.html#find"><i class="fa fa-check"></i><b>3.1</b> How to Find Research Papers</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#use-a-specialized-search-engine."><i class="fa fa-check"></i>Use a specialized search engine.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#check-your-university-library."><i class="fa fa-check"></i>Check your university library.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#search-for-preprints."><i class="fa fa-check"></i>Search for preprints.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#use-social-media."><i class="fa fa-check"></i>Use social media.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#contact-experts-in-your-field."><i class="fa fa-check"></i>Contact experts in your field.</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="research-papers-1.html"><a href="research-papers-1.html#read"><i class="fa fa-check"></i><b>3.2</b> How to Read Research Papers</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-three-pass-approach."><i class="fa fa-check"></i>The three-pass approach.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-question-based-approach."><i class="fa fa-check"></i>The question-based approach.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-active-reading-approach."><i class="fa fa-check"></i>The active reading approach.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#the-collaborative-reading-approach."><i class="fa fa-check"></i>The collaborative reading approach.</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="research-papers-1.html"><a href="research-papers-1.html#write"><i class="fa fa-check"></i><b>3.3</b> How to Write Research Papers</a>
-<ul>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#choose-an-interesting-topic-you-know."><i class="fa fa-check"></i>Choose an interesting topic you know.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#do-your-research-thoroughly."><i class="fa fa-check"></i>Do your research thoroughly.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#write-a-clear-and-concise-thesis-statement."><i class="fa fa-check"></i>Write a clear and concise thesis statement.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#write-strong-research-hypotheses-or-questions."><i class="fa fa-check"></i>Write strong research hypotheses or questions.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#organize-your-paper-carefully."><i class="fa fa-check"></i>Organize your paper carefully.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#write-in-a-clear-and-concise-style."><i class="fa fa-check"></i>Write in a clear and concise style.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#use-evidence-to-support-your-arguments."><i class="fa fa-check"></i>Use evidence to support your arguments.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#proofread-your-paper-carefully."><i class="fa fa-check"></i>Proofread your paper carefully.</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#additional-tips"><i class="fa fa-check"></i>Additional Tips</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#academic-examples"><i class="fa fa-check"></i>Academic Examples</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#industry-examples"><i class="fa fa-check"></i>Industry Examples</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#sections-of-an-academic-paper"><i class="fa fa-check"></i>Sections of an Academic Paper</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="research-papers-1.html"><a href="research-papers-1.html#cite"><i class="fa fa-check"></i><b>3.4</b> How to Cite Research Papers</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="research-papers-1.html"><a href="research-papers-1.html#why-citing-is-important"><i class="fa fa-check"></i><b>3.4.1</b> Why Citing is Important</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#two-types-in-apa"><i class="fa fa-check"></i>Two Types in APA</a></li>
-<li class="chapter" data-level="" data-path="research-papers-1.html"><a href="research-papers-1.html#additional-tips-1"><i class="fa fa-check"></i>Additional Tips</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="communication-theories-1.html"><a href="communication-theories-1.html"><i class="fa fa-check"></i><b>4</b> Communication Theories</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="communication-theories-1.html"><a href="communication-theories-1.html#agenda-setting-theory"><i class="fa fa-check"></i><b>4.1</b> Agenda Setting Theory</a></li>
-<li class="chapter" data-level="4.2" data-path="communication-theories-1.html"><a href="communication-theories-1.html#cognitive-dissonance"><i class="fa fa-check"></i><b>4.2</b> Cognitive Dissonance</a></li>
-<li class="chapter" data-level="4.3" data-path="communication-theories-1.html"><a href="communication-theories-1.html#cultivation-theory"><i class="fa fa-check"></i><b>4.3</b> Cultivation Theory</a></li>
-<li class="chapter" data-level="4.4" data-path="communication-theories-1.html"><a href="communication-theories-1.html#elaboration-likelihood-model"><i class="fa fa-check"></i><b>4.4</b> Elaboration Likelihood Model</a></li>
-<li class="chapter" data-level="4.5" data-path="communication-theories-1.html"><a href="communication-theories-1.html#framing-theory"><i class="fa fa-check"></i><b>4.5</b> Framing Theory</a></li>
-<li class="chapter" data-level="4.6" data-path="communication-theories-1.html"><a href="communication-theories-1.html#gatekeeping-theory"><i class="fa fa-check"></i><b>4.6</b> Gatekeeping Theory</a></li>
-<li class="chapter" data-level="4.7" data-path="communication-theories-1.html"><a href="communication-theories-1.html#hyperpersonal-model"><i class="fa fa-check"></i><b>4.7</b> Hyperpersonal Model</a></li>
-<li class="chapter" data-level="4.8" data-path="communication-theories-1.html"><a href="communication-theories-1.html#knowledge-gap-hypothesis"><i class="fa fa-check"></i><b>4.8</b> Knowledge Gap Hypothesis</a></li>
-<li class="chapter" data-level="4.9" data-path="communication-theories-1.html"><a href="communication-theories-1.html#online-disinhibition-effect"><i class="fa fa-check"></i><b>4.9</b> Online Disinhibition Effect</a></li>
-<li class="chapter" data-level="4.10" data-path="communication-theories-1.html"><a href="communication-theories-1.html#parasocial-interaction"><i class="fa fa-check"></i><b>4.10</b> Parasocial Interaction</a></li>
-<li class="chapter" data-level="4.11" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-learning-theory"><i class="fa fa-check"></i><b>4.11</b> Social Learning Theory</a></li>
-<li class="chapter" data-level="4.12" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-constructionism"><i class="fa fa-check"></i><b>4.12</b> Social Constructionism</a></li>
-<li class="chapter" data-level="4.13" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-exchange-theory"><i class="fa fa-check"></i><b>4.13</b> Social Exchange Theory</a></li>
-<li class="chapter" data-level="4.14" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-identity-theory"><i class="fa fa-check"></i><b>4.14</b> Social Identity Theory</a></li>
-<li class="chapter" data-level="4.15" data-path="communication-theories-1.html"><a href="communication-theories-1.html#social-information-processing-theory"><i class="fa fa-check"></i><b>4.15</b> Social Information Processing Theory</a></li>
-<li class="chapter" data-level="4.16" data-path="communication-theories-1.html"><a href="communication-theories-1.html#uses-and-gratification-theory"><i class="fa fa-check"></i><b>4.16</b> Uses and Gratification Theory</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="interviews-1.html"><a href="interviews-1.html"><i class="fa fa-check"></i><b>5</b> Interviews</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="interviews-1.html"><a href="interviews-1.html#interviewing-purpose"><i class="fa fa-check"></i><b>5.1</b> Interviewing Purpose</a></li>
-<li class="chapter" data-level="5.2" data-path="interviews-1.html"><a href="interviews-1.html#approaches-of-interviews"><i class="fa fa-check"></i><b>5.2</b> Approaches of Interviews</a></li>
-<li class="chapter" data-level="5.3" data-path="interviews-1.html"><a href="interviews-1.html#negotiating-access"><i class="fa fa-check"></i><b>5.3</b> Negotiating Access</a></li>
-<li class="chapter" data-level="5.4" data-path="interviews-1.html"><a href="interviews-1.html#sampling"><i class="fa fa-check"></i><b>5.4</b> Sampling</a></li>
-<li class="chapter" data-level="5.5" data-path="interviews-1.html"><a href="interviews-1.html#role-of-researcher"><i class="fa fa-check"></i><b>5.5</b> Role of Researcher</a></li>
-<li class="chapter" data-level="5.6" data-path="interviews-1.html"><a href="interviews-1.html#planning-interviews"><i class="fa fa-check"></i><b>5.6</b> Planning Interviews</a></li>
-<li class="chapter" data-level="5.7" data-path="interviews-1.html"><a href="interviews-1.html#taking-notes"><i class="fa fa-check"></i><b>5.7</b> Taking Notes</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="focus-groups-1.html"><a href="focus-groups-1.html"><i class="fa fa-check"></i><b>6</b> Focus Groups</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="focus-groups-1.html"><a href="focus-groups-1.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#definition-of-a-focus-group"><i class="fa fa-check"></i>Definition of a Focus Group</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#historical-overview-and-evolution-in-media-research"><i class="fa fa-check"></i>Historical Overview and Evolution in Media Research</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#purpose-and-advantages-of-using-focus-groups-in-media-and-communication"><i class="fa fa-check"></i>Purpose and Advantages of Using Focus Groups in Media and Communication</a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="focus-groups-1.html"><a href="focus-groups-1.html#planning-and-designing-focus-group-studies"><i class="fa fa-check"></i><b>6.2</b> Planning and Designing Focus Group Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#setting-clear-objectives"><i class="fa fa-check"></i>Setting Clear Objectives</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#selection-and-composition-of-participants"><i class="fa fa-check"></i>Selection and Composition of Participants</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#crafting-the-discussion-guide"><i class="fa fa-check"></i>Crafting the Discussion Guide</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="focus-groups-1.html"><a href="focus-groups-1.html#logistics-and-execution"><i class="fa fa-check"></i><b>6.3</b> Logistics and Execution</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#recruiting-participants"><i class="fa fa-check"></i>Recruiting Participants</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#setting-and-environment"><i class="fa fa-check"></i>Setting and Environment</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#role-of-the-moderator"><i class="fa fa-check"></i>Role of the Moderator</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="focus-groups-1.html"><a href="focus-groups-1.html#data-collection-and-analysis"><i class="fa fa-check"></i><b>6.4</b> Data Collection and Analysis</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#recording-the-session"><i class="fa fa-check"></i>Recording the Session</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#transcribing-focus-group-discussions"><i class="fa fa-check"></i>Transcribing Focus Group Discussions</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#data-analysis-techniques"><i class="fa fa-check"></i>Data Analysis Techniques</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="focus-groups-1.html"><a href="focus-groups-1.html#pitfalls-and-challenges"><i class="fa fa-check"></i><b>6.5</b> Pitfalls and Challenges</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#groupthink-and-peer-pressure"><i class="fa fa-check"></i>Groupthink and Peer Pressure</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#dominant-voices-and-passive-participants"><i class="fa fa-check"></i>Dominant Voices and Passive Participants</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#interpretation-biases"><i class="fa fa-check"></i>Interpretation Biases</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#logistical-issues-no-shows-technical-difficulties-etc."><i class="fa fa-check"></i>Logistical Issues: No-shows, Technical Difficulties, etc.</a></li>
-</ul></li>
-<li class="chapter" data-level="6.6" data-path="focus-groups-1.html"><a href="focus-groups-1.html#ethical-considerations-1"><i class="fa fa-check"></i><b>6.6</b> Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#informed-consent-and-anonymity"><i class="fa fa-check"></i>Informed Consent and Anonymity</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#handling-sensitive-topics-and-emotional-reactions"><i class="fa fa-check"></i>Handling Sensitive Topics and Emotional Reactions</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#data-storage-and-privacy"><i class="fa fa-check"></i>Data Storage and Privacy</a></li>
-</ul></li>
-<li class="chapter" data-level="6.7" data-path="focus-groups-1.html"><a href="focus-groups-1.html#case-studies"><i class="fa fa-check"></i><b>6.7</b> Case Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#using-focus-groups-for-television-show-development"><i class="fa fa-check"></i>Using Focus Groups for Television Show Development</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#evaluating-advertising-campaign-effectiveness"><i class="fa fa-check"></i>Evaluating Advertising Campaign Effectiveness</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#understanding-public-opinion-on-media-controversies"><i class="fa fa-check"></i>Understanding Public Opinion on Media Controversies</a></li>
-</ul></li>
-<li class="chapter" data-level="6.8" data-path="focus-groups-1.html"><a href="focus-groups-1.html#conclusion"><i class="fa fa-check"></i><b>6.8</b> Conclusion</a>
-<ul>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#reiterating-the-value-of-focus-groups-in-media-and-communication"><i class="fa fa-check"></i>Reiterating the Value of Focus Groups in Media and Communication</a></li>
-<li class="chapter" data-level="" data-path="focus-groups-1.html"><a href="focus-groups-1.html#future-trends-technological-innovations-and-evolving-methodologies"><i class="fa fa-check"></i>Future Trends: Technological Innovations and Evolving Methodologies</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="ethnography-1.html"><a href="ethnography-1.html"><i class="fa fa-check"></i><b>7</b> Ethnography</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="ethnography-1.html"><a href="ethnography-1.html#introduction-2"><i class="fa fa-check"></i><b>7.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#definition-of-ethnography"><i class="fa fa-check"></i>Definition of Ethnography</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#historical-overview-and-roots-in-anthropology"><i class="fa fa-check"></i>Historical Overview and Roots in Anthropology</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#importance-and-relevance-of-ethnography-in-media-and-communication-research"><i class="fa fa-check"></i>Importance and Relevance of Ethnography in Media and Communication Research</a></li>
-</ul></li>
-<li class="chapter" data-level="7.2" data-path="ethnography-1.html"><a href="ethnography-1.html#fundamentals-of-ethnographic-research-in-media-studies"><i class="fa fa-check"></i><b>7.2</b> Fundamentals of Ethnographic Research in Media Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#understanding-culture-and-media-consumption"><i class="fa fa-check"></i>Understanding Culture and Media Consumption</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#participant-observation-immersing-in-media-environments"><i class="fa fa-check"></i>Participant Observation: Immersing in Media Environments</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#the-role-of-the-ethnographer-observer-participant-or-both"><i class="fa fa-check"></i>The Role of the Ethnographer: Observer, Participant, or Both?</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#planning-and-designing-ethnographic-studies"><i class="fa fa-check"></i>Planning and Designing Ethnographic Studies</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="ethnography-1.html"><a href="ethnography-1.html#setting-clear-objectives-1"><i class="fa fa-check"></i><b>7.3</b> Setting Clear Objectives</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#determining-the-research-question"><i class="fa fa-check"></i>Determining the Research Question</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#identifying-the-cultural-or-subcultural-group-of-interest"><i class="fa fa-check"></i>Identifying the Cultural or Subcultural Group of Interest</a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="ethnography-1.html"><a href="ethnography-1.html#deciding-on-duration-and-depth-of-study"><i class="fa fa-check"></i><b>7.4</b> Deciding on Duration and Depth of Study</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#short-term-vs.-long-term-engagement"><i class="fa fa-check"></i>Short-Term vs. Long-Term Engagement</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#surface-observation-vs.-deep-immersion"><i class="fa fa-check"></i>Surface Observation vs. Deep Immersion</a></li>
-</ul></li>
-<li class="chapter" data-level="7.5" data-path="ethnography-1.html"><a href="ethnography-1.html#gaining-access-and-building-trust"><i class="fa fa-check"></i><b>7.5</b> Gaining Access and Building Trust</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#navigating-gatekeepers"><i class="fa fa-check"></i>Navigating Gatekeepers</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#developing-relationships-with-participants"><i class="fa fa-check"></i>Developing Relationships with Participants</a></li>
-</ul></li>
-<li class="chapter" data-level="7.6" data-path="ethnography-1.html"><a href="ethnography-1.html#methods-of-data-collection"><i class="fa fa-check"></i><b>7.6</b> Methods of Data Collection</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#field-notes-and-journals"><i class="fa fa-check"></i>Field Notes and Journals</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#interviews-and-informal-conversations"><i class="fa fa-check"></i>Interviews and Informal Conversations</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#audio-and-visual-methods"><i class="fa fa-check"></i>Audio and Visual Methods</a></li>
-</ul></li>
-<li class="chapter" data-level="7.7" data-path="ethnography-1.html"><a href="ethnography-1.html#analysis-and-interpretation"><i class="fa fa-check"></i><b>7.7</b> Analysis and Interpretation</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#transcribing-and-organizing-field-data"><i class="fa fa-check"></i>Transcribing and Organizing Field Data</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#themes-patterns-and-narratives"><i class="fa fa-check"></i>Themes, Patterns, and Narratives</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#contextualizing-within-broader-cultural-and-media-landscapes"><i class="fa fa-check"></i>Contextualizing within Broader Cultural and Media Landscapes</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#reflexivity-considering-the-researchers-influence-and-perspective"><i class="fa fa-check"></i>Reflexivity: Considering the Researcher’s Influence and Perspective</a></li>
-</ul></li>
-<li class="chapter" data-level="7.8" data-path="ethnography-1.html"><a href="ethnography-1.html#ethical-considerations-2"><i class="fa fa-check"></i><b>7.8</b> Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#respecting-privacy-and-boundaries"><i class="fa fa-check"></i>Respecting Privacy and Boundaries</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#informed-consent-in-naturalistic-settings"><i class="fa fa-check"></i>Informed Consent in Naturalistic Settings</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#handling-sensitive-information-and-cultural-sensitivities"><i class="fa fa-check"></i>Handling Sensitive Information and Cultural Sensitivities</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#representing-participants-fairly-and-authentically"><i class="fa fa-check"></i>Representing Participants Fairly and Authentically</a></li>
-</ul></li>
-<li class="chapter" data-level="7.9" data-path="ethnography-1.html"><a href="ethnography-1.html#challenges-and-limitations-of-ethnography-in-media-research"><i class="fa fa-check"></i><b>7.9</b> Challenges and Limitations of Ethnography in Media Research</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#subjectivity-and-bias"><i class="fa fa-check"></i>Subjectivity and Bias</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#generalizability-concerns"><i class="fa fa-check"></i>Generalizability Concerns</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#time-and-resource-intensiveness"><i class="fa fa-check"></i>Time and Resource Intensiveness</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#evolving-media-landscapes-and-researcher-adaptability"><i class="fa fa-check"></i>Evolving Media Landscapes and Researcher Adaptability</a></li>
-</ul></li>
-<li class="chapter" data-level="7.10" data-path="ethnography-1.html"><a href="ethnography-1.html#case-studies-1"><i class="fa fa-check"></i><b>7.10</b> Case Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#ethnography-of-a-virtual-gaming-community"><i class="fa fa-check"></i>Ethnography of a Virtual Gaming Community</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#understanding-media-consumption-in-a-remote-village"><i class="fa fa-check"></i>Understanding Media Consumption in a Remote Village</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#studying-newsroom-culture-and-journalistic-practices"><i class="fa fa-check"></i>Studying Newsroom Culture and Journalistic Practices</a></li>
-</ul></li>
-<li class="chapter" data-level="7.11" data-path="ethnography-1.html"><a href="ethnography-1.html#conclusion-1"><i class="fa fa-check"></i><b>7.11</b> Conclusion</a>
-<ul>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#emphasizing-the-richness-and-depth-of-ethnographic-insights"><i class="fa fa-check"></i>Emphasizing the Richness and Depth of Ethnographic Insights</a></li>
-<li class="chapter" data-level="" data-path="ethnography-1.html"><a href="ethnography-1.html#future-of-ethnography-in-a-digitally-dominant-media-age"><i class="fa fa-check"></i>Future of Ethnography in a Digitally Dominant Media Age</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html"><i class="fa fa-check"></i><b>8</b> Qualitative Content Analysis</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#introduction-3"><i class="fa fa-check"></i><b>8.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#definition-of-qualitative-content-analysis-qlca"><i class="fa fa-check"></i>Definition of Qualitative Content Analysis (QlCA)</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#historical-development-and-context"><i class="fa fa-check"></i>Historical Development and Context</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#significance-of-qlca-in-media-and-communication-research"><i class="fa fa-check"></i>Significance of QlCA in Media and Communication Research</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#theoretical-foundations"><i class="fa fa-check"></i><b>8.2</b> Theoretical Foundations</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#differentiating-between-qualitative-and-quantitative-content-analysis"><i class="fa fa-check"></i>Differentiating Between Qualitative and Quantitative Content Analysis</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#positioning-qlca-within-qualitative-research-paradigms"><i class="fa fa-check"></i>Positioning QlCA Within Qualitative Research Paradigms</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#strengths-and-limitations-of-qlca-in-media-research"><i class="fa fa-check"></i>Strengths and Limitations of QlCA in Media Research</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#preparing-for-qualitative-content-analysis"><i class="fa fa-check"></i><b>8.3</b> Preparing for Qualitative Content Analysis</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#setting-clear-research-objectives"><i class="fa fa-check"></i>Setting Clear Research Objectives</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#sampling-and-data-selection"><i class="fa fa-check"></i>Sampling and Data Selection</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#familiarization-with-the-data"><i class="fa fa-check"></i>Familiarization with the Data</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#steps-in-conducting-qlca"><i class="fa fa-check"></i><b>8.4</b> Steps in Conducting QlCA</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#data-reduction"><i class="fa fa-check"></i>Data Reduction</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#data-display"><i class="fa fa-check"></i>Data Display</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#conclusion-drawing-and-verification"><i class="fa fa-check"></i>Conclusion Drawing and Verification</a></li>
-</ul></li>
-<li class="chapter" data-level="8.5" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#coding-and-categorization-in-qlca"><i class="fa fa-check"></i><b>8.5</b> Coding and Categorization in QlCA</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#development-of-a-coding-frame"><i class="fa fa-check"></i>Development of a Coding Frame</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#reliability-and-consistency-in-coding"><i class="fa fa-check"></i>Reliability and Consistency in Coding</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#using-software-for-qlca"><i class="fa fa-check"></i>Using Software for QlCA</a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#applying-qlca-to-various-media-formats"><i class="fa fa-check"></i><b>8.6</b> Applying QlCA to Various Media Formats</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#written-media-newspapers-magazines-and-blogs"><i class="fa fa-check"></i>Written Media: Newspapers, Magazines, and Blogs</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#visual-media-television-films-and-photographs"><i class="fa fa-check"></i>Visual Media: Television, Films, and Photographs</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#digital-and-social-media-tweets-memes-and-online-forums"><i class="fa fa-check"></i>Digital and Social Media: Tweets, Memes, and Online Forums</a></li>
-</ul></li>
-<li class="chapter" data-level="8.7" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#ethical-considerations-3"><i class="fa fa-check"></i><b>8.7</b> Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#ensuring-data-privacy-and-confidentiality"><i class="fa fa-check"></i>Ensuring Data Privacy and Confidentiality</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#addressing-biases-and-representational-concerns"><i class="fa fa-check"></i>Addressing Biases and Representational Concerns</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#citing-and-using-media-sources-respectfully"><i class="fa fa-check"></i>Citing and Using Media Sources Respectfully</a></li>
-</ul></li>
-<li class="chapter" data-level="8.8" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#challenges-and-limitations"><i class="fa fa-check"></i><b>8.8</b> Challenges and Limitations</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#subjectivity-and-researcher-bias"><i class="fa fa-check"></i>Subjectivity and Researcher Bias</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#data-overload-and-oversimplification"><i class="fa fa-check"></i>Data Overload and Oversimplification</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#navigating-evolving-media-content-and-platforms"><i class="fa fa-check"></i>Navigating Evolving Media Content and Platforms</a></li>
-</ul></li>
-<li class="chapter" data-level="8.9" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#case-studies-2"><i class="fa fa-check"></i><b>8.9</b> Case Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#qlca-of-gender-representations-in-sitcoms"><i class="fa fa-check"></i>QlCA of Gender Representations in Sitcoms</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#analyzing-political-rhetoric-in-newspaper-editorials"><i class="fa fa-check"></i>Analyzing Political Rhetoric in Newspaper Editorials</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#investigating-online-discourses-on-climate-change"><i class="fa fa-check"></i>Investigating Online Discourses on Climate Change</a></li>
-</ul></li>
-<li class="chapter" data-level="8.10" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#conclusion-2"><i class="fa fa-check"></i><b>8.10</b> Conclusion</a>
-<ul>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#reflecting-on-the-depth-and-rigor-of-qlca"><i class="fa fa-check"></i>Reflecting on the Depth and Rigor of QlCA</a></li>
-<li class="chapter" data-level="" data-path="qualitative-content-analysis-1.html"><a href="qualitative-content-analysis-1.html#the-future-of-qlca-in-an-evolving-media-landscape"><i class="fa fa-check"></i>The Future of QlCA in an Evolving Media Landscape</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html"><i class="fa fa-check"></i><b>9</b> Quantitative Content Analysis</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#introduction-4"><i class="fa fa-check"></i><b>9.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#historical-context-and-origins"><i class="fa fa-check"></i>Historical Context and Origins</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#importance-in-media-and-communication-research"><i class="fa fa-check"></i>Importance in Media and Communication Research</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#comparison-with-qualitative-content-analysis"><i class="fa fa-check"></i>Comparison with Qualitative Content Analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#theoretical-foundations-1"><i class="fa fa-check"></i><b>9.2</b> Theoretical Foundations</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#epistemological-assumptions"><i class="fa fa-check"></i>Epistemological Assumptions</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#positioning-qnca-in-the-scientific-method"><i class="fa fa-check"></i>Positioning QnCA in the Scientific Method</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#strengths-and-weaknesses-of-qnca-in-media-research"><i class="fa fa-check"></i>Strengths and Weaknesses of QnCA in Media Research</a></li>
-</ul></li>
-<li class="chapter" data-level="9.3" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#planning-and-preparing-for-qnca"><i class="fa fa-check"></i><b>9.3</b> Planning and Preparing for QnCA</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#identifying-research-objectives"><i class="fa fa-check"></i>Identifying Research Objectives</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#sampling-techniques"><i class="fa fa-check"></i>Sampling Techniques</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#data-sources"><i class="fa fa-check"></i>Data Sources</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#ethics-in-data-collection"><i class="fa fa-check"></i>Ethics in Data Collection</a></li>
-</ul></li>
-<li class="chapter" data-level="9.4" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#coding-and-measurement"><i class="fa fa-check"></i><b>9.4</b> Coding and Measurement</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#developing-a-coding-scheme"><i class="fa fa-check"></i>Developing a Coding Scheme</a></li>
-<li class="chapter" data-level="9.4.1" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#pilot-testing"><i class="fa fa-check"></i><b>9.4.1</b> Pilot Testing</a></li>
-<li class="chapter" data-level="9.4.2" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#reliability-and-validity"><i class="fa fa-check"></i><b>9.4.2</b> Reliability and Validity</a></li>
-</ul></li>
-<li class="chapter" data-level="9.5" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#data-analysis-and-interpretation"><i class="fa fa-check"></i><b>9.5</b> Data Analysis and Interpretation</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#descriptive-statistics"><i class="fa fa-check"></i>Descriptive Statistics</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#inferential-statistics"><i class="fa fa-check"></i>Inferential Statistics</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#use-of-software-tools"><i class="fa fa-check"></i>Use of Software Tools</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#interpreting-findings"><i class="fa fa-check"></i>Interpreting Findings</a></li>
-</ul></li>
-<li class="chapter" data-level="9.6" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#presentation-of-findings"><i class="fa fa-check"></i><b>9.6</b> Presentation of Findings</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#tables-and-charts"><i class="fa fa-check"></i>Tables and Charts</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#narratives-and-discussion"><i class="fa fa-check"></i>Narratives and Discussion</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#limitations-of-the-study"><i class="fa fa-check"></i>Limitations of the Study</a></li>
-</ul></li>
-<li class="chapter" data-level="9.7" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#ethical-considerations-4"><i class="fa fa-check"></i><b>9.7</b> Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#anonymity-and-confidentiality"><i class="fa fa-check"></i>Anonymity and Confidentiality</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#intellectual-property-concerns"><i class="fa fa-check"></i>Intellectual Property Concerns</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#transparency-and-reproducibility"><i class="fa fa-check"></i>Transparency and Reproducibility</a></li>
-</ul></li>
-<li class="chapter" data-level="9.8" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#case-studies-3"><i class="fa fa-check"></i><b>9.8</b> Case Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#examining-gender-stereotypes-in-advertising"><i class="fa fa-check"></i>Examining Gender Stereotypes in Advertising</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#political-bias-in-news-media"><i class="fa fa-check"></i>Political Bias in News Media</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#social-media-trends-and-public-opinion"><i class="fa fa-check"></i>Social Media Trends and Public Opinion</a></li>
-</ul></li>
-<li class="chapter" data-level="9.9" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#challenges-and-limitations-1"><i class="fa fa-check"></i><b>9.9</b> Challenges and Limitations</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#oversimplification-of-complex-phenomena"><i class="fa fa-check"></i>Oversimplification of Complex Phenomena</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#limitations-of-generalizability"><i class="fa fa-check"></i>Limitations of Generalizability</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#ethical-and-practical-challenges"><i class="fa fa-check"></i>Ethical and Practical Challenges</a></li>
-</ul></li>
-<li class="chapter" data-level="9.10" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#conclusion-3"><i class="fa fa-check"></i><b>9.10</b> Conclusion</a>
-<ul>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#summary-of-the-importance-and-utility-of-qnca"><i class="fa fa-check"></i>Summary of the Importance and Utility of QnCA</a></li>
-<li class="chapter" data-level="" data-path="quantitative-content-analysis-1.html"><a href="quantitative-content-analysis-1.html#future-prospects-and-emerging-trends"><i class="fa fa-check"></i>Future Prospects and Emerging Trends</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="surveys-1.html"><a href="surveys-1.html"><i class="fa fa-check"></i><b>10</b> Surveys</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="surveys-1.html"><a href="surveys-1.html#surveys-in-media-and-communication-research"><i class="fa fa-check"></i><b>10.1</b> Surveys in Media and Communication Research</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#definition-of-surveys"><i class="fa fa-check"></i>Definition of Surveys</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#historical-context"><i class="fa fa-check"></i>Historical Context</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#relevance-in-media-and-communication-research"><i class="fa fa-check"></i>Relevance in Media and Communication Research</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="surveys-1.html"><a href="surveys-1.html#advantages-of-surveys"><i class="fa fa-check"></i><b>10.2</b> Advantages of Surveys</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#large-scale-data-collection"><i class="fa fa-check"></i>Large-scale Data Collection</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#standardization"><i class="fa fa-check"></i>Standardization</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#flexibility"><i class="fa fa-check"></i>Flexibility</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#quantifiable-results"><i class="fa fa-check"></i>Quantifiable Results</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="surveys-1.html"><a href="surveys-1.html#designing-effective-surveys"><i class="fa fa-check"></i><b>10.3</b> Designing Effective Surveys</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#clarity-in-objectives"><i class="fa fa-check"></i>Clarity in Objectives</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#question-formulation"><i class="fa fa-check"></i>Question Formulation</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#order-and-flow"><i class="fa fa-check"></i>Order and Flow</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#pilot-testing-1"><i class="fa fa-check"></i>Pilot Testing</a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="surveys-1.html"><a href="surveys-1.html#types-of-surveys"><i class="fa fa-check"></i><b>10.4</b> Types of Surveys</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#questionnaire-surveys"><i class="fa fa-check"></i>Questionnaire Surveys</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#telephonic-surveys"><i class="fa fa-check"></i>Telephonic Surveys</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#online-surveys"><i class="fa fa-check"></i>Online Surveys</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#face-to-face-interviews"><i class="fa fa-check"></i>Face-to-face Interviews</a></li>
-</ul></li>
-<li class="chapter" data-level="10.5" data-path="surveys-1.html"><a href="surveys-1.html#sampling-methods"><i class="fa fa-check"></i><b>10.5</b> Sampling Methods</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#probability-sampling"><i class="fa fa-check"></i>Probability Sampling</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#non-probability-sampling"><i class="fa fa-check"></i>Non-probability Sampling</a></li>
-</ul></li>
-<li class="chapter" data-level="10.6" data-path="surveys-1.html"><a href="surveys-1.html#ethical-considerations-5"><i class="fa fa-check"></i><b>10.6</b> Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#informed-consent-1"><i class="fa fa-check"></i>Informed Consent</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#anonymity-and-confidentiality-1"><i class="fa fa-check"></i>Anonymity and Confidentiality</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#transparency"><i class="fa fa-check"></i>Transparency</a></li>
-</ul></li>
-<li class="chapter" data-level="10.7" data-path="surveys-1.html"><a href="surveys-1.html#potential-pitfalls-and-challenges"><i class="fa fa-check"></i><b>10.7</b> Potential Pitfalls and Challenges</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#response-bias"><i class="fa fa-check"></i>Response Bias</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#sampling-errors"><i class="fa fa-check"></i>Sampling Errors</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#low-response-rates"><i class="fa fa-check"></i>Low Response Rates</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#misinterpretation-of-questions"><i class="fa fa-check"></i>Misinterpretation of Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="10.8" data-path="surveys-1.html"><a href="surveys-1.html#case-studies-4"><i class="fa fa-check"></i><b>10.8</b> Case Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#surveying-media-consumption-habits"><i class="fa fa-check"></i>Surveying Media Consumption Habits</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#public-opinion-on-media-censorship"><i class="fa fa-check"></i>Public Opinion on Media Censorship</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#user-satisfaction-with-streaming-platforms"><i class="fa fa-check"></i>User Satisfaction with Streaming Platforms</a></li>
-</ul></li>
-<li class="chapter" data-level="10.9" data-path="surveys-1.html"><a href="surveys-1.html#conclusion-4"><i class="fa fa-check"></i><b>10.9</b> Conclusion</a>
-<ul>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#reflecting-on-the-value-of-surveys-in-media-and-communication"><i class="fa fa-check"></i>Reflecting on the Value of Surveys in Media and Communication</a></li>
-<li class="chapter" data-level="" data-path="surveys-1.html"><a href="surveys-1.html#looking-forward"><i class="fa fa-check"></i>Looking Forward</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="experiments.html"><a href="experiments.html"><i class="fa fa-check"></i><b>11</b> Experiments</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#definition-of-experiments"><i class="fa fa-check"></i>Definition of Experiments</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#the-role-of-experiments"><i class="fa fa-check"></i>The Role of Experiments</a></li>
-<li class="chapter" data-level="11.1" data-path="experiments.html"><a href="experiments.html#historical-overview"><i class="fa fa-check"></i><b>11.1</b> Historical Overview</a></li>
-<li class="chapter" data-level="11.2" data-path="experiments.html"><a href="experiments.html#theoretical-foundations-2"><i class="fa fa-check"></i><b>11.2</b> Theoretical Foundations</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#the-scientific-method-and-experimental-research"><i class="fa fa-check"></i>The Scientific Method and Experimental Research</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#concepts-of-independent-and-dependent-variables"><i class="fa fa-check"></i>Concepts of Independent and Dependent Variables</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#the-importance-of-control-and-randomization"><i class="fa fa-check"></i>The Importance of Control and Randomization</a></li>
-</ul></li>
-<li class="chapter" data-level="11.3" data-path="experiments.html"><a href="experiments.html#types-of-experiments"><i class="fa fa-check"></i><b>11.3</b> Types of Experiments</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#laboratory-experiments"><i class="fa fa-check"></i>Laboratory Experiments</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#field-experiments"><i class="fa fa-check"></i>Field Experiments</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#online-and-virtual-experiments"><i class="fa fa-check"></i>Online and Virtual Experiments</a></li>
-</ul></li>
-<li class="chapter" data-level="11.4" data-path="experiments.html"><a href="experiments.html#designing-an-experiment"><i class="fa fa-check"></i><b>11.4</b> Designing an Experiment</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#formulating-hypotheses"><i class="fa fa-check"></i>Formulating Hypotheses</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#selection-of-variables"><i class="fa fa-check"></i>Selection of Variables</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#ensuring-internal-validity"><i class="fa fa-check"></i>Ensuring Internal Validity</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#addressing-external-validity"><i class="fa fa-check"></i>Addressing External Validity</a></li>
-</ul></li>
-<li class="chapter" data-level="11.5" data-path="experiments.html"><a href="experiments.html#ethical-considerations-6"><i class="fa fa-check"></i><b>11.5</b> Ethical Considerations</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#informed-consent-in-experimental-settings"><i class="fa fa-check"></i>Informed Consent in Experimental Settings</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#ensuring-participant-safety-and-well-being"><i class="fa fa-check"></i>Ensuring Participant Safety and Well-Being</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#debriefing-participants-post-experiment"><i class="fa fa-check"></i>Debriefing Participants Post-Experiment</a></li>
-</ul></li>
-<li class="chapter" data-level="11.6" data-path="experiments.html"><a href="experiments.html#analyzing-and-interpreting-results"><i class="fa fa-check"></i><b>11.6</b> Analyzing and Interpreting Results</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#basic-statistical-tests-in-experimental-research"><i class="fa fa-check"></i>Basic Statistical Tests in Experimental Research</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#understanding-significance-and-effect-sizes"><i class="fa fa-check"></i>Understanding Significance and Effect Sizes</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#drawing-valid-conclusions"><i class="fa fa-check"></i>Drawing Valid Conclusions</a></li>
-</ul></li>
-<li class="chapter" data-level="11.7" data-path="experiments.html"><a href="experiments.html#case-studies-5"><i class="fa fa-check"></i><b>11.7</b> Case Studies</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#the-impact-of-screen-time-on-mental-well-being-a-laboratory-experiment"><i class="fa fa-check"></i>The Impact of Screen Time on Mental Well-being: A Laboratory Experiment</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#testing-the-effectiveness-of-public-health-campaigns-a-field-experiment"><i class="fa fa-check"></i>Testing the Effectiveness of Public Health Campaigns: A Field Experiment</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#analyzing-user-behavior-on-social-media-platforms-an-online-experiment"><i class="fa fa-check"></i>Analyzing User Behavior on Social Media Platforms: An Online Experiment</a></li>
-</ul></li>
-<li class="chapter" data-level="11.8" data-path="experiments.html"><a href="experiments.html#potential-pitfalls-and-challenges-1"><i class="fa fa-check"></i><b>11.8</b> Potential Pitfalls and Challenges</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#demand-characteristics-and-participant-biases"><i class="fa fa-check"></i>Demand Characteristics and Participant Biases</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#confounding-variables"><i class="fa fa-check"></i>Confounding Variables</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#ethical-dilemmas-unique-to-experimental-research"><i class="fa fa-check"></i>Ethical Dilemmas Unique to Experimental Research</a></li>
-</ul></li>
-<li class="chapter" data-level="11.9" data-path="experiments.html"><a href="experiments.html#conclusion-5"><i class="fa fa-check"></i><b>11.9</b> Conclusion</a>
-<ul>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#reflecting-on-the-value-of-experimental-research"><i class="fa fa-check"></i>Reflecting on the Value of Experimental Research</a></li>
-<li class="chapter" data-level="" data-path="experiments.html"><a href="experiments.html#the-future-of-experiments-in-a-rapidly-digitizing-world"><i class="fa fa-check"></i>The Future of Experiments in a Rapidly Digitizing World</a></li>
-</ul></li>
-<li class="chapter" data-level="11.10" data-path="experiments.html"><a href="experiments.html#key-terms-concepts"><i class="fa fa-check"></i><b>11.10</b> Key Terms &amp; Concepts</a></li>
-<li class="chapter" data-level="11.11" data-path="experiments.html"><a href="experiments.html#review-questions"><i class="fa fa-check"></i><b>11.11</b> Review Questions</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html"><i class="fa fa-check"></i><b>12</b> Introduction to R and RStudio</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#introduction-5"><i class="fa fa-check"></i><b>12.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#importance-of-r-in-mass-communications"><i class="fa fa-check"></i>Importance of R in Mass Communications</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#what-is-r-and-rstudio"><i class="fa fa-check"></i>What is R and RStudio?</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#understanding-the-basics"><i class="fa fa-check"></i><b>12.2</b> Understanding the Basics</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#open-source-software"><i class="fa fa-check"></i>Open Source Software</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#community-support"><i class="fa fa-check"></i>Community Support</a></li>
-</ul></li>
-<li class="chapter" data-level="12.3" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>12.3</b> Installing R and RStudio</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#installing-r"><i class="fa fa-check"></i>Installing R</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#installing-rstudio"><i class="fa fa-check"></i>Installing RStudio</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#navigating-the-rstudio-interface"><i class="fa fa-check"></i>Navigating the RStudio Interface</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#console"><i class="fa fa-check"></i>Console</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#script-editor"><i class="fa fa-check"></i>Script Editor</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#environment"><i class="fa fa-check"></i>Environment</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#plots-packages-help-viewer"><i class="fa fa-check"></i>Plots, Packages, Help, Viewer</a></li>
-</ul></li>
-<li class="chapter" data-level="12.4" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#basic-operations-in-r"><i class="fa fa-check"></i><b>12.4</b> Basic Operations in R</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#arithmetic-operations"><i class="fa fa-check"></i>Arithmetic Operations</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#variables"><i class="fa fa-check"></i>Variables</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#functions"><i class="fa fa-check"></i>Functions</a></li>
-</ul></li>
-<li class="chapter" data-level="12.5" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#data-structures-in-r"><i class="fa fa-check"></i><b>12.5</b> Data Structures in R</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#data-frames"><i class="fa fa-check"></i>Data Frames</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#lists"><i class="fa fa-check"></i>Lists</a></li>
-</ul></li>
-<li class="chapter" data-level="12.6" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#installing-and-loading-libraries"><i class="fa fa-check"></i><b>12.6</b> Installing and Loading Libraries</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#installation"><i class="fa fa-check"></i>Installation</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#loading"><i class="fa fa-check"></i>Loading</a></li>
-</ul></li>
-<li class="chapter" data-level="12.7" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#creating-and-managing-projects"><i class="fa fa-check"></i><b>12.7</b> Creating and Managing Projects</a>
-<ul>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#new-projects"><i class="fa fa-check"></i>New Projects</a></li>
-<li class="chapter" data-level="" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#existing-projects"><i class="fa fa-check"></i>Existing Projects</a></li>
-</ul></li>
-<li class="chapter" data-level="12.8" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#summary"><i class="fa fa-check"></i><b>12.8</b> Summary</a></li>
-<li class="chapter" data-level="12.9" data-path="introduction-to-r-and-rstudio.html"><a href="introduction-to-r-and-rstudio.html#references-1"><i class="fa fa-check"></i><b>12.9</b> References</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>13</b> Data</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="data.html"><a href="data.html#defining-data"><i class="fa fa-check"></i><b>13.1</b> Defining Data?</a>
-<ul>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#explanation-of-data-in-the-context-of-research"><i class="fa fa-check"></i>Explanation of Data in the Context of Research</a></li>
-</ul></li>
-<li class="chapter" data-level="13.2" data-path="data.html"><a href="data.html#variables-and-observations"><i class="fa fa-check"></i><b>13.2</b> Variables and Observations</a>
-<ul>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#define-variables-and-observations"><i class="fa fa-check"></i>Define Variables and Observations</a></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#explanation-of-data-types"><i class="fa fa-check"></i>Explanation of Data Types</a></li>
-</ul></li>
-<li class="chapter" data-level="13.3" data-path="data.html"><a href="data.html#collecting-data"><i class="fa fa-check"></i><b>13.3</b> Collecting Data</a>
-<ul>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#primary-and-secondary-data"><i class="fa fa-check"></i>Primary and Secondary Data</a></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#discussion-of-primary-vs.-secondary-data-collection-methods"><i class="fa fa-check"></i>Discussion of Primary vs. Secondary Data Collection Methods</a></li>
-</ul></li>
-<li class="chapter" data-level="13.4" data-path="data.html"><a href="data.html#data-sources-1"><i class="fa fa-check"></i><b>13.4</b> Data Sources</a>
-<ul>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#web-scraping-apis-and-existing-databases"><i class="fa fa-check"></i>Web Scraping, APIs, and Existing Databases</a></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#importance-of-credible-data-sources"><i class="fa fa-check"></i>Importance of Credible Data Sources</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#cleaning-data-for-visualizations-and-analyses"><i class="fa fa-check"></i>Cleaning Data for Visualizations and Analyses</a>
-<ul>
-<li class="chapter" data-level="13.4.1" data-path="data.html"><a href="data.html#handling-missing-data"><i class="fa fa-check"></i><b>13.4.1</b> Handling Missing Data</a></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#data-transformation"><i class="fa fa-check"></i>Data Transformation</a></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#outliers-and-normalization"><i class="fa fa-check"></i>Outliers and Normalization</a></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#normalization-techniques"><i class="fa fa-check"></i>Normalization Techniques</a></li>
-</ul></li>
-<li class="chapter" data-level="13.5" data-path="data.html"><a href="data.html#references-2"><i class="fa fa-check"></i><b>13.5</b> References</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="visualizations.html"><a href="visualizations.html"><i class="fa fa-check"></i><b>14</b> Visualizations</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="visualizations.html"><a href="visualizations.html#introduction-6"><i class="fa fa-check"></i><b>14.1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="14.1.1" data-path="visualizations.html"><a href="visualizations.html#the-imperative-of-visual-representations-in-research"><i class="fa fa-check"></i><b>14.1.1</b> The Imperative of Visual Representations in Research</a></li>
-<li class="chapter" data-level="14.1.2" data-path="visualizations.html"><a href="visualizations.html#complementing-textual-explanations-for-a-holistic-understanding"><i class="fa fa-check"></i><b>14.1.2</b> Complementing Textual Explanations for a Holistic Understanding</a></li>
-</ul></li>
-<li class="chapter" data-level="14.2" data-path="visualizations.html"><a href="visualizations.html#tables"><i class="fa fa-check"></i><b>14.2</b> Tables</a>
-<ul>
-<li class="chapter" data-level="14.2.1" data-path="visualizations.html"><a href="visualizations.html#importance-of-tables"><i class="fa fa-check"></i><b>14.2.1</b> Importance of Tables</a></li>
-<li class="chapter" data-level="14.2.2" data-path="visualizations.html"><a href="visualizations.html#guidelines-for-creating-tables"><i class="fa fa-check"></i><b>14.2.2</b> Guidelines for Creating Tables</a></li>
-</ul></li>
-<li class="chapter" data-level="14.3" data-path="visualizations.html"><a href="visualizations.html#references-3"><i class="fa fa-check"></i><b>14.3</b> References</a>
-<ul>
-<li class="chapter" data-level="14.3.1" data-path="visualizations.html"><a href="visualizations.html#importance-of-tables-1"><i class="fa fa-check"></i><b>14.3.1</b> Importance of Tables</a></li>
-<li class="chapter" data-level="14.3.2" data-path="visualizations.html"><a href="visualizations.html#guidelines-for-creating-tables-1"><i class="fa fa-check"></i><b>14.3.2</b> Guidelines for Creating Tables</a></li>
-</ul></li>
-<li class="chapter" data-level="14.4" data-path="visualizations.html"><a href="visualizations.html#illustrations"><i class="fa fa-check"></i><b>14.4</b> Illustrations</a>
-<ul>
-<li class="chapter" data-level="14.4.1" data-path="visualizations.html"><a href="visualizations.html#types-of-illustrations"><i class="fa fa-check"></i><b>14.4.1</b> Types of Illustrations</a></li>
-<li class="chapter" data-level="14.4.2" data-path="visualizations.html"><a href="visualizations.html#using-illustrations-effectively"><i class="fa fa-check"></i><b>14.4.2</b> Using Illustrations Effectively</a></li>
-</ul></li>
-<li class="chapter" data-level="14.5" data-path="visualizations.html"><a href="visualizations.html#images"><i class="fa fa-check"></i><b>14.5</b> Images</a>
-<ul>
-<li class="chapter" data-level="14.5.1" data-path="visualizations.html"><a href="visualizations.html#types-of-images"><i class="fa fa-check"></i><b>14.5.1</b> Types of Images</a></li>
-<li class="chapter" data-level="14.5.2" data-path="visualizations.html"><a href="visualizations.html#ethical-considerations-8"><i class="fa fa-check"></i><b>14.5.2</b> Ethical Considerations</a></li>
-</ul></li>
-<li class="chapter" data-level="14.6" data-path="visualizations.html"><a href="visualizations.html#plots-1"><i class="fa fa-check"></i><b>14.6</b> Plots</a>
-<ul>
-<li class="chapter" data-level="14.6.1" data-path="visualizations.html"><a href="visualizations.html#introduction-to-ggplot2"><i class="fa fa-check"></i><b>14.6.1</b> Introduction to ggplot2</a></li>
-<li class="chapter" data-level="14.6.2" data-path="visualizations.html"><a href="visualizations.html#popular-plots-using-ggplot2-and-the-spotify_songs-dataset"><i class="fa fa-check"></i><b>14.6.2</b> Popular Plots Using <code>ggplot2</code> and the <code>spotify_songs</code> Dataset</a></li>
-</ul></li>
-<li class="chapter" data-level="14.7" data-path="visualizations.html"><a href="visualizations.html#references-4"><i class="fa fa-check"></i><b>14.7</b> References</a></li>
-</ul></li>
-<li class="chapter" data-level="15" data-path="data-analysis.html"><a href="data-analysis.html"><i class="fa fa-check"></i><b>15</b> Data Analysis</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="data-analysis.html"><a href="data-analysis.html#analyses-1"><i class="fa fa-check"></i><b>15.1</b> Analyses</a>
-<ul>
-<li class="chapter" data-level="15.1.1" data-path="data-analysis.html"><a href="data-analysis.html#introduction-7"><i class="fa fa-check"></i><b>15.1.1</b> Introduction</a></li>
-<li class="chapter" data-level="15.1.2" data-path="data-analysis.html"><a href="data-analysis.html#objectives-and-importance-of-data-analysis"><i class="fa fa-check"></i><b>15.1.2</b> Objectives and Importance of Data Analysis</a></li>
-<li class="chapter" data-level="15.1.3" data-path="data-analysis.html"><a href="data-analysis.html#types-of-analyses-descriptive-vs.-inferential"><i class="fa fa-check"></i><b>15.1.3</b> Types of Analyses: Descriptive vs. Inferential</a></li>
-<li class="chapter" data-level="15.1.4" data-path="data-analysis.html"><a href="data-analysis.html#role-of-statistical-software-e.g.-rstudio"><i class="fa fa-check"></i><b>15.1.4</b> Role of Statistical Software: E.g., RStudio</a></li>
-</ul></li>
-<li class="chapter" data-level="15.2" data-path="data-analysis.html"><a href="data-analysis.html#descriptive-statistics-1"><i class="fa fa-check"></i><b>15.2</b> Descriptive Statistics</a>
-<ul>
-<li class="chapter" data-level="15.2.1" data-path="data-analysis.html"><a href="data-analysis.html#introduction-8"><i class="fa fa-check"></i><b>15.2.1</b> Introduction</a></li>
-<li class="chapter" data-level="15.2.2" data-path="data-analysis.html"><a href="data-analysis.html#distribution"><i class="fa fa-check"></i><b>15.2.2</b> Distribution</a></li>
-<li class="chapter" data-level="15.2.3" data-path="data-analysis.html"><a href="data-analysis.html#central-tendency"><i class="fa fa-check"></i><b>15.2.3</b> Central Tendency</a></li>
-<li class="chapter" data-level="15.2.4" data-path="data-analysis.html"><a href="data-analysis.html#variability"><i class="fa fa-check"></i><b>15.2.4</b> Variability</a></li>
-</ul></li>
-<li class="chapter" data-level="15.3" data-path="data-analysis.html"><a href="data-analysis.html#inferential-statistics-1"><i class="fa fa-check"></i><b>15.3</b> Inferential Statistics</a>
-<ul>
-<li class="chapter" data-level="15.3.1" data-path="data-analysis.html"><a href="data-analysis.html#introduction-9"><i class="fa fa-check"></i><b>15.3.1</b> Introduction</a></li>
-<li class="chapter" data-level="15.3.2" data-path="data-analysis.html"><a href="data-analysis.html#t-tests"><i class="fa fa-check"></i><b>15.3.2</b> t-tests</a></li>
-<li class="chapter" data-level="15.3.3" data-path="data-analysis.html"><a href="data-analysis.html#anovas"><i class="fa fa-check"></i><b>15.3.3</b> ANOVAs</a></li>
-<li class="chapter" data-level="15.3.4" data-path="data-analysis.html"><a href="data-analysis.html#regressions"><i class="fa fa-check"></i><b>15.3.4</b> Regressions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="16" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>16</b> Appendix</a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="appendix.html"><a href="appendix.html#assignments"><i class="fa fa-check"></i><b>16.1</b> Assignments</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#individual"><i class="fa fa-check"></i>Individual</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#team"><i class="fa fa-check"></i>Team</a></li>
-</ul></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Introduction to Communication and Media Research with R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Dr. Who</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="research-ethics-1.html"><span class="header-section-number">2</span> Research Ethics</a></li>
+<li><a class="" href="research-papers-1.html"><span class="header-section-number">3</span> Research Papers</a></li>
+<li><a class="active" href="communication-theories-1.html"><span class="header-section-number">4</span> Communication Theories</a></li>
+<li><a class="" href="interviews-1.html"><span class="header-section-number">5</span> Interviews</a></li>
+<li><a class="" href="focus-groups-1.html"><span class="header-section-number">6</span> Focus Groups</a></li>
+<li><a class="" href="ethnography-1.html"><span class="header-section-number">7</span> Ethnography</a></li>
+<li><a class="" href="qualitative-content-analysis-1.html"><span class="header-section-number">8</span> Qualitative Content Analysis</a></li>
+<li><a class="" href="quantitative-content-analysis-1.html"><span class="header-section-number">9</span> Quantitative Content Analysis</a></li>
+<li><a class="" href="surveys-1.html"><span class="header-section-number">10</span> Surveys</a></li>
+<li><a class="" href="experiments.html"><span class="header-section-number">11</span> Experiments</a></li>
+<li><a class="" href="introduction-to-r-and-rstudio.html"><span class="header-section-number">12</span> Introduction to R and RStudio</a></li>
+<li><a class="" href="data.html"><span class="header-section-number">13</span> Data</a></li>
+<li><a class="" href="visualizations.html"><span class="header-section-number">14</span> Visualizations</a></li>
+<li><a class="" href="data-analysis.html"><span class="header-section-number">15</span> Data Analysis</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">16</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="communication-theories-1" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Communication Theories<a href="communication-theories-1.html#communication-theories-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="agenda-setting-theory" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Agenda Setting Theory<a href="communication-theories-1.html#agenda-setting-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="communication-theories-1" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> Communication Theories<a class="anchor" aria-label="anchor" href="#communication-theories-1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="agenda-setting-theory" class="section level2" number="4.1">
+<h2>
+<span class="header-section-number">4.1</span> Agenda Setting Theory<a class="anchor" aria-label="anchor" href="#agenda-setting-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Agenda setting theory is a communication theory that examines the relationship between the media and public opinion. The theory suggests that the media does not simply reflect public opinion, but rather shapes it by determining which issues are considered important. This is done by selecting and highlighting certain news stories over others, and by framing those stories in a particular way.</p>
 <p>The theory was first proposed by Maxwell McCombs and Donald Shaw in their 1972 study of the 1968 US presidential election. They found that the media’s coverage of the election had a significant impact on the public’s perception of the relative importance of the issues. For example, the media focused heavily on the Vietnam War, which led to the public viewing this issue as more important than other issues, such as the economy.</p>
 <p>Since then, agenda setting theory has been applied to a wide range of issues, including politics, social problems, and consumer products. The theory has been supported by a number of studies, but it is not without its critics. Some argue that the media does not have as much influence on public opinion as the theory suggests, and that other factors, such as personal experience and social interaction, are more important.</p>
@@ -800,8 +103,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Chong, D., &amp; Druckman, J. N. (2010). Framing public opinion: How citizens react to elite communications. <em>Annual Review of Political Science, 13</em>, 103-126. <a href="doi:10.1146/annurev.polisci.13.042009.102515" class="uri">doi:10.1146/annurev.polisci.13.042009.102515</a></p></li>
 </ul>
 </div>
-<div id="cognitive-dissonance" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Cognitive Dissonance<a href="communication-theories-1.html#cognitive-dissonance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="cognitive-dissonance" class="section level2" number="4.2">
+<h2>
+<span class="header-section-number">4.2</span> Cognitive Dissonance<a class="anchor" aria-label="anchor" href="#cognitive-dissonance"><i class="fas fa-link"></i></a>
+</h2>
 <p>Cognitive dissonance is a state of discomfort that occurs when a person holds two conflicting beliefs, or when a person’s behavior is inconsistent with their beliefs. This discomfort motivates the person to try to reduce the dissonance by changing one of the beliefs, changing their behavior, or finding a way to justify the inconsistency.</p>
 <p>The theory of cognitive dissonance was first proposed by Leon Festinger in 1957. Festinger argued that people have a need for consistency in their thoughts, beliefs, and behaviors. When this consistency is threatened, people experience cognitive dissonance and are motivated to reduce it.</p>
 <p>There are a number of ways that people can reduce cognitive dissonance. One way is to change one of the beliefs. For example, if a person believes that smoking is bad for their health, but they continue to smoke, they might start to believe that smoking is not as bad as they thought it was.</p>
@@ -825,8 +130,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Stone, J., &amp; Fernandez, G. (2016). Cognitive dissonance. <em>Current Opinion in Psychology, 11</em>, 100-105. <a href="doi:10.1016/j.copsyc.2016.02.002" class="uri">doi:10.1016/j.copsyc.2016.02.002</a></p></li>
 </ul>
 </div>
-<div id="cultivation-theory" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Cultivation Theory<a href="communication-theories-1.html#cultivation-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="cultivation-theory" class="section level2" number="4.3">
+<h2>
+<span class="header-section-number">4.3</span> Cultivation Theory<a class="anchor" aria-label="anchor" href="#cultivation-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Cultivation theory is a communication theory that examines the long-term effects of television viewing on viewers’ conceptions of social reality. The theory was developed by George Gerbner and his colleagues at the University of Pennsylvania’s Annenberg School for Communication in the 1960s.</p>
 <p>Cultivation theory proposes that heavy television viewers come to see the world in a way that is consistent with the images and messages that they are repeatedly exposed to on television. This is because television is a powerful socializing agent that can shape our beliefs, attitudes, and values.</p>
 <p>The theory has been supported by a number of studies, which have found that heavy television viewers are more likely to overestimate the likelihood of violence, crime, and danger in the world. They are also more likely to have a pessimistic view of human nature and to be fearful of strangers.</p>
@@ -848,8 +155,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Potter, W. J. (2011). <em>Media literacy</em> (9th ed.). Thousand Oaks, CA: Sage.</p></li>
 </ul>
 </div>
-<div id="elaboration-likelihood-model" class="section level2 hasAnchor" number="4.4">
-<h2><span class="header-section-number">4.4</span> Elaboration Likelihood Model<a href="communication-theories-1.html#elaboration-likelihood-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="elaboration-likelihood-model" class="section level2" number="4.4">
+<h2>
+<span class="header-section-number">4.4</span> Elaboration Likelihood Model<a class="anchor" aria-label="anchor" href="#elaboration-likelihood-model"><i class="fas fa-link"></i></a>
+</h2>
 <p>The elaboration likelihood model (ELM) is a dual-process theory of persuasion that was developed by Richard E. Petty and John Cacioppo in 1980. The ELM proposes that there are two routes to persuasion: the central route and the peripheral route.</p>
 <p>The central route is a high-effort route to persuasion that involves carefully considering the message and evaluating the arguments presented. This route is more likely to be used when people are motivated and have the ability to think critically about the message.</p>
 <p>The peripheral route is a low-effort route to persuasion that involves relying on superficial cues, such as the source of the message or the way it is presented. This route is more likely to be used when people are not motivated or do not have the ability to think critically about the message.</p>
@@ -872,8 +181,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Chaiken, S. (1980). Heuristic versus systematic processing of persuasive messages: Evidence of two routes to persuasion. _In J. T. Cacioppo &amp; R. E. Petty (Eds.), <em>Social cognition: The Ontario symposium on personality and social psychology</em> (Vol. 1, pp. 212-252). Hillsdale, NJ: Erlbaum.</p></li>
 </ul>
 </div>
-<div id="framing-theory" class="section level2 hasAnchor" number="4.5">
-<h2><span class="header-section-number">4.5</span> Framing Theory<a href="communication-theories-1.html#framing-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="framing-theory" class="section level2" number="4.5">
+<h2>
+<span class="header-section-number">4.5</span> Framing Theory<a class="anchor" aria-label="anchor" href="#framing-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Framing theory is a communication theory that examines how the way an issue is presented can affect how people understand and respond to it. The theory was first proposed by Erving Goffman in 1974, and it has been used to explain a wide range of phenomena, such as the effects of news coverage on public opinion, the impact of advertising on consumer behavior, and the role of social movements in shaping public discourse.</p>
 <p>Framing theory suggests that the way an issue is presented can shape how people think about it by influencing the following:</p>
 <ul>
@@ -901,8 +212,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Chong, D., &amp; Druckman, J. N. (2010). Framing public opinion: How citizens react to elite communications. <em>Annual Review of Political Science, 13</em>, 103-126. <a href="doi:10.1146/annurev.polisci.13.042009.102515" class="uri">doi:10.1146/annurev.polisci.13.042009.102515</a></p></li>
 </ul>
 </div>
-<div id="gatekeeping-theory" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Gatekeeping Theory<a href="communication-theories-1.html#gatekeeping-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="gatekeeping-theory" class="section level2" number="4.6">
+<h2>
+<span class="header-section-number">4.6</span> Gatekeeping Theory<a class="anchor" aria-label="anchor" href="#gatekeeping-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Gatekeeping theory is a communication theory that examines how decisions are made about what news stories get covered and how they are presented. The theory was first proposed by Kurt Lewin in 1947, and it has been used to explain a wide range of phenomena, such as the effects of news coverage on public opinion, the impact of media bias, and the role of journalists in shaping public discourse.</p>
 <p>Gatekeeping theory suggests that there are a number of factors that can influence the news selection process, including:</p>
 <ul>
@@ -934,8 +247,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Tuchman, G. (1978). <em>Making news: A study in the construction of reality</em>. New York, NY: Free Press.</p></li>
 </ul>
 </div>
-<div id="hyperpersonal-model" class="section level2 hasAnchor" number="4.7">
-<h2><span class="header-section-number">4.7</span> Hyperpersonal Model<a href="communication-theories-1.html#hyperpersonal-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="hyperpersonal-model" class="section level2" number="4.7">
+<h2>
+<span class="header-section-number">4.7</span> Hyperpersonal Model<a class="anchor" aria-label="anchor" href="#hyperpersonal-model"><i class="fas fa-link"></i></a>
+</h2>
 <p>The hyperpersonal model is a communication theory that examines how computer-mediated communication (CMC) can create more personal and intimate relationships than traditional face-to-face (FtF) communication. The theory was proposed by Joseph Walther in 1992, and it has been used to explain a wide range of phenomena, such as the development of online relationships, the impact of CMC on social interaction, and the role of CMC in shaping our self-presentation.</p>
 <p>The hyperpersonal model suggests that CMC can create more personal and intimate relationships than FtF communication because it offers a number of advantages, including:</p>
 <ul>
@@ -963,8 +278,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Walther, J. B. (2007). Selective self-presentation in computer-mediated communication: Hyperpersonal dimensions of technology, language, and the self. <em>Computers in Human Behavior, 23</em>(5), 2637-2653. <a href="doi:10.1016/j.chb.2005.10.014" class="uri">doi:10.1016/j.chb.2005.10.014</a></p></li>
 </ul>
 </div>
-<div id="knowledge-gap-hypothesis" class="section level2 hasAnchor" number="4.8">
-<h2><span class="header-section-number">4.8</span> Knowledge Gap Hypothesis<a href="communication-theories-1.html#knowledge-gap-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="knowledge-gap-hypothesis" class="section level2" number="4.8">
+<h2>
+<span class="header-section-number">4.8</span> Knowledge Gap Hypothesis<a class="anchor" aria-label="anchor" href="#knowledge-gap-hypothesis"><i class="fas fa-link"></i></a>
+</h2>
 <p>The knowledge gap hypothesis (KGH) is a communication theory that predicts that the gap in knowledge between the informed and the uninformed will widen over time, rather than close, as a result of mass communication. The theory was first proposed by Philip J. Tichenor, George A. Donohue, and Clarice N. Olien in 1970, and it has been used to explain a wide range of phenomena, such as the effects of news coverage on public opinion, the impact of educational campaigns, and the role of the media in shaping social inequality.</p>
 <p>The KGH suggests that the gap in knowledge between the informed and the uninformed will widen over time because of the following factors:</p>
 <ul>
@@ -992,8 +309,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Weimann, G. (1994). The influentials: People who influence people. New York, NY: Transaction Publishers.</p></li>
 </ul>
 </div>
-<div id="online-disinhibition-effect" class="section level2 hasAnchor" number="4.9">
-<h2><span class="header-section-number">4.9</span> Online Disinhibition Effect<a href="communication-theories-1.html#online-disinhibition-effect" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="online-disinhibition-effect" class="section level2" number="4.9">
+<h2>
+<span class="header-section-number">4.9</span> Online Disinhibition Effect<a class="anchor" aria-label="anchor" href="#online-disinhibition-effect"><i class="fas fa-link"></i></a>
+</h2>
 <p>The online disinhibition effect (ODE) is a phenomenon that occurs when people are more likely to say or do things online that they would not say or do in person. The ODE can be attributed to a number of factors, including:</p>
 <ul>
 <li><p><strong>Anonymity</strong>: When people are anonymous, they are less likely to feel inhibited by social conventions or norms.</p></li>
@@ -1029,8 +348,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>McKenna, K. Y. A., &amp; Bargh, J. A. (1998). In-group affiliation and computer-mediated communication: Group versus individual identity salience. <em>Personality and Social Psychology Bulletin, 24</em>(10), 1095-1105. <a href="doi:10.1177/01461672982410006" class="uri">doi:10.1177/01461672982410006</a></p></li>
 </ul>
 </div>
-<div id="parasocial-interaction" class="section level2 hasAnchor" number="4.10">
-<h2><span class="header-section-number">4.10</span> Parasocial Interaction<a href="communication-theories-1.html#parasocial-interaction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="parasocial-interaction" class="section level2" number="4.10">
+<h2>
+<span class="header-section-number">4.10</span> Parasocial Interaction<a class="anchor" aria-label="anchor" href="#parasocial-interaction"><i class="fas fa-link"></i></a>
+</h2>
 <p>Parasocial interaction (PSI) is a term used to describe the illusion of a close relationship between a media persona and a viewer or listener. The term was coined by Donald Horton and Richard Wohl in 1956, who defined it as “the perception of the performer-audience relationship as involving mutual intimacy.”</p>
 <p>PSI can occur in any medium where there is a one-way flow of communication, such as television, radio, and the internet. It is most likely to occur when the media persona is perceived as being attractive, likable, and trustworthy.</p>
 <p>There are a number of factors that can contribute to PSI, including:</p>
@@ -1058,8 +379,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Rubin, A. M., &amp; Rubin, R. B. (2015). <em>Communication research: Approaches and methods</em> (7th ed.). Boston, MA: Pearson.</p></li>
 </ul>
 </div>
-<div id="social-learning-theory" class="section level2 hasAnchor" number="4.11">
-<h2><span class="header-section-number">4.11</span> Social Learning Theory<a href="communication-theories-1.html#social-learning-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="social-learning-theory" class="section level2" number="4.11">
+<h2>
+<span class="header-section-number">4.11</span> Social Learning Theory<a class="anchor" aria-label="anchor" href="#social-learning-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Social learning theory is a psychological theory that explains how people learn new behaviors by observing and modeling the behaviors of others. The theory was developed by Albert Bandura in the 1960s, and it has been used to explain a wide range of phenomena, such as the development of aggression, the acquisition of prosocial behaviors, and the impact of media on behavior.</p>
 <p>Social learning theory is based on the following assumptions:</p>
 <ul>
@@ -1088,8 +411,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Bandura, A. (2006). <em>Social cognitive theory of mass communication</em>. Thousand Oaks, CA: Sage.</p></li>
 </ul>
 </div>
-<div id="social-constructionism" class="section level2 hasAnchor" number="4.12">
-<h2><span class="header-section-number">4.12</span> Social Constructionism<a href="communication-theories-1.html#social-constructionism" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="social-constructionism" class="section level2" number="4.12">
+<h2>
+<span class="header-section-number">4.12</span> Social Constructionism<a class="anchor" aria-label="anchor" href="#social-constructionism"><i class="fas fa-link"></i></a>
+</h2>
 <p>Social constructionism is a theoretical perspective that emphasizes the role of social interaction in shaping our understanding of the world. The theory was developed by a number of scholars, including Peter Berger and Thomas Luckmann, who argued that knowledge is not objective or preexisting, but is instead created and negotiated through social interaction.</p>
 <p>Social constructionism is based on the following assumptions:</p>
 <ul>
@@ -1115,8 +440,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Wood, J. (2013). <em>Social psychology</em> (13th ed.). Boston, MA: Wadsworth.</p></li>
 </ul>
 </div>
-<div id="social-exchange-theory" class="section level2 hasAnchor" number="4.13">
-<h2><span class="header-section-number">4.13</span> Social Exchange Theory<a href="communication-theories-1.html#social-exchange-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="social-exchange-theory" class="section level2" number="4.13">
+<h2>
+<span class="header-section-number">4.13</span> Social Exchange Theory<a class="anchor" aria-label="anchor" href="#social-exchange-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Social exchange theory is a sociological and psychological theory that explains how people interact with each other based on the costs and rewards of those interactions. The theory was developed by George Homans in the 1950s, and it has been used to explain a wide range of phenomena, such as the formation of relationships, the development of norms, and the maintenance of social order.</p>
 <p>Social exchange theory is based on the following assumptions:</p>
 <ul>
@@ -1144,8 +471,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Lawler, E. J., &amp; Yoon, J. (1993). Power and exchange: Asymmetries in social exchange. American Sociological Review, 58(5), 516-531. <a href="doi:10.2307/2096313" class="uri">doi:10.2307/2096313</a></p></li>
 </ul>
 </div>
-<div id="social-identity-theory" class="section level2 hasAnchor" number="4.14">
-<h2><span class="header-section-number">4.14</span> Social Identity Theory<a href="communication-theories-1.html#social-identity-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="social-identity-theory" class="section level2" number="4.14">
+<h2>
+<span class="header-section-number">4.14</span> Social Identity Theory<a class="anchor" aria-label="anchor" href="#social-identity-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Social identity theory is a social psychology theory that explains how people categorize themselves and others into groups, and how these group memberships affect their self-concept and behavior. The theory was developed by Henri Tajfel and John Turner in the 1970s, and it has been used to explain a wide range of phenomena, such as prejudice, discrimination, and intergroup conflict.</p>
 <p>Social identity theory is based on the following assumptions:</p>
 <ul>
@@ -1175,8 +504,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Smith, J. R. (2012). <em>Social identity theory: Key readings</em>. London, UK: Sage.</p></li>
 </ul>
 </div>
-<div id="social-information-processing-theory" class="section level2 hasAnchor" number="4.15">
-<h2><span class="header-section-number">4.15</span> Social Information Processing Theory<a href="communication-theories-1.html#social-information-processing-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="social-information-processing-theory" class="section level2" number="4.15">
+<h2>
+<span class="header-section-number">4.15</span> Social Information Processing Theory<a class="anchor" aria-label="anchor" href="#social-information-processing-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Social information processing theory (SIP) is a cognitive theory of social interaction that was developed by Kenneth Dodge in the 1980s. The theory explains how people make sense of social interactions and how these interpretations influence their behavior.</p>
 <p>SIP is based on the following assumptions:</p>
 <ul>
@@ -1204,8 +535,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Crick, N. R., &amp; Dodge, K. A. (2016). Social information processing in the development of social competence. <em>Wiley Interdisciplinary Reviews: Developmental Psychology, 5</em>(1), 10-24. <a href="doi:10.1002/dev.21205" class="uri">doi:10.1002/dev.21205</a></p></li>
 </ul>
 </div>
-<div id="uses-and-gratification-theory" class="section level2 hasAnchor" number="4.16">
-<h2><span class="header-section-number">4.16</span> Uses and Gratification Theory<a href="communication-theories-1.html#uses-and-gratification-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="uses-and-gratification-theory" class="section level2" number="4.16">
+<h2>
+<span class="header-section-number">4.16</span> Uses and Gratification Theory<a class="anchor" aria-label="anchor" href="#uses-and-gratification-theory"><i class="fas fa-link"></i></a>
+</h2>
 <p>Uses and gratifications theory (UGT) is a media effects theory that explains why people use media. The theory was developed in the 1940s by Katz, Blumler, and Gurevitch, and it has been revised and updated over time.</p>
 <p>UGT is based on the following assumptions:</p>
 <ul>
@@ -1233,70 +566,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Bryant, J., &amp; Oliver, M. B. (2009). <em>Media effects: Advances in theory and research</em> (3rd ed.). New York, NY: Routledge.</p></li>
 <li><p>Valkenburg, P. M., &amp; Peter, J. (2013). <em>The uses and gratifications of social media: A review of the literature</em>. <em>The Journal of Broadcasting &amp; Electronic Media, 57</em>(1), 296-316. <a href="doi:10.1080/08838151.2012.755821" class="uri">doi:10.1080/08838151.2012.755821</a></p></li>
 </ul>
-
 </div>
 </div>
-            </section>
+  <div class="chapter-nav">
+<div class="prev"><a href="research-papers-1.html"><span class="header-section-number">3</span> Research Papers</a></div>
+<div class="next"><a href="interviews-1.html"><span class="header-section-number">5</span> Interviews</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#communication-theories-1"><span class="header-section-number">4</span> Communication Theories</a></li>
+<li><a class="nav-link" href="#agenda-setting-theory"><span class="header-section-number">4.1</span> Agenda Setting Theory</a></li>
+<li><a class="nav-link" href="#cognitive-dissonance"><span class="header-section-number">4.2</span> Cognitive Dissonance</a></li>
+<li><a class="nav-link" href="#cultivation-theory"><span class="header-section-number">4.3</span> Cultivation Theory</a></li>
+<li><a class="nav-link" href="#elaboration-likelihood-model"><span class="header-section-number">4.4</span> Elaboration Likelihood Model</a></li>
+<li><a class="nav-link" href="#framing-theory"><span class="header-section-number">4.5</span> Framing Theory</a></li>
+<li><a class="nav-link" href="#gatekeeping-theory"><span class="header-section-number">4.6</span> Gatekeeping Theory</a></li>
+<li><a class="nav-link" href="#hyperpersonal-model"><span class="header-section-number">4.7</span> Hyperpersonal Model</a></li>
+<li><a class="nav-link" href="#knowledge-gap-hypothesis"><span class="header-section-number">4.8</span> Knowledge Gap Hypothesis</a></li>
+<li><a class="nav-link" href="#online-disinhibition-effect"><span class="header-section-number">4.9</span> Online Disinhibition Effect</a></li>
+<li><a class="nav-link" href="#parasocial-interaction"><span class="header-section-number">4.10</span> Parasocial Interaction</a></li>
+<li><a class="nav-link" href="#social-learning-theory"><span class="header-section-number">4.11</span> Social Learning Theory</a></li>
+<li><a class="nav-link" href="#social-constructionism"><span class="header-section-number">4.12</span> Social Constructionism</a></li>
+<li><a class="nav-link" href="#social-exchange-theory"><span class="header-section-number">4.13</span> Social Exchange Theory</a></li>
+<li><a class="nav-link" href="#social-identity-theory"><span class="header-section-number">4.14</span> Social Identity Theory</a></li>
+<li><a class="nav-link" href="#social-information-processing-theory"><span class="header-section-number">4.15</span> Social Information Processing Theory</a></li>
+<li><a class="nav-link" href="#uses-and-gratification-theory"><span class="header-section-number">4.16</span> Uses and Gratification Theory</a></li>
+</ul>
 
-          </div>
-        </div>
-      </div>
-<a href="research-papers-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="interviews-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-17.</p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-comm_theories.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection",
-"scroll_highlight": true
-}
-});
-});
-</script>
 
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
 </body>
-
 </html>
