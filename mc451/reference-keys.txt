@@ -108,6 +108,7 @@ introduction-to-r-and-rstudio
 introduction-5
 understanding-the-basics
 installing-r-and-rstudio
+navigating-the-rstudio-interface
 basic-operations-in-r
 data-structures-in-r
 installing-and-loading-libraries

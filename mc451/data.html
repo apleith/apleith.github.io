@@ -7,7 +7,7 @@
 <title>Chapter 13 Data | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
 <meta name="description" content="13.1 Defining Data?  Explanation of Data in the Context of Research In the realm of academic research, data can be broadly defined as a collection of facts, statistics, or observations represented...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.35 with bs4_book()">
 <meta property="og:title" content="Chapter 13 Data | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="13.1 Defining Data?  Explanation of Data in the Context of Research In the realm of academic research, data can be broadly defined as a collection of facts, statistics, or observations represented...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="13.1 Defining Data?  Explanation of Data in the Context of Research In the realm of academic research, data can be broadly defined as a collection of facts, statistics, or observations represented...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -163,6 +163,80 @@
 <h2>
 <span class="header-section-number">13.5</span> Cleaning Data for Visualizations and Analyses<a class="anchor" aria-label="anchor" href="#cleaning-data-for-visualizations-and-analyses"><i class="fas fa-link"></i></a>
 </h2>
+<div id="how-to-import-csv-files-into-r" class="section level3 unnumbered">
+<h3>How to Import CSV Files into R<a class="anchor" aria-label="anchor" href="#how-to-import-csv-files-into-r"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>CSV stands for Comma Separated Values. It is a plain text format with a series of values separated by commas.</li>
+<li>A CSV file is just a text file, it stores data but does not contain formatting, formulas, macros, etc. It is also known as flat files.</li>
+</ul>
+<div id="use-read.csv-from-base-r" class="section level4 unnumbered">
+<h4>Use read.csv from base R<a class="anchor" aria-label="anchor" href="#use-read.csv-from-base-r"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">csv1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify_songs.csv"</span>, header<span class="op">=</span><span class="cn">TRUE</span>, stringsAsFactors<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="use-read_csv-from-readr-package" class="section level4 unnumbered">
+<h4>Use read_csv from readr package<a class="anchor" aria-label="anchor" href="#use-read_csv-from-readr-package"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#install.packages("readr")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">csv2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify_songs.csv"</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Rows: 32833 Columns: 23
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: ","
+## chr (10): track_id, track_name, track_artist, track_album_id, track_album_na...
+## dbl (13): track_popularity, danceability, energy, key, loudness, mode, speec...
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div id="use-fread-from-data.table-package" class="section level4 unnumbered">
+<h4>Use fread from data.table package<a class="anchor" aria-label="anchor" href="#use-fread-from-data.table-package"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#install.packages("data.table")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com">data.table</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">csv3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify_songs.csv"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="how-to-import-excel-files-into-r" class="section level4 unnumbered">
+<h4>How to Import Excel Files into R<a class="anchor" aria-label="anchor" href="#how-to-import-excel-files-into-r"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li>It is a binary file that holds information about all the worksheets in a workbook</li>
+<li>An Excel not only stores data but can also do operations on the data</li>
+</ul>
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#install.packages('readxl')</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#import Excel file into R</span></span>
+<span><span class="co">#xlsx1 &lt;- read_excel('https://github.com/apleith/apleith.github.io/raw/main/mc451/data/spotify_songs.xlsx')</span></span></code></pre></div>
+</div>
+<div id="how-to-import-spss-files-into-r" class="section level4 unnumbered">
+<h4>How to Import SPSS Files into R<a class="anchor" aria-label="anchor" href="#how-to-import-spss-files-into-r"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li>Also a binary format.</li>
+<li>Designed for SPSS</li>
+</ul>
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#install.packages("foreign")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://svn.r-project.org/R-packages/trunk/foreign/">foreign</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#import SPSS file into R</span></span>
+<span><span class="va">sav1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/foreign/man/read.spss.html">read.spss</a></span><span class="op">(</span><span class="st">"https://github.com/apleith/apleith.github.io/raw/main/mc451/data/ATP%20W90.sav"</span>, use.value.label<span class="op">=</span><span class="cn">TRUE</span>, to.data.frame<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning in
+## read.spss("https://github.com/apleith/apleith.github.io/raw/main/mc451/data/ATP%20W90.sav",
+## : Undeclared level(s) 2, 3, 4 added in variable: PERS1_W90</code></pre>
+<pre><code>## Warning in
+## read.spss("https://github.com/apleith/apleith.github.io/raw/main/mc451/data/ATP%20W90.sav",
+## : Undeclared level(s) 2, 3, 4 added in variable: PERS11_W90</code></pre>
+</div>
+</div>
 <div id="handling-missing-data" class="section level3 unnumbered">
 <h3>Handling Missing Data<a class="anchor" aria-label="anchor" href="#handling-missing-data"><i class="fas fa-link"></i></a>
 </h3>
@@ -173,7 +247,7 @@
 <li>
 <strong>Read in Data</strong>: To read in the necessary web data, you must first load the required packaage and then import the CSV file.</li>
 </ul>
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Check if the package is already installed before trying to install it</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="st">"readr"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Package"</span><span class="op">]</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"readr"</span>, repos <span class="op">=</span> <span class="st">'http://cran.us.r-project.org'</span><span class="op">)</span></span>
@@ -200,32 +274,34 @@
 <li>
 <strong>Complete Case Analysis</strong>: This is the simplest method where you remove observations where any of the variables are missing. However, this method may lead to a loss of valuable data (Rubin, 1987).</li>
 </ul>
-<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs_complete</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li>
 <strong>Mean/Median/Mode Imputation</strong>: Replace the missing values with the mean, median, or mode of that variable. It’s a quick solution but can potentially introduce bias (Little &amp; Rubin, 2002).</li>
 </ul>
-<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ## Attaching package: 'dplyr'</code></pre>
+<pre><code>## The following objects are masked from 'package:data.table':
+## 
+##     between, first, last</code></pre>
 <pre><code>## The following objects are masked from 'package:stats':
 ## 
 ##     filter, lag</code></pre>
 <pre><code>## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>track_popularity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">track_popularity</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">track_popularity</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li>
 <strong>Multiple Imputation</strong>: More sophisticated than mean imputation, it creates multiple datasets and averages the imputed values (Schafer &amp; Graham, 2002).</li>
 </ul>
-<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amices/mice">mice</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: package 'mice' was built under R version 4.3.1</code></pre>
 <pre><code>## 
 ## Attaching package: 'mice'</code></pre>
 <pre><code>## The following object is masked from 'package:stats':
@@ -234,7 +310,7 @@
 <pre><code>## The following objects are masked from 'package:base':
 ## 
 ##     cbind, rbind</code></pre>
-<div class="sourceCode" id="cb83"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">imputed_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://amices.org/mice/reference/mice.html">mice</a></span><span class="op">(</span><span class="va">spotify_songs</span>, m<span class="op">=</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  iter imp variable
@@ -264,7 +340,7 @@
 ##   5   4
 ##   5   5</code></pre>
 <pre><code>## Warning: Number of logged events: 10</code></pre>
-<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs_complete</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/complete.html">complete</a></span><span class="op">(</span><span class="va">imputed_data</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -278,17 +354,17 @@
 <ul>
 <li><strong>Filtering Data</strong></li>
 </ul>
-<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pop_songs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="va">playlist_genre</span> <span class="op">==</span> <span class="st">'pop'</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li><strong>Selecting Columns</strong></li>
 </ul>
-<div class="sourceCode" id="cb88"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">song_details</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="va">track_name</span>, <span class="va">playlist_genre</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li><strong>Creating New Variables (Mutate)</strong></li>
 </ul>
-<div class="sourceCode" id="cb89"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs_enhanced</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="va">spotify_songs</span>, is_popular <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">track_popularity</span> <span class="op">&gt;</span> <span class="fl">50</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -302,14 +378,14 @@
 <ul>
 <li><strong>Identifying Outliers</strong></li>
 </ul>
-<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-48-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-53-1.png" width="672"></div>
 <ul>
 <li>
 <strong>Treating Outliers</strong>: Common methods include transformation, binning, or removing the outliers (Tukey, 1977).</li>
 </ul>
-<div class="sourceCode" id="cb91"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs_no_outliers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="va">track_popularity</span> <span class="op">&lt;</span> <span class="fl">100</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -320,12 +396,12 @@
 <ul>
 <li><strong>Min-Max Scaling</strong></li>
 </ul>
-<div class="sourceCode" id="cb92"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">normalized_popularity</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li><strong>Z-score Normalization</strong></li>
 </ul>
-<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">z_score_popularity</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -379,6 +455,7 @@
 </li>
 <li>
 <a class="nav-link" href="#cleaning-data-for-visualizations-and-analyses"><span class="header-section-number">13.5</span> Cleaning Data for Visualizations and Analyses</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#how-to-import-csv-files-into-r">How to Import CSV Files into R</a></li>
 <li><a class="nav-link" href="#handling-missing-data">Handling Missing Data</a></li>
 <li><a class="nav-link" href="#data-transformation">Data Transformation</a></li>
 <li><a class="nav-link" href="#outliers-and-normalization">Outliers and Normalization</a></li>
@@ -402,7 +479,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-17.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-19.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

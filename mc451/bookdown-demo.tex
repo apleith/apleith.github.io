@@ -128,7 +128,7 @@
 
 \title{Introduction to Communication and Media Research with R}
 \author{Alex P. Leith, PhD}
-\date{2023-10-17}
+\date{2023-10-19}
 
 \begin{document}
 \maketitle
@@ -4333,8 +4333,7 @@ With R successfully installed, the next step is to install RStudio, which provid
 By completing these steps, you will have successfully installed both R and RStudio on your system, laying the foundation for your computational endeavors in mass communications and media research.
 
 \hypertarget{navigating-the-rstudio-interface}{%
-\section*{Navigating the RStudio Interface}\label{navigating-the-rstudio-interface}}
-\addcontentsline{toc}{section}{Navigating the RStudio Interface}
+\section{Navigating the RStudio Interface}\label{navigating-the-rstudio-interface}}
 
 Navigating RStudio's interface effectively is crucial for conducting your projects and research tasks in an efficient manner. RStudio's interface is designed to facilitate a variety of tasks, including data analysis, plotting, and programming. Here, we delve into the main components of this interface.
 
@@ -4486,7 +4485,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
@@ -4494,7 +4493,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 ## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\AP Leith\AppData\Local\Temp\Rtmpmk3YqF\downloaded_packages
+##  C:\Users\alexl\AppData\Local\Temp\RtmpWmx6aK\downloaded_packages
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -5043,10 +5042,6 @@ You can load an installed package using the \texttt{library()} function:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
 \hypertarget{unloading-a-package}{%
 \subsubsection*{Unloading a Package}\label{unloading-a-package}}
 \addcontentsline{toc}{subsubsection}{Unloading a Package}
@@ -5074,9 +5069,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.0 (2023-04-21 ucrt)
+## R version 4.3.1 (2023-06-16 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 11 x64 (build 22621)
+## Running under: Windows 10 x64 (build 19045)
 ## 
 ## Matrix products: default
 ## 
@@ -5095,15 +5090,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
-##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
-##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
-## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
-## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
-## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
-## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
-## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
-## [33] tools_4.3.0      gtable_0.3.3
+##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
+##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
+##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
+## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
+## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
+## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
+## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
+## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
+## [33] gtable_0.3.4
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5400,6 +5395,121 @@ The credibility of your data source significantly impacts the reliability and va
 \hypertarget{cleaning-data-for-visualizations-and-analyses}{%
 \section{Cleaning Data for Visualizations and Analyses}\label{cleaning-data-for-visualizations-and-analyses}}
 
+\hypertarget{how-to-import-csv-files-into-r}{%
+\subsection*{How to Import CSV Files into R}\label{how-to-import-csv-files-into-r}}
+\addcontentsline{toc}{subsection}{How to Import CSV Files into R}
+
+\begin{itemize}
+\tightlist
+\item
+  CSV stands for Comma Separated Values. It is a plain text format with a series of values separated by commas.
+\item
+  A CSV file is just a text file, it stores data but does not contain formatting, formulas, macros, etc. It is also known as flat files.
+\end{itemize}
+
+\hypertarget{use-read.csv-from-base-r}{%
+\subsubsection*{Use read.csv from base R}\label{use-read.csv-from-base-r}}
+\addcontentsline{toc}{subsubsection}{Use read.csv from base R}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{csv1 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify\_songs.csv"}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{stringsAsFactors=}\ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{use-read_csv-from-readr-package}{%
+\subsubsection*{Use read\_csv from readr package}\label{use-read_csv-from-readr-package}}
+\addcontentsline{toc}{subsubsection}{Use read\_csv from readr package}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("readr")}
+\FunctionTok{library}\NormalTok{(readr)}
+
+\NormalTok{csv2 }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify\_songs.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 32833 Columns: 23
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (10): track_id, track_name, track_artist, track_album_id, track_album_na...
+## dbl (13): track_popularity, danceability, energy, key, loudness, mode, speec...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\hypertarget{use-fread-from-data.table-package}{%
+\subsubsection*{Use fread from data.table package}\label{use-fread-from-data.table-package}}
+\addcontentsline{toc}{subsubsection}{Use fread from data.table package}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("data.table")}
+\FunctionTok{library}\NormalTok{(data.table)}
+
+\NormalTok{csv3 }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify\_songs.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{how-to-import-excel-files-into-r}{%
+\subsubsection*{How to Import Excel Files into R}\label{how-to-import-excel-files-into-r}}
+\addcontentsline{toc}{subsubsection}{How to Import Excel Files into R}
+
+\begin{itemize}
+\tightlist
+\item
+  It is a binary file that holds information about all the worksheets in a workbook
+\item
+  An Excel not only stores data but can also do operations on the data
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages(\textquotesingle{}readxl\textquotesingle{})}
+\FunctionTok{library}\NormalTok{(readxl)}
+
+\CommentTok{\#import Excel file into R}
+\CommentTok{\#xlsx1 \textless{}{-} read\_excel(\textquotesingle{}https://github.com/apleith/apleith.github.io/raw/main/mc451/data/spotify\_songs.xlsx\textquotesingle{})}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{how-to-import-spss-files-into-r}{%
+\subsubsection*{How to Import SPSS Files into R}\label{how-to-import-spss-files-into-r}}
+\addcontentsline{toc}{subsubsection}{How to Import SPSS Files into R}
+
+\begin{itemize}
+\tightlist
+\item
+  Also a binary format.
+\item
+  Designed for SPSS
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#install.packages("foreign")}
+\FunctionTok{library}\NormalTok{(foreign)}
+
+\CommentTok{\#import SPSS file into R}
+\NormalTok{sav1 }\OtherTok{\textless{}{-}} \FunctionTok{read.spss}\NormalTok{(}\StringTok{"https://github.com/apleith/apleith.github.io/raw/main/mc451/data/ATP\%20W90.sav"}\NormalTok{, }\AttributeTok{use.value.label=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{to.data.frame=}\ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in
+## read.spss("https://github.com/apleith/apleith.github.io/raw/main/mc451/data/ATP%20W90.sav",
+## : Undeclared level(s) 2, 3, 4 added in variable: PERS1_W90
+\end{verbatim}
+
+\begin{verbatim}
+## Warning in
+## read.spss("https://github.com/apleith/apleith.github.io/raw/main/mc451/data/ATP%20W90.sav",
+## : Undeclared level(s) 2, 3, 4 added in variable: PERS11_W90
+\end{verbatim}
+
 \hypertarget{handling-missing-data}{%
 \subsection*{Handling Missing Data}\label{handling-missing-data}}
 \addcontentsline{toc}{subsection}{Handling Missing Data}
@@ -5475,6 +5585,12 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{verbatim}
 
 \begin{verbatim}
+## The following objects are masked from 'package:data.table':
+## 
+##     between, first, last
+\end{verbatim}
+
+\begin{verbatim}
 ## The following objects are masked from 'package:stats':
 ## 
 ##     filter, lag
@@ -5504,10 +5620,6 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \FunctionTok{library}\NormalTok{(mice)}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'mice' was built under R version 4.3.1
-\end{verbatim}
 
 \begin{verbatim}
 ## 
@@ -5640,7 +5752,7 @@ Outliers are data points that are significantly different from most of the other
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-48-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-53-1.pdf}
 
 \begin{itemize}
 \tightlist
@@ -5973,15 +6085,6 @@ A histogram is particularly useful for visualizing the frequency distribution of
 \begin{Shaded}
 \begin{Highlighting}[]
   \FunctionTok{library}\NormalTok{(ggplot2)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
   \FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
     \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{binwidth=}\DecValTok{5}\NormalTok{, }\AttributeTok{fill=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.7}\NormalTok{) }\SpecialCharTok{+}
     \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Distribution of Track Popularity"}\NormalTok{) }\SpecialCharTok{+}
@@ -5990,7 +6093,7 @@ A histogram is particularly useful for visualizing the frequency distribution of
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-52-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-57-1.pdf}
 
 By using this histogram code snippet, one can visualize the distribution of \texttt{track\_popularity} within the \texttt{spotify\_songs} dataset, gaining insights into how often songs with various popularity levels appear in the dataset.
 
@@ -6009,7 +6112,7 @@ Scatter plots are invaluable for depicting the relationship between two continuo
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-53-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-58-1.pdf}
 
 Using this scatter plot, researchers could investigate whether there's a noticeable relationship between a song's duration (\texttt{duration\_ms}) and its popularity (\texttt{track\_popularity}).
 
@@ -6028,7 +6131,7 @@ Box plots, or box-and-whisker plots, are effective for summarizing the central t
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-54-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-1.pdf}
 
 With this box plot, one can compare the distribution of \texttt{track\_popularity} across different \texttt{playlist\_genre} categories. It provides an effective way to see the median, quartiles, and potential outliers in track popularity for each genre.
 
@@ -6070,7 +6173,7 @@ Once the date conversion is done, you can proceed with the line chart plotting:
 ## Warning: Removed 1886 rows containing missing values (`geom_line()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-56-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf}
 
 In this updated line chart, we use \texttt{track\_album\_release\_date} after converting it to a Date type. The graph will depict how track popularity (\texttt{track\_popularity}) has evolved over time based on their album's release date (\texttt{track\_album\_release\_date}).
 
@@ -6234,7 +6337,7 @@ Histograms and bar plots are graphical methods for visualizing distributions. Wh
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-57-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-62-1.pdf}
 
 \hypertarget{grouped}{%
 \subsubsection{Grouped}\label{grouped}}
@@ -6351,11 +6454,26 @@ Inferential statistics extend the reach of descriptive statistics by allowing re
 \begin{verbatim}
 ## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
 ## v forcats   1.0.0     v stringr   1.5.0
-## v lubridate 1.9.2     v tibble    3.2.1
-## v purrr     1.0.1     v tidyr     1.3.0
+## v lubridate 1.9.3     v tibble    3.2.1
+## v purrr     1.0.2     v tidyr     1.3.0
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x mice::filter() masks dplyr::filter(), stats::filter()
-## x dplyr::lag()   masks stats::lag()
+## x dplyr::between()     masks data.table::between()
+## x mice::filter()       masks dplyr::filter(), stats::filter()
+## x dplyr::first()       masks data.table::first()
+## x lubridate::hour()    masks data.table::hour()
+## x lubridate::isoweek() masks data.table::isoweek()
+## x dplyr::lag()         masks stats::lag()
+## x dplyr::last()        masks data.table::last()
+## x lubridate::mday()    masks data.table::mday()
+## x lubridate::minute()  masks data.table::minute()
+## x lubridate::month()   masks data.table::month()
+## x lubridate::quarter() masks data.table::quarter()
+## x lubridate::second()  masks data.table::second()
+## x purrr::transpose()   masks data.table::transpose()
+## x lubridate::wday()    masks data.table::wday()
+## x lubridate::week()    masks data.table::week()
+## x lubridate::yday()    masks data.table::yday()
+## x lubridate::year()    masks data.table::year()
 ## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 \end{verbatim}
 
