@@ -7,7 +7,7 @@
 <title>Chapter 15 Data Analysis | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
 <meta name="description" content="15.1 Analyses  15.1.1 Introduction Data analysis plays a quintessential role in the realm of communication and media research. With an ever-increasing volume of data generated from diverse...">
-<meta name="generator" content="bookdown 0.35 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 15 Data Analysis | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="15.1 Analyses  15.1.1 Introduction Data analysis plays a quintessential role in the realm of communication and media research. With an ever-increasing volume of data generated from diverse...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="15.1 Analyses  15.1.1 Introduction Data analysis plays a quintessential role in the realm of communication and media research. With an ever-increasing volume of data generated from diverse...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -165,14 +165,14 @@
 </h5>
 <p>Histograms and bar plots are graphical methods for visualizing distributions. While histograms are used for continuous data, bar plots are used for categorical data.</p>
 <p><strong>Code Snippet for Histogram in R using <code>ggplot2</code></strong></p>
-<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth<span class="op">=</span><span class="fl">5</span>, fill<span class="op">=</span><span class="st">"blue"</span>, alpha<span class="op">=</span><span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Distribution of Track Popularity"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Track Popularity"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Frequency"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-62-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-91-1.png" width="672"></div>
 </div>
 </div>
 <div id="grouped" class="section level4" number="15.2.2.2">
@@ -284,56 +284,33 @@
 <strong>Equal Variance</strong>: The variance within each group should be approximately equal, although this is more flexible in some variations of the t-test.</li>
 </ul>
 <p><strong>Code Examples Using R</strong></p>
-<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Check if the package is already installed before trying to install it</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="st">"tidyverse"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Package"</span><span class="op">]</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span>, repos <span class="op">=</span> <span class="st">'http://cran.us.r-project.org'</span><span class="op">)</span></span>
 <span><span class="op">}</span></span>
 <span></span>
 <span><span class="co"># Load the package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ forcats   1.0.0     ✔ stringr   1.5.0
-## ✔ lubridate 1.9.3     ✔ tibble    3.2.1
-## ✔ purrr     1.0.2     ✔ tidyr     1.3.0
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::between()     masks data.table::between()
-## ✖ mice::filter()       masks dplyr::filter(), stats::filter()
-## ✖ dplyr::first()       masks data.table::first()
-## ✖ lubridate::hour()    masks data.table::hour()
-## ✖ lubridate::isoweek() masks data.table::isoweek()
-## ✖ dplyr::lag()         masks stats::lag()
-## ✖ dplyr::last()        masks data.table::last()
-## ✖ lubridate::mday()    masks data.table::mday()
-## ✖ lubridate::minute()  masks data.table::minute()
-## ✖ lubridate::month()   masks data.table::month()
-## ✖ lubridate::quarter() masks data.table::quarter()
-## ✖ lubridate::second()  masks data.table::second()
-## ✖ purrr::transpose()   masks data.table::transpose()
-## ✖ lubridate::wday()    masks data.table::wday()
-## ✖ lubridate::week()    masks data.table::week()
-## ✖ lubridate::yday()    masks data.table::yday()
-## ✖ lubridate::year()    masks data.table::year()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Subset data for t-test</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Subset data for t-test</span></span>
 <span><span class="va">spotify_songs_ttest</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">playlist_genre</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"pop"</span>, <span class="st">"rock"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb179"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Independent t-test</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">spotify_songs_ttest</span><span class="op">$</span><span class="va">track_popularity</span> <span class="op">~</span> <span class="va">spotify_songs_ttest</span><span class="op">$</span><span class="va">playlist_genre</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  Two Sample t-test
 ## 
 ## data:  spotify_songs_ttest$track_popularity by spotify_songs_ttest$playlist_genre
-## t = 12.288, df = 10456, p-value &lt; 2.2e-16
+## t = 12.288, df = 10456, p-value &lt; 0.00000000000000022
 ## alternative hypothesis: true difference in means between group pop and group rock is not equal to 0
 ## 95 percent confidence interval:
 ##  5.056736 6.976329
 ## sample estimates:
 ##  mean in group pop mean in group rock 
 ##           47.74487           41.72834</code></pre>
-<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">survivor</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-06-01/summary.csv'</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Rows: 40 Columns: 19
 ## ── Column specification ────────────────────────────────────────────────────────
@@ -344,7 +321,7 @@
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Paired t-test (Hypothetical pre and post columns)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">survivor</span><span class="op">$</span><span class="va">viewers_premier</span>, <span class="va">survivor</span><span class="op">$</span><span class="va">viewers_finale</span>, paired <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
@@ -427,7 +404,7 @@
 <strong>Normality of Residuals</strong>: The residuals (or errors) should be normally distributed for valid hypothesis testing.</li>
 </ul>
 <p><strong>Code Example for Linear Regression in R</strong></p>
-<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">lm_model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">track_popularity</span> <span class="op">~</span> <span class="va">duration_ms</span> <span class="op">+</span> <span class="va">playlist_genre</span>, data <span class="op">=</span> <span class="va">spotify_songs</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">lm_model</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
@@ -440,20 +417,20 @@
 ## -56.009 -17.645   2.908  18.924  63.497 
 ## 
 ## Coefficients:
-##                       Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)          4.777e+01  5.994e-01   79.69   &lt;2e-16 ***
-## duration_ms         -5.813e-05  2.296e-06  -25.32   &lt;2e-16 ***
-## playlist_genrelatin  1.186e+01  4.621e-01   25.67   &lt;2e-16 ***
-## playlist_genrepop    1.263e+01  4.540e-01   27.83   &lt;2e-16 ***
-## playlist_genrer&amp;b    7.265e+00  4.569e-01   15.90   &lt;2e-16 ***
-## playlist_genrerap    7.895e+00  4.493e-01   17.57   &lt;2e-16 ***
-## playlist_genrerock   8.408e+00  4.709e-01   17.86   &lt;2e-16 ***
+##                         Estimate   Std. Error t value            Pr(&gt;|t|)    
+## (Intercept)         47.769606541  0.599421521   79.69 &lt;0.0000000000000002 ***
+## duration_ms         -0.000058129  0.000002296  -25.32 &lt;0.0000000000000002 ***
+## playlist_genrelatin 11.863027432  0.462124200   25.67 &lt;0.0000000000000002 ***
+## playlist_genrepop   12.633908291  0.454035648   27.83 &lt;0.0000000000000002 ***
+## playlist_genrer&amp;b    7.265348546  0.456872123   15.90 &lt;0.0000000000000002 ***
+## playlist_genrerap    7.894982894  0.449349067   17.57 &lt;0.0000000000000002 ***
+## playlist_genrerock   8.408237450  0.470857797   17.86 &lt;0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 24.36 on 32826 degrees of freedom
 ## Multiple R-squared:  0.04916,    Adjusted R-squared:  0.04899 
-## F-statistic: 282.9 on 6 and 32826 DF,  p-value: &lt; 2.2e-16</code></pre>
+## F-statistic: 282.9 on 6 and 32826 DF,  p-value: &lt; 0.00000000000000022</code></pre>
 <p><strong>References</strong></p>
 <ul>
 <li>Field, A., Miles, J., &amp; Field, Z. (2012). Discovering Statistics Using R. Sage publications.</li>
@@ -517,7 +494,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-19.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-23.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

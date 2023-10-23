@@ -128,7 +128,7 @@
 
 \title{Introduction to Communication and Media Research with R}
 \author{Alex P. Leith, PhD}
-\date{2023-10-19}
+\date{2023-10-23}
 
 \begin{document}
 \maketitle
@@ -4485,7 +4485,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
@@ -4493,7 +4493,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 ## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\alexl\AppData\Local\Temp\RtmpWmx6aK\downloaded_packages
+##  C:\Users\AP Leith\AppData\Local\Temp\RtmpkZvPDU\downloaded_packages
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -5042,6 +5042,10 @@ You can load an installed package using the \texttt{library()} function:
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.3.1
+\end{verbatim}
+
 \hypertarget{unloading-a-package}{%
 \subsubsection*{Unloading a Package}\label{unloading-a-package}}
 \addcontentsline{toc}{subsubsection}{Unloading a Package}
@@ -5069,9 +5073,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.1 (2023-06-16 ucrt)
+## R version 4.3.0 (2023-04-21 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 10 x64 (build 19045)
+## Running under: Windows 11 x64 (build 22621)
 ## 
 ## Matrix products: default
 ## 
@@ -5090,15 +5094,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
-##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
-##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
-## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
-## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
-## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
-## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
-## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
-## [33] gtable_0.3.4
+##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
+##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
+##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
+## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
+## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
+## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
+## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
+## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
+## [33] tools_4.3.0      gtable_0.3.3
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5622,6 +5626,10 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \begin{verbatim}
+## Warning: package 'mice' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{verbatim}
 ## 
 ## Attaching package: 'mice'
 \end{verbatim}
@@ -5688,47 +5696,268 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \subsection*{Data Transformation}\label{data-transformation}}
 \addcontentsline{toc}{subsection}{Data Transformation}
 
-\hypertarget{using-dplyr-for-filtering-selecting-and-mutating-data}{%
-\subsubsection*{\texorpdfstring{Using \texttt{dplyr} for Filtering, Selecting, and Mutating Data}{Using dplyr for Filtering, Selecting, and Mutating Data}}\label{using-dplyr-for-filtering-selecting-and-mutating-data}}
-\addcontentsline{toc}{subsubsection}{Using \texttt{dplyr} for Filtering, Selecting, and Mutating Data}
+\hypertarget{dplyr-crashcourse}{%
+\subsubsection*{\texorpdfstring{\texttt{dplyr} Crashcourse}{dplyr Crashcourse}}\label{dplyr-crashcourse}}
+\addcontentsline{toc}{subsubsection}{\texttt{dplyr} Crashcourse}
 
-\texttt{dplyr} is a package that provides a set of tools for efficiently manipulating datasets in R. Below are some code snippets updated to use the \texttt{spotify\_songs} dataset:
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Filtering Data}
-\end{itemize}
+Certainly, this chapter will walk through the common \texttt{dplyr} commands using pipe (\texttt{\%\textgreater{}\%}) syntax, employing the \texttt{movies.csv} dataset for demonstration. We will start by loading the necessary libraries and the dataset.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{pop\_songs }\OtherTok{\textless{}{-}} \FunctionTok{filter}\NormalTok{(spotify\_songs, playlist\_genre }\SpecialCharTok{==} \StringTok{\textquotesingle{}pop\textquotesingle{}}\NormalTok{)}
+\CommentTok{\# Load the necessary libraries}
+\FunctionTok{library}\NormalTok{(tidyverse)}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Selecting Columns}
-\end{itemize}
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{verbatim}
+## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
+## v forcats   1.0.0     v stringr   1.5.0
+## v ggplot2   3.4.4     v tibble    3.2.1
+## v lubridate 1.9.2     v tidyr     1.3.0
+## v purrr     1.0.1     
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::between()     masks data.table::between()
+## x mice::filter()       masks dplyr::filter(), stats::filter()
+## x dplyr::first()       masks data.table::first()
+## x lubridate::hour()    masks data.table::hour()
+## x lubridate::isoweek() masks data.table::isoweek()
+## x dplyr::lag()         masks stats::lag()
+## x dplyr::last()        masks data.table::last()
+## x lubridate::mday()    masks data.table::mday()
+## x lubridate::minute()  masks data.table::minute()
+## x lubridate::month()   masks data.table::month()
+## x lubridate::quarter() masks data.table::quarter()
+## x lubridate::second()  masks data.table::second()
+## x purrr::transpose()   masks data.table::transpose()
+## x lubridate::wday()    masks data.table::wday()
+## x lubridate::week()    masks data.table::week()
+## x lubridate::yday()    masks data.table::yday()
+## x lubridate::year()    masks data.table::year()
+## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+\end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{song\_details }\OtherTok{\textless{}{-}} \FunctionTok{select}\NormalTok{(spotify\_songs, track\_name, playlist\_genre)}
+\CommentTok{\# Load the dataset}
+\NormalTok{movies }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}03{-}09/movies.csv"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Creating New Variables (Mutate)}
-\end{itemize}
+Certainly, a more extensive exploration of each command is provided below:
+
+\hypertarget{select}{%
+\paragraph*{1. Select}\label{select}}
+\addcontentsline{toc}{paragraph}{1. Select}
+
+The \texttt{select()} function allows you to choose specific columns in a dataframe. This function is essential when dealing with large datasets containing numerous variables, and you're interested in a subset for further analysis.
+
+\textbf{Example 1}: Select only the title, year, and budget columns.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{spotify\_songs\_enhanced }\OtherTok{\textless{}{-}} \FunctionTok{mutate}\NormalTok{(spotify\_songs, }\AttributeTok{is\_popular =} \FunctionTok{ifelse}\NormalTok{(track\_popularity }\SpecialCharTok{\textgreater{}} \DecValTok{50}\NormalTok{, }\ConstantTok{TRUE}\NormalTok{, }\ConstantTok{FALSE}\NormalTok{))}
+\NormalTok{selected\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(title, year, budget)}
 \end{Highlighting}
 \end{Shaded}
+
+\textbf{Example 2}: Use negative indexing to exclude certain columns.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{selected\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{actors, }\SpecialCharTok{{-}}\NormalTok{director)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{filter}{%
+\paragraph*{2. Filter}\label{filter}}
+\addcontentsline{toc}{paragraph}{2. Filter}
+
+The \texttt{filter()} function is crucial for subsetting data based on conditional statements. It serves to isolate rows that meet specific criteria, which can be particularly useful for exploratory data analysis or preprocessing data for machine learning algorithms.
+
+\textbf{Example 1}: Filter movies released after 2000 with IMDb ratings above 8.0.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtered\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(year }\SpecialCharTok{\textgreater{}} \DecValTok{2000} \SpecialCharTok{\&}\NormalTok{ imdb\_rating }\SpecialCharTok{\textgreater{}} \FloatTok{8.0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Example 2}: Filter movies that passed the Bechdel test.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{filtered\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(binary }\SpecialCharTok{==} \StringTok{"PASS"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{arrange}{%
+\paragraph*{3. Arrange}\label{arrange}}
+\addcontentsline{toc}{paragraph}{3. Arrange}
+
+The \texttt{arrange()} function sorts data based on one or more variables. It is an essential operation for organizing your data for better readability or analysis.
+
+\textbf{Example 1}: Arrange movies by IMDb ratings in descending order.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{arranged\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(imdb\_rating))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Example 2}: Arrange movies by year and then by budget.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{arranged\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(year, budget)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{mutate}{%
+\paragraph*{4. Mutate}\label{mutate}}
+\addcontentsline{toc}{paragraph}{4. Mutate}
+
+The \texttt{mutate()} function is used to create or modify variables. It can be employed to calculate new variables based on existing ones, or for transformations necessary for model building or data visualization.
+
+\textbf{Example 1}: Calculate the earnings by subtracting the budget from the domestic gross.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mutated\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{earning =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{, }\StringTok{""}\NormalTok{, domgross)) }\SpecialCharTok{{-}}\NormalTok{ budget)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: There was 1 warning in `mutate()`.
+## i In argument: `earning = as.numeric(gsub(",", "", domgross)) - budget`.
+## Caused by warning:
+## ! NAs introduced by coercion
+\end{verbatim}
+
+\textbf{Example 2}: Create a Boolean variable indicating whether the movie has high IMDb ratings (\textgreater8).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mutated\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{is\_high\_rating =} \FunctionTok{ifelse}\NormalTok{(imdb\_rating }\SpecialCharTok{\textgreater{}} \DecValTok{8}\NormalTok{, }\ConstantTok{TRUE}\NormalTok{, }\ConstantTok{FALSE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{summarise}{%
+\paragraph*{5. Summarise}\label{summarise}}
+\addcontentsline{toc}{paragraph}{5. Summarise}
+
+The \texttt{summarise()} function allows for the creation of summary statistics from your data. It's often combined with \texttt{group\_by()} for aggregated summaries.
+
+\textbf{Example 1}: Calculate the mean IMDb rating for each decade.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{summarised\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(decade\_code) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{mean\_rating =} \FunctionTok{mean}\NormalTok{(imdb\_rating, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Example 2}: Count the number of movies that pass and fail the Bechdel test.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{summarised\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(binary) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{count =} \FunctionTok{n}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{group_by}{%
+\paragraph*{6. Group\_by}\label{group_by}}
+\addcontentsline{toc}{paragraph}{6. Group\_by}
+
+The \texttt{group\_by()} function facilitates operations within specific subsets or groups in the data. This function is useful for analyzing data at multiple levels.
+
+\textbf{Example 1}: Group by decade.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{grouped\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(decade\_code)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Example 2}: Group by the outcome of the Bechdel test and decade.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{grouped\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(binary, decade\_code)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{rename}{%
+\paragraph*{7. Rename}\label{rename}}
+\addcontentsline{toc}{paragraph}{7. Rename}
+
+The \texttt{rename()} function changes the names of variables, making them more understandable or suitable for downstream tasks like visualization.
+
+\textbf{Example 1}: Rename \texttt{intgross} to \texttt{International\_Gross}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{renamed\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{International\_Gross =}\NormalTok{ intgross)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Example 2}: Rename \texttt{domgross} to \texttt{Domestic\_Gross}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{renamed\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{rename}\NormalTok{(}\AttributeTok{Domestic\_Gross =}\NormalTok{ domgross)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{transmute}{%
+\paragraph*{8. Transmute}\label{transmute}}
+\addcontentsline{toc}{paragraph}{8. Transmute}
+
+The \texttt{transmute()} function, a specialized variant of \texttt{mutate()}, lets you create new variables while dropping all other variables.
+
+\textbf{Example 1}: Create a dataset with only the title and a new variable ROI (Return on Investment).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{transmuted\_movies1 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{transmute}\NormalTok{(title, }\AttributeTok{ROI =} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{, }\StringTok{""}\NormalTok{, domgross)) }\SpecialCharTok{/}\NormalTok{ budget)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: There was 1 warning in `transmute()`.
+## i In argument: `ROI = as.numeric(gsub(",", "", domgross))/budget`.
+## Caused by warning:
+## ! NAs introduced by coercion
+\end{verbatim}
+
+\textbf{Example 2}: Create a dataset with only the title and a Boolean variable indicating high IMDb rating.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{transmuted\_movies2 }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{transmute}\NormalTok{(title, }\AttributeTok{is\_high\_rating =} \FunctionTok{ifelse}\NormalTok{(imdb\_rating }\SpecialCharTok{\textgreater{}} \DecValTok{8}\NormalTok{, }\ConstantTok{TRUE}\NormalTok{, }\ConstantTok{FALSE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+Each of these \texttt{dplyr} functions contributes to a robust data wrangling toolbox. The power of \texttt{dplyr} is most evident when these functions are combined to carry out complex data manipulation tasks efficiently.
 
 \hypertarget{outliers-and-normalization}{%
 \subsection*{Outliers and Normalization}\label{outliers-and-normalization}}
@@ -5752,7 +5981,7 @@ Outliers are data points that are significantly different from most of the other
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-53-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-67-1.pdf}
 
 \begin{itemize}
 \tightlist
@@ -5796,37 +6025,6 @@ Data normalization is crucial when variables have different scales, as it can bi
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{references-2}{%
-\section{References}\label{references-2}}
-
-\begin{itemize}
-\tightlist
-\item
-  Little, R. J., \& Rubin, D. B. (2002). Statistical analysis with missing data. John Wiley \& Sons.
-\item
-  Rubin, D. B. (1987). Multiple imputation for nonresponse in surveys. John Wiley \& Sons.
-\item
-  Schafer, J. L., \& Graham, J. W. (2002). Missing data: our view of the state of the art. Psychological methods, 7(2), 147-177.
-\item
-  Tukey, J. W. (1977). Exploratory data analysis. Addison-Wesley.
-\item
-  Fink, A. (2013). How to conduct surveys: A step-by-step guide. Sage Publications.
-\item
-  Johnston, L. (2017). Secondary data analysis: A method of which the time has come. Qualitative and Quantitative Methods in Libraries, 3(3), 619-626.
-\item
-  Marres, N., \& Weltevrede, E. (2013). Scraping the Social? Issues in live social research. Journal of Cultural Economy, 6(3), 313-335.
-\item
-  Boyles, J. L. (2013). 100 Years of Data. Computer, 46(7), 22-23.
-\item
-  Silverman, D. (2016). Qualitative research. Sage.
-\item
-  Neuendorf, K. A. (2016). The content analysis guidebook. Sage.
-\item
-  Wrench, J. S., Thomas-Maddox, C., Richmond, V. P., \& McCroskey, J. C. (2008). Quantitative research methods for communication: A hands-on approach. Oxford University Press.
-\item
-  Wickham, H., \& Grolemund, G. (2017). R for data science: Import, tidy, transform, visualize, and model data. O'Reilly Media.
-\end{itemize}
-
 \hypertarget{visualizations}{%
 \chapter{Visualizations}\label{visualizations}}
 
@@ -5834,32 +6032,38 @@ Data normalization is crucial when variables have different scales, as it can bi
 \section{Introduction}\label{introduction-6}}
 
 \hypertarget{the-imperative-of-visual-representations-in-research}{%
-\subsection{The Imperative of Visual Representations in Research}\label{the-imperative-of-visual-representations-in-research}}
+\subsection*{The Imperative of Visual Representations in Research}\label{the-imperative-of-visual-representations-in-research}}
+\addcontentsline{toc}{subsection}{The Imperative of Visual Representations in Research}
 
 In the contemporary landscape of academic and applied research, visual representations have risen to prominence as indispensable components of scholarly communication. Visual aids such as tables, graphs, and charts play a critical role in the dissemination of research findings, serving as a potent mechanism for encapsulating complex datasets, theories, and relationships in an accessible manner (Tufte, 2001). In fact, well-designed visualizations can make a marked difference in how research is consumed, interpreted, and critiqued.
 
 \hypertarget{facilitating-cognitive-processing}{%
-\subsubsection{Facilitating Cognitive Processing}\label{facilitating-cognitive-processing}}
+\subsubsection*{Facilitating Cognitive Processing}\label{facilitating-cognitive-processing}}
+\addcontentsline{toc}{subsubsection}{Facilitating Cognitive Processing}
 
 Humans are inherently visual creatures. A considerable proportion of the brain is devoted to visual processing, making visual cues one of the most effective means of information transmission (Ware, 2012). When integrated into research papers, visualizations capitalize on this cognitive predisposition, facilitating quicker comprehension and more robust retention of the material presented. This is particularly pertinent in fields like Communication and Media Research Methods, where data are often multifaceted and conclusions nuanced.
 
 \hypertarget{enhancing-analytical-rigor}{%
-\subsubsection{Enhancing Analytical Rigor}\label{enhancing-analytical-rigor}}
+\subsubsection*{Enhancing Analytical Rigor}\label{enhancing-analytical-rigor}}
+\addcontentsline{toc}{subsubsection}{Enhancing Analytical Rigor}
 
 Visual representations also contribute to the analytical rigor of research endeavors. For instance, a well-plotted graph can illuminate trends and anomalies that may remain obfuscated in raw, numerical data (Cairo, 2016). As such, visualizations can serve as both a diagnostic tool for the researcher and an evidentiary asset for the reader, substantiating claims and underpinning arguments.
 
 \hypertarget{complementing-textual-explanations-for-a-holistic-understanding}{%
-\subsection{Complementing Textual Explanations for a Holistic Understanding}\label{complementing-textual-explanations-for-a-holistic-understanding}}
+\subsection*{Complementing Textual Explanations for a Holistic Understanding}\label{complementing-textual-explanations-for-a-holistic-understanding}}
+\addcontentsline{toc}{subsection}{Complementing Textual Explanations for a Holistic Understanding}
 
 While the textual component of a research paper provides the requisite detail and contextual underpinning, it may fall short in offering the immediacy and clarity that visual aids can deliver.
 
 \hypertarget{symbiosis-of-text-and-visuals}{%
-\subsubsection{Symbiosis of Text and Visuals}\label{symbiosis-of-text-and-visuals}}
+\subsubsection*{Symbiosis of Text and Visuals}\label{symbiosis-of-text-and-visuals}}
+\addcontentsline{toc}{subsubsection}{Symbiosis of Text and Visuals}
 
 A synergetic relationship between text and visuals often proves to be the most effective approach for conveying a multi-layered research narrative. Textual explanations can delve into the intricacies, limitations, and theoretical frameworks that underlie the research, while accompanying visual aids provide an immediate, intuitive grasp of key points, trends, and implications (Kelleher \& Wagener, 2011).
 
 \hypertarget{accessibility-and-engagement}{%
-\subsubsection{Accessibility and Engagement}\label{accessibility-and-engagement}}
+\subsubsection*{Accessibility and Engagement}\label{accessibility-and-engagement}}
+\addcontentsline{toc}{subsubsection}{Accessibility and Engagement}
 
 Furthermore, well-crafted visualizations make scholarly work more accessible to a broader audience, including those who may lack specialized training in the subject area. They can break down barriers of jargon and complexity, transforming abstract concepts into tangible insights (Börner, 2015). In an educational context, this dual modality of presentation---textual and visual---appeals to varied learning styles, fostering greater student engagement and comprehension.
 
@@ -5869,23 +6073,28 @@ In summary, the role of visual representations in research is not merely supplem
 \section{Tables}\label{tables}}
 
 \hypertarget{importance-of-tables}{%
-\subsection{Importance of Tables}\label{importance-of-tables}}
+\subsection*{Importance of Tables}\label{importance-of-tables}}
+\addcontentsline{toc}{subsection}{Importance of Tables}
 
 \hypertarget{concise-representation-of-numerical-data}{%
-\subsubsection{Concise Representation of Numerical Data}\label{concise-representation-of-numerical-data}}
+\subsubsection*{Concise Representation of Numerical Data}\label{concise-representation-of-numerical-data}}
+\addcontentsline{toc}{subsubsection}{Concise Representation of Numerical Data}
 
 Tables stand as one of the most efficient means for the organized presentation of numerical data. By arranging data in rows and columns, tables offer a spatial framework that enables quick scanning and interpretation. This is particularly advantageous in research contexts where large datasets are prevalent, as tables condense this information into a digestible format. Unlike other types of visual aids like graphs and charts, tables can preserve the exact numerical values, which can be crucial for statistical analysis and for the validation of research findings (Zacks \& Tversky, 1999).
 
 \hypertarget{effectively-show-relationships-trends-and-comparisons}{%
-\subsubsection{Effectively Show Relationships, Trends, and Comparisons}\label{effectively-show-relationships-trends-and-comparisons}}
+\subsubsection*{Effectively Show Relationships, Trends, and Comparisons}\label{effectively-show-relationships-trends-and-comparisons}}
+\addcontentsline{toc}{subsubsection}{Effectively Show Relationships, Trends, and Comparisons}
 
 One of the salient strengths of tables lies in their capacity to elucidate relationships, trends, and comparisons across variables. When well-designed, a table can showcase both independent and dependent variables in a manner that facilitates cross-referencing, potentially revealing correlations or trends that warrant further investigation. Moreover, tables can succinctly facilitate comparisons between sub-groups, time periods, or different conditions, thereby enriching the interpretive depth of a research project (Few, 2012).
 
 \hypertarget{guidelines-for-creating-tables}{%
-\subsection{Guidelines for Creating Tables}\label{guidelines-for-creating-tables}}
+\subsection*{Guidelines for Creating Tables}\label{guidelines-for-creating-tables}}
+\addcontentsline{toc}{subsection}{Guidelines for Creating Tables}
 
 \hypertarget{structure-and-layout}{%
-\subsubsection{Structure and Layout}\label{structure-and-layout}}
+\subsubsection*{Structure and Layout}\label{structure-and-layout}}
+\addcontentsline{toc}{subsubsection}{Structure and Layout}
 
 The utility of a table is directly contingent upon its design and layout. Poorly structured tables can obfuscate rather than clarify, hindering the reader's comprehension. Hence, attention to the following design elements is crucial:
 
@@ -5900,7 +6109,8 @@ The utility of a table is directly contingent upon its design and layout. Poorly
 \end{itemize}
 
 \hypertarget{inclusion-of-title-column-headings-and-footnotes}{%
-\subsubsection{Inclusion of Title, Column Headings, and Footnotes}\label{inclusion-of-title-column-headings-and-footnotes}}
+\subsubsection*{Inclusion of Title, Column Headings, and Footnotes}\label{inclusion-of-title-column-headings-and-footnotes}}
+\addcontentsline{toc}{subsubsection}{Inclusion of Title, Column Headings, and Footnotes}
 
 \begin{itemize}
 \item
@@ -5911,94 +6121,42 @@ The utility of a table is directly contingent upon its design and layout. Poorly
   \textbf{Footnotes}: Utilized for explaining abbreviations, symbols, or methodological points that require clarification, footnotes should be positioned directly below the table and are typically denoted by asterisks or numerical superscripts (American Psychological Association {[}APA{]}, 2019).
 \end{itemize}
 
-Following these guidelines ensures that tables not only serve as repositories of numerical data but also as analytical tools that can reveal new insights and substantiate research claims.
-
-\hypertarget{references-3}{%
-\section{References}\label{references-3}}
-
-\begin{itemize}
-\tightlist
-\item
-  American Psychological Association. (2019). Publication Manual of the American Psychological Association (7th ed.). American Psychological Association.
-\item
-  Few, S. (2012). Show me the numbers: Designing tables and graphs to enlighten. Analytics Press.
-\item
-  Kosslyn, S. M. (2006). Graph design for the eye and mind. Oxford University Press.
-\item
-  Zacks, J., \& Tversky, B. (1999). Bars and lines: A study of graphic communication. Memory \& Cognition, 27(6), 1073-1079.
-\end{itemize}
-
-Through the judicious use of tables, researchers can effectively condense large datasets into a structured format that facilitates comprehensive understanding, allowing for relationships and trends to be easily observed. The quality of these tables, however, is greatly improved when researchers adhere to established design principles, thereby making the information accessible and interpretable.\#\# Tables
-
-\hypertarget{importance-of-tables-1}{%
-\subsection{Importance of Tables}\label{importance-of-tables-1}}
-
-\hypertarget{concise-representation-of-numerical-data-1}{%
-\subsubsection{Concise Representation of Numerical Data}\label{concise-representation-of-numerical-data-1}}
-
-Tables stand as one of the most efficient means for the organized presentation of numerical data. By arranging data in rows and columns, tables offer a spatial framework that enables quick scanning and interpretation. This is particularly advantageous in research contexts where large datasets are prevalent, as tables condense this information into a digestible format. Unlike other types of visual aids like graphs and charts, tables can preserve the exact numerical values, which can be crucial for statistical analysis and for the validation of research findings (Zacks \& Tversky, 1999).
-
-\hypertarget{effectively-show-relationships-trends-and-comparisons-1}{%
-\subsubsection{Effectively Show Relationships, Trends, and Comparisons}\label{effectively-show-relationships-trends-and-comparisons-1}}
-
-One of the salient strengths of tables lies in their capacity to elucidate relationships, trends, and comparisons across variables. When well-designed, a table can showcase both independent and dependent variables in a manner that facilitates cross-referencing, potentially revealing correlations or trends that warrant further investigation. Moreover, tables can succinctly facilitate comparisons between sub-groups, time periods, or different conditions, thereby enriching the interpretive depth of a research project (Few, 2012).
-
-\hypertarget{guidelines-for-creating-tables-1}{%
-\subsection{Guidelines for Creating Tables}\label{guidelines-for-creating-tables-1}}
-
-\hypertarget{structure-and-layout-1}{%
-\subsubsection{Structure and Layout}\label{structure-and-layout-1}}
-
-The utility of a table is directly contingent upon its design and layout. Poorly structured tables can obfuscate rather than clarify, hindering the reader's comprehension. Hence, attention to the following design elements is crucial:
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Alignment}: Numeric data should be right-aligned for easier comparison, while text is generally left-aligned.
-\item
-  \textbf{Row and Column Spacing}: Adequate spacing between rows and columns improves readability.
-\item
-  \textbf{Gridlines}: Use subtle gridlines or zebra-striping to delineate rows or columns without overwhelming the visual field (Kosslyn, 2006).
-\end{itemize}
-
-\hypertarget{inclusion-of-title-column-headings-and-footnotes-1}{%
-\subsubsection{Inclusion of Title, Column Headings, and Footnotes}\label{inclusion-of-title-column-headings-and-footnotes-1}}
-
-\begin{itemize}
-\item
-  \textbf{Title}: Every table should have a descriptive title that encapsulates the content and purpose of the table. The title should be placed above the table and be clear and concise.
-\item
-  \textbf{Column Headings}: These serve as descriptors for the data contained in the respective columns and should be as short as possible while still being descriptive. Headings often contain units of measurement and should be clearly differentiated from the data rows.
-\item
-  \textbf{Footnotes}: Utilized for explaining abbreviations, symbols, or methodological points that require clarification, footnotes should be positioned directly below the table and are typically denoted by asterisks or numerical superscripts (American Psychological Association {[}APA{]}, 2019).
-\end{itemize}
+\includegraphics[width=1\textwidth,height=\textheight]{images/table.png}
 
 \hypertarget{illustrations}{%
 \section{Illustrations}\label{illustrations}}
 
 \hypertarget{types-of-illustrations}{%
-\subsection{Types of Illustrations}\label{types-of-illustrations}}
+\subsection*{Types of Illustrations}\label{types-of-illustrations}}
+\addcontentsline{toc}{subsection}{Types of Illustrations}
 
 \hypertarget{diagrams}{%
-\subsubsection{Diagrams}\label{diagrams}}
+\subsubsection*{Diagrams}\label{diagrams}}
+\addcontentsline{toc}{subsubsection}{Diagrams}
 
-Diagrams serve as visual abstractions or simplifications of complex systems, processes, or objects. They are highly useful in research to delineate component parts, explicate functional relationships, or visualize abstract theories. For example, a Venn diagram may be employed to depict the intersections among different sets or groups, effectively elucidating how they relate to one another (Tufte, 2001).
+Diagrams serve as visual abstractions or simplifications of complex systems, processes, or objects. They are highly useful in research to delineate component parts, explicate functional relationships, or visualize abstract theories. For example, a Venn diagram may be employed to depict the intersections among different sets or groups, effectively elucidating how they relate to one another.
 
 \hypertarget{flowcharts}{%
-\subsubsection{Flowcharts}\label{flowcharts}}
+\subsubsection*{Flowcharts}\label{flowcharts}}
+\addcontentsline{toc}{subsubsection}{Flowcharts}
 
-Flowcharts are specialized diagrams that visually represent a sequence of steps, generally using geometrical shapes connected by lines and arrows to indicate flow direction. They are often employed to describe workflows, algorithms, or processes, allowing for easier understanding and problem-solving (Rogowitz \& Treinish, 1998). In the context of communication and media research, a flowchart could be used to outline the steps taken in a content analysis procedure, for instance.
+Flowcharts are specialized diagrams that visually represent a sequence of steps, generally using geometrical shapes connected by lines and arrows to indicate flow direction. They are often employed to describe workflows, algorithms, or processes, allowing for easier understanding and problem-solving. In the context of communication and media research, a flowchart could be used to outline the steps taken in a content analysis procedure, for instance.
+
+\includegraphics{images/model.png}
 
 \hypertarget{organizational-models}{%
-\subsubsection{Organizational Models}\label{organizational-models}}
+\subsubsection*{Organizational Models}\label{organizational-models}}
+\addcontentsline{toc}{subsubsection}{Organizational Models}
 
-Organizational models provide a structural overview of a system, often portraying hierarchies or relational networks. Such models can be useful in a range of fields, from sociology where they might depict social structures, to business research where they can illustrate organizational hierarchies (Kosslyn, 2006).
+Organizational models provide a structural overview of a system, often portraying hierarchies or relational networks. Such models can be useful in a range of fields, from sociology where they might depict social structures, to business research where they can illustrate organizational hierarchies.
 
 \hypertarget{using-illustrations-effectively}{%
-\subsection{Using Illustrations Effectively}\label{using-illustrations-effectively}}
+\subsection*{Using Illustrations Effectively}\label{using-illustrations-effectively}}
+\addcontentsline{toc}{subsection}{Using Illustrations Effectively}
 
 \hypertarget{when-to-employ-illustrations}{%
-\subsubsection{When to Employ Illustrations}\label{when-to-employ-illustrations}}
+\subsubsection*{When to Employ Illustrations}\label{when-to-employ-illustrations}}
+\addcontentsline{toc}{subsubsection}{When to Employ Illustrations}
 
 The judicious use of illustrations hinges on their appropriateness to the research context. They are most effective when they serve to:
 
@@ -6015,7 +6173,8 @@ The judicious use of illustrations hinges on their appropriateness to the resear
 While the temptation to include visuals for aesthetic appeal is natural, their primary function should remain informational. Overuse or misuse can divert attention and compromise the integrity of the research (Tufte, 1990).
 
 \hypertarget{how-to-employ-illustrations-for-maximum-impact}{%
-\subsubsection{How to Employ Illustrations for Maximum Impact}\label{how-to-employ-illustrations-for-maximum-impact}}
+\subsubsection*{How to Employ Illustrations for Maximum Impact}\label{how-to-employ-illustrations-for-maximum-impact}}
+\addcontentsline{toc}{subsubsection}{How to Employ Illustrations for Maximum Impact}
 
 \begin{itemize}
 \item
@@ -6034,35 +6193,46 @@ While the temptation to include visuals for aesthetic appeal is natural, their p
 \section{Images}\label{images}}
 
 \hypertarget{types-of-images}{%
-\subsection{Types of Images}\label{types-of-images}}
+\subsection*{Types of Images}\label{types-of-images}}
+\addcontentsline{toc}{subsection}{Types of Images}
 
 \hypertarget{photographs}{%
-\subsubsection{Photographs}\label{photographs}}
+\subsubsection*{Photographs}\label{photographs}}
+\addcontentsline{toc}{subsubsection}{Photographs}
 
-Photographs can be a powerful tool in research, serving as both primary and secondary data. For example, in social research, photographs can help capture societal trends, behaviors, or physical spaces (Rose, 2016). In media and communication studies, images from media platforms may be used to support qualitative analyses such as content analysis or semiotics.
+Photographs can be a powerful tool in research, serving as both primary and secondary data. For example, in social research, photographs can help capture societal trends, behaviors, or physical spaces. In media and communication studies, images from media platforms may be used to support qualitative analyses such as content analysis or semiotics.
+
+\includegraphics[width=1\textwidth,height=\textheight]{images/itmejp.jpg}
+
+\emph{Note}. This is an example of an image you can use while trying to describe a streamer setup when writing about Twitch streamer culture or technology.
 
 \hypertarget{screen-captures}{%
-\subsubsection{Screen Captures}\label{screen-captures}}
+\subsubsection*{Screen Captures}\label{screen-captures}}
+\addcontentsline{toc}{subsubsection}{Screen Captures}
 
 In the digital age, screen captures have become increasingly relevant, especially in fields that study online behaviors, interfaces, and digital content. Researchers might use screen captures to record instances of social media interactions, display website features, or illustrate software functionalities (Mann \& Stewart, 2000).
 
 \hypertarget{ethical-considerations-8}{%
-\subsection{Ethical Considerations}\label{ethical-considerations-8}}
+\subsection*{Ethical Considerations}\label{ethical-considerations-8}}
+\addcontentsline{toc}{subsection}{Ethical Considerations}
 
 \hypertarget{copyright-issues}{%
-\subsubsection{Copyright Issues}\label{copyright-issues}}
+\subsubsection*{Copyright Issues}\label{copyright-issues}}
+\addcontentsline{toc}{subsubsection}{Copyright Issues}
 
 One of the pivotal ethical considerations when using images in research is adhering to copyright laws. Copyright infringement is a serious ethical and legal violation. Researchers must either use images that are in the public domain or for which they have obtained permission from the copyright holder (Aufderheide \& Jaszi, 2011). An alternative is to use images under `fair use' provisions, which can be complex and require thorough understanding.
 
 \hypertarget{fair-use-in-research-papers}{%
-\subsubsection{Fair Use in Research Papers}\label{fair-use-in-research-papers}}
+\subsubsection*{Fair Use in Research Papers}\label{fair-use-in-research-papers}}
+\addcontentsline{toc}{subsubsection}{Fair Use in Research Papers}
 
 Fair use is a doctrine that permits limited use of copyrighted material without permission for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. However, fair use is a complex legal doctrine and is determined on a case-by-case basis, considering factors like the purpose of use, the nature of the copyrighted work, the amount used in relation to the copyrighted work as a whole, and the effect of the use on the market value of the copyrighted work (United States Copyright Office, 2010).
 
 The `fair use' doctrine can sometimes be invoked in academic research under specific conditions, but it's advisable to consult legal experts when in doubt. Universities often have resources or legal departments that can offer advice on this (Butler, 2014).
 
 \hypertarget{ethical-use-beyond-copyright}{%
-\subsubsection{Ethical Use Beyond Copyright}\label{ethical-use-beyond-copyright}}
+\subsubsection*{Ethical Use Beyond Copyright}\label{ethical-use-beyond-copyright}}
+\addcontentsline{toc}{subsubsection}{Ethical Use Beyond Copyright}
 
 Apart from legal obligations, researchers must consider the potential ethical implications of using images. For instance, images featuring individuals may require informed consent, especially if those images could potentially identify the individuals involved or put them at risk in any way (Clark, 2011).
 
@@ -6070,167 +6240,667 @@ Apart from legal obligations, researchers must consider the potential ethical im
 \section{Plots}\label{plots-1}}
 
 \hypertarget{introduction-to-ggplot2}{%
-\subsection{Introduction to ggplot2}\label{introduction-to-ggplot2}}
+\subsection*{Introduction to ggplot2}\label{introduction-to-ggplot2}}
+\addcontentsline{toc}{subsection}{Introduction to ggplot2}
 
 \texttt{ggplot2} is a data visualization package for the R programming language. Built upon the concepts of the ``Grammar of Graphics,'' this package allows for the creation of complex and customizable plots in an intuitive manner (Wickham, 2016). \texttt{ggplot2} provides a set of ``geoms'' (geometric objects) that represent different types of data points, lines, or areas in a plot. By layering these geoms, users can create a wide range of visualizations, including but not limited to histograms, scatter plots, and line charts.
 
-\hypertarget{popular-plots-using-ggplot2-and-the-spotify_songs-dataset}{%
-\subsection{\texorpdfstring{Popular Plots Using \texttt{ggplot2} and the \texttt{spotify\_songs} Dataset}{Popular Plots Using ggplot2 and the spotify\_songs Dataset}}\label{popular-plots-using-ggplot2-and-the-spotify_songs-dataset}}
-
-\hypertarget{histogram}{%
-\subsubsection{Histogram}\label{histogram}}
-
-A histogram is particularly useful for visualizing the frequency distribution of a single continuous variable. It can help in understanding the underlying skewness, kurtosis, peak, and spread of the data.
+\hypertarget{load-libraries}{%
+\subsection*{Load libraries}\label{load-libraries}}
+\addcontentsline{toc}{subsection}{Load libraries}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-  \FunctionTok{library}\NormalTok{(ggplot2)}
-  \FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
-    \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{binwidth=}\DecValTok{5}\NormalTok{, }\AttributeTok{fill=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.7}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Distribution of Track Popularity"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{xlab}\NormalTok{(}\StringTok{"Track Popularity"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{ylab}\NormalTok{(}\StringTok{"Frequency"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-57-1.pdf}
-
-By using this histogram code snippet, one can visualize the distribution of \texttt{track\_popularity} within the \texttt{spotify\_songs} dataset, gaining insights into how often songs with various popularity levels appear in the dataset.
-
-\hypertarget{scatter-plot}{%
-\subsubsection{Scatter Plot}\label{scatter-plot}}
-
-Scatter plots are invaluable for depicting the relationship between two continuous variables. They can suggest various kinds of correlations between variables with a certain confidence interval.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-  \FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{duration\_ms, }\AttributeTok{y=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
-    \FunctionTok{geom\_point}\NormalTok{() }\SpecialCharTok{+}
-    \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Track Duration vs. Popularity"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{xlab}\NormalTok{(}\StringTok{"Duration (ms)"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{ylab}\NormalTok{(}\StringTok{"Popularity"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-58-1.pdf}
-
-Using this scatter plot, researchers could investigate whether there's a noticeable relationship between a song's duration (\texttt{duration\_ms}) and its popularity (\texttt{track\_popularity}).
-
-\hypertarget{box-plot}{%
-\subsubsection{Box Plot}\label{box-plot}}
-
-Box plots, or box-and-whisker plots, are effective for summarizing the central tendency and spread of a data distribution, as well as for identifying outliers.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-  \FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{playlist\_genre, }\AttributeTok{y=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
-    \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
-    \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Track Popularity by Playlist Genre"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{xlab}\NormalTok{(}\StringTok{"Playlist Genre"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{ylab}\NormalTok{(}\StringTok{"Popularity"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-59-1.pdf}
-
-With this box plot, one can compare the distribution of \texttt{track\_popularity} across different \texttt{playlist\_genre} categories. It provides an effective way to see the median, quartiles, and potential outliers in track popularity for each genre.
-
-\hypertarget{line-chart}{%
-\subsubsection{Line Chart}\label{line-chart}}
-
-Certainly. If the \texttt{track\_album\_release\_date} variable is in the ``yyyy-mm-dd'' format but not treated as a date object in R, it is crucial to convert it into a Date type for accurate line chart plotting.
-
-Here's how you could modify the Line Chart section with the appropriate conversion:
-
-\hypertarget{line-chart-1}{%
-\subsubsection{Line Chart}\label{line-chart-1}}
-
-Line charts are invaluable for displaying trends or changes in data across time. They are most effective when you have a logical sequence of time periods.
-
-Before plotting, you may need to convert the \texttt{track\_album\_release\_date} variable into a Date type:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{  spotify\_songs}\SpecialCharTok{$}\NormalTok{track\_album\_release\_date }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{(spotify\_songs}\SpecialCharTok{$}\NormalTok{track\_album\_release\_date, }\AttributeTok{format=}\StringTok{"\%Y{-}\%m{-}\%d"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-Once the date conversion is done, you can proceed with the line chart plotting:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-  \FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{track\_album\_release\_date, }\AttributeTok{y=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
-    \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
-\CommentTok{\#    geom\_line(alpha=0.25) +}
-\CommentTok{\#    geom\_point(alpha=0.10) +}
-    \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Popularity Over Time Based on Album Release Date"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{xlab}\NormalTok{(}\StringTok{"Album Release Date"}\NormalTok{) }\SpecialCharTok{+}
-    \FunctionTok{ylab}\NormalTok{(}\StringTok{"Popularity"}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(ggridges)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: Removed 1886 rows containing missing values (`geom_line()`).
+## Warning: package 'ggridges' was built under R version 4.3.1
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-61-1.pdf}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(data.table)}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(ggthemes)}
+\end{Highlighting}
+\end{Shaded}
 
-In this updated line chart, we use \texttt{track\_album\_release\_date} after converting it to a Date type. The graph will depict how track popularity (\texttt{track\_popularity}) has evolved over time based on their album's release date (\texttt{track\_album\_release\_date}).
+\begin{verbatim}
+## Warning: package 'ggthemes' was built under R version 4.3.1
+\end{verbatim}
 
-By making these modifications, researchers can more accurately explore the relationship between a song's album release date and its popularity, further strengthening the integrity and interpretability of their findings.
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{options}\NormalTok{(}\AttributeTok{scipen=}\DecValTok{999}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-\hypertarget{references-4}{%
-\section{References}\label{references-4}}
+\hypertarget{load-data}{%
+\subsection*{Load data}\label{load-data}}
+\addcontentsline{toc}{subsection}{Load data}
 
-\begin{itemize}
-\tightlist
-\item
-  Wickham, H. (2016). ggplot2: Elegant graphics for data analysis. Springer.
-\item
-  Aufderheide, P., \& Jaszi, P. (2011). Reclaiming fair use: How to put balance back in copyright. University of Chicago Press.
-\item
-  Butler, B. (2014). Copyright for academic librarians and professionals. American Library Association.
-\item
-  Clark, A. (2011). Visual ethics in a contemporary landscape. In E. Margolis \& L. Pauwels (Eds.), The SAGE handbook of visual research methods (pp.~167-183). SAGE Publications.
-\item
-  Mann, C., \& Stewart, F. (2000). Internet communication and qualitative research: A handbook for researching online. SAGE Publications.
-\item
-  Rose, G. (2016). Visual methodologies: An introduction to researching with visual materials (4th ed.). SAGE Publications.
-\item
-  United States Copyright Office. (2010). Copyright basics. Retrieved from \url{https://www.copyright.gov/circs/circ01.pdf}
-\item
-  Carney, R. N., \& Levin, J. R. (2002). Pictorial illustrations still improve students' learning from text. Educational Psychology Review, 14(1), 5-26.
-\item
-  Few, S. (2009). Now you see it: Simple visualization techniques for quantitative analysis. Analytics Press.
-\item
-  Kosslyn, S. M. (2006). Graph design for the eye and mind. Oxford University Press.
-\item
-  Rogowitz, B. E., \& Treinish, L. A. (1998). Data visualization: The end of the rainbow. IEEE Spectrum, 35(12), 52-59.
-\item
-  Tufte, E. R. (1990). Envisioning information. Graphics Press.
-\item
-  Tufte, E. R. (2001). The visual display of quantitative information (2nd ed.). Graphics Press.
-\item
-  Ware, C. (2004). Information visualization: Perception for design (2nd ed.). Morgan Kaufmann.
-\item
-  American Psychological Association. (2019). Publication Manual of the American Psychological Association (7th ed.). American Psychological Association.
-\item
-  Few, S. (2012). Show me the numbers: Designing tables and graphs to enlighten. Analytics Press.
-\item
-  Kosslyn, S. M. (2006). Graph design for the eye and mind. Oxford University Press.
-\item
-  Zacks, J., \& Tversky, B. (1999). Bars and lines: A study of graphic communication. Memory \& Cognition, 27(6), 1073-1079.
-\item
-  Börner, K. (2015). Atlas of knowledge: Anyone can map. MIT Press.
-\item
-  Cairo, A. (2016). The truthful art: Data, charts, and maps for communication. New Riders.
-\item
-  Kelleher, C., \& Wagener, T. (2011). Ten guidelines for effective data visualization in scientific publications. Environmental Modelling \& Software, 26(6), 822-827.
-\item
-  Tufte, E. R. (2001). The visual display of quantitative information. Graphics Press.
-\item
-  Ware, C. (2012). Information visualization: Perception for design. Elsevier.
-\end{itemize}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{spotify\_songs }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020{-}01{-}21/spotify\_songs.csv"}\NormalTok{)}
+
+\NormalTok{movies }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}03{-}09/movies.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{scatter-plot}{%
+\subsection*{Scatter Plot}\label{scatter-plot}}
+\addcontentsline{toc}{subsection}{Scatter Plot}
+
+Scatter plots are essential for investigating the relationships between two numerical variables. For example, the movies data set could use a scatter plot to show the relationship between budgets and domestic gross earnings. Each point on the plot represents an observation, with its position determined by its values for the two variables being compared.
+
+This type of plot is invaluable for identifying correlations, clusters, and outliers in bivariate data. While scatter plots are fairly straightforward, they are incredibly flexible and can be adapted to show additional variables through the use of color, size, or shape. Advanced versions, such as scatter plot matrices or 3D scatter plots, can even incorporate multiple variables for more complex analyses.
+
+\hypertarget{spotify_songs-dataset}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{tempo, }\AttributeTok{y=}\NormalTok{energy)) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-73-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{tempo, }\AttributeTok{y=}\NormalTok{energy, }\AttributeTok{color=}\NormalTok{danceability)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size=}\DecValTok{3}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Scatter Plot of Tempo and Energy"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-73-2.pdf}
+
+\hypertarget{movies-dataset}{%
+\subsubsection*{\texorpdfstring{\texttt{movies} dataset}{movies dataset}}\label{movies-dataset}}
+\addcontentsline{toc}{subsubsection}{\texttt{movies} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(movies, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{year, }\AttributeTok{y=}\NormalTok{metascore)) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Removed 378 rows containing missing values (`geom_point()`).
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-74-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(movies, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{year, }\AttributeTok{y=}\NormalTok{metascore, }\AttributeTok{color=}\NormalTok{budget)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size=}\DecValTok{3}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Scatter Plot of Metascore by Year"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Removed 378 rows containing missing values (`geom_point()`).
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-74-2.pdf}
+
+\hypertarget{line-charts}{%
+\subsection*{Line Charts}\label{line-charts}}
+\addcontentsline{toc}{subsection}{Line Charts}
+
+Line charts serve as a pivotal tool for displaying continuous data points connected by line segments, typically over a period of time. These charts are remarkably effective for observing trends, understanding fluctuations, and identifying patterns in datasets. In scenarios involving time-series data or other continuous metrics, line charts provide a visually clean way to analyze large sets of data. They are highly adaptable, allowing for multiple lines to be displayed simultaneously, thereby facilitating comparison across different categories or time periods. Line charts are not merely confined to showing time-based data; they can be employed effectively to compare different categories as long as there is a logical order to the x-axis (Cleveland, 1985).
+
+One of the advantages of line charts is the clarity they bring to trend analysis. Whether it's assessing stock market performance over several months or comparing annual rainfall statistics, line charts provide an uncluttered view that makes it easier to identify upward or downward trends, periodic cycles, and sudden spikes or drops in data points.
+
+\hypertarget{spotify_songs-dataset-1}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-1}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Convert to Date and remove NAs}
+\NormalTok{spotify\_songs}\SpecialCharTok{$}\NormalTok{track\_album\_release\_date }\OtherTok{\textless{}{-}} \FunctionTok{ymd}\NormalTok{(spotify\_songs}\SpecialCharTok{$}\NormalTok{track\_album\_release\_date)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: 1886 failed to parse.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{spotify\_songs }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{ (playlist\_subgenre }\SpecialCharTok{==} \StringTok{"dance pop"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{year =} \FunctionTok{year}\NormalTok{(track\_album\_release\_date), }\AttributeTok{month =} \FunctionTok{month}\NormalTok{(track\_album\_release\_date)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(year, month) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_danceability =} \FunctionTok{mean}\NormalTok{(danceability, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\FunctionTok{make\_date}\NormalTok{(year, month, }\DecValTok{1}\NormalTok{), }\AttributeTok{y =}\NormalTok{ avg\_danceability)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Average Danceability of Dance Pop Songs over Time"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Album Release Date"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Average Danceability"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'year'. You can override using the
+## `.groups` argument.
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 1 row containing missing values (`geom_line()`).
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-76-1.pdf}
+
+\hypertarget{movies-dataset-1}{%
+\subsubsection*{\texorpdfstring{\texttt{movies} dataset}{movies dataset}}\label{movies-dataset-1}}
+\addcontentsline{toc}{subsubsection}{\texttt{movies} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{movies}\SpecialCharTok{$}\NormalTok{year }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{(}\FunctionTok{ISOdate}\NormalTok{(movies}\SpecialCharTok{$}\NormalTok{year, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+
+\NormalTok{movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(year, binary) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_intgross =} \FunctionTok{mean}\NormalTok{(intgross, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ungroup}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ avg\_intgross, }\AttributeTok{color =}\NormalTok{ binary)) }\SpecialCharTok{+}
+    \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
+    \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Bechdel International Gross Through the Years"}\NormalTok{) }\SpecialCharTok{+}
+    \FunctionTok{xlab}\NormalTok{(}\StringTok{"Movie Release Year"}\NormalTok{) }\SpecialCharTok{+}
+    \FunctionTok{ylab}\NormalTok{(}\StringTok{"International Gross (2013)"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'year'. You can override using the
+## `.groups` argument.
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-77-1.pdf}
+
+\hypertarget{box-plot}{%
+\subsection*{Box Plot}\label{box-plot}}
+\addcontentsline{toc}{subsection}{Box Plot}
+
+Boxplots serve to provide a five-number summary of a dataset: minimum, first quartile (Q1), median, third quartile (Q3), and maximum. They are particularly useful for identifying outliers and understanding the spread and skewness of your data. In the context of the movies data set, a boxplot could be utilized to illustrate how movie budgets have changed over different decades.
+
+Boxplots are less detailed than violin plots or density plots but are exceptionally good for quickly comparing medians and spreads across categories. They are also less susceptible to being skewed by outliers and are straightforward to interpret, making them a staple in exploratory data analysis.
+
+\hypertarget{spotify_songs-dataset-2}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-2}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{playlist\_genre, }\AttributeTok{y=}\NormalTok{loudness)) }\SpecialCharTok{+} \FunctionTok{geom\_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-78-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{playlist\_genre, }\AttributeTok{y=}\NormalTok{loudness)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{(}\AttributeTok{outlier.shape=}\DecValTok{8}\NormalTok{, }\AttributeTok{outlier.size=}\DecValTok{2}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Boxplot of Loudness by Genre"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_tufte}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-78-2.pdf}
+
+\hypertarget{movies-dataset-2}{%
+\subsubsection*{\texorpdfstring{\texttt{movies} dataset}{movies dataset}}\label{movies-dataset-2}}
+\addcontentsline{toc}{subsubsection}{\texttt{movies} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(movies, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{binary, }\AttributeTok{y=}\NormalTok{imdb\_rating)) }\SpecialCharTok{+} \FunctionTok{geom\_boxplot}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Removed 202 rows containing non-finite values (`stat_boxplot()`).
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-79-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(movies, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{binary, }\AttributeTok{y=}\NormalTok{imdb\_rating)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{(}\AttributeTok{outlier.shape=}\DecValTok{8}\NormalTok{, }\AttributeTok{outlier.size=}\DecValTok{2}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Boxplot of IMDB Ratings by Bechedel Test Results"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_fivethirtyeight}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Removed 202 rows containing non-finite values (`stat_boxplot()`).
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-79-2.pdf}
+
+\hypertarget{violin-plot}{%
+\subsection*{Violin Plot}\label{violin-plot}}
+\addcontentsline{toc}{subsection}{Violin Plot}
+
+A violin plot is an excellent choice when the aim is to understand the distribution of a numerical variable across different categories while considering both the median and the data distribution. It essentially combines a boxplot with a kernel density plot. This allows for a nuanced visualization that goes beyond central tendency and variability to include skewness and outliers as well. For instance, the Spotify data set could use a violin plot to show track popularity for various playlist genres. This can reveal if certain genres have a higher range of popularity scores, or if some genres generally possess more popular songs.
+
+The advantage of a violin plot over a boxplot or a simple bar chart is its ability to show the density of the data at different values, which can be crucial for understanding the underlying patterns. A violin plot can be particularly effective when comparing more than two categories, as it can reveal data density and distribution trends that might not be immediately apparent otherwise.
+
+\hypertarget{spotify_songs-dataset-3}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-3}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{playlist\_genre, }\AttributeTok{y=}\NormalTok{track\_popularity)) }\SpecialCharTok{+} \FunctionTok{geom\_violin}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-80-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{playlist\_genre, }\AttributeTok{y=}\NormalTok{track\_popularity)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_violin}\NormalTok{(}\AttributeTok{fill=}\StringTok{"blue"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Distribution of Track Popularity by Genre"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_wsj}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-80-2.pdf}
+
+\hypertarget{bar-plots}{%
+\subsection*{Bar Plots}\label{bar-plots}}
+\addcontentsline{toc}{subsection}{Bar Plots}
+
+Bar plots, also known as bar charts, are a versatile means of displaying data across discrete categories. Each category is represented by a rectangular bar, the length (or height) of which is proportional to the value it represents. These plots can be either horizontal or vertical, depending on the data and the story one wishes to tell. Unlike line charts, which are primarily designed to illustrate trends in continuous data, bar plots excel when the goal is to compare individual data points across categories (Tufte, 2001).
+
+Bar plots can be further customized to fit specific needs. For example, stacked bar charts allow for the distribution of multiple variables to be displayed within each category, offering a more nuanced view of the data. Grouped bar charts, on the other hand, enable comparisons between corresponding categories of different groups. This type of visualization is particularly useful for emphasizing relative sizes, revealing disparities, or displaying proportions among the categories.
+
+\hypertarget{spotify_songs-dataset-4}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-4}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{playlist\_genre)) }\SpecialCharTok{+} \FunctionTok{geom\_bar}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-81-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{playlist\_genre, }\AttributeTok{fill=}\NormalTok{playlist\_genre)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Bar Plot of Number of Tracks by Genre"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-81-2.pdf}
+
+\hypertarget{movies-dataset-3}{%
+\subsubsection*{\texorpdfstring{\texttt{movies} dataset}{movies dataset}}\label{movies-dataset-3}}
+\addcontentsline{toc}{subsubsection}{\texttt{movies} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(movies, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{year)) }\SpecialCharTok{+} \FunctionTok{geom\_bar}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-82-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(movies, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{year, }\AttributeTok{fill=}\NormalTok{year)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Bar Plot of Number of Movies by Year"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_light}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: The following aesthetics were dropped during statistical transformation: fill
+## i This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## i Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-82-2.pdf}
+
+\hypertarget{histogram}{%
+\subsection*{Histogram}\label{histogram}}
+\addcontentsline{toc}{subsection}{Histogram}
+
+Histograms allow for the depiction of the frequency distribution of numerical variables. In a histogram, the data is divided into a set of bins, and the number of data points that fall into each bin is represented by the height of the bar. Using the video games data set, a histogram could visualize the distribution of average player counts, helping to answer questions such as: ``Do most games have a high or low average player count?''
+
+Histograms are particularly useful for getting a quick sense of the distribution of a data set and identifying outliers or trends. However, the interpretive value of a histogram can be highly influenced by the choice of bin size. A poorly chosen bin size may either smooth over or exaggerate features of the data, thereby leading to misinterpretation.
+
+\hypertarget{spotify_songs-dataset-5}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-5}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{energy)) }\SpecialCharTok{+} \FunctionTok{geom\_histogram}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-83-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{energy)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{fill=}\StringTok{"red"}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Histogram of Energy Levels"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_economist}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-83-2.pdf}
+
+\hypertarget{density-plot}{%
+\subsection*{Density Plot}\label{density-plot}}
+\addcontentsline{toc}{subsection}{Density Plot}
+
+A density plot serves to estimate the probability density function of a variable, allowing researchers to better understand its distribution. This plot type uses kernel density estimation to create a smooth curve, making it easier to identify where values are concentrated. One could use a density plot to visualize the distribution of, say, tempo across all tracks in the Spotify data set.
+
+This type of plot is beneficial when you want to identify modes in the data that aren't tied to specific categories. Unlike histograms, which are limited by the chosen bin size, density plots offer a smoother, more continuous view of data distribution. This can be particularly useful when comparing two or more distributions, as it eliminates the need for harmonizing bin sizes and ranges across different histograms.
+
+\hypertarget{spotify_songs-dataset-6}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-6}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{danceability)) }\SpecialCharTok{+} \FunctionTok{geom\_density}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-84-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{danceability, }\AttributeTok{fill=}\NormalTok{playlist\_genre)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_density}\NormalTok{(}\AttributeTok{alpha=}\FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Density of Danceability by Genre"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_stata}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-84-2.pdf}
+
+ing the integrity and interpretability of their findings.
+
+\hypertarget{ridgeline-plot}{%
+\subsection*{Ridgeline Plot}\label{ridgeline-plot}}
+\addcontentsline{toc}{subsection}{Ridgeline Plot}
+
+Ridgeline plots can be considered as a set of vertically aligned density plots, typically used for visualizing changes in distributions across multiple categories. One can use a ridgeline plot to show how the average number of players in video games changes across different months. Each density plot for a month would be a ``ridge,'' allowing for easy comparison across time or other categories.
+
+The strength of a ridgeline plot lies in its ability to facilitate the comparison of multiple density estimates simultaneously. This can be especially valuable when looking to identify shifts or trends in data across categories, seasons, or other groups.
+
+\hypertarget{spotify_songs-dataset-7}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-7}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggridges)}
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ tempo, }\AttributeTok{y =}\NormalTok{ playlist\_genre)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_density\_ridges}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Picking joint bandwidth of 3.66
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-85-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ tempo, }\AttributeTok{y =}\NormalTok{ playlist\_genre, }\AttributeTok{fill =}\NormalTok{ playlist\_genre)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_density\_ridges}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Ridgeline Plot of Tempo by Genre"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_void}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Picking joint bandwidth of 3.66
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-85-2.pdf}
+
+\hypertarget{heatmap}{%
+\subsection*{Heatmap}\label{heatmap}}
+\addcontentsline{toc}{subsection}{Heatmap}
+
+A heatmap uses color gradients to represent the values of a matrix and is often used to show the correlation between variables. Heatmaps can be particularly useful for examining complex datasets with multiple variables. For instance, a heatmap could be used with the movies dataset to display correlations between different numerical variables such as budget, domestic gross, and IMDb rating.
+
+Heatmaps are beneficial for quickly identifying patterns or clusters in the data matrix. They are often used in conjunction with clustering algorithms to identify groups of similar variables or observations. However, the effectiveness of a heatmap can be highly influenced by the chosen color scheme, so care must be taken to select one that is both aesthetically pleasing and easily interpretable.
+
+\hypertarget{spotify_songs-dataset-8}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-8}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{key, }\AttributeTok{y=}\NormalTok{mode)) }\SpecialCharTok{+} \FunctionTok{geom\_tile}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{fill=}\NormalTok{track\_popularity))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-86-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{key, }\AttributeTok{y=}\NormalTok{mode)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_tile}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{fill=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
+  \FunctionTok{scale\_fill\_gradient}\NormalTok{(}\AttributeTok{low=}\StringTok{"white"}\NormalTok{, }\AttributeTok{high=}\StringTok{"red"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Heatmap of Key and Mode by Popularity"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-86-2.pdf}
+
+\hypertarget{pie-charts}{%
+\subsection*{Pie Charts}\label{pie-charts}}
+\addcontentsline{toc}{subsection}{Pie Charts}
+
+Pie charts are a form of circular chart where the circle is divided into sectors that each represent a portion of the whole. These charts are most effective when used to display proportional or percentage data and are commonly employed to illustrate the breakdown of a whole into its component parts (Spence, 2005).
+
+However, pie charts have their limitations. They are not recommended for comparing more than a few categories or for representing exact values. The circular nature of the chart makes it difficult to accurately compare the sizes of the sectors, especially when they are of similar size. Furthermore, pie charts can be misleading if they are not properly labeled or if the percentages do not sum up to 100\%. Despite these limitations, pie charts are widely used for their ease of understanding and their ability to quickly convey an at-a-glance summary of data distributions.
+
+\hypertarget{spotify_songs-dataset-9}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-9}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\StringTok{""}\NormalTok{, }\AttributeTok{fill=}\NormalTok{playlist\_genre)) }\SpecialCharTok{+} \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{width=}\DecValTok{1}\NormalTok{) }\SpecialCharTok{+} \FunctionTok{coord\_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-87-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Customized}
+\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\StringTok{""}\NormalTok{, }\AttributeTok{fill=}\NormalTok{playlist\_genre)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{width=}\DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{coord\_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Pie Chart of Tracks by Genre"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_void}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-87-2.pdf}
+
+\hypertarget{movies-dataset-4}{%
+\subsubsection*{\texorpdfstring{\texttt{movies} dataset}{movies dataset}}\label{movies-dataset-4}}
+\addcontentsline{toc}{subsubsection}{\texttt{movies} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{(binary) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \StringTok{""}\NormalTok{, }\AttributeTok{y =}\NormalTok{ n, }\AttributeTok{fill =} \FunctionTok{factor}\NormalTok{(binary))) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{width =} \DecValTok{1}\NormalTok{, }\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{coord\_polar}\NormalTok{(}\StringTok{"y"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Bechdel Test Outcome"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-88-1.pdf}
+
+Certainly, let's delve into two example plots for each dataset. These plots will be somewhat complex, demonstrating multiple facets of ggplot2 and data visualization. The aim is to offer rich insights into the data while also serving as instructive examples for communication and media students interested in research methodologies.
+
+\hypertarget{advanced-versions}{%
+\subsection*{Advanced Versions}\label{advanced-versions}}
+\addcontentsline{toc}{subsection}{Advanced Versions}
+
+\hypertarget{spotify_songs-dataset-10}{%
+\subsubsection*{\texorpdfstring{\texttt{spotify\_songs} dataset}{spotify\_songs dataset}}\label{spotify_songs-dataset-10}}
+\addcontentsline{toc}{subsubsection}{\texttt{spotify\_songs} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Assuming spotify\_songs is the dataframe loaded with the Spotify Songs Data}
+\NormalTok{spotify\_songs }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(playlist\_genre, key) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{average\_energy =} \FunctionTok{mean}\NormalTok{(energy, }\AttributeTok{na.rm=}\ConstantTok{TRUE}\NormalTok{),}
+            \AttributeTok{average\_danceability =} \FunctionTok{mean}\NormalTok{(danceability, }\AttributeTok{na.rm=}\ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{average\_energy, }\AttributeTok{y=}\NormalTok{average\_danceability, }\AttributeTok{color=}\NormalTok{playlist\_genre, }\AttributeTok{shape=}\FunctionTok{as.factor}\NormalTok{(key))) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{size=}\DecValTok{3}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_shape\_manual}\NormalTok{(}\AttributeTok{values =} \DecValTok{0}\SpecialCharTok{:}\DecValTok{11}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method=}\StringTok{\textquotesingle{}lm\textquotesingle{}}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Average Energy vs Danceability by Genre and Key"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Average Energy"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Average Danceability"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'playlist_genre'. You can override using
+## the `.groups` argument.
+## `geom_smooth()` using formula = 'y ~ x'
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-89-1.pdf}
+
+\hypertarget{explanation}{%
+\subsubsection*{Explanation}\label{explanation}}
+\addcontentsline{toc}{subsubsection}{Explanation}
+
+This plot shows the relationship between the average \texttt{energy} and \texttt{danceability} of songs, categorized by their \texttt{playlist\_genre} and shaped by their musical \texttt{key}. Linear models are fitted to each genre to show trends. This plot could be useful for understanding how different genres and musical keys correlate with the energy and danceability of the songs.
+
+\hypertarget{movies-dataset-5}{%
+\subsubsection*{\texorpdfstring{\texttt{movies} dataset}{movies dataset}}\label{movies-dataset-5}}
+\addcontentsline{toc}{subsubsection}{\texttt{movies} dataset}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Assuming movies is the dataframe loaded with the Movies Data}
+\NormalTok{movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ggplot}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{budget\_2013}\SpecialCharTok{/}\DecValTok{10}\SpecialCharTok{\^{}}\DecValTok{6}\NormalTok{, }\AttributeTok{y=}\NormalTok{imdb\_rating, }\AttributeTok{color=}\NormalTok{binary, }\AttributeTok{size=}\NormalTok{intgross\_2013}\SpecialCharTok{/}\DecValTok{10}\SpecialCharTok{\^{}}\DecValTok{6}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_point}\NormalTok{(}\AttributeTok{alpha=}\FloatTok{0.6}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_size\_continuous}\NormalTok{(}\AttributeTok{range =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{10}\NormalTok{), }\AttributeTok{name=}\StringTok{"Int Gross per Million"}\NormalTok{) }\SpecialCharTok{+}  \CommentTok{\# Change name here}
+  \FunctionTok{geom\_smooth}\NormalTok{(}\AttributeTok{method=}\StringTok{\textquotesingle{}lm\textquotesingle{}}\NormalTok{, }\AttributeTok{se=}\ConstantTok{FALSE}\NormalTok{, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{group=}\DecValTok{1}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"IMDB Rating vs Budget (2013 adjusted) by Bechdel Test Outcome"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Budget (2013 Adjusted in Millions)"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{ylab}\NormalTok{(}\StringTok{"IMDB Rating"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{scale\_color\_manual}\NormalTok{(}\AttributeTok{values=}\FunctionTok{c}\NormalTok{(}\StringTok{"red"}\NormalTok{, }\StringTok{"green"}\NormalTok{), }\AttributeTok{name=}\StringTok{"Bechdel Test Outcome"}\NormalTok{, }\AttributeTok{labels=}\FunctionTok{c}\NormalTok{(}\StringTok{"Fail"}\NormalTok{, }\StringTok{"Pass"}\NormalTok{)) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## i Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+\end{verbatim}
+
+\begin{verbatim}
+## `geom_smooth()` using formula = 'y ~ x'
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 202 rows containing non-finite values (`stat_smooth()`).
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: The following aesthetics were dropped during statistical transformation:
+## colour, size
+## i This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## i Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 211 rows containing missing values (`geom_point()`).
+\end{verbatim}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-90-1.pdf}
+
+\hypertarget{explanation-1}{%
+\subsubsection*{Explanation}\label{explanation-1}}
+\addcontentsline{toc}{subsubsection}{Explanation}
+
+In this plot, the x-axis represents the budget of the movie adjusted to 2013 dollars, and the y-axis represents the IMDB rating. The color of each point indicates whether the movie passed the Bechdel test or not. The size of the point represents the international gross income of the movie, also adjusted to 2013 dollars. A linear model is fitted to show the overall trend.
+
+Both these plots provide multifaceted views of their respective datasets, and can serve as pedagogical tools for illustrating the richness and complexity that ggplot2 can bring to data visualization.
 
 \hypertarget{data-analysis}{%
 \chapter{Data Analysis}\label{data-analysis}}
@@ -6337,7 +7007,7 @@ Histograms and bar plots are graphical methods for visualizing distributions. Wh
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-62-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-91-1.pdf}
 
 \hypertarget{grouped}{%
 \subsubsection{Grouped}\label{grouped}}
@@ -6448,37 +7118,7 @@ Inferential statistics extend the reach of descriptive statistics by allowing re
 
 \CommentTok{\# Load the package}
 \FunctionTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
 
-\begin{verbatim}
-## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
-## v forcats   1.0.0     v stringr   1.5.0
-## v lubridate 1.9.3     v tibble    3.2.1
-## v purrr     1.0.2     v tidyr     1.3.0
-## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::between()     masks data.table::between()
-## x mice::filter()       masks dplyr::filter(), stats::filter()
-## x dplyr::first()       masks data.table::first()
-## x lubridate::hour()    masks data.table::hour()
-## x lubridate::isoweek() masks data.table::isoweek()
-## x dplyr::lag()         masks stats::lag()
-## x dplyr::last()        masks data.table::last()
-## x lubridate::mday()    masks data.table::mday()
-## x lubridate::minute()  masks data.table::minute()
-## x lubridate::month()   masks data.table::month()
-## x lubridate::quarter() masks data.table::quarter()
-## x lubridate::second()  masks data.table::second()
-## x purrr::transpose()   masks data.table::transpose()
-## x lubridate::wday()    masks data.table::wday()
-## x lubridate::week()    masks data.table::week()
-## x lubridate::yday()    masks data.table::yday()
-## x lubridate::year()    masks data.table::year()
-## i Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \CommentTok{\# Subset data for t{-}test}
 \NormalTok{spotify\_songs\_ttest }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{filter}\NormalTok{(playlist\_genre }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"pop"}\NormalTok{, }\StringTok{"rock"}\NormalTok{))}
@@ -6497,7 +7137,7 @@ Inferential statistics extend the reach of descriptive statistics by allowing re
 ##  Two Sample t-test
 ## 
 ## data:  spotify_songs_ttest$track_popularity by spotify_songs_ttest$playlist_genre
-## t = 12.288, df = 10456, p-value < 2.2e-16
+## t = 12.288, df = 10456, p-value < 0.00000000000000022
 ## alternative hypothesis: true difference in means between group pop and group rock is not equal to 0
 ## 95 percent confidence interval:
 ##  5.056736 6.976329
@@ -6628,20 +7268,20 @@ Involves two or more predictor variables. Researchers can assess the contributio
 ## -56.009 -17.645   2.908  18.924  63.497 
 ## 
 ## Coefficients:
-##                       Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)          4.777e+01  5.994e-01   79.69   <2e-16 ***
-## duration_ms         -5.813e-05  2.296e-06  -25.32   <2e-16 ***
-## playlist_genrelatin  1.186e+01  4.621e-01   25.67   <2e-16 ***
-## playlist_genrepop    1.263e+01  4.540e-01   27.83   <2e-16 ***
-## playlist_genrer&b    7.265e+00  4.569e-01   15.90   <2e-16 ***
-## playlist_genrerap    7.895e+00  4.493e-01   17.57   <2e-16 ***
-## playlist_genrerock   8.408e+00  4.709e-01   17.86   <2e-16 ***
+##                         Estimate   Std. Error t value            Pr(>|t|)    
+## (Intercept)         47.769606541  0.599421521   79.69 <0.0000000000000002 ***
+## duration_ms         -0.000058129  0.000002296  -25.32 <0.0000000000000002 ***
+## playlist_genrelatin 11.863027432  0.462124200   25.67 <0.0000000000000002 ***
+## playlist_genrepop   12.633908291  0.454035648   27.83 <0.0000000000000002 ***
+## playlist_genrer&b    7.265348546  0.456872123   15.90 <0.0000000000000002 ***
+## playlist_genrerap    7.894982894  0.449349067   17.57 <0.0000000000000002 ***
+## playlist_genrerock   8.408237450  0.470857797   17.86 <0.0000000000000002 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 24.36 on 32826 degrees of freedom
 ## Multiple R-squared:  0.04916,    Adjusted R-squared:  0.04899 
-## F-statistic: 282.9 on 6 and 32826 DF,  p-value: < 2.2e-16
+## F-statistic: 282.9 on 6 and 32826 DF,  p-value: < 0.00000000000000022
 \end{verbatim}
 
 \textbf{References}

@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 14 Visualizations | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
-<meta name="description" content="14.1 Introduction  14.1.1 The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
-<meta name="generator" content="bookdown 0.35 with bs4_book()">
+<meta name="description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 14 Visualizations | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="14.1 Introduction  14.1.1 The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
+<meta property="og:description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 14 Visualizations | Introduction to Communication and Media Research with R">
-<meta name="twitter:description" content="14.1 Introduction  14.1.1 The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
+<meta name="twitter:description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -74,38 +74,32 @@
 <h2>
 <span class="header-section-number">14.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-6"><i class="fas fa-link"></i></a>
 </h2>
-<div id="the-imperative-of-visual-representations-in-research" class="section level3" number="14.1.1">
-<h3>
-<span class="header-section-number">14.1.1</span> The Imperative of Visual Representations in Research<a class="anchor" aria-label="anchor" href="#the-imperative-of-visual-representations-in-research"><i class="fas fa-link"></i></a>
+<div id="the-imperative-of-visual-representations-in-research" class="section level3 unnumbered">
+<h3>The Imperative of Visual Representations in Research<a class="anchor" aria-label="anchor" href="#the-imperative-of-visual-representations-in-research"><i class="fas fa-link"></i></a>
 </h3>
 <p>In the contemporary landscape of academic and applied research, visual representations have risen to prominence as indispensable components of scholarly communication. Visual aids such as tables, graphs, and charts play a critical role in the dissemination of research findings, serving as a potent mechanism for encapsulating complex datasets, theories, and relationships in an accessible manner (Tufte, 2001). In fact, well-designed visualizations can make a marked difference in how research is consumed, interpreted, and critiqued.</p>
-<div id="facilitating-cognitive-processing" class="section level4" number="14.1.1.1">
-<h4>
-<span class="header-section-number">14.1.1.1</span> Facilitating Cognitive Processing<a class="anchor" aria-label="anchor" href="#facilitating-cognitive-processing"><i class="fas fa-link"></i></a>
+<div id="facilitating-cognitive-processing" class="section level4 unnumbered">
+<h4>Facilitating Cognitive Processing<a class="anchor" aria-label="anchor" href="#facilitating-cognitive-processing"><i class="fas fa-link"></i></a>
 </h4>
 <p>Humans are inherently visual creatures. A considerable proportion of the brain is devoted to visual processing, making visual cues one of the most effective means of information transmission (Ware, 2012). When integrated into research papers, visualizations capitalize on this cognitive predisposition, facilitating quicker comprehension and more robust retention of the material presented. This is particularly pertinent in fields like Communication and Media Research Methods, where data are often multifaceted and conclusions nuanced.</p>
 </div>
-<div id="enhancing-analytical-rigor" class="section level4" number="14.1.1.2">
-<h4>
-<span class="header-section-number">14.1.1.2</span> Enhancing Analytical Rigor<a class="anchor" aria-label="anchor" href="#enhancing-analytical-rigor"><i class="fas fa-link"></i></a>
+<div id="enhancing-analytical-rigor" class="section level4 unnumbered">
+<h4>Enhancing Analytical Rigor<a class="anchor" aria-label="anchor" href="#enhancing-analytical-rigor"><i class="fas fa-link"></i></a>
 </h4>
 <p>Visual representations also contribute to the analytical rigor of research endeavors. For instance, a well-plotted graph can illuminate trends and anomalies that may remain obfuscated in raw, numerical data (Cairo, 2016). As such, visualizations can serve as both a diagnostic tool for the researcher and an evidentiary asset for the reader, substantiating claims and underpinning arguments.</p>
 </div>
 </div>
-<div id="complementing-textual-explanations-for-a-holistic-understanding" class="section level3" number="14.1.2">
-<h3>
-<span class="header-section-number">14.1.2</span> Complementing Textual Explanations for a Holistic Understanding<a class="anchor" aria-label="anchor" href="#complementing-textual-explanations-for-a-holistic-understanding"><i class="fas fa-link"></i></a>
+<div id="complementing-textual-explanations-for-a-holistic-understanding" class="section level3 unnumbered">
+<h3>Complementing Textual Explanations for a Holistic Understanding<a class="anchor" aria-label="anchor" href="#complementing-textual-explanations-for-a-holistic-understanding"><i class="fas fa-link"></i></a>
 </h3>
 <p>While the textual component of a research paper provides the requisite detail and contextual underpinning, it may fall short in offering the immediacy and clarity that visual aids can deliver.</p>
-<div id="symbiosis-of-text-and-visuals" class="section level4" number="14.1.2.1">
-<h4>
-<span class="header-section-number">14.1.2.1</span> Symbiosis of Text and Visuals<a class="anchor" aria-label="anchor" href="#symbiosis-of-text-and-visuals"><i class="fas fa-link"></i></a>
+<div id="symbiosis-of-text-and-visuals" class="section level4 unnumbered">
+<h4>Symbiosis of Text and Visuals<a class="anchor" aria-label="anchor" href="#symbiosis-of-text-and-visuals"><i class="fas fa-link"></i></a>
 </h4>
 <p>A synergetic relationship between text and visuals often proves to be the most effective approach for conveying a multi-layered research narrative. Textual explanations can delve into the intricacies, limitations, and theoretical frameworks that underlie the research, while accompanying visual aids provide an immediate, intuitive grasp of key points, trends, and implications (Kelleher &amp; Wagener, 2011).</p>
 </div>
-<div id="accessibility-and-engagement" class="section level4" number="14.1.2.2">
-<h4>
-<span class="header-section-number">14.1.2.2</span> Accessibility and Engagement<a class="anchor" aria-label="anchor" href="#accessibility-and-engagement"><i class="fas fa-link"></i></a>
+<div id="accessibility-and-engagement" class="section level4 unnumbered">
+<h4>Accessibility and Engagement<a class="anchor" aria-label="anchor" href="#accessibility-and-engagement"><i class="fas fa-link"></i></a>
 </h4>
 <p>Furthermore, well-crafted visualizations make scholarly work more accessible to a broader audience, including those who may lack specialized training in the subject area. They can break down barriers of jargon and complexity, transforming abstract concepts into tangible insights (Börner, 2015). In an educational context, this dual modality of presentation—textual and visual—appeals to varied learning styles, fostering greater student engagement and comprehension.</p>
 <p>In summary, the role of visual representations in research is not merely supplementary; it is integral. Visual aids deepen our understanding of data, enhance analytical rigor, and facilitate clearer, more effective communication of research outcomes.</p>
@@ -116,30 +110,25 @@
 <h2>
 <span class="header-section-number">14.2</span> Tables<a class="anchor" aria-label="anchor" href="#tables"><i class="fas fa-link"></i></a>
 </h2>
-<div id="importance-of-tables" class="section level3" number="14.2.1">
-<h3>
-<span class="header-section-number">14.2.1</span> Importance of Tables<a class="anchor" aria-label="anchor" href="#importance-of-tables"><i class="fas fa-link"></i></a>
+<div id="importance-of-tables" class="section level3 unnumbered">
+<h3>Importance of Tables<a class="anchor" aria-label="anchor" href="#importance-of-tables"><i class="fas fa-link"></i></a>
 </h3>
-<div id="concise-representation-of-numerical-data" class="section level4" number="14.2.1.1">
-<h4>
-<span class="header-section-number">14.2.1.1</span> Concise Representation of Numerical Data<a class="anchor" aria-label="anchor" href="#concise-representation-of-numerical-data"><i class="fas fa-link"></i></a>
+<div id="concise-representation-of-numerical-data" class="section level4 unnumbered">
+<h4>Concise Representation of Numerical Data<a class="anchor" aria-label="anchor" href="#concise-representation-of-numerical-data"><i class="fas fa-link"></i></a>
 </h4>
 <p>Tables stand as one of the most efficient means for the organized presentation of numerical data. By arranging data in rows and columns, tables offer a spatial framework that enables quick scanning and interpretation. This is particularly advantageous in research contexts where large datasets are prevalent, as tables condense this information into a digestible format. Unlike other types of visual aids like graphs and charts, tables can preserve the exact numerical values, which can be crucial for statistical analysis and for the validation of research findings (Zacks &amp; Tversky, 1999).</p>
 </div>
-<div id="effectively-show-relationships-trends-and-comparisons" class="section level4" number="14.2.1.2">
-<h4>
-<span class="header-section-number">14.2.1.2</span> Effectively Show Relationships, Trends, and Comparisons<a class="anchor" aria-label="anchor" href="#effectively-show-relationships-trends-and-comparisons"><i class="fas fa-link"></i></a>
+<div id="effectively-show-relationships-trends-and-comparisons" class="section level4 unnumbered">
+<h4>Effectively Show Relationships, Trends, and Comparisons<a class="anchor" aria-label="anchor" href="#effectively-show-relationships-trends-and-comparisons"><i class="fas fa-link"></i></a>
 </h4>
 <p>One of the salient strengths of tables lies in their capacity to elucidate relationships, trends, and comparisons across variables. When well-designed, a table can showcase both independent and dependent variables in a manner that facilitates cross-referencing, potentially revealing correlations or trends that warrant further investigation. Moreover, tables can succinctly facilitate comparisons between sub-groups, time periods, or different conditions, thereby enriching the interpretive depth of a research project (Few, 2012).</p>
 </div>
 </div>
-<div id="guidelines-for-creating-tables" class="section level3" number="14.2.2">
-<h3>
-<span class="header-section-number">14.2.2</span> Guidelines for Creating Tables<a class="anchor" aria-label="anchor" href="#guidelines-for-creating-tables"><i class="fas fa-link"></i></a>
+<div id="guidelines-for-creating-tables" class="section level3 unnumbered">
+<h3>Guidelines for Creating Tables<a class="anchor" aria-label="anchor" href="#guidelines-for-creating-tables"><i class="fas fa-link"></i></a>
 </h3>
-<div id="structure-and-layout" class="section level4" number="14.2.2.1">
-<h4>
-<span class="header-section-number">14.2.2.1</span> Structure and Layout<a class="anchor" aria-label="anchor" href="#structure-and-layout"><i class="fas fa-link"></i></a>
+<div id="structure-and-layout" class="section level4 unnumbered">
+<h4>Structure and Layout<a class="anchor" aria-label="anchor" href="#structure-and-layout"><i class="fas fa-link"></i></a>
 </h4>
 <p>The utility of a table is directly contingent upon its design and layout. Poorly structured tables can obfuscate rather than clarify, hindering the reader’s comprehension. Hence, attention to the following design elements is crucial:</p>
 <ul>
@@ -151,111 +140,47 @@
 <strong>Gridlines</strong>: Use subtle gridlines or zebra-striping to delineate rows or columns without overwhelming the visual field (Kosslyn, 2006).</li>
 </ul>
 </div>
-<div id="inclusion-of-title-column-headings-and-footnotes" class="section level4" number="14.2.2.2">
-<h4>
-<span class="header-section-number">14.2.2.2</span> Inclusion of Title, Column Headings, and Footnotes<a class="anchor" aria-label="anchor" href="#inclusion-of-title-column-headings-and-footnotes"><i class="fas fa-link"></i></a>
+<div id="inclusion-of-title-column-headings-and-footnotes" class="section level4 unnumbered">
+<h4>Inclusion of Title, Column Headings, and Footnotes<a class="anchor" aria-label="anchor" href="#inclusion-of-title-column-headings-and-footnotes"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li><p><strong>Title</strong>: Every table should have a descriptive title that encapsulates the content and purpose of the table. The title should be placed above the table and be clear and concise.</p></li>
 <li><p><strong>Column Headings</strong>: These serve as descriptors for the data contained in the respective columns and should be as short as possible while still being descriptive. Headings often contain units of measurement and should be clearly differentiated from the data rows.</p></li>
 <li><p><strong>Footnotes</strong>: Utilized for explaining abbreviations, symbols, or methodological points that require clarification, footnotes should be positioned directly below the table and are typically denoted by asterisks or numerical superscripts (American Psychological Association [APA], 2019).</p></li>
 </ul>
-<p>Following these guidelines ensures that tables not only serve as repositories of numerical data but also as analytical tools that can reveal new insights and substantiate research claims.</p>
+<div class="inline-figure"><img src="images/table.png" style="width:100.0%"></div>
 </div>
 </div>
 </div>
-<div id="references-3" class="section level2" number="14.3">
+<div id="illustrations" class="section level2" number="14.3">
 <h2>
-<span class="header-section-number">14.3</span> References<a class="anchor" aria-label="anchor" href="#references-3"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.3</span> Illustrations<a class="anchor" aria-label="anchor" href="#illustrations"><i class="fas fa-link"></i></a>
 </h2>
-<ul>
-<li>American Psychological Association. (2019). Publication Manual of the American Psychological Association (7th ed.). American Psychological Association.</li>
-<li>Few, S. (2012). Show me the numbers: Designing tables and graphs to enlighten. Analytics Press.</li>
-<li>Kosslyn, S. M. (2006). Graph design for the eye and mind. Oxford University Press.</li>
-<li>Zacks, J., &amp; Tversky, B. (1999). Bars and lines: A study of graphic communication. Memory &amp; Cognition, 27(6), 1073-1079.</li>
-</ul>
-<p>Through the judicious use of tables, researchers can effectively condense large datasets into a structured format that facilitates comprehensive understanding, allowing for relationships and trends to be easily observed. The quality of these tables, however, is greatly improved when researchers adhere to established design principles, thereby making the information accessible and interpretable.## Tables</p>
-<div id="importance-of-tables-1" class="section level3" number="14.3.1">
-<h3>
-<span class="header-section-number">14.3.1</span> Importance of Tables<a class="anchor" aria-label="anchor" href="#importance-of-tables-1"><i class="fas fa-link"></i></a>
+<div id="types-of-illustrations" class="section level3 unnumbered">
+<h3>Types of Illustrations<a class="anchor" aria-label="anchor" href="#types-of-illustrations"><i class="fas fa-link"></i></a>
 </h3>
-<div id="concise-representation-of-numerical-data-1" class="section level4" number="14.3.1.1">
-<h4>
-<span class="header-section-number">14.3.1.1</span> Concise Representation of Numerical Data<a class="anchor" aria-label="anchor" href="#concise-representation-of-numerical-data-1"><i class="fas fa-link"></i></a>
+<div id="diagrams" class="section level4 unnumbered">
+<h4>Diagrams<a class="anchor" aria-label="anchor" href="#diagrams"><i class="fas fa-link"></i></a>
 </h4>
-<p>Tables stand as one of the most efficient means for the organized presentation of numerical data. By arranging data in rows and columns, tables offer a spatial framework that enables quick scanning and interpretation. This is particularly advantageous in research contexts where large datasets are prevalent, as tables condense this information into a digestible format. Unlike other types of visual aids like graphs and charts, tables can preserve the exact numerical values, which can be crucial for statistical analysis and for the validation of research findings (Zacks &amp; Tversky, 1999).</p>
+<p>Diagrams serve as visual abstractions or simplifications of complex systems, processes, or objects. They are highly useful in research to delineate component parts, explicate functional relationships, or visualize abstract theories. For example, a Venn diagram may be employed to depict the intersections among different sets or groups, effectively elucidating how they relate to one another.</p>
 </div>
-<div id="effectively-show-relationships-trends-and-comparisons-1" class="section level4" number="14.3.1.2">
-<h4>
-<span class="header-section-number">14.3.1.2</span> Effectively Show Relationships, Trends, and Comparisons<a class="anchor" aria-label="anchor" href="#effectively-show-relationships-trends-and-comparisons-1"><i class="fas fa-link"></i></a>
+<div id="flowcharts" class="section level4 unnumbered">
+<h4>Flowcharts<a class="anchor" aria-label="anchor" href="#flowcharts"><i class="fas fa-link"></i></a>
 </h4>
-<p>One of the salient strengths of tables lies in their capacity to elucidate relationships, trends, and comparisons across variables. When well-designed, a table can showcase both independent and dependent variables in a manner that facilitates cross-referencing, potentially revealing correlations or trends that warrant further investigation. Moreover, tables can succinctly facilitate comparisons between sub-groups, time periods, or different conditions, thereby enriching the interpretive depth of a research project (Few, 2012).</p>
+<p>Flowcharts are specialized diagrams that visually represent a sequence of steps, generally using geometrical shapes connected by lines and arrows to indicate flow direction. They are often employed to describe workflows, algorithms, or processes, allowing for easier understanding and problem-solving. In the context of communication and media research, a flowchart could be used to outline the steps taken in a content analysis procedure, for instance.</p>
+<div class="inline-figure"><img src="images/model.png"></div>
+</div>
+<div id="organizational-models" class="section level4 unnumbered">
+<h4>Organizational Models<a class="anchor" aria-label="anchor" href="#organizational-models"><i class="fas fa-link"></i></a>
+</h4>
+<p>Organizational models provide a structural overview of a system, often portraying hierarchies or relational networks. Such models can be useful in a range of fields, from sociology where they might depict social structures, to business research where they can illustrate organizational hierarchies.</p>
 </div>
 </div>
-<div id="guidelines-for-creating-tables-1" class="section level3" number="14.3.2">
-<h3>
-<span class="header-section-number">14.3.2</span> Guidelines for Creating Tables<a class="anchor" aria-label="anchor" href="#guidelines-for-creating-tables-1"><i class="fas fa-link"></i></a>
+<div id="using-illustrations-effectively" class="section level3 unnumbered">
+<h3>Using Illustrations Effectively<a class="anchor" aria-label="anchor" href="#using-illustrations-effectively"><i class="fas fa-link"></i></a>
 </h3>
-<div id="structure-and-layout-1" class="section level4" number="14.3.2.1">
-<h4>
-<span class="header-section-number">14.3.2.1</span> Structure and Layout<a class="anchor" aria-label="anchor" href="#structure-and-layout-1"><i class="fas fa-link"></i></a>
-</h4>
-<p>The utility of a table is directly contingent upon its design and layout. Poorly structured tables can obfuscate rather than clarify, hindering the reader’s comprehension. Hence, attention to the following design elements is crucial:</p>
-<ul>
-<li>
-<strong>Alignment</strong>: Numeric data should be right-aligned for easier comparison, while text is generally left-aligned.</li>
-<li>
-<strong>Row and Column Spacing</strong>: Adequate spacing between rows and columns improves readability.</li>
-<li>
-<strong>Gridlines</strong>: Use subtle gridlines or zebra-striping to delineate rows or columns without overwhelming the visual field (Kosslyn, 2006).</li>
-</ul>
-</div>
-<div id="inclusion-of-title-column-headings-and-footnotes-1" class="section level4" number="14.3.2.2">
-<h4>
-<span class="header-section-number">14.3.2.2</span> Inclusion of Title, Column Headings, and Footnotes<a class="anchor" aria-label="anchor" href="#inclusion-of-title-column-headings-and-footnotes-1"><i class="fas fa-link"></i></a>
-</h4>
-<ul>
-<li><p><strong>Title</strong>: Every table should have a descriptive title that encapsulates the content and purpose of the table. The title should be placed above the table and be clear and concise.</p></li>
-<li><p><strong>Column Headings</strong>: These serve as descriptors for the data contained in the respective columns and should be as short as possible while still being descriptive. Headings often contain units of measurement and should be clearly differentiated from the data rows.</p></li>
-<li><p><strong>Footnotes</strong>: Utilized for explaining abbreviations, symbols, or methodological points that require clarification, footnotes should be positioned directly below the table and are typically denoted by asterisks or numerical superscripts (American Psychological Association [APA], 2019).</p></li>
-</ul>
-</div>
-</div>
-</div>
-<div id="illustrations" class="section level2" number="14.4">
-<h2>
-<span class="header-section-number">14.4</span> Illustrations<a class="anchor" aria-label="anchor" href="#illustrations"><i class="fas fa-link"></i></a>
-</h2>
-<div id="types-of-illustrations" class="section level3" number="14.4.1">
-<h3>
-<span class="header-section-number">14.4.1</span> Types of Illustrations<a class="anchor" aria-label="anchor" href="#types-of-illustrations"><i class="fas fa-link"></i></a>
-</h3>
-<div id="diagrams" class="section level4" number="14.4.1.1">
-<h4>
-<span class="header-section-number">14.4.1.1</span> Diagrams<a class="anchor" aria-label="anchor" href="#diagrams"><i class="fas fa-link"></i></a>
-</h4>
-<p>Diagrams serve as visual abstractions or simplifications of complex systems, processes, or objects. They are highly useful in research to delineate component parts, explicate functional relationships, or visualize abstract theories. For example, a Venn diagram may be employed to depict the intersections among different sets or groups, effectively elucidating how they relate to one another (Tufte, 2001).</p>
-</div>
-<div id="flowcharts" class="section level4" number="14.4.1.2">
-<h4>
-<span class="header-section-number">14.4.1.2</span> Flowcharts<a class="anchor" aria-label="anchor" href="#flowcharts"><i class="fas fa-link"></i></a>
-</h4>
-<p>Flowcharts are specialized diagrams that visually represent a sequence of steps, generally using geometrical shapes connected by lines and arrows to indicate flow direction. They are often employed to describe workflows, algorithms, or processes, allowing for easier understanding and problem-solving (Rogowitz &amp; Treinish, 1998). In the context of communication and media research, a flowchart could be used to outline the steps taken in a content analysis procedure, for instance.</p>
-</div>
-<div id="organizational-models" class="section level4" number="14.4.1.3">
-<h4>
-<span class="header-section-number">14.4.1.3</span> Organizational Models<a class="anchor" aria-label="anchor" href="#organizational-models"><i class="fas fa-link"></i></a>
-</h4>
-<p>Organizational models provide a structural overview of a system, often portraying hierarchies or relational networks. Such models can be useful in a range of fields, from sociology where they might depict social structures, to business research where they can illustrate organizational hierarchies (Kosslyn, 2006).</p>
-</div>
-</div>
-<div id="using-illustrations-effectively" class="section level3" number="14.4.2">
-<h3>
-<span class="header-section-number">14.4.2</span> Using Illustrations Effectively<a class="anchor" aria-label="anchor" href="#using-illustrations-effectively"><i class="fas fa-link"></i></a>
-</h3>
-<div id="when-to-employ-illustrations" class="section level4" number="14.4.2.1">
-<h4>
-<span class="header-section-number">14.4.2.1</span> When to Employ Illustrations<a class="anchor" aria-label="anchor" href="#when-to-employ-illustrations"><i class="fas fa-link"></i></a>
+<div id="when-to-employ-illustrations" class="section level4 unnumbered">
+<h4>When to Employ Illustrations<a class="anchor" aria-label="anchor" href="#when-to-employ-illustrations"><i class="fas fa-link"></i></a>
 </h4>
 <p>The judicious use of illustrations hinges on their appropriateness to the research context. They are most effective when they serve to:</p>
 <ul>
@@ -265,9 +190,8 @@
 </ul>
 <p>While the temptation to include visuals for aesthetic appeal is natural, their primary function should remain informational. Overuse or misuse can divert attention and compromise the integrity of the research (Tufte, 1990).</p>
 </div>
-<div id="how-to-employ-illustrations-for-maximum-impact" class="section level4" number="14.4.2.2">
-<h4>
-<span class="header-section-number">14.4.2.2</span> How to Employ Illustrations for Maximum Impact<a class="anchor" aria-label="anchor" href="#how-to-employ-illustrations-for-maximum-impact"><i class="fas fa-link"></i></a>
+<div id="how-to-employ-illustrations-for-maximum-impact" class="section level4 unnumbered">
+<h4>How to Employ Illustrations for Maximum Impact<a class="anchor" aria-label="anchor" href="#how-to-employ-illustrations-for-maximum-impact"><i class="fas fa-link"></i></a>
 </h4>
 <ul>
 <li><p><strong>Clarity and Simplicity</strong>: Illustrations should be easily interpretable. Overcomplicated visuals can detract from the information they aim to convey.</p></li>
@@ -279,170 +203,478 @@
 </div>
 </div>
 </div>
-<div id="images" class="section level2" number="14.5">
+<div id="images" class="section level2" number="14.4">
 <h2>
-<span class="header-section-number">14.5</span> Images<a class="anchor" aria-label="anchor" href="#images"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.4</span> Images<a class="anchor" aria-label="anchor" href="#images"><i class="fas fa-link"></i></a>
 </h2>
-<div id="types-of-images" class="section level3" number="14.5.1">
-<h3>
-<span class="header-section-number">14.5.1</span> Types of Images<a class="anchor" aria-label="anchor" href="#types-of-images"><i class="fas fa-link"></i></a>
+<div id="types-of-images" class="section level3 unnumbered">
+<h3>Types of Images<a class="anchor" aria-label="anchor" href="#types-of-images"><i class="fas fa-link"></i></a>
 </h3>
-<div id="photographs" class="section level4" number="14.5.1.1">
-<h4>
-<span class="header-section-number">14.5.1.1</span> Photographs<a class="anchor" aria-label="anchor" href="#photographs"><i class="fas fa-link"></i></a>
+<div id="photographs" class="section level4 unnumbered">
+<h4>Photographs<a class="anchor" aria-label="anchor" href="#photographs"><i class="fas fa-link"></i></a>
 </h4>
-<p>Photographs can be a powerful tool in research, serving as both primary and secondary data. For example, in social research, photographs can help capture societal trends, behaviors, or physical spaces (Rose, 2016). In media and communication studies, images from media platforms may be used to support qualitative analyses such as content analysis or semiotics.</p>
+<p>Photographs can be a powerful tool in research, serving as both primary and secondary data. For example, in social research, photographs can help capture societal trends, behaviors, or physical spaces. In media and communication studies, images from media platforms may be used to support qualitative analyses such as content analysis or semiotics.</p>
+<div class="inline-figure"><img src="images/itmejp.jpg" style="width:100.0%"></div>
+<p><em>Note</em>. This is an example of an image you can use while trying to describe a streamer setup when writing about Twitch streamer culture or technology.</p>
 </div>
-<div id="screen-captures" class="section level4" number="14.5.1.2">
-<h4>
-<span class="header-section-number">14.5.1.2</span> Screen Captures<a class="anchor" aria-label="anchor" href="#screen-captures"><i class="fas fa-link"></i></a>
+<div id="screen-captures" class="section level4 unnumbered">
+<h4>Screen Captures<a class="anchor" aria-label="anchor" href="#screen-captures"><i class="fas fa-link"></i></a>
 </h4>
 <p>In the digital age, screen captures have become increasingly relevant, especially in fields that study online behaviors, interfaces, and digital content. Researchers might use screen captures to record instances of social media interactions, display website features, or illustrate software functionalities (Mann &amp; Stewart, 2000).</p>
 </div>
 </div>
-<div id="ethical-considerations-8" class="section level3" number="14.5.2">
-<h3>
-<span class="header-section-number">14.5.2</span> Ethical Considerations<a class="anchor" aria-label="anchor" href="#ethical-considerations-8"><i class="fas fa-link"></i></a>
+<div id="ethical-considerations-8" class="section level3 unnumbered">
+<h3>Ethical Considerations<a class="anchor" aria-label="anchor" href="#ethical-considerations-8"><i class="fas fa-link"></i></a>
 </h3>
-<div id="copyright-issues" class="section level4" number="14.5.2.1">
-<h4>
-<span class="header-section-number">14.5.2.1</span> Copyright Issues<a class="anchor" aria-label="anchor" href="#copyright-issues"><i class="fas fa-link"></i></a>
+<div id="copyright-issues" class="section level4 unnumbered">
+<h4>Copyright Issues<a class="anchor" aria-label="anchor" href="#copyright-issues"><i class="fas fa-link"></i></a>
 </h4>
 <p>One of the pivotal ethical considerations when using images in research is adhering to copyright laws. Copyright infringement is a serious ethical and legal violation. Researchers must either use images that are in the public domain or for which they have obtained permission from the copyright holder (Aufderheide &amp; Jaszi, 2011). An alternative is to use images under ‘fair use’ provisions, which can be complex and require thorough understanding.</p>
 </div>
-<div id="fair-use-in-research-papers" class="section level4" number="14.5.2.2">
-<h4>
-<span class="header-section-number">14.5.2.2</span> Fair Use in Research Papers<a class="anchor" aria-label="anchor" href="#fair-use-in-research-papers"><i class="fas fa-link"></i></a>
+<div id="fair-use-in-research-papers" class="section level4 unnumbered">
+<h4>Fair Use in Research Papers<a class="anchor" aria-label="anchor" href="#fair-use-in-research-papers"><i class="fas fa-link"></i></a>
 </h4>
 <p>Fair use is a doctrine that permits limited use of copyrighted material without permission for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. However, fair use is a complex legal doctrine and is determined on a case-by-case basis, considering factors like the purpose of use, the nature of the copyrighted work, the amount used in relation to the copyrighted work as a whole, and the effect of the use on the market value of the copyrighted work (United States Copyright Office, 2010).</p>
 <p>The ‘fair use’ doctrine can sometimes be invoked in academic research under specific conditions, but it’s advisable to consult legal experts when in doubt. Universities often have resources or legal departments that can offer advice on this (Butler, 2014).</p>
 </div>
-<div id="ethical-use-beyond-copyright" class="section level4" number="14.5.2.3">
-<h4>
-<span class="header-section-number">14.5.2.3</span> Ethical Use Beyond Copyright<a class="anchor" aria-label="anchor" href="#ethical-use-beyond-copyright"><i class="fas fa-link"></i></a>
+<div id="ethical-use-beyond-copyright" class="section level4 unnumbered">
+<h4>Ethical Use Beyond Copyright<a class="anchor" aria-label="anchor" href="#ethical-use-beyond-copyright"><i class="fas fa-link"></i></a>
 </h4>
 <p>Apart from legal obligations, researchers must consider the potential ethical implications of using images. For instance, images featuring individuals may require informed consent, especially if those images could potentially identify the individuals involved or put them at risk in any way (Clark, 2011).</p>
 </div>
 </div>
 </div>
-<div id="plots-1" class="section level2" number="14.6">
+<div id="plots-1" class="section level2" number="14.5">
 <h2>
-<span class="header-section-number">14.6</span> Plots<a class="anchor" aria-label="anchor" href="#plots-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14.5</span> Plots<a class="anchor" aria-label="anchor" href="#plots-1"><i class="fas fa-link"></i></a>
 </h2>
-<div id="introduction-to-ggplot2" class="section level3" number="14.6.1">
-<h3>
-<span class="header-section-number">14.6.1</span> Introduction to ggplot2<a class="anchor" aria-label="anchor" href="#introduction-to-ggplot2"><i class="fas fa-link"></i></a>
+<div id="introduction-to-ggplot2" class="section level3 unnumbered">
+<h3>Introduction to ggplot2<a class="anchor" aria-label="anchor" href="#introduction-to-ggplot2"><i class="fas fa-link"></i></a>
 </h3>
 <p><code>ggplot2</code> is a data visualization package for the R programming language. Built upon the concepts of the “Grammar of Graphics,” this package allows for the creation of complex and customizable plots in an intuitive manner (Wickham, 2016). <code>ggplot2</code> provides a set of “geoms” (geometric objects) that represent different types of data points, lines, or areas in a plot. By layering these geoms, users can create a wide range of visualizations, including but not limited to histograms, scatter plots, and line charts.</p>
 </div>
-<div id="popular-plots-using-ggplot2-and-the-spotify_songs-dataset" class="section level3" number="14.6.2">
-<h3>
-<span class="header-section-number">14.6.2</span> Popular Plots Using <code>ggplot2</code> and the <code>spotify_songs</code> Dataset<a class="anchor" aria-label="anchor" href="#popular-plots-using-ggplot2-and-the-spotify_songs-dataset"><i class="fas fa-link"></i></a>
+<div id="load-libraries" class="section level3 unnumbered">
+<h3>Load libraries<a class="anchor" aria-label="anchor" href="#load-libraries"><i class="fas fa-link"></i></a>
 </h3>
-<div id="histogram" class="section level4" number="14.6.2.1">
-<h4>
-<span class="header-section-number">14.6.2.1</span> Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
-</h4>
-<p>A histogram is particularly useful for visualizing the frequency distribution of a single continuous variable. It can help in understanding the underlying skewness, kurtosis, peak, and spread of the data.</p>
-<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>binwidth<span class="op">=</span><span class="fl">5</span>, fill<span class="op">=</span><span class="st">"blue"</span>, alpha<span class="op">=</span><span class="fl">0.7</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Distribution of Track Popularity"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Track Popularity"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Frequency"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-57-1.png" width="672"></div>
-<p>By using this histogram code snippet, one can visualize the distribution of <code>track_popularity</code> within the <code>spotify_songs</code> dataset, gaining insights into how often songs with various popularity levels appear in the dataset.</p>
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/">ggridges</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: package 'ggridges' was built under R version 4.3.1</code></pre>
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com">data.table</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jrnold/ggthemes">ggthemes</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: package 'ggthemes' was built under R version 4.3.1</code></pre>
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen<span class="op">=</span><span class="fl">999</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="scatter-plot" class="section level4" number="14.6.2.2">
-<h4>
-<span class="header-section-number">14.6.2.2</span> Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot"><i class="fas fa-link"></i></a>
-</h4>
-<p>Scatter plots are invaluable for depicting the relationship between two continuous variables. They can suggest various kinds of correlations between variables with a certain confidence interval.</p>
-<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">duration_ms</span>, y<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Track Duration vs. Popularity"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Duration (ms)"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Popularity"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-58-1.png" width="672"></div>
-<p>Using this scatter plot, researchers could investigate whether there’s a noticeable relationship between a song’s duration (<code>duration_ms</code>) and its popularity (<code>track_popularity</code>).</p>
+<div id="load-data" class="section level3 unnumbered">
+<h3>Load data<a class="anchor" aria-label="anchor" href="#load-data"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv"</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div id="box-plot" class="section level4" number="14.6.2.3">
+<div id="scatter-plot" class="section level3 unnumbered">
+<h3>Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>Scatter plots are essential for investigating the relationships between two numerical variables. For example, the movies data set could use a scatter plot to show the relationship between budgets and domestic gross earnings. Each point on the plot represents an observation, with its position determined by its values for the two variables being compared.</p>
+<p>This type of plot is invaluable for identifying correlations, clusters, and outliers in bivariate data. While scatter plots are fairly straightforward, they are incredibly flexible and can be adapted to show additional variables through the use of color, size, or shape. Advanced versions, such as scatter plot matrices or 3D scatter plots, can even incorporate multiple variables for more complex analyses.</p>
+<div id="spotify_songs-dataset" class="section level4 unnumbered">
 <h4>
-<span class="header-section-number">14.6.2.3</span> Box Plot<a class="anchor" aria-label="anchor" href="#box-plot"><i class="fas fa-link"></i></a>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset"><i class="fas fa-link"></i></a>
 </h4>
-<p>Box plots, or box-and-whisker plots, are effective for summarizing the central tendency and spread of a data distribution, as well as for identifying outliers.</p>
-<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">playlist_genre</span>, y<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Track Popularity by Playlist Genre"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Playlist Genre"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Popularity"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-59-1.png" width="672"></div>
-<p>With this box plot, one can compare the distribution of <code>track_popularity</code> across different <code>playlist_genre</code> categories. It provides an effective way to see the median, quartiles, and potential outliers in track popularity for each genre.</p>
+<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">tempo</span>, y<span class="op">=</span><span class="va">energy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-73-1.png" width="672"></div>
+<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">tempo</span>, y<span class="op">=</span><span class="va">energy</span>, color<span class="op">=</span><span class="va">danceability</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">3</span>, alpha<span class="op">=</span><span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Scatter Plot of Tempo and Energy"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-73-2.png" width="672"></div>
 </div>
-<div id="line-chart" class="section level4" number="14.6.2.4">
+<div id="movies-dataset" class="section level4 unnumbered">
 <h4>
-<span class="header-section-number">14.6.2.4</span> Line Chart<a class="anchor" aria-label="anchor" href="#line-chart"><i class="fas fa-link"></i></a>
+<code>movies</code> dataset<a class="anchor" aria-label="anchor" href="#movies-dataset"><i class="fas fa-link"></i></a>
 </h4>
-<p>Certainly. If the <code>track_album_release_date</code> variable is in the “yyyy-mm-dd” format but not treated as a date object in R, it is crucial to convert it into a Date type for accurate line chart plotting.</p>
-<p>Here’s how you could modify the Line Chart section with the appropriate conversion:</p>
+<div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>, y<span class="op">=</span><span class="va">metascore</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: Removed 378 rows containing missing values (`geom_point()`).</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-74-1.png" width="672"></div>
+<div class="sourceCode" id="cb132"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>, y<span class="op">=</span><span class="va">metascore</span>, color<span class="op">=</span><span class="va">budget</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">3</span>, alpha<span class="op">=</span><span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Scatter Plot of Metascore by Year"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: Removed 378 rows containing missing values (`geom_point()`).</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-74-2.png" width="672"></div>
 </div>
-<div id="line-chart-1" class="section level4" number="14.6.2.5">
+</div>
+<div id="line-charts" class="section level3 unnumbered">
+<h3>Line Charts<a class="anchor" aria-label="anchor" href="#line-charts"><i class="fas fa-link"></i></a>
+</h3>
+<p>Line charts serve as a pivotal tool for displaying continuous data points connected by line segments, typically over a period of time. These charts are remarkably effective for observing trends, understanding fluctuations, and identifying patterns in datasets. In scenarios involving time-series data or other continuous metrics, line charts provide a visually clean way to analyze large sets of data. They are highly adaptable, allowing for multiple lines to be displayed simultaneously, thereby facilitating comparison across different categories or time periods. Line charts are not merely confined to showing time-based data; they can be employed effectively to compare different categories as long as there is a logical order to the x-axis (Cleveland, 1985).</p>
+<p>One of the advantages of line charts is the clarity they bring to trend analysis. Whether it’s assessing stock market performance over several months or comparing annual rainfall statistics, line charts provide an uncluttered view that makes it easier to identify upward or downward trends, periodic cycles, and sudden spikes or drops in data points.</p>
+<div id="spotify_songs-dataset-1" class="section level4 unnumbered">
 <h4>
-<span class="header-section-number">14.6.2.5</span> Line Chart<a class="anchor" aria-label="anchor" href="#line-chart-1"><i class="fas fa-link"></i></a>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-1"><i class="fas fa-link"></i></a>
 </h4>
-<p>Line charts are invaluable for displaying trends or changes in data across time. They are most effective when you have a logical sequence of time periods.</p>
-<p>Before plotting, you may need to convert the <code>track_album_release_date</code> variable into a Date type:</p>
-<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_album_release_date</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_album_release_date</span>, format<span class="op">=</span><span class="st">"%Y-%m-%d"</span><span class="op">)</span></span></code></pre></div>
-<p>Once the date conversion is done, you can proceed with the line chart plotting:</p>
-<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">track_album_release_date</span>, y<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Convert to Date and remove NAs</span></span>
+<span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_album_release_date</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html">ymd</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_album_release_date</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: 1886 failed to parse.</code></pre>
+<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span> <span class="op">(</span><span class="va">playlist_subgenre</span> <span class="op">==</span> <span class="st">"dance pop"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/IDateTime.html">year</a></span><span class="op">(</span><span class="va">track_album_release_date</span><span class="op">)</span>, month <span class="op">=</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/IDateTime.html">month</a></span><span class="op">(</span><span class="va">track_album_release_date</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">month</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>avg_danceability <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">danceability</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="fu"><a href="https://lubridate.tidyverse.org/reference/make_datetime.html">make_date</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">month</span>, <span class="fl">1</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">avg_danceability</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Average Danceability of Dance Pop Songs over Time"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Album Release Date"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Average Danceability"</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by 'year'. You can override using the
+## `.groups` argument.</code></pre>
+<pre><code>## Warning: Removed 1 row containing missing values (`geom_line()`).</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-76-1.png" width="672"></div>
+</div>
+<div id="movies-dataset-1" class="section level4 unnumbered">
+<h4>
+<code>movies</code> dataset<a class="anchor" aria-label="anchor" href="#movies-dataset-1"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">movies</span><span class="op">$</span><span class="va">year</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ISOdatetime.html">ISOdate</a></span><span class="op">(</span><span class="va">movies</span><span class="op">$</span><span class="va">year</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">binary</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>avg_intgross <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">intgross</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">avg_intgross</span>, color <span class="op">=</span> <span class="va">binary</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span><span class="co">#    geom_line(alpha=0.25) +</span></span>
-<span><span class="co">#    geom_point(alpha=0.10) +</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Popularity Over Time Based on Album Release Date"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Album Release Date"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Popularity"</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: Removed 1886 rows containing missing values (`geom_line()`).</code></pre>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-1.png" width="672"></div>
-<p>In this updated line chart, we use <code>track_album_release_date</code> after converting it to a Date type. The graph will depict how track popularity (<code>track_popularity</code>) has evolved over time based on their album’s release date (<code>track_album_release_date</code>).</p>
-<p>By making these modifications, researchers can more accurately explore the relationship between a song’s album release date and its popularity, further strengthening the integrity and interpretability of their findings.</p>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Bechdel International Gross Through the Years"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Movie Release Year"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"International Gross (2013)"</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by 'year'. You can override using the
+## `.groups` argument.</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-77-1.png" width="672"></div>
 </div>
 </div>
+<div id="box-plot" class="section level3 unnumbered">
+<h3>Box Plot<a class="anchor" aria-label="anchor" href="#box-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>Boxplots serve to provide a five-number summary of a dataset: minimum, first quartile (Q1), median, third quartile (Q3), and maximum. They are particularly useful for identifying outliers and understanding the spread and skewness of your data. In the context of the movies data set, a boxplot could be utilized to illustrate how movie budgets have changed over different decades.</p>
+<p>Boxplots are less detailed than violin plots or density plots but are exceptionally good for quickly comparing medians and spreads across categories. They are also less susceptible to being skewed by outliers and are straightforward to interpret, making them a staple in exploratory data analysis.</p>
+<div id="spotify_songs-dataset-2" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-2"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">playlist_genre</span>, y<span class="op">=</span><span class="va">loudness</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-78-1.png" width="672"></div>
+<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">playlist_genre</span>, y<span class="op">=</span><span class="va">loudness</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span>outlier.shape<span class="op">=</span><span class="fl">8</span>, outlier.size<span class="op">=</span><span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Boxplot of Loudness by Genre"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_tufte.html">theme_tufte</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-78-2.png" width="672"></div>
 </div>
-<div id="references-4" class="section level2" number="14.7">
-<h2>
-<span class="header-section-number">14.7</span> References<a class="anchor" aria-label="anchor" href="#references-4"><i class="fas fa-link"></i></a>
-</h2>
-<ul>
-<li>Wickham, H. (2016). ggplot2: Elegant graphics for data analysis. Springer.</li>
-<li>Aufderheide, P., &amp; Jaszi, P. (2011). Reclaiming fair use: How to put balance back in copyright. University of Chicago Press.</li>
-<li>Butler, B. (2014). Copyright for academic librarians and professionals. American Library Association.</li>
-<li>Clark, A. (2011). Visual ethics in a contemporary landscape. In E. Margolis &amp; L. Pauwels (Eds.), The SAGE handbook of visual research methods (pp. 167-183). SAGE Publications.</li>
-<li>Mann, C., &amp; Stewart, F. (2000). Internet communication and qualitative research: A handbook for researching online. SAGE Publications.</li>
-<li>Rose, G. (2016). Visual methodologies: An introduction to researching with visual materials (4th ed.). SAGE Publications.</li>
-<li>United States Copyright Office. (2010). Copyright basics. Retrieved from <a href="https://www.copyright.gov/circs/circ01.pdf" class="uri">https://www.copyright.gov/circs/circ01.pdf</a>
-</li>
-<li>Carney, R. N., &amp; Levin, J. R. (2002). Pictorial illustrations still improve students’ learning from text. Educational Psychology Review, 14(1), 5-26.</li>
-<li>Few, S. (2009). Now you see it: Simple visualization techniques for quantitative analysis. Analytics Press.</li>
-<li>Kosslyn, S. M. (2006). Graph design for the eye and mind. Oxford University Press.</li>
-<li>Rogowitz, B. E., &amp; Treinish, L. A. (1998). Data visualization: The end of the rainbow. IEEE Spectrum, 35(12), 52-59.</li>
-<li>Tufte, E. R. (1990). Envisioning information. Graphics Press.</li>
-<li>Tufte, E. R. (2001). The visual display of quantitative information (2nd ed.). Graphics Press.</li>
-<li>Ware, C. (2004). Information visualization: Perception for design (2nd ed.). Morgan Kaufmann.</li>
-<li>American Psychological Association. (2019). Publication Manual of the American Psychological Association (7th ed.). American Psychological Association.</li>
-<li>Few, S. (2012). Show me the numbers: Designing tables and graphs to enlighten. Analytics Press.</li>
-<li>Kosslyn, S. M. (2006). Graph design for the eye and mind. Oxford University Press.</li>
-<li>Zacks, J., &amp; Tversky, B. (1999). Bars and lines: A study of graphic communication. Memory &amp; Cognition, 27(6), 1073-1079.</li>
-<li>Börner, K. (2015). Atlas of knowledge: Anyone can map. MIT Press.</li>
-<li>Cairo, A. (2016). The truthful art: Data, charts, and maps for communication. New Riders.</li>
-<li>Kelleher, C., &amp; Wagener, T. (2011). Ten guidelines for effective data visualization in scientific publications. Environmental Modelling &amp; Software, 26(6), 822-827.</li>
-<li>Tufte, E. R. (2001). The visual display of quantitative information. Graphics Press.</li>
-<li>Ware, C. (2012). Information visualization: Perception for design. Elsevier.</li>
-</ul>
+<div id="movies-dataset-2" class="section level4 unnumbered">
+<h4>
+<code>movies</code> dataset<a class="anchor" aria-label="anchor" href="#movies-dataset-2"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">binary</span>, y<span class="op">=</span><span class="va">imdb_rating</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: Removed 202 rows containing non-finite values (`stat_boxplot()`).</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-79-1.png" width="672"></div>
+<div class="sourceCode" id="cb145"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">binary</span>, y<span class="op">=</span><span class="va">imdb_rating</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span>outlier.shape<span class="op">=</span><span class="fl">8</span>, outlier.size<span class="op">=</span><span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Boxplot of IMDB Ratings by Bechedel Test Results"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_fivethirtyeight.html">theme_fivethirtyeight</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: Removed 202 rows containing non-finite values (`stat_boxplot()`).</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-79-2.png" width="672"></div>
+</div>
+</div>
+<div id="violin-plot" class="section level3 unnumbered">
+<h3>Violin Plot<a class="anchor" aria-label="anchor" href="#violin-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>A violin plot is an excellent choice when the aim is to understand the distribution of a numerical variable across different categories while considering both the median and the data distribution. It essentially combines a boxplot with a kernel density plot. This allows for a nuanced visualization that goes beyond central tendency and variability to include skewness and outliers as well. For instance, the Spotify data set could use a violin plot to show track popularity for various playlist genres. This can reveal if certain genres have a higher range of popularity scores, or if some genres generally possess more popular songs.</p>
+<p>The advantage of a violin plot over a boxplot or a simple bar chart is its ability to show the density of the data at different values, which can be crucial for understanding the underlying patterns. A violin plot can be particularly effective when comparing more than two categories, as it can reveal data density and distribution trends that might not be immediately apparent otherwise.</p>
+<div id="spotify_songs-dataset-3" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-3"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb147"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">playlist_genre</span>, y<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-80-1.png" width="672"></div>
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">playlist_genre</span>, y<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html">geom_violin</a></span><span class="op">(</span>fill<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Distribution of Track Popularity by Genre"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_wsj.html">theme_wsj</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-80-2.png" width="672"></div>
+</div>
+</div>
+<div id="bar-plots" class="section level3 unnumbered">
+<h3>Bar Plots<a class="anchor" aria-label="anchor" href="#bar-plots"><i class="fas fa-link"></i></a>
+</h3>
+<p>Bar plots, also known as bar charts, are a versatile means of displaying data across discrete categories. Each category is represented by a rectangular bar, the length (or height) of which is proportional to the value it represents. These plots can be either horizontal or vertical, depending on the data and the story one wishes to tell. Unlike line charts, which are primarily designed to illustrate trends in continuous data, bar plots excel when the goal is to compare individual data points across categories (Tufte, 2001).</p>
+<p>Bar plots can be further customized to fit specific needs. For example, stacked bar charts allow for the distribution of multiple variables to be displayed within each category, offering a more nuanced view of the data. Grouped bar charts, on the other hand, enable comparisons between corresponding categories of different groups. This type of visualization is particularly useful for emphasizing relative sizes, revealing disparities, or displaying proportions among the categories.</p>
+<div id="spotify_songs-dataset-4" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-4"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">playlist_genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-81-1.png" width="672"></div>
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">playlist_genre</span>, fill<span class="op">=</span><span class="va">playlist_genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Bar Plot of Number of Tracks by Genre"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-81-2.png" width="672"></div>
+</div>
+<div id="movies-dataset-3" class="section level4 unnumbered">
+<h4>
+<code>movies</code> dataset<a class="anchor" aria-label="anchor" href="#movies-dataset-3"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-82-1.png" width="672"></div>
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">movies</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">year</span>, fill<span class="op">=</span><span class="va">year</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Bar Plot of Number of Movies by Year"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_light</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: The following aesthetics were dropped during statistical transformation: fill
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-82-2.png" width="672"></div>
+</div>
+</div>
+<div id="histogram" class="section level3 unnumbered">
+<h3>Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
+</h3>
+<p>Histograms allow for the depiction of the frequency distribution of numerical variables. In a histogram, the data is divided into a set of bins, and the number of data points that fall into each bin is represented by the height of the bar. Using the video games data set, a histogram could visualize the distribution of average player counts, helping to answer questions such as: “Do most games have a high or low average player count?”</p>
+<p>Histograms are particularly useful for getting a quick sense of the distribution of a data set and identifying outliers or trends. However, the interpretive value of a histogram can be highly influenced by the choice of bin size. A poorly chosen bin size may either smooth over or exaggerate features of the data, thereby leading to misinterpretation.</p>
+<div id="spotify_songs-dataset-5" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-5"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">energy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-83-1.png" width="672"></div>
+<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">energy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span>fill<span class="op">=</span><span class="st">"red"</span>, alpha<span class="op">=</span><span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Histogram of Energy Levels"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_economist.html">theme_economist</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-83-2.png" width="672"></div>
+</div>
+</div>
+<div id="density-plot" class="section level3 unnumbered">
+<h3>Density Plot<a class="anchor" aria-label="anchor" href="#density-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>A density plot serves to estimate the probability density function of a variable, allowing researchers to better understand its distribution. This plot type uses kernel density estimation to create a smooth curve, making it easier to identify where values are concentrated. One could use a density plot to visualize the distribution of, say, tempo across all tracks in the Spotify data set.</p>
+<p>This type of plot is beneficial when you want to identify modes in the data that aren’t tied to specific categories. Unlike histograms, which are limited by the chosen bin size, density plots offer a smoother, more continuous view of data distribution. This can be particularly useful when comparing two or more distributions, as it eliminates the need for harmonizing bin sizes and ranges across different histograms.</p>
+<div id="spotify_songs-dataset-6" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-6"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb158"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">danceability</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-84-1.png" width="672"></div>
+<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">danceability</span>, fill<span class="op">=</span><span class="va">playlist_genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Density of Danceability by Genre"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_stata.html">theme_stata</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-84-2.png" width="672"></div>
+<p>ing the integrity and interpretability of their findings.</p>
+</div>
+</div>
+<div id="ridgeline-plot" class="section level3 unnumbered">
+<h3>Ridgeline Plot<a class="anchor" aria-label="anchor" href="#ridgeline-plot"><i class="fas fa-link"></i></a>
+</h3>
+<p>Ridgeline plots can be considered as a set of vertically aligned density plots, typically used for visualizing changes in distributions across multiple categories. One can use a ridgeline plot to show how the average number of players in video games changes across different months. Each density plot for a month would be a “ridge,” allowing for easy comparison across time or other categories.</p>
+<p>The strength of a ridgeline plot lies in its ability to facilitate the comparison of multiple density estimates simultaneously. This can be especially valuable when looking to identify shifts or trends in data across categories, seasons, or other groups.</p>
+<div id="spotify_songs-dataset-7" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-7"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggridges/">ggridges</a></span><span class="op">)</span></span>
+<span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">tempo</span>, y <span class="op">=</span> <span class="va">playlist_genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Picking joint bandwidth of 3.66</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-85-1.png" width="672"></div>
+<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">tempo</span>, y <span class="op">=</span> <span class="va">playlist_genre</span>, fill <span class="op">=</span> <span class="va">playlist_genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Ridgeline Plot of Tempo by Genre"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Picking joint bandwidth of 3.66</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-85-2.png" width="672"></div>
+</div>
+</div>
+<div id="heatmap" class="section level3 unnumbered">
+<h3>Heatmap<a class="anchor" aria-label="anchor" href="#heatmap"><i class="fas fa-link"></i></a>
+</h3>
+<p>A heatmap uses color gradients to represent the values of a matrix and is often used to show the correlation between variables. Heatmaps can be particularly useful for examining complex datasets with multiple variables. For instance, a heatmap could be used with the movies dataset to display correlations between different numerical variables such as budget, domestic gross, and IMDb rating.</p>
+<p>Heatmaps are beneficial for quickly identifying patterns or clusters in the data matrix. They are often used in conjunction with clustering algorithms to identify groups of similar variables or observations. However, the effectiveness of a heatmap can be highly influenced by the chosen color scheme, so care must be taken to select one that is both aesthetically pleasing and easily interpretable.</p>
+<div id="spotify_songs-dataset-8" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-8"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">key</span>, y<span class="op">=</span><span class="va">mode</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_tile</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-86-1.png" width="672"></div>
+<div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">key</span>, y<span class="op">=</span><span class="va">mode</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_tile</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill<span class="op">=</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradient</a></span><span class="op">(</span>low<span class="op">=</span><span class="st">"white"</span>, high<span class="op">=</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Heatmap of Key and Mode by Popularity"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-86-2.png" width="672"></div>
+</div>
+</div>
+<div id="pie-charts" class="section level3 unnumbered">
+<h3>Pie Charts<a class="anchor" aria-label="anchor" href="#pie-charts"><i class="fas fa-link"></i></a>
+</h3>
+<p>Pie charts are a form of circular chart where the circle is divided into sectors that each represent a portion of the whole. These charts are most effective when used to display proportional or percentage data and are commonly employed to illustrate the breakdown of a whole into its component parts (Spence, 2005).</p>
+<p>However, pie charts have their limitations. They are not recommended for comparing more than a few categories or for representing exact values. The circular nature of the chart makes it difficult to accurately compare the sizes of the sectors, especially when they are of similar size. Furthermore, pie charts can be misleading if they are not properly labeled or if the percentages do not sum up to 100%. Despite these limitations, pie charts are widely used for their ease of understanding and their ability to quickly convey an at-a-glance summary of data distributions.</p>
+<div id="spotify_songs-dataset-9" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-9"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Basic</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>, fill<span class="op">=</span><span class="va">playlist_genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>width<span class="op">=</span><span class="fl">1</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="st">"y"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-87-1.png" width="672"></div>
+<div class="sourceCode" id="cb167"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Customized</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="st">""</span>, fill<span class="op">=</span><span class="va">playlist_genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>width<span class="op">=</span><span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="st">"y"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Pie Chart of Tracks by Genre"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-87-2.png" width="672"></div>
+</div>
+<div id="movies-dataset-4" class="section level4 unnumbered">
+<h4>
+<code>movies</code> dataset<a class="anchor" aria-label="anchor" href="#movies-dataset-4"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">binary</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="va">n</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">binary</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="st">"y"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Bechdel Test Outcome"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-88-1.png" width="672"></div>
+<p>Certainly, let’s delve into two example plots for each dataset. These plots will be somewhat complex, demonstrating multiple facets of ggplot2 and data visualization. The aim is to offer rich insights into the data while also serving as instructive examples for communication and media students interested in research methodologies.</p>
+</div>
+</div>
+<div id="advanced-versions" class="section level3 unnumbered">
+<h3>Advanced Versions<a class="anchor" aria-label="anchor" href="#advanced-versions"><i class="fas fa-link"></i></a>
+</h3>
+<div id="spotify_songs-dataset-10" class="section level4 unnumbered">
+<h4>
+<code>spotify_songs</code> dataset<a class="anchor" aria-label="anchor" href="#spotify_songs-dataset-10"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Assuming spotify_songs is the dataframe loaded with the Spotify Songs Data</span></span>
+<span><span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">playlist_genre</span>, <span class="va">key</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>average_energy <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">energy</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>            average_danceability <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">danceability</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">average_energy</span>, y<span class="op">=</span><span class="va">average_danceability</span>, color<span class="op">=</span><span class="va">playlist_genre</span>, shape<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">key</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size<span class="op">=</span><span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_shape_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="fl">11</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method<span class="op">=</span><span class="st">'lm'</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"Average Energy vs Danceability by Genre and Key"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Average Energy"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Average Danceability"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## `summarise()` has grouped output by 'playlist_genre'. You can override using
+## the `.groups` argument.
+## `geom_smooth()` using formula = 'y ~ x'</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-89-1.png" width="672"></div>
+</div>
+<div id="explanation" class="section level4 unnumbered">
+<h4>Explanation<a class="anchor" aria-label="anchor" href="#explanation"><i class="fas fa-link"></i></a>
+</h4>
+<p>This plot shows the relationship between the average <code>energy</code> and <code>danceability</code> of songs, categorized by their <code>playlist_genre</code> and shaped by their musical <code>key</code>. Linear models are fitted to each genre to show trends. This plot could be useful for understanding how different genres and musical keys correlate with the energy and danceability of the songs.</p>
+</div>
+<div id="movies-dataset-5" class="section level4 unnumbered">
+<h4>
+<code>movies</code> dataset<a class="anchor" aria-label="anchor" href="#movies-dataset-5"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Assuming movies is the dataframe loaded with the Movies Data</span></span>
+<span><span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">budget_2013</span><span class="op">/</span><span class="fl">10</span><span class="op">^</span><span class="fl">6</span>, y<span class="op">=</span><span class="va">imdb_rating</span>, color<span class="op">=</span><span class="va">binary</span>, size<span class="op">=</span><span class="va">intgross_2013</span><span class="op">/</span><span class="fl">10</span><span class="op">^</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_size.html">scale_size_continuous</a></span><span class="op">(</span>range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">10</span><span class="op">)</span>, name<span class="op">=</span><span class="st">"Int Gross per Million"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Change name here</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method<span class="op">=</span><span class="st">'lm'</span>, se<span class="op">=</span><span class="cn">FALSE</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>group<span class="op">=</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="st">"IMDB Rating vs Budget (2013 adjusted) by Bechdel Test Outcome"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Budget (2013 Adjusted in Millions)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"IMDB Rating"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"green"</span><span class="op">)</span>, name<span class="op">=</span><span class="st">"Bechdel Test Outcome"</span>, labels<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Fail"</span>, <span class="st">"Pass"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## `geom_smooth()` using formula = 'y ~ x'</code></pre>
+<pre><code>## Warning: Removed 202 rows containing non-finite values (`stat_smooth()`).</code></pre>
+<pre><code>## Warning: The following aesthetics were dropped during statistical transformation:
+## colour, size
+## ℹ This can happen when ggplot fails to infer the correct grouping structure in
+##   the data.
+## ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+##   variable into a factor?</code></pre>
+<pre><code>## Warning: Removed 211 rows containing missing values (`geom_point()`).</code></pre>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-90-1.png" width="672"></div>
+</div>
+<div id="explanation-1" class="section level4 unnumbered">
+<h4>Explanation<a class="anchor" aria-label="anchor" href="#explanation-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>In this plot, the x-axis represents the budget of the movie adjusted to 2013 dollars, and the y-axis represents the IMDB rating. The color of each point indicates whether the movie passed the Bechdel test or not. The size of the point represents the international gross income of the movie, also adjusted to 2013 dollars. A linear model is fitted to show the overall trend.</p>
+<p>Both these plots provide multifaceted views of their respective datasets, and can serve as pedagogical tools for illustrating the richness and complexity that ggplot2 can bring to data visualization.</p>
+
+</div>
+</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -454,41 +686,46 @@
 <li><a class="nav-link" href="#visualizations"><span class="header-section-number">14</span> Visualizations</a></li>
 <li>
 <a class="nav-link" href="#introduction-6"><span class="header-section-number">14.1</span> Introduction</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#the-imperative-of-visual-representations-in-research"><span class="header-section-number">14.1.1</span> The Imperative of Visual Representations in Research</a></li>
-<li><a class="nav-link" href="#complementing-textual-explanations-for-a-holistic-understanding"><span class="header-section-number">14.1.2</span> Complementing Textual Explanations for a Holistic Understanding</a></li>
+<li><a class="nav-link" href="#the-imperative-of-visual-representations-in-research">The Imperative of Visual Representations in Research</a></li>
+<li><a class="nav-link" href="#complementing-textual-explanations-for-a-holistic-understanding">Complementing Textual Explanations for a Holistic Understanding</a></li>
 </ul>
 </li>
 <li>
 <a class="nav-link" href="#tables"><span class="header-section-number">14.2</span> Tables</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#importance-of-tables"><span class="header-section-number">14.2.1</span> Importance of Tables</a></li>
-<li><a class="nav-link" href="#guidelines-for-creating-tables"><span class="header-section-number">14.2.2</span> Guidelines for Creating Tables</a></li>
+<li><a class="nav-link" href="#importance-of-tables">Importance of Tables</a></li>
+<li><a class="nav-link" href="#guidelines-for-creating-tables">Guidelines for Creating Tables</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#references-3"><span class="header-section-number">14.3</span> References</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#importance-of-tables-1"><span class="header-section-number">14.3.1</span> Importance of Tables</a></li>
-<li><a class="nav-link" href="#guidelines-for-creating-tables-1"><span class="header-section-number">14.3.2</span> Guidelines for Creating Tables</a></li>
+<a class="nav-link" href="#illustrations"><span class="header-section-number">14.3</span> Illustrations</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#types-of-illustrations">Types of Illustrations</a></li>
+<li><a class="nav-link" href="#using-illustrations-effectively">Using Illustrations Effectively</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#illustrations"><span class="header-section-number">14.4</span> Illustrations</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#types-of-illustrations"><span class="header-section-number">14.4.1</span> Types of Illustrations</a></li>
-<li><a class="nav-link" href="#using-illustrations-effectively"><span class="header-section-number">14.4.2</span> Using Illustrations Effectively</a></li>
+<a class="nav-link" href="#images"><span class="header-section-number">14.4</span> Images</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#types-of-images">Types of Images</a></li>
+<li><a class="nav-link" href="#ethical-considerations-8">Ethical Considerations</a></li>
 </ul>
 </li>
 <li>
-<a class="nav-link" href="#images"><span class="header-section-number">14.5</span> Images</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#types-of-images"><span class="header-section-number">14.5.1</span> Types of Images</a></li>
-<li><a class="nav-link" href="#ethical-considerations-8"><span class="header-section-number">14.5.2</span> Ethical Considerations</a></li>
+<a class="nav-link" href="#plots-1"><span class="header-section-number">14.5</span> Plots</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introduction-to-ggplot2">Introduction to ggplot2</a></li>
+<li><a class="nav-link" href="#load-libraries">Load libraries</a></li>
+<li><a class="nav-link" href="#load-data">Load data</a></li>
+<li><a class="nav-link" href="#scatter-plot">Scatter Plot</a></li>
+<li><a class="nav-link" href="#line-charts">Line Charts</a></li>
+<li><a class="nav-link" href="#box-plot">Box Plot</a></li>
+<li><a class="nav-link" href="#violin-plot">Violin Plot</a></li>
+<li><a class="nav-link" href="#bar-plots">Bar Plots</a></li>
+<li><a class="nav-link" href="#histogram">Histogram</a></li>
+<li><a class="nav-link" href="#density-plot">Density Plot</a></li>
+<li><a class="nav-link" href="#ridgeline-plot">Ridgeline Plot</a></li>
+<li><a class="nav-link" href="#heatmap">Heatmap</a></li>
+<li><a class="nav-link" href="#pie-charts">Pie Charts</a></li>
+<li><a class="nav-link" href="#advanced-versions">Advanced Versions</a></li>
 </ul>
 </li>
-<li>
-<a class="nav-link" href="#plots-1"><span class="header-section-number">14.6</span> Plots</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#introduction-to-ggplot2"><span class="header-section-number">14.6.1</span> Introduction to ggplot2</a></li>
-<li><a class="nav-link" href="#popular-plots-using-ggplot2-and-the-spotify_songs-dataset"><span class="header-section-number">14.6.2</span> Popular Plots Using ggplot2 and the spotify_songs Dataset</a></li>
-</ul>
-</li>
-<li><a class="nav-link" href="#references-4"><span class="header-section-number">14.7</span> References</a></li>
 </ul>
 
       <div class="book-extra">
@@ -505,7 +742,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-19.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-23.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
