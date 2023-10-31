@@ -1,0 +1,7 @@
+"0","```r
+spotify_songs <- fread(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv\")
+
+games <- fread(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-16/games.csv\")
+
+movies <- fread(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv\")
+```"

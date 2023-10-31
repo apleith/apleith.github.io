@@ -1,0 +1,20 @@
+bookdown::gitbook:
+  css: css/style.css  # Specifies the path to the CSS file for gitbook format
+  config:
+    toc:
+      collapse: subsection  # ToC collapses at subsection level
+      scroll_highlight: true  # Highlights ToC items on scroll
+      before: |
+        <li><a href="#"><img src="https://apleith.github.io/images/c_me.png" style="width=100%"></a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s  # Edit button URL
+    download: ["pdf", "epub"]  # Download options for the book
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex  # LaTeX preamble file for additional customization
+  latex_engine: xelatex  # LaTeX engine used
+  citation_package: natbib  # Citation package
+  keep_tex: yes  # Keep the .tex file after compilation
+bookdown::epub_book: default  # EPUB format with default settings
+bookdown::bs4_book: default  # bs4_book format with default settings

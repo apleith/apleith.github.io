@@ -1,0 +1,11 @@
+"0","```r
+# Basic
+ggplot(video_games, aes(x=year, y=month)) + geom_tile(aes(fill=avg))
+
+# Customized
+ggplot(video_games, aes(x=year, y=month)) + 
+  geom_tile(aes(fill=avg)) +
+  scale_fill_gradient(low=\"white\", high=\"red\") +
+  ggtitle(\"Heatmap of Average Players by Month and Year\") +
+  theme_minimal()
+```"

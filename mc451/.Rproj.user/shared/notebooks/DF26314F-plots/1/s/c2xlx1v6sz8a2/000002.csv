@@ -1,0 +1,10 @@
+"0","```r
+# Basic
+ggplot(spotify_songs, aes(x=playlist_genre, y=loudness)) + geom_boxplot()
+
+# Customized
+ggplot(spotify_songs, aes(x=playlist_genre, y=loudness)) +
+  geom_boxplot(outlier.shape=8, outlier.size=2) +
+  ggtitle(\"Boxplot of Loudness by Genre\") +
+  theme_minimal()
+```"

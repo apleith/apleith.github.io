@@ -128,7 +128,7 @@
 
 \title{Introduction to Communication and Media Research with R}
 \author{Alex P. Leith, PhD}
-\date{2023-10-23}
+\date{2023-10-31}
 
 \begin{document}
 \maketitle
@@ -4485,7 +4485,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
@@ -4493,7 +4493,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 ## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\AP Leith\AppData\Local\Temp\RtmpkZvPDU\downloaded_packages
+##  C:\Users\alexl\AppData\Local\Temp\RtmpK8WHQW\downloaded_packages
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -5042,10 +5042,6 @@ You can load an installed package using the \texttt{library()} function:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
 \hypertarget{unloading-a-package}{%
 \subsubsection*{Unloading a Package}\label{unloading-a-package}}
 \addcontentsline{toc}{subsubsection}{Unloading a Package}
@@ -5073,9 +5069,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.0 (2023-04-21 ucrt)
+## R version 4.3.1 (2023-06-16 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 11 x64 (build 22621)
+## Running under: Windows 10 x64 (build 19045)
 ## 
 ## Matrix products: default
 ## 
@@ -5094,15 +5090,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
-##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
-##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
-## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
-## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
-## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
-## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
-## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
-## [33] tools_4.3.0      gtable_0.3.3
+##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
+##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
+##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
+## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
+## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
+## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
+## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
+## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
+## [33] gtable_0.3.4
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5626,10 +5622,6 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: package 'mice' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{verbatim}
 ## 
 ## Attaching package: 'mice'
 \end{verbatim}
@@ -5710,15 +5702,11 @@ Certainly, this chapter will walk through the common \texttt{dplyr} commands usi
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{verbatim}
 ## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
 ## v forcats   1.0.0     v stringr   1.5.0
 ## v ggplot2   3.4.4     v tibble    3.2.1
-## v lubridate 1.9.2     v tidyr     1.3.0
-## v purrr     1.0.1     
+## v lubridate 1.9.3     v tidyr     1.3.0
+## v purrr     1.0.2     
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::between()     masks data.table::between()
 ## x mice::filter()       masks dplyr::filter(), stats::filter()
@@ -6142,7 +6130,7 @@ Diagrams serve as visual abstractions or simplifications of complex systems, pro
 
 Flowcharts are specialized diagrams that visually represent a sequence of steps, generally using geometrical shapes connected by lines and arrows to indicate flow direction. They are often employed to describe workflows, algorithms, or processes, allowing for easier understanding and problem-solving. In the context of communication and media research, a flowchart could be used to outline the steps taken in a content analysis procedure, for instance.
 
-\includegraphics{images/model.png}
+\includegraphics[width=1\textwidth,height=\textheight]{images/model.png}
 
 \hypertarget{organizational-models}{%
 \subsubsection*{Organizational Models}\label{organizational-models}}
@@ -6253,27 +6241,10 @@ Apart from legal obligations, researchers must consider the potential ethical im
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(ggplot2)}
 \FunctionTok{library}\NormalTok{(ggridges)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'ggridges' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(data.table)}
 \FunctionTok{library}\NormalTok{(tidyverse)}
 \FunctionTok{library}\NormalTok{(ggthemes)}
-\end{Highlighting}
-\end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'ggthemes' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{options}\NormalTok{(}\AttributeTok{scipen=}\DecValTok{999}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -6905,51 +6876,40 @@ Both these plots provide multifaceted views of their respective datasets, and ca
 \hypertarget{data-analysis}{%
 \chapter{Data Analysis}\label{data-analysis}}
 
-\hypertarget{analyses-1}{%
-\section{Analyses}\label{analyses-1}}
-
 \hypertarget{introduction-7}{%
-\subsection{Introduction}\label{introduction-7}}
+\section{Introduction}\label{introduction-7}}
 
 Data analysis plays a quintessential role in the realm of communication and media research. With an ever-increasing volume of data generated from diverse sources, researchers need robust techniques to sift through this raw information and discern meaningful patterns or trends. This section outlines the objectives of data analysis, categorizes the major types of statistical analyses commonly used, and discusses the pivotal role of statistical software such as RStudio in facilitating this analytical process.
 
 \hypertarget{objectives-and-importance-of-data-analysis}{%
-\subsection{Objectives and Importance of Data Analysis}\label{objectives-and-importance-of-data-analysis}}
+\subsection*{Objectives and Importance of Data Analysis}\label{objectives-and-importance-of-data-analysis}}
+\addcontentsline{toc}{subsection}{Objectives and Importance of Data Analysis}
 
 The fundamental aim of data analysis is to distill large amounts of information into actionable insights. In the context of communication and media research, these objectives can be further refined as follows:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{Summarization}: To present data in a digestible format, offering a clear snapshot of its main features.
-\item
-  \textbf{Exploration}: To identify relationships or trends within the data, providing a basis for further investigation.
-\item
-  \textbf{Inference}: To make educated guesses or predictions about a broader population based on sample data.
-\item
-  \textbf{Validation}: To confirm or negate existing theories or hypotheses through empirical evidence.
-\item
-  \textbf{Decision-Making}: To provide actionable recommendations and insights that may influence policy, strategy, or further academic research.
-\end{enumerate}
+\textbf{Summarization}: To present data in a digestible format, offering a clear snapshot of its main features. \textbf{Exploration}: To identify relationships or trends within the data, providing a basis for further investigation. \textbf{Inference}: To make educated guesses or predictions about a broader population based on sample data. \textbf{Validation}: To confirm or negate existing theories or hypotheses through empirical evidence. \textbf{Decision-Making}: To provide actionable recommendations and insights that may influence policy, strategy, or further academic research.
 
 Ignoring proper data analysis can lead to misleading conclusions or partial understandings, affecting the quality and reliability of the research. Thus, the importance of meticulous data analysis cannot be overstated.
 
 \hypertarget{types-of-analyses-descriptive-vs.-inferential}{%
-\subsection{Types of Analyses: Descriptive vs.~Inferential}\label{types-of-analyses-descriptive-vs.-inferential}}
+\subsection*{Types of Analyses: Descriptive vs.~Inferential}\label{types-of-analyses-descriptive-vs.-inferential}}
+\addcontentsline{toc}{subsection}{Types of Analyses: Descriptive vs.~Inferential}
 
 \hypertarget{descriptive-analysis}{%
-\subsubsection{Descriptive Analysis}\label{descriptive-analysis}}
+\subsubsection*{Descriptive Analysis}\label{descriptive-analysis}}
+\addcontentsline{toc}{subsubsection}{Descriptive Analysis}
 
 In descriptive statistics, the aim is to summarize the main aspects of the data in hand, often through tables, graphs, or numerical measures such as mean, median, and standard deviation. Descriptive analysis provides a compact representation of the data, but it does not allow researchers to make conclusions beyond the data at hand (Tukey, 1977).
 
 \hypertarget{inferential-analysis}{%
-\subsubsection{Inferential Analysis}\label{inferential-analysis}}
+\subsubsection*{Inferential Analysis}\label{inferential-analysis}}
+\addcontentsline{toc}{subsubsection}{Inferential Analysis}
 
 In contrast, inferential statistics go a step further by enabling researchers to draw conclusions about a population based on a sample. Inferential methods like t-tests, ANOVA, and regressions allow one to assess hypotheses and derive estimates that are generalizable to a broader context (Cohen, 1988).
 
 \hypertarget{role-of-statistical-software-e.g.-rstudio}{%
-\subsection{Role of Statistical Software: E.g., RStudio}\label{role-of-statistical-software-e.g.-rstudio}}
+\subsection*{Role of Statistical Software: E.g., RStudio}\label{role-of-statistical-software-e.g.-rstudio}}
+\addcontentsline{toc}{subsection}{Role of Statistical Software: E.g., RStudio}
 
 In the current digital age, statistical software has become an indispensable tool for data analysis. RStudio is one such environment that offers a wide array of statistical and graphical techniques. It is especially favored for its:
 
@@ -6968,206 +6928,412 @@ In the current digital age, statistical software has become an indispensable too
 
 By mastering RStudio or similar statistical software, researchers are better equipped to conduct complex analyses that can contribute to robust and insightful findings.
 
-\hypertarget{descriptive-statistics-1}{%
-\section{Descriptive Statistics}\label{descriptive-statistics-1}}
+\hypertarget{descriptive-analysis-1}{%
+\section{Descriptive Analysis}\label{descriptive-analysis-1}}
 
-\hypertarget{introduction-8}{%
-\subsection{Introduction}\label{introduction-8}}
+Descriptive statistics form the bedrock of data exploration and initial data analysis. These statistics facilitate the comprehensive summarization, condensation, and general understanding of the structural attributes of expansive datasets (De Veaux, Velleman, \& Bock, 2018). Employed as a precursor to more advanced statistical procedures, descriptive statistics offer a straightforward way to describe the main aspects of a data set, from the typical values to the variability within the set. They provide researchers with tools to quickly identify patterns, trends, and potential outliers without making generalized predictions about larger populations (Boslaugh, 2012). Furthermore, descriptive statistics are essential in exploratory data analysis, where their role is to aid in the detection of any unusual observations that may warrant further investigation (Tukey, 1977).
 
-Descriptive statistics provide an essential toolkit for summarizing and visualizing large volumes of data. They enable researchers to get a ``snapshot'' of the main features of their dataset, often through tables, graphical representations, or single numerical metrics like the mean or median. This section will delve into key concepts and techniques in descriptive statistics, including the distribution of variables, measures of central tendency, and metrics to assess variability.
+Moreover, descriptive statistics have applications that span across various domains---from social sciences to economics, from healthcare to engineering. The utility lies in their ability to translate large amounts of data into easily understandable formats, such as graphs, tables, and numerical measures, thereby transforming raw data into insightful information. In research, they often serve as the initial step in the process of data analytics, giving researchers a snapshot of what the data looks like before delving into more complex analytical techniques like inferential statistics or machine learning algorithms (Hair et al., 2014).
 
-\hypertarget{distribution}{%
-\subsection{Distribution}\label{distribution}}
-
-\hypertarget{simple}{%
-\subsubsection{Simple}\label{simple}}
-
-The distribution of a variable shows how its values are spread or clustered over its range. Understanding this can offer insights into the characteristics of the data.
-
-\hypertarget{frequency-distribution-tables}{%
-\paragraph{Frequency Distribution Tables}\label{frequency-distribution-tables}}
-
-Frequency distribution tables display the number of times each unique value occurs in the dataset. They provide a rudimentary view of the data's distribution.
-
-\hypertarget{creating-histograms-and-bar-plots}{%
-\paragraph{Creating Histograms and Bar Plots}\label{creating-histograms-and-bar-plots}}
-
-Histograms and bar plots are graphical methods for visualizing distributions. While histograms are used for continuous data, bar plots are used for categorical data.
-
-\textbf{Code Snippet for Histogram in R using \texttt{ggplot2}}
+\hypertarget{measures-of-central-tendency}{%
+\subsection*{Measures of Central Tendency}\label{measures-of-central-tendency}}
+\addcontentsline{toc}{subsection}{Measures of Central Tendency}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(ggplot2)}
-\FunctionTok{ggplot}\NormalTok{(spotify\_songs, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{track\_popularity)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_histogram}\NormalTok{(}\AttributeTok{binwidth=}\DecValTok{5}\NormalTok{, }\AttributeTok{fill=}\StringTok{"blue"}\NormalTok{, }\AttributeTok{alpha=}\FloatTok{0.7}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{ggtitle}\NormalTok{(}\StringTok{"Distribution of Track Popularity"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{xlab}\NormalTok{(}\StringTok{"Track Popularity"}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{ylab}\NormalTok{(}\StringTok{"Frequency"}\NormalTok{)}
+\CommentTok{\# Load the packages}
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(data.table)}
+
+\CommentTok{\# Import the datasets}
+\NormalTok{spotify\_songs }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020{-}01{-}21/spotify\_songs.csv"}\NormalTok{)}
+\NormalTok{movies }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}03{-}09/movies.csv"}\NormalTok{)}
+
+\CommentTok{\# Preview the first few rows of the datasets}
+\FunctionTok{head}\NormalTok{(spotify\_songs)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-91-1.pdf}
+\begin{verbatim}
+##                  track_id                                            track_name
+## 1: 6f807x0ima9a1j3VPbc7VN I Don't Care (with Justin Bieber) - Loud Luxury Remix
+## 2: 0r7CVbZTWZgbTCYdfa2P31                       Memories - Dillon Francis Remix
+## 3: 1z1Hg7Vb0AhHDiEmnDE79l                       All the Time - Don Diablo Remix
+## 4: 75FpbthrwQmzHlBJLuGdC7                     Call You Mine - Keanu Silva Remix
+## 5: 1e8PAfcKUYoKkxPhrHqw4x               Someone You Loved - Future Humans Remix
+## 6: 7fvUMiyapMsRRxr07cU8Ef     Beautiful People (feat. Khalid) - Jack Wins Remix
+##        track_artist track_popularity         track_album_id
+## 1:       Ed Sheeran               66 2oCs0DGTsRO98Gh5ZSl2Cx
+## 2:         Maroon 5               67 63rPSO264uRjW1X5E6cWv6
+## 3:     Zara Larsson               70 1HoSmj2eLcsrR0vE9gThr4
+## 4: The Chainsmokers               60 1nqYsOef1yKKuGOVchbsk6
+## 5:    Lewis Capaldi               69 7m7vv9wlQ4i0LFuJiE2zsQ
+## 6:       Ed Sheeran               67 2yiy9cd2QktrNvWC2EUi0k
+##                                         track_album_name
+## 1: I Don't Care (with Justin Bieber) [Loud Luxury Remix]
+## 2:                       Memories (Dillon Francis Remix)
+## 3:                       All the Time (Don Diablo Remix)
+## 4:                           Call You Mine - The Remixes
+## 5:               Someone You Loved (Future Humans Remix)
+## 6:     Beautiful People (feat. Khalid) [Jack Wins Remix]
+##    track_album_release_date playlist_name            playlist_id playlist_genre
+## 1:               2019-06-14     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
+## 2:               2019-12-13     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
+## 3:               2019-07-05     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
+## 4:               2019-07-19     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
+## 5:               2019-03-05     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
+## 6:               2019-07-11     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
+##    playlist_subgenre danceability energy key loudness mode speechiness
+## 1:         dance pop        0.748  0.916   6   -2.634    1      0.0583
+## 2:         dance pop        0.726  0.815  11   -4.969    1      0.0373
+## 3:         dance pop        0.675  0.931   1   -3.432    0      0.0742
+## 4:         dance pop        0.718  0.930   7   -3.778    1      0.1020
+## 5:         dance pop        0.650  0.833   1   -4.672    1      0.0359
+## 6:         dance pop        0.675  0.919   8   -5.385    1      0.1270
+##    acousticness instrumentalness liveness valence   tempo duration_ms
+## 1:       0.1020       0.00000000   0.0653   0.518 122.036      194754
+## 2:       0.0724       0.00421000   0.3570   0.693  99.972      162600
+## 3:       0.0794       0.00002330   0.1100   0.613 124.008      176616
+## 4:       0.0287       0.00000943   0.2040   0.277 121.956      169093
+## 5:       0.0803       0.00000000   0.0833   0.725 123.976      189052
+## 6:       0.0799       0.00000000   0.1430   0.585 124.982      163049
+\end{verbatim}
 
-\hypertarget{grouped}{%
-\subsubsection{Grouped}\label{grouped}}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(movies)}
+\end{Highlighting}
+\end{Shaded}
 
-When dealing with multi-category variables or wanting to understand the distribution of a variable across different groups, grouped distributions come into play.
-
-\hypertarget{cross-tabulations}{%
-\paragraph{Cross-Tabulations}\label{cross-tabulations}}
-
-Cross-tabulation is a method for summarizing two or more categorical variables in a table format, showing the frequency of each combination of categories.
-
-\hypertarget{visualization-techniques-for-grouped-data}{%
-\paragraph{Visualization Techniques for Grouped Data}\label{visualization-techniques-for-grouped-data}}
-
-Visualizing grouped data often involves using side-by-side bar charts or stacked bar charts to show the distribution of categories within each group.
-
-\hypertarget{central-tendency}{%
-\subsection{Central Tendency}\label{central-tendency}}
+\begin{verbatim}
+##    year      imdb            title            test clean_test binary    budget
+## 1: 2013 tt1711425    21 &amp; Over          notalk     notalk   FAIL  13000000
+## 2: 2012 tt1343727         Dredd 3D     ok-disagree         ok   PASS  45000000
+## 3: 2013 tt2024544 12 Years a Slave notalk-disagree     notalk   FAIL  20000000
+## 4: 2013 tt1272878           2 Guns          notalk     notalk   FAIL  61000000
+## 5: 2013 tt0453562               42             men        men   FAIL  40000000
+## 6: 2013 tt1335975         47 Ronin             men        men   FAIL 225000000
+##    domgross  intgross     code budget_2013 domgross_2013 intgross_2013
+## 1: 25682380  42195766 2013FAIL    13000000      25682380      42195766
+## 2: 13414714  40868994 2012PASS    45658735      13611086      41467257
+## 3: 53107035 158607035 2013FAIL    20000000      53107035     158607035
+## 4: 75612460 132493015 2013FAIL    61000000      75612460     132493015
+## 5: 95020213  95020213 2013FAIL    40000000      95020213      95020213
+## 6: 38362475 145803842 2013FAIL   225000000      38362475     145803842
+##    period_code decade_code imdb_id
+## 1:           1           1 1711425
+## 2:           1           1 1343727
+## 3:           1           1 2024544
+## 4:           1           1 1272878
+## 5:           1           1  453562
+## 6:           1           1 1335975
+##                                                                                                                                                                                                                                               plot
+## 1:                                                                                                                                                                                                                                            <NA>
+## 2:                                                                                                                                                                                                                                            <NA>
+## 3:                                                                                                                    In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
+## 4: A DEA agent and a naval intelligence officer find themselves on the run after a botched attempt to infiltrate a drug cartel. While fleeing, they learn the secret of their shaky alliance: Neither knew that the other was an undercover agent.
+## 5:                                                                                                  The life story of Jackie Robinson and his history-making signing with the Brooklyn Dodgers under the guidance of team executive Branch Rickey.
+## 6:                                                                                                                                   A band of samurai set out to avenge the death and dishonor of their master at the hands of a ruthless shogun.
+##    rated response          language country
+## 1:  <NA>       NA              <NA>    <NA>
+## 2:  <NA>       NA              <NA>    <NA>
+## 3:     R     TRUE           English USA, UK
+## 4:     R     TRUE  English, Spanish     USA
+## 5: PG-13     TRUE           English     USA
+## 6: PG-13     TRUE English, Japanese     USA
+##                                                                                                                    writer
+## 1:                                                                                                                   <NA>
+## 2:                                                                                                                   <NA>
+## 3:                                       John Ridley (screenplay), Solomon Northup (based on ""Twelve Years a Slave"" by)
+## 4:                                Blake Masters (screenplay), Steven Grant (based on the Boom! Studios graphic novels by)
+## 5:                                                                                                        Brian Helgeland
+## 6: Chris Morgan (screenplay), Hossein Amini (screenplay), Chris Morgan (screen story by), Walter Hamada (screen story by)
+##    metascore imdb_rating          director    released
+## 1:        NA          NA              <NA>        <NA>
+## 2:        NA          NA              <NA>        <NA>
+## 3:        97         8.3     Steve McQueen 08 Nov 2013
+## 4:        55         6.8 Baltasar Kormákur 02 Aug 2013
+## 5:        62         7.6   Brian Helgeland 12 Apr 2013
+## 6:        29         6.6       Carl Rinsch 25 Dec 2013
+##                                                                 actors
+## 1:                                                                <NA>
+## 2:                                                                <NA>
+## 3:          Chiwetel Ejiofor, Dwight Henry, Dickie Gravois, Bryan Batt
+## 4:  Denzel Washington, Mark Wahlberg, Paula Patton, Edward James Olmos
+## 5: Chadwick Boseman, Harrison Ford, Nicole Beharie, Christopher Meloni
+## 6:         Keanu Reeves, Hiroyuki Sanada, Ko Shibasaki, Tadanobu Asano
+##                         genre                                            awards
+## 1:                       <NA>                                              <NA>
+## 2:                       <NA>                                              <NA>
+## 3:  Biography, Drama, History Won 3 Oscars. Another 131 wins & 137 nominations.
+## 4:      Action, Comedy, Crime                                            1 win.
+## 5:    Biography, Drama, Sport                          3 wins & 13 nominations.
+## 6: Action, Adventure, Fantasy                                     1 nomination.
+##    runtime  type
+## 1:    <NA>  <NA>
+## 2:    <NA>  <NA>
+## 3: 134 min movie
+## 4: 109 min movie
+## 5: 128 min movie
+## 6: 118 min movie
+##                                                                                              poster
+## 1:                                                                                             <NA>
+## 2:                                                                                             <NA>
+## 3: http://ia.media-imdb.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg
+## 4: http://ia.media-imdb.com/images/M/MV5BNTQ5MTgzNDg4OF5BMl5BanBnXkFtZTcwMjAyODEzOQ@@._V1_SX300.jpg
+## 5: http://ia.media-imdb.com/images/M/MV5BMTQwMDU4MDI3MV5BMl5BanBnXkFtZTcwMjU1NDgyOQ@@._V1_SX300.jpg
+## 6: http://ia.media-imdb.com/images/M/MV5BMTc0MjE2NzE0OV5BMl5BanBnXkFtZTgwNTU5MjE1MDE@._V1_SX300.jpg
+##    imdb_votes error
+## 1:       <NA>    NA
+## 2:       <NA>    NA
+## 3:    143,446    NA
+## 4:     87,301    NA
+## 5:     43,608    NA
+## 6:     25,735    NA
+\end{verbatim}
 
 \hypertarget{mean}{%
-\subsubsection{Mean}\label{mean}}
+\subsubsection*{Mean}\label{mean}}
+\addcontentsline{toc}{subsubsection}{Mean}
 
-The mean provides a measure of central location for the data. It is calculated as the sum of all observations divided by the number of observations.
+The mean is perhaps the most widely recognized measure of central tendency, representing the arithmetic average of a dataset. To compute the mean, all the data points are summed up and then divided by the number of data points (Lind, Marchal, \& Wathen, 2012). The mean is sensitive to outliers, which can disproportionately influence the calculated average, potentially resulting in a misleading representation of central location (McClave, Benson, \& Sincich, 2011). Despite this limitation, the mean is highly useful in various statistical methods, including regression analysis and hypothesis testing, because of its mathematical properties (Field, Miles, \& Field, 2012).
 
-\hypertarget{interpretation-and-use-cases}{%
-\paragraph{Interpretation and Use Cases}\label{interpretation-and-use-cases}}
+Importantly, the mean can be categorized into different types: arithmetic mean, geometric mean, and harmonic mean, each with specific applications depending on the nature of the data and the intended analysis (Triola, 2018). For instance, the geometric mean is often used when dealing with data that exhibit exponential growth or decline, such as in financial or biological contexts (Cox \& Snell, 1981).
 
-The mean is useful for many types of data but is highly sensitive to outliers. It is frequently used for interval or ratio data where the concept of an ``average'' is meaningful.
+\textbf{Example using Spotify Songs Dataset}: To find the mean popularity of songs.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mean\_popularity }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{mean\_popularity =} \FunctionTok{mean}\NormalTok{(track\_popularity, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+
+\NormalTok{mean\_popularity}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   mean_popularity
+## 1        42.47708
+\end{verbatim}
 
 \hypertarget{median}{%
-\subsubsection{Median}\label{median}}
+\subsubsection*{Median}\label{median}}
+\addcontentsline{toc}{subsubsection}{Median}
 
-The median is the value that separates the highest half of the dataset from the lowest half.
+The median serves as another measure of central tendency and is less sensitive to outliers compared to the mean (Lind et al., 2012). It is defined as the middle value in a dataset that has been arranged in ascending order. If the dataset contains an even number of observations, the median is calculated as the average of the two middle numbers. Medians are particularly useful for data that are skewed or contain outliers, as they provide a more ``resistant'' measure of the data's central location (Hoaglin, Mosteller, \& Tukey, 2000).
 
-\hypertarget{when-to-use-median-instead-of-mean}{%
-\paragraph{When to Use Median Instead of Mean}\label{when-to-use-median-instead-of-mean}}
+In addition to its robustness against outliers, the median is often used in non-parametric statistical tests like the Mann-Whitney U test and the Kruskal-Wallis test. These tests do not assume that the data follow a specific distribution, making the median an invaluable asset in such scenarios (Siegel \& Castellan, 1988).
 
-The median is less sensitive to outliers and skewed data. It is particularly useful when the distribution is not symmetric.
+\textbf{Example using Movies Dataset}: To find the median budget of movies.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{median\_budget }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{median\_budget =} \FunctionTok{median}\NormalTok{(budget, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+
+\NormalTok{median\_budget}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   median_budget
+## 1      28000000
+\end{verbatim}
 
 \hypertarget{mode}{%
-\subsubsection{Mode}\label{mode}}
+\subsubsection*{Mode}\label{mode}}
+\addcontentsline{toc}{subsubsection}{Mode}
 
-The mode is the value that appears most frequently in a dataset.
+The mode refers to the value or values that appear most frequently in a dataset (Gravetter \& Wallnau, 2016). A dataset can be unimodal, having one mode; bimodal, having two modes; or multimodal, having multiple modes. While the mode is less commonly used than the mean and median for numerical data, it is the primary measure of central tendency for categorical or nominal data (Agresti, 2002).
 
-\hypertarget{use-cases-and-limitations}{%
-\paragraph{Use Cases and Limitations}\label{use-cases-and-limitations}}
+Despite its less frequent application in numerical contexts, the mode can still be useful for identifying the most common values in a dataset and for understanding the general distribution of the data (Bland \& Altman, 1996). For example, in market research, knowing the mode of a dataset related to consumer preferences can provide valuable insights into what most consumers are likely to choose.
 
-The mode can be applied to nominal data and does not require numerical computation. However, its utility can be limited if the data have multiple modes (multimodal) or no mode (amodal).
-
-\hypertarget{variability}{%
-\subsection{Variability}\label{variability}}
-
-Understanding the spread of the data set is as critical as understanding its central tendency. This provides insights into the reliability of the data.
-
-\begin{itemize}
-\item
-  \textbf{Range}: The difference between the maximum and minimum values.
-\item
-  \textbf{Standard Deviation}: Indicates the average distance from the mean. A low standard deviation suggests that the data points are close to the mean, whereas a high standard deviation indicates greater variability.
-\item
-  \textbf{Variance}: The square of the standard deviation. It measures how far a set of numbers are spread out from their average value.
-\end{itemize}
-
-By comprehensively understanding these descriptive statistics, researchers can make more informed decisions about subsequent stages of analysis, such as hypothesis testing or modeling.
-
-\hypertarget{inferential-statistics-1}{%
-\section{Inferential Statistics}\label{inferential-statistics-1}}
-
-\hypertarget{introduction-9}{%
-\subsection{Introduction}\label{introduction-9}}
-
-Inferential statistics extend the reach of descriptive statistics by allowing researchers to draw conclusions about entire populations based on samples. They provide a framework to estimate population parameters, make predictions, and test hypotheses. This section will explore some common methods in inferential statistics, including t-tests, Analysis of Variance (ANOVA), and regression analyses.
-
-\hypertarget{t-tests}{%
-\subsection{t-tests}\label{t-tests}}
-
-\hypertarget{explanation-of-independent-and-paired-t-tests}{%
-\subsubsection{Explanation of Independent and Paired t-tests}\label{explanation-of-independent-and-paired-t-tests}}
-
-\begin{itemize}
-\item
-  \textbf{Independent t-test}: Used to compare the means of two independent groups. For instance, comparing the mean song popularity between two different genres in the \texttt{spotify\_songs} dataset.
-\item
-  \textbf{Paired t-test}: Used when the same subjects are used for each treatment, such as a before-and-after scenario.
-\end{itemize}
-
-\hypertarget{assumptions-and-limitations}{%
-\subsubsection{Assumptions and Limitations}\label{assumptions-and-limitations}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Normality}: The data should be approximately normally distributed.
-\item
-  \textbf{Independence}: Observations should be independent of each other.
-\item
-  \textbf{Equal Variance}: The variance within each group should be approximately equal, although this is more flexible in some variations of the t-test.
-\end{itemize}
-
-\textbf{Code Examples Using R}
+\textbf{Example using Spotify Songs Dataset}: To find the mode of the \texttt{playlist\_genre}.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Check if the package is already installed before trying to install it}
-\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\StringTok{"tidyverse"} \SpecialCharTok{\%in\%} \FunctionTok{installed.packages}\NormalTok{()[,}\StringTok{"Package"}\NormalTok{]) \{}
-  \FunctionTok{install.packages}\NormalTok{(}\StringTok{"tidyverse"}\NormalTok{, }\AttributeTok{repos =} \StringTok{\textquotesingle{}http://cran.us.r{-}project.org\textquotesingle{}}\NormalTok{)}
-\NormalTok{\}}
+\NormalTok{mode\_genre }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{count}\NormalTok{(playlist\_genre) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n)) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{slice\_head}\NormalTok{(}\AttributeTok{n =} \DecValTok{1}\NormalTok{)}
 
-\CommentTok{\# Load the package}
-\FunctionTok{library}\NormalTok{(tidyverse)}
-
-\CommentTok{\# Subset data for t{-}test}
-\NormalTok{spotify\_songs\_ttest }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{filter}\NormalTok{(playlist\_genre }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"pop"}\NormalTok{, }\StringTok{"rock"}\NormalTok{))}
+\NormalTok{mode\_genre}
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+##    playlist_genre    n
+## 1:            edm 6043
+\end{verbatim}
+
+\hypertarget{measures-of-dispersion}{%
+\subsection*{Measures of Dispersion}\label{measures-of-dispersion}}
+\addcontentsline{toc}{subsection}{Measures of Dispersion}
+
+\hypertarget{range}{%
+\subsubsection*{Range}\label{range}}
+\addcontentsline{toc}{subsubsection}{Range}
+
+The range is the simplest measure of dispersion, calculated by subtracting the smallest value from the largest value in the dataset (McClave, Benson, \& Sincich, 2011). While straightforward to compute, the range is highly sensitive to outliers and does not account for how the rest of the values in the dataset are distributed (Triola, 2018).
+
+The range offers a quick, albeit crude, estimate of the dataset's variability. It is often used in conjunction with other measures of dispersion for a more comprehensive understanding of data spread. Despite its limitations, the range can be helpful in initial exploratory analyses to quickly identify the scope of the data and to detect possible outliers or data entry errors (Tukey, 1977).
+
+\textbf{Example using Movies Dataset}: To find the range of movie budgets.
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Independent t{-}test}
-\FunctionTok{t.test}\NormalTok{(spotify\_songs\_ttest}\SpecialCharTok{$}\NormalTok{track\_popularity }\SpecialCharTok{\textasciitilde{}}\NormalTok{ spotify\_songs\_ttest}\SpecialCharTok{$}\NormalTok{playlist\_genre, }\AttributeTok{var.equal =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{budget\_range }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{Range =} \FunctionTok{max}\NormalTok{(budget, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{min}\NormalTok{(budget, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+
+\NormalTok{budget\_range}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##       Range
+## 1 424993000
+\end{verbatim}
+
+\hypertarget{standard-deviation}{%
+\subsubsection*{Standard Deviation}\label{standard-deviation}}
+\addcontentsline{toc}{subsubsection}{Standard Deviation}
+
+The standard deviation is a more sophisticated measure of dispersion that indicates how much individual data points deviate from the mean (Lind et al., 2012). Calculated as the square root of the variance, the standard deviation provides an intuitive sense of the data's spread since it is in the same unit as the original data points. It plays a crucial role in various statistical analyses, including hypothesis testing and confidence interval estimation, and is fundamental in fields ranging from finance to natural sciences (Levine, Stephan, Krehbiel, \& Berenson, 2008).
+
+The standard deviation can be classified into two types: population standard deviation and sample standard deviation. The former is used when the data represent an entire population, while the latter is used for sample data and is calculated with a slight adjustment to account for sample bias (Kenney \& Keeping, 1962).
+
+\textbf{Example using Spotify Songs Dataset}: To find the standard deviation of \texttt{danceability}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{std\_danceability }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{std\_danceability =} \FunctionTok{sd}\NormalTok{(danceability, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+
+\NormalTok{std\_danceability}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   std_danceability
+## 1        0.1450853
+\end{verbatim}
+
+\hypertarget{variance}{%
+\subsubsection*{Variance}\label{variance}}
+\addcontentsline{toc}{subsubsection}{Variance}
+
+Variance is closely related to the standard deviation, essentially being its square. It quantifies how much individual data points in a dataset differ from the mean (Gravetter \& Wallnau, 2016). Unlike the standard deviation, the variance is not in the same unit as the data, which can make it less intuitive to interpret. However, variance has essential mathematical properties that make it useful in statistical modeling and hypothesis testing (Moore, McCabe, \& Craig, 2009).
+
+In statistical theory, the concept of variance is pivotal for various analytical techniques, such as Analysis of Variance (ANOVA) and Principal Component Analysis (PCA). Variance allows for the decomposition of data into explained and unexplained components, serving as a key element in understanding data variability in greater depth (Johnson \& Wichern, 2007).
+
+\textbf{Example using Movies Dataset}: To find the variance in IMDB ratings.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{var\_imdb\_rating }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{var\_imdb\_rating =} \FunctionTok{var}\NormalTok{(imdb\_rating, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+
+\NormalTok{var\_imdb\_rating}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   var_imdb_rating
+## 1       0.9269498
+\end{verbatim}
+
+\hypertarget{inferential-analysis-1}{%
+\section*{Inferential Analysis}\label{inferential-analysis-1}}
+\addcontentsline{toc}{section}{Inferential Analysis}
+
+Inferential statistics serve as the cornerstone for drawing conclusions about a population based on a sample. Unlike descriptive statistics, which aim to summarize data, inferential statistics allow for hypothesis testing, predictions, and inferences about the data (Field, Miles, \& Field, 2012). The utility of inferential statistics lies in its ability to generalize findings beyond the immediate data to broader contexts. This is particularly valuable in research areas where it's impractical to collect data from an entire population (Frankfort-Nachmias, Leon-Guerrero, \& Davis, 2020).
+
+The application of inferential statistics often involves the use of various tests and models to determine statistical significance, which in turn helps researchers make meaningful inferences. Such analyses are commonly used in disciplines like psychology, economics, and medicine, to name a few. They provide a quantitative basis for conclusions and decisions, which is fundamental for scientific research (Rosner, 2015). Given the capacity to test theories and hypotheses, inferential statistics remain an indispensable tool in the scientific community.
+
+\hypertarget{comparison-of-means}{%
+\subsection*{Comparison of Means}\label{comparison-of-means}}
+\addcontentsline{toc}{subsection}{Comparison of Means}
+
+\hypertarget{t-test}{%
+\subsubsection*{T-test}\label{t-test}}
+\addcontentsline{toc}{subsubsection}{T-test}
+
+The T-test is a statistical method used to determine if there is a significant difference between the means of two groups. It is commonly used to compare two samples to determine if they could have originated from the same population (Rosner, 2015). The T-test operates under certain assumptions, such as the data being normally distributed and the samples being independent of each other. Violation of these assumptions may lead to misleading results.
+
+\textbf{Example with \texttt{movies} dataset:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Calculate the mean budget for action and drama movies}
+\NormalTok{action\_movies }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(genre }\SpecialCharTok{==} \StringTok{\textquotesingle{}Action\textquotesingle{}}\NormalTok{)}
+\NormalTok{drama\_movies }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(genre }\SpecialCharTok{==} \StringTok{\textquotesingle{}Drama\textquotesingle{}}\NormalTok{)}
+
+\CommentTok{\# Perform t{-}test}
+\FunctionTok{t.test}\NormalTok{(action\_movies}\SpecialCharTok{$}\NormalTok{budget, drama\_movies}\SpecialCharTok{$}\NormalTok{budget)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
 ## 
-##  Two Sample t-test
+##  Welch Two Sample t-test
 ## 
-## data:  spotify_songs_ttest$track_popularity by spotify_songs_ttest$playlist_genre
-## t = 12.288, df = 10456, p-value < 0.00000000000000022
-## alternative hypothesis: true difference in means between group pop and group rock is not equal to 0
+## data:  action_movies$budget and drama_movies$budget
+## t = -1.5346, df = 1.2327, p-value = 0.3325
+## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  5.056736 6.976329
+##  -76461080  52430636
 ## sample estimates:
-##  mean in group pop mean in group rock 
-##           47.74487           41.72834
+## mean of x mean of y 
+##   7570000  19585222
 \end{verbatim}
+
+\textbf{Independent Sample T-test}
+
+An independent sample T-test is used when comparing the means of two independent groups to assess whether their means are statistically different (Field et al., 2012). The groups should be separate, meaning the performance or attributes of one group should not influence the other. For instance, this type of T-test might be used to compare the average test scores of two different classrooms. It's essential to note that both groups should be normally distributed, and ideally, they should have the same variance for the T-test to be applicable.
+
+\textbf{Example with \texttt{Survivor\ summary.csv} and \texttt{viewers.csv}:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{survivor }\OtherTok{\textless{}{-}}\NormalTok{ readr}\SpecialCharTok{::}\FunctionTok{read\_csv}\NormalTok{(}\StringTok{\textquotesingle{}https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}06{-}01/summary.csv\textquotesingle{}}\NormalTok{)}
+\CommentTok{\# Load data}
+\NormalTok{summary }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}06{-}01/summary.csv"}\NormalTok{)}
+
+\CommentTok{\# Compare average viewers for seasons in different locations}
+\NormalTok{fiji\_seasons }\OtherTok{\textless{}{-}}\NormalTok{ summary }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(country }\SpecialCharTok{==} \StringTok{\textquotesingle{}Fiji\textquotesingle{}}\NormalTok{)}
+\NormalTok{other\_seasons }\OtherTok{\textless{}{-}}\NormalTok{ summary }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{filter}\NormalTok{(country }\SpecialCharTok{!=} \StringTok{\textquotesingle{}Fiji\textquotesingle{}}\NormalTok{)}
+
+\CommentTok{\# Perform t{-}test}
+\FunctionTok{t.test}\NormalTok{(fiji\_seasons}\SpecialCharTok{$}\NormalTok{viewers\_mean, other\_seasons}\SpecialCharTok{$}\NormalTok{viewers\_mean)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-## Rows: 40 Columns: 19
-## -- Column specification --------------------------------------------------------
-## Delimiter: ","
-## chr  (9): season_name, location, country, tribe_setup, full_name, winner, ru...
-## dbl  (6): season, viewers_premier, viewers_finale, viewers_reunion, viewers_...
-## date (4): premiered, ended, filming_started, filming_ended
 ## 
-## i Use `spec()` to retrieve the full column specification for this data.
-## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+##  Welch Two Sample t-test
+## 
+## data:  fiji_seasons$viewers_mean and other_seasons$viewers_mean
+## t = -4.5307, df = 27.938, p-value = 0.0001004
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -7.667140 -2.892491
+## sample estimates:
+## mean of x mean of y 
+##  10.69857  15.97839
 \end{verbatim}
+
+\textbf{Paired Sample T-test}
+
+In contrast, a paired sample T-test is designed to compare means from the same group at different times or under different conditions (Vasishth \& Broe, 2011). For example, it could be used to compare student test scores before and after a training program. Here, the assumption is that the differences between pairs follow a normal distribution. Paired T-tests are particularly useful in ``before and after'' scenarios, where each subject serves as their control, thereby increasing the test's sensitivity.
+
+\textbf{Example with Survivor's \texttt{summary.csv}:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Paired t{-}test (Hypothetical pre and post columns)}
-\FunctionTok{t.test}\NormalTok{(survivor}\SpecialCharTok{$}\NormalTok{viewers\_premier, survivor}\SpecialCharTok{$}\NormalTok{viewers\_finale, }\AttributeTok{paired =} \ConstantTok{TRUE}\NormalTok{)}
+\CommentTok{\# Perform paired t{-}test to compare viewership at premier and finale}
+\NormalTok{paired\_t\_test\_result }\OtherTok{\textless{}{-}} \FunctionTok{t.test}\NormalTok{(summary}\SpecialCharTok{$}\NormalTok{viewers\_premier, summary}\SpecialCharTok{$}\NormalTok{viewers\_finale, }\AttributeTok{paired =} \ConstantTok{TRUE}\NormalTok{)}
+
+\CommentTok{\# Output the result}
+\NormalTok{paired\_t\_test\_result}
 \end{Highlighting}
 \end{Shaded}
 
@@ -7175,7 +7341,7 @@ Inferential statistics extend the reach of descriptive statistics by allowing re
 ## 
 ##  Paired t-test
 ## 
-## data:  survivor$viewers_premier and survivor$viewers_finale
+## data:  summary$viewers_premier and summary$viewers_finale
 ## t = -0.76096, df = 39, p-value = 0.4513
 ## alternative hypothesis: true mean difference is not equal to 0
 ## 95 percent confidence interval:
@@ -7185,127 +7351,223 @@ Inferential statistics extend the reach of descriptive statistics by allowing re
 ##        -0.75575
 \end{verbatim}
 
-\hypertarget{anovas}{%
-\subsection{ANOVAs}\label{anovas}}
+\hypertarget{analysis-of-variance-anova}{%
+\subsubsection*{Analysis of Variance (ANOVA)}\label{analysis-of-variance-anova}}
+\addcontentsline{toc}{subsubsection}{Analysis of Variance (ANOVA)}
 
-\hypertarget{one-way-and-two-way-anova}{%
-\subsubsection{One-Way and Two-Way ANOVA}\label{one-way-and-two-way-anova}}
+ANOVA is a more generalized form of the T-test and is used when there are more than two groups to compare (Kutner, Nachtsheim, \& Neter, 2004). The underlying principle of ANOVA is to partition the variance within the data into ``between-group'' and ``within-group'' variance, to identify any significant differences in means.
 
-\begin{itemize}
-\item
-  \textbf{One-Way ANOVA}: Tests whether the means of a numerical variable within more than two groups are equal. For instance, it could test whether the average popularity differs between multiple genres.
-\item
-  \textbf{Two-Way ANOVA}: Extends One-Way ANOVA by considering two factors simultaneously.
-\end{itemize}
+\textbf{One-way ANOVA}
 
-\hypertarget{interpretation-of-results}{%
-\subsubsection{Interpretation of Results}\label{interpretation-of-results}}
+One-way ANOVA focuses on a single independent variable with more than two levels or groups (Tabachnick \& Fidell, 2013). It allows researchers to test if there are statistically significant differences between the means of three or more independent groups. It is widely used in various fields, including psychology, business, and healthcare, for testing the impact of different conditions or treatments.
 
-Interpreting ANOVA results involves assessing the F-statistic, degrees of freedom, and the p-value to decide whether the observed differences in means are statistically significant.
-
-\hypertarget{assumptions-and-diagnostics}{%
-\subsubsection{Assumptions and Diagnostics}\label{assumptions-and-diagnostics}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Normality}: Each group should be approximately normally distributed.
-\item
-  \textbf{Independence}: Observations should be independent within and across groups.
-\item
-  \textbf{Homogeneity of Variance}: The variance within each group should be roughly equal.
-\end{itemize}
-
-\hypertarget{regressions}{%
-\subsection{Regressions}\label{regressions}}
-
-\hypertarget{linear-vs.-logistic-regression}{%
-\subsubsection{Linear vs.~Logistic Regression}\label{linear-vs.-logistic-regression}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Linear Regression}: Used to predict a continuous outcome variable based on one or more predictor variables.
-\item
-  \textbf{Logistic Regression}: Used to predict a binary outcome variable.
-\end{itemize}
-
-\hypertarget{multiple-regression-analysis}{%
-\subsubsection{Multiple Regression Analysis}\label{multiple-regression-analysis}}
-
-Involves two or more predictor variables. Researchers can assess the contribution of each predictor to the model and account for the influence of other variables.
-
-\hypertarget{assumptions-diagnostics-and-interpretation}{%
-\subsubsection{Assumptions, Diagnostics, and Interpretation}\label{assumptions-diagnostics-and-interpretation}}
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{Linearity}: The relationship between predictors and outcome should be linear.
-\item
-  \textbf{Independence}: Observations should be independent of each other.
-\item
-  \textbf{Normality of Residuals}: The residuals (or errors) should be normally distributed for valid hypothesis testing.
-\end{itemize}
-
-\textbf{Code Example for Linear Regression in R}
+\textbf{Example with \texttt{Survivor\ castaways.csv}:}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{lm\_model }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(track\_popularity }\SpecialCharTok{\textasciitilde{}}\NormalTok{ duration\_ms }\SpecialCharTok{+}\NormalTok{ playlist\_genre, }\AttributeTok{data =}\NormalTok{ spotify\_songs)}
-\FunctionTok{summary}\NormalTok{(lm\_model)}
+\NormalTok{castaways }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}06{-}01/castaways.csv"}\NormalTok{)}
+
+
+\CommentTok{\# Perform one{-}way ANOVA for total\_votes\_received among different personality types}
+\NormalTok{anova\_result }\OtherTok{\textless{}{-}} \FunctionTok{aov}\NormalTok{(total\_votes\_received }\SpecialCharTok{\textasciitilde{}}\NormalTok{ personality\_type, }\AttributeTok{data =}\NormalTok{ castaways)}
+\FunctionTok{summary}\NormalTok{(anova\_result)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                   Df Sum Sq Mean Sq F value Pr(>F)
+## personality_type  15    227   15.14   1.075  0.376
+## Residuals        725  10209   14.08               
+## 3 observations deleted due to missingness
+\end{verbatim}
+
+\textbf{Two-way ANOVA}
+
+Two-way ANOVA, however, involves two independent variables, offering a more intricate comparison and understanding of the interaction effects (Winer, Brown, \& Michels, 1991). It helps to analyze how two factors impact a dependent variable, and it can also show how the two independent variables interact with each other. This form of ANOVA is highly valuable in experimental design where multiple variables may influence the outcome.
+
+\textbf{Example with \texttt{movies} dataset:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Perform two{-}way ANOVA for budget by genre and year}
+\NormalTok{anova\_result }\OtherTok{\textless{}{-}} \FunctionTok{aov}\NormalTok{(budget }\SpecialCharTok{\textasciitilde{}}\NormalTok{ genre }\SpecialCharTok{*}\NormalTok{ year, }\AttributeTok{data =}\NormalTok{ movies)}
+\FunctionTok{summary}\NormalTok{(anova\_result)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##               Df              Sum Sq            Mean Sq F value
+## genre        270 1743797675202755840   6458509908158355   5.358
+## year           1  159516834289368928 159516834289368928 132.346
+## genre:year   156  386490379486245504   2477502432604138   2.056
+## Residuals   1164 1402970663621501696   1205301257406788        
+##                           Pr(>F)    
+## genre       < 0.0000000000000002 ***
+## year        < 0.0000000000000002 ***
+## genre:year       0.0000000000258 ***
+## Residuals                           
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 202 observations deleted due to missingness
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{regression-analysis}{%
+\subsection*{Regression Analysis}\label{regression-analysis}}
+\addcontentsline{toc}{subsection}{Regression Analysis}
+
+\hypertarget{simple-linear-regression}{%
+\subsubsection*{Simple Linear Regression}\label{simple-linear-regression}}
+\addcontentsline{toc}{subsubsection}{Simple Linear Regression}
+
+Simple linear regression aims to model the relationship between a single independent variable and a dependent variable by fitting a linear equation to observed data (Montgomery, Peck, \& Vining, 2012). The primary objective is to find the best-fitting straight line that accurately predicts the output values within a range. Simple linear regression works best when the variables have a linear relationship, and the data is homoscedastic, meaning the variance of errors is constant across levels of the independent variable.
+
+\textbf{Example with \texttt{Survivor\ viewers.csv}:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{viewers }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}06{-}01/viewers.csv"}\NormalTok{)}
+
+\CommentTok{\# Model viewers based on episode numbers}
+\NormalTok{lm\_result }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(viewers }\SpecialCharTok{\textasciitilde{}}\NormalTok{ episode, }\AttributeTok{data =}\NormalTok{ viewers)}
+\FunctionTok{summary}\NormalTok{(lm\_result)}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
 ## 
 ## Call:
-## lm(formula = track_popularity ~ duration_ms + playlist_genre, 
-##     data = spotify_songs)
+## lm(formula = viewers ~ episode, data = viewers)
 ## 
 ## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -56.009 -17.645   2.908  18.924  63.497 
+##    Min     1Q Median     3Q    Max 
+## -9.189 -4.344 -2.014  4.224 37.931 
 ## 
 ## Coefficients:
-##                         Estimate   Std. Error t value            Pr(>|t|)    
-## (Intercept)         47.769606541  0.599421521   79.69 <0.0000000000000002 ***
-## duration_ms         -0.000058129  0.000002296  -25.32 <0.0000000000000002 ***
-## playlist_genrelatin 11.863027432  0.462124200   25.67 <0.0000000000000002 ***
-## playlist_genrepop   12.633908291  0.454035648   27.83 <0.0000000000000002 ***
-## playlist_genrer&b    7.265348546  0.456872123   15.90 <0.0000000000000002 ***
-## playlist_genrerap    7.894982894  0.449349067   17.57 <0.0000000000000002 ***
-## playlist_genrerock   8.408237450  0.470857797   17.86 <0.0000000000000002 ***
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept) 13.24438    0.54547  24.281 <0.0000000000000002 ***
+## episode      0.03960    0.06065   0.653               0.514    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
-## Residual standard error: 24.36 on 32826 degrees of freedom
-## Multiple R-squared:  0.04916,    Adjusted R-squared:  0.04899 
-## F-statistic: 282.9 on 6 and 32826 DF,  p-value: < 0.00000000000000022
+## Residual standard error: 6.283 on 572 degrees of freedom
+##   (22 observations deleted due to missingness)
+## Multiple R-squared:  0.0007448,  Adjusted R-squared:  -0.001002 
+## F-statistic: 0.4263 on 1 and 572 DF,  p-value: 0.5141
 \end{verbatim}
 
-\textbf{References}
+\hypertarget{multiple-linear-regression}{%
+\subsubsection*{Multiple Linear Regression}\label{multiple-linear-regression}}
+\addcontentsline{toc}{subsubsection}{Multiple Linear Regression}
+
+Multiple linear regression extends the concept of simple linear regression to include two or more independent variables (Hair et al., 2014). This approach allows for a more nuanced understanding of the relationships among variables. It provides the tools needed to predict a dependent variable based on the values of multiple independent variables. Multiple linear regression assumes that the relationship between the dependent variable and the independent variables is linear, and it also assumes that the residuals are normally distributed and have constant variance.
+
+\textbf{Example with \texttt{Survivor\ summary.csv}:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Model average viewers based on multiple factors}
+\NormalTok{lm\_result }\OtherTok{\textless{}{-}} \FunctionTok{lm}\NormalTok{(viewers\_mean }\SpecialCharTok{\textasciitilde{}}\NormalTok{ country }\SpecialCharTok{+}\NormalTok{ timeslot }\SpecialCharTok{+}\NormalTok{ season, }\AttributeTok{data =}\NormalTok{ summary)}
+\FunctionTok{summary}\NormalTok{(lm\_result)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = viewers_mean ~ country + timeslot + season, data = summary)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -2.1969 -0.3632  0.0000  0.2378  2.1969 
+## 
+## Coefficients:
+##                            Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept)                30.76874    1.15957  26.535 0.000000000000000697 ***
+## countryBrazil              -8.54130    1.62530  -5.255 0.000053615198056057 ***
+## countryCambodia           -10.11504    1.98496  -5.096 0.000075482615565828 ***
+## countryChina               -8.32319    1.93885  -4.293             0.000438 ***
+## countryFiji                -9.15756    1.89552  -4.831             0.000134 ***
+## countryGabon               -8.72445    2.03256  -4.292             0.000438 ***
+## countryGuatemala           -7.14067    1.78167  -4.008             0.000825 ***
+## countryIslands             -8.72193    1.85477  -4.702             0.000177 ***
+## countryKenya               -8.62563    1.62564  -5.306 0.000048107174859556 ***
+## countryMalaysia            -7.57832    2.74555  -2.760             0.012888 *  
+## countryNicaragua          -12.11584    1.75705  -6.896 0.000001898678859247 ***
+## countryPalau               -7.21193    1.66768  -4.325             0.000408 ***
+## countryPanama              -6.73275    1.44326  -4.665             0.000193 ***
+## countryPhilippines        -12.20939    1.80140  -6.778 0.000002385364697607 ***
+## countryPolynesia           -8.06126    1.63176  -4.940             0.000106 ***
+## countrySamoa               -8.85353    2.00306  -4.420             0.000331 ***
+## countryThailand            -7.13689    1.64191  -4.347             0.000389 ***
+## countryVanuatu             -6.76941    1.72095  -3.934             0.000974 ***
+## timeslotWednesday 8:00 pm   5.59395    2.14699   2.605             0.017892 *  
+## season                     -0.48437    0.08152  -5.942 0.000012701313768962 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.148 on 18 degrees of freedom
+##   (2 observations deleted due to missingness)
+## Multiple R-squared:  0.9758, Adjusted R-squared:  0.9502 
+## F-statistic: 38.18 on 19 and 18 DF,  p-value: 0.00000000008219
+\end{verbatim}
+
+\hypertarget{references-2}{%
+\subsection{References}\label{references-2}}
 
 \begin{itemize}
 \tightlist
 \item
-  Field, A., Miles, J., \& Field, Z. (2012). Discovering Statistics Using R. Sage publications.
+  Agresti, A. (2002). Categorical Data Analysis. John Wiley \& Sons.
 \item
-  Hair, J. F., Black, W. C., Babin, B. J., Anderson, R. E., \& Tatham, R. L. (2006). Multivariate Data Analysis (6th ed.). Prentice Hall.
+  Bland, J. M., \& Altman, D. G. (1996). Statistics notes: Transforming data. BMJ, 312(7033), 770.
 \item
-  Tabachnick, B. G., \& Fidell, L. S. (2018). Using Multivariate Statistics (7th ed.). Pearson.
+  Boslaugh, S. (2012). Statistics in a Nutshell: A Desktop Quick Reference. O'Reilly Media.
 \item
-  Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd ed.). Lawrence Erlbaum Associates.
+  Cox, D. R., \& Snell, E. J. (1981). Applied statistics: principles and examples. Chapman and Hall.
 \item
-  Peng, R. D. (2011). Reproducible research in computational science. Science, 334(6060), 1226-1227.
+  De Veaux, R. D., Velleman, P. F., \& Bock, D. E. (2018). Stats: Data and models (4th ed.). Pearson.
 \item
-  Tukey, J. W. (1977). Exploratory data analysis. Addison-Wesley.
+  Field, A. P., Miles, J., \& Field, Z. (2012). Discovering statistics using R. Sage publications.
 \item
-  Berenson, M. L., Levine, D. M., \& Krehbiel, T. C. (2009). Basic Business Statistics: Concepts and Applications (11th ed.). Prentice Hall.
+  Frankfort-Nachmias, C., Leon-Guerrero, A., \& Davis, G. (2020). Social statistics for a diverse society. Sage Publications.
 \item
-  Healey, J. F. (2018). Statistics: A Tool for Social Research (10th ed.). Cengage Learning.
+  Gravetter, F. J., \& Wallnau, L. B. (2016). Essentials of statistics for the behavioral sciences (8th ed.). Wadsworth Cengage Learning.
 \item
-  Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer.
+  Hair, J. F., Black, W. C., Babin, B. J., \& Anderson, R. E. (2014). Multivariate Data Analysis. Pearson Education Limited.
+\item
+  Hoaglin, D. C., Mosteller, F., \& Tukey, J. W. (2000). Understanding Robust and Exploratory Data Analysis. John Wiley \& Sons.
+\item
+  Johnson, R. A., \& Wichern, D. W. (2007). Applied Multivariate Statistical Analysis. Pearson Prentice Hall.
+\item
+  Kenney, J. F., \& Keeping, E. S. (1962). Mathematics of Statistics, Pt. 2, 2nd ed.~Van Nostrand.
+\item
+  Kutner, M. H., Nachtsheim, C. J., \& Neter, J. (2004). Applied linear regression models. McGraw-Hill Irwin.
+\item
+  Levine, D. M., Stephan, D. F., Krehbiel, T. C., \& Berenson, M. L. (2008). Statistics for Managers Using Microsoft Excel. Pearson Prentice Hall.
+\item
+  Lind, D. A., Marchal, W. G., \& Wathen, S. A. (2012). Statistical techniques in business and economics (15th ed.). McGraw-Hill Irwin.
+\item
+  McClave, J. T., Benson, P. G., \& Sincich, T. (2011). Statistics for business and economics (11th ed.). Prentice Hall.
+\item
+  Montgomery, D. C., Peck, E. A., \& Vining, G. G. (2012). Introduction to linear regression analysis. John Wiley \& Sons.
+\item
+  Moore, D. S., McCabe, G. P., \& Craig, B. A. (2009). Introduction to the Practice of Statistics. W.H. Freeman and Co.
+\item
+  Rosner, B. (2015). Fundamentals of biostatistics. Cengage Learning.
+\item
+  Siegel, S., \& Castellan, N. J. (1988). Nonparametric statistics for the behavioral sciences. McGraw-Hill.
+\item
+  Tabachnick, B. G., \& Fidell, L. S. (2013). Using multivariate statistics. Pearson.
+\item
+  Triola, M. F. (2018). Elementary Statistics. Pearson Education.
+\item
+  Tukey, J. W. (1977). Exploratory Data Analysis. Addison-Wesley.
+\item
+  Vasishth, S., \& Broe, M. (2011). The foundations of statistics: A simulation-based approach. Springer Science \& Business Media.
+\item
+  Winer, B. J., Brown, D. R., \& Michels, K. M. (1991). Statistical principles in experimental design. McGraw-Hill.
 \end{itemize}
 
 \hypertarget{appendix}{%

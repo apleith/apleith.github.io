@@ -1,0 +1,11 @@
+"0","```r
+# Basic
+ggplot(video_games, aes(x = peak, y = year)) + 
+  geom_density_ridges()
+
+# Customized
+ggplot(video_games, aes(x = peak, y = year, fill = year)) + 
+  geom_density_ridges() +
+  ggtitle(\"Ridgeline Plot of Peak Players by Year\") +
+  theme_ridges()
+```"

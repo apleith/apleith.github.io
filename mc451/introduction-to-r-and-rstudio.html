@@ -7,7 +7,7 @@
 <title>Chapter 12 Introduction to R and RStudio | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
 <meta name="description" content="12.1 Introduction  Importance of R in Mass Communications  The Changing Landscape of Media and Communication In the evolving landscape of media and communication, traditional skills in writing,...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.35 with bs4_book()">
 <meta property="og:title" content="Chapter 12 Introduction to R and RStudio | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="12.1 Introduction  Importance of R in Mass Communications  The Changing Landscape of Media and Communication In the evolving landscape of media and communication, traditional skills in writing,...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="12.1 Introduction  Importance of R in Mass Communications  The Changing Landscape of Media and Communication In the evolving landscape of media and communication, traditional skills in writing,...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -416,12 +416,12 @@
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Example code to install the 'ggplot2' package </span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span>, repos <span class="op">=</span> <span class="st">'http://cran.us.r-project.org'</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
+<pre><code>## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)</code></pre>
 <pre><code>## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\AP Leith\AppData\Local\Temp\RtmpaWZPhD\downloaded_packages</code></pre>
+##  C:\Users\alexl\AppData\Local\Temp\RtmpIhxSfW\downloaded_packages</code></pre>
 </div>
 <div id="help" class="section level4 unnumbered">
 <h4>Help<a class="anchor" aria-label="anchor" href="#help"><i class="fas fa-link"></i></a>
@@ -779,13 +779,12 @@ dz
 <div class="sourceCode" id="cb63"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># To load the ggplot2 package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: package 'ggplot2' was built under R version 4.3.1</code></pre>
 </div>
 <div id="unloading-a-package" class="section level4 unnumbered">
 <h4>Unloading a Package<a class="anchor" aria-label="anchor" href="#unloading-a-package"><i class="fas fa-link"></i></a>
 </h4>
 <p>To unload a package, you can use the <code><a href="https://rdrr.io/r/base/detach.html">detach()</a></code> function:</p>
-<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># To unload the ggplot2 package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/detach.html">detach</a></span><span class="op">(</span><span class="st">"package:ggplot2"</span>, unload<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -793,12 +792,12 @@ dz
 <h4>Checking Loaded Packages<a class="anchor" aria-label="anchor" href="#checking-loaded-packages"><i class="fas fa-link"></i></a>
 </h4>
 <p>To check which packages are currently loaded in the session, you can use the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function:</p>
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># To get information about the session, including loaded packages</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## R version 4.3.0 (2023-04-21 ucrt)
+<pre><code>## R version 4.3.1 (2023-06-16 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 11 x64 (build 22621)
+## Running under: Windows 10 x64 (build 19045)
 ## 
 ## Matrix products: default
 ## 
@@ -817,17 +816,17 @@ dz
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
-##  [5] xfun_0.39        highr_0.10       generics_0.1.3   jsonlite_1.8.4  
-##  [9] glue_1.6.2       colorspace_2.1-0 htmltools_0.5.5  sass_0.4.6      
-## [13] fansi_1.0.4      scales_1.2.1     rmarkdown_2.21   grid_4.3.0      
-## [17] tibble_3.2.1     munsell_0.5.0    evaluate_0.21    jquerylib_0.1.4 
-## [21] fastmap_1.1.1    lifecycle_1.0.3  yaml_2.3.7       memoise_2.0.1   
-## [25] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      fs_1.6.2        
-## [29] pkgconfig_2.0.3  downlit_0.4.2    rstudioapi_0.14  digest_0.6.31   
-## [33] R6_2.5.1         tidyselect_1.2.0 utf8_1.2.3       pillar_1.9.0    
-## [37] magrittr_2.0.3   bslib_0.4.2      tools_4.3.0      withr_2.5.0     
-## [41] gtable_0.3.3     xml2_1.3.4       cachem_1.0.8</code></pre>
+##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
+##  [5] xfun_0.40         generics_0.1.3    jsonlite_1.8.7    glue_1.6.2       
+##  [9] colorspace_2.1-0  htmltools_0.5.6.1 sass_0.4.7        fansi_1.0.4      
+## [13] scales_1.2.1      rmarkdown_2.25    grid_4.3.1        tibble_3.2.1     
+## [17] munsell_0.5.0     evaluate_0.22     jquerylib_0.1.4   fastmap_1.1.1    
+## [21] yaml_2.3.7        lifecycle_1.0.3   memoise_2.0.1     bookdown_0.35    
+## [25] compiler_4.3.1    dplyr_1.1.3       fs_1.6.3          pkgconfig_2.0.3  
+## [29] downlit_0.4.3     rstudioapi_0.15.0 digest_0.6.33     R6_2.5.1         
+## [33] tidyselect_1.2.0  utf8_1.2.3        pillar_1.9.0      magrittr_2.0.3   
+## [37] bslib_0.5.1       tools_4.3.1       withr_2.5.1       gtable_0.3.4     
+## [41] xml2_1.3.5        cachem_1.0.8</code></pre>
 <p>Understanding the installation and loading process for libraries will enable you to extend R’s native functionalities, a vital skill in today’s data-driven landscape in mass communications.</p>
 </div>
 </div>
@@ -874,7 +873,7 @@ dz
 <li><p><strong>Create Project</strong>: Once configured, click <code>Create Project</code> to initialize the new workspace.</p></li>
 </ol>
 <p>Here is a conceptual demonstration of how to initialize a new project:</p>
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># This is a conceptual code snippet and won't execute</span></span>
 <span><span class="co"># Navigate to File -&gt; New Project in RStudio</span></span>
 <span><span class="co"># Choose project type and directory</span></span>
@@ -909,7 +908,7 @@ dz
 </li>
 </ol>
 <p>Here’s a conceptual guide to open an existing project:</p>
-<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># This is a conceptual code snippet and won't execute</span></span>
 <span><span class="co"># Navigate to File -&gt; Open Project in RStudio</span></span>
 <span><span class="co"># Browse to locate your .Rproj file, e.g., "My_Old_Comm_Project.Rproj"</span></span>
@@ -1033,7 +1032,7 @@ dz
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-23.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-31.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

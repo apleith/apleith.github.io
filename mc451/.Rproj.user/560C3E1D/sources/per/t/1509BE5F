@@ -1,0 +1,31 @@
+{
+    "id": "1509BE5F",
+    "path": "C:/Users/AP Leith/OneDrive - Southern Illinois University Edwardsville/APsidian/Teaching/OER/bookdown/12-intro_to_R.Rmd",
+    "project_path": "12-intro_to_R.Rmd",
+    "type": "r_markdown",
+    "hash": "3945107260",
+    "contents": "",
+    "dirty": false,
+    "created": 1696835162751.0,
+    "source_on_save": false,
+    "relative_order": 10,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "671,38",
+        "scrollLine": "0",
+        "rmdVisualMode": "false",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "1",
+        "rmdVisualModeLocation": "136:0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1696872364,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1696872364183,
+    "read_only": false,
+    "read_only_alternatives": []
+}

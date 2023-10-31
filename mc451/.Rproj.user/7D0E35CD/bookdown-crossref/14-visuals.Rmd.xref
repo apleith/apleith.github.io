@@ -1,0 +1,66 @@
+h1:visualizations Visualizations
+h2:introduction Introduction
+h3:the-imperative-of-visual-representations-in-research The Imperative of Visual Representations in Research
+h4:facilitating-cognitive-processing Facilitating Cognitive Processing
+h4:enhancing-analytical-rigor Enhancing Analytical Rigor
+h3:complementing-textual-explanations-for-a-holistic-understanding Complementing Textual Explanations for a Holistic Understanding
+h4:symbiosis-of-text-and-visuals Symbiosis of Text and Visuals
+h4:accessibility-and-engagement Accessibility and Engagement
+h2:tables Tables
+h3:importance-of-tables Importance of Tables
+h4:concise-representation-of-numerical-data Concise Representation of Numerical Data
+h4:effectively-show-relationships-trends-and-comparisons Effectively Show Relationships, Trends, and Comparisons
+h3:guidelines-for-creating-tables Guidelines for Creating Tables
+h4:structure-and-layout Structure and Layout
+h4:inclusion-of-title-column-headings-and-footnotes Inclusion of Title, Column Headings, and Footnotes
+h2:illustrations Illustrations
+h3:types-of-illustrations Types of Illustrations
+h4:diagrams Diagrams
+h4:flowcharts Flowcharts
+h4:organizational-models Organizational Models
+h3:using-illustrations-effectively Using Illustrations Effectively
+h4:when-to-employ-illustrations When to Employ Illustrations
+h4:how-to-employ-illustrations-for-maximum-impact How to Employ Illustrations for Maximum Impact
+h2:images Images
+h3:types-of-images Types of Images
+h4:photographs Photographs
+h4:screen-captures Screen Captures
+h3:ethical-considerations Ethical Considerations
+h4:copyright-issues Copyright Issues
+h4:fair-use-in-research-papers Fair Use in Research Papers
+h4:ethical-use-beyond-copyright Ethical Use Beyond Copyright
+h2:plots Plots
+h3:introduction-to-ggplot2 Introduction to ggplot2
+h3:load-libraries Load libraries
+h3:load-data Load data
+h3:scatter-plot Scatter Plot
+h4:spotify_songs-dataset  dataset
+h4:movies-dataset  dataset
+h3:line-charts Line Charts
+h4:spotify_songs-dataset-1  dataset
+h4:movies-dataset-1  dataset
+h3:box-plot Box Plot
+h4:spotify_songs-dataset-2  dataset
+h4:movies-dataset-2  dataset
+h3:violin-plot Violin Plot
+h4:spotify_songs-dataset-3  dataset
+h3:bar-plots Bar Plots
+h4:spotify_songs-dataset-4  dataset
+h4:movies-dataset-3  dataset
+h3:histogram Histogram
+h4:spotify_songs-dataset-5  dataset
+h3:density-plot Density Plot
+h4:spotify_songs-dataset-6  dataset
+h3:ridgeline-plot Ridgeline Plot
+h4:spotify_songs-dataset-7  dataset
+h3:heatmap Heatmap
+h4:spotify_songs-dataset-8  dataset
+h3:pie-charts Pie Charts
+h4:spotify_songs-dataset-9  dataset
+h4:movies-dataset-4  dataset
+h3:advanced-versions Advanced Versions
+h4:spotify_songs-dataset-10  dataset
+h4:explanation Explanation
+h4:movies-dataset-5  dataset
+h4:explanation-1 Explanation
+

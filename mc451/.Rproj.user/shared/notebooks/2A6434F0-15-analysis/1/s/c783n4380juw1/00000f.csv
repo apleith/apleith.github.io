@@ -1,0 +1,4 @@
+"0","median_budget <- movies %>% "
+"0","  summarise(median_budget = median(budget, na.rm = TRUE))"
+"0",""
+"0","median_budget"

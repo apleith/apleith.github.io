@@ -1,0 +1,4 @@
+"0","budget_range <- movies %>% "
+"0","  summarise(Range = max(budget, na.rm = TRUE) - min(budget, na.rm = TRUE))"
+"0",""
+"0","budget_range"

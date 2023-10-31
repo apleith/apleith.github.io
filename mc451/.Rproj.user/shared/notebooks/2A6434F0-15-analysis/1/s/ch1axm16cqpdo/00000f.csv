@@ -1,0 +1,4 @@
+"0","var_imdb_rating <- movies %>% "
+"0","  summarise(var_imdb_rating = var(imdb_rating, na.rm = TRUE))"
+"0",""
+"0","var_imdb_rating"

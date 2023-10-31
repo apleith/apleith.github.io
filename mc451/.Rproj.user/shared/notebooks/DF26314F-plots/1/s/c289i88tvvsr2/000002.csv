@@ -1,0 +1,10 @@
+"0","```r
+# Basic
+ggplot(movies, aes(x=year)) + geom_bar()
+
+# Customized
+ggplot(movies, aes(x=year, fill=year)) +
+  geom_bar() +
+  ggtitle(\"Bar Plot of Number of Movies by Year\") +
+  theme_minimal()
+```"

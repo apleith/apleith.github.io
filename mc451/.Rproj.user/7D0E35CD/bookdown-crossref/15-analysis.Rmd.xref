@@ -1,0 +1,25 @@
+h1:data-analysis Data Analysis
+h2:introduction Introduction
+h3:objectives-and-importance-of-data-analysis Objectives and Importance of Data Analysis
+h3:types-of-analyses-descriptive-vs.-inferential Types of Analyses: Descriptive vs. Inferential
+h4:descriptive-analysis Descriptive Analysis
+h4:inferential-analysis Inferential Analysis
+h3:role-of-statistical-software-e.g.-rstudio Role of Statistical Software: E.g., RStudio
+h2:descriptive-analysis-1 Descriptive Analysis
+h3:measures-of-central-tendency Measures of Central Tendency
+h4:mean Mean
+h4:median Median
+h4:mode Mode
+h3:measures-of-dispersion Measures of Dispersion
+h4:range Range
+h4:standard-deviation Standard Deviation
+h4:variance Variance
+h2:inferential-analysis-1 Inferential Analysis
+h3:comparison-of-means Comparison of Means
+h4:t-test T-test
+h4:analysis-of-variance-anova Analysis of Variance (ANOVA)
+h3:regression-analysis Regression Analysis
+h4:simple-linear-regression Simple Linear Regression
+h4:multiple-linear-regression Multiple Linear Regression
+h3:references References
+

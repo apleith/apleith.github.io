@@ -1,0 +1,10 @@
+"0","```r
+# Basic
+ggplot(video_games, aes(x=year, y=avg)) + geom_violin()
+
+# Customized
+ggplot(video_games, aes(x=year, y=avg)) + 
+  geom_violin(fill=\"purple\") +
+  ggtitle(\"Distribution of Average Players by Year\") +
+  theme_minimal()
+```"
