@@ -127,9 +127,12 @@ tables
 illustrations
 images
 plots-1
+video-games-dataset
+remove-free-titles-and-titles-with-missing-data
+dataset-roy-kent-f-ck-count
 data-analysis
 introduction-7
 descriptive-analysis-1
-references-2
+references-3
 appendix
 assignments

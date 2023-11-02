@@ -1,6 +1,0 @@
-"0","mode_genre <- spotify_songs %>% "
-"0","  count(playlist_genre) %>% "
-"0","  arrange(desc(n)) %>% "
-"0","  slice_head(n = 1)"
-"0",""
-"0","mode_genre"

@@ -1,4 +1,0 @@
-"0","mean_popularity <- spotify_songs %>% "
-"0","  summarise(mean_popularity = mean(track_popularity, na.rm = TRUE))"
-"0",""
-"0","mean_popularity"

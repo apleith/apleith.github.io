@@ -7,7 +7,7 @@
 <title>Chapter 13 Data | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
 <meta name="description" content="13.1 Defining Data?  Explanation of Data in the Context of Research In the realm of academic research, data can be broadly defined as a collection of facts, statistics, or observations represented...">
-<meta name="generator" content="bookdown 0.35 with bs4_book()">
+<meta name="generator" content="bookdown 0.34 with bs4_book()">
 <meta property="og:title" content="Chapter 13 Data | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="13.1 Defining Data?  Explanation of Data in the Context of Research In the realm of academic research, data can be broadly defined as a collection of facts, statistics, or observations represented...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="13.1 Defining Data?  Explanation of Data in the Context of Research In the realm of academic research, data can be broadly defined as a collection of facts, statistics, or observations represented...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -173,13 +173,13 @@
 <div id="use-read.csv-from-base-r" class="section level4 unnumbered">
 <h4>Use read.csv from base R<a class="anchor" aria-label="anchor" href="#use-read.csv-from-base-r"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">csv1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/apleith/apleith.github.io/main/mc451/data/spotify_songs.csv"</span>, header<span class="op">=</span><span class="cn">TRUE</span>, stringsAsFactors<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="use-read_csv-from-readr-package" class="section level4 unnumbered">
 <h4>Use read_csv from readr package<a class="anchor" aria-label="anchor" href="#use-read_csv-from-readr-package"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("readr")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
 <span></span>
@@ -196,7 +196,7 @@
 <div id="use-fread-from-data.table-package" class="section level4 unnumbered">
 <h4>Use fread from data.table package<a class="anchor" aria-label="anchor" href="#use-fread-from-data.table-package"><i class="fas fa-link"></i></a>
 </h4>
-<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("data.table")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com">data.table</a></span><span class="op">)</span></span>
 <span></span>
@@ -209,7 +209,7 @@
 <li>It is a binary file that holds information about all the worksheets in a workbook</li>
 <li>An Excel not only stores data but can also do operations on the data</li>
 </ul>
-<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages('readxl')</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
 <span></span>
@@ -223,7 +223,7 @@
 <li>Also a binary format.</li>
 <li>Designed for SPSS</li>
 </ul>
-<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#install.packages("foreign")</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://svn.r-project.org/R-packages/trunk/foreign/">foreign</a></span><span class="op">)</span></span>
 <span></span>
@@ -247,7 +247,7 @@
 <li>
 <strong>Read in Data</strong>: To read in the necessary web data, you must first load the required packaage and then import the CSV file.</li>
 </ul>
-<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Check if the package is already installed before trying to install it</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="st">"readr"</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Package"</span><span class="op">]</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"readr"</span>, repos <span class="op">=</span> <span class="st">'http://cran.us.r-project.org'</span><span class="op">)</span></span>
@@ -274,13 +274,13 @@
 <li>
 <strong>Complete Case Analysis</strong>: This is the simplest method where you remove observations where any of the variables are missing. However, this method may lead to a loss of valuable data (Rubin, 1987).</li>
 </ul>
-<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs_complete</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li>
 <strong>Mean/Median/Mode Imputation</strong>: Replace the missing values with the mean, median, or mode of that variable. It’s a quick solution but can potentially introduce bias (Little &amp; Rubin, 2002).</li>
 </ul>
-<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb81"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ## Attaching package: 'dplyr'</code></pre>
@@ -293,15 +293,16 @@
 <pre><code>## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb85"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>track_popularity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">track_popularity</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">track_popularity</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>, <span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li>
 <strong>Multiple Imputation</strong>: More sophisticated than mean imputation, it creates multiple datasets and averages the imputed values (Schafer &amp; Graham, 2002).</li>
 </ul>
-<div class="sourceCode" id="cb86"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb87"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/amices/mice">mice</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: package 'mice' was built under R version 4.3.1</code></pre>
 <pre><code>## 
 ## Attaching package: 'mice'</code></pre>
 <pre><code>## The following object is masked from 'package:stats':
@@ -310,7 +311,7 @@
 <pre><code>## The following objects are masked from 'package:base':
 ## 
 ##     cbind, rbind</code></pre>
-<div class="sourceCode" id="cb90"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb92"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">imputed_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://amices.org/mice/reference/mice.html">mice</a></span><span class="op">(</span><span class="va">spotify_songs</span>, m<span class="op">=</span><span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 
 ##  iter imp variable
@@ -340,7 +341,7 @@
 ##   5   4
 ##   5   5</code></pre>
 <pre><code>## Warning: Number of logged events: 10</code></pre>
-<div class="sourceCode" id="cb93"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb95"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs_complete</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/complete.html">complete</a></span><span class="op">(</span><span class="va">imputed_data</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -352,14 +353,15 @@
 <code>dplyr</code> Crashcourse<a class="anchor" aria-label="anchor" href="#dplyr-crashcourse"><i class="fas fa-link"></i></a>
 </h4>
 <p>Certainly, this chapter will walk through the common <code>dplyr</code> commands using pipe (<code>%&gt;%</code>) syntax, employing the <code>movies.csv</code> dataset for demonstration. We will start by loading the necessary libraries and the dataset.</p>
-<div class="sourceCode" id="cb94"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load the necessary libraries</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: package 'ggplot2' was built under R version 4.3.1</code></pre>
 <pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ## ✔ forcats   1.0.0     ✔ stringr   1.5.0
 ## ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
-## ✔ purrr     1.0.2     
+## ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+## ✔ purrr     1.0.1     
 ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ## ✖ dplyr::between()     masks data.table::between()
 ## ✖ mice::filter()       masks dplyr::filter(), stats::filter()
@@ -379,7 +381,7 @@
 ## ✖ lubridate::yday()    masks data.table::yday()
 ## ✖ lubridate::year()    masks data.table::year()
 ## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<div class="sourceCode" id="cb96"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load the dataset</span></span>
 <span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv"</span><span class="op">)</span></span></code></pre></div>
 <p>Certainly, a more extensive exploration of each command is provided below:</p>
@@ -388,11 +390,11 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code> function allows you to choose specific columns in a dataframe. This function is essential when dealing with large datasets containing numerous variables, and you’re interested in a subset for further analysis.</p>
 <p><strong>Example 1</strong>: Select only the title, year, and budget columns.</p>
-<div class="sourceCode" id="cb97"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">selected_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">title</span>, <span class="va">year</span>, <span class="va">budget</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Example 2</strong>: Use negative indexing to exclude certain columns.</p>
-<div class="sourceCode" id="cb98"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">selected_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">actors</span>, <span class="op">-</span><span class="va">director</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -401,11 +403,11 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> function is crucial for subsetting data based on conditional statements. It serves to isolate rows that meet specific criteria, which can be particularly useful for exploratory data analysis or preprocessing data for machine learning algorithms.</p>
 <p><strong>Example 1</strong>: Filter movies released after 2000 with IMDb ratings above 8.0.</p>
-<div class="sourceCode" id="cb99"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">filtered_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">&gt;</span> <span class="fl">2000</span> <span class="op">&amp;</span> <span class="va">imdb_rating</span> <span class="op">&gt;</span> <span class="fl">8.0</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Example 2</strong>: Filter movies that passed the Bechdel test.</p>
-<div class="sourceCode" id="cb100"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">filtered_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">binary</span> <span class="op">==</span> <span class="st">"PASS"</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -414,11 +416,11 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code> function sorts data based on one or more variables. It is an essential operation for organizing your data for better readability or analysis.</p>
 <p><strong>Example 1</strong>: Arrange movies by IMDb ratings in descending order.</p>
-<div class="sourceCode" id="cb101"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">arranged_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">imdb_rating</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Example 2</strong>: Arrange movies by year and then by budget.</p>
-<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">arranged_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">year</span>, <span class="va">budget</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -427,7 +429,7 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function is used to create or modify variables. It can be employed to calculate new variables based on existing ones, or for transformations necessary for model building or data visualization.</p>
 <p><strong>Example 1</strong>: Calculate the earnings by subtracting the budget from the domestic gross.</p>
-<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mutated_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>earning <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">","</span>, <span class="st">""</span>, <span class="va">domgross</span><span class="op">)</span><span class="op">)</span> <span class="op">-</span> <span class="va">budget</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Warning: There was 1 warning in `mutate()`.
@@ -435,7 +437,7 @@
 ## Caused by warning:
 ## ! NAs introduced by coercion</code></pre>
 <p><strong>Example 2</strong>: Create a Boolean variable indicating whether the movie has high IMDb ratings (&gt;8).</p>
-<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mutated_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>is_high_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">imdb_rating</span> <span class="op">&gt;</span> <span class="fl">8</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -444,12 +446,12 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise()</a></code> function allows for the creation of summary statistics from your data. It’s often combined with <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> for aggregated summaries.</p>
 <p><strong>Example 1</strong>: Calculate the mean IMDb rating for each decade.</p>
-<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">summarised_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">decade_code</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">imdb_rating</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Example 2</strong>: Count the number of movies that pass and fail the Bechdel test.</p>
-<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">summarised_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">binary</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>count <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -459,11 +461,11 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> function facilitates operations within specific subsets or groups in the data. This function is useful for analyzing data at multiple levels.</p>
 <p><strong>Example 1</strong>: Group by decade.</p>
-<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">grouped_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">decade_code</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Example 2</strong>: Group by the outcome of the Bechdel test and decade.</p>
-<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">grouped_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">binary</span>, <span class="va">decade_code</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -472,11 +474,11 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/rename.html">rename()</a></code> function changes the names of variables, making them more understandable or suitable for downstream tasks like visualization.</p>
 <p><strong>Example 1</strong>: Rename <code>intgross</code> to <code>International_Gross</code>.</p>
-<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">renamed_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>International_Gross <span class="op">=</span> <span class="va">intgross</span><span class="op">)</span></span></code></pre></div>
 <p><strong>Example 2</strong>: Rename <code>domgross</code> to <code>Domestic_Gross</code>.</p>
-<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">renamed_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>Domestic_Gross <span class="op">=</span> <span class="va">domgross</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -485,7 +487,7 @@
 </h5>
 <p>The <code><a href="https://dplyr.tidyverse.org/reference/transmute.html">transmute()</a></code> function, a specialized variant of <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>, lets you create new variables while dropping all other variables.</p>
 <p><strong>Example 1</strong>: Create a dataset with only the title and a new variable ROI (Return on Investment).</p>
-<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">transmuted_movies1</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/transmute.html">transmute</a></span><span class="op">(</span><span class="va">title</span>, ROI <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">","</span>, <span class="st">""</span>, <span class="va">domgross</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="va">budget</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Warning: There was 1 warning in `transmute()`.
@@ -493,7 +495,7 @@
 ## Caused by warning:
 ## ! NAs introduced by coercion</code></pre>
 <p><strong>Example 2</strong>: Create a dataset with only the title and a Boolean variable indicating high IMDb rating.</p>
-<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">transmuted_movies2</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/transmute.html">transmute</a></span><span class="op">(</span><span class="va">title</span>, is_high_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">imdb_rating</span> <span class="op">&gt;</span> <span class="fl">8</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Each of these <code>dplyr</code> functions contributes to a robust data wrangling toolbox. The power of <code>dplyr</code> is most evident when these functions are combined to carry out complex data manipulation tasks efficiently.</p>
@@ -510,14 +512,14 @@
 <ul>
 <li><strong>Identifying Outliers</strong></li>
 </ul>
-<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html">boxplot</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-67-1.png" width="672"></div>
 <ul>
 <li>
 <strong>Treating Outliers</strong>: Common methods include transformation, binning, or removing the outliers (Tukey, 1977).</li>
 </ul>
-<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs_no_outliers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">spotify_songs</span>, <span class="va">track_popularity</span> <span class="op">&lt;</span> <span class="fl">100</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -528,12 +530,12 @@
 <ul>
 <li><strong>Min-Max Scaling</strong></li>
 </ul>
-<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">normalized_popularity</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <ul>
 <li><strong>Z-score Normalization</strong></li>
 </ul>
-<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">z_score_popularity</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">track_popularity</span><span class="op">)</span></span></code></pre></div>
 
 </div>
@@ -592,7 +594,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-10-31.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-11-01.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
