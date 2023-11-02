@@ -128,7 +128,7 @@
 
 \title{Introduction to Communication and Media Research with R}
 \author{Alex P. Leith, PhD}
-\date{2023-11-01}
+\date{2023-11-02}
 
 \begin{document}
 \maketitle
@@ -4485,7 +4485,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
@@ -4493,7 +4493,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 ## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\AP Leith\AppData\Local\Temp\RtmpqU9Cni\downloaded_packages
+##  C:\Users\alexl\AppData\Local\Temp\RtmpsXR3h3\downloaded_packages
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -5042,10 +5042,6 @@ You can load an installed package using the \texttt{library()} function:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
 \hypertarget{unloading-a-package}{%
 \subsubsection*{Unloading a Package}\label{unloading-a-package}}
 \addcontentsline{toc}{subsubsection}{Unloading a Package}
@@ -5073,9 +5069,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.0 (2023-04-21 ucrt)
+## R version 4.3.1 (2023-06-16 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 11 x64 (build 22621)
+## Running under: Windows 10 x64 (build 19045)
 ## 
 ## Matrix products: default
 ## 
@@ -5094,15 +5090,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
-##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
-##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
-## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
-## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
-## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
-## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
-## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
-## [33] tools_4.3.0      gtable_0.3.3
+##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
+##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
+##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
+## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
+## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
+## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
+## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
+## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
+## [33] gtable_0.3.4
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5626,10 +5622,6 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: package 'mice' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{verbatim}
 ## 
 ## Attaching package: 'mice'
 \end{verbatim}
@@ -5710,15 +5702,11 @@ Certainly, this chapter will walk through the common \texttt{dplyr} commands usi
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{verbatim}
 ## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
 ## v forcats   1.0.0     v stringr   1.5.0
 ## v ggplot2   3.4.4     v tibble    3.2.1
-## v lubridate 1.9.2     v tidyr     1.3.0
-## v purrr     1.0.1     
+## v lubridate 1.9.3     v tidyr     1.3.0
+## v purrr     1.0.2     
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::between()     masks data.table::between()
 ## x mice::filter()       masks dplyr::filter(), stats::filter()
@@ -6239,13 +6227,17 @@ Apart from legal obligations, researchers must consider the potential ethical im
 \hypertarget{plots-1}{%
 \section{Plots}\label{plots-1}}
 
+\hypertarget{prepare-workspace}{%
+\subsection*{Prepare Workspace}\label{prepare-workspace}}
+\addcontentsline{toc}{subsection}{Prepare Workspace}
+
 \hypertarget{load-libraries}{%
-\subsection*{Load Libraries}\label{load-libraries}}
-\addcontentsline{toc}{subsection}{Load Libraries}
+\subsubsection*{Load Libraries}\label{load-libraries}}
+\addcontentsline{toc}{subsubsection}{Load Libraries}
 
 \hypertarget{tidyverse}{%
-\subsubsection*{Tidyverse}\label{tidyverse}}
-\addcontentsline{toc}{subsubsection}{Tidyverse}
+\paragraph*{Tidyverse}\label{tidyverse}}
+\addcontentsline{toc}{paragraph}{Tidyverse}
 
 We load the \texttt{tidyverse} package, which is a collection of R packages designed for data science.
 
@@ -6256,8 +6248,8 @@ We load the \texttt{tidyverse} package, which is a collection of R packages desi
 \end{Shaded}
 
 \hypertarget{data.table}{%
-\subsubsection*{Data.Table}\label{data.table}}
-\addcontentsline{toc}{subsubsection}{Data.Table}
+\paragraph*{Data.Table}\label{data.table}}
+\addcontentsline{toc}{paragraph}{Data.Table}
 
 Next, we load the \texttt{data.table} package. It provides an enhanced version of data frames for more efficient data manipulation.
 
@@ -6268,14 +6260,14 @@ Next, we load the \texttt{data.table} package. It provides an enhanced version o
 \end{Shaded}
 
 \hypertarget{read-in-all-of-your-data}{%
-\subsection*{Read in All of Your Data}\label{read-in-all-of-your-data}}
-\addcontentsline{toc}{subsection}{Read in All of Your Data}
+\subsubsection*{Read in All of Your Data}\label{read-in-all-of-your-data}}
+\addcontentsline{toc}{subsubsection}{Read in All of Your Data}
 
 We use the \texttt{fread} function from the \texttt{data.table} package to read in various datasets from URLs.
 
 \hypertarget{anime-dataset}{%
-\subsubsection*{Anime Dataset}\label{anime-dataset}}
-\addcontentsline{toc}{subsubsection}{Anime Dataset}
+\paragraph*{Anime Dataset}\label{anime-dataset}}
+\addcontentsline{toc}{paragraph}{Anime Dataset}
 
 This dataset presumably contains information related to anime.
 
@@ -6286,8 +6278,8 @@ This dataset presumably contains information related to anime.
 \end{Shaded}
 
 \hypertarget{horror-movies-dataset}{%
-\subsubsection*{Horror Movies Dataset}\label{horror-movies-dataset}}
-\addcontentsline{toc}{subsubsection}{Horror Movies Dataset}
+\paragraph*{Horror Movies Dataset}\label{horror-movies-dataset}}
+\addcontentsline{toc}{paragraph}{Horror Movies Dataset}
 
 This dataset likely contains data related to horror movies.
 
@@ -6298,8 +6290,8 @@ This dataset likely contains data related to horror movies.
 \end{Shaded}
 
 \hypertarget{richmond-way-dataset}{%
-\subsubsection*{Richmond Way Dataset}\label{richmond-way-dataset}}
-\addcontentsline{toc}{subsubsection}{Richmond Way Dataset}
+\paragraph*{Richmond Way Dataset}\label{richmond-way-dataset}}
+\addcontentsline{toc}{paragraph}{Richmond Way Dataset}
 
 This dataset could contain information related to Richmond Way, though the exact details would be available in the dataset's documentation.
 
@@ -6310,8 +6302,8 @@ This dataset could contain information related to Richmond Way, though the exact
 \end{Shaded}
 
 \hypertarget{television-ratings-dataset}{%
-\subsubsection*{Television Ratings Dataset}\label{television-ratings-dataset}}
-\addcontentsline{toc}{subsubsection}{Television Ratings Dataset}
+\paragraph*{Television Ratings Dataset}\label{television-ratings-dataset}}
+\addcontentsline{toc}{paragraph}{Television Ratings Dataset}
 
 This dataset likely contains television ratings data.
 
@@ -6322,7 +6314,7 @@ This dataset likely contains television ratings data.
 \end{Shaded}
 
 \hypertarget{video-games-dataset}{%
-\subsubsection{Video Games Dataset}\label{video-games-dataset}}
+\paragraph{Video Games Dataset}\label{video-games-dataset}}
 
 This dataset presumably contains information about video games.
 
@@ -6333,12 +6325,12 @@ This dataset presumably contains information about video games.
 \end{Shaded}
 
 \hypertarget{explain-the-data}{%
-\subsection*{Explain the data}\label{explain-the-data}}
-\addcontentsline{toc}{subsection}{Explain the data}
+\subsubsection*{Explain the data}\label{explain-the-data}}
+\addcontentsline{toc}{subsubsection}{Explain the data}
 
 \hypertarget{anime}{%
-\subsubsection*{Anime}\label{anime}}
-\addcontentsline{toc}{subsubsection}{Anime}
+\paragraph*{Anime}\label{anime}}
+\addcontentsline{toc}{paragraph}{Anime}
 
 Source: \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2019/2019-04-23/readme.md}
 
@@ -6389,8 +6381,8 @@ related & character & dictionary: related animes, series, games etc. \\
 \end{longtable}
 
 \hypertarget{horror-movies}{%
-\subsubsection*{Horror Movies}\label{horror-movies}}
-\addcontentsline{toc}{subsubsection}{Horror Movies}
+\paragraph*{Horror Movies}\label{horror-movies}}
+\addcontentsline{toc}{paragraph}{Horror Movies}
 
 Source: \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-11-01/readme.md}
 
@@ -6434,8 +6426,8 @@ Source: \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/202
 \end{longtable}
 
 \hypertarget{roy-kent-f-ck-count}{%
-\subsubsection*{Roy Kent F-ck count}\label{roy-kent-f-ck-count}}
-\addcontentsline{toc}{subsubsection}{Roy Kent F-ck count}
+\paragraph*{Roy Kent F-ck count}\label{roy-kent-f-ck-count}}
+\addcontentsline{toc}{paragraph}{Roy Kent F-ck count}
 
 Source: \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-09-26/readme.md\#roy-kent-fk-count}
 
@@ -6474,8 +6466,8 @@ Imdb\_rating & double & Imdb rating of that episode \\
 \end{longtable}
 
 \hypertarget{tvs-golden-age}{%
-\subsubsection*{TV's Golden Age}\label{tvs-golden-age}}
-\addcontentsline{toc}{subsubsection}{TV's Golden Age}
+\paragraph*{TV's Golden Age}\label{tvs-golden-age}}
+\addcontentsline{toc}{paragraph}{TV's Golden Age}
 
 Source: \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2019/2019-01-08/readme.md}
 
@@ -6709,6 +6701,19 @@ First, let's find out which languages are the most popular in the dataset.
 ## 5 de                  631
 \end{verbatim}
 
+\hypertarget{filter-for-top-languages}{%
+\paragraph*{Filter for top languages}\label{filter-for-top-languages}}
+\addcontentsline{toc}{paragraph}{Filter for top languages}
+
+After identifying which languages to include, create a new data set filtered for these languages.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{horror\_movies\_top\_5\_languages }\OtherTok{\textless{}{-}}\NormalTok{ horror\_movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(original\_language }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"en"}\NormalTok{, }\StringTok{"es"}\NormalTok{, }\StringTok{"ja"}\NormalTok{, }\StringTok{"pt"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{create-density-plot}{%
 \paragraph*{Create Density Plot}\label{create-density-plot}}
 \addcontentsline{toc}{paragraph}{Create Density Plot}
@@ -6717,9 +6722,6 @@ After filtering for the top 5 languages, a density plot is created.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{horror\_movies\_top\_5\_languages }\OtherTok{\textless{}{-}}\NormalTok{ horror\_movies }\SpecialCharTok{\%\textgreater{}\%}
-  \FunctionTok{filter}\NormalTok{(original\_language }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"en"}\NormalTok{, }\StringTok{"es"}\NormalTok{, }\StringTok{"ja"}\NormalTok{, }\StringTok{"pt"}\NormalTok{))}
-
 \FunctionTok{ggplot}\NormalTok{(horror\_movies\_top\_5\_languages, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ vote\_average)) }\SpecialCharTok{+}
   \FunctionTok{geom\_density}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{fill =}\NormalTok{ original\_language), }\AttributeTok{alpha =} \FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
   \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Density Plot of Horror Movie Ratings"}\NormalTok{,}
@@ -6728,7 +6730,7 @@ After filtering for the top 5 languages, a density plot is created.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-80-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-81-1.pdf}
 
 \hypertarget{violin-plot}{%
 \subsubsection*{Violin Plot}\label{violin-plot}}
@@ -6792,7 +6794,7 @@ After filtering for the top 5 publishers, we generate the violin plot.
 ## Warning: Removed 572 rows containing non-finite values (`stat_ydensity()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-82-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-83-1.pdf}
 
 \hypertarget{boxplot}{%
 \subsubsection*{Boxplot}\label{boxplot}}
@@ -6803,7 +6805,7 @@ A boxplot provides a graphical representation of the central tendency and spread
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{ggplot}\NormalTok{(anime, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ type, }\AttributeTok{y =}\NormalTok{ score)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_boxplot}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{geom\_boxplot}\NormalTok{(}\AttributeTok{fill =} \StringTok{"\#ff00ff"}\NormalTok{, }\AttributeTok{color =} \StringTok{"\#770077"}\NormalTok{) }\SpecialCharTok{+}
   \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Boxplot of Anime Scores by Type"}\NormalTok{,}
        \AttributeTok{x =} \StringTok{"Type"}\NormalTok{,}
        \AttributeTok{y =} \StringTok{"Score"}\NormalTok{)}
@@ -6814,7 +6816,7 @@ A boxplot provides a graphical representation of the central tendency and spread
 ## Warning: Removed 174 rows containing non-finite values (`stat_boxplot()`).
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-83-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-84-1.pdf}
 
 \hypertarget{correlation-plots}{%
 \subsection*{Correlation Plots}\label{correlation-plots}}
@@ -6851,13 +6853,14 @@ We then proceed to create the scatter plot.
 \begin{Highlighting}[]
 \FunctionTok{ggplot}\NormalTok{(richmondway, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ F\_count\_total, }\AttributeTok{y =}\NormalTok{ F\_count\_RK)) }\SpecialCharTok{+}
   \FunctionTok{geom\_point}\NormalTok{(}\FunctionTok{aes}\NormalTok{(}\AttributeTok{color =}\NormalTok{ Season), }\AttributeTok{size =} \DecValTok{3}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+} 
   \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Roy Kent F{-}ck Count by IMDB Rating"}\NormalTok{,}
        \AttributeTok{x =} \StringTok{"Total F{-}ck Count"}\NormalTok{,}
        \AttributeTok{y =} \StringTok{"F{-}ck Count"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-85-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-86-1.pdf}
 
 \hypertarget{heatmap}{%
 \subsubsection*{Heatmap}\label{heatmap}}
@@ -6884,7 +6887,7 @@ A heatmap is a data visualization technique that represents the magnitude of obs
 ## become an error.
 \end{verbatim}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-86-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-87-1.pdf}
 
 \hypertarget{bubble-plot}{%
 \subsubsection*{Bubble Plot}\label{bubble-plot}}
@@ -6921,7 +6924,7 @@ We then proceed to create the bubble plot.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-88-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-89-1.pdf}
 
 \hypertarget{ranking-plots}{%
 \subsection*{Ranking Plots}\label{ranking-plots}}
@@ -7011,7 +7014,7 @@ Finally, a bar plot is created using the average scores by producer.
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-92-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-93-1.pdf}
 
 \hypertarget{lollipop-plot}{%
 \subsubsection*{Lollipop Plot}\label{lollipop-plot}}
@@ -7120,7 +7123,7 @@ Finally, a lollipop plot is created to visualize the average rating for each of 
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-97-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-98-1.pdf}
 
 \hypertarget{part-of-a-whole}{%
 \subsection*{Part of a Whole}\label{part-of-a-whole}}
@@ -7148,7 +7151,7 @@ A pie chart is created to visualize Roy Kent's usage of the word ``F-ck'' across
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-98-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-99-1.pdf}
 
 \hypertarget{grouped-stacked-barplot}{%
 \subsubsection*{Grouped + Stacked Barplot}\label{grouped-stacked-barplot}}
@@ -7185,7 +7188,7 @@ A grouped barplot represents categorical data with multiple sub-categories. It u
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-100-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-101-1.pdf}
 
 \hypertarget{create-stacked-barplot}{%
 \paragraph*{Create Stacked Barplot}\label{create-stacked-barplot}}
@@ -7201,7 +7204,7 @@ A stacked barplot is similar to a standard bar plot but divides each bar into mu
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-101-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-102-1.pdf}
 
 \hypertarget{treemap}{%
 \subsubsection*{Treemap}\label{treemap}}
@@ -7216,15 +7219,7 @@ A treemap displays hierarchical data as a set of nested rectangles. Each level i
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(treemap)}
-\end{Highlighting}
-\end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'treemap' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{treemap}\NormalTok{(horror\_movies, }
         \AttributeTok{index =} \StringTok{"original\_language"}\NormalTok{, }
         \AttributeTok{vSize =} \StringTok{"vote\_count"}\NormalTok{, }
@@ -7232,7 +7227,172 @@ A treemap displays hierarchical data as a set of nested rectangles. Each level i
 \end{Highlighting}
 \end{Shaded}
 
-\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-102-1.pdf}
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-103-1.pdf}
+
+\hypertarget{store-and-edit-plots}{%
+\subsection*{Store and Edit Plots}\label{store-and-edit-plots}}
+\addcontentsline{toc}{subsection}{Store and Edit Plots}
+
+Filter data for unique show titles
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tv\_top\_genres\_list }\OtherTok{\textless{}{-}}\NormalTok{ long\_television }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{distinct}\NormalTok{(title, genres, }\AttributeTok{.keep\_all =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(genres) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{count}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{ungroup}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{top\_n}\NormalTok{(}\DecValTok{10}\NormalTok{, }\AttributeTok{wt =}\NormalTok{ n)}
+
+\NormalTok{tv\_top\_genres\_list}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 10 x 2
+##    genres        n
+##    <chr>     <int>
+##  1 Drama       868
+##  2 Crime       272
+##  3 Mystery     180
+##  4 Comedy      177
+##  5 Action      146
+##  6 Fantasy      90
+##  7 Romance      82
+##  8 Sci-Fi       76
+##  9 Thriller     74
+## 10 Adventure    72
+\end{verbatim}
+
+You can store a plot into your environment for easier recall.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tv\_genres\_bar }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(tv\_top\_genres\_list, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =} \FunctionTok{reorder}\NormalTok{(genres, }\SpecialCharTok{{-}}\NormalTok{n), }\AttributeTok{y =}\NormalTok{ n)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Bar Plot of Show Count by Major Genre"}\NormalTok{,}
+       \AttributeTok{x =} \StringTok{"Genres"}\NormalTok{,}
+       \AttributeTok{y =} \StringTok{"Number of shows"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+A stored plot can be added to without having to type out all of the code if it is previously stored in the environment.
+
+First load package with unique themes
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggthemes)}
+\end{Highlighting}
+\end{Shaded}
+
+Add to your stored plot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tv\_genres\_bar }\SpecialCharTok{+}
+  \FunctionTok{theme\_wsj}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{bookdown-demo_files/figure-latex/unnamed-chunk-107-1.pdf}
+
+\hypertarget{saving-plots-in-r-markdown}{%
+\subsection*{Saving Plots in R Markdown}\label{saving-plots-in-r-markdown}}
+\addcontentsline{toc}{subsection}{Saving Plots in R Markdown}
+
+Once you've generated and refined your plot, it's crucial to understand how to save it for further use, whether for presentation, publication, or collaboration. R Markdown, together with the \texttt{ggplot2} library, offers flexible ways to save your plots in various formats.
+
+\hypertarget{saving-plots-directly-in-r-markdown}{%
+\subsubsection*{Saving Plots Directly in R Markdown}\label{saving-plots-directly-in-r-markdown}}
+\addcontentsline{toc}{subsubsection}{Saving Plots Directly in R Markdown}
+
+Store plot you want to save locally.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{tv\_genres\_bar\_wsj }\OtherTok{\textless{}{-}}\NormalTok{ tv\_genres\_bar }\SpecialCharTok{+}
+  \FunctionTok{theme\_wsj}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+The above chunk will save the plot in the specified directory with the name ``plot\_name'' followed by a figure number (e.g., ``plot\_name1.png'').
+
+\hypertarget{saving-plots-using-ggsave}{%
+\subsubsection*{\texorpdfstring{Saving Plots Using \texttt{ggsave()}}{Saving Plots Using ggsave()}}\label{saving-plots-using-ggsave}}
+\addcontentsline{toc}{subsubsection}{Saving Plots Using \texttt{ggsave()}}
+
+The \texttt{ggsave()} function, which comes with the \texttt{ggplot2} library, provides a straightforward way to save the last plot that you created. Below are the steps and explanations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{PNG Format}: Suitable for web applications.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggsave}\NormalTok{(}\StringTok{"tv\_genres\_bar.png"}\NormalTok{, }\AttributeTok{plot =}\NormalTok{ tv\_genres\_bar\_wsj, }\AttributeTok{width =} \DecValTok{10}\NormalTok{, }\AttributeTok{height =} \DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{JPEG Format}: Generally used for photographs on the web, but it's lossy, meaning some image quality is compromised.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggsave}\NormalTok{(}\StringTok{"tv\_genres\_bar.jpg"}\NormalTok{, }\AttributeTok{plot =}\NormalTok{ tv\_genres\_bar\_wsj, }\AttributeTok{width =} \DecValTok{10}\NormalTok{, }\AttributeTok{height =} \DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \textbf{PDF Format}: Perfect for publications and where high quality is paramount. It retains the quality regardless of how much you zoom.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggsave}\NormalTok{(}\StringTok{"tv\_genres\_bar.pdf"}\NormalTok{, }\AttributeTok{plot =}\NormalTok{ tv\_genres\_bar\_wsj, }\AttributeTok{width =} \DecValTok{10}\NormalTok{, }\AttributeTok{height =} \DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{SVG Format}: A vector format suitable for web applications where scalability without loss of resolution is important.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggsave}\NormalTok{(}\StringTok{"tv\_genres\_bar.svg"}\NormalTok{, }\AttributeTok{plot =}\NormalTok{ tv\_genres\_bar\_wsj, }\AttributeTok{width =} \DecValTok{10}\NormalTok{, }\AttributeTok{height =} \DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{explanation}{%
+\subsubsection*{Explanation}\label{explanation}}
+\addcontentsline{toc}{subsubsection}{Explanation}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{filename}: The name you want to give to the saved plot, which also specifies the format based on the extension.
+\item
+  \texttt{plot}: The specific plot you want to save. In this case, it's \texttt{tv\_genres\_bar\ +\ theme\_wsj()}.
+\item
+  \texttt{width} and \texttt{height}: The width and height of the saved plot in inches.
+\end{itemize}
 
 \hypertarget{references-2}{%
 \subsection*{References}\label{references-2}}
