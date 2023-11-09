@@ -133,6 +133,6 @@ dataset-roy-kent-f-ck-count
 data-analysis
 introduction-7
 descriptive-analysis-1
-references-3
+inferential-analysis-1
 appendix
 assignments

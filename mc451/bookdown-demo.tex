@@ -128,7 +128,7 @@
 
 \title{Introduction to Communication and Media Research with R}
 \author{Alex P. Leith, PhD}
-\date{2023-11-02}
+\date{2023-11-09}
 
 \begin{document}
 \maketitle
@@ -4485,7 +4485,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
@@ -4493,7 +4493,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 ## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\alexl\AppData\Local\Temp\RtmpsXR3h3\downloaded_packages
+##  C:\Users\AP Leith\AppData\Local\Temp\RtmpoRI9yO\downloaded_packages
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -5042,6 +5042,10 @@ You can load an installed package using the \texttt{library()} function:
 \end{Highlighting}
 \end{Shaded}
 
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.3.2
+\end{verbatim}
+
 \hypertarget{unloading-a-package}{%
 \subsubsection*{Unloading a Package}\label{unloading-a-package}}
 \addcontentsline{toc}{subsubsection}{Unloading a Package}
@@ -5069,9 +5073,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.1 (2023-06-16 ucrt)
+## R version 4.3.0 (2023-04-21 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 10 x64 (build 19045)
+## Running under: Windows 11 x64 (build 22621)
 ## 
 ## Matrix products: default
 ## 
@@ -5090,15 +5094,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
-##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
-##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
-## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
-## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
-## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
-## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
-## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
-## [33] gtable_0.3.4
+##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
+##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
+##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
+## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
+## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
+## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
+## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
+## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
+## [33] tools_4.3.0      gtable_0.3.3
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5622,6 +5626,10 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \begin{verbatim}
+## Warning: package 'mice' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{verbatim}
 ## 
 ## Attaching package: 'mice'
 \end{verbatim}
@@ -5702,11 +5710,15 @@ Certainly, this chapter will walk through the common \texttt{dplyr} commands usi
 \end{Shaded}
 
 \begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.3.2
+\end{verbatim}
+
+\begin{verbatim}
 ## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
 ## v forcats   1.0.0     v stringr   1.5.0
 ## v ggplot2   3.4.4     v tibble    3.2.1
-## v lubridate 1.9.3     v tidyr     1.3.0
-## v purrr     1.0.2     
+## v lubridate 1.9.2     v tidyr     1.3.0
+## v purrr     1.0.1     
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::between()     masks data.table::between()
 ## x mice::filter()       masks dplyr::filter(), stats::filter()
@@ -7219,7 +7231,15 @@ A treemap displays hierarchical data as a set of nested rectangles. Each level i
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(treemap)}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{verbatim}
+## Warning: package 'treemap' was built under R version 4.3.1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \FunctionTok{treemap}\NormalTok{(horror\_movies, }
         \AttributeTok{index =} \StringTok{"original\_language"}\NormalTok{, }
         \AttributeTok{vSize =} \StringTok{"vote\_count"}\NormalTok{, }
@@ -7286,6 +7306,10 @@ First load package with unique themes
 \FunctionTok{library}\NormalTok{(ggthemes)}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'ggthemes' was built under R version 4.3.1
+\end{verbatim}
 
 Add to your stored plot
 
@@ -7373,6 +7397,16 @@ The \texttt{ggsave()} function, which comes with the \texttt{ggplot2} library, p
 \item
   \textbf{SVG Format}: A vector format suitable for web applications where scalability without loss of resolution is important.
 \end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(svglite)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'svglite' was built under R version 4.3.2
+\end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7492,6 +7526,8 @@ Moreover, descriptive statistics have applications that span across various doma
 \FunctionTok{library}\NormalTok{(tidyverse)}
 \FunctionTok{library}\NormalTok{(data.table)}
 
+\FunctionTok{options}\NormalTok{(}\AttributeTok{scipen=}\DecValTok{999}\NormalTok{)}
+
 \CommentTok{\# Import the datasets}
 \NormalTok{spotify\_songs }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020{-}01{-}21/spotify\_songs.csv"}\NormalTok{)}
 \NormalTok{movies }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}03{-}09/movies.csv"}\NormalTok{)}
@@ -7538,12 +7574,12 @@ Moreover, descriptive statistics have applications that span across various doma
 ## 5:         dance pop        0.650  0.833   1   -4.672    1      0.0359
 ## 6:         dance pop        0.675  0.919   8   -5.385    1      0.1270
 ##    acousticness instrumentalness liveness valence   tempo duration_ms
-## 1:       0.1020         0.00e+00   0.0653   0.518 122.036      194754
-## 2:       0.0724         4.21e-03   0.3570   0.693  99.972      162600
-## 3:       0.0794         2.33e-05   0.1100   0.613 124.008      176616
-## 4:       0.0287         9.43e-06   0.2040   0.277 121.956      169093
-## 5:       0.0803         0.00e+00   0.0833   0.725 123.976      189052
-## 6:       0.0799         0.00e+00   0.1430   0.585 124.982      163049
+## 1:       0.1020       0.00000000   0.0653   0.518 122.036      194754
+## 2:       0.0724       0.00421000   0.3570   0.693  99.972      162600
+## 3:       0.0794       0.00002330   0.1100   0.613 124.008      176616
+## 4:       0.0287       0.00000943   0.2040   0.277 121.956      169093
+## 5:       0.0803       0.00000000   0.0833   0.725 123.976      189052
+## 6:       0.0799       0.00000000   0.1430   0.585 124.982      163049
 \end{verbatim}
 
 \begin{Shaded}
@@ -7684,7 +7720,7 @@ In addition to its robustness against outliers, the median is often used in non-
 
 \begin{verbatim}
 ##   median_budget
-## 1       2.8e+07
+## 1      28000000
 \end{verbatim}
 
 \hypertarget{mode}{%
@@ -7699,18 +7735,37 @@ Despite its less frequent application in numerical contexts, the mode can still 
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mode\_genre }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{count}\NormalTok{(playlist\_genre) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n)) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{slice\_head}\NormalTok{(}\AttributeTok{n =} \DecValTok{1}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(DescTools)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'DescTools' was built under R version 4.3.2
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'DescTools'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:data.table':
+## 
+##     %like%
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mode\_genre }\OtherTok{\textless{}{-}} \FunctionTok{Mode}\NormalTok{(spotify\_songs}\SpecialCharTok{$}\NormalTok{playlist\_genre)}
 
 \NormalTok{mode\_genre}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##    playlist_genre    n
-## 1:            edm 6043
+## [1] "edm"
+## attr(,"freq")
+## [1] 6043
 \end{verbatim}
 
 \hypertarget{measures-of-dispersion}{%
@@ -7789,9 +7844,53 @@ In statistical theory, the concept of variance is pivotal for various analytical
 ## 1       0.9269498
 \end{verbatim}
 
+\hypertarget{general-summary}{%
+\subsection*{General Summary}\label{general-summary}}
+\addcontentsline{toc}{subsection}{General Summary}
+
+There are also a couple methods for getting multiple basic descriptive statistics with a single code. The most common of these is the \texttt{summary()} function. There is also a package called \texttt{skimr}.
+
+\hypertarget{summary-1}{%
+\subsubsection*{\texorpdfstring{\texttt{summary()}}{summary()}}\label{summary-1}}
+\addcontentsline{toc}{subsubsection}{\texttt{summary()}}
+
+This function returns the range, quartiles, mean, and missing data.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(movies}\SpecialCharTok{$}\NormalTok{imdb\_rating)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##    2.10    6.20    6.80    6.76    7.40    9.30     202
+\end{verbatim}
+
+\hypertarget{skimr}{%
+\subsubsection*{\texorpdfstring{\texttt{skimr}}{skimr}}\label{skimr}}
+\addcontentsline{toc}{subsubsection}{\texttt{skimr}}
+
+This package provides a fuller summary, including standard deviation, percentiles, and a histogram.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(skimr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'skimr' was built under R version 4.3.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#skim(movies$imdb\_rating)}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{inferential-analysis-1}{%
-\section*{Inferential Analysis}\label{inferential-analysis-1}}
-\addcontentsline{toc}{section}{Inferential Analysis}
+\section{Inferential Analysis}\label{inferential-analysis-1}}
 
 Inferential statistics serve as the cornerstone for drawing conclusions about a population based on a sample. Unlike descriptive statistics, which aim to summarize data, inferential statistics allow for hypothesis testing, predictions, and inferences about the data (Field, Miles, \& Field, 2012). The utility of inferential statistics lies in its ability to generalize findings beyond the immediate data to broader contexts. This is particularly valuable in research areas where it's impractical to collect data from an entire population (Frankfort-Nachmias, Leon-Guerrero, \& Davis, 2020).
 
@@ -7943,11 +8042,16 @@ Two-way ANOVA, however, involves two independent variables, offering a more intr
 \end{Shaded}
 
 \begin{verbatim}
-##               Df    Sum Sq   Mean Sq F value   Pr(>F)    
-## genre        270 1.744e+18 6.459e+15   5.358  < 2e-16 ***
-## year           1 1.595e+17 1.595e+17 132.346  < 2e-16 ***
-## genre:year   156 3.865e+17 2.478e+15   2.056 2.58e-11 ***
-## Residuals   1164 1.403e+18 1.205e+15                     
+##               Df              Sum Sq            Mean Sq F value
+## genre        270 1743797675202755840   6458509908158355   5.358
+## year           1  159516834289368928 159516834289368928 132.346
+## genre:year   156  386490379486245504   2477502432604138   2.056
+## Residuals   1164 1402970663621501696   1205301257406788        
+##                           Pr(>F)    
+## genre       < 0.0000000000000002 ***
+## year        < 0.0000000000000002 ***
+## genre:year       0.0000000000258 ***
+## Residuals                           
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 202 observations deleted due to missingness
@@ -7987,9 +8091,9 @@ Simple linear regression aims to model the relationship between a single indepen
 ## -9.189 -4.344 -2.014  4.224 37.931 
 ## 
 ## Coefficients:
-##             Estimate Std. Error t value Pr(>|t|)    
-## (Intercept) 13.24438    0.54547  24.281   <2e-16 ***
-## episode      0.03960    0.06065   0.653    0.514    
+##             Estimate Std. Error t value            Pr(>|t|)    
+## (Intercept) 13.24438    0.54547  24.281 <0.0000000000000002 ***
+## episode      0.03960    0.06065   0.653               0.514    
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -8025,38 +8129,39 @@ Multiple linear regression extends the concept of simple linear regression to in
 ## -2.1969 -0.3632  0.0000  0.2378  2.1969 
 ## 
 ## Coefficients:
-##                            Estimate Std. Error t value Pr(>|t|)    
-## (Intercept)                30.76874    1.15957  26.535 6.97e-16 ***
-## countryBrazil              -8.54130    1.62530  -5.255 5.36e-05 ***
-## countryCambodia           -10.11504    1.98496  -5.096 7.55e-05 ***
-## countryChina               -8.32319    1.93885  -4.293 0.000438 ***
-## countryFiji                -9.15756    1.89552  -4.831 0.000134 ***
-## countryGabon               -8.72445    2.03256  -4.292 0.000438 ***
-## countryGuatemala           -7.14067    1.78167  -4.008 0.000825 ***
-## countryIslands             -8.72193    1.85477  -4.702 0.000177 ***
-## countryKenya               -8.62563    1.62564  -5.306 4.81e-05 ***
-## countryMalaysia            -7.57832    2.74555  -2.760 0.012888 *  
-## countryNicaragua          -12.11584    1.75705  -6.896 1.90e-06 ***
-## countryPalau               -7.21193    1.66768  -4.325 0.000408 ***
-## countryPanama              -6.73275    1.44326  -4.665 0.000193 ***
-## countryPhilippines        -12.20939    1.80140  -6.778 2.39e-06 ***
-## countryPolynesia           -8.06126    1.63176  -4.940 0.000106 ***
-## countrySamoa               -8.85353    2.00306  -4.420 0.000331 ***
-## countryThailand            -7.13689    1.64191  -4.347 0.000389 ***
-## countryVanuatu             -6.76941    1.72095  -3.934 0.000974 ***
-## timeslotWednesday 8:00 pm   5.59395    2.14699   2.605 0.017892 *  
-## season                     -0.48437    0.08152  -5.942 1.27e-05 ***
+##                            Estimate Std. Error t value             Pr(>|t|)    
+## (Intercept)                30.76874    1.15957  26.535 0.000000000000000697 ***
+## countryBrazil              -8.54130    1.62530  -5.255 0.000053615198056057 ***
+## countryCambodia           -10.11504    1.98496  -5.096 0.000075482615565828 ***
+## countryChina               -8.32319    1.93885  -4.293             0.000438 ***
+## countryFiji                -9.15756    1.89552  -4.831             0.000134 ***
+## countryGabon               -8.72445    2.03256  -4.292             0.000438 ***
+## countryGuatemala           -7.14067    1.78167  -4.008             0.000825 ***
+## countryIslands             -8.72193    1.85477  -4.702             0.000177 ***
+## countryKenya               -8.62563    1.62564  -5.306 0.000048107174859556 ***
+## countryMalaysia            -7.57832    2.74555  -2.760             0.012888 *  
+## countryNicaragua          -12.11584    1.75705  -6.896 0.000001898678859247 ***
+## countryPalau               -7.21193    1.66768  -4.325             0.000408 ***
+## countryPanama              -6.73275    1.44326  -4.665             0.000193 ***
+## countryPhilippines        -12.20939    1.80140  -6.778 0.000002385364697607 ***
+## countryPolynesia           -8.06126    1.63176  -4.940             0.000106 ***
+## countrySamoa               -8.85353    2.00306  -4.420             0.000331 ***
+## countryThailand            -7.13689    1.64191  -4.347             0.000389 ***
+## countryVanuatu             -6.76941    1.72095  -3.934             0.000974 ***
+## timeslotWednesday 8:00 pm   5.59395    2.14699   2.605             0.017892 *  
+## season                     -0.48437    0.08152  -5.942 0.000012701313768962 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 1.148 on 18 degrees of freedom
 ##   (2 observations deleted due to missingness)
 ## Multiple R-squared:  0.9758, Adjusted R-squared:  0.9502 
-## F-statistic: 38.18 on 19 and 18 DF,  p-value: 8.219e-11
+## F-statistic: 38.18 on 19 and 18 DF,  p-value: 0.00000000008219
 \end{verbatim}
 
 \hypertarget{references-3}{%
-\subsection{References}\label{references-3}}
+\subsection*{References}\label{references-3}}
+\addcontentsline{toc}{subsection}{References}
 
 \begin{itemize}
 \tightlist
