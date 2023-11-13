@@ -7,7 +7,7 @@
 <title>Chapter 15 Data Analysis | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
 <meta name="description" content="15.1 Introduction Data analysis plays a quintessential role in the realm of communication and media research. With an ever-increasing volume of data generated from diverse sources, researchers...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.35 with bs4_book()">
 <meta property="og:title" content="Chapter 15 Data Analysis | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="15.1 Introduction Data analysis plays a quintessential role in the realm of communication and media research. With an ever-increasing volume of data generated from diverse sources, researchers...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="15.1 Introduction Data analysis plays a quintessential role in the realm of communication and media research. With an ever-increasing volume of data generated from diverse sources, researchers...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -79,7 +79,11 @@
 <h3>Objectives and Importance of Data Analysis<a class="anchor" aria-label="anchor" href="#objectives-and-importance-of-data-analysis"><i class="fas fa-link"></i></a>
 </h3>
 <p>The fundamental aim of data analysis is to distill large amounts of information into actionable insights. In the context of communication and media research, these objectives can be further refined as follows:</p>
-<p><strong>Summarization</strong>: To present data in a digestible format, offering a clear snapshot of its main features. <strong>Exploration</strong>: To identify relationships or trends within the data, providing a basis for further investigation. <strong>Inference</strong>: To make educated guesses or predictions about a broader population based on sample data. <strong>Validation</strong>: To confirm or negate existing theories or hypotheses through empirical evidence. <strong>Decision-Making</strong>: To provide actionable recommendations and insights that may influence policy, strategy, or further academic research.</p>
+<p><strong>Summarization</strong>: To present data in a digestible format, offering a clear snapshot of its main features.</p>
+<p><strong>Exploration</strong>: To identify relationships or trends within the data, providing a basis for further investigation.</p>
+<p><strong>Inference</strong>: To make educated guesses or predictions about a broader population based on sample data.</p>
+<p><strong>Validation</strong>: To confirm or negate existing theories or hypotheses through empirical evidence.</p>
+<p><strong>Decision-Making</strong>: To provide actionable recommendations and insights that may influence policy, strategy, or further academic research.</p>
 <p>Ignoring proper data analysis can lead to misleading conclusions or partial understandings, affecting the quality and reliability of the research. Thus, the importance of meticulous data analysis cannot be overstated.</p>
 </div>
 <div id="types-of-analyses-descriptive-vs.-inferential" class="section level3 unnumbered">
@@ -122,7 +126,7 @@
 <div id="measures-of-central-tendency" class="section level3 unnumbered">
 <h3>Measures of Central Tendency<a class="anchor" aria-label="anchor" href="#measures-of-central-tendency"><i class="fas fa-link"></i></a>
 </h3>
-<div class="sourceCode" id="cb191"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load the packages</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com">data.table</a></span><span class="op">)</span></span>
@@ -134,148 +138,274 @@
 <span><span class="va">movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-03-09/movies.csv"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Preview the first few rows of the datasets</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">)</span></span></code></pre></div>
-<pre><code>##                  track_id                                            track_name
-## 1: 6f807x0ima9a1j3VPbc7VN I Don't Care (with Justin Bieber) - Loud Luxury Remix
-## 2: 0r7CVbZTWZgbTCYdfa2P31                       Memories - Dillon Francis Remix
-## 3: 1z1Hg7Vb0AhHDiEmnDE79l                       All the Time - Don Diablo Remix
-## 4: 75FpbthrwQmzHlBJLuGdC7                     Call You Mine - Keanu Silva Remix
-## 5: 1e8PAfcKUYoKkxPhrHqw4x               Someone You Loved - Future Humans Remix
-## 6: 7fvUMiyapMsRRxr07cU8Ef     Beautiful People (feat. Khalid) - Jack Wins Remix
-##        track_artist track_popularity         track_album_id
-## 1:       Ed Sheeran               66 2oCs0DGTsRO98Gh5ZSl2Cx
-## 2:         Maroon 5               67 63rPSO264uRjW1X5E6cWv6
-## 3:     Zara Larsson               70 1HoSmj2eLcsrR0vE9gThr4
-## 4: The Chainsmokers               60 1nqYsOef1yKKuGOVchbsk6
-## 5:    Lewis Capaldi               69 7m7vv9wlQ4i0LFuJiE2zsQ
-## 6:       Ed Sheeran               67 2yiy9cd2QktrNvWC2EUi0k
-##                                         track_album_name
-## 1: I Don't Care (with Justin Bieber) [Loud Luxury Remix]
-## 2:                       Memories (Dillon Francis Remix)
-## 3:                       All the Time (Don Diablo Remix)
-## 4:                           Call You Mine - The Remixes
-## 5:               Someone You Loved (Future Humans Remix)
-## 6:     Beautiful People (feat. Khalid) [Jack Wins Remix]
-##    track_album_release_date playlist_name            playlist_id playlist_genre
-## 1:               2019-06-14     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 2:               2019-12-13     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 3:               2019-07-05     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 4:               2019-07-19     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 5:               2019-03-05     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 6:               2019-07-11     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-##    playlist_subgenre danceability energy key loudness mode speechiness
-## 1:         dance pop        0.748  0.916   6   -2.634    1      0.0583
-## 2:         dance pop        0.726  0.815  11   -4.969    1      0.0373
-## 3:         dance pop        0.675  0.931   1   -3.432    0      0.0742
-## 4:         dance pop        0.718  0.930   7   -3.778    1      0.1020
-## 5:         dance pop        0.650  0.833   1   -4.672    1      0.0359
-## 6:         dance pop        0.675  0.919   8   -5.385    1      0.1270
-##    acousticness instrumentalness liveness valence   tempo duration_ms
-## 1:       0.1020       0.00000000   0.0653   0.518 122.036      194754
-## 2:       0.0724       0.00421000   0.3570   0.693  99.972      162600
-## 3:       0.0794       0.00002330   0.1100   0.613 124.008      176616
-## 4:       0.0287       0.00000943   0.2040   0.277 121.956      169093
-## 5:       0.0803       0.00000000   0.0833   0.725 123.976      189052
-## 6:       0.0799       0.00000000   0.1430   0.585 124.982      163049</code></pre>
-<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">movies</span><span class="op">)</span></span></code></pre></div>
-<pre><code>##    year      imdb            title            test clean_test binary    budget
-## 1: 2013 tt1711425    21 &amp;amp; Over          notalk     notalk   FAIL  13000000
-## 2: 2012 tt1343727         Dredd 3D     ok-disagree         ok   PASS  45000000
-## 3: 2013 tt2024544 12 Years a Slave notalk-disagree     notalk   FAIL  20000000
-## 4: 2013 tt1272878           2 Guns          notalk     notalk   FAIL  61000000
-## 5: 2013 tt0453562               42             men        men   FAIL  40000000
-## 6: 2013 tt1335975         47 Ronin             men        men   FAIL 225000000
-##    domgross  intgross     code budget_2013 domgross_2013 intgross_2013
-## 1: 25682380  42195766 2013FAIL    13000000      25682380      42195766
-## 2: 13414714  40868994 2012PASS    45658735      13611086      41467257
-## 3: 53107035 158607035 2013FAIL    20000000      53107035     158607035
-## 4: 75612460 132493015 2013FAIL    61000000      75612460     132493015
-## 5: 95020213  95020213 2013FAIL    40000000      95020213      95020213
-## 6: 38362475 145803842 2013FAIL   225000000      38362475     145803842
-##    period_code decade_code imdb_id
-## 1:           1           1 1711425
-## 2:           1           1 1343727
-## 3:           1           1 2024544
-## 4:           1           1 1272878
-## 5:           1           1  453562
-## 6:           1           1 1335975
-##                                                                                                                                                                                                                                               plot
-## 1:                                                                                                                                                                                                                                            &lt;NA&gt;
-## 2:                                                                                                                                                                                                                                            &lt;NA&gt;
-## 3:                                                                                                                    In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
-## 4: A DEA agent and a naval intelligence officer find themselves on the run after a botched attempt to infiltrate a drug cartel. While fleeing, they learn the secret of their shaky alliance: Neither knew that the other was an undercover agent.
-## 5:                                                                                                  The life story of Jackie Robinson and his history-making signing with the Brooklyn Dodgers under the guidance of team executive Branch Rickey.
-## 6:                                                                                                                                   A band of samurai set out to avenge the death and dishonor of their master at the hands of a ruthless shogun.
-##    rated response          language country
-## 1:  &lt;NA&gt;       NA              &lt;NA&gt;    &lt;NA&gt;
-## 2:  &lt;NA&gt;       NA              &lt;NA&gt;    &lt;NA&gt;
-## 3:     R     TRUE           English USA, UK
-## 4:     R     TRUE  English, Spanish     USA
-## 5: PG-13     TRUE           English     USA
-## 6: PG-13     TRUE English, Japanese     USA
-##                                                                                                                    writer
-## 1:                                                                                                                   &lt;NA&gt;
-## 2:                                                                                                                   &lt;NA&gt;
-## 3:                                       John Ridley (screenplay), Solomon Northup (based on ""Twelve Years a Slave"" by)
-## 4:                                Blake Masters (screenplay), Steven Grant (based on the Boom! Studios graphic novels by)
-## 5:                                                                                                        Brian Helgeland
-## 6: Chris Morgan (screenplay), Hossein Amini (screenplay), Chris Morgan (screen story by), Walter Hamada (screen story by)
-##    metascore imdb_rating          director    released
-## 1:        NA          NA              &lt;NA&gt;        &lt;NA&gt;
-## 2:        NA          NA              &lt;NA&gt;        &lt;NA&gt;
-## 3:        97         8.3     Steve McQueen 08 Nov 2013
-## 4:        55         6.8 Baltasar Kormákur 02 Aug 2013
-## 5:        62         7.6   Brian Helgeland 12 Apr 2013
-## 6:        29         6.6       Carl Rinsch 25 Dec 2013
-##                                                                 actors
-## 1:                                                                &lt;NA&gt;
-## 2:                                                                &lt;NA&gt;
-## 3:          Chiwetel Ejiofor, Dwight Henry, Dickie Gravois, Bryan Batt
-## 4:  Denzel Washington, Mark Wahlberg, Paula Patton, Edward James Olmos
-## 5: Chadwick Boseman, Harrison Ford, Nicole Beharie, Christopher Meloni
-## 6:         Keanu Reeves, Hiroyuki Sanada, Ko Shibasaki, Tadanobu Asano
-##                         genre                                            awards
-## 1:                       &lt;NA&gt;                                              &lt;NA&gt;
-## 2:                       &lt;NA&gt;                                              &lt;NA&gt;
-## 3:  Biography, Drama, History Won 3 Oscars. Another 131 wins &amp; 137 nominations.
-## 4:      Action, Comedy, Crime                                            1 win.
-## 5:    Biography, Drama, Sport                          3 wins &amp; 13 nominations.
-## 6: Action, Adventure, Fantasy                                     1 nomination.
-##    runtime  type
-## 1:    &lt;NA&gt;  &lt;NA&gt;
-## 2:    &lt;NA&gt;  &lt;NA&gt;
-## 3: 134 min movie
-## 4: 109 min movie
-## 5: 128 min movie
-## 6: 118 min movie
-##                                                                                              poster
-## 1:                                                                                             &lt;NA&gt;
-## 2:                                                                                             &lt;NA&gt;
-## 3: http://ia.media-imdb.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg
-## 4: http://ia.media-imdb.com/images/M/MV5BNTQ5MTgzNDg4OF5BMl5BanBnXkFtZTcwMjAyODEzOQ@@._V1_SX300.jpg
-## 5: http://ia.media-imdb.com/images/M/MV5BMTQwMDU4MDI3MV5BMl5BanBnXkFtZTcwMjU1NDgyOQ@@._V1_SX300.jpg
-## 6: http://ia.media-imdb.com/images/M/MV5BMTc0MjE2NzE0OV5BMl5BanBnXkFtZTgwNTU5MjE1MDE@._V1_SX300.jpg
-##    imdb_votes error
-## 1:       &lt;NA&gt;    NA
-## 2:       &lt;NA&gt;    NA
-## 3:    143,446    NA
-## 4:     87,301    NA
-## 5:     43,608    NA
-## 6:     25,735    NA</code></pre>
+<span><span class="va">spotify_songs</span></span></code></pre></div>
+<pre><code>##                      track_id
+##     1: 6f807x0ima9a1j3VPbc7VN
+##     2: 0r7CVbZTWZgbTCYdfa2P31
+##     3: 1z1Hg7Vb0AhHDiEmnDE79l
+##     4: 75FpbthrwQmzHlBJLuGdC7
+##     5: 1e8PAfcKUYoKkxPhrHqw4x
+##    ---                       
+## 32829: 7bxnKAamR3snQ1VGLuVfC1
+## 32830: 5Aevni09Em4575077nkWHz
+## 32831: 7ImMqPP3Q1yfUHvsdn7wEo
+## 32832: 2m69mhnfQ1Oq6lGtXuYhgX
+## 32833: 29zWqhca3zt5NsckZqDf6c
+##                                                   track_name     track_artist
+##     1: I Don't Care (with Justin Bieber) - Loud Luxury Remix       Ed Sheeran
+##     2:                       Memories - Dillon Francis Remix         Maroon 5
+##     3:                       All the Time - Don Diablo Remix     Zara Larsson
+##     4:                     Call You Mine - Keanu Silva Remix The Chainsmokers
+##     5:               Someone You Loved - Future Humans Remix    Lewis Capaldi
+##    ---                                                                       
+## 32829:                  City Of Lights - Official Radio Edit     Lush &amp; Simon
+## 32830:                   Closer - Sultan &amp; Ned Shepard Remix   Tegan and Sara
+## 32831:                          Sweet Surrender - Radio Edit      Starkillers
+## 32832:                        Only For You - Maor Levi Remix           Mat Zo
+## 32833:                                Typhoon - Original Mix     Julian Calor
+##        track_popularity         track_album_id
+##     1:               66 2oCs0DGTsRO98Gh5ZSl2Cx
+##     2:               67 63rPSO264uRjW1X5E6cWv6
+##     3:               70 1HoSmj2eLcsrR0vE9gThr4
+##     4:               60 1nqYsOef1yKKuGOVchbsk6
+##     5:               69 7m7vv9wlQ4i0LFuJiE2zsQ
+##    ---                                        
+## 32829:               42 2azRoBBWEEEYhqV6sb7JrT
+## 32830:               20 6kD6KLxj7s8eCE3ABvAyf5
+## 32831:               14 0ltWNSY9JgxoIZO4VzuCa6
+## 32832:               15 1fGrOkHnHJcStl14zNx8Jy
+## 32833:               27 0X3mUOm6MhxR7PzxG95rAo
+##                                             track_album_name
+##     1: I Don't Care (with Justin Bieber) [Loud Luxury Remix]
+##     2:                       Memories (Dillon Francis Remix)
+##     3:                       All the Time (Don Diablo Remix)
+##     4:                           Call You Mine - The Remixes
+##     5:               Someone You Loved (Future Humans Remix)
+##    ---                                                      
+## 32829:                            City Of Lights (Vocal Mix)
+## 32830:                                        Closer Remixed
+## 32831:                          Sweet Surrender (Radio Edit)
+## 32832:                                Only For You (Remixes)
+## 32833:                                         Typhoon/Storm
+##        track_album_release_date   playlist_name            playlist_id
+##     1:               2019-06-14       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     2:               2019-12-13       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     3:               2019-07-05       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     4:               2019-07-19       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     5:               2019-03-05       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##    ---                                                                
+## 32829:               2014-04-28 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32830:               2013-03-08 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32831:               2014-04-21 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32832:               2014-01-01 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32833:               2014-03-03 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+##        playlist_genre         playlist_subgenre danceability energy key
+##     1:            pop                 dance pop        0.748  0.916   6
+##     2:            pop                 dance pop        0.726  0.815  11
+##     3:            pop                 dance pop        0.675  0.931   1
+##     4:            pop                 dance pop        0.718  0.930   7
+##     5:            pop                 dance pop        0.650  0.833   1
+##    ---                                                                 
+## 32829:            edm progressive electro house        0.428  0.922   2
+## 32830:            edm progressive electro house        0.522  0.786   0
+## 32831:            edm progressive electro house        0.529  0.821   6
+## 32832:            edm progressive electro house        0.626  0.888   2
+## 32833:            edm progressive electro house        0.603  0.884   5
+##        loudness mode speechiness acousticness instrumentalness liveness valence
+##     1:   -2.634    1      0.0583     0.102000       0.00000000   0.0653  0.5180
+##     2:   -4.969    1      0.0373     0.072400       0.00421000   0.3570  0.6930
+##     3:   -3.432    0      0.0742     0.079400       0.00002330   0.1100  0.6130
+##     4:   -3.778    1      0.1020     0.028700       0.00000943   0.2040  0.2770
+##     5:   -4.672    1      0.0359     0.080300       0.00000000   0.0833  0.7250
+##    ---                                                                         
+## 32829:   -1.814    1      0.0936     0.076600       0.00000000   0.0668  0.2100
+## 32830:   -4.462    1      0.0420     0.001710       0.00427000   0.3750  0.4000
+## 32831:   -4.899    0      0.0481     0.108000       0.00000111   0.1500  0.4360
+## 32832:   -3.361    1      0.1090     0.007920       0.12700000   0.3430  0.3080
+## 32833:   -4.571    0      0.0385     0.000133       0.34100000   0.7420  0.0894
+##          tempo duration_ms
+##     1: 122.036      194754
+##     2:  99.972      162600
+##     3: 124.008      176616
+##     4: 121.956      169093
+##     5: 123.976      189052
+##    ---                    
+## 32829: 128.170      204375
+## 32830: 128.041      353120
+## 32831: 127.989      210112
+## 32832: 128.008      367432
+## 32833: 127.984      337500</code></pre>
+<div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">movies</span></span></code></pre></div>
+<pre><code>##       year      imdb                                   title            test
+##    1: 2013 tt1711425                           21 &amp;amp; Over          notalk
+##    2: 2012 tt1343727                                Dredd 3D     ok-disagree
+##    3: 2013 tt2024544                        12 Years a Slave notalk-disagree
+##    4: 2013 tt1272878                                  2 Guns          notalk
+##    5: 2013 tt0453562                                      42             men
+##   ---                                                                       
+## 1790: 1971 tt0067741                                   Shaft          notalk
+## 1791: 1971 tt0067800                              Straw Dogs          notalk
+## 1792: 1971 tt0067116                   The French Connection          notalk
+## 1793: 1971 tt0067992 Willy Wonka &amp;amp; the Chocolate Factory    men-disagree
+## 1794: 1970 tt0065466          Beyond the Valley of the Dolls              ok
+##       clean_test binary   budget domgross  intgross     code budget_2013
+##    1:     notalk   FAIL 13000000 25682380  42195766 2013FAIL    13000000
+##    2:         ok   PASS 45000000 13414714  40868994 2012PASS    45658735
+##    3:     notalk   FAIL 20000000 53107035 158607035 2013FAIL    20000000
+##    4:     notalk   FAIL 61000000 75612460 132493015 2013FAIL    61000000
+##    5:        men   FAIL 40000000 95020213  95020213 2013FAIL    40000000
+##   ---                                                                   
+## 1790:     notalk   FAIL 53012938 70327868 107190108 1971FAIL   305063707
+## 1791:     notalk   FAIL 25000000 10324441  11253821 1971FAIL   143862856
+## 1792:     notalk   FAIL  2200000 41158757  41158757 1971FAIL    12659931
+## 1793:        men   FAIL  3000000  4000000   4000000 1971FAIL    17263543
+## 1794:         ok   PASS  1000000  9000000   9000000 1970PASS     5997631
+##       domgross_2013 intgross_2013 period_code decade_code imdb_id
+##    1:      25682380      42195766           1           1 1711425
+##    2:      13611086      41467257           1           1 1343727
+##    3:      53107035     158607035           1           1 2024544
+##    4:      75612460     132493015           1           1 1272878
+##    5:      95020213      95020213           1           1  453562
+##   ---                                                            
+## 1790:     404702718     616827003          NA          NA   67741
+## 1791:      59412143      64760273          NA          NA   67800
+## 1792:     236848653     236848653          NA          NA   67116
+## 1793:      23018057      23018057          NA          NA   67992
+## 1794:      53978683      53978683          NA          NA   65466
+##                                                                                                                                                                                                                                                  plot
+##    1:                                                                                                                                                                                                                                            &lt;NA&gt;
+##    2:                                                                                                                                                                                                                                            &lt;NA&gt;
+##    3:                                                                                                                    In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
+##    4: A DEA agent and a naval intelligence officer find themselves on the run after a botched attempt to infiltrate a drug cartel. While fleeing, they learn the secret of their shaky alliance: Neither knew that the other was an undercover agent.
+##    5:                                                                                                  The life story of Jackie Robinson and his history-making signing with the Brooklyn Dodgers under the guidance of team executive Branch Rickey.
+##   ---                                                                                                                                                                                                                                                
+## 1790:                                                                                                                                         Cool black private eye John Shaft is hired by a crime lord to find and retrieve his kidnapped daughter.
+## 1791:                                                                                                                                     A young American and his English wife come to rural England and face increasingly vicious local harassment.
+## 1792:                                                                                                                                          A pair of NYC cops in the Narcotics Bureau stumble onto a drug smuggling job with a French connection.
+## 1793:                                                                                                                                                                                                                                            &lt;NA&gt;
+## 1794:                                                                                                                                                              Three girls come to Hollywood to make it big, but find only sex, drugs and sleaze.
+##       rated response         language country
+##    1:  &lt;NA&gt;       NA             &lt;NA&gt;    &lt;NA&gt;
+##    2:  &lt;NA&gt;       NA             &lt;NA&gt;    &lt;NA&gt;
+##    3:     R     TRUE          English USA, UK
+##    4:     R     TRUE English, Spanish     USA
+##    5: PG-13     TRUE          English     USA
+##   ---                                        
+## 1790:     R     TRUE          English     USA
+## 1791:     R     TRUE          English USA, UK
+## 1792:     R     TRUE  English, French     USA
+## 1793:  &lt;NA&gt;       NA             &lt;NA&gt;    &lt;NA&gt;
+## 1794:     X     TRUE          English     USA
+##                                                                                        writer
+##    1:                                                                                    &lt;NA&gt;
+##    2:                                                                                    &lt;NA&gt;
+##    3:        John Ridley (screenplay), Solomon Northup (based on ""Twelve Years a Slave"" by)
+##    4: Blake Masters (screenplay), Steven Grant (based on the Boom! Studios graphic novels by)
+##    5:                                                                         Brian Helgeland
+##   ---                                                                                        
+## 1790:       Ernest Tidyman (screenplay), John D.F. Black (screenplay), Ernest Tidyman (novel)
+## 1791:   David Zelag Goodman (screenplay), Sam Peckinpah (screenplay), Gordon Williams (novel)
+## 1792:                         Ernest Tidyman (screenplay), Robin Moore (based on the book by)
+## 1793:                                                                                    &lt;NA&gt;
+## 1794:                       Roger Ebert (screenplay), Roger Ebert (story), Russ Meyer (story)
+##       metascore imdb_rating          director    released
+##    1:        NA          NA              &lt;NA&gt;        &lt;NA&gt;
+##    2:        NA          NA              &lt;NA&gt;        &lt;NA&gt;
+##    3:        97         8.3     Steve McQueen 08 Nov 2013
+##    4:        55         6.8 Baltasar Kormákur 02 Aug 2013
+##    5:        62         7.6   Brian Helgeland 12 Apr 2013
+##   ---                                                    
+## 1790:        NA         6.6      Gordon Parks 02 Jul 1971
+## 1791:        NA         7.6     Sam Peckinpah 29 Dec 1971
+## 1792:        96         7.8  William Friedkin 09 Oct 1971
+## 1793:        NA          NA              &lt;NA&gt;        &lt;NA&gt;
+## 1794:        NA         6.2        Russ Meyer 17 Jun 1970
+##                                                                    actors
+##    1:                                                                &lt;NA&gt;
+##    2:                                                                &lt;NA&gt;
+##    3:          Chiwetel Ejiofor, Dwight Henry, Dickie Gravois, Bryan Batt
+##    4:  Denzel Washington, Mark Wahlberg, Paula Patton, Edward James Olmos
+##    5: Chadwick Boseman, Harrison Ford, Nicole Beharie, Christopher Meloni
+##   ---                                                                    
+## 1790: Richard Roundtree, Moses Gunn, Charles Cioffi, Christopher St. John
+## 1791:           Dustin Hoffman, Susan George, Peter Vaughan, T.P. McKenna
+## 1792:            Gene Hackman, Fernando Rey, Roy Scheider, Tony Lo Bianco
+## 1793:                                                                &lt;NA&gt;
+## 1794:               Dolly Read, Cynthia Myers, Marcia McBroom, John Lazar
+##                           genre
+##    1:                      &lt;NA&gt;
+##    2:                      &lt;NA&gt;
+##    3: Biography, Drama, History
+##    4:     Action, Comedy, Crime
+##    5:   Biography, Drama, Sport
+##   ---                          
+## 1790:   Action, Crime, Thriller
+## 1791:                  Thriller
+## 1792:   Action, Crime, Thriller
+## 1793:                      &lt;NA&gt;
+## 1794:             Comedy, Music
+##                                                  awards runtime  type
+##    1:                                              &lt;NA&gt;    &lt;NA&gt;  &lt;NA&gt;
+##    2:                                              &lt;NA&gt;    &lt;NA&gt;  &lt;NA&gt;
+##    3: Won 3 Oscars. Another 131 wins &amp; 137 nominations. 134 min movie
+##    4:                                            1 win. 109 min movie
+##    5:                          3 wins &amp; 13 nominations. 128 min movie
+##   ---                                                                
+## 1790:      Won 1 Oscar. Another 4 wins &amp; 4 nominations. 100 min movie
+## 1791:             Nominated for 1 Oscar. Another 1 win. 118 min movie
+## 1792:    Won 5 Oscars. Another 18 wins &amp; 8 nominations. 104 min movie
+## 1793:                                              &lt;NA&gt;    &lt;NA&gt;  &lt;NA&gt;
+## 1794:                                               N/A 109 min movie
+##                                                                                                 poster
+##    1:                                                                                             &lt;NA&gt;
+##    2:                                                                                             &lt;NA&gt;
+##    3: http://ia.media-imdb.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg
+##    4: http://ia.media-imdb.com/images/M/MV5BNTQ5MTgzNDg4OF5BMl5BanBnXkFtZTcwMjAyODEzOQ@@._V1_SX300.jpg
+##    5: http://ia.media-imdb.com/images/M/MV5BMTQwMDU4MDI3MV5BMl5BanBnXkFtZTcwMjU1NDgyOQ@@._V1_SX300.jpg
+##   ---                                                                                                 
+## 1790:     http://ia.media-imdb.com/images/M/MV5BMTIwNzQyMTg5OV5BMl5BanBnXkFtZTYwNzQzMzk4._V1_SX300.jpg
+## 1791:     http://ia.media-imdb.com/images/M/MV5BMTI4NDY3MTYwMV5BMl5BanBnXkFtZTYwNDkyNDg5._V1_SX300.jpg
+## 1792: http://ia.media-imdb.com/images/M/MV5BMTY5Nzg5OTIzOF5BMl5BanBnXkFtZTcwMDI5NDA0MQ@@._V1_SX300.jpg
+## 1793:                                                                                             &lt;NA&gt;
+## 1794: http://ia.media-imdb.com/images/M/MV5BMTYzMTgyODA4OV5BMl5BanBnXkFtZTcwNTk0NzMzMQ@@._V1_SX300.jpg
+##       imdb_votes error
+##    1:       &lt;NA&gt;    NA
+##    2:       &lt;NA&gt;    NA
+##    3:    143,446    NA
+##    4:     87,301    NA
+##    5:     43,608    NA
+##   ---                 
+## 1790:     10,275    NA
+## 1791:     37,726    NA
+## 1792:     62,153    NA
+## 1793:       &lt;NA&gt;    NA
+## 1794:      6,462    NA</code></pre>
 <div id="mean" class="section level4 unnumbered">
 <h4>Mean<a class="anchor" aria-label="anchor" href="#mean"><i class="fas fa-link"></i></a>
 </h4>
 <p>The mean is perhaps the most widely recognized measure of central tendency, representing the arithmetic average of a dataset. To compute the mean, all the data points are summed up and then divided by the number of data points (Lind, Marchal, &amp; Wathen, 2012). The mean is sensitive to outliers, which can disproportionately influence the calculated average, potentially resulting in a misleading representation of central location (McClave, Benson, &amp; Sincich, 2011). Despite this limitation, the mean is highly useful in various statistical methods, including regression analysis and hypothesis testing, because of its mathematical properties (Field, Miles, &amp; Field, 2012).</p>
 <p>Importantly, the mean can be categorized into different types: arithmetic mean, geometric mean, and harmonic mean, each with specific applications depending on the nature of the data and the intended analysis (Triola, 2018). For instance, the geometric mean is often used when dealing with data that exhibit exponential growth or decline, such as in financial or biological contexts (Cox &amp; Snell, 1981).</p>
 <p><strong>Example using Spotify Songs Dataset</strong>: To find the mean popularity of songs.</p>
-<div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mean_popularity</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_popularity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">track_popularity</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">mean_popularity</span></span></code></pre></div>
+<p>The R code provided demonstrates the use of the <code>dplyr</code> package and base R functions to calculate the mean popularity of tracks in the <code>spotify_songs</code> dataset. Let’s break down the code and its output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>dplyr summarise function</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb189"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mean_popularity</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_popularity <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">track_popularity</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>This snippet uses the <code>dplyr</code> package’s <code>summarise</code> function to calculate the mean of the <code>track_popularity</code> variable in the <code>spotify_songs</code> dataframe. The <code>mean</code> function is used with the <code>na.rm = TRUE</code> argument, which means that it will ignore <code>NA</code> (missing) values in the calculation. The result is stored in a new dataframe <code>mean_popularity</code>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<strong>Output Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mean_popularity</span></span></code></pre></div>
 <pre><code>##   mean_popularity
 ## 1        42.47708</code></pre>
+<p>This output indicates that the mean popularity score of the tracks in the dataset is approximately 42.47708. The <code>&lt;dbl&gt;</code> notation suggests that the mean popularity score is a double-precision floating-point number, which is a common way of representing decimal numbers in R.</p>
+<p>In summary, both methods are used to calculate the average popularity score of tracks in the <code>spotify_songs</code> dataset. The output shows the mean value as approximately 42.47708, reflecting the average popularity of the tracks in the dataset. The use of <code>dplyr</code> and base R functions provides a means to cross-validate the result for accuracy.</p>
 </div>
 <div id="median" class="section level4 unnumbered">
 <h4>Median<a class="anchor" aria-label="anchor" href="#median"><i class="fas fa-link"></i></a>
@@ -283,13 +413,25 @@
 <p>The median serves as another measure of central tendency and is less sensitive to outliers compared to the mean (Lind et al., 2012). It is defined as the middle value in a dataset that has been arranged in ascending order. If the dataset contains an even number of observations, the median is calculated as the average of the two middle numbers. Medians are particularly useful for data that are skewed or contain outliers, as they provide a more “resistant” measure of the data’s central location (Hoaglin, Mosteller, &amp; Tukey, 2000).</p>
 <p>In addition to its robustness against outliers, the median is often used in non-parametric statistical tests like the Mann-Whitney U test and the Kruskal-Wallis test. These tests do not assume that the data follow a specific distribution, making the median an invaluable asset in such scenarios (Siegel &amp; Castellan, 1988).</p>
 <p><strong>Example using Movies Dataset</strong>: To find the median budget of movies.</p>
-<div class="sourceCode" id="cb197"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">median_budget</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>median_budget <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">budget</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">median_budget</span></span></code></pre></div>
+<p>The provided R code calculates the median budget of movies in the <code>movies</code> dataset, with two different approaches, and the results are displayed. Let’s analyze the code and its outputs:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Using dplyr’s summarise function</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb192"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">median_budget</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>median_budget <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">budget</span><span class="op">/</span><span class="fl">1000000</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>This snippet uses the <code>dplyr</code> package’s <code>summarise</code> function to compute the median of the <code>budget</code> variable in the <code>movies</code> dataframe. Before calculating the median, each budget value is divided by 1,000,000 (<code>budget/1000000</code>), effectively converting the budget values from (presumably) dollars to millions of dollars. The <code>na.rm = TRUE</code> argument in the <code>median</code> function indicates that any <code>NA</code> (missing) values should be ignored in the calculation. The result is stored in a new dataframe called <code>median_budget</code>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<strong>Output Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb193"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">median_budget</span></span></code></pre></div>
 <pre><code>##   median_budget
-## 1      28000000</code></pre>
+## 1            28</code></pre>
+<p>This indicates that the median budget of the movies, in millions of dollars, is 28. The <code>&lt;dbl&gt;</code> notation signifies that the median budget is a double-precision floating-point number.</p>
+<p>In conclusion, both methods are used to calculate the median budget of movies in the dataset, and both approaches confirm that the median budget is 28 million dollars. The use of both <code>dplyr</code> and base R functions serves as a cross-verification to ensure the accuracy of the result.</p>
 </div>
 <div id="mode" class="section level4 unnumbered">
 <h4>Mode<a class="anchor" aria-label="anchor" href="#mode"><i class="fas fa-link"></i></a>
@@ -297,21 +439,32 @@
 <p>The mode refers to the value or values that appear most frequently in a dataset (Gravetter &amp; Wallnau, 2016). A dataset can be unimodal, having one mode; bimodal, having two modes; or multimodal, having multiple modes. While the mode is less commonly used than the mean and median for numerical data, it is the primary measure of central tendency for categorical or nominal data (Agresti, 2002).</p>
 <p>Despite its less frequent application in numerical contexts, the mode can still be useful for identifying the most common values in a dataset and for understanding the general distribution of the data (Bland &amp; Altman, 1996). For example, in market research, knowing the mode of a dataset related to consumer preferences can provide valuable insights into what most consumers are likely to choose.</p>
 <p><strong>Example using Spotify Songs Dataset</strong>: To find the mode of the <code>playlist_genre</code>.</p>
-<div class="sourceCode" id="cb199"><pre class="downlit sourceCode r">
+<p>The provided R code calculates the mode of the <code>playlist_genre</code> variable in the <code>spotify_songs</code> dataset using the <code>Mode</code> function from the <code>DescTools</code> package. The mode is the value that appears most frequently in a dataset. Let’s break down the code and its output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Using the DescTools package’s Mode function</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb195"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://andrisignorell.github.io/DescTools/">DescTools</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: package 'DescTools' was built under R version 4.3.2</code></pre>
 <pre><code>## 
 ## Attaching package: 'DescTools'</code></pre>
 <pre><code>## The following object is masked from 'package:data.table':
 ## 
 ##     %like%</code></pre>
-<div class="sourceCode" id="cb203"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">mode_genre</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://andrisignorell.github.io/DescTools/reference/Mode.html">Mode</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">playlist_genre</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">mode_genre</span></span></code></pre></div>
+<div class="sourceCode" id="cb198"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mode_genre</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://andrisignorell.github.io/DescTools/reference/Mode.html">Mode</a></span><span class="op">(</span><span class="va">spotify_songs</span><span class="op">$</span><span class="va">playlist_genre</span><span class="op">)</span></span></code></pre></div>
+<p>This snippet uses the <code>Mode</code> function from the <code>DescTools</code> package to find the most frequently occurring genre in the <code>playlist_genre</code> column of the <code>spotify_songs</code> dataset. The result is stored in the variable <code>mode_genre</code>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<strong>Output Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb199"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mode_genre</span></span></code></pre></div>
 <pre><code>## [1] "edm"
 ## attr(,"freq")
 ## [1] 6043</code></pre>
+<p>This output indicates that the most common genre (mode) in the <code>playlist_genre</code> column is “edm”. The <code>attr(,"freq")</code> part shows the frequency of this mode, which is 6043. This means that “edm” appears 6043 times in the <code>playlist_genre</code> column, more than any other genre.</p>
+<p>In summary, the code calculates and displays the mode of the <code>playlist_genre</code> variable in the <code>spotify_songs</code> dataset, indicating that the most common genre is “edm”, which appears 6043 times. The consistency of the results from both methods demonstrates the reliability of the calculation.</p>
 </div>
 </div>
 <div id="measures-of-dispersion" class="section level3 unnumbered">
@@ -323,13 +476,38 @@
 <p>The range is the simplest measure of dispersion, calculated by subtracting the smallest value from the largest value in the dataset (McClave, Benson, &amp; Sincich, 2011). While straightforward to compute, the range is highly sensitive to outliers and does not account for how the rest of the values in the dataset are distributed (Triola, 2018).</p>
 <p>The range offers a quick, albeit crude, estimate of the dataset’s variability. It is often used in conjunction with other measures of dispersion for a more comprehensive understanding of data spread. Despite its limitations, the range can be helpful in initial exploratory analyses to quickly identify the scope of the data and to detect possible outliers or data entry errors (Tukey, 1977).</p>
 <p><strong>Example using Movies Dataset</strong>: To find the range of movie budgets.</p>
-<div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">budget_range</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>Range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">budget</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">budget</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">budget_range</span></span></code></pre></div>
-<pre><code>##       Range
-## 1 424993000</code></pre>
+<p>The R code provided calculates the range of the <code>budget</code> column in the <code>movies</code> dataset using the <code>dplyr</code> package. The range is a measure of dispersion that represents the difference between the maximum and minimum values in a dataset. Here’s a breakdown of the code and its output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Code Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb201"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">budget_range</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>Range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">budget</span><span class="op">/</span><span class="fl">1000000</span>, </span>
+<span>                        na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">budget</span><span class="op">/</span><span class="fl">1000000</span>,</span>
+<span>                                            na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>
+<code>movies %&gt;%</code>: This part indicates that the code is using the <code>movies</code> dataframe and piping (<code>%&gt;%</code>) it into subsequent operations.</li>
+<li>
+<code>summarise(Range = ...)</code>: The <code>summarise</code> function from the <code>dplyr</code> package is used to compute a summary statistic. Here, it’s creating a new variable named <code>Range</code>.</li>
+<li>
+<code>max(budget/1000000, na.rm = TRUE) - min(budget/1000000, na.rm = TRUE)</code>:</li>
+</ul>
+<p>This calculates the range of the movie budgets. Each <code>budget</code> value is first divided by 1,000,000 (presumably converting the budget from dollars to millions of dollars). The <code>max</code> function finds the maximum value and <code>min</code> finds the minimum value, with <code>na.rm = TRUE</code> indicating that any <code>NA</code> (missing) values should be ignored. The range is the difference between these two values.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<strong>Output Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb202"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">budget_range</span></span></code></pre></div>
+<pre><code>##     Range
+## 1 424.993</code></pre>
+<ul>
+<li>The output shows that the calculated range of the movie budgets, in millions of dollars, is approximately 424.993. This means that the largest budget in the dataset exceeds the smallest budget by about 424.993 million dollars.</li>
+<li>The <code>&lt;dbl&gt;</code> notation indicates that the calculated range is a double-precision floating-point number, a standard numeric type in R for representing decimal values.</li>
+</ul>
+<p>In summary, the code calculates the range of movie budgets in the <code>movies</code> dataset and finds that the budgets span approximately 424.993 million dollars, from the smallest to the largest. This provides a sense of how varied the movie budgets are in the dataset.</p>
 </div>
 <div id="standard-deviation" class="section level4 unnumbered">
 <h4>Standard Deviation<a class="anchor" aria-label="anchor" href="#standard-deviation"><i class="fas fa-link"></i></a>
@@ -337,13 +515,36 @@
 <p>The standard deviation is a more sophisticated measure of dispersion that indicates how much individual data points deviate from the mean (Lind et al., 2012). Calculated as the square root of the variance, the standard deviation provides an intuitive sense of the data’s spread since it is in the same unit as the original data points. It plays a crucial role in various statistical analyses, including hypothesis testing and confidence interval estimation, and is fundamental in fields ranging from finance to natural sciences (Levine, Stephan, Krehbiel, &amp; Berenson, 2008).</p>
 <p>The standard deviation can be classified into two types: population standard deviation and sample standard deviation. The former is used when the data represent an entire population, while the latter is used for sample data and is calculated with a slight adjustment to account for sample bias (Kenney &amp; Keeping, 1962).</p>
 <p><strong>Example using Spotify Songs Dataset</strong>: To find the standard deviation of <code>danceability</code>.</p>
-<div class="sourceCode" id="cb207"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">std_danceability</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>std_danceability <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">danceability</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">std_danceability</span></span></code></pre></div>
+<p>The R code you’ve provided calculates the standard deviation of the <code>danceability</code> variable in the <code>spotify_songs</code> dataset using the <code>dplyr</code> package. Let’s break down the code and its output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Code Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb204"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">std_danceability</span> <span class="op">&lt;-</span> <span class="va">spotify_songs</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>std_danceability <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">danceability</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>
+<code>spotify_songs %&gt;%</code>: This part uses the <code>spotify_songs</code> dataframe and pipes it into the subsequent operation using <code>%&gt;%</code>.</li>
+<li>
+<code>summarise(std_danceability = ...)</code>: The <code>summarise</code> function from <code>dplyr</code> is used to compute a summary statistic. Here, it’s creating a new variable named <code>std_danceability</code>.</li>
+<li>
+<code>sd(danceability, na.rm = TRUE)</code>: This calculates the standard deviation of the <code>danceability</code> variable. The <code>sd</code> function computes the standard deviation, and <code>na.rm = TRUE</code> indicates that any <code>NA</code> (missing) values should be ignored in the calculation.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<strong>Output Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb205"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">std_danceability</span></span></code></pre></div>
 <pre><code>##   std_danceability
 ## 1        0.1450853</code></pre>
+<ul>
+<li>The output shows that the calculated standard deviation of the <code>danceability</code> scores in the <code>spotify_songs</code> dataset is approximately 0.1450853.</li>
+<li>The <code>&lt;dbl&gt;</code> notation indicates that the result is a double-precision floating-point number, which is typical for numeric calculations in R.</li>
+</ul>
+<p>The standard deviation is a measure of the amount of variation or dispersion in a set of values. A low standard deviation indicates that the values tend to be close to the mean (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.</p>
+<p>In this case, a standard deviation of approximately 0.1450853 for <code>danceability</code> suggests that the danceability scores in the <code>spotify_songs</code> dataset vary moderately around the mean. This gives an idea of the variability in danceability among the songs in the dataset.</p>
 </div>
 <div id="variance" class="section level4 unnumbered">
 <h4>Variance<a class="anchor" aria-label="anchor" href="#variance"><i class="fas fa-link"></i></a>
@@ -351,13 +552,36 @@
 <p>Variance is closely related to the standard deviation, essentially being its square. It quantifies how much individual data points in a dataset differ from the mean (Gravetter &amp; Wallnau, 2016). Unlike the standard deviation, the variance is not in the same unit as the data, which can make it less intuitive to interpret. However, variance has essential mathematical properties that make it useful in statistical modeling and hypothesis testing (Moore, McCabe, &amp; Craig, 2009).</p>
 <p>In statistical theory, the concept of variance is pivotal for various analytical techniques, such as Analysis of Variance (ANOVA) and Principal Component Analysis (PCA). Variance allows for the decomposition of data into explained and unexplained components, serving as a key element in understanding data variability in greater depth (Johnson &amp; Wichern, 2007).</p>
 <p><strong>Example using Movies Dataset</strong>: To find the variance in IMDB ratings.</p>
-<div class="sourceCode" id="cb209"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">var_imdb_rating</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>var_imdb_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="va">imdb_rating</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">var_imdb_rating</span></span></code></pre></div>
+<p>The R code you’ve shared calculates the variance of the <code>imdb_rating</code> variable in the <code>movies</code> dataset using the <code>dplyr</code> package. Let’s examine the code and its output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Code Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb207"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">var_imdb_rating</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>var_imdb_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="va">imdb_rating</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>
+<code>movies %&gt;%</code>: This line uses the <code>movies</code> dataframe and pipes it into the following operation with <code>%&gt;%</code>.</li>
+<li>
+<code>summarise(var_imdb_rating = ...)</code>: The <code>summarise</code> function from <code>dplyr</code> is employed to compute a summary statistic, in this case, creating a new variable called <code>var_imdb_rating</code>.</li>
+<li>
+<code>var(imdb_rating, na.rm = TRUE)</code>: This computes the variance of the <code>imdb_rating</code> variable. The <code>var</code> function calculates the variance, and <code>na.rm = TRUE</code> indicates that any <code>NA</code> (missing) values should be excluded from the calculation.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>
+<strong>Output Explanation</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb208"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">var_imdb_rating</span></span></code></pre></div>
 <pre><code>##   var_imdb_rating
 ## 1       0.9269498</code></pre>
+<ul>
+<li>The output indicates that the variance of the IMDb ratings in the <code>movies</code> dataset is approximately 0.9269498.</li>
+<li>The <code>&lt;dbl&gt;</code> notation signifies that the result is a double-precision floating-point number, which is a standard numeric format in R.</li>
+</ul>
+<p>Variance is a statistical measure that describes the spread of numbers in a data set. More specifically, it measures how far each number in the set is from the mean and thus from every other number in the set. In this context, a variance of approximately 0.9269498 in IMDb ratings suggests the degree to which these ratings vary from their average value in the dataset.</p>
+<p>This measure of variance can be particularly useful for understanding the consistency of movie ratings; a lower variance would indicate that the ratings are generally close to the mean, suggesting agreement among raters, whereas a higher variance would imply more diverse opinions on movie ratings.</p>
 </div>
 </div>
 <div id="general-summary" class="section level3 unnumbered">
@@ -368,22 +592,85 @@
 <h4>
 <code>summary()</code><a class="anchor" aria-label="anchor" href="#summary-1"><i class="fas fa-link"></i></a>
 </h4>
-<p>This function returns the range, quartiles, mean, and missing data.</p>
-<div class="sourceCode" id="cb211"><pre class="downlit sourceCode r">
+<p>The R code snippet you provided uses the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function to generate descriptive statistics for the <code>imdb_rating</code> variable in the <code>movies</code> dataset. The <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function in R provides a quick, five-number summary of the given data along with the count of <code>NA</code> (missing) values. Let’s break down the output:</p>
+<div class="sourceCode" id="cb210"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">movies</span><span class="op">$</span><span class="va">imdb_rating</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
 ##    2.10    6.20    6.80    6.76    7.40    9.30     202</code></pre>
+<ul>
+<li>
+<strong>Min. (Minimum)</strong>: The smallest value in the <code>imdb_rating</code> data. Here, the minimum IMDb rating is 2.10.</li>
+<li>
+<strong>1st Qu. (First Quartile)</strong>: Also known as the lower quartile, it is the median of the lower half of the dataset. This value is 6.20, meaning 25% of the ratings are below this value.</li>
+<li>
+<strong>Median</strong>: The middle value when the data is sorted in ascending order. The median IMDb rating is 6.80, indicating that half of the movies have a rating below 6.80 and the other half have a rating above 6.80.</li>
+<li>
+<strong>Mean</strong>: The average of the <code>imdb_rating</code> values. Calculated as the sum of all ratings divided by the number of non-missing ratings. The mean rating is 6.76.</li>
+<li>
+<strong>3rd Qu. (Third Quartile)</strong>: Also known as the upper quartile, it is the median of the upper half of the dataset. Here, 75% of the movies have a rating below 7.40.</li>
+<li>
+<strong>Max. (Maximum)</strong>: The largest value in the <code>imdb_rating</code> data. The highest IMDb rating in the dataset is 9.30.</li>
+<li>
+<strong>NA’s</strong>: The number of missing values in the <code>imdb_rating</code> data. There are 202 missing values.</li>
+</ul>
+<p>This summary provides a comprehensive view of the distribution of IMDb ratings in the <code>movies</code> dataset, including the central tendency (mean, median), spread (minimum, first quartile, third quartile, maximum), and the count of missing values. It helps in understanding the overall rating landscape of the movies in the dataset.</p>
 </div>
 <div id="skimr" class="section level4 unnumbered">
 <h4>
 <code>skimr</code><a class="anchor" aria-label="anchor" href="#skimr"><i class="fas fa-link"></i></a>
 </h4>
-<p>This package provides a fuller summary, including standard deviation, percentiles, and a histogram.</p>
-<div class="sourceCode" id="cb213"><pre class="downlit sourceCode r">
+<p>The R code snippet provided uses the <code><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim()</a></code> function from the <code>skimr</code> package to generate a summary of the <code>imdb_rating</code> variable from the <code>movies</code> dataset. The <code>skimr</code> package provides a more detailed summary than the base R <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function, particularly useful for initial exploratory data analysis.</p>
+<div class="sourceCode" id="cb212"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/skimr/">skimr</a></span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Warning: package 'skimr' was built under R version 4.3.2</code></pre>
-<div class="sourceCode" id="cb215"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#skim(movies$imdb_rating)</span></span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># skim(movies$imdb_rating)</span></span></code></pre></div>
+<p>Let’s break down the output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Data Summary Section</strong>:
+<ul>
+<li>
+<strong>Name</strong>: Identifies the data being summarized, here <code>movies$imdb_rating</code>.</li>
+<li>
+<strong>Number of rows</strong>: Indicates the total number of entries in the dataset, which is 1794 for <code>imdb_rating</code>.</li>
+<li>
+<strong>Number of columns</strong>: The number of variables or columns in the data being skimmed. Since <code><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim()</a></code> is applied to a single column, this is 1.</li>
+<li>
+<strong>Column type frequency</strong>: Shows the types of data present in the columns. Here, there is 1 numeric column.</li>
+</ul>
+</li>
+<li>
+<strong>Detailed Statistics Section</strong>:
+<ul>
+<li>
+<strong>skim_variable</strong>: A character representation of the variable being summarized.</li>
+<li>
+<strong>n_missing</strong>: The number of missing (<code>NA</code>) values in the dataset. Here, there are 202 missing ratings.</li>
+<li>
+<strong>complete_rate</strong>: Proportion of non-missing values. Calculated as <code>(Total Number of rows - n_missing) / Total Number of rows</code>. For <code>imdb_rating</code>, it’s approximately 0.8874025.</li>
+<li>
+<strong>mean</strong>: The average of the <code>imdb_rating</code> values, which is 6.760113.</li>
+<li>
+<strong>sd (standard deviation)</strong>: Measures the amount of variation or dispersion in <code>imdb_rating</code>. Here, it is 0.9627823.</li>
+<li>
+<strong>p0, p25, p50, p75, p100</strong>: These represent the percentiles of the data:</li>
+<li>
+<strong>p0</strong>: The minimum value (0th percentile), which is 2.1.</li>
+<li>
+<strong>p25</strong>: The 25th percentile, meaning 25% of the data fall below this value, which is 6.2.</li>
+<li>
+<strong>p50</strong>: The median or 50th percentile, which is 6.8.</li>
+<li>
+<strong>p75</strong>: The 75th percentile, meaning 75% of the data fall below this value, which is 7.4.</li>
+<li>
+<strong>p100</strong>: The maximum value (100th percentile), which is 9.3.</li>
+<li>
+<strong>hist</strong>: A text-based histogram providing a visual representation of the distribution of <code>imdb_rating</code>. The characters (▁▁▅▇▂) represent different frequency bins.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the <code><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim()</a></code> function output provides a detailed statistical summary of the <code>imdb_rating</code> variable, including measures of central tendency, dispersion, and data completeness, along with a visual histogram for quick assessment of the data distribution. This information is crucial for understanding the characteristics of the IMDb ratings in the <code>movies</code> dataset, especially when preparing for more detailed data analysis.</p>
 </div>
 </div>
 </div>
@@ -401,7 +688,8 @@
 </h4>
 <p>The T-test is a statistical method used to determine if there is a significant difference between the means of two groups. It is commonly used to compare two samples to determine if they could have originated from the same population (Rosner, 2015). The T-test operates under certain assumptions, such as the data being normally distributed and the samples being independent of each other. Violation of these assumptions may lead to misleading results.</p>
 <p><strong>Example with <code>movies</code> dataset:</strong></p>
-<div class="sourceCode" id="cb216"><pre class="downlit sourceCode r">
+<p>The provided R code performs a Welch Two Sample t-test to compare the mean budgets of action and drama movies in the <code>movies</code> dataset. The Welch t-test is used to test the hypothesis that two populations (in this case, action and drama movies) have equal means. This test is appropriate when the two samples have possibly unequal variances.</p>
+<div class="sourceCode" id="cb215"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Calculate the mean budget for action and drama movies</span></span>
 <span><span class="va">action_movies</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">genre</span> <span class="op">==</span> <span class="st">'Action'</span><span class="op">)</span></span>
 <span><span class="va">drama_movies</span> <span class="op">&lt;-</span> <span class="va">movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">genre</span> <span class="op">==</span> <span class="st">'Drama'</span><span class="op">)</span></span>
@@ -419,10 +707,58 @@
 ## sample estimates:
 ## mean of x mean of y 
 ##   7570000  19585222</code></pre>
+<p>Let’s analyze the output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Test Description</strong>:
+<ul>
+<li>
+<strong>Welch Two Sample t-test</strong>: Indicates the type of t-test conducted. The Welch test does not assume equal variances across the two samples.</li>
+</ul>
+</li>
+<li>
+<strong>Data Description</strong>:
+<ul>
+<li>
+<strong>data</strong>: Specifies the datasets being compared - the <code>budget</code> of <code>action_movies</code> and <code>drama_movies</code>.</li>
+</ul>
+</li>
+<li>
+<strong>Test Statistics</strong>:
+<ul>
+<li>
+<strong>t = -1.5346</strong>: The calculated t-statistic value. The sign of the t-statistic indicates the direction of the difference between the means (negative here suggests that the mean budget of action movies might be less than that of drama movies).</li>
+<li>
+<strong>df = 1.2327</strong>: Degrees of freedom for the test. This value is calculated based on the sample sizes and variances of the two groups and is a key component in determining the critical value for the test.</li>
+<li>
+<strong>p-value = 0.3325</strong>: The probability of observing a test statistic as extreme as, or more extreme than, the observed value under the null hypothesis. A higher p-value (typically &gt; 0.05) suggests that the observed data is consistent with the null hypothesis, which in this test is that there is no difference in the means of the two groups.</li>
+</ul>
+</li>
+<li>
+<strong>Hypothesis Testing</strong>:
+<ul>
+<li>
+<strong>alternative hypothesis</strong>: States the hypothesis being tested. Here, it tests if the true difference in means is not equal to 0, which means it’s checking whether the average budgets of action and drama movies are significantly different.</li>
+<li>
+<strong>95 percent confidence interval</strong>: This interval estimates the range of the true difference in means between the two groups. It ranges from approximately -76,461,080 to 52,430,636. Since this interval includes 0, it suggests that the difference in means might not be statistically significant.</li>
+</ul>
+</li>
+<li>
+<strong>Sample Estimates</strong>:
+<ul>
+<li>
+<strong>mean of x (action movies)</strong>: The mean budget of action movies, approximately 7,570,000.</li>
+<li>
+<strong>mean of y (drama movies)</strong>: The mean budget of drama movies, approximately 19,585,222.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the Welch t-test’s output indicates that there is not a statistically significant difference in the mean budgets of action and drama movies in the dataset, as evidenced by a p-value greater than 0.05 and a confidence interval that includes 0. The sample estimates provide the average budgets for each movie genre, which can be useful for descriptive purposes.</p>
 <p><strong>Independent Sample T-test</strong></p>
 <p>An independent sample T-test is used when comparing the means of two independent groups to assess whether their means are statistically different (Field et al., 2012). The groups should be separate, meaning the performance or attributes of one group should not influence the other. For instance, this type of T-test might be used to compare the average test scores of two different classrooms. It’s essential to note that both groups should be normally distributed, and ideally, they should have the same variance for the T-test to be applicable.</p>
 <p><strong>Example with <code>Survivor summary.csv</code> and <code>viewers.csv</code>:</strong></p>
-<div class="sourceCode" id="cb218"><pre class="downlit sourceCode r">
+<p>The provided R code performs a Welch Two Sample t-test to compare the average viewership (viewers_mean) of TV seasons that took place in Fiji with those that took place in other locations. This test is conducted using data from a <code>summary</code> dataset.</p>
+<div class="sourceCode" id="cb217"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Load data</span></span>
 <span><span class="va">summary</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-06-01/summary.csv"</span><span class="op">)</span></span>
 <span></span>
@@ -443,10 +779,60 @@
 ## sample estimates:
 ## mean of x mean of y 
 ##  10.69857  15.97839</code></pre>
+<p>Let’s analyze the output of this t-test:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Test Description</strong>:
+<ul>
+<li>
+<strong>Welch Two Sample t-test</strong>: Indicates the type of t-test conducted, which is the Welch t-test. This test is used when comparing the means of two groups that may have unequal variances.</li>
+</ul>
+</li>
+<li>
+<strong>Data Description</strong>:
+<ul>
+<li>
+<strong>data</strong>: Compares the <code>viewers_mean</code> of <code>fiji_seasons</code> and <code>other_seasons</code>. These represent the average viewership for TV seasons based on their filming locations (Fiji vs. other countries).</li>
+</ul>
+</li>
+<li>
+<strong>Test Statistics</strong>:
+<ul>
+<li>
+<strong>t = -4.5307</strong>: The calculated t-statistic value. A negative value indicates that the mean of the first group (Fiji seasons) might be less than the mean of the second group (other seasons).</li>
+<li>
+<strong>df = 27.938</strong>: Degrees of freedom for the test, a value calculated based on the sample sizes and variances of the two groups.</li>
+<li>
+<strong>p-value = 0.0001004</strong>: The probability of observing a test statistic as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true. A p-value this low (much less than 0.05) suggests that the observed difference in means is statistically significant.</li>
+</ul>
+</li>
+<li>
+<strong>Hypothesis Testing</strong>:
+<ul>
+<li>
+<strong>alternative hypothesis</strong>: The hypothesis being tested is that the true difference in means is not equal to 0. In other words, it’s assessing whether the average viewership for seasons in Fiji is significantly different from those in other locations.</li>
+<li>
+<strong>95 percent confidence interval</strong>: The interval ranges from approximately -7.667140 to -2.892491. Since this interval does not include 0 and is entirely negative, it suggests a significant difference in means, with the Fiji seasons having lower average viewership.</li>
+</ul>
+</li>
+<li>
+<strong>Sample Estimates</strong>:
+<ul>
+<li>
+<strong>mean of x (Fiji seasons)</strong>: The mean viewership for Fiji seasons, approximately 10.69857.</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+<strong>mean of y (Other seasons)</strong>: The mean viewership for seasons in other locations, approximately 15.97839.</li>
+</ul>
+<p>In summary, the Welch t-test’s output indicates a statistically significant difference in the average viewership of TV seasons filmed in Fiji compared to those filmed in other locations. The negative t-value and confidence interval suggest that the seasons filmed in Fiji, on average, have lower viewership than those filmed elsewhere. The low p-value reinforces this finding, suggesting that the difference in viewership is not just a result of random chance.</p>
 <p><strong>Paired Sample T-test</strong></p>
 <p>In contrast, a paired sample T-test is designed to compare means from the same group at different times or under different conditions (Vasishth &amp; Broe, 2011). For example, it could be used to compare student test scores before and after a training program. Here, the assumption is that the differences between pairs follow a normal distribution. Paired T-tests are particularly useful in “before and after” scenarios, where each subject serves as their control, thereby increasing the test’s sensitivity.</p>
 <p><strong>Example with Survivor’s <code>summary.csv</code>:</strong></p>
-<div class="sourceCode" id="cb220"><pre class="downlit sourceCode r">
+<p>The R code provided performs a paired t-test to compare viewership at the premier and finale of TV seasons using the <code>summary</code> dataset. A paired t-test is appropriate when comparing two sets of related observations — in this case, the viewership of the same TV seasons at two different time points (premier and finale).</p>
+<div class="sourceCode" id="cb219"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Perform paired t-test to compare viewership at premier and finale</span></span>
 <span><span class="va">paired_t_test_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">summary</span><span class="op">$</span><span class="va">viewers_premier</span>, <span class="va">summary</span><span class="op">$</span><span class="va">viewers_finale</span>, paired <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
@@ -463,6 +849,51 @@
 ## sample estimates:
 ## mean difference 
 ##        -0.75575</code></pre>
+<p>Let’s break down the output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Test Description</strong>:
+<ul>
+<li>
+<strong>Paired t-test</strong>: Indicates that a paired t-test is conducted, which is suitable for comparing two related samples or repeated measurements on the same subjects.</li>
+</ul>
+</li>
+<li>
+<strong>Data Description</strong>:
+<ul>
+<li>
+<strong>data</strong>: The test compares <code>viewers_premier</code> and <code>viewers_finale</code> from the <code>summary</code> dataset.</li>
+</ul>
+</li>
+<li>
+<strong>Test Statistics</strong>:
+<ul>
+<li>
+<strong>t = -0.76096</strong>: The calculated t-statistic value. A negative value suggests that the mean viewership at the premier might be lower than at the finale, but the direction alone does not indicate statistical significance.</li>
+<li>
+<strong>df = 39</strong>: Degrees of freedom for the test, indicating the number of independent data points in the paired samples.</li>
+<li>
+<strong>p-value = 0.4513</strong>: The probability of observing a test statistic as extreme as, or more extreme than, the one observed under the null hypothesis (no difference in means). A p-value greater than 0.05 (common threshold for significance) suggests that the difference in mean viewership is not statistically significant.</li>
+</ul>
+</li>
+<li>
+<strong>Hypothesis Testing</strong>:
+<ul>
+<li>
+<strong>alternative hypothesis</strong>: The hypothesis being tested is that the true mean difference in viewership between the premier and finale is not equal to 0. In other words, it assesses whether there is a significant difference in viewership between these two time points.</li>
+<li>
+<strong>95 percent confidence interval</strong>: Ranges from approximately -2.764596 to 1.253096. Since this interval includes 0, it suggests that the difference in viewership between the premier and finale is not statistically significant.</li>
+</ul>
+</li>
+<li>
+<strong>Sample Estimates</strong>:
+<ul>
+<li>
+<strong>mean difference</strong>: The mean difference in viewership between the premier and finale, calculated as the mean of the differences for each season. Here, it is -0.75575. However, the confidence interval and p-value indicate that this difference is not statistically significant.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the paired t-test output indicates that there is no statistically significant difference in viewership between the premier and finale of the TV seasons in the dataset. The p-value is above the common threshold for significance (0.05), and the confidence interval includes 0, both suggesting that any observed difference in mean viewership could be due to random chance rather than a systematic difference.</p>
 </div>
 <div id="analysis-of-variance-anova" class="section level4 unnumbered">
 <h4>Analysis of Variance (ANOVA)<a class="anchor" aria-label="anchor" href="#analysis-of-variance-anova"><i class="fas fa-link"></i></a>
@@ -471,9 +902,9 @@
 <p><strong>One-way ANOVA</strong></p>
 <p>One-way ANOVA focuses on a single independent variable with more than two levels or groups (Tabachnick &amp; Fidell, 2013). It allows researchers to test if there are statistically significant differences between the means of three or more independent groups. It is widely used in various fields, including psychology, business, and healthcare, for testing the impact of different conditions or treatments.</p>
 <p><strong>Example with <code>Survivor castaways.csv</code>:</strong></p>
-<div class="sourceCode" id="cb222"><pre class="downlit sourceCode r">
+<p>The provided R code performs a one-way Analysis of Variance (ANOVA) to test whether there are statistically significant differences in the total votes received by castaways, grouped by their personality types, using data from the <code>castaways</code> dataset.</p>
+<div class="sourceCode" id="cb221"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">castaways</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-06-01/castaways.csv"</span><span class="op">)</span></span>
-<span></span>
 <span></span>
 <span><span class="co"># Perform one-way ANOVA for total_votes_received among different personality types</span></span>
 <span><span class="va">anova_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">total_votes_received</span> <span class="op">~</span> <span class="va">personality_type</span>, data <span class="op">=</span> <span class="va">castaways</span><span class="op">)</span></span>
@@ -482,12 +913,64 @@
 ## personality_type  15    227   15.14   1.075  0.376
 ## Residuals        725  10209   14.08               
 ## 3 observations deleted due to missingness</code></pre>
+<p>Let’s analyze the output of the ANOVA:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>ANOVA Summary</strong>:
+<ul>
+<li>
+<strong>Df (Degrees of Freedom)</strong>:
+<ul>
+<li>
+<strong>personality_type: 15</strong> — This represents the degrees of freedom for the personality types group. It’s calculated as the number of levels in the group minus one (assuming there are 16 personality types).</li>
+</ul>
+</li>
+<li>
+<strong>Residuals: 725</strong> — The degrees of freedom for the residuals, which is the number of observations minus the number of groups (here, total number of castaways minus 16).</li>
+<li>
+<strong>Sum Sq (Sum of Squares)</strong>:
+<ul>
+<li>
+<strong>personality_type: 227</strong> — The total variation attributed to the differences in personality type.</li>
+<li>
+<strong>Residuals: 10209</strong> — The total variation that is not attributed to personality types (i.e., within-group variation).</li>
+</ul>
+</li>
+<li>
+<strong>Mean Sq (Mean Squares)</strong>:</li>
+<li>
+<strong>personality_type: 15.14</strong> — This is the variance between the groups (Sum Sq of personality type divided by its Df).</li>
+<li>
+<strong>Residuals: 14.08</strong> — This is the variance within the groups (Sum Sq of residuals divided by its Df).</li>
+<li>
+<strong>F value: 1.075</strong> — The F-statistic value, calculated as the Mean Sq of personality type divided by the Mean Sq of residuals. It’s a measure of how much the group means differ from the overall mean, relative to the variance within the groups.</li>
+<li>
+<strong>Pr(&gt;F): 0.376</strong> — The p-value associated with the F-statistic. It indicates the probability of observing an F-statistic as large as, or larger than, what was observed, under the assumption that the null hypothesis (no difference in means across groups) is true.</li>
+</ul>
+</li>
+<li>
+<strong>Interpreting the Results</strong>:
+<ul>
+<li>The p-value is 0.376, which is greater than the common alpha level of 0.05. This suggests that there is no statistically significant difference in the total votes received among different personality types at the chosen level of significance. In other words, any observed differences in total votes among personality types could likely be due to chance.</li>
+<li>The relatively high p-value indicates that the null hypothesis (that there are no differences in the mean total votes received among the different personality types) cannot be rejected.</li>
+</ul>
+</li>
+<li>
+<strong>Additional Note</strong>:
+<ul>
+<li>The output mentions “3 observations deleted due to missingness.” This indicates that the analysis excluded three cases where data were missing, which is a standard procedure in ANOVA to ensure the accuracy of the test results.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the one-way ANOVA conducted suggests that personality type does not have a statistically significant impact on the total votes received by castaways in the dataset. This is inferred from the high p-value and the ANOVA’s failure to reject the null hypothesis.</p>
 <p><strong>Two-way ANOVA</strong></p>
 <p>Two-way ANOVA, however, involves two independent variables, offering a more intricate comparison and understanding of the interaction effects (Winer, Brown, &amp; Michels, 1991). It helps to analyze how two factors impact a dependent variable, and it can also show how the two independent variables interact with each other. This form of ANOVA is highly valuable in experimental design where multiple variables may influence the outcome.</p>
 <p><strong>Example with <code>movies</code> dataset:</strong></p>
-<div class="sourceCode" id="cb224"><pre class="downlit sourceCode r">
+<p>The provided R code performs a two-way Analysis of Variance (ANOVA) on the <code>movies</code> dataset to test for statistical significance in the differences of movie budgets across different genres and years, and the interaction between these two factors.</p>
+<div class="sourceCode" id="cb223"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Perform two-way ANOVA for budget by genre and year</span></span>
 <span><span class="va">anova_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">budget</span> <span class="op">~</span> <span class="va">genre</span> <span class="op">*</span> <span class="va">year</span>, data <span class="op">=</span> <span class="va">movies</span><span class="op">)</span></span>
+<span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">anova_result</span><span class="op">)</span></span></code></pre></div>
 <pre><code>##               Df              Sum Sq            Mean Sq F value
 ## genre        270 1743797675202755840   6458509908158355   5.358
@@ -502,7 +985,76 @@
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 202 observations deleted due to missingness</code></pre>
-<hr>
+<p>Let’s analyze the output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>ANOVA Summary</strong>:
+<ul>
+<li>
+<strong>Df (Degrees of Freedom)</strong>: Represents the number of levels in each factor minus one.
+<ul>
+<li>
+<strong>genre: 270</strong> — Degrees of freedom for the genre factor.</li>
+<li>
+<strong>year: 1</strong> — Degrees of freedom for the year factor.</li>
+</ul>
+</li>
+<li>
+<strong>genre:year: 156</strong> — Degrees of freedom for the interaction between genre and year.
+<ul>
+<li>
+<strong>Residuals: 1164</strong> — Degrees of freedom for the residuals (total number of observations minus the sum of the degrees of freedom for each factor and interaction).</li>
+</ul>
+</li>
+<li>
+<strong>Sum Sq (Sum of Squares)</strong>:</li>
+<li>Indicates the total variation attributed to each factor and their interaction.</li>
+<li>
+<strong>Mean Sq (Mean Squares)</strong>:</li>
+<li>The variance due to each factor and their interaction (Sum Sq divided by Df).</li>
+<li>
+<strong>F value</strong>:
+<ul>
+<li>The F-statistic for each factor, calculated as the Mean Sq of the factor divided by the Mean Sq of the residuals. It’s a measure of the effect size.</li>
+</ul>
+</li>
+<li>
+<strong>Pr(&gt;F) (p-value)</strong>:
+<ul>
+<li>Indicates the probability of observing an F-statistic as large as, or larger than, what was observed, under the null hypothesis (no effect).</li>
+<li>
+<strong>genre, year, genre:year</strong>: All have very low p-values, indicated by “***”, suggesting that each factor and their interaction significantly affect movie budgets.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>Interpreting the Results</strong>:
+<ul>
+<li>
+<strong>Genre</strong>: The very low p-value suggests a statistically significant difference in movie budgets across different genres.</li>
+<li>
+<strong>Year</strong>: The very low p-value indicates a significant difference in movie budgets across different years.</li>
+<li>
+<strong>Genre-Year Interaction</strong>: The low p-value for the interaction term suggests that the effect of genre on movie budgets varies by year, meaning different genres might have different budget trends over time.</li>
+<li>
+<strong>Residuals</strong>: Represent unexplained variance after accounting for the main effects and interaction.</li>
+</ul>
+</li>
+<li>
+<strong>Significance Codes</strong>:
+<ul>
+<li>The “***” next to the p-values denotes a very high level of statistical significance.</li>
+</ul>
+</li>
+<li>
+<strong>Additional Note</strong>:
+<ul>
+<li>“202 observations deleted due to missingness” indicates that the analysis excluded cases with missing data, which is common in ANOVA to maintain accuracy.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the two-way ANOVA results suggest that both genre and year, and the interaction between them, have statistically significant effects on movie budgets in the dataset. This implies that budget variations are not only dependent on the genre or the year independently but also on how these two factors interact with each other.</p>
 </div>
 </div>
 <div id="regression-analysis" class="section level3 unnumbered">
@@ -513,7 +1065,8 @@
 </h4>
 <p>Simple linear regression aims to model the relationship between a single independent variable and a dependent variable by fitting a linear equation to observed data (Montgomery, Peck, &amp; Vining, 2012). The primary objective is to find the best-fitting straight line that accurately predicts the output values within a range. Simple linear regression works best when the variables have a linear relationship, and the data is homoscedastic, meaning the variance of errors is constant across levels of the independent variable.</p>
 <p><strong>Example with <code>Survivor viewers.csv</code>:</strong></p>
-<div class="sourceCode" id="cb226"><pre class="downlit sourceCode r">
+<p>The provided R code performs a linear regression analysis using the <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> function to model the relationship between the number of viewers (dependent variable) and episode numbers (independent variable) in a TV series dataset. The <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function is then used to provide a detailed summary of the linear model’s results.</p>
+<div class="sourceCode" id="cb225"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">viewers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-06-01/viewers.csv"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Model viewers based on episode numbers</span></span>
@@ -538,13 +1091,84 @@
 ##   (22 observations deleted due to missingness)
 ## Multiple R-squared:  0.0007448,  Adjusted R-squared:  -0.001002 
 ## F-statistic: 0.4263 on 1 and 572 DF,  p-value: 0.5141</code></pre>
+<p>Let’s break down the output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Model Call</strong>:
+<ul>
+<li>
+<strong>lm(formula = viewers ~ episode, data = viewers)</strong>: This indicates the linear model was fitted to predict <code>viewers</code> based on <code>episode</code> numbers.</li>
+</ul>
+</li>
+<li>
+<strong>Residuals</strong>:
+<ul>
+<li>The residuals represent the differences between the observed values and the values predicted by the model.</li>
+<li>
+<strong>Min, 1Q (First Quartile), Median, 3Q (Third Quartile), Max</strong>: These statistics provide a summary of the distribution of residuals. The relatively large range suggests that there may be considerable variance in how well the model predictions match the actual data.</li>
+</ul>
+</li>
+<li>
+<strong>Coefficients</strong>:
+<ul>
+<li>
+<strong>(Intercept)</strong>: The estimated average number of viewers when the episode number is zero. The intercept is significant (p &lt; 0.0000000000000002).</li>
+<li>
+<strong>episode</strong>: The estimated change in the number of viewers for each additional episode. The coefficient is 0.03960, but it is not statistically significant (p = 0.514), suggesting that the number of episodes does not have a significant linear relationship with the number of viewers.</li>
+<li>
+<strong>Std. Error</strong>: Measures the variability or uncertainty in the coefficient estimates.</li>
+<li>
+<strong>t value</strong>: The test statistic for the hypothesis that each coefficient is different from zero.</li>
+<li>
+<strong>Pr(&gt;|t|)</strong>: The p-value for the test statistic. A low p-value (&lt; 0.05) would indicate that the coefficient is significantly different from zero.</li>
+</ul>
+</li>
+<li>
+<strong>Residual Standard Error</strong>:
+<ul>
+<li>
+<strong>6.283 on 572 degrees of freedom</strong>: This is a measure of the typical size of the residuals. The degrees of freedom are the number of observations minus the number of parameters being estimated.</li>
+</ul>
+</li>
+<li>
+<strong>R-squared Values</strong>:
+<ul>
+<li>
+<strong>Multiple R-squared: 0.0007448</strong>: This indicates how much of the variability in the dependent variable (viewers) can be explained by the independent variable (episode). A value close to 0 suggests that the model does not explain much of the variability.</li>
+<li>
+<strong>Adjusted R-squared: -0.001002</strong>: Adjusts the R-squared value based on the number of predictors in the model. It can be negative if the model has no explanatory power.</li>
+</ul>
+</li>
+<li>
+<strong>F-statistic</strong>:
+<ul>
+<li>
+<strong>0.4263 on 1 and 572 DF, p-value: 0.5141</strong>: This tests whether the model is statistically significant. The high p-value suggests that the model is not statistically significant, indicating that the episode number does not significantly predict the number of viewers.</li>
+</ul>
+</li>
+<li>
+<strong>Significance Codes</strong>:
+<ul>
+<li>The “***” next to the intercept’s p-value indicates a high level of statistical significance.</li>
+</ul>
+</li>
+<li>
+<strong>Observations with Missing Data</strong>:
+<ul>
+<li>
+<strong>(22 observations deleted due to missingness)</strong>: Indicates that 22 observations were excluded from the analysis due to missing data.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the linear regression model suggests that the number of episodes is not a significant predictor of the number of viewers, based on the dataset used. The model’s low R-squared value and the non-significant p-value for the episode coefficient support this conclusion.</p>
 </div>
 <div id="multiple-linear-regression" class="section level4 unnumbered">
 <h4>Multiple Linear Regression<a class="anchor" aria-label="anchor" href="#multiple-linear-regression"><i class="fas fa-link"></i></a>
 </h4>
 <p>Multiple linear regression extends the concept of simple linear regression to include two or more independent variables (Hair et al., 2014). This approach allows for a more nuanced understanding of the relationships among variables. It provides the tools needed to predict a dependent variable based on the values of multiple independent variables. Multiple linear regression assumes that the relationship between the dependent variable and the independent variables is linear, and it also assumes that the residuals are normally distributed and have constant variance.</p>
 <p><strong>Example with <code>Survivor summary.csv</code>:</strong></p>
-<div class="sourceCode" id="cb228"><pre class="downlit sourceCode r">
+<p>The R code provided performs a multiple linear regression analysis, modeling the average viewership (viewers_mean) as a function of country, timeslot, and season. The <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function provides a detailed summary of the model’s results.</p>
+<div class="sourceCode" id="cb227"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Model average viewers based on multiple factors</span></span>
 <span><span class="va">lm_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">viewers_mean</span> <span class="op">~</span> <span class="va">country</span> <span class="op">+</span> <span class="va">timeslot</span> <span class="op">+</span> <span class="va">season</span>, data <span class="op">=</span> <span class="va">summary</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">lm_result</span><span class="op">)</span></span></code></pre></div>
@@ -585,6 +1209,73 @@
 ##   (2 observations deleted due to missingness)
 ## Multiple R-squared:  0.9758, Adjusted R-squared:  0.9502 
 ## F-statistic: 38.18 on 19 and 18 DF,  p-value: 0.00000000008219</code></pre>
+<p>Let’s break down the output:</p>
+<ol style="list-style-type: decimal">
+<li>
+<strong>Model Call</strong>:
+<ul>
+<li>
+<strong>lm(formula = viewers_mean ~ country + timeslot + season, data = summary)</strong>: Shows the regression formula used, predicting <code>viewers_mean</code> based on <code>country</code>, <code>timeslot</code>, and <code>season</code>.</li>
+</ul>
+</li>
+<li>
+<strong>Residuals</strong>:
+<ul>
+<li>The residuals represent the differences between the observed and predicted values. The summary (Min, 1st Quartile, Median, 3rd Quartile, Max) shows the distribution of these residuals.</li>
+</ul>
+</li>
+<li>
+<strong>Coefficients</strong>:
+<ul>
+<li>
+<strong>Estimate</strong>: The regression coefficients for the intercept and each predictor. These values represent the expected change in <code>viewers_mean</code> for a one-unit change in the predictor, holding all other predictors constant.</li>
+<li>
+<strong>Std. Error</strong>: The standard error of each coefficient, indicating the precision of the coefficient estimates.</li>
+<li>
+<strong>t value</strong>: The test statistic for the hypothesis that each coefficient is different from zero.</li>
+<li>
+<strong>Pr(&gt;|t|)</strong>: The p-value for the test statistic. A low p-value (&lt; 0.05) indicates that the coefficient is significantly different from zero.</li>
+<li>The coefficients for different countries and the <code>timeslotWednesday 8:00 pm</code> are statistically significant, as indicated by their p-values and significance codes. The <code>season</code> variable is also significant, suggesting its impact on viewership.</li>
+</ul>
+</li>
+<li>
+<strong>Residual Standard Error</strong>:
+<ul>
+<li>
+<strong>1.148 on 18 degrees of freedom</strong>: This is a measure of the typical size of the residuals. Degrees of freedom are calculated as the total number of observations minus the number of estimated parameters.</li>
+</ul>
+</li>
+<li>
+<strong>R-squared Values</strong>:
+<ul>
+<li>
+<strong>Multiple R-squared: 0.9758</strong>: Indicates the proportion of variance in the dependent variable (viewers_mean) that is predictable from the independent variables. A value of 0.9758 suggests a high level of predictability.</li>
+<li>
+<strong>Adjusted R-squared: 0.9502</strong>: Adjusts the R-squared value based on the number of predictors in the model. This is closer to the true predictive power of the model.</li>
+</ul>
+</li>
+<li>
+<strong>F-Statistic</strong>:
+<ul>
+<li>
+<strong>38.18 on 19 and 18 DF, p-value: 0.00000000008219</strong>: This tests the overall significance of the model. The very low p-value suggests the model as a whole is statistically significant.</li>
+</ul>
+</li>
+<li>
+<strong>Significance Codes</strong>:
+<ul>
+<li>Indicate the level of significance for the coefficients. “***” denotes a very high level of statistical significance.</li>
+</ul>
+</li>
+<li>
+<strong>Observations with Missing Data</strong>:
+<ul>
+<li>
+<strong>(2 observations deleted due to missingness)</strong>: Indicates that 2 observations were excluded from the analysis due to missing data.</li>
+</ul>
+</li>
+</ol>
+<p>In summary, the multiple linear regression model suggests that both the country and the season significantly predict the average viewership of the TV series, with the timeslot also playing a significant role (specifically the <code>Wednesday 8:00 pm</code> timeslot). The model explains a very high proportion of the variance in average viewership (as indicated by the R-squared values), and the overall model is statistically significant.</p>
 </div>
 </div>
 <div id="references-3" class="section level3 unnumbered">
@@ -664,7 +1355,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-11-09.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-11-12.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

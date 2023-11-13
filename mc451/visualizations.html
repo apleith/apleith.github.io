@@ -7,7 +7,7 @@
 <title>Chapter 14 Visualizations | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
 <meta name="description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.35 with bs4_book()">
 <meta property="og:title" content="Chapter 14 Visualizations | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
 <meta property="og:description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -258,14 +258,14 @@
 <h5>Tidyverse<a class="anchor" aria-label="anchor" href="#tidyverse"><i class="fas fa-link"></i></a>
 </h5>
 <p>We load the <code>tidyverse</code> package, which is a collection of R packages designed for data science.</p>
-<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="data.table" class="section level5 unnumbered">
 <h5>Data.Table<a class="anchor" aria-label="anchor" href="#data.table"><i class="fas fa-link"></i></a>
 </h5>
 <p>Next, we load the <code>data.table</code> package. It provides an enhanced version of data frames for more efficient data manipulation.</p>
-<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com">data.table</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -277,28 +277,28 @@
 <h5>Anime Dataset<a class="anchor" aria-label="anchor" href="#anime-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset presumably contains information related to anime.</p>
-<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anime</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-23/tidy_anime.csv"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="horror-movies-dataset" class="section level5 unnumbered">
 <h5>Horror Movies Dataset<a class="anchor" aria-label="anchor" href="#horror-movies-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset likely contains data related to horror movies.</p>
-<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">horror_movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-11-01/horror_movies.csv'</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="richmond-way-dataset" class="section level5 unnumbered">
 <h5>Richmond Way Dataset<a class="anchor" aria-label="anchor" href="#richmond-way-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset could contain information related to Richmond Way, though the exact details would be available in the dataset’s documentation.</p>
-<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">richmondway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-09-26/richmondway.csv'</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="television-ratings-dataset" class="section level5 unnumbered">
 <h5>Television Ratings Dataset<a class="anchor" aria-label="anchor" href="#television-ratings-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset likely contains television ratings data.</p>
-<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">television</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-01-08/IMDb_Economist_tv_ratings.csv"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="video-games-dataset" class="section level5" number="14.5.0.0.1">
@@ -306,7 +306,7 @@
 <span class="header-section-number">14.5.0.0.1</span> Video Games Dataset<a class="anchor" aria-label="anchor" href="#video-games-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset presumably contains information about video games.</p>
-<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">video_games</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-07-30/video_games.csv"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -926,7 +926,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h4>Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
 </h4>
 <p>A histogram is a graphical representation that organizes a group of data points into specified ranges. It is an estimate of the probability distribution of a continuous variable. The data is partitioned into bins, and the number of data points in each bin is represented by the height of the corresponding bar (Wickham, 2016). Here, we are using the <code>richmondway</code> dataset to examine the frequency distribution of “F-ck Count” by the character Roy Kent.</p>
-<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">richmondway</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">F_count_RK</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Distribution of Roy Kent's F-ck Count"</span>,</span>
@@ -943,7 +943,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Find the 5 Most Popular Languages<a class="anchor" aria-label="anchor" href="#find-the-5-most-popular-languages"><i class="fas fa-link"></i></a>
 </h5>
 <p>First, let’s find out which languages are the most popular in the dataset.</p>
-<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">horror_movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">original_language</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -964,7 +964,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Filter for top languages<a class="anchor" aria-label="anchor" href="#filter-for-top-languages"><i class="fas fa-link"></i></a>
 </h5>
 <p>After identifying which languages to include, create a new data set filtered for these languages.</p>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">horror_movies_top_5_languages</span> <span class="op">&lt;-</span> <span class="va">horror_movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">original_language</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"en"</span>, <span class="st">"es"</span>, <span class="st">"ja"</span>, <span class="st">"pt"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -972,7 +972,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Density Plot<a class="anchor" aria-label="anchor" href="#create-density-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>After filtering for the top 5 languages, a density plot is created.</p>
-<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">horror_movies_top_5_languages</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">vote_average</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">original_language</span><span class="op">)</span>, alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Density Plot of Horror Movie Ratings"</span>,</span>
@@ -989,7 +989,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Find the 5 Most Prolific Publishers<a class="anchor" aria-label="anchor" href="#find-the-5-most-prolific-publishers"><i class="fas fa-link"></i></a>
 </h5>
 <p>First, we identify which publishers are most prolific.</p>
-<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">video_games</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">publisher</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -1011,7 +1011,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Violin Plot<a class="anchor" aria-label="anchor" href="#create-violin-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>After filtering for the top 5 publishers, we generate the violin plot.</p>
-<div class="sourceCode" id="cb147"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">video_games_top_5_publishers</span> <span class="op">&lt;-</span> <span class="va">video_games</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">publisher</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Big Fish Games"</span>, <span class="st">"SEGA"</span>, <span class="st">"Strategy First"</span>, <span class="st">"Ubisoft"</span>, <span class="st">"Square Enix"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -1028,7 +1028,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h4>Boxplot<a class="anchor" aria-label="anchor" href="#boxplot"><i class="fas fa-link"></i></a>
 </h4>
 <p>A boxplot provides a graphical representation of the central tendency and spread of a dataset, depicting the median, quartiles, and potential outliers. Boxplots are useful for identifying skewness and outliers in the data (Tukey, 1977). We’ll use the <code>anime</code> dataset to explore how scores are distributed across different types of anime.</p>
-<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">anime</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">type</span>, y <span class="op">=</span> <span class="va">score</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#ff00ff"</span>, color <span class="op">=</span> <span class="st">"#770077"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Boxplot of Anime Scores by Type"</span>,</span>
@@ -1050,7 +1050,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Convert Seasons to Factor<a class="anchor" aria-label="anchor" href="#convert-seasons-to-factor"><i class="fas fa-link"></i></a>
 </h5>
 <p>It’s common practice to convert categorical variables to factors when plotting in ggplot2.</p>
-<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">richmondway</span> <span class="op">&lt;-</span> <span class="va">richmondway</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Season <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">Season</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -1058,7 +1058,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Scatter Plot<a class="anchor" aria-label="anchor" href="#create-scatter-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>We then proceed to create the scatter plot.</p>
-<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">richmondway</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">F_count_total</span>, y <span class="op">=</span> <span class="va">F_count_RK</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">Season</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
@@ -1072,7 +1072,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h4>Heatmap<a class="anchor" aria-label="anchor" href="#heatmap"><i class="fas fa-link"></i></a>
 </h4>
 <p>A heatmap is a data visualization technique that represents the magnitude of observations as color in a two-dimensional plane. This plot is often used to understand complex data structures and correlations between multiple variables (Wilkinson &amp; Friendly, 2009). In this example, we use the <code>horror_movies</code> dataset.</p>
-<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">correlation_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">horror_movies</span><span class="op">[</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"popularity"</span>, <span class="st">"vote_count"</span>, <span class="st">"vote_average"</span>, <span class="st">"budget"</span>, <span class="st">"revenue"</span><span class="op">)</span><span class="op">]</span>, use <span class="op">=</span> <span class="st">"complete.obs"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/melt.data.table.html">melt</a></span><span class="op">(</span><span class="va">correlation_matrix</span><span class="op">)</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">Var1</span>, y<span class="op">=</span><span class="va">Var2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_tile</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill<span class="op">=</span><span class="va">value</span><span class="op">)</span>, colour<span class="op">=</span><span class="st">"white"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -1095,7 +1095,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span class="header-section-number">14.5.0.0.2</span> Remove Free Titles and Titles with Missing Data<a class="anchor" aria-label="anchor" href="#remove-free-titles-and-titles-with-missing-data"><i class="fas fa-link"></i></a>
 </h5>
 <p>First, we remove the rows with missing values and rows where any column has a 0 value.</p>
-<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb154"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">nonzero_video_games</span> <span class="op">&lt;-</span> <span class="va">video_games</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/complete.cases.html">complete.cases</a></span><span class="op">(</span><span class="va">.</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># Remove rows with missing values (NA)</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/colSums.html">rowSums</a></span><span class="op">(</span><span class="va">.</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Remove rows where any column has a 0 value</span></span></code></pre></div>
@@ -1104,7 +1104,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Bubble Plot<a class="anchor" aria-label="anchor" href="#create-bubble-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>We then proceed to create the bubble plot.</p>
-<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb155"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">nonzero_video_games</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">median_playtime</span>, y <span class="op">=</span> <span class="va">metascore</span>, size <span class="op">=</span> <span class="va">price</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">owners</span><span class="op">)</span>, alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Bubble Plot of Playtime, Metascore, Price, and Ownership"</span>,</span>
@@ -1126,7 +1126,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Identify Top Anime Producers<a class="anchor" aria-label="anchor" href="#identify-top-anime-producers"><i class="fas fa-link"></i></a>
 </h5>
 <p>In this code snippet, we identify the top anime producers in the <code>anime</code> dataset.</p>
-<div class="sourceCode" id="cb157"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb156"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anime</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">producers</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -1148,7 +1148,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create a New Data Frame for Just the Top Five Producers<a class="anchor" aria-label="anchor" href="#create-a-new-data-frame-for-just-the-top-five-producers"><i class="fas fa-link"></i></a>
 </h5>
 <p>Here we filter the <code>anime</code> data to only include records from the top five producers.</p>
-<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb159"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anime_top_5_producers</span> <span class="op">&lt;-</span> <span class="va">anime</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">producers</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"TV Tokyo"</span>, <span class="st">"Aniplex"</span>, <span class="st">"Bandai Visual"</span>, <span class="st">"Lantis"</span>, <span class="st">"Movic"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -1156,7 +1156,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create New Data Frame with the Average Score by Producer<a class="anchor" aria-label="anchor" href="#create-new-data-frame-with-the-average-score-by-producer"><i class="fas fa-link"></i></a>
 </h5>
 <p>We then calculate the average score by producer. Note the use of <code>na.rm = TRUE</code> to remove <code>NA</code> values for an accurate mean.</p>
-<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb160"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anime_avg_score_by_producer</span> <span class="op">&lt;-</span> <span class="va">anime_top_5_producers</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">producers</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>avg_score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">score</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Remove NA values for accurate mean</span></span></code></pre></div>
@@ -1165,7 +1165,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Bar Plots<a class="anchor" aria-label="anchor" href="#create-bar-plots"><i class="fas fa-link"></i></a>
 </h5>
 <p>Finally, a bar plot is created using the average scores by producer.</p>
-<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb161"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">anime_avg_score_by_producer</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="va">producers</span>, <span class="op">-</span><span class="va">avg_score</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">avg_score</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Bar Plot of Average Score by Producer"</span>,</span>
@@ -1182,7 +1182,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Separate Genres into New Rows<a class="anchor" aria-label="anchor" href="#separate-genres-into-new-rows"><i class="fas fa-link"></i></a>
 </h5>
 <p>Assuming <code>television</code> is your original dataset, this code separates each genre into a new row.</p>
-<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb162"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Assuming `television` is your original data frame</span></span>
 <span><span class="va">long_television</span> <span class="op">&lt;-</span> <span class="va">television</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/separate_rows.html">separate_rows</a></span><span class="op">(</span><span class="va">genres</span>, sep <span class="op">=</span> <span class="st">",\\s*"</span><span class="op">)</span>  <span class="co"># Separate by comma and any subsequent whitespace</span></span></code></pre></div>
@@ -1191,7 +1191,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Identify Top Genres<a class="anchor" aria-label="anchor" href="#identify-top-genres"><i class="fas fa-link"></i></a>
 </h5>
 <p>This code identifies the top 10 genres from the <code>television</code> dataset.</p>
-<div class="sourceCode" id="cb164"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb163"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">television_top_genres_list</span> <span class="op">&lt;-</span> <span class="va">long_television</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -1199,7 +1199,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/top_n.html">top_n</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## Selecting by n</code></pre>
-<div class="sourceCode" id="cb166"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb165"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">television_top_genres_list</span></span></code></pre></div>
 <pre><code>## # A tibble: 10 × 2
 ##    genres        n
@@ -1219,7 +1219,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create New Data Frame for Just the Top 10 Genres<a class="anchor" aria-label="anchor" href="#create-new-data-frame-for-just-the-top-10-genres"><i class="fas fa-link"></i></a>
 </h5>
 <p>Here we filter the data to only include records from the top 10 genres.</p>
-<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb167"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">television_top_genres</span> <span class="op">&lt;-</span> <span class="va">long_television</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">genres</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">television_top_genres_list</span><span class="op">$</span><span class="va">genres</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -1227,7 +1227,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Calculate Average Rating for Each Genre<a class="anchor" aria-label="anchor" href="#calculate-average-rating-for-each-genre"><i class="fas fa-link"></i></a>
 </h5>
 <p>This code calculates the average rating for each genre.</p>
-<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb168"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">television_top_genres_avg_share</span> <span class="op">&lt;-</span> <span class="va">television_top_genres</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>share <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">share</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -1236,7 +1236,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Lollipop Plot<a class="anchor" aria-label="anchor" href="#create-lollipop-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>Finally, a lollipop plot is created to visualize the average rating for each of the top 10 genres.</p>
-<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb169"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">television_top_genres_avg_share</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="va">genres</span>, <span class="op">-</span><span class="va">share</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">share</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>xend <span class="op">=</span> <span class="va">genres</span>, yend <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">3</span>, color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -1260,7 +1260,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span class="header-section-number">14.5.0.0.3</span> Dataset: Roy Kent F-ck count<a class="anchor" aria-label="anchor" href="#dataset-roy-kent-f-ck-count"><i class="fas fa-link"></i></a>
 </h5>
 <p>A pie chart is created to visualize Roy Kent’s usage of the word “F-ck” across different seasons.</p>
-<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb170"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">richmondway</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="va">F_count_RK</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">Season</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="st">"y"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -1275,7 +1275,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Reshape Data<a class="anchor" aria-label="anchor" href="#reshape-data"><i class="fas fa-link"></i></a>
 </h5>
 <p>The data is reshaped to facilitate the creation of grouped and stacked bar plots.</p>
-<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb171"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">television_grouped</span> <span class="op">&lt;-</span> <span class="va">television_top_genres</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>av_rating <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">av_rating</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
@@ -1286,7 +1286,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Grouped Barplot<a class="anchor" aria-label="anchor" href="#create-grouped-barplot"><i class="fas fa-link"></i></a>
 </h5>
 <p>A grouped barplot represents categorical data with multiple sub-categories. It uses adjacent bars to represent the different sub-categories within each primary category, facilitating direct comparison (Wickham, 2016). A grouped bar plot is created to show both average rating and share for each genre of television show.</p>
-<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb172"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">television_grouped</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">genres</span>, y <span class="op">=</span> <span class="va">value</span>, fill <span class="op">=</span> <span class="va">metric</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Television Shows: Average Rating and Share by Genre"</span>, y<span class="op">=</span><span class="st">"Value"</span><span class="op">)</span> <span class="op">+</span></span>
@@ -1297,7 +1297,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Stacked Barplot<a class="anchor" aria-label="anchor" href="#create-stacked-barplot"><i class="fas fa-link"></i></a>
 </h5>
 <p>A stacked barplot is similar to a standard bar plot but divides each bar into multiple sub-categories. This allows for the representation of part-to-whole relationships within each category (Wickham, 2016). A stacked bar plot is created to show both popularity and rating of horror movies by original language.</p>
-<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb173"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">television_grouped</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">genres</span>, y <span class="op">=</span> <span class="va">value</span>, fill <span class="op">=</span> <span class="va">metric</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, position <span class="op">=</span> <span class="st">"stack"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Television Shows: Average Rating and Share by Genre"</span>, y<span class="op">=</span><span class="st">"Value"</span><span class="op">)</span> </span></code></pre></div>
@@ -1311,11 +1311,10 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Dataset: Horror Movies<a class="anchor" aria-label="anchor" href="#dataset-horror-movies"><i class="fas fa-link"></i></a>
 </h5>
 <p>A treemap displays hierarchical data as a set of nested rectangles. Each level in the hierarchy is represented by a colored rectangle (‘branch’), which is then sub-divided into smaller rectangles (‘leaves’) (Shneiderman, 1992). A treemap is created to visualize the vote count by original language for horror movies.</p>
-<div class="sourceCode" id="cb175"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">treemap</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: package 'treemap' was built under R version 4.3.1</code></pre>
-<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/treemap/man/treemap.html">treemap</a></span><span class="op">(</span><span class="va">horror_movies</span>, </span>
+<div class="sourceCode" id="cb174"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">treemap</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/treemap/man/treemap.html">treemap</a></span><span class="op">(</span><span class="va">horror_movies</span>, </span>
 <span>        index <span class="op">=</span> <span class="st">"original_language"</span>, </span>
 <span>        vSize <span class="op">=</span> <span class="st">"vote_count"</span>, </span>
 <span>        title<span class="op">=</span><span class="st">"Horror Movies: Vote Count by Language"</span><span class="op">)</span></span></code></pre></div>
@@ -1327,7 +1326,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h3>Store and Edit Plots<a class="anchor" aria-label="anchor" href="#store-and-edit-plots"><i class="fas fa-link"></i></a>
 </h3>
 <p>Filter data for unique show titles</p>
-<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb175"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tv_top_genres_list</span> <span class="op">&lt;-</span> <span class="va">long_television</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">title</span>, <span class="va">genres</span>, .keep_all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">genres</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -1351,7 +1350,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 ##  9 Thriller     74
 ## 10 Adventure    72</code></pre>
 <p>You can store a plot into your environment for easier recall.</p>
-<div class="sourceCode" id="cb180"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb177"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tv_genres_bar</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">tv_top_genres_list</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="va">genres</span>, <span class="op">-</span><span class="va">n</span><span class="op">)</span>, y <span class="op">=</span> <span class="va">n</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Bar Plot of Show Count by Major Genre"</span>,</span>
@@ -1359,11 +1358,10 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>       y <span class="op">=</span> <span class="st">"Number of shows"</span><span class="op">)</span></span></code></pre></div>
 <p>A stored plot can be added to without having to type out all of the code if it is previously stored in the environment.</p>
 <p>First load package with unique themes</p>
-<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb178"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/jrnold/ggthemes">ggthemes</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: package 'ggthemes' was built under R version 4.3.1</code></pre>
 <p>Add to your stored plot</p>
-<div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb179"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tv_genres_bar</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_wsj.html">theme_wsj</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-107-1.png" width="672"></div>
@@ -1376,7 +1374,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h4>Saving Plots Directly in R Markdown<a class="anchor" aria-label="anchor" href="#saving-plots-directly-in-r-markdown"><i class="fas fa-link"></i></a>
 </h4>
 <p>Store plot you want to save locally.</p>
-<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb180"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tv_genres_bar_wsj</span> <span class="op">&lt;-</span> <span class="va">tv_genres_bar</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_wsj.html">theme_wsj</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>The above chunk will save the plot in the specified directory with the name “plot_name” followed by a figure number (e.g., “plot_name1.png”).</p>
@@ -1389,29 +1387,28 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <li>
 <strong>PNG Format</strong>: Suitable for web applications.</li>
 </ol>
-<div class="sourceCode" id="cb185"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb181"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"tv_genres_bar.png"</span>, plot <span class="op">=</span> <span class="va">tv_genres_bar_wsj</span>, width <span class="op">=</span> <span class="fl">10</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>
 <strong>JPEG Format</strong>: Generally used for photographs on the web, but it’s lossy, meaning some image quality is compromised.</li>
 </ol>
-<div class="sourceCode" id="cb186"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb182"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"tv_genres_bar.jpg"</span>, plot <span class="op">=</span> <span class="va">tv_genres_bar_wsj</span>, width <span class="op">=</span> <span class="fl">10</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>
 <strong>PDF Format</strong>: Perfect for publications and where high quality is paramount. It retains the quality regardless of how much you zoom.</li>
 </ol>
-<div class="sourceCode" id="cb187"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb183"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"tv_genres_bar.pdf"</span>, plot <span class="op">=</span> <span class="va">tv_genres_bar_wsj</span>, width <span class="op">=</span> <span class="fl">10</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>
 <strong>SVG Format</strong>: A vector format suitable for web applications where scalability without loss of resolution is important.</li>
 </ol>
-<div class="sourceCode" id="cb188"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://svglite.r-lib.org">svglite</a></span><span class="op">)</span></span></code></pre></div>
-<pre><code>## Warning: package 'svglite' was built under R version 4.3.2</code></pre>
-<div class="sourceCode" id="cb190"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"tv_genres_bar.svg"</span>, plot <span class="op">=</span> <span class="va">tv_genres_bar_wsj</span>, width <span class="op">=</span> <span class="fl">10</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://svglite.r-lib.org">svglite</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html">ggsave</a></span><span class="op">(</span><span class="st">"tv_genres_bar.svg"</span>, plot <span class="op">=</span> <span class="va">tv_genres_bar_wsj</span>, width <span class="op">=</span> <span class="fl">10</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="explanation" class="section level4 unnumbered">
 <h4>Explanation<a class="anchor" aria-label="anchor" href="#explanation"><i class="fas fa-link"></i></a>
@@ -1503,7 +1500,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-11-09.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-11-12.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -128,7 +128,7 @@
 
 \title{Introduction to Communication and Media Research with R}
 \author{Alex P. Leith, PhD}
-\date{2023-11-09}
+\date{2023-11-12}
 
 \begin{document}
 \maketitle
@@ -4485,7 +4485,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 \end{Shaded}
 
 \begin{verbatim}
-## Installing package into 'C:/Users/AP Leith/AppData/Local/R/win-library/4.3'
+## Installing package into 'C:/Users/alexl/AppData/Local/R/win-library/4.3'
 ## (as 'lib' is unspecified)
 \end{verbatim}
 
@@ -4493,7 +4493,7 @@ To install a package, you can run the command \texttt{install.packages("package\
 ## package 'ggplot2' successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\AP Leith\AppData\Local\Temp\RtmpoRI9yO\downloaded_packages
+##  C:\Users\alexl\AppData\Local\Temp\RtmpWY8sop\downloaded_packages
 \end{verbatim}
 
 \hypertarget{help}{%
@@ -5073,9 +5073,9 @@ To check which packages are currently loaded in the session, you can use the \te
 \end{Shaded}
 
 \begin{verbatim}
-## R version 4.3.0 (2023-04-21 ucrt)
+## R version 4.3.1 (2023-06-16 ucrt)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
-## Running under: Windows 11 x64 (build 22621)
+## Running under: Windows 10 x64 (build 19045)
 ## 
 ## Matrix products: default
 ## 
@@ -5094,15 +5094,15 @@ To check which packages are currently loaded in the session, you can use the \te
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] vctrs_0.6.2      cli_3.6.1        knitr_1.42       rlang_1.1.1     
-##  [5] xfun_0.39        highr_0.10       generics_0.1.3   glue_1.6.2      
-##  [9] colorspace_2.1-0 htmltools_0.5.5  scales_1.2.1     fansi_1.0.4     
-## [13] rmarkdown_2.21   grid_4.3.0       evaluate_0.21    munsell_0.5.0   
-## [17] tibble_3.2.1     fastmap_1.1.1    yaml_2.3.7       lifecycle_1.0.3 
-## [21] bookdown_0.34    compiler_4.3.0   dplyr_1.1.2      pkgconfig_2.0.3 
-## [25] rstudioapi_0.14  digest_0.6.31    R6_2.5.1         tidyselect_1.2.0
-## [29] utf8_1.2.3       pillar_1.9.0     magrittr_2.0.3   withr_2.5.0     
-## [33] tools_4.3.0      gtable_0.3.3
+##  [1] vctrs_0.6.3       cli_3.6.1         knitr_1.44        rlang_1.1.1      
+##  [5] xfun_0.40         generics_0.1.3    glue_1.6.2        colorspace_2.1-0 
+##  [9] htmltools_0.5.6.1 scales_1.2.1      fansi_1.0.4       rmarkdown_2.25   
+## [13] grid_4.3.1        evaluate_0.22     munsell_0.5.0     tibble_3.2.1     
+## [17] fastmap_1.1.1     yaml_2.3.7        lifecycle_1.0.3   bookdown_0.35    
+## [21] compiler_4.3.1    dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
+## [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0  utf8_1.2.3       
+## [29] pillar_1.9.0      magrittr_2.0.3    withr_2.5.1       tools_4.3.1      
+## [33] gtable_0.3.4
 \end{verbatim}
 
 Understanding the installation and loading process for libraries will enable you to extend R's native functionalities, a vital skill in today's data-driven landscape in mass communications.
@@ -5626,10 +5626,6 @@ Handling missing data is a critical step in the data cleaning process. Missing d
 \end{Shaded}
 
 \begin{verbatim}
-## Warning: package 'mice' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{verbatim}
 ## 
 ## Attaching package: 'mice'
 \end{verbatim}
@@ -5717,8 +5713,8 @@ Certainly, this chapter will walk through the common \texttt{dplyr} commands usi
 ## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
 ## v forcats   1.0.0     v stringr   1.5.0
 ## v ggplot2   3.4.4     v tibble    3.2.1
-## v lubridate 1.9.2     v tidyr     1.3.0
-## v purrr     1.0.1     
+## v lubridate 1.9.3     v tidyr     1.3.0
+## v purrr     1.0.2     
 ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
 ## x dplyr::between()     masks data.table::between()
 ## x mice::filter()       masks dplyr::filter(), stats::filter()
@@ -7231,15 +7227,7 @@ A treemap displays hierarchical data as a set of nested rectangles. Each level i
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(treemap)}
-\end{Highlighting}
-\end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'treemap' was built under R version 4.3.1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{treemap}\NormalTok{(horror\_movies, }
         \AttributeTok{index =} \StringTok{"original\_language"}\NormalTok{, }
         \AttributeTok{vSize =} \StringTok{"vote\_count"}\NormalTok{, }
@@ -7306,10 +7294,6 @@ First load package with unique themes
 \FunctionTok{library}\NormalTok{(ggthemes)}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'ggthemes' was built under R version 4.3.1
-\end{verbatim}
 
 Add to your stored plot
 
@@ -7401,15 +7385,7 @@ The \texttt{ggsave()} function, which comes with the \texttt{ggplot2} library, p
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(svglite)}
-\end{Highlighting}
-\end{Shaded}
 
-\begin{verbatim}
-## Warning: package 'svglite' was built under R version 4.3.2
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \FunctionTok{ggsave}\NormalTok{(}\StringTok{"tv\_genres\_bar.svg"}\NormalTok{, }\AttributeTok{plot =}\NormalTok{ tv\_genres\_bar\_wsj, }\AttributeTok{width =} \DecValTok{10}\NormalTok{, }\AttributeTok{height =} \DecValTok{5}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -7468,7 +7444,15 @@ Data analysis plays a quintessential role in the realm of communication and medi
 
 The fundamental aim of data analysis is to distill large amounts of information into actionable insights. In the context of communication and media research, these objectives can be further refined as follows:
 
-\textbf{Summarization}: To present data in a digestible format, offering a clear snapshot of its main features. \textbf{Exploration}: To identify relationships or trends within the data, providing a basis for further investigation. \textbf{Inference}: To make educated guesses or predictions about a broader population based on sample data. \textbf{Validation}: To confirm or negate existing theories or hypotheses through empirical evidence. \textbf{Decision-Making}: To provide actionable recommendations and insights that may influence policy, strategy, or further academic research.
+\textbf{Summarization}: To present data in a digestible format, offering a clear snapshot of its main features.
+
+\textbf{Exploration}: To identify relationships or trends within the data, providing a basis for further investigation.
+
+\textbf{Inference}: To make educated guesses or predictions about a broader population based on sample data.
+
+\textbf{Validation}: To confirm or negate existing theories or hypotheses through empirical evidence.
+
+\textbf{Decision-Making}: To provide actionable recommendations and insights that may influence policy, strategy, or further academic research.
 
 Ignoring proper data analysis can lead to misleading conclusions or partial understandings, affecting the quality and reliability of the research. Thus, the importance of meticulous data analysis cannot be overstated.
 
@@ -7533,146 +7517,260 @@ Moreover, descriptive statistics have applications that span across various doma
 \NormalTok{movies }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}03{-}09/movies.csv"}\NormalTok{)}
 
 \CommentTok{\# Preview the first few rows of the datasets}
-\FunctionTok{head}\NormalTok{(spotify\_songs)}
+\NormalTok{spotify\_songs}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##                  track_id                                            track_name
-## 1: 6f807x0ima9a1j3VPbc7VN I Don't Care (with Justin Bieber) - Loud Luxury Remix
-## 2: 0r7CVbZTWZgbTCYdfa2P31                       Memories - Dillon Francis Remix
-## 3: 1z1Hg7Vb0AhHDiEmnDE79l                       All the Time - Don Diablo Remix
-## 4: 75FpbthrwQmzHlBJLuGdC7                     Call You Mine - Keanu Silva Remix
-## 5: 1e8PAfcKUYoKkxPhrHqw4x               Someone You Loved - Future Humans Remix
-## 6: 7fvUMiyapMsRRxr07cU8Ef     Beautiful People (feat. Khalid) - Jack Wins Remix
-##        track_artist track_popularity         track_album_id
-## 1:       Ed Sheeran               66 2oCs0DGTsRO98Gh5ZSl2Cx
-## 2:         Maroon 5               67 63rPSO264uRjW1X5E6cWv6
-## 3:     Zara Larsson               70 1HoSmj2eLcsrR0vE9gThr4
-## 4: The Chainsmokers               60 1nqYsOef1yKKuGOVchbsk6
-## 5:    Lewis Capaldi               69 7m7vv9wlQ4i0LFuJiE2zsQ
-## 6:       Ed Sheeran               67 2yiy9cd2QktrNvWC2EUi0k
-##                                         track_album_name
-## 1: I Don't Care (with Justin Bieber) [Loud Luxury Remix]
-## 2:                       Memories (Dillon Francis Remix)
-## 3:                       All the Time (Don Diablo Remix)
-## 4:                           Call You Mine - The Remixes
-## 5:               Someone You Loved (Future Humans Remix)
-## 6:     Beautiful People (feat. Khalid) [Jack Wins Remix]
-##    track_album_release_date playlist_name            playlist_id playlist_genre
-## 1:               2019-06-14     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 2:               2019-12-13     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 3:               2019-07-05     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 4:               2019-07-19     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 5:               2019-03-05     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-## 6:               2019-07-11     Pop Remix 37i9dQZF1DXcZDD7cfEKhW            pop
-##    playlist_subgenre danceability energy key loudness mode speechiness
-## 1:         dance pop        0.748  0.916   6   -2.634    1      0.0583
-## 2:         dance pop        0.726  0.815  11   -4.969    1      0.0373
-## 3:         dance pop        0.675  0.931   1   -3.432    0      0.0742
-## 4:         dance pop        0.718  0.930   7   -3.778    1      0.1020
-## 5:         dance pop        0.650  0.833   1   -4.672    1      0.0359
-## 6:         dance pop        0.675  0.919   8   -5.385    1      0.1270
-##    acousticness instrumentalness liveness valence   tempo duration_ms
-## 1:       0.1020       0.00000000   0.0653   0.518 122.036      194754
-## 2:       0.0724       0.00421000   0.3570   0.693  99.972      162600
-## 3:       0.0794       0.00002330   0.1100   0.613 124.008      176616
-## 4:       0.0287       0.00000943   0.2040   0.277 121.956      169093
-## 5:       0.0803       0.00000000   0.0833   0.725 123.976      189052
-## 6:       0.0799       0.00000000   0.1430   0.585 124.982      163049
+##                      track_id
+##     1: 6f807x0ima9a1j3VPbc7VN
+##     2: 0r7CVbZTWZgbTCYdfa2P31
+##     3: 1z1Hg7Vb0AhHDiEmnDE79l
+##     4: 75FpbthrwQmzHlBJLuGdC7
+##     5: 1e8PAfcKUYoKkxPhrHqw4x
+##    ---                       
+## 32829: 7bxnKAamR3snQ1VGLuVfC1
+## 32830: 5Aevni09Em4575077nkWHz
+## 32831: 7ImMqPP3Q1yfUHvsdn7wEo
+## 32832: 2m69mhnfQ1Oq6lGtXuYhgX
+## 32833: 29zWqhca3zt5NsckZqDf6c
+##                                                   track_name     track_artist
+##     1: I Don't Care (with Justin Bieber) - Loud Luxury Remix       Ed Sheeran
+##     2:                       Memories - Dillon Francis Remix         Maroon 5
+##     3:                       All the Time - Don Diablo Remix     Zara Larsson
+##     4:                     Call You Mine - Keanu Silva Remix The Chainsmokers
+##     5:               Someone You Loved - Future Humans Remix    Lewis Capaldi
+##    ---                                                                       
+## 32829:                  City Of Lights - Official Radio Edit     Lush & Simon
+## 32830:                   Closer - Sultan & Ned Shepard Remix   Tegan and Sara
+## 32831:                          Sweet Surrender - Radio Edit      Starkillers
+## 32832:                        Only For You - Maor Levi Remix           Mat Zo
+## 32833:                                Typhoon - Original Mix     Julian Calor
+##        track_popularity         track_album_id
+##     1:               66 2oCs0DGTsRO98Gh5ZSl2Cx
+##     2:               67 63rPSO264uRjW1X5E6cWv6
+##     3:               70 1HoSmj2eLcsrR0vE9gThr4
+##     4:               60 1nqYsOef1yKKuGOVchbsk6
+##     5:               69 7m7vv9wlQ4i0LFuJiE2zsQ
+##    ---                                        
+## 32829:               42 2azRoBBWEEEYhqV6sb7JrT
+## 32830:               20 6kD6KLxj7s8eCE3ABvAyf5
+## 32831:               14 0ltWNSY9JgxoIZO4VzuCa6
+## 32832:               15 1fGrOkHnHJcStl14zNx8Jy
+## 32833:               27 0X3mUOm6MhxR7PzxG95rAo
+##                                             track_album_name
+##     1: I Don't Care (with Justin Bieber) [Loud Luxury Remix]
+##     2:                       Memories (Dillon Francis Remix)
+##     3:                       All the Time (Don Diablo Remix)
+##     4:                           Call You Mine - The Remixes
+##     5:               Someone You Loved (Future Humans Remix)
+##    ---                                                      
+## 32829:                            City Of Lights (Vocal Mix)
+## 32830:                                        Closer Remixed
+## 32831:                          Sweet Surrender (Radio Edit)
+## 32832:                                Only For You (Remixes)
+## 32833:                                         Typhoon/Storm
+##        track_album_release_date   playlist_name            playlist_id
+##     1:               2019-06-14       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     2:               2019-12-13       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     3:               2019-07-05       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     4:               2019-07-19       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##     5:               2019-03-05       Pop Remix 37i9dQZF1DXcZDD7cfEKhW
+##    ---                                                                
+## 32829:               2014-04-28 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32830:               2013-03-08 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32831:               2014-04-21 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32832:               2014-01-01 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+## 32833:               2014-03-03 ♥ EDM LOVE 2020 6jI1gFr6ANFtT8MmTvA2Ux
+##        playlist_genre         playlist_subgenre danceability energy key
+##     1:            pop                 dance pop        0.748  0.916   6
+##     2:            pop                 dance pop        0.726  0.815  11
+##     3:            pop                 dance pop        0.675  0.931   1
+##     4:            pop                 dance pop        0.718  0.930   7
+##     5:            pop                 dance pop        0.650  0.833   1
+##    ---                                                                 
+## 32829:            edm progressive electro house        0.428  0.922   2
+## 32830:            edm progressive electro house        0.522  0.786   0
+## 32831:            edm progressive electro house        0.529  0.821   6
+## 32832:            edm progressive electro house        0.626  0.888   2
+## 32833:            edm progressive electro house        0.603  0.884   5
+##        loudness mode speechiness acousticness instrumentalness liveness valence
+##     1:   -2.634    1      0.0583     0.102000       0.00000000   0.0653  0.5180
+##     2:   -4.969    1      0.0373     0.072400       0.00421000   0.3570  0.6930
+##     3:   -3.432    0      0.0742     0.079400       0.00002330   0.1100  0.6130
+##     4:   -3.778    1      0.1020     0.028700       0.00000943   0.2040  0.2770
+##     5:   -4.672    1      0.0359     0.080300       0.00000000   0.0833  0.7250
+##    ---                                                                         
+## 32829:   -1.814    1      0.0936     0.076600       0.00000000   0.0668  0.2100
+## 32830:   -4.462    1      0.0420     0.001710       0.00427000   0.3750  0.4000
+## 32831:   -4.899    0      0.0481     0.108000       0.00000111   0.1500  0.4360
+## 32832:   -3.361    1      0.1090     0.007920       0.12700000   0.3430  0.3080
+## 32833:   -4.571    0      0.0385     0.000133       0.34100000   0.7420  0.0894
+##          tempo duration_ms
+##     1: 122.036      194754
+##     2:  99.972      162600
+##     3: 124.008      176616
+##     4: 121.956      169093
+##     5: 123.976      189052
+##    ---                    
+## 32829: 128.170      204375
+## 32830: 128.041      353120
+## 32831: 127.989      210112
+## 32832: 128.008      367432
+## 32833: 127.984      337500
 \end{verbatim}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{head}\NormalTok{(movies)}
+\NormalTok{movies}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##    year      imdb            title            test clean_test binary    budget
-## 1: 2013 tt1711425    21 &amp; Over          notalk     notalk   FAIL  13000000
-## 2: 2012 tt1343727         Dredd 3D     ok-disagree         ok   PASS  45000000
-## 3: 2013 tt2024544 12 Years a Slave notalk-disagree     notalk   FAIL  20000000
-## 4: 2013 tt1272878           2 Guns          notalk     notalk   FAIL  61000000
-## 5: 2013 tt0453562               42             men        men   FAIL  40000000
-## 6: 2013 tt1335975         47 Ronin             men        men   FAIL 225000000
-##    domgross  intgross     code budget_2013 domgross_2013 intgross_2013
-## 1: 25682380  42195766 2013FAIL    13000000      25682380      42195766
-## 2: 13414714  40868994 2012PASS    45658735      13611086      41467257
-## 3: 53107035 158607035 2013FAIL    20000000      53107035     158607035
-## 4: 75612460 132493015 2013FAIL    61000000      75612460     132493015
-## 5: 95020213  95020213 2013FAIL    40000000      95020213      95020213
-## 6: 38362475 145803842 2013FAIL   225000000      38362475     145803842
-##    period_code decade_code imdb_id
-## 1:           1           1 1711425
-## 2:           1           1 1343727
-## 3:           1           1 2024544
-## 4:           1           1 1272878
-## 5:           1           1  453562
-## 6:           1           1 1335975
-##                                                                                                                                                                                                                                               plot
-## 1:                                                                                                                                                                                                                                            <NA>
-## 2:                                                                                                                                                                                                                                            <NA>
-## 3:                                                                                                                    In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
-## 4: A DEA agent and a naval intelligence officer find themselves on the run after a botched attempt to infiltrate a drug cartel. While fleeing, they learn the secret of their shaky alliance: Neither knew that the other was an undercover agent.
-## 5:                                                                                                  The life story of Jackie Robinson and his history-making signing with the Brooklyn Dodgers under the guidance of team executive Branch Rickey.
-## 6:                                                                                                                                   A band of samurai set out to avenge the death and dishonor of their master at the hands of a ruthless shogun.
-##    rated response          language country
-## 1:  <NA>       NA              <NA>    <NA>
-## 2:  <NA>       NA              <NA>    <NA>
-## 3:     R     TRUE           English USA, UK
-## 4:     R     TRUE  English, Spanish     USA
-## 5: PG-13     TRUE           English     USA
-## 6: PG-13     TRUE English, Japanese     USA
-##                                                                                                                    writer
-## 1:                                                                                                                   <NA>
-## 2:                                                                                                                   <NA>
-## 3:                                       John Ridley (screenplay), Solomon Northup (based on ""Twelve Years a Slave"" by)
-## 4:                                Blake Masters (screenplay), Steven Grant (based on the Boom! Studios graphic novels by)
-## 5:                                                                                                        Brian Helgeland
-## 6: Chris Morgan (screenplay), Hossein Amini (screenplay), Chris Morgan (screen story by), Walter Hamada (screen story by)
-##    metascore imdb_rating          director    released
-## 1:        NA          NA              <NA>        <NA>
-## 2:        NA          NA              <NA>        <NA>
-## 3:        97         8.3     Steve McQueen 08 Nov 2013
-## 4:        55         6.8 Baltasar Kormákur 02 Aug 2013
-## 5:        62         7.6   Brian Helgeland 12 Apr 2013
-## 6:        29         6.6       Carl Rinsch 25 Dec 2013
-##                                                                 actors
-## 1:                                                                <NA>
-## 2:                                                                <NA>
-## 3:          Chiwetel Ejiofor, Dwight Henry, Dickie Gravois, Bryan Batt
-## 4:  Denzel Washington, Mark Wahlberg, Paula Patton, Edward James Olmos
-## 5: Chadwick Boseman, Harrison Ford, Nicole Beharie, Christopher Meloni
-## 6:         Keanu Reeves, Hiroyuki Sanada, Ko Shibasaki, Tadanobu Asano
-##                         genre                                            awards
-## 1:                       <NA>                                              <NA>
-## 2:                       <NA>                                              <NA>
-## 3:  Biography, Drama, History Won 3 Oscars. Another 131 wins & 137 nominations.
-## 4:      Action, Comedy, Crime                                            1 win.
-## 5:    Biography, Drama, Sport                          3 wins & 13 nominations.
-## 6: Action, Adventure, Fantasy                                     1 nomination.
-##    runtime  type
-## 1:    <NA>  <NA>
-## 2:    <NA>  <NA>
-## 3: 134 min movie
-## 4: 109 min movie
-## 5: 128 min movie
-## 6: 118 min movie
-##                                                                                              poster
-## 1:                                                                                             <NA>
-## 2:                                                                                             <NA>
-## 3: http://ia.media-imdb.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg
-## 4: http://ia.media-imdb.com/images/M/MV5BNTQ5MTgzNDg4OF5BMl5BanBnXkFtZTcwMjAyODEzOQ@@._V1_SX300.jpg
-## 5: http://ia.media-imdb.com/images/M/MV5BMTQwMDU4MDI3MV5BMl5BanBnXkFtZTcwMjU1NDgyOQ@@._V1_SX300.jpg
-## 6: http://ia.media-imdb.com/images/M/MV5BMTc0MjE2NzE0OV5BMl5BanBnXkFtZTgwNTU5MjE1MDE@._V1_SX300.jpg
-##    imdb_votes error
-## 1:       <NA>    NA
-## 2:       <NA>    NA
-## 3:    143,446    NA
-## 4:     87,301    NA
-## 5:     43,608    NA
-## 6:     25,735    NA
+##       year      imdb                                   title            test
+##    1: 2013 tt1711425                           21 &amp; Over          notalk
+##    2: 2012 tt1343727                                Dredd 3D     ok-disagree
+##    3: 2013 tt2024544                        12 Years a Slave notalk-disagree
+##    4: 2013 tt1272878                                  2 Guns          notalk
+##    5: 2013 tt0453562                                      42             men
+##   ---                                                                       
+## 1790: 1971 tt0067741                                   Shaft          notalk
+## 1791: 1971 tt0067800                              Straw Dogs          notalk
+## 1792: 1971 tt0067116                   The French Connection          notalk
+## 1793: 1971 tt0067992 Willy Wonka &amp; the Chocolate Factory    men-disagree
+## 1794: 1970 tt0065466          Beyond the Valley of the Dolls              ok
+##       clean_test binary   budget domgross  intgross     code budget_2013
+##    1:     notalk   FAIL 13000000 25682380  42195766 2013FAIL    13000000
+##    2:         ok   PASS 45000000 13414714  40868994 2012PASS    45658735
+##    3:     notalk   FAIL 20000000 53107035 158607035 2013FAIL    20000000
+##    4:     notalk   FAIL 61000000 75612460 132493015 2013FAIL    61000000
+##    5:        men   FAIL 40000000 95020213  95020213 2013FAIL    40000000
+##   ---                                                                   
+## 1790:     notalk   FAIL 53012938 70327868 107190108 1971FAIL   305063707
+## 1791:     notalk   FAIL 25000000 10324441  11253821 1971FAIL   143862856
+## 1792:     notalk   FAIL  2200000 41158757  41158757 1971FAIL    12659931
+## 1793:        men   FAIL  3000000  4000000   4000000 1971FAIL    17263543
+## 1794:         ok   PASS  1000000  9000000   9000000 1970PASS     5997631
+##       domgross_2013 intgross_2013 period_code decade_code imdb_id
+##    1:      25682380      42195766           1           1 1711425
+##    2:      13611086      41467257           1           1 1343727
+##    3:      53107035     158607035           1           1 2024544
+##    4:      75612460     132493015           1           1 1272878
+##    5:      95020213      95020213           1           1  453562
+##   ---                                                            
+## 1790:     404702718     616827003          NA          NA   67741
+## 1791:      59412143      64760273          NA          NA   67800
+## 1792:     236848653     236848653          NA          NA   67116
+## 1793:      23018057      23018057          NA          NA   67992
+## 1794:      53978683      53978683          NA          NA   65466
+##                                                                                                                                                                                                                                                  plot
+##    1:                                                                                                                                                                                                                                            <NA>
+##    2:                                                                                                                                                                                                                                            <NA>
+##    3:                                                                                                                    In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.
+##    4: A DEA agent and a naval intelligence officer find themselves on the run after a botched attempt to infiltrate a drug cartel. While fleeing, they learn the secret of their shaky alliance: Neither knew that the other was an undercover agent.
+##    5:                                                                                                  The life story of Jackie Robinson and his history-making signing with the Brooklyn Dodgers under the guidance of team executive Branch Rickey.
+##   ---                                                                                                                                                                                                                                                
+## 1790:                                                                                                                                         Cool black private eye John Shaft is hired by a crime lord to find and retrieve his kidnapped daughter.
+## 1791:                                                                                                                                     A young American and his English wife come to rural England and face increasingly vicious local harassment.
+## 1792:                                                                                                                                          A pair of NYC cops in the Narcotics Bureau stumble onto a drug smuggling job with a French connection.
+## 1793:                                                                                                                                                                                                                                            <NA>
+## 1794:                                                                                                                                                              Three girls come to Hollywood to make it big, but find only sex, drugs and sleaze.
+##       rated response         language country
+##    1:  <NA>       NA             <NA>    <NA>
+##    2:  <NA>       NA             <NA>    <NA>
+##    3:     R     TRUE          English USA, UK
+##    4:     R     TRUE English, Spanish     USA
+##    5: PG-13     TRUE          English     USA
+##   ---                                        
+## 1790:     R     TRUE          English     USA
+## 1791:     R     TRUE          English USA, UK
+## 1792:     R     TRUE  English, French     USA
+## 1793:  <NA>       NA             <NA>    <NA>
+## 1794:     X     TRUE          English     USA
+##                                                                                        writer
+##    1:                                                                                    <NA>
+##    2:                                                                                    <NA>
+##    3:        John Ridley (screenplay), Solomon Northup (based on ""Twelve Years a Slave"" by)
+##    4: Blake Masters (screenplay), Steven Grant (based on the Boom! Studios graphic novels by)
+##    5:                                                                         Brian Helgeland
+##   ---                                                                                        
+## 1790:       Ernest Tidyman (screenplay), John D.F. Black (screenplay), Ernest Tidyman (novel)
+## 1791:   David Zelag Goodman (screenplay), Sam Peckinpah (screenplay), Gordon Williams (novel)
+## 1792:                         Ernest Tidyman (screenplay), Robin Moore (based on the book by)
+## 1793:                                                                                    <NA>
+## 1794:                       Roger Ebert (screenplay), Roger Ebert (story), Russ Meyer (story)
+##       metascore imdb_rating          director    released
+##    1:        NA          NA              <NA>        <NA>
+##    2:        NA          NA              <NA>        <NA>
+##    3:        97         8.3     Steve McQueen 08 Nov 2013
+##    4:        55         6.8 Baltasar Kormákur 02 Aug 2013
+##    5:        62         7.6   Brian Helgeland 12 Apr 2013
+##   ---                                                    
+## 1790:        NA         6.6      Gordon Parks 02 Jul 1971
+## 1791:        NA         7.6     Sam Peckinpah 29 Dec 1971
+## 1792:        96         7.8  William Friedkin 09 Oct 1971
+## 1793:        NA          NA              <NA>        <NA>
+## 1794:        NA         6.2        Russ Meyer 17 Jun 1970
+##                                                                    actors
+##    1:                                                                <NA>
+##    2:                                                                <NA>
+##    3:          Chiwetel Ejiofor, Dwight Henry, Dickie Gravois, Bryan Batt
+##    4:  Denzel Washington, Mark Wahlberg, Paula Patton, Edward James Olmos
+##    5: Chadwick Boseman, Harrison Ford, Nicole Beharie, Christopher Meloni
+##   ---                                                                    
+## 1790: Richard Roundtree, Moses Gunn, Charles Cioffi, Christopher St. John
+## 1791:           Dustin Hoffman, Susan George, Peter Vaughan, T.P. McKenna
+## 1792:            Gene Hackman, Fernando Rey, Roy Scheider, Tony Lo Bianco
+## 1793:                                                                <NA>
+## 1794:               Dolly Read, Cynthia Myers, Marcia McBroom, John Lazar
+##                           genre
+##    1:                      <NA>
+##    2:                      <NA>
+##    3: Biography, Drama, History
+##    4:     Action, Comedy, Crime
+##    5:   Biography, Drama, Sport
+##   ---                          
+## 1790:   Action, Crime, Thriller
+## 1791:                  Thriller
+## 1792:   Action, Crime, Thriller
+## 1793:                      <NA>
+## 1794:             Comedy, Music
+##                                                  awards runtime  type
+##    1:                                              <NA>    <NA>  <NA>
+##    2:                                              <NA>    <NA>  <NA>
+##    3: Won 3 Oscars. Another 131 wins & 137 nominations. 134 min movie
+##    4:                                            1 win. 109 min movie
+##    5:                          3 wins & 13 nominations. 128 min movie
+##   ---                                                                
+## 1790:      Won 1 Oscar. Another 4 wins & 4 nominations. 100 min movie
+## 1791:             Nominated for 1 Oscar. Another 1 win. 118 min movie
+## 1792:    Won 5 Oscars. Another 18 wins & 8 nominations. 104 min movie
+## 1793:                                              <NA>    <NA>  <NA>
+## 1794:                                               N/A 109 min movie
+##                                                                                                 poster
+##    1:                                                                                             <NA>
+##    2:                                                                                             <NA>
+##    3: http://ia.media-imdb.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg
+##    4: http://ia.media-imdb.com/images/M/MV5BNTQ5MTgzNDg4OF5BMl5BanBnXkFtZTcwMjAyODEzOQ@@._V1_SX300.jpg
+##    5: http://ia.media-imdb.com/images/M/MV5BMTQwMDU4MDI3MV5BMl5BanBnXkFtZTcwMjU1NDgyOQ@@._V1_SX300.jpg
+##   ---                                                                                                 
+## 1790:     http://ia.media-imdb.com/images/M/MV5BMTIwNzQyMTg5OV5BMl5BanBnXkFtZTYwNzQzMzk4._V1_SX300.jpg
+## 1791:     http://ia.media-imdb.com/images/M/MV5BMTI4NDY3MTYwMV5BMl5BanBnXkFtZTYwNDkyNDg5._V1_SX300.jpg
+## 1792: http://ia.media-imdb.com/images/M/MV5BMTY5Nzg5OTIzOF5BMl5BanBnXkFtZTcwMDI5NDA0MQ@@._V1_SX300.jpg
+## 1793:                                                                                             <NA>
+## 1794: http://ia.media-imdb.com/images/M/MV5BMTYzMTgyODA4OV5BMl5BanBnXkFtZTcwNTk0NzMzMQ@@._V1_SX300.jpg
+##       imdb_votes error
+##    1:       <NA>    NA
+##    2:       <NA>    NA
+##    3:    143,446    NA
+##    4:     87,301    NA
+##    5:     43,608    NA
+##   ---                 
+## 1790:     10,275    NA
+## 1791:     37,726    NA
+## 1792:     62,153    NA
+## 1793:       <NA>    NA
+## 1794:      6,462    NA
 \end{verbatim}
 
 \hypertarget{mean}{%
@@ -7685,11 +7783,34 @@ Importantly, the mean can be categorized into different types: arithmetic mean, 
 
 \textbf{Example using Spotify Songs Dataset}: To find the mean popularity of songs.
 
+The R code provided demonstrates the use of the \texttt{dplyr} package and base R functions to calculate the mean popularity of tracks in the \texttt{spotify\_songs} dataset. Let's break down the code and its output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{dplyr summarise function}:
+\end{enumerate}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{mean\_popularity }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{mean\_popularity }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{summarise}\NormalTok{(}\AttributeTok{mean\_popularity =} \FunctionTok{mean}\NormalTok{(track\_popularity, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+This snippet uses the \texttt{dplyr} package's \texttt{summarise} function to calculate the mean of the \texttt{track\_popularity} variable in the \texttt{spotify\_songs} dataframe. The \texttt{mean} function is used with the \texttt{na.rm\ =\ TRUE} argument, which means that it will ignore \texttt{NA} (missing) values in the calculation. The result is stored in a new dataframe \texttt{mean\_popularity}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Output Explanation}:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{mean\_popularity}
 \end{Highlighting}
 \end{Shaded}
@@ -7698,6 +7819,10 @@ Importantly, the mean can be categorized into different types: arithmetic mean, 
 ##   mean_popularity
 ## 1        42.47708
 \end{verbatim}
+
+This output indicates that the mean popularity score of the tracks in the dataset is approximately 42.47708. The \texttt{\textless{}dbl\textgreater{}} notation suggests that the mean popularity score is a double-precision floating-point number, which is a common way of representing decimal numbers in R.
+
+In summary, both methods are used to calculate the average popularity score of tracks in the \texttt{spotify\_songs} dataset. The output shows the mean value as approximately 42.47708, reflecting the average popularity of the tracks in the dataset. The use of \texttt{dplyr} and base R functions provides a means to cross-validate the result for accuracy.
 
 \hypertarget{median}{%
 \subsubsection*{Median}\label{median}}
@@ -7709,19 +7834,46 @@ In addition to its robustness against outliers, the median is often used in non-
 
 \textbf{Example using Movies Dataset}: To find the median budget of movies.
 
+The provided R code calculates the median budget of movies in the \texttt{movies} dataset, with two different approaches, and the results are displayed. Let's analyze the code and its outputs:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Using dplyr's summarise function}:
+\end{enumerate}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{median\_budget }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{median\_budget =} \FunctionTok{median}\NormalTok{(budget, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\NormalTok{median\_budget }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{median\_budget =} \FunctionTok{median}\NormalTok{(budget}\SpecialCharTok{/}\DecValTok{1000000}\NormalTok{, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+This snippet uses the \texttt{dplyr} package's \texttt{summarise} function to compute the median of the \texttt{budget} variable in the \texttt{movies} dataframe. Before calculating the median, each budget value is divided by 1,000,000 (\texttt{budget/1000000}), effectively converting the budget values from (presumably) dollars to millions of dollars. The \texttt{na.rm\ =\ TRUE} argument in the \texttt{median} function indicates that any \texttt{NA} (missing) values should be ignored in the calculation. The result is stored in a new dataframe called \texttt{median\_budget}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Output Explanation}:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{median\_budget}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
 ##   median_budget
-## 1      28000000
+## 1            28
 \end{verbatim}
+
+This indicates that the median budget of the movies, in millions of dollars, is 28. The \texttt{\textless{}dbl\textgreater{}} notation signifies that the median budget is a double-precision floating-point number.
+
+In conclusion, both methods are used to calculate the median budget of movies in the dataset, and both approaches confirm that the median budget is 28 million dollars. The use of both \texttt{dplyr} and base R functions serves as a cross-verification to ensure the accuracy of the result.
 
 \hypertarget{mode}{%
 \subsubsection*{Mode}\label{mode}}
@@ -7733,15 +7885,20 @@ Despite its less frequent application in numerical contexts, the mode can still 
 
 \textbf{Example using Spotify Songs Dataset}: To find the mode of the \texttt{playlist\_genre}.
 
+The provided R code calculates the mode of the \texttt{playlist\_genre} variable in the \texttt{spotify\_songs} dataset using the \texttt{Mode} function from the \texttt{DescTools} package. The mode is the value that appears most frequently in a dataset. Let's break down the code and its output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Using the DescTools package's Mode function}:
+\end{enumerate}
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \FunctionTok{library}\NormalTok{(DescTools)}
 \end{Highlighting}
 \end{Shaded}
-
-\begin{verbatim}
-## Warning: package 'DescTools' was built under R version 4.3.2
-\end{verbatim}
 
 \begin{verbatim}
 ## 
@@ -7757,7 +7914,21 @@ Despite its less frequent application in numerical contexts, the mode can still 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{mode\_genre }\OtherTok{\textless{}{-}} \FunctionTok{Mode}\NormalTok{(spotify\_songs}\SpecialCharTok{$}\NormalTok{playlist\_genre)}
+\end{Highlighting}
+\end{Shaded}
 
+This snippet uses the \texttt{Mode} function from the \texttt{DescTools} package to find the most frequently occurring genre in the \texttt{playlist\_genre} column of the \texttt{spotify\_songs} dataset. The result is stored in the variable \texttt{mode\_genre}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Output Explanation}:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{mode\_genre}
 \end{Highlighting}
 \end{Shaded}
@@ -7767,6 +7938,10 @@ Despite its less frequent application in numerical contexts, the mode can still 
 ## attr(,"freq")
 ## [1] 6043
 \end{verbatim}
+
+This output indicates that the most common genre (mode) in the \texttt{playlist\_genre} column is ``edm''. The \texttt{attr(,"freq")} part shows the frequency of this mode, which is 6043. This means that ``edm'' appears 6043 times in the \texttt{playlist\_genre} column, more than any other genre.
+
+In summary, the code calculates and displays the mode of the \texttt{playlist\_genre} variable in the \texttt{spotify\_songs} dataset, indicating that the most common genre is ``edm'', which appears 6043 times. The consistency of the results from both methods demonstrates the reliability of the calculation.
 
 \hypertarget{measures-of-dispersion}{%
 \subsection*{Measures of Dispersion}\label{measures-of-dispersion}}
@@ -7782,19 +7957,64 @@ The range offers a quick, albeit crude, estimate of the dataset's variability. I
 
 \textbf{Example using Movies Dataset}: To find the range of movie budgets.
 
+The R code provided calculates the range of the \texttt{budget} column in the \texttt{movies} dataset using the \texttt{dplyr} package. The range is a measure of dispersion that represents the difference between the maximum and minimum values in a dataset. Here's a breakdown of the code and its output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Code Explanation}:
+\end{enumerate}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{budget\_range }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{Range =} \FunctionTok{max}\NormalTok{(budget, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{min}\NormalTok{(budget, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\NormalTok{budget\_range }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{summarise}\NormalTok{(}\AttributeTok{Range =} \FunctionTok{max}\NormalTok{(budget}\SpecialCharTok{/}\DecValTok{1000000}\NormalTok{, }
+                        \AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{) }\SpecialCharTok{{-}} \FunctionTok{min}\NormalTok{(budget}\SpecialCharTok{/}\DecValTok{1000000}\NormalTok{,}
+                                            \AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{itemize}
+\tightlist
+\item
+  \texttt{movies\ \%\textgreater{}\%}: This part indicates that the code is using the \texttt{movies} dataframe and piping (\texttt{\%\textgreater{}\%}) it into subsequent operations.
+\item
+  \texttt{summarise(Range\ =\ ...)}: The \texttt{summarise} function from the \texttt{dplyr} package is used to compute a summary statistic. Here, it's creating a new variable named \texttt{Range}.
+\item
+  \texttt{max(budget/1000000,\ na.rm\ =\ TRUE)\ -\ min(budget/1000000,\ na.rm\ =\ TRUE)}:
+\end{itemize}
+
+This calculates the range of the movie budgets. Each \texttt{budget} value is first divided by 1,000,000 (presumably converting the budget from dollars to millions of dollars). The \texttt{max} function finds the maximum value and \texttt{min} finds the minimum value, with \texttt{na.rm\ =\ TRUE} indicating that any \texttt{NA} (missing) values should be ignored. The range is the difference between these two values.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Output Explanation}:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{budget\_range}
 \end{Highlighting}
 \end{Shaded}
 
 \begin{verbatim}
-##       Range
-## 1 424993000
+##     Range
+## 1 424.993
 \end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  The output shows that the calculated range of the movie budgets, in millions of dollars, is approximately 424.993. This means that the largest budget in the dataset exceeds the smallest budget by about 424.993 million dollars.
+\item
+  The \texttt{\textless{}dbl\textgreater{}} notation indicates that the calculated range is a double-precision floating-point number, a standard numeric type in R for representing decimal values.
+\end{itemize}
+
+In summary, the code calculates the range of movie budgets in the \texttt{movies} dataset and finds that the budgets span approximately 424.993 million dollars, from the smallest to the largest. This provides a sense of how varied the movie budgets are in the dataset.
 
 \hypertarget{standard-deviation}{%
 \subsubsection*{Standard Deviation}\label{standard-deviation}}
@@ -7806,11 +8026,42 @@ The standard deviation can be classified into two types: population standard dev
 
 \textbf{Example using Spotify Songs Dataset}: To find the standard deviation of \texttt{danceability}.
 
+The R code you've provided calculates the standard deviation of the \texttt{danceability} variable in the \texttt{spotify\_songs} dataset using the \texttt{dplyr} package. Let's break down the code and its output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Code Explanation}:
+\end{enumerate}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{std\_danceability }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{std\_danceability }\OtherTok{\textless{}{-}}\NormalTok{ spotify\_songs }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{summarise}\NormalTok{(}\AttributeTok{std\_danceability =} \FunctionTok{sd}\NormalTok{(danceability, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{itemize}
+\tightlist
+\item
+  \texttt{spotify\_songs\ \%\textgreater{}\%}: This part uses the \texttt{spotify\_songs} dataframe and pipes it into the subsequent operation using \texttt{\%\textgreater{}\%}.
+\item
+  \texttt{summarise(std\_danceability\ =\ ...)}: The \texttt{summarise} function from \texttt{dplyr} is used to compute a summary statistic. Here, it's creating a new variable named \texttt{std\_danceability}.
+\item
+  \texttt{sd(danceability,\ na.rm\ =\ TRUE)}: This calculates the standard deviation of the \texttt{danceability} variable. The \texttt{sd} function computes the standard deviation, and \texttt{na.rm\ =\ TRUE} indicates that any \texttt{NA} (missing) values should be ignored in the calculation.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Output Explanation}:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{std\_danceability}
 \end{Highlighting}
 \end{Shaded}
@@ -7819,6 +8070,18 @@ The standard deviation can be classified into two types: population standard dev
 ##   std_danceability
 ## 1        0.1450853
 \end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  The output shows that the calculated standard deviation of the \texttt{danceability} scores in the \texttt{spotify\_songs} dataset is approximately 0.1450853.
+\item
+  The \texttt{\textless{}dbl\textgreater{}} notation indicates that the result is a double-precision floating-point number, which is typical for numeric calculations in R.
+\end{itemize}
+
+The standard deviation is a measure of the amount of variation or dispersion in a set of values. A low standard deviation indicates that the values tend to be close to the mean (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.
+
+In this case, a standard deviation of approximately 0.1450853 for \texttt{danceability} suggests that the danceability scores in the \texttt{spotify\_songs} dataset vary moderately around the mean. This gives an idea of the variability in danceability among the songs in the dataset.
 
 \hypertarget{variance}{%
 \subsubsection*{Variance}\label{variance}}
@@ -7830,11 +8093,42 @@ In statistical theory, the concept of variance is pivotal for various analytical
 
 \textbf{Example using Movies Dataset}: To find the variance in IMDB ratings.
 
+The R code you've shared calculates the variance of the \texttt{imdb\_rating} variable in the \texttt{movies} dataset using the \texttt{dplyr} package. Let's examine the code and its output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Code Explanation}:
+\end{enumerate}
+
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{var\_imdb\_rating }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%} 
+\NormalTok{var\_imdb\_rating }\OtherTok{\textless{}{-}}\NormalTok{ movies }\SpecialCharTok{\%\textgreater{}\%}
   \FunctionTok{summarise}\NormalTok{(}\AttributeTok{var\_imdb\_rating =} \FunctionTok{var}\NormalTok{(imdb\_rating, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
 
+\begin{itemize}
+\tightlist
+\item
+  \texttt{movies\ \%\textgreater{}\%}: This line uses the \texttt{movies} dataframe and pipes it into the following operation with \texttt{\%\textgreater{}\%}.
+\item
+  \texttt{summarise(var\_imdb\_rating\ =\ ...)}: The \texttt{summarise} function from \texttt{dplyr} is employed to compute a summary statistic, in this case, creating a new variable called \texttt{var\_imdb\_rating}.
+\item
+  \texttt{var(imdb\_rating,\ na.rm\ =\ TRUE)}: This computes the variance of the \texttt{imdb\_rating} variable. The \texttt{var} function calculates the variance, and \texttt{na.rm\ =\ TRUE} indicates that any \texttt{NA} (missing) values should be excluded from the calculation.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Output Explanation}:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
 \NormalTok{var\_imdb\_rating}
 \end{Highlighting}
 \end{Shaded}
@@ -7843,6 +8137,18 @@ In statistical theory, the concept of variance is pivotal for various analytical
 ##   var_imdb_rating
 ## 1       0.9269498
 \end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  The output indicates that the variance of the IMDb ratings in the \texttt{movies} dataset is approximately 0.9269498.
+\item
+  The \texttt{\textless{}dbl\textgreater{}} notation signifies that the result is a double-precision floating-point number, which is a standard numeric format in R.
+\end{itemize}
+
+Variance is a statistical measure that describes the spread of numbers in a data set. More specifically, it measures how far each number in the set is from the mean and thus from every other number in the set. In this context, a variance of approximately 0.9269498 in IMDb ratings suggests the degree to which these ratings vary from their average value in the dataset.
+
+This measure of variance can be particularly useful for understanding the consistency of movie ratings; a lower variance would indicate that the ratings are generally close to the mean, suggesting agreement among raters, whereas a higher variance would imply more diverse opinions on movie ratings.
 
 \hypertarget{general-summary}{%
 \subsection*{General Summary}\label{general-summary}}
@@ -7854,7 +8160,7 @@ There are also a couple methods for getting multiple basic descriptive statistic
 \subsubsection*{\texorpdfstring{\texttt{summary()}}{summary()}}\label{summary-1}}
 \addcontentsline{toc}{subsubsection}{\texttt{summary()}}
 
-This function returns the range, quartiles, mean, and missing data.
+The R code snippet you provided uses the \texttt{summary()} function to generate descriptive statistics for the \texttt{imdb\_rating} variable in the \texttt{movies} dataset. The \texttt{summary()} function in R provides a quick, five-number summary of the given data along with the count of \texttt{NA} (missing) values. Let's break down the output:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7867,11 +8173,31 @@ This function returns the range, quartiles, mean, and missing data.
 ##    2.10    6.20    6.80    6.76    7.40    9.30     202
 \end{verbatim}
 
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Min. (Minimum)}: The smallest value in the \texttt{imdb\_rating} data. Here, the minimum IMDb rating is 2.10.
+\item
+  \textbf{1st Qu. (First Quartile)}: Also known as the lower quartile, it is the median of the lower half of the dataset. This value is 6.20, meaning 25\% of the ratings are below this value.
+\item
+  \textbf{Median}: The middle value when the data is sorted in ascending order. The median IMDb rating is 6.80, indicating that half of the movies have a rating below 6.80 and the other half have a rating above 6.80.
+\item
+  \textbf{Mean}: The average of the \texttt{imdb\_rating} values. Calculated as the sum of all ratings divided by the number of non-missing ratings. The mean rating is 6.76.
+\item
+  \textbf{3rd Qu. (Third Quartile)}: Also known as the upper quartile, it is the median of the upper half of the dataset. Here, 75\% of the movies have a rating below 7.40.
+\item
+  \textbf{Max. (Maximum)}: The largest value in the \texttt{imdb\_rating} data. The highest IMDb rating in the dataset is 9.30.
+\item
+  \textbf{NA's}: The number of missing values in the \texttt{imdb\_rating} data. There are 202 missing values.
+\end{itemize}
+
+This summary provides a comprehensive view of the distribution of IMDb ratings in the \texttt{movies} dataset, including the central tendency (mean, median), spread (minimum, first quartile, third quartile, maximum), and the count of missing values. It helps in understanding the overall rating landscape of the movies in the dataset.
+
 \hypertarget{skimr}{%
 \subsubsection*{\texorpdfstring{\texttt{skimr}}{skimr}}\label{skimr}}
 \addcontentsline{toc}{subsubsection}{\texttt{skimr}}
 
-This package provides a fuller summary, including standard deviation, percentiles, and a histogram.
+The R code snippet provided uses the \texttt{skim()} function from the \texttt{skimr} package to generate a summary of the \texttt{imdb\_rating} variable from the \texttt{movies} dataset. The \texttt{skimr} package provides a more detailed summary than the base R \texttt{summary()} function, particularly useful for initial exploratory data analysis.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7885,9 +8211,62 @@ This package provides a fuller summary, including standard deviation, percentile
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\#skim(movies$imdb\_rating)}
+\CommentTok{\# skim(movies$imdb\_rating)}
 \end{Highlighting}
 \end{Shaded}
+
+Let's break down the output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Data Summary Section}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Name}: Identifies the data being summarized, here \texttt{movies\$imdb\_rating}.
+  \item
+    \textbf{Number of rows}: Indicates the total number of entries in the dataset, which is 1794 for \texttt{imdb\_rating}.
+  \item
+    \textbf{Number of columns}: The number of variables or columns in the data being skimmed. Since \texttt{skim()} is applied to a single column, this is 1.
+  \item
+    \textbf{Column type frequency}: Shows the types of data present in the columns. Here, there is 1 numeric column.
+  \end{itemize}
+\item
+  \textbf{Detailed Statistics Section}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{skim\_variable}: A character representation of the variable being summarized.
+  \item
+    \textbf{n\_missing}: The number of missing (\texttt{NA}) values in the dataset. Here, there are 202 missing ratings.
+  \item
+    \textbf{complete\_rate}: Proportion of non-missing values. Calculated as \texttt{(Total\ Number\ of\ rows\ -\ n\_missing)\ /\ Total\ Number\ of\ rows}. For \texttt{imdb\_rating}, it's approximately 0.8874025.
+  \item
+    \textbf{mean}: The average of the \texttt{imdb\_rating} values, which is 6.760113.
+  \item
+    \textbf{sd (standard deviation)}: Measures the amount of variation or dispersion in \texttt{imdb\_rating}. Here, it is 0.9627823.
+  \item
+    \textbf{p0, p25, p50, p75, p100}: These represent the percentiles of the data:
+  \item
+    \textbf{p0}: The minimum value (0th percentile), which is 2.1.
+  \item
+    \textbf{p25}: The 25th percentile, meaning 25\% of the data fall below this value, which is 6.2.
+  \item
+    \textbf{p50}: The median or 50th percentile, which is 6.8.
+  \item
+    \textbf{p75}: The 75th percentile, meaning 75\% of the data fall below this value, which is 7.4.
+  \item
+    \textbf{p100}: The maximum value (100th percentile), which is 9.3.
+  \item
+    \textbf{hist}: A text-based histogram providing a visual representation of the distribution of \texttt{imdb\_rating}. The characters (▁▁▅▇▂) represent different frequency bins.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the \texttt{skim()} function output provides a detailed statistical summary of the \texttt{imdb\_rating} variable, including measures of central tendency, dispersion, and data completeness, along with a visual histogram for quick assessment of the data distribution. This information is crucial for understanding the characteristics of the IMDb ratings in the \texttt{movies} dataset, especially when preparing for more detailed data analysis.
 
 \hypertarget{inferential-analysis-1}{%
 \section{Inferential Analysis}\label{inferential-analysis-1}}
@@ -7907,6 +8286,8 @@ The application of inferential statistics often involves the use of various test
 The T-test is a statistical method used to determine if there is a significant difference between the means of two groups. It is commonly used to compare two samples to determine if they could have originated from the same population (Rosner, 2015). The T-test operates under certain assumptions, such as the data being normally distributed and the samples being independent of each other. Violation of these assumptions may lead to misleading results.
 
 \textbf{Example with \texttt{movies} dataset:}
+
+The provided R code performs a Welch Two Sample t-test to compare the mean budgets of action and drama movies in the \texttt{movies} dataset. The Welch t-test is used to test the hypothesis that two populations (in this case, action and drama movies) have equal means. This test is appropriate when the two samples have possibly unequal variances.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7933,11 +8314,70 @@ The T-test is a statistical method used to determine if there is a significant d
 ##   7570000  19585222
 \end{verbatim}
 
+Let's analyze the output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Test Description}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Welch Two Sample t-test}: Indicates the type of t-test conducted. The Welch test does not assume equal variances across the two samples.
+  \end{itemize}
+\item
+  \textbf{Data Description}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{data}: Specifies the datasets being compared - the \texttt{budget} of \texttt{action\_movies} and \texttt{drama\_movies}.
+  \end{itemize}
+\item
+  \textbf{Test Statistics}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{t = -1.5346}: The calculated t-statistic value. The sign of the t-statistic indicates the direction of the difference between the means (negative here suggests that the mean budget of action movies might be less than that of drama movies).
+  \item
+    \textbf{df = 1.2327}: Degrees of freedom for the test. This value is calculated based on the sample sizes and variances of the two groups and is a key component in determining the critical value for the test.
+  \item
+    \textbf{p-value = 0.3325}: The probability of observing a test statistic as extreme as, or more extreme than, the observed value under the null hypothesis. A higher p-value (typically \textgreater{} 0.05) suggests that the observed data is consistent with the null hypothesis, which in this test is that there is no difference in the means of the two groups.
+  \end{itemize}
+\item
+  \textbf{Hypothesis Testing}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{alternative hypothesis}: States the hypothesis being tested. Here, it tests if the true difference in means is not equal to 0, which means it's checking whether the average budgets of action and drama movies are significantly different.
+  \item
+    \textbf{95 percent confidence interval}: This interval estimates the range of the true difference in means between the two groups. It ranges from approximately -76,461,080 to 52,430,636. Since this interval includes 0, it suggests that the difference in means might not be statistically significant.
+  \end{itemize}
+\item
+  \textbf{Sample Estimates}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{mean of x (action movies)}: The mean budget of action movies, approximately 7,570,000.
+  \item
+    \textbf{mean of y (drama movies)}: The mean budget of drama movies, approximately 19,585,222.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the Welch t-test's output indicates that there is not a statistically significant difference in the mean budgets of action and drama movies in the dataset, as evidenced by a p-value greater than 0.05 and a confidence interval that includes 0. The sample estimates provide the average budgets for each movie genre, which can be useful for descriptive purposes.
+
 \textbf{Independent Sample T-test}
 
 An independent sample T-test is used when comparing the means of two independent groups to assess whether their means are statistically different (Field et al., 2012). The groups should be separate, meaning the performance or attributes of one group should not influence the other. For instance, this type of T-test might be used to compare the average test scores of two different classrooms. It's essential to note that both groups should be normally distributed, and ideally, they should have the same variance for the T-test to be applicable.
 
 \textbf{Example with \texttt{Survivor\ summary.csv} and \texttt{viewers.csv}:}
+
+The provided R code performs a Welch Two Sample t-test to compare the average viewership (viewers\_mean) of TV seasons that took place in Fiji with those that took place in other locations. This test is conducted using data from a \texttt{summary} dataset.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7967,11 +8407,74 @@ An independent sample T-test is used when comparing the means of two independent
 ##  10.69857  15.97839
 \end{verbatim}
 
+Let's analyze the output of this t-test:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Test Description}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Welch Two Sample t-test}: Indicates the type of t-test conducted, which is the Welch t-test. This test is used when comparing the means of two groups that may have unequal variances.
+  \end{itemize}
+\item
+  \textbf{Data Description}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{data}: Compares the \texttt{viewers\_mean} of \texttt{fiji\_seasons} and \texttt{other\_seasons}. These represent the average viewership for TV seasons based on their filming locations (Fiji vs.~other countries).
+  \end{itemize}
+\item
+  \textbf{Test Statistics}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{t = -4.5307}: The calculated t-statistic value. A negative value indicates that the mean of the first group (Fiji seasons) might be less than the mean of the second group (other seasons).
+  \item
+    \textbf{df = 27.938}: Degrees of freedom for the test, a value calculated based on the sample sizes and variances of the two groups.
+  \item
+    \textbf{p-value = 0.0001004}: The probability of observing a test statistic as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true. A p-value this low (much less than 0.05) suggests that the observed difference in means is statistically significant.
+  \end{itemize}
+\item
+  \textbf{Hypothesis Testing}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{alternative hypothesis}: The hypothesis being tested is that the true difference in means is not equal to 0. In other words, it's assessing whether the average viewership for seasons in Fiji is significantly different from those in other locations.
+  \item
+    \textbf{95 percent confidence interval}: The interval ranges from approximately -7.667140 to -2.892491. Since this interval does not include 0 and is entirely negative, it suggests a significant difference in means, with the Fiji seasons having lower average viewership.
+  \end{itemize}
+\item
+  \textbf{Sample Estimates}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{mean of x (Fiji seasons)}: The mean viewership for Fiji seasons, approximately 10.69857.
+  \end{itemize}
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{mean of y (Other seasons)}: The mean viewership for seasons in other locations, approximately 15.97839.
+\end{itemize}
+
+In summary, the Welch t-test's output indicates a statistically significant difference in the average viewership of TV seasons filmed in Fiji compared to those filmed in other locations. The negative t-value and confidence interval suggest that the seasons filmed in Fiji, on average, have lower viewership than those filmed elsewhere. The low p-value reinforces this finding, suggesting that the difference in viewership is not just a result of random chance.
+
 \textbf{Paired Sample T-test}
 
 In contrast, a paired sample T-test is designed to compare means from the same group at different times or under different conditions (Vasishth \& Broe, 2011). For example, it could be used to compare student test scores before and after a training program. Here, the assumption is that the differences between pairs follow a normal distribution. Paired T-tests are particularly useful in ``before and after'' scenarios, where each subject serves as their control, thereby increasing the test's sensitivity.
 
 \textbf{Example with Survivor's \texttt{summary.csv}:}
+
+The R code provided performs a paired t-test to compare viewership at the premier and finale of TV seasons using the \texttt{summary} dataset. A paired t-test is appropriate when comparing two sets of related observations --- in this case, the viewership of the same TV seasons at two different time points (premier and finale).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -7997,6 +8500,61 @@ In contrast, a paired sample T-test is designed to compare means from the same g
 ##        -0.75575
 \end{verbatim}
 
+Let's break down the output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Test Description}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Paired t-test}: Indicates that a paired t-test is conducted, which is suitable for comparing two related samples or repeated measurements on the same subjects.
+  \end{itemize}
+\item
+  \textbf{Data Description}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{data}: The test compares \texttt{viewers\_premier} and \texttt{viewers\_finale} from the \texttt{summary} dataset.
+  \end{itemize}
+\item
+  \textbf{Test Statistics}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{t = -0.76096}: The calculated t-statistic value. A negative value suggests that the mean viewership at the premier might be lower than at the finale, but the direction alone does not indicate statistical significance.
+  \item
+    \textbf{df = 39}: Degrees of freedom for the test, indicating the number of independent data points in the paired samples.
+  \item
+    \textbf{p-value = 0.4513}: The probability of observing a test statistic as extreme as, or more extreme than, the one observed under the null hypothesis (no difference in means). A p-value greater than 0.05 (common threshold for significance) suggests that the difference in mean viewership is not statistically significant.
+  \end{itemize}
+\item
+  \textbf{Hypothesis Testing}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{alternative hypothesis}: The hypothesis being tested is that the true mean difference in viewership between the premier and finale is not equal to 0. In other words, it assesses whether there is a significant difference in viewership between these two time points.
+  \item
+    \textbf{95 percent confidence interval}: Ranges from approximately -2.764596 to 1.253096. Since this interval includes 0, it suggests that the difference in viewership between the premier and finale is not statistically significant.
+  \end{itemize}
+\item
+  \textbf{Sample Estimates}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{mean difference}: The mean difference in viewership between the premier and finale, calculated as the mean of the differences for each season. Here, it is -0.75575. However, the confidence interval and p-value indicate that this difference is not statistically significant.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the paired t-test output indicates that there is no statistically significant difference in viewership between the premier and finale of the TV seasons in the dataset. The p-value is above the common threshold for significance (0.05), and the confidence interval includes 0, both suggesting that any observed difference in mean viewership could be due to random chance rather than a systematic difference.
+
 \hypertarget{analysis-of-variance-anova}{%
 \subsubsection*{Analysis of Variance (ANOVA)}\label{analysis-of-variance-anova}}
 \addcontentsline{toc}{subsubsection}{Analysis of Variance (ANOVA)}
@@ -8009,10 +8567,11 @@ One-way ANOVA focuses on a single independent variable with more than two levels
 
 \textbf{Example with \texttt{Survivor\ castaways.csv}:}
 
+The provided R code performs a one-way Analysis of Variance (ANOVA) to test whether there are statistically significant differences in the total votes received by castaways, grouped by their personality types, using data from the \texttt{castaways} dataset.
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{castaways }\OtherTok{\textless{}{-}} \FunctionTok{fread}\NormalTok{(}\StringTok{"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021{-}06{-}01/castaways.csv"}\NormalTok{)}
-
 
 \CommentTok{\# Perform one{-}way ANOVA for total\_votes\_received among different personality types}
 \NormalTok{anova\_result }\OtherTok{\textless{}{-}} \FunctionTok{aov}\NormalTok{(total\_votes\_received }\SpecialCharTok{\textasciitilde{}}\NormalTok{ personality\_type, }\AttributeTok{data =}\NormalTok{ castaways)}
@@ -8027,16 +8586,82 @@ One-way ANOVA focuses on a single independent variable with more than two levels
 ## 3 observations deleted due to missingness
 \end{verbatim}
 
+Let's analyze the output of the ANOVA:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ANOVA Summary}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Df (Degrees of Freedom)}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \textbf{personality\_type: 15} --- This represents the degrees of freedom for the personality types group. It's calculated as the number of levels in the group minus one (assuming there are 16 personality types).
+    \end{itemize}
+  \item
+    \textbf{Residuals: 725} --- The degrees of freedom for the residuals, which is the number of observations minus the number of groups (here, total number of castaways minus 16).
+  \item
+    \textbf{Sum Sq (Sum of Squares)}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \textbf{personality\_type: 227} --- The total variation attributed to the differences in personality type.
+    \item
+      \textbf{Residuals: 10209} --- The total variation that is not attributed to personality types (i.e., within-group variation).
+    \end{itemize}
+  \item
+    \textbf{Mean Sq (Mean Squares)}:
+  \item
+    \textbf{personality\_type: 15.14} --- This is the variance between the groups (Sum Sq of personality type divided by its Df).
+  \item
+    \textbf{Residuals: 14.08} --- This is the variance within the groups (Sum Sq of residuals divided by its Df).
+  \item
+    \textbf{F value: 1.075} --- The F-statistic value, calculated as the Mean Sq of personality type divided by the Mean Sq of residuals. It's a measure of how much the group means differ from the overall mean, relative to the variance within the groups.
+  \item
+    \textbf{Pr(\textgreater F): 0.376} --- The p-value associated with the F-statistic. It indicates the probability of observing an F-statistic as large as, or larger than, what was observed, under the assumption that the null hypothesis (no difference in means across groups) is true.
+  \end{itemize}
+\item
+  \textbf{Interpreting the Results}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The p-value is 0.376, which is greater than the common alpha level of 0.05. This suggests that there is no statistically significant difference in the total votes received among different personality types at the chosen level of significance. In other words, any observed differences in total votes among personality types could likely be due to chance.
+  \item
+    The relatively high p-value indicates that the null hypothesis (that there are no differences in the mean total votes received among the different personality types) cannot be rejected.
+  \end{itemize}
+\item
+  \textbf{Additional Note}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The output mentions ``3 observations deleted due to missingness.'' This indicates that the analysis excluded three cases where data were missing, which is a standard procedure in ANOVA to ensure the accuracy of the test results.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the one-way ANOVA conducted suggests that personality type does not have a statistically significant impact on the total votes received by castaways in the dataset. This is inferred from the high p-value and the ANOVA's failure to reject the null hypothesis.
+
 \textbf{Two-way ANOVA}
 
 Two-way ANOVA, however, involves two independent variables, offering a more intricate comparison and understanding of the interaction effects (Winer, Brown, \& Michels, 1991). It helps to analyze how two factors impact a dependent variable, and it can also show how the two independent variables interact with each other. This form of ANOVA is highly valuable in experimental design where multiple variables may influence the outcome.
 
 \textbf{Example with \texttt{movies} dataset:}
 
+The provided R code performs a two-way Analysis of Variance (ANOVA) on the \texttt{movies} dataset to test for statistical significance in the differences of movie budgets across different genres and years, and the interaction between these two factors.
+
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# Perform two{-}way ANOVA for budget by genre and year}
 \NormalTok{anova\_result }\OtherTok{\textless{}{-}} \FunctionTok{aov}\NormalTok{(budget }\SpecialCharTok{\textasciitilde{}}\NormalTok{ genre }\SpecialCharTok{*}\NormalTok{ year, }\AttributeTok{data =}\NormalTok{ movies)}
+
 \FunctionTok{summary}\NormalTok{(anova\_result)}
 \end{Highlighting}
 \end{Shaded}
@@ -8057,7 +8682,94 @@ Two-way ANOVA, however, involves two independent variables, offering a more intr
 ## 202 observations deleted due to missingness
 \end{verbatim}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+Let's analyze the output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{ANOVA Summary}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Df (Degrees of Freedom)}: Represents the number of levels in each factor minus one.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \textbf{genre: 270} --- Degrees of freedom for the genre factor.
+    \item
+      \textbf{year: 1} --- Degrees of freedom for the year factor.
+    \end{itemize}
+  \item
+    \textbf{genre:year: 156} --- Degrees of freedom for the interaction between genre and year.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \textbf{Residuals: 1164} --- Degrees of freedom for the residuals (total number of observations minus the sum of the degrees of freedom for each factor and interaction).
+    \end{itemize}
+  \item
+    \textbf{Sum Sq (Sum of Squares)}:
+  \item
+    Indicates the total variation attributed to each factor and their interaction.
+  \item
+    \textbf{Mean Sq (Mean Squares)}:
+  \item
+    The variance due to each factor and their interaction (Sum Sq divided by Df).
+  \item
+    \textbf{F value}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      The F-statistic for each factor, calculated as the Mean Sq of the factor divided by the Mean Sq of the residuals. It's a measure of the effect size.
+    \end{itemize}
+  \item
+    \textbf{Pr(\textgreater F) (p-value)}:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      Indicates the probability of observing an F-statistic as large as, or larger than, what was observed, under the null hypothesis (no effect).
+    \item
+      \textbf{genre, year, genre:year}: All have very low p-values, indicated by ``***'', suggesting that each factor and their interaction significantly affect movie budgets.
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Interpreting the Results}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Genre}: The very low p-value suggests a statistically significant difference in movie budgets across different genres.
+  \item
+    \textbf{Year}: The very low p-value indicates a significant difference in movie budgets across different years.
+  \item
+    \textbf{Genre-Year Interaction}: The low p-value for the interaction term suggests that the effect of genre on movie budgets varies by year, meaning different genres might have different budget trends over time.
+  \item
+    \textbf{Residuals}: Represent unexplained variance after accounting for the main effects and interaction.
+  \end{itemize}
+\item
+  \textbf{Significance Codes}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The ``***'' next to the p-values denotes a very high level of statistical significance.
+  \end{itemize}
+\item
+  \textbf{Additional Note}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    ``202 observations deleted due to missingness'' indicates that the analysis excluded cases with missing data, which is common in ANOVA to maintain accuracy.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the two-way ANOVA results suggest that both genre and year, and the interaction between them, have statistically significant effects on movie budgets in the dataset. This implies that budget variations are not only dependent on the genre or the year independently but also on how these two factors interact with each other.
 
 \hypertarget{regression-analysis}{%
 \subsection*{Regression Analysis}\label{regression-analysis}}
@@ -8070,6 +8782,8 @@ Two-way ANOVA, however, involves two independent variables, offering a more intr
 Simple linear regression aims to model the relationship between a single independent variable and a dependent variable by fitting a linear equation to observed data (Montgomery, Peck, \& Vining, 2012). The primary objective is to find the best-fitting straight line that accurately predicts the output values within a range. Simple linear regression works best when the variables have a linear relationship, and the data is homoscedastic, meaning the variance of errors is constant across levels of the independent variable.
 
 \textbf{Example with \texttt{Survivor\ viewers.csv}:}
+
+The provided R code performs a linear regression analysis using the \texttt{lm()} function to model the relationship between the number of viewers (dependent variable) and episode numbers (independent variable) in a TV series dataset. The \texttt{summary()} function is then used to provide a detailed summary of the linear model's results.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -8103,6 +8817,91 @@ Simple linear regression aims to model the relationship between a single indepen
 ## F-statistic: 0.4263 on 1 and 572 DF,  p-value: 0.5141
 \end{verbatim}
 
+Let's break down the output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Model Call}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{lm(formula = viewers \textasciitilde{} episode, data = viewers)}: This indicates the linear model was fitted to predict \texttt{viewers} based on \texttt{episode} numbers.
+  \end{itemize}
+\item
+  \textbf{Residuals}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The residuals represent the differences between the observed values and the values predicted by the model.
+  \item
+    \textbf{Min, 1Q (First Quartile), Median, 3Q (Third Quartile), Max}: These statistics provide a summary of the distribution of residuals. The relatively large range suggests that there may be considerable variance in how well the model predictions match the actual data.
+  \end{itemize}
+\item
+  \textbf{Coefficients}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{(Intercept)}: The estimated average number of viewers when the episode number is zero. The intercept is significant (p \textless{} 0.0000000000000002).
+  \item
+    \textbf{episode}: The estimated change in the number of viewers for each additional episode. The coefficient is 0.03960, but it is not statistically significant (p = 0.514), suggesting that the number of episodes does not have a significant linear relationship with the number of viewers.
+  \item
+    \textbf{Std. Error}: Measures the variability or uncertainty in the coefficient estimates.
+  \item
+    \textbf{t value}: The test statistic for the hypothesis that each coefficient is different from zero.
+  \item
+    \textbf{Pr(\textgreater\textbar t\textbar)}: The p-value for the test statistic. A low p-value (\textless{} 0.05) would indicate that the coefficient is significantly different from zero.
+  \end{itemize}
+\item
+  \textbf{Residual Standard Error}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{6.283 on 572 degrees of freedom}: This is a measure of the typical size of the residuals. The degrees of freedom are the number of observations minus the number of parameters being estimated.
+  \end{itemize}
+\item
+  \textbf{R-squared Values}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Multiple R-squared: 0.0007448}: This indicates how much of the variability in the dependent variable (viewers) can be explained by the independent variable (episode). A value close to 0 suggests that the model does not explain much of the variability.
+  \item
+    \textbf{Adjusted R-squared: -0.001002}: Adjusts the R-squared value based on the number of predictors in the model. It can be negative if the model has no explanatory power.
+  \end{itemize}
+\item
+  \textbf{F-statistic}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{0.4263 on 1 and 572 DF, p-value: 0.5141}: This tests whether the model is statistically significant. The high p-value suggests that the model is not statistically significant, indicating that the episode number does not significantly predict the number of viewers.
+  \end{itemize}
+\item
+  \textbf{Significance Codes}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The ``***'' next to the intercept's p-value indicates a high level of statistical significance.
+  \end{itemize}
+\item
+  \textbf{Observations with Missing Data}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{(22 observations deleted due to missingness)}: Indicates that 22 observations were excluded from the analysis due to missing data.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the linear regression model suggests that the number of episodes is not a significant predictor of the number of viewers, based on the dataset used. The model's low R-squared value and the non-significant p-value for the episode coefficient support this conclusion.
+
 \hypertarget{multiple-linear-regression}{%
 \subsubsection*{Multiple Linear Regression}\label{multiple-linear-regression}}
 \addcontentsline{toc}{subsubsection}{Multiple Linear Regression}
@@ -8110,6 +8909,8 @@ Simple linear regression aims to model the relationship between a single indepen
 Multiple linear regression extends the concept of simple linear regression to include two or more independent variables (Hair et al., 2014). This approach allows for a more nuanced understanding of the relationships among variables. It provides the tools needed to predict a dependent variable based on the values of multiple independent variables. Multiple linear regression assumes that the relationship between the dependent variable and the independent variables is linear, and it also assumes that the residuals are normally distributed and have constant variance.
 
 \textbf{Example with \texttt{Survivor\ summary.csv}:}
+
+The R code provided performs a multiple linear regression analysis, modeling the average viewership (viewers\_mean) as a function of country, timeslot, and season. The \texttt{summary()} function provides a detailed summary of the model's results.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -8158,6 +8959,89 @@ Multiple linear regression extends the concept of simple linear regression to in
 ## Multiple R-squared:  0.9758, Adjusted R-squared:  0.9502 
 ## F-statistic: 38.18 on 19 and 18 DF,  p-value: 0.00000000008219
 \end{verbatim}
+
+Let's break down the output:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Model Call}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{lm(formula = viewers\_mean \textasciitilde{} country + timeslot + season, data = summary)}: Shows the regression formula used, predicting \texttt{viewers\_mean} based on \texttt{country}, \texttt{timeslot}, and \texttt{season}.
+  \end{itemize}
+\item
+  \textbf{Residuals}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The residuals represent the differences between the observed and predicted values. The summary (Min, 1st Quartile, Median, 3rd Quartile, Max) shows the distribution of these residuals.
+  \end{itemize}
+\item
+  \textbf{Coefficients}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Estimate}: The regression coefficients for the intercept and each predictor. These values represent the expected change in \texttt{viewers\_mean} for a one-unit change in the predictor, holding all other predictors constant.
+  \item
+    \textbf{Std. Error}: The standard error of each coefficient, indicating the precision of the coefficient estimates.
+  \item
+    \textbf{t value}: The test statistic for the hypothesis that each coefficient is different from zero.
+  \item
+    \textbf{Pr(\textgreater\textbar t\textbar)}: The p-value for the test statistic. A low p-value (\textless{} 0.05) indicates that the coefficient is significantly different from zero.
+  \item
+    The coefficients for different countries and the \texttt{timeslotWednesday\ 8:00\ pm} are statistically significant, as indicated by their p-values and significance codes. The \texttt{season} variable is also significant, suggesting its impact on viewership.
+  \end{itemize}
+\item
+  \textbf{Residual Standard Error}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{1.148 on 18 degrees of freedom}: This is a measure of the typical size of the residuals. Degrees of freedom are calculated as the total number of observations minus the number of estimated parameters.
+  \end{itemize}
+\item
+  \textbf{R-squared Values}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Multiple R-squared: 0.9758}: Indicates the proportion of variance in the dependent variable (viewers\_mean) that is predictable from the independent variables. A value of 0.9758 suggests a high level of predictability.
+  \item
+    \textbf{Adjusted R-squared: 0.9502}: Adjusts the R-squared value based on the number of predictors in the model. This is closer to the true predictive power of the model.
+  \end{itemize}
+\item
+  \textbf{F-Statistic}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{38.18 on 19 and 18 DF, p-value: 0.00000000008219}: This tests the overall significance of the model. The very low p-value suggests the model as a whole is statistically significant.
+  \end{itemize}
+\item
+  \textbf{Significance Codes}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Indicate the level of significance for the coefficients. ``***'' denotes a very high level of statistical significance.
+  \end{itemize}
+\item
+  \textbf{Observations with Missing Data}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{(2 observations deleted due to missingness)}: Indicates that 2 observations were excluded from the analysis due to missing data.
+  \end{itemize}
+\end{enumerate}
+
+In summary, the multiple linear regression model suggests that both the country and the season significantly predict the average viewership of the TV series, with the timeslot also playing a significant role (specifically the \texttt{Wednesday\ 8:00\ pm} timeslot). The model explains a very high proportion of the variance in average viewership (as indicated by the R-squared values), and the overall model is statistically significant.
 
 \hypertarget{references-3}{%
 \subsection*{References}\label{references-3}}
