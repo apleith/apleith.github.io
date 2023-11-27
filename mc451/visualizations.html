@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 14 Visualizations | Introduction to Communication and Media Research with R</title>
 <meta name="author" content="Alex P. Leith, PhD">
-<meta name="description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
-<meta name="generator" content="bookdown 0.35 with bs4_book()">
+<meta name="description" content="14.1 Introduction  The Imperative of Visual Representations in Research Data visualization serves as a crucial tool in media and information studies, designed to transform complex data sets into a...">
+<meta name="generator" content="bookdown 0.36 with bs4_book()">
 <meta property="og:title" content="Chapter 14 Visualizations | Introduction to Communication and Media Research with R">
 <meta property="og:type" content="book">
-<meta property="og:description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
+<meta property="og:description" content="14.1 Introduction  The Imperative of Visual Representations in Research Data visualization serves as a crucial tool in media and information studies, designed to transform complex data sets into a...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 14 Visualizations | Introduction to Communication and Media Research with R">
-<meta name="twitter:description" content="14.1 Introduction  The Imperative of Visual Representations in Research In the contemporary landscape of academic and applied research, visual representations have risen to prominence as...">
+<meta name="twitter:description" content="14.1 Introduction  The Imperative of Visual Representations in Research Data visualization serves as a crucial tool in media and information studies, designed to transform complex data sets into a...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.0/transition.js"></script><script src="libs/bs3compat-0.6.0/tabs.js"></script><script src="libs/bs3compat-0.6.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -58,7 +58,8 @@
 <li><a class="" href="data.html"><span class="header-section-number">13</span> Data</a></li>
 <li><a class="active" href="visualizations.html"><span class="header-section-number">14</span> Visualizations</a></li>
 <li><a class="" href="data-analysis.html"><span class="header-section-number">15</span> Data Analysis</a></li>
-<li><a class="" href="appendix.html"><span class="header-section-number">16</span> Appendix</a></li>
+<li><a class="" href="presenting-your-findings.html"><span class="header-section-number">16</span> Presenting Your Findings</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">17</span> Appendix</a></li>
 </ul>
 
         <div class="book-extra">
@@ -77,6 +78,7 @@
 <div id="the-imperative-of-visual-representations-in-research" class="section level3 unnumbered">
 <h3>The Imperative of Visual Representations in Research<a class="anchor" aria-label="anchor" href="#the-imperative-of-visual-representations-in-research"><i class="fas fa-link"></i></a>
 </h3>
+<p>Data visualization serves as a crucial tool in media and information studies, designed to transform complex data sets into a visually engaging format that enhances comprehension and facilitates insights. The visual representation helps in making sense of large amounts of data, which might be impenetrable in raw form.</p>
 <p>In the contemporary landscape of academic and applied research, visual representations have risen to prominence as indispensable components of scholarly communication. Visual aids such as tables, graphs, and charts play a critical role in the dissemination of research findings, serving as a potent mechanism for encapsulating complex datasets, theories, and relationships in an accessible manner (Tufte, 2001). In fact, well-designed visualizations can make a marked difference in how research is consumed, interpreted, and critiqued.</p>
 <div id="facilitating-cognitive-processing" class="section level4 unnumbered">
 <h4>Facilitating Cognitive Processing<a class="anchor" aria-label="anchor" href="#facilitating-cognitive-processing"><i class="fas fa-link"></i></a>
@@ -113,10 +115,11 @@
 <div id="importance-of-tables" class="section level3 unnumbered">
 <h3>Importance of Tables<a class="anchor" aria-label="anchor" href="#importance-of-tables"><i class="fas fa-link"></i></a>
 </h3>
+<p>Tables are a foundational element in data visualization, offering a structured format for organizing numerical data. By arranging data in rows and columns, tables enable viewers to compare figures systematically and discern patterns or discrepancies with ease.</p>
 <div id="concise-representation-of-numerical-data" class="section level4 unnumbered">
 <h4>Concise Representation of Numerical Data<a class="anchor" aria-label="anchor" href="#concise-representation-of-numerical-data"><i class="fas fa-link"></i></a>
 </h4>
-<p>Tables stand as one of the most efficient means for the organized presentation of numerical data. By arranging data in rows and columns, tables offer a spatial framework that enables quick scanning and interpretation. This is particularly advantageous in research contexts where large datasets are prevalent, as tables condense this information into a digestible format. Unlike other types of visual aids like graphs and charts, tables can preserve the exact numerical values, which can be crucial for statistical analysis and for the validation of research findings (Zacks &amp; Tversky, 1999).</p>
+<p>When designing tables for data visualization, it is paramount to arrange data coherently and to label all columns and rows with precision. Such organization ensures that viewers can follow and interpret the data accurately without confusion. Tables stand as one of the most efficient means for the organized presentation of numerical data. By arranging data in rows and columns, tables offer a spatial framework that enables quick scanning and interpretation. This is particularly advantageous in research contexts where large datasets are prevalent, as tables condense this information into a digestible format. Unlike other types of visual aids like graphs and charts, tables can preserve the exact numerical values, which can be crucial for statistical analysis and for the validation of research findings (Zacks &amp; Tversky, 1999).</p>
 </div>
 <div id="effectively-show-relationships-trends-and-comparisons" class="section level4 unnumbered">
 <h4>Effectively Show Relationships, Trends, and Comparisons<a class="anchor" aria-label="anchor" href="#effectively-show-relationships-trends-and-comparisons"><i class="fas fa-link"></i></a>
@@ -162,7 +165,7 @@
 <div id="diagrams" class="section level4 unnumbered">
 <h4>Diagrams<a class="anchor" aria-label="anchor" href="#diagrams"><i class="fas fa-link"></i></a>
 </h4>
-<p>Diagrams serve as visual abstractions or simplifications of complex systems, processes, or objects. They are highly useful in research to delineate component parts, explicate functional relationships, or visualize abstract theories. For example, a Venn diagram may be employed to depict the intersections among different sets or groups, effectively elucidating how they relate to one another.</p>
+<p>Illustrations stand out in data visualization by distilling intricate ideas or processes into more digestible, straightforward visual representations. They play a key role in simplifying and clarifying information that may be too complex for text descriptions alone. They are highly useful in research to delineate component parts, explicate functional relationships, or visualize abstract theories. For example, a Venn diagram may be employed to depict the intersections among different sets or groups, effectively elucidating how they relate to one another.</p>
 </div>
 <div id="flowcharts" class="section level4 unnumbered">
 <h4>Flowcharts<a class="anchor" aria-label="anchor" href="#flowcharts"><i class="fas fa-link"></i></a>
@@ -207,6 +210,7 @@
 <h2>
 <span class="header-section-number">14.4</span> Images<a class="anchor" aria-label="anchor" href="#images"><i class="fas fa-link"></i></a>
 </h2>
+<p>Incorporating images into data visualizations can significantly enhance the impact of the presented information. They often evoke emotional responses and can make the visualized data more engaging and memorable for the audience. In data visualization, the integration of images must be meticulously considered; they should complement and clarify the data, avoiding distractions or misinterpretations. Relevant images enhance understanding and retain the visualization’s focus.</p>
 <div id="types-of-images" class="section level3 unnumbered">
 <h3>Types of Images<a class="anchor" aria-label="anchor" href="#types-of-images"><i class="fas fa-link"></i></a>
 </h3>
@@ -258,14 +262,14 @@
 <h5>Tidyverse<a class="anchor" aria-label="anchor" href="#tidyverse"><i class="fas fa-link"></i></a>
 </h5>
 <p>We load the <code>tidyverse</code> package, which is a collection of R packages designed for data science.</p>
-<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="data.table" class="section level5 unnumbered">
 <h5>Data.Table<a class="anchor" aria-label="anchor" href="#data.table"><i class="fas fa-link"></i></a>
 </h5>
 <p>Next, we load the <code>data.table</code> package. It provides an enhanced version of data frames for more efficient data manipulation.</p>
-<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-datatable.com">data.table</a></span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -277,28 +281,28 @@
 <h5>Anime Dataset<a class="anchor" aria-label="anchor" href="#anime-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset presumably contains information related to anime.</p>
-<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anime</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-23/tidy_anime.csv"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="horror-movies-dataset" class="section level5 unnumbered">
 <h5>Horror Movies Dataset<a class="anchor" aria-label="anchor" href="#horror-movies-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset likely contains data related to horror movies.</p>
-<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">horror_movies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-11-01/horror_movies.csv'</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="richmond-way-dataset" class="section level5 unnumbered">
 <h5>Richmond Way Dataset<a class="anchor" aria-label="anchor" href="#richmond-way-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset could contain information related to Richmond Way, though the exact details would be available in the dataset’s documentation.</p>
-<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">richmondway</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-09-26/richmondway.csv'</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="television-ratings-dataset" class="section level5 unnumbered">
 <h5>Television Ratings Dataset<a class="anchor" aria-label="anchor" href="#television-ratings-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset likely contains television ratings data.</p>
-<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">television</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-01-08/IMDb_Economist_tv_ratings.csv"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div id="video-games-dataset" class="section level5" number="14.5.0.0.1">
@@ -306,7 +310,7 @@
 <span class="header-section-number">14.5.0.0.1</span> Video Games Dataset<a class="anchor" aria-label="anchor" href="#video-games-dataset"><i class="fas fa-link"></i></a>
 </h5>
 <p>This dataset presumably contains information about video games.</p>
-<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">video_games</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://Rdatatable.gitlab.io/data.table/reference/fread.html">fread</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-07-30/video_games.csv"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -925,8 +929,8 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <div id="histogram" class="section level4 unnumbered">
 <h4>Histogram<a class="anchor" aria-label="anchor" href="#histogram"><i class="fas fa-link"></i></a>
 </h4>
-<p>A histogram is a graphical representation that organizes a group of data points into specified ranges. It is an estimate of the probability distribution of a continuous variable. The data is partitioned into bins, and the number of data points in each bin is represented by the height of the corresponding bar (Wickham, 2016). Here, we are using the <code>richmondway</code> dataset to examine the frequency distribution of “F-ck Count” by the character Roy Kent.</p>
-<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
+<p>A histogram is a graphical representation that organizes a group of data points into specified ranges. It is an estimate of the probability distribution of a continuous variable. Histograms are effective in visualizing the frequency distribution of continuous data sets. By grouping data into intervals, histograms provide a clear picture of the distribution’s shape and the prevalence of data points within specific ranges. The data is partitioned into bins, and the number of data points in each bin is represented by the height of the corresponding bar (Wickham, 2016). Here, we are using the <code>richmondway</code> dataset to examine the frequency distribution of “F-ck Count” by the character Roy Kent.</p>
+<div class="sourceCode" id="cb134"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">richmondway</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">F_count_RK</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Distribution of Roy Kent's F-ck Count"</span>,</span>
@@ -943,7 +947,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Find the 5 Most Popular Languages<a class="anchor" aria-label="anchor" href="#find-the-5-most-popular-languages"><i class="fas fa-link"></i></a>
 </h5>
 <p>First, let’s find out which languages are the most popular in the dataset.</p>
-<div class="sourceCode" id="cb138"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb136"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">horror_movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">original_language</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -964,7 +968,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Filter for top languages<a class="anchor" aria-label="anchor" href="#filter-for-top-languages"><i class="fas fa-link"></i></a>
 </h5>
 <p>After identifying which languages to include, create a new data set filtered for these languages.</p>
-<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">horror_movies_top_5_languages</span> <span class="op">&lt;-</span> <span class="va">horror_movies</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">original_language</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"en"</span>, <span class="st">"es"</span>, <span class="st">"ja"</span>, <span class="st">"pt"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -972,7 +976,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Density Plot<a class="anchor" aria-label="anchor" href="#create-density-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>After filtering for the top 5 languages, a density plot is created.</p>
-<div class="sourceCode" id="cb142"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb140"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">horror_movies_top_5_languages</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">vote_average</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">original_language</span><span class="op">)</span>, alpha <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Density Plot of Horror Movie Ratings"</span>,</span>
@@ -989,7 +993,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Find the 5 Most Prolific Publishers<a class="anchor" aria-label="anchor" href="#find-the-5-most-prolific-publishers"><i class="fas fa-link"></i></a>
 </h5>
 <p>First, we identify which publishers are most prolific.</p>
-<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">video_games</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">publisher</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
@@ -1011,7 +1015,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Violin Plot<a class="anchor" aria-label="anchor" href="#create-violin-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>After filtering for the top 5 publishers, we generate the violin plot.</p>
-<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">video_games_top_5_publishers</span> <span class="op">&lt;-</span> <span class="va">video_games</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">publisher</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Big Fish Games"</span>, <span class="st">"SEGA"</span>, <span class="st">"Strategy First"</span>, <span class="st">"Ubisoft"</span>, <span class="st">"Square Enix"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -1028,7 +1032,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h4>Boxplot<a class="anchor" aria-label="anchor" href="#boxplot"><i class="fas fa-link"></i></a>
 </h4>
 <p>A boxplot provides a graphical representation of the central tendency and spread of a dataset, depicting the median, quartiles, and potential outliers. Boxplots are useful for identifying skewness and outliers in the data (Tukey, 1977). We’ll use the <code>anime</code> dataset to explore how scores are distributed across different types of anime.</p>
-<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">anime</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">type</span>, y <span class="op">=</span> <span class="va">score</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#ff00ff"</span>, color <span class="op">=</span> <span class="st">"#770077"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Boxplot of Anime Scores by Type"</span>,</span>
@@ -1045,12 +1049,12 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <div id="scatter-plot" class="section level4 unnumbered">
 <h4>Scatter Plot<a class="anchor" aria-label="anchor" href="#scatter-plot"><i class="fas fa-link"></i></a>
 </h4>
-<p>A scatter plot utilizes Cartesian coordinates to display values of two variables, one plotted along the x-axis and the other plotted along the y-axis. It is commonly used to observe and show relationships between two numeric variables (Cleveland, 1994). In this example, we are using the <code>richmondway</code> dataset.</p>
+<p>Scatter plots are particularly adept at demonstrating the relationship between two quantitative variables. By plotting data points on a two-dimensional graph, they allow for the observation of patterns or correlations within the data. A scatter plot utilizes Cartesian coordinates to display values of two variables, one plotted along the x-axis and the other plotted along the y-axis. It is commonly used to observe and show relationships between two numeric variables (Cleveland, 1994). In this example, we are using the <code>richmondway</code> dataset.</p>
 <div id="convert-seasons-to-factor" class="section level5 unnumbered">
 <h5>Convert Seasons to Factor<a class="anchor" aria-label="anchor" href="#convert-seasons-to-factor"><i class="fas fa-link"></i></a>
 </h5>
 <p>It’s common practice to convert categorical variables to factors when plotting in ggplot2.</p>
-<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">richmondway</span> <span class="op">&lt;-</span> <span class="va">richmondway</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Season <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">Season</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -1058,7 +1062,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <h5>Create Scatter Plot<a class="anchor" aria-label="anchor" href="#create-scatter-plot"><i class="fas fa-link"></i></a>
 </h5>
 <p>We then proceed to create the scatter plot.</p>
-<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">richmondway</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">F_count_total</span>, y <span class="op">=</span> <span class="va">F_count_RK</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">Season</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
@@ -1066,6 +1070,36 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>       x <span class="op">=</span> <span class="st">"Total F-ck Count"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"F-ck Count"</span><span class="op">)</span></span></code></pre></div>
 <div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-86-1.png" width="672"></div>
+</div>
+</div>
+<div id="connected-scatter-plot" class="section level4 unnumbered">
+<h4>Connected Scatter Plot<a class="anchor" aria-label="anchor" href="#connected-scatter-plot"><i class="fas fa-link"></i></a>
+</h4>
+<p>A connected scatter plot combines elements of both scatter and line plots to visualize the relationship between two variables while emphasizing the sequence or progression of data points. Unlike a traditional scatter plot that only displays individual data points, a connected scatter plot links these points with lines, highlighting the order or trend of the data. This method is particularly useful when tracking the progression of two variables in relation to each other over time or categories, and it can reveal patterns that might not be evident in a standard scatter plot. A line plot, on the other hand, typically focuses on showing a trend or change in a single variable over time or categories and is more straightforward in depicting time series data. Line plots are invaluable in data visualization for their ability to illustrate trends and changes over time. The connection of data points with a line makes it straightforward to track progressions or declines within the dataset.</p>
+<p>In the following example, we will use the <code>richmondway</code> dataset to create a connected scatter plot. The aim is to plot the average <code>F_count_total</code> for each season, showing how this average changes from one season to the next.</p>
+<div id="average-f_count_total-by-season" class="section level5 unnumbered">
+<h5>Average F_count_total by Season<a class="anchor" aria-label="anchor" href="#average-f_count_total-by-season"><i class="fas fa-link"></i></a>
+</h5>
+<p>First, we need to compute the average <code>F_count_total</code> for each season. This will ensure that each season is represented by a single data point in the plot.</p>
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">richmondway_avg</span> <span class="op">&lt;-</span> <span class="va">richmondway</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">Season</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>Avg_F_count <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">F_count_total</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="create-connected-scatter-plot" class="section level5 unnumbered">
+<h5>Create Connected Scatter Plot<a class="anchor" aria-label="anchor" href="#create-connected-scatter-plot"><i class="fas fa-link"></i></a>
+</h5>
+<p>Now, we create the connected scatter plot using ggplot2. This plot will show the average <code>F_count_total</code> for each season and connect these averages to illustrate the trend over the seasons.</p>
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">richmondway_avg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Season</span>, y <span class="op">=</span> <span class="va">Avg_F_count</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>color <span class="op">=</span> <span class="va">Season</span><span class="op">)</span>, size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Average F-ck Count Across Seasons"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Season"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Average Total F-ck Count"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-88-1.png" width="672"></div>
+<p>In this connected scatter plot, each point represents the average total count of a particular term (in this case, “F-ck Count”) for a season. The lines connecting these points demonstrate the progression or trend of this average over the seasons, providing a clear visualization of how the average count changes from one season to the next. The use of different colors for each season can further aid in distinguishing the data points, enhancing the overall understanding of the trends displayed.</p>
 </div>
 </div>
 <div id="heatmap" class="section level4 unnumbered">
@@ -1084,7 +1118,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 ## attached, e.g. melt.list, you can prepend the namespace like
 ## reshape2::melt(correlation_matrix). In the next version, this warning will
 ## become an error.</code></pre>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-87-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-89-1.png" width="672"></div>
 </div>
 <div id="bubble-plot" class="section level4 unnumbered">
 <h4>Bubble Plot<a class="anchor" aria-label="anchor" href="#bubble-plot"><i class="fas fa-link"></i></a>
@@ -1110,7 +1144,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Bubble Plot of Playtime, Metascore, Price, and Ownership"</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"Median Playtime"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Metascore"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-89-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-91-1.png" width="672"></div>
 </div>
 </div>
 </div>
@@ -1121,7 +1155,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <div id="bar-plot" class="section level4 unnumbered">
 <h4>Bar Plot<a class="anchor" aria-label="anchor" href="#bar-plot"><i class="fas fa-link"></i></a>
 </h4>
-<p>Bar plots represent categorical data with rectangular bars where the lengths are proportional to the counts or values they represent. Bar plots can be oriented horizontally or vertically and are useful for comparing quantities across categories (Wickham, 2016).</p>
+<p>Bar plots represent categorical data with rectangular bars where the lengths are proportional to the counts or values they represent. Bar plots can be oriented horizontally or vertically and are useful for comparing quantities across categories (Wickham, 2016). Bar plots are preferred over line plots when the goal is to compare discrete categories or distinct groups. The segmented nature of bar plots makes them ideal for highlighting differences between items without implying a continuous sequence.</p>
 <div id="identify-top-anime-producers" class="section level5 unnumbered">
 <h5>Identify Top Anime Producers<a class="anchor" aria-label="anchor" href="#identify-top-anime-producers"><i class="fas fa-link"></i></a>
 </h5>
@@ -1171,7 +1205,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Bar Plot of Average Score by Producer"</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"Producers"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Average Score"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-93-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-95-1.png" width="672"></div>
 </div>
 </div>
 <div id="lollipop-plot" class="section level4 unnumbered">
@@ -1243,7 +1277,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Lollipop Plot of Average TV Show Share by Genre"</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"TV Show Genre"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">"Average Share"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-98-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-100-1.png" width="672"></div>
 </div>
 </div>
 </div>
@@ -1265,7 +1299,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">1</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span><span class="op">(</span><span class="st">"y"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Pie Chart of Roy Kent's F-ck Count by Season"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-99-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-101-1.png" width="672"></div>
 </div>
 </div>
 <div id="grouped-stacked-barplot" class="section level4 unnumbered">
@@ -1291,7 +1325,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Television Shows: Average Rating and Share by Genre"</span>, y<span class="op">=</span><span class="st">"Value"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>angle <span class="op">=</span> <span class="fl">45</span>, hjust <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-101-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-103-1.png" width="672"></div>
 </div>
 <div id="create-stacked-barplot" class="section level5 unnumbered">
 <h5>Create Stacked Barplot<a class="anchor" aria-label="anchor" href="#create-stacked-barplot"><i class="fas fa-link"></i></a>
@@ -1301,7 +1335,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">television_grouped</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">genres</span>, y <span class="op">=</span> <span class="va">value</span>, fill <span class="op">=</span> <span class="va">metric</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, position <span class="op">=</span> <span class="st">"stack"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Television Shows: Average Rating and Share by Genre"</span>, y<span class="op">=</span><span class="st">"Value"</span><span class="op">)</span> </span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-102-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-104-1.png" width="672"></div>
 </div>
 </div>
 <div id="treemap" class="section level4 unnumbered">
@@ -1318,7 +1352,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <span>        index <span class="op">=</span> <span class="st">"original_language"</span>, </span>
 <span>        vSize <span class="op">=</span> <span class="st">"vote_count"</span>, </span>
 <span>        title<span class="op">=</span><span class="st">"Horror Movies: Vote Count by Language"</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-103-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-105-1.png" width="672"></div>
 </div>
 </div>
 </div>
@@ -1364,7 +1398,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <div class="sourceCode" id="cb179"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">tv_genres_bar</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/theme_wsj.html">theme_wsj</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-107-1.png" width="672"></div>
+<div class="inline-figure"><img src="bookdown-demo_files/figure-html/unnamed-chunk-109-1.png" width="672"></div>
 </div>
 <div id="saving-plots-in-r-markdown" class="section level3 unnumbered">
 <h3>Saving Plots in R Markdown<a class="anchor" aria-label="anchor" href="#saving-plots-in-r-markdown"><i class="fas fa-link"></i></a>
@@ -1500,7 +1534,7 @@ ggplot(data = data_frame, aes(x = variable1, y = variable2)) + geom_point()</a><
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-11-12.</p>
+    <p>"<strong>Introduction to Communication and Media Research with R</strong>" was written by Alex P. Leith, PhD. It was last built on 2023-11-27.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

@@ -1,3 +1,4 @@
+tab:unnamed-chunk-129
 introduction
 research-ethics-1
 history
@@ -7,6 +8,7 @@ current-ethical-challenges-in-social-science-research
 institutional-review-board
 references
 research-papers-1
+what-are-research-papers
 find
 read
 write
@@ -134,5 +136,24 @@ data-analysis
 introduction-7
 descriptive-analysis-1
 inferential-analysis-1
+presenting-your-findings
+section-1-writing-a-paper-in-apa-7th-format
+introduction-to-apa-7th-format
+general-format
+citing-sources
+writing-style-and-grammar
+tables-and-figures
+common-mistakes-and-tips
+section-2-creating-a-presentation-deck
+basics-of-a-good-presentation-deck
+structure-and-content
+design-and-aesthetics
+technical-aspects
+delivery-tips
+section-3-less-formal-methods-of-presenting-research
+blogs-and-online-articles
+social-media-platforms
+community-outreach-and-public-talks
+podcasts-and-webinars
 appendix
 assignments
