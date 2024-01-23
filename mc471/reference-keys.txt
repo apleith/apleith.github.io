@@ -1,0 +1,15 @@
+introduction-to-social-media-types
+fundamentals-of-social-media-platforms
+social-media-metrics-and-kpis
+studying-successful-social-media-campaign-examples
+data-collection-tools
+introduction-to-r-for-social-media-data
+data-storage-and-management
+sentiment-analysis-basics
+content-analysis-techniques
+inferential-analysis
+introduction-to-canva-for-social-media-campaigns
+setting-smart-goals-for-social-media-campaigns
+swot-analysis-in-social-media-planning
+developing-effective-social-media-campaign-timelines
+finalizing-and-presenting-the-social-media-campaign-pitch

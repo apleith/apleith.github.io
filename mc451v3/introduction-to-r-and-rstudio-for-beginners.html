@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Introduction to R and RStudio for Beginners | Quantitative Research in Mass Communications</title>
+<meta name="author" content="AP Leith">
+<meta name="description" content="This chapter will serve as an introductory guide to R and RStudio, focusing on the fundamentals of R programming and the effective use of RStudio’s features. It aims to equip students with the...">
+<meta name="generator" content="bookdown 0.36 with bs4_book()">
+<meta property="og:title" content="Introduction to R and RStudio for Beginners | Quantitative Research in Mass Communications">
+<meta property="og:type" content="book">
+<meta property="og:description" content="This chapter will serve as an introductory guide to R and RStudio, focusing on the fundamentals of R programming and the effective use of RStudio’s features. It aims to equip students with the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Introduction to R and RStudio for Beginners | Quantitative Research in Mass Communications">
+<meta name="twitter:description" content="This chapter will serve as an introductory guide to R and RStudio, focusing on the fundamentals of R programming and the effective use of RStudio’s features. It aims to equip students with the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.0/transition.js"></script><script src="libs/bs3compat-0.6.0/tabs.js"></script><script src="libs/bs3compat-0.6.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="A Practical Guide Using R and RStudio">Quantitative Research in Mass Communications</a>:
+        <small class="text-muted">A Practical Guide Using R and RStudio</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface</a></li>
+<li><a class="" href="introduction-to-mass-communication-research-and-ethics.html">Introduction to Mass Communication Research and Ethics</a></li>
+<li><a class="" href="navigating-the-irb-certification-and-proposal-process.html">Navigating the IRB Certification and Proposal Process</a></li>
+<li><a class="" href="developing-research-interests.html">Developing Research Interests</a></li>
+<li><a class="" href="conducting-literature-reviews.html">Conducting Literature Reviews</a></li>
+<li><a class="" href="selecting-and-adapting-research-scales.html">Selecting and Adapting Research Scales</a></li>
+<li><a class="" href="formulating-research-questions-and-hypotheses.html">Formulating Research Questions and Hypotheses</a></li>
+<li><a class="" href="designing-quantitative-research-studies.html">Designing Quantitative Research Studies</a></li>
+<li><a class="active" href="introduction-to-r-and-rstudio-for-beginners.html">Introduction to R and RStudio for Beginners</a></li>
+<li><a class="" href="data-management-in-r.html">Data Management in R</a></li>
+<li><a class="" href="data-analysis-in-r.html">Data Analysis in R</a></li>
+<li><a class="" href="data-visualization-in-r.html">Data Visualization in R</a></li>
+<li><a class="" href="engaging-public-audiences-with-research.html">Engaging Public Audiences with Research</a></li>
+<li><a class="" href="writing-for-a-public-audience.html">Writing for a Public Audience</a></li>
+<li><a class="" href="presenting-research-findings.html">Presenting Research Findings</a></li>
+<li><a class="" href="conclusion.html">Conclusion</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/rstudio/bookdown-demo">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="introduction-to-r-and-rstudio-for-beginners" class="section level1 unnumbered">
+<h1>Introduction to R and RStudio for Beginners<a class="anchor" aria-label="anchor" href="#introduction-to-r-and-rstudio-for-beginners"><i class="fas fa-link"></i></a>
+</h1>
+<p>This chapter will serve as an introductory guide to R and RStudio, focusing on the fundamentals of R programming and the effective use of RStudio’s features. It aims to equip students with the necessary skills to begin exploring data analysis in R, laying the foundation for more advanced topics covered in later chapters of the textbook.</p>
+<div id="basics-of-r-programming" class="section level2 unnumbered">
+<h2>Basics of R Programming<a class="anchor" aria-label="anchor" href="#basics-of-r-programming"><i class="fas fa-link"></i></a>
+</h2>
+<div id="syntax-variables-and-data-types" class="section level3 unnumbered">
+<h3>Syntax, Variables, and Data Types<a class="anchor" aria-label="anchor" href="#syntax-variables-and-data-types"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Introduction to the syntax of R, focusing on its structure and the rules for writing code. This includes discussions on R’s case sensitivity, assignment operators, and comment usage.</p></li>
+<li><p>Explanation of variables in R, including how to create, assign, and manipulate them. Coverage of different data types in R such as numeric, character, logical, and factors, and how to identify and convert between these types.</p></li>
+<li><p>Illustration through examples, showing how basic operations can be performed with different data types.</p></li>
+</ul>
+</div>
+<div id="basic-operations-and-functions" class="section level3 unnumbered">
+<h3>Basic Operations and Functions<a class="anchor" aria-label="anchor" href="#basic-operations-and-functions"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Overview of basic arithmetic operations in R, such as addition, subtraction, multiplication, and division, including their use in data analysis.</p></li>
+<li><p>Introduction to built-in functions in R for common tasks like statistical calculations, string manipulation, and date-time operations.</p></li>
+<li><p>Guidance on how to write simple user-defined functions to automate repetitive tasks, enhancing the efficiency of data analysis.</p></li>
+</ul>
+</div>
+</div>
+<div id="navigating-rstudio" class="section level2 unnumbered">
+<h2>Navigating RStudio<a class="anchor" aria-label="anchor" href="#navigating-rstudio"><i class="fas fa-link"></i></a>
+</h2>
+<div id="interface-layout-and-features" class="section level3 unnumbered">
+<h3>Interface Layout and Features<a class="anchor" aria-label="anchor" href="#interface-layout-and-features"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Detailed walkthrough of the RStudio interface, including the script editor, console, environment, and history pane. Explanation of how each pane is used in the context of programming and data analysis.</p></li>
+<li><p>Description of additional features such as the Viewer pane for web content and visualizations, and the Plots pane for graphical displays.</p></li>
+<li><p>Tips on customizing the RStudio interface to enhance user experience and workflow, such as setting global options, themes, and pane layout.</p></li>
+</ul>
+</div>
+<div id="managing-files-and-projects" class="section level3 unnumbered">
+<h3>Managing Files and Projects<a class="anchor" aria-label="anchor" href="#managing-files-and-projects"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>Instruction on creating, opening, and saving R scripts and projects. Explanation of the benefits of using projects in RStudio, such as keeping all files and settings related to a project in one place.</p></li>
+<li><p>Guidance on file management within RStudio, including organizing scripts, data files, and outputs.</p></li>
+<li><p>Best practices for maintaining a clean and organized working directory, emphasizing the importance of reproducibility and efficiency in research.</p></li>
+</ul>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="designing-quantitative-research-studies.html">Designing Quantitative Research Studies</a></div>
+<div class="next"><a href="data-management-in-r.html">Data Management in R</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introduction-to-r-and-rstudio-for-beginners">Introduction to R and RStudio for Beginners</a></li>
+<li>
+<a class="nav-link" href="#basics-of-r-programming">Basics of R Programming</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#syntax-variables-and-data-types">Syntax, Variables, and Data Types</a></li>
+<li><a class="nav-link" href="#basic-operations-and-functions">Basic Operations and Functions</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#navigating-rstudio">Navigating RStudio</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#interface-layout-and-features">Interface Layout and Features</a></li>
+<li><a class="nav-link" href="#managing-files-and-projects">Managing Files and Projects</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/rstudio/bookdown-demo/blob/master/08-intro_R.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/rstudio/bookdown-demo/edit/master/08-intro_R.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Quantitative Research in Mass Communications</strong>: A Practical Guide Using R and RStudio" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-01-18.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

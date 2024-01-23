@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 10 Inferential Analysis | Social Media Analytics</title>
+<meta name="author" content="AP Leith">
+<meta name="description" content="Regression Analysis  Introduction to Regression Analysis: This section would start by defining regression analysis, a statistical method used to model the relationship between a dependent variable...">
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
+<meta property="og:title" content="Chapter 10 Inferential Analysis | Social Media Analytics">
+<meta property="og:type" content="book">
+<meta property="og:description" content="Regression Analysis  Introduction to Regression Analysis: This section would start by defining regression analysis, a statistical method used to model the relationship between a dependent variable...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 10 Inferential Analysis | Social Media Analytics">
+<meta name="twitter:description" content="Regression Analysis  Introduction to Regression Analysis: This section would start by defining regression analysis, a statistical method used to model the relationship between a dependent variable...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="An R Guide for Media Researchers">Social Media Analytics</a>:
+        <small class="text-muted">An R Guide for Media Researchers</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface</a></li>
+<li><a class="" href="introduction-to-social-media-types.html"><span class="header-section-number">1</span> Introduction to Social Media Types</a></li>
+<li><a class="" href="fundamentals-of-social-media-platforms.html"><span class="header-section-number">2</span> Fundamentals of Social Media Platforms</a></li>
+<li><a class="" href="social-media-metrics-and-kpis.html"><span class="header-section-number">3</span> Social Media Metrics and KPIs</a></li>
+<li><a class="" href="studying-successful-social-media-campaign-examples.html"><span class="header-section-number">4</span> Studying Successful Social Media Campaign Examples</a></li>
+<li><a class="" href="data-collection-tools.html"><span class="header-section-number">5</span> Data Collection Tools</a></li>
+<li><a class="" href="introduction-to-r-for-social-media-data.html"><span class="header-section-number">6</span> Introduction to R for Social Media Data</a></li>
+<li><a class="" href="data-storage-and-management.html"><span class="header-section-number">7</span> Data Storage and Management</a></li>
+<li><a class="" href="sentiment-analysis-basics.html"><span class="header-section-number">8</span> Sentiment Analysis Basics</a></li>
+<li><a class="" href="content-analysis-techniques.html"><span class="header-section-number">9</span> Content Analysis Techniques</a></li>
+<li><a class="active" href="inferential-analysis.html"><span class="header-section-number">10</span> Inferential Analysis</a></li>
+<li><a class="" href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to CANVA for Social Media Campaigns</a></li>
+<li><a class="" href="setting-smart-goals-for-social-media-campaigns.html"><span class="header-section-number">12</span> Setting SMART Goals for Social Media Campaigns</a></li>
+<li><a class="" href="swot-analysis-in-social-media-planning.html"><span class="header-section-number">13</span> SWOT Analysis in Social Media Planning</a></li>
+<li><a class="" href="developing-effective-social-media-campaign-timelines.html"><span class="header-section-number">14</span> Developing Effective Social Media Campaign Timelines</a></li>
+<li><a class="" href="finalizing-and-presenting-the-social-media-campaign-pitch.html"><span class="header-section-number">15</span> Finalizing and Presenting the Social Media Campaign Pitch</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="inferential-analysis" class="section level1" number="10">
+<h1>
+<span class="header-section-number">10</span> Inferential Analysis<a class="anchor" aria-label="anchor" href="#inferential-analysis"><i class="fas fa-link"></i></a>
+</h1>
+<div id="regression-analysis" class="section level2 unnumbered">
+<h2>Regression Analysis<a class="anchor" aria-label="anchor" href="#regression-analysis"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>
+<strong>Introduction to Regression Analysis</strong>: This section would start by defining regression analysis, a statistical method used to model the relationship between a dependent variable and one or more independent variables. The relevance of regression analysis in the context of social media data would be highlighted, such as understanding how different factors influence user engagement or content popularity.</li>
+<li>
+<strong>Types of Regression Models</strong>: Detailed discussion on various types of regression models applicable in social media contexts, including linear regression, logistic regression, and multiple regression. Each model type would be explained with its specific use cases, such as using logistic regression for binary outcomes like likes/dislikes.</li>
+<li>
+<strong>Implementation in Social Media Data</strong>: Step-by-step guide on how to implement regression analysis on social media data, including data preparation, model selection, fitting the model, and interpreting the results. Real-world examples, like predicting the number of shares based on post characteristics, would be provided for clarity.</li>
+<li>
+<strong>Assumptions and Limitations</strong>: Addressing the assumptions underlying regression models and discussing the limitations and potential pitfalls when applying these models to social media data, like issues of multicollinearity or overfitting.</li>
+</ul>
+</div>
+<div id="t-test" class="section level2 unnumbered">
+<h2>t-Test<a class="anchor" aria-label="anchor" href="#t-test"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>
+<strong>Understanding t-Tests</strong>: Introducing the t-test as a statistical hypothesis test used to compare the means of two groups. The section would explain the importance of t-tests in social media analytics, such as comparing user engagement before and after a specific campaign.</li>
+<li>
+<strong>Types of t-Tests</strong>: Explaining different types of t-tests including independent samples t-test and paired samples t-test, and when to use each type in the context of social media data analysis.</li>
+<li>
+<strong>Conducting t-Tests on Social Media Data</strong>: A practical guide on performing t-tests on social media data, including setting up the hypothesis, checking for assumptions (like normality and homogeneity of variance), performing the test, and interpreting the results.</li>
+<li>
+<strong>Examples and Case Studies</strong>: Illustrative examples and case studies where t-tests have been used to make informed decisions in social media strategy, such as evaluating the effectiveness of different types of post content.</li>
+</ul>
+</div>
+<div id="anova-analysis-of-variance" class="section level2 unnumbered">
+<h2>ANOVA (Analysis of Variance)<a class="anchor" aria-label="anchor" href="#anova-analysis-of-variance"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>
+<strong>Basics of ANOVA</strong>: This section would explain ANOVA as a technique used to compare means across more than two groups or conditions. The applicability of ANOVA in social media analytics, like comparing engagement across multiple social media platforms, would be emphasized.</li>
+<li>
+<strong>One-way and Two-way ANOVA</strong>: Discussion on different types of ANOVA, mainly one-way ANOVA for one independent variable and two-way ANOVA for two independent variables. Each type’s application in social media contexts would be covered.</li>
+<li>
+<strong>Implementing ANOVA in Social Media Data Analysis</strong>: Guidance on how to conduct ANOVA, including checking assumptions, performing the test using software like R or Python, and interpreting the results. Practical examples could include analyzing the impact of different posting times on user engagement.</li>
+<li>
+<strong>Post Hoc Analysis</strong>: Introducing the concept of post hoc analysis in ANOVA when significant differences are found, to determine which specific groups differ from each other.</li>
+</ul>
+</div>
+<div id="chi-square-tests" class="section level2 unnumbered">
+<h2>Chi-Square Tests<a class="anchor" aria-label="anchor" href="#chi-square-tests"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>
+<strong>Introduction to Chi-Square Tests</strong>: Defining chi-square tests and explaining their purpose in testing the association between two categorical variables. The section would cover the significance of chi-square tests in analyzing social media data, such as examining the relationship between user demographics and content preferences.</li>
+<li>
+<strong>Conducting Chi-Square Tests</strong>: Detailed instructions on how to perform chi-square tests on social media data, including setting up the hypothesis, constructing contingency tables, performing the test, and interpreting the results.</li>
+<li>
+<strong>Assumptions and Considerations</strong>: Discussing the key assumptions behind chi-square tests, such as the expectation of frequency distribution, and how to deal with potential issues like small expected frequencies.</li>
+<li>
+<strong>Real-World Applications</strong>: Providing examples of how chi-square tests have been used in social media research, like studying the association between types of social media platforms and specific user behaviors or preferences.</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="content-analysis-techniques.html"><span class="header-section-number">9</span> Content Analysis Techniques</a></div>
+<div class="next"><a href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to CANVA for Social Media Campaigns</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#inferential-analysis"><span class="header-section-number">10</span> Inferential Analysis</a></li>
+<li><a class="nav-link" href="#regression-analysis">Regression Analysis</a></li>
+<li><a class="nav-link" href="#t-test">t-Test</a></li>
+<li><a class="nav-link" href="#anova-analysis-of-variance">ANOVA (Analysis of Variance)</a></li>
+<li><a class="nav-link" href="#chi-square-tests">Chi-Square Tests</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-01-18.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
