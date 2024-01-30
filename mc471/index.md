@@ -3,7 +3,7 @@ title: "Social Media Analytics"
 subtitle: "An R Guide for Media Researchers"
 author:
   - AP Leith^[Southern Illinois University Edwardsville, aleith@siue.edu]
-date: "2024-01-23"
+date: "2024-01-30"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
