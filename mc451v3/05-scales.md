@@ -10,15 +10,15 @@ This chapter aims to provide a comprehensive understanding of the use and adapta
 
 **Likert Scales for Attitude Measurement**: The Likert scale is extensively used for gauging attitudes and opinions in social media research. It typically presents respondents with a statement and asks them to express their level of agreement or disagreement on a five or seven-point scale, ranging from "strongly disagree" to "strongly agree." This format is particularly useful for measuring public opinion on various media topics, including reactions to social media posts, user sentiments about trending topics, or attitudes towards digital campaigns. The Likert scale's simplicity and versatility make it a fundamental tool in social media analytics, enabling researchers to quantify subjective data like opinions and attitudes.
 
-![Facebook Intensity Measure (Ellison, Steinfield, & Lampe, 2007)](images/likert.png)
+![Facebook Intensity Measure (Ellison, Steinfield, & Lampe, 2007)](images/likert.png){width="100%"}
 
 **Semantic Differential Scales for Media Message Connotations**: Semantic differential scales are utilized to assess the connotations associated with media messages, which is particularly relevant in the analysis of social media content. This scale asks respondents to rate a media message using a series of bipolar adjectives, such as "good-bad," "positive-negative," or "useful-useless." In social media research, this scale can be employed to understand how users perceive the tone, sentiment, or general disposition of posts and messages. For instance, it can be used to evaluate public perception of a brand's social media presence or to analyze the emotional tone of user-generated content.
 
-![Electronic Propinquity Scale (Walther & Bazarova, 2008)](images/propinquity.png)
+![Electronic Propinquity Scale (Walther & Bazarova, 2008)](images/propinquity.png){width="100%"}
 
 **Engagement Scales for Media Usage**: Engagement scales are crucial in social media analytics for measuring how audiences interact with various platforms. These scales are designed to assess different dimensions of media usage and engagement, including the frequency and duration of use, the intensity of engagement, and the emotional connection users have with the content. In a social media context, such scales can help quantify user engagement with specific posts, profiles, or campaigns. They can provide insights into the effectiveness of social media strategies, user involvement levels, and the impact of social media content on audience behavior.
 
-![Student Engagement Scale (Mazer, 2012)](images/engagement.png)
+![Student Engagement Scale (Mazer, 2012)](images/engagement.png){width="100%"}
 
 Each of these scales offers unique advantages for social media research. The Likert scale's straightforward format is excellent for survey-based social media research, while the semantic differential scale provides nuanced insights into user perceptions. Engagement scales, on the other hand, are vital for understanding user interaction patterns on social media platforms. The selection and adaptation of these scales depend on the specific research objectives, the nature of the social media content being analyzed, and the characteristics of the target audience.
 
