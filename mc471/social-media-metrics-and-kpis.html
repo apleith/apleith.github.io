@@ -48,7 +48,7 @@
 <li><a class="" href="introduction-to-social-media-types.html"><span class="header-section-number">1</span> Introduction to Social Media Types</a></li>
 <li><a class="" href="fundamentals-of-social-media-platforms.html"><span class="header-section-number">2</span> Fundamentals of Social Media Platforms</a></li>
 <li><a class="active" href="social-media-metrics-and-kpis.html"><span class="header-section-number">3</span> Social Media Metrics and KPIs</a></li>
-<li><a class="" href="studying-successful-social-media-campaign-examples.html"><span class="header-section-number">4</span> Studying Successful Social Media Campaign Examples</a></li>
+<li><a class="" href="studying-successful-social-media-campaigns.html"><span class="header-section-number">4</span> Studying Successful Social Media Campaigns</a></li>
 <li><a class="" href="data-collection-tools.html"><span class="header-section-number">5</span> Data Collection Tools</a></li>
 <li><a class="" href="introduction-to-r-for-social-media-data.html"><span class="header-section-number">6</span> Introduction to R for Social Media Data</a></li>
 <li><a class="" href="data-storage-and-management.html"><span class="header-section-number">7</span> Data Storage and Management</a></li>
@@ -123,6 +123,203 @@
 <h4>Platform-Specific KPIs<a class="anchor" aria-label="anchor" href="#platform-specific-kpis"><i class="fas fa-link"></i></a>
 </h4>
 <p>The selection of KPIs should be tailored to the specific characteristics and user engagement patterns of each platform. For example, on Facebook, ‘Shares’ are a significant metric, indicating not only engagement but also the extent to which content resonates with users to the point of sharing it with their own networks. Similarly, Twitter’s ‘Retweets’ and ‘Mentions’ are crucial KPIs, reflecting the spread and conversation around a piece of content. On Instagram, ‘Likes’ and ‘Story Views’ are key metrics, the former being a quick measure of content approval and the latter providing insight into the engagement with more temporary, day-to-day content. YouTube, with its focus on video content, places importance on ‘Watch Time’ – the total duration for which viewers have watched a video – and subscriber growth, both indicative of the content’s ability to attract and retain viewers over time.</p>
+<<<<<<< HEAD
+=======
+<p><strong><em>Twitch Chat Data</em></strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="18%">
+<col width="60%">
+<col width="20%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Variable</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example</strong></td>
+</tr>
+<tr class="even">
+<td>id</td>
+<td>Unique number given to each message.</td>
+<td>2573365</td>
+</tr>
+<tr class="odd">
+<td>channel</td>
+<td>Name of channel in which message was sent.</td>
+<td>#lilypichu</td>
+</tr>
+<tr class="even">
+<td>sender</td>
+<td>User who sent the message.</td>
+<td>hunterlucian10</td>
+</tr>
+<tr class="odd">
+<td>message</td>
+<td>Text of the message.</td>
+<td>cmonBruh why</td>
+</tr>
+<tr class="even">
+<td>date</td>
+<td>Date and time of chat message in Unix Timestamp</td>
+<td>1542607107593</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Note.</em> Pulled from the Twitch stream of Lilypichu on Nov 19, 2018.</p>
+<p><strong><em>Twitch Stream Data</em></strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="18%">
+<col width="60%">
+<col width="19%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Variable</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example</strong></td>
+</tr>
+<tr class="even">
+<td>id</td>
+<td>Unique number given to each data pull.</td>
+<td>214439</td>
+</tr>
+<tr class="odd">
+<td>channel</td>
+<td>Name of channel.</td>
+<td>lilypichu</td>
+</tr>
+<tr class="even">
+<td>title</td>
+<td>User who sent the message.</td>
+<td>hello</td>
+</tr>
+<tr class="odd">
+<td>game</td>
+<td>Text of the message.</td>
+<td>Just Chatting</td>
+</tr>
+<tr class="even">
+<td>viewers</td>
+<td>Date and time of chat message in Unix Timestamp</td>
+<td>3607</td>
+</tr>
+<tr class="odd">
+<td>date</td>
+<td>Date and time of data pull in Unix Timestamp</td>
+<td>1542754203847</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Note.</em> Pulled from the Twitch stream of Lilypichu on Nov 19, 2018.</p>
+<p><strong>Twitter Data</strong></p>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="14%">
+<col width="50%">
+<col width="34%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Variable</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Example</strong></td>
+</tr>
+<tr class="even">
+<td>tweet_id</td>
+<td>Unique numerical identifier for tweet.</td>
+<td>1494166530250010000</td>
+</tr>
+<tr class="odd">
+<td>user_username</td>
+<td>Twitter username of tweeter.</td>
+<td>RubberNinja</td>
+</tr>
+<tr class="even">
+<td>text</td>
+<td>Text of tweet.</td>
+<td>@VRChat This is so cool!</td>
+</tr>
+<tr class="odd">
+<td>in_reply_to_user_id</td>
+<td>Numerical identifier of user who posted the tweet to which this is was a reply.</td>
+<td>2850482629</td>
+</tr>
+<tr class="even">
+<td>lang</td>
+<td>Language of tweet (abbreviated)</td>
+<td>en</td>
+</tr>
+<tr class="odd">
+<td>created_at</td>
+<td>Time tweet was posted (UTC)</td>
+<td>2022-02-17T04:27:15.000Z</td>
+</tr>
+<tr class="even">
+<td>author_id</td>
+<td>Unique numerical ID of tweeter.</td>
+<td>21076522</td>
+</tr>
+<tr class="odd">
+<td>conversation_id</td>
+<td>Unique numerical identifier of initial tweet in chain of tweets.</td>
+<td>1494152498617240000</td>
+</tr>
+<tr class="even">
+<td>user_location</td>
+<td>Stated location of tweeter.</td>
+<td>Los Angeles, CA</td>
+</tr>
+<tr class="odd">
+<td>user_name</td>
+<td>Publicly displayed name of tweet poster.</td>
+<td>RubberRoss</td>
+</tr>
+<tr class="even">
+<td>user_description</td>
+<td>Public description of tweeter.</td>
+<td>My name is Ross O’Donovan, I draw and animate.<br><a href="https://t.co/05k3slkeDB" class="uri">https://t.co/05k3slkeDB</a> | <a href="https://t.co/EQro7JqnCD" class="uri">https://t.co/EQro7JqnCD</a>
+</td>
+</tr>
+<tr class="odd">
+<td>user_verified</td>
+<td>Poster’s verification status (Logical)</td>
+<td>FALSE</td>
+</tr>
+<tr class="even">
+<td>retweet_count</td>
+<td>Number of retweets on this tweet.</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>like_count</td>
+<td>Number of likes on this tweet.</td>
+<td>70</td>
+</tr>
+<tr class="even">
+<td>quote_count</td>
+<td>Number of quote tweets on this tweet.</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>user_tweet_count</td>
+<td>Number of tweets posted by tweeter.</td>
+<td>31010</td>
+</tr>
+<tr class="even">
+<td>user_followers_count</td>
+<td>Number of followers of tweeter.</td>
+<td>689996</td>
+</tr>
+<tr class="odd">
+<td>user_following_count</td>
+<td>Number of users that the tweeter follows.</td>
+<td>3803</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Note.</em> Not all available data is listed.</p>
+>>>>>>> a8ec25aef6a81c93d9a26f2e42ad10948b77364f
 </div>
 <div id="understanding-platform-dynamics" class="section level4 unnumbered">
 <h4>Understanding Platform Dynamics<a class="anchor" aria-label="anchor" href="#understanding-platform-dynamics"><i class="fas fa-link"></i></a>
@@ -253,56 +450,81 @@
 <div id="interpreting-metrics-for-strategic-insights" class="section level2 unnumbered">
 <h2>Interpreting Metrics for Strategic Insights<a class="anchor" aria-label="anchor" href="#interpreting-metrics-for-strategic-insights"><i class="fas fa-link"></i></a>
 </h2>
-<p>The ability to interpret and leverage social media metrics for strategic insights is a critical skill in today’s digital landscape. This section of the textbook explores how raw data from Key Performance Indicators (KPIs) can be transformed into actionable insights that align with business objectives. It includes methodologies for analyzing data, case studies for practical understanding, and emphasizes the need for continuous monitoring and adjustment of strategies based on metric analysis.</p>
+</div>
+<div id="interpreting-metrics-for-strategic-insights-1" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Interpreting Metrics for Strategic Insights<a class="anchor" aria-label="anchor" href="#interpreting-metrics-for-strategic-insights-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the constantly evolving digital landscape, the ability to effectively interpret and utilize social media metrics for strategic insights is indispensable. Social media platforms generate a vast amount of raw data, but the real value lies in transforming this data into actionable insights that can guide business strategies and decisions. This crucial aspect of social media analytics involves not only understanding what the data represents but also how it can be applied to meet business objectives. This section delves into the methodologies for analyzing social media metrics, supplemented with case studies for practical application, and highlights the importance of continuous monitoring and adaptation of strategies based on these insights.</p>
+<p>Firstly, interpreting metrics requires a deep understanding of what each metric represents and its relevance to specific business goals. For example, a high number of likes or shares may indicate content popularity, but it’s essential to analyze further to understand the implications for brand awareness or customer engagement. Engagement rates, click-through rates, and conversion rates are often more telling metrics, providing deeper insights into audience behavior and the effectiveness of content strategies.</p>
+<p>The analysis of these metrics should be methodical and aligned with the business’s overall objectives. For instance, if the goal is to increase brand awareness, analyzing reach and impressions will be more relevant. If the aim is to drive sales, then conversion rates and click-through rates will be key metrics to focus on. This targeted analysis helps in making informed decisions about content strategy, marketing campaigns, and audience engagement tactics.</p>
+<p>Case studies serve as valuable tools for understanding the practical application of these metrics. They provide real-world examples of how businesses have successfully leveraged social media metrics to achieve their objectives, or how a misinterpretation of these metrics led to less than favorable outcomes. Learning from these case studies, both successes and failures, can provide critical insights and guide strategy formulation.</p>
+<p>The dynamic nature of social media means that continuous monitoring and adjustment of strategies are essential. Social media trends, platform algorithms, and audience preferences can change rapidly. Regular analysis of KPIs and other metrics allows businesses to stay agile, making necessary adjustments to their strategies in real-time. This might involve shifting focus between different platforms, altering content types, or modifying engagement tactics based on the latest data.</p>
+<p>Interpreting social media metrics for strategic insights is a multifaceted process that involves understanding each metric’s significance, aligning them with business goals, learning from practical examples, and continually adapting strategies based on ongoing analysis. This approach ensures that businesses can not only track the performance of their social media efforts but also gain valuable insights that drive growth and improvement in their digital marketing strategies.</p>
 <div id="translating-metrics-into-actionable-insights" class="section level3 unnumbered">
 <h3>Translating Metrics into Actionable Insights<a class="anchor" aria-label="anchor" href="#translating-metrics-into-actionable-insights"><i class="fas fa-link"></i></a>
 </h3>
-<ul>
-<li>
-<strong>Methodologies for Data Analysis</strong>: Outlining methods for analyzing social media data, such as trend analysis, comparative analysis, and correlation studies. This includes understanding what each metric signifies and how it correlates with user behavior and campaign performance.</li>
-<li>
-<strong>Pattern Recognition in Metrics</strong>: Discussing techniques to identify patterns within social media metrics that can signal opportunities or issues. This could involve recognizing shifts in engagement patterns, identifying the best-performing content types, or noticing changes in audience demographics.</li>
-<li>
-<strong>Turning Data into Strategy</strong>: Offering insights on how to use these data-driven insights to inform content strategy, audience targeting, and overall social media planning.</li>
-</ul>
+<p>In the realm of social media analytics, the ability to translate metrics into actionable insights is crucial for refining strategies and achieving desired outcomes. This process involves a comprehensive analysis of data, recognition of patterns, and the application of these insights to enhance social media planning and execution. This section explores the methodologies for data analysis, techniques for pattern recognition, and ways to turn data into effective strategy.</p>
+<div id="methodologies-for-data-analysis" class="section level4 unnumbered">
+<h4>Methodologies for Data Analysis<a class="anchor" aria-label="anchor" href="#methodologies-for-data-analysis"><i class="fas fa-link"></i></a>
+</h4>
+<p>Analyzing social media data requires a robust understanding of various analytical methodologies that can uncover meaningful insights from metrics. Trend analysis is a fundamental technique that involves examining data over time to identify consistent patterns or anomalies. For example, a steady increase in engagement rates might indicate growing audience interest or the effectiveness of a particular content strategy. Comparative analysis is another critical method, allowing for the comparison of different data sets, such as engagement rates across different platforms or time periods. This analysis helps in understanding what strategies work best and where there might be room for improvement. Correlation studies involve examining the relationship between different variables, for instance, how changes in posting frequency might correlate with engagement rates. Understanding these relationships helps in identifying what factors most significantly impact campaign performance and user behavior.</p>
+</div>
+<div id="pattern-recognition-in-metrics" class="section level4 unnumbered">
+<h4>Pattern Recognition in Metrics<a class="anchor" aria-label="anchor" href="#pattern-recognition-in-metrics"><i class="fas fa-link"></i></a>
+</h4>
+<p>Recognizing patterns within social media metrics is key to identifying both opportunities and potential issues. This involves a detailed examination of metrics to detect shifts in user engagement, content performance, and audience demographics. For instance, a sudden spike in engagement on specific types of posts can reveal emerging content preferences of the audience. Similarly, changes in audience demographics, such as a shift in the age or geographical location of the majority of followers, can indicate evolving audience dynamics and help in tailoring content accordingly. Recognizing these patterns enables social media analysts to anticipate trends, adapt strategies, and address any emerging issues proactively.</p>
+</div>
+<div id="turning-data-into-strategy" class="section level4 unnumbered">
+<h4>Turning Data into Strategy<a class="anchor" aria-label="anchor" href="#turning-data-into-strategy"><i class="fas fa-link"></i></a>
+</h4>
+<p>The ultimate goal of analyzing social media metrics is to turn these insights into an effective strategy. Data-driven insights can significantly inform content strategy, helping determine what type of content resonates most with the audience, the ideal posting schedule, and the most effective content formats. Audience targeting can also be refined based on demographic insights and user behavior patterns, ensuring that content reaches and engages the most relevant audience. Overall social media planning benefits from these insights, as they guide decision-making in content creation, platform selection, and engagement tactics. By integrating these insights into the planning process, social media strategies can become more focused, responsive, and effective in achieving their objectives.</p>
+<p>Translating metrics into actionable insights involves a comprehensive analysis of social media data, recognition of important patterns, and the application of these insights to refine and enhance social media strategies. This process is crucial for navigating the dynamic landscape of social media and for ensuring that social media efforts are strategically aligned and capable of achieving desired results.</p>
+</div>
 </div>
 <div id="aligning-metrics-with-business-objectives" class="section level3 unnumbered">
 <h3>Aligning Metrics with Business Objectives<a class="anchor" aria-label="anchor" href="#aligning-metrics-with-business-objectives"><i class="fas fa-link"></i></a>
 </h3>
-<ul>
-<li>
-<strong>Importance of Alignment</strong>: Emphasizing the necessity of aligning social media metrics with overarching business or campaign objectives. This section would explore how metrics should inform and reflect business goals, whether it’s brand awareness, lead generation, customer engagement, or sales.</li>
-<li>
-<strong>Adjusting Strategies Based on Metrics</strong>: Providing guidelines on how to adjust social media strategies based on metric analysis. This includes refining content strategies, targeting efforts, and engagement tactics to improve metric performance.</li>
-</ul>
+<p>In the strategic practice of social media analytics, aligning metrics with business objectives is pivotal for ensuring that social media efforts contribute effectively to overarching goals. This section emphasizes the importance of this alignment and offers guidance on adjusting strategies based on metric analysis to optimize performance.</p>
+<div id="importance-of-alignment" class="section level4 unnumbered">
+<h4>Importance of Alignment<a class="anchor" aria-label="anchor" href="#importance-of-alignment"><i class="fas fa-link"></i></a>
+</h4>
+<p>The alignment of social media metrics with business or campaign objectives is critical for the success of any digital marketing effort. Social media metrics should not be viewed in isolation but rather as indicators that inform and reflect the broader business goals. For instance, if the objective is to enhance brand awareness, metrics like reach, impressions, and follower growth rate are particularly relevant as they provide insights into the brand’s visibility and recognition. For objectives such as lead generation, metrics like click-through rates and conversion rates become more crucial, as they directly relate to the effectiveness of social media in generating potential customer leads. Similarly, for goals centered around customer engagement or sales, metrics like engagement rates and direct inquiries or sales through social media channels are key indicators of success. This alignment ensures that every aspect of a social media strategy is geared towards and measured against the specific goals it aims to achieve.</p>
 </div>
-<div id="case-studies-and-examples" class="section level3 unnumbered">
-<h3>Case Studies and Examples<a class="anchor" aria-label="anchor" href="#case-studies-and-examples"><i class="fas fa-link"></i></a>
-</h3>
-<ul>
-<li>
-<strong>Real-Life Applications</strong>: Incorporating case studies and examples where businesses or individuals have effectively used social media metrics to refine their strategies and achieve objectives. These could include examples from different industries and of varying scales.</li>
-<li>
-<strong>Lessons Learned</strong>: Analyzing these case studies to extract key lessons and best practices in metric interpretation and strategy refinement.</li>
-</ul>
+<div id="adjusting-strategies-based-on-metrics" class="section level4 unnumbered">
+<h4>Adjusting Strategies Based on Metrics<a class="anchor" aria-label="anchor" href="#adjusting-strategies-based-on-metrics"><i class="fas fa-link"></i></a>
+</h4>
+<p>Analyzing social media metrics offers valuable insights that can inform the adjustment and refinement of strategies. Based on metric performance, content strategies may need to be refined. For example, if video content consistently shows higher engagement rates, the strategy might shift to include more video content. If certain types of posts are seen to drive higher conversion rates, they can be prioritized in content planning. Targeting efforts might also be adjusted based on insights into audience demographics and behaviors derived from social media metrics. If data shows that a particular demographic is more engaged or more likely to convert, targeting strategies can be honed to focus more on that segment. Engagement tactics, such as the timing of posts, frequency, and types of interactions, can also be optimized based on metrics. For example, if engagement peaks at specific times, posting schedules can be adjusted accordingly.</p>
+<p>The alignment of social media metrics with business objectives is essential for ensuring that social media activities are focused and effective. Regular analysis of these metrics allows for strategic adjustments and optimizations, ensuring that the social media strategy remains aligned with and conducive to achieving the desired business outcomes. This ongoing process of alignment and adjustment is a critical component of successful social media analytics and strategy.</p>
+</div>
 </div>
 <div id="continuous-monitoring-and-adjustment" class="section level3 unnumbered">
 <h3>Continuous Monitoring and Adjustment<a class="anchor" aria-label="anchor" href="#continuous-monitoring-and-adjustment"><i class="fas fa-link"></i></a>
 </h3>
-<ul>
-<li>
-<strong>The Need for Ongoing Analysis</strong>: Stressing the importance of not just a one-time analysis, but continuous monitoring of social media metrics to keep strategies relevant and effective.</li>
-<li>
-<strong>Recommendations for Regular Reporting</strong>: Suggestions on how to set up regular reporting structures, such as weekly or monthly performance reviews, to consistently monitor and analyze KPIs.</li>
-<li>
-<strong>Strategic Pivoting Based on Insights</strong>: Discussing how to remain agile and ready to pivot strategies based on ongoing insights. This could involve reallocating resources to more effective channels, experimenting with new content types, or adjusting targeting criteria.</li>
-</ul>
+<p>In the fast-paced and ever-evolving world of social media, continuous monitoring and strategic adjustment based on analytics are essential for maintaining the relevance and effectiveness of social media strategies. This section underscores the necessity of ongoing analysis, provides recommendations for setting up regular reporting structures, and discusses the importance of strategic pivoting based on insights gleaned from social media metrics.</p>
+<div id="the-need-for-ongoing-analysis" class="section level4 unnumbered">
+<h4>The Need for Ongoing Analysis<a class="anchor" aria-label="anchor" href="#the-need-for-ongoing-analysis"><i class="fas fa-link"></i></a>
+</h4>
+<p>Continuous monitoring of social media metrics is crucial, as the digital landscape and user behaviors are constantly changing. Relying solely on one-time analysis can lead to outdated strategies that fail to resonate with the current audience. Ongoing analysis allows for the identification of trends, shifts in audience preferences, and emerging opportunities or challenges. By consistently tracking metrics such as engagement rates, reach, follower growth, and conversion rates, businesses can gain a real-time understanding of their social media performance. This continuous monitoring enables timely responses to changes in the social media environment, ensuring that strategies remain aligned with current user behaviors and platform algorithms.</p>
+</div>
+<div id="recommendations-for-regular-reporting" class="section level4 unnumbered">
+<h4>Recommendations for Regular Reporting<a class="anchor" aria-label="anchor" href="#recommendations-for-regular-reporting"><i class="fas fa-link"></i></a>
+</h4>
+<p>To effectively implement continuous monitoring, it is recommended to establish regular reporting structures. These can take the form of weekly or monthly performance reviews, depending on the scale and dynamics of the social media activities. Regular reporting should encompass a comprehensive analysis of key metrics, comparisons against previous periods, and benchmarking against industry standards or competitors. Utilizing dashboards and analytical tools can simplify the process, providing clear and accessible insights into performance trends. These reports should not only present data but also offer actionable insights and recommendations for strategy adjustments. Regular reporting ensures that stakeholders are kept informed and that strategic decisions are data-driven.</p>
+</div>
+<div id="strategic-pivoting-based-on-insights" class="section level4 unnumbered">
+<h4>Strategic Pivoting Based on Insights<a class="anchor" aria-label="anchor" href="#strategic-pivoting-based-on-insights"><i class="fas fa-link"></i></a>
+</h4>
+<p>The ability to pivot strategies based on insights from ongoing analysis is a critical aspect of agile social media management. Insights gained from continuous monitoring should inform strategic decisions, allowing businesses to adapt to the changing digital landscape swiftly. This might involve reallocating resources to more effective channels if certain platforms are underperforming, experimenting with new types of content that are resonating with the audience, or adjusting targeting criteria to better reach the desired demographic. Strategic pivoting based on real-time data allows businesses to capitalize on emerging trends, mitigate risks, and optimize the ROI of their social media efforts.</p>
+<p>Continuous monitoring and the ability to adjust strategies based on ongoing insights are fundamental for the success of social media initiatives. By embracing a dynamic approach to social media analytics, businesses can ensure that their strategies are responsive, relevant, and effective in achieving their desired social media objectives.</p>
+
+</div>
 </div>
 </div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="fundamentals-of-social-media-platforms.html"><span class="header-section-number">2</span> Fundamentals of Social Media Platforms</a></div>
-<div class="next"><a href="studying-successful-social-media-campaign-examples.html"><span class="header-section-number">4</span> Studying Successful Social Media Campaign Examples</a></div>
+<div class="next"><a href="studying-successful-social-media-campaigns.html"><span class="header-section-number">4</span> Studying Successful Social Media Campaigns</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
@@ -323,11 +545,11 @@
 <li><a class="nav-link" href="#reach-and-influence-analysis">Reach and Influence Analysis</a></li>
 </ul>
 </li>
+<li><a class="nav-link" href="#interpreting-metrics-for-strategic-insights">Interpreting Metrics for Strategic Insights</a></li>
 <li>
-<a class="nav-link" href="#interpreting-metrics-for-strategic-insights">Interpreting Metrics for Strategic Insights</a><ul class="nav navbar-nav">
+<a class="nav-link" href="#interpreting-metrics-for-strategic-insights-1"><span class="header-section-number">3.1</span> Interpreting Metrics for Strategic Insights</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#translating-metrics-into-actionable-insights">Translating Metrics into Actionable Insights</a></li>
 <li><a class="nav-link" href="#aligning-metrics-with-business-objectives">Aligning Metrics with Business Objectives</a></li>
-<li><a class="nav-link" href="#case-studies-and-examples">Case Studies and Examples</a></li>
 <li><a class="nav-link" href="#continuous-monitoring-and-adjustment">Continuous Monitoring and Adjustment</a></li>
 </ul>
 </li>
@@ -347,7 +569,11 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
+<<<<<<< HEAD
     <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-01-23.</p>
+=======
+    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-01-30.</p>
+>>>>>>> a8ec25aef6a81c93d9a26f2e42ad10948b77364f
   </div>
 
   <div class="col-12 col-md-6 mt-3">
