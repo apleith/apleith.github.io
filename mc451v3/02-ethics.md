@@ -1,4 +1,4 @@
-# Navigating the IRB Certification and Proposal Process {.unnumbered}
+# Navigating the IRB Certification and Proposal Process
 
 This chapter aims to provide students and novice researchers with a clear understanding of the IRB certification and proposal process, emphasizing the critical role of ethics in research involving human subjects. It will guide them through the practical steps of obtaining certification and preparing a robust and ethically sound research proposal, which is fundamental for conducting credible and responsible mass communication research.
 

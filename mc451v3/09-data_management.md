@@ -1,4 +1,4 @@
-# Data Management in R {.unnumbered}
+# Data Management in R
 
 This chapter will provide essential knowledge and skills for effective data management in R, a critical component of quantitative research in mass communications. It will cover the entire process from importing data into RStudio to preparing the dataset for analysis, ensuring students are well-equipped to handle real-world data challenges in their research projects.
 

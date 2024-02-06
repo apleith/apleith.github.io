@@ -1,4 +1,4 @@
-# Data Analysis in R {.unnumbered}
+# Data Analysis in R
 
 This chapter will provide a thorough understanding of both descriptive and inferential statistics in R, tailored to the needs of mass communication research. It will equip students with the skills to perform and interpret basic statistical analyses, a crucial component of quantitative research. Through practical examples and step-by-step instructions, students will learn how to apply these techniques to real-world data, gaining insights into the patterns and relationships inherent in media and communication studies.
 

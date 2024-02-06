@@ -1,4 +1,4 @@
-# Conclusion {.unnumbered}
+# Conclusion
 
 This concluding chapter will serve to reinforce the key learnings from the book, while also emphasizing the dynamic and evolving nature of mass communications research. It aims to inspire students and researchers to continue learning, engaging, and contributing to this vibrant and ever-changing field.
 

@@ -1,4 +1,4 @@
-# Introduction to Mass Communication Research and Ethics {.unnumbered}
+# Introduction to Mass Communication Research and Ethics
 
 This chapter will set the foundation for understanding mass communication research within a historical, methodological, and ethical context, establishing the groundwork for the deeper exploration of quantitative methods and practical applications in subsequent chapters.
 

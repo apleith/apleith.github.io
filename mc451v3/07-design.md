@@ -1,4 +1,4 @@
-# Designing Quantitative Research Studies {.unnumbered}
+# Designing Quantitative Research Studies
 
 This chapter will provide a comprehensive guide to designing quantitative research studies in mass communications. It will cover key research designs, their applications, and considerations for selecting the most appropriate method. Additionally, the chapter will delve into the practical aspects of research planning, including sampling methods and data collection techniques, ensuring students have a solid foundation for conducting rigorous and relevant research.
 

@@ -1,4 +1,4 @@
-# Data Visualization in R {.unnumbered}
+# Data Visualization in R
 
 This chapter will empower students to use R for creating compelling, accurate, and informative visualizations. It will provide them with both the theoretical understanding and practical skills needed to effectively communicate quantitative research findings in mass communications. Through hands-on examples and best practices, students will learn how to translate complex data into clear, engaging visual stories.
 

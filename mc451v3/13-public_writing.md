@@ -1,4 +1,4 @@
-# Writing for a Public Audience {.unnumbered}
+# Writing for a Public Audience
 
 This chapter will provide students with practical skills and techniques for effectively communicating complex research findings to a public audience through blogging. It will cover not just the mechanics of writing engaging and accessible content, but also the art of storytelling and multimedia integration, crucial for captivating and educating a diverse audience.
 

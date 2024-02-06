@@ -1,4 +1,4 @@
-# Engaging Public Audiences with Research {.unnumbered}
+# Engaging Public Audiences with Research
 
 This chapter will equip students with the skills and knowledge to effectively communicate their research findings to public audiences, particularly through social media. It will cover strategic communication planning, audience analysis, message crafting, and the practical use of social media platforms, ensuring that students can engage with diverse audiences and maximize the impact of their research.
 

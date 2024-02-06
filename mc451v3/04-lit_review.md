@@ -1,4 +1,4 @@
-# Conducting Literature Reviews {.unnumbered}
+# Conducting Literature Reviews
 
 ## What are Research Papers and Academic Books? {.unnumbered}
 

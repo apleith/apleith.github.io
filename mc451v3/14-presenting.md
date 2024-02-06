@@ -1,4 +1,4 @@
-# Presenting Research Findings {.unnumbered}
+# Presenting Research Findings
 
 This chapter will equip students with the skills to effectively present their research findings in a clear, engaging, and professional manner. It will cover the entire process of presentation design, from structuring the narrative to creating visually appealing slides and integrating multimedia elements. The chapter will emphasize the importance of audience engagement and the effective communication of complex ideas, essential skills for any researcher in the field of mass communications.
 

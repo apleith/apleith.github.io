@@ -1,4 +1,4 @@
-# Introduction to R and RStudio for Beginners {.unnumbered}
+# Introduction to R and RStudio for Beginners
 
 This chapter will serve as an introductory guide to R and RStudio, focusing on the fundamentals of R programming and the effective use of RStudio's features. It aims to equip students with the necessary skills to begin exploring data analysis in R, laying the foundation for more advanced topics covered in later chapters of the textbook.
 

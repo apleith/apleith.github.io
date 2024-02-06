@@ -1,4 +1,4 @@
-# Developing Research Interests {.unnumbered}
+# Developing Research Interests
 
 ## Identifying Personal Research Interests {.unnumbered}
 

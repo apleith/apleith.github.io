@@ -3,7 +3,7 @@ title: "Quantitative Research in Mass Communications"
 subtitle: "A Practical Guide Using R and RStudio"
 author:
   - AP Leith^[Southern Illinois University Edwardsville, aleith@siue.edu]
-date: "2024-02-01"
+date: "2024-02-06"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
