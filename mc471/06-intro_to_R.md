@@ -1,4 +1,4 @@
-# Introduction to R for Social Media Data
+# Introduction to R and RStudio
 
 ## Basics of R Programming Language {.unnumbered}
 - **Overview of R**: This section would begin with an introductory overview of R, a programming language and environment commonly used for statistical computing and graphics. It would explain why R is particularly well-suited for data analysis, including its advantages in handling large datasets and complex statistical operations, which are often required in social media data analysis.

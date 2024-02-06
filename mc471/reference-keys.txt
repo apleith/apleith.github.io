@@ -12,7 +12,7 @@ elements-of-a-successful-campaign
 the-role-of-audience-interaction
 challenges-and-overcoming-obstacles
 data-collection-tools
-introduction-to-r-for-social-media-data
+introduction-to-r-and-rstudio
 data-storage-and-management
 sentiment-analysis-basics
 content-analysis-techniques
