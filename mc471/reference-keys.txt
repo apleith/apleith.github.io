@@ -13,6 +13,12 @@ the-role-of-audience-interaction
 challenges-and-overcoming-obstacles
 data-collection-tools
 introduction-to-r-and-rstudio
+installing-r-and-rstudio
+navigating-the-rstudio-interface
+basic-operations-in-r
+data-structures-in-r
+installing-and-loading-libraries
+creating-and-managing-projects
 data-storage-and-management
 sentiment-analysis-basics
 content-analysis-techniques

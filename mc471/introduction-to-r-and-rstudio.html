@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Introduction to R and RStudio | Social Media Analytics</title>
 <meta name="author" content="AP Leith">
-<meta name="description" content="Basics of R Programming Language  Overview of R: This section would begin with an introductory overview of R, a programming language and environment commonly used for statistical computing and...">
+<meta name="description" content="6.1 Installing R and RStudio  Installing R The installation of R serves as a pre-requisite to utilizing RStudio, as the latter is essentially an IDE built on top of the R environment. Below are...">
 <meta name="generator" content="bookdown 0.37 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Introduction to R and RStudio | Social Media Analytics">
 <meta property="og:type" content="book">
-<meta property="og:description" content="Basics of R Programming Language  Overview of R: This section would begin with an introductory overview of R, a programming language and environment commonly used for statistical computing and...">
+<meta property="og:description" content="6.1 Installing R and RStudio  Installing R The installation of R serves as a pre-requisite to utilizing RStudio, as the latter is essentially an IDE built on top of the R environment. Below are...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Introduction to R and RStudio | Social Media Analytics">
-<meta name="twitter:description" content="Basics of R Programming Language  Overview of R: This section would begin with an introductory overview of R, a programming language and environment commonly used for statistical computing and...">
+<meta name="twitter:description" content="6.1 Installing R and RStudio  Installing R The installation of R serves as a pre-requisite to utilizing RStudio, as the latter is essentially an IDE built on top of the R environment. Below are...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -71,53 +71,694 @@
 <h1>
 <span class="header-section-number">6</span> Introduction to R and RStudio<a class="anchor" aria-label="anchor" href="#introduction-to-r-and-rstudio"><i class="fas fa-link"></i></a>
 </h1>
-<div id="basics-of-r-programming-language" class="section level2 unnumbered">
-<h2>Basics of R Programming Language<a class="anchor" aria-label="anchor" href="#basics-of-r-programming-language"><i class="fas fa-link"></i></a>
+<div id="installing-r-and-rstudio" class="section level2" number="6.1">
+<h2>
+<span class="header-section-number">6.1</span> Installing R and RStudio<a class="anchor" aria-label="anchor" href="#installing-r-and-rstudio"><i class="fas fa-link"></i></a>
 </h2>
+<div id="installing-r" class="section level3 unnumbered">
+<h3>Installing R<a class="anchor" aria-label="anchor" href="#installing-r"><i class="fas fa-link"></i></a>
+</h3>
+<p>The installation of R serves as a pre-requisite to utilizing RStudio, as the latter is essentially an IDE built on top of the R environment. Below are detailed steps for installing R on Windows and macOS systems.</p>
+<div id="windows" class="section level4 unnumbered">
+<h4>Windows<a class="anchor" aria-label="anchor" href="#windows"><i class="fas fa-link"></i></a>
+</h4>
+<div id="system-requirements" class="section level5 unnumbered">
+<h5>System Requirements<a class="anchor" aria-label="anchor" href="#system-requirements"><i class="fas fa-link"></i></a>
+</h5>
 <ul>
-<li>
-<strong>Overview of R</strong>: This section would begin with an introductory overview of R, a programming language and environment commonly used for statistical computing and graphics. It would explain why R is particularly well-suited for data analysis, including its advantages in handling large datasets and complex statistical operations, which are often required in social media data analysis.</li>
-<li>
-<strong>Installation and Setup</strong>: Guidance on how to install and set up the R environment, including RStudio, which is a popular integrated development environment for R. This would include basic configuration settings and how to navigate the interface.</li>
-<li>
-<strong>Fundamental R Concepts</strong>: An introduction to the basic concepts in R programming, such as variables, data types, data structures (like vectors, matrices, data frames, lists), and control structures (like loops and conditionals). This would be tailored to those who might be new to programming or coming from different programming backgrounds.</li>
-<li>
-<strong>Data Import and Export</strong>: Instructions on how to import social media data into R from various sources (like CSV files, databases, or directly from social media platforms through APIs) and how to export data for reporting or further analysis.</li>
-<li>
-<strong>Basic Data Manipulation and Cleaning</strong>: Covering essential techniques for data manipulation and cleaning in R, which is a crucial step in preparing social media data for analysis. This would include handling missing values, filtering and selecting data, and transforming data formats.</li>
+<li>Operating System: Windows 7 or higher</li>
+<li>Disk Space: Approximately 150MB</li>
 </ul>
 </div>
-<div id="r-packages-for-social-media-data-analysis" class="section level2 unnumbered">
-<h2>R Packages for Social Media Data Analysis<a class="anchor" aria-label="anchor" href="#r-packages-for-social-media-data-analysis"><i class="fas fa-link"></i></a>
-</h2>
+<div id="step-by-step-instructions" class="section level5 unnumbered">
+<h5>Step-by-Step Instructions<a class="anchor" aria-label="anchor" href="#step-by-step-instructions"><i class="fas fa-link"></i></a>
+</h5>
+<ol style="list-style-type: decimal">
+<li><p><strong>Visit the Comprehensive R Archive Network (CRAN) Website</strong>: Navigate to the CRAN repository at <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.</p></li>
+<li><p><strong>Select the Appropriate Version for Windows</strong>: Click on the link titled “Download R for Windows”. On the next page, click “install R for the first time” followed by “Download R x.x.x for Windows”, where x.x.x is the latest version number.</p></li>
+<li><p><strong>Run the Installer</strong>: Locate the downloaded <code>.exe</code> file (usually in the <code>Downloads</code> folder) and double-click to initiate the installation process.</p></li>
+<li><p><strong>Follow the Prompts</strong>: The installation wizard will guide you through several screens where you can select options like the install directory. Default options are generally safe to use.</p></li>
+</ol>
+<pre class="plaintext"><code>Note: Administrative rights may be required for installation. If prompted, enter the administrative password or contact your system administrator.</code></pre>
+</div>
+</div>
+<div id="macos" class="section level4 unnumbered">
+<h4>macOS<a class="anchor" aria-label="anchor" href="#macos"><i class="fas fa-link"></i></a>
+</h4>
+<div id="system-requirements-1" class="section level5 unnumbered">
+<h5>System Requirements<a class="anchor" aria-label="anchor" href="#system-requirements-1"><i class="fas fa-link"></i></a>
+</h5>
 <ul>
-<li>
-<strong>Overview of Relevant R Packages</strong>: Introducing a variety of R packages that are specifically useful for analyzing social media data. This would include packages for data collection, data manipulation, visualization, and statistical analysis.</li>
-<li>
-<strong>Package for Data Collection</strong>: Detailed information on packages like <code>twitteR</code>, <code>Rfacebook</code>, <code>instaR</code>, and others, which allow for the collection of data directly from social media platforms.</li>
-<li>
-<strong>Data Manipulation Packages</strong>: Discussion of packages such as <code>dplyr</code>, <code>tidyr</code>, and <code>data.table</code> for efficient data manipulation, which is often necessary when dealing with large and complex social media datasets.</li>
-<li>
-<strong>Visualization Packages</strong>: Introduction to visualization packages like <code>ggplot2</code> for creating insightful graphics and visualizations of social media data, which can be essential for identifying trends and patterns.</li>
-<li>
-<strong>Statistical Analysis Packages</strong>: Overview of packages like <code>caret</code>, <code>e1071</code>, and <code>randomForest</code> for more advanced statistical analyses and machine learning, which are increasingly important in social media analytics.</li>
+<li>Operating System: macOS 10.13 (High Sierra) or higher</li>
+<li>Disk Space: Approximately 200MB</li>
 </ul>
 </div>
-<div id="hands-on-exercises-getting-started-with-r" class="section level2 unnumbered">
-<h2>Hands-On Exercises: Getting Started with R<a class="anchor" aria-label="anchor" href="#hands-on-exercises-getting-started-with-r"><i class="fas fa-link"></i></a>
-</h2>
+<div id="step-by-step-instructions-1" class="section level5 unnumbered">
+<h5>Step-by-Step Instructions<a class="anchor" aria-label="anchor" href="#step-by-step-instructions-1"><i class="fas fa-link"></i></a>
+</h5>
+<ol style="list-style-type: decimal">
+<li><p><strong>Visit the CRAN Website</strong>: Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a>.</p></li>
+<li><p><strong>Select the Appropriate Version for macOS</strong>: Click on the link titled “Download R for (Mac) OS X”. Download the <code>.pkg</code> file corresponding to the latest R version.</p></li>
+<li><p><strong>Open the Package</strong>: Locate the downloaded <code>.pkg</code> file and double-click to initiate the installer.</p></li>
+<li><p><strong>Drag the R Icon</strong>: A new window will open displaying the R icon. Drag this into your <code>Applications</code> folder to complete the installation.</p></li>
+</ol>
+<pre class="plaintext"><code>Note: Administrative rights may be necessary for completing the installation on macOS as well. Ensure that you have the necessary permissions.</code></pre>
+</div>
+</div>
+</div>
+<div id="installing-rstudio" class="section level3 unnumbered">
+<h3>Installing RStudio<a class="anchor" aria-label="anchor" href="#installing-rstudio"><i class="fas fa-link"></i></a>
+</h3>
+<p>With R successfully installed, the next step is to install RStudio, which provides a more user-friendly interface for interacting with R.</p>
+<div id="general-requirements" class="section level4 unnumbered">
+<h4>General Requirements<a class="anchor" aria-label="anchor" href="#general-requirements"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li>R must be installed prior to installing RStudio</li>
+<li>Disk Space: At least 250MB</li>
+</ul>
+</div>
+<div id="step-by-step-instructions-2" class="section level4 unnumbered">
+<h4>Step-by-Step Instructions<a class="anchor" aria-label="anchor" href="#step-by-step-instructions-2"><i class="fas fa-link"></i></a>
+</h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Visit the RStudio Website</strong>: Navigate to the official RStudio website at <a href="https://rstudio.com/products/rstudio/download/" class="uri">https://rstudio.com/products/rstudio/download/</a>.</p></li>
+<li><p><strong>Download the Installer</strong>: Select the installer corresponding to your operating system—either Windows or macOS.</p></li>
+<li><p><strong>Run the Installer</strong>:</p></li>
+</ol>
 <ul>
 <li>
-<strong>Practical Exercise Set-Up</strong>: A structured approach to setting up practical exercises, ensuring readers have the necessary data and resources to start working with R. This might include sample datasets or instructions on how to access public social media data.</li>
+<strong>For Windows</strong>: Double-click the downloaded <code>.exe</code> file and follow the installation prompts.</li>
 <li>
-<strong>Basic Exercises</strong>: Simple, beginner-friendly exercises designed to help new R users get comfortable with basic operations, such as data import/export, simple data manipulations, and basic visualizations.</li>
-<li>
-<strong>Intermediate Exercises</strong>: More complex exercises that involve data manipulation, cleaning, and basic statistical analysis. This could include tasks like sentiment analysis of tweets or trend analysis in social media engagement data.</li>
-<li>
-<strong>Advanced Exercises</strong>: For more experienced users, these exercises could involve complex tasks like network analysis using social media data, predictive modeling, or text analysis using machine learning techniques.</li>
-<li>
-<strong>Project-Based Learning</strong>: A capstone project or case study where readers can apply the full range of skills they’ve learned to a real-world-like social media data analysis problem. This would reinforce learning and provide a tangible outcome demonstrating the skills acquired.</li>
+<strong>For macOS</strong>: Double-click the downloaded <code>.dmg</code> file. Drag the RStudio icon to your <code>Applications</code> folder.</li>
 </ul>
+<ol start="4" style="list-style-type: decimal">
+<li>
+<strong>Complete the Installation</strong>: Follow the installation wizard’s prompts to complete the installation. Default settings are typically sufficient for most users.</li>
+</ol>
+<pre class="plaintext"><code>Note: Just like with R, administrative rights may be necessary for the installation of RStudio. Please consult your system administrator if you encounter permission issues.</code></pre>
+<p>By completing these steps, you will have successfully installed both R and RStudio on your system, laying the foundation for your computational endeavors in mass communications and media research.</p>
+</div>
+</div>
+</div>
+<div id="navigating-the-rstudio-interface" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Navigating the RStudio Interface<a class="anchor" aria-label="anchor" href="#navigating-the-rstudio-interface"><i class="fas fa-link"></i></a>
+</h2>
+<p>Navigating RStudio’s interface effectively is crucial for conducting your projects and research tasks in an efficient manner. RStudio’s interface is designed to facilitate a variety of tasks, including data analysis, plotting, and programming. Here, we delve into the main components of this interface.</p>
+<div id="console" class="section level3 unnumbered">
+<h3>Console<a class="anchor" aria-label="anchor" href="#console"><i class="fas fa-link"></i></a>
+</h3>
+<div id="basic-overview" class="section level4 unnumbered">
+<h4>Basic Overview<a class="anchor" aria-label="anchor" href="#basic-overview"><i class="fas fa-link"></i></a>
+</h4>
+<p>The console, usually located at the bottom left of the RStudio window, is the primary area where R commands are executed interactively. When RStudio is launched, the console is also initiated, allowing you to execute R commands line by line (RStudio Team, 2020).</p>
+</div>
+<div id="how-to-use" class="section level4 unnumbered">
+<h4>How to Use<a class="anchor" aria-label="anchor" href="#how-to-use"><i class="fas fa-link"></i></a>
+</h4>
+<p>To execute a command, you simply type it into the console and press Enter. For example, if you type <code>2 + 2</code> and press Enter, the console will return <code>4</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Code in the console</span></span>
+<span><span class="fl">2</span> <span class="op">+</span> <span class="fl">2</span></span>
+<span><span class="co">#&gt; [1] 4</span></span>
+<span><span class="co">#[1] 4</span></span></code></pre></div>
+<p>The console will display error messages in red if the syntax is incorrect or if an executed command cannot be completed.</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Example of an error message</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning in sqrt(-1): NaNs produced</span></span>
+<span><span class="co">#&gt; [1] NaN</span></span>
+<span><span class="co">#[1] NaN</span></span>
+<span><span class="co">#Warning message:</span></span>
+<span><span class="co">#In sqrt(-1) : NaNs produced</span></span></code></pre></div>
+</div>
+</div>
+<div id="script-editor" class="section level3 unnumbered">
+<h3>Script Editor<a class="anchor" aria-label="anchor" href="#script-editor"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview"><i class="fas fa-link"></i></a>
+</h4>
+<p>The script editor allows you to write multiple lines of code before execution, making it easier to run complex analyses and functions. The editor supports syntax highlighting and auto-completion, facilitating code readability and reducing the likelihood of errors.</p>
+</div>
+<div id="creating-a-new-script" class="section level4 unnumbered">
+<h4>Creating a New Script<a class="anchor" aria-label="anchor" href="#creating-a-new-script"><i class="fas fa-link"></i></a>
+</h4>
+<p>You can open a new script file by navigating to <code>File &gt; New File &gt; R Script</code> from the RStudio menu.</p>
+</div>
+<div id="execution" class="section level4 unnumbered">
+<h4>Execution<a class="anchor" aria-label="anchor" href="#execution"><i class="fas fa-link"></i></a>
+</h4>
+<p>Once your script is written, you can execute it in part or in whole. Highlight the lines you want to run and press Ctrl + Enter (Windows) or Command + Enter (macOS).</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Example of code in the script editor</span></span>
+<span><span class="va">add_numbers</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Execute this function</span></span>
+<span><span class="fu">add_numbers</span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>  <span class="co"># Output should be 5</span></span>
+<span><span class="co">#&gt; [1] 5</span></span></code></pre></div>
+</div>
+</div>
+<div id="environment" class="section level3 unnumbered">
+<h3>Environment<a class="anchor" aria-label="anchor" href="#environment"><i class="fas fa-link"></i></a>
+</h3>
+<div id="what-it-displays" class="section level4 unnumbered">
+<h4>What It Displays<a class="anchor" aria-label="anchor" href="#what-it-displays"><i class="fas fa-link"></i></a>
+</h4>
+<p>The Environment tab, usually located at the top right, displays all the variables, data frames, lists, and other R objects currently loaded into memory. This provides an efficient way to keep track of the data structures you’re working with.</p>
+</div>
+<div id="removing-objects" class="section level4 unnumbered">
+<h4>Removing Objects<a class="anchor" aria-label="anchor" href="#removing-objects"><i class="fas fa-link"></i></a>
+</h4>
+<p>If the Environment gets cluttered, you can remove individual objects by clicking the ‘x’ next to the object’s name or remove all objects by clicking on the broom icon.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Example code for creating variables</span></span>
+<span><span class="va">a</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
+<span><span class="va">b</span> <span class="op">&lt;-</span> <span class="st">"text"</span></span></code></pre></div>
+<p>After running this code, <code>a</code> and <code>b</code> will appear in the Environment pane.</p>
+</div>
+</div>
+<div id="plots-packages-help-viewer" class="section level3 unnumbered">
+<h3>Plots, Packages, Help, Viewer<a class="anchor" aria-label="anchor" href="#plots-packages-help-viewer"><i class="fas fa-link"></i></a>
+</h3>
+<div id="plots" class="section level4 unnumbered">
+<h4>Plots<a class="anchor" aria-label="anchor" href="#plots"><i class="fas fa-link"></i></a>
+</h4>
+<p>The Plots tab is where any visual data representation like graphs or charts will appear. You can navigate between multiple plots using the arrow buttons.</p>
+</div>
+<div id="packages" class="section level4 unnumbered">
+<h4>Packages<a class="anchor" aria-label="anchor" href="#packages"><i class="fas fa-link"></i></a>
+</h4>
+<p>The Packages tab lists all the R packages currently installed and allows you to install new packages or update existing ones.</p>
+<p>To install a package, you can run the command <code>install.packages("package_name")</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Example code to install the 'ggplot2' package </span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span>, repos <span class="op">=</span> <span class="st">'http://cran.us.r-project.org'</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Installing package into 'C:/Users/aleith/AppData/Local/R/win-library/4.3'</span></span>
+<span><span class="co">#&gt; (as 'lib' is unspecified)</span></span>
+<span><span class="co">#&gt; package 'ggplot2' successfully unpacked and MD5 sums checked</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; The downloaded binary packages are in</span></span>
+<span><span class="co">#&gt;  C:\Users\aleith\AppData\Local\Temp\RtmpMhBkCq\downloaded_packages</span></span></code></pre></div>
+</div>
+<div id="help" class="section level4 unnumbered">
+<h4>Help<a class="anchor" aria-label="anchor" href="#help"><i class="fas fa-link"></i></a>
+</h4>
+<p>The Help tab provides access to R documentation, including details about functions and packages. You can invoke help for a specific function using the <code>?</code> command.</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Accessing Help for the 'mean' function</span></span>
+<span><span class="op">?</span><span class="va">mean</span></span>
+<span><span class="co">#&gt; starting httpd help server ... done</span></span></code></pre></div>
+</div>
+<div id="viewer" class="section level4 unnumbered">
+<h4>Viewer<a class="anchor" aria-label="anchor" href="#viewer"><i class="fas fa-link"></i></a>
+</h4>
+<p>The Viewer tab is for displaying local web content and is particularly useful for inspecting HTML widgets or web-based data visualizations.</p>
+<p>By familiarizing yourself with these primary components of the RStudio interface, you are well-equipped to undertake coding, analysis, and visualization tasks within the scope of mass communications and media studies.</p>
+</div>
+</div>
+</div>
+<div id="basic-operations-in-r" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> Basic Operations in R<a class="anchor" aria-label="anchor" href="#basic-operations-in-r"><i class="fas fa-link"></i></a>
+</h2>
+<p>Understanding the basic operations in R is vital for embarking on more complex data analysis and programming tasks. These operations include arithmetic calculations, variable assignments, and function calls.</p>
+<div id="arithmetic-operations" class="section level3 unnumbered">
+<h3>Arithmetic Operations<a class="anchor" aria-label="anchor" href="#arithmetic-operations"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-1" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>Arithmetic operations form the basis of numerical calculations in R. These operations can be conducted directly in the R console and include addition, subtraction, multiplication, division, exponentiation, and other mathematical functions (Chambers, 2008).</p>
+</div>
+<div id="common-arithmetic-operators" class="section level4 unnumbered">
+<h4>Common Arithmetic Operators<a class="anchor" aria-label="anchor" href="#common-arithmetic-operators"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li>
+<strong>Addition (<code>+</code>)</strong>: Adds two numbers.</li>
+<li>
+<strong>Subtraction (<code>-</code>)</strong>: Subtracts the right-hand operand from the left-hand operand.</li>
+<li>
+<strong>Multiplication (<code>*</code>)</strong>: Multiplies two numbers.</li>
+<li>
+<strong>Division (<code>/</code>)</strong>: Divides the left-hand operand by the right-hand operand.</li>
+<li>
+<strong>Exponentiation (<code>^</code>)</strong>: Raises the left-hand operand to the power of the right-hand operand.</li>
+<li>
+<strong>Modulus (<code>%%</code>)</strong>: Gives the remainder of the division between two numbers.</li>
+</ul>
+</div>
+<div id="examples" class="section level4 unnumbered">
+<h4>Examples<a class="anchor" aria-label="anchor" href="#examples"><i class="fas fa-link"></i></a>
+</h4>
+<p>You can execute these basic arithmetic operations directly in the R console.</p>
+<p><em>Addition</em></p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">+</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 8</span></span></code></pre></div>
+<p><em>Subtraction</em></p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">-</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<p><em>Multiplication</em></p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">*</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 15</span></span></code></pre></div>
+<p><em>Division</em></p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">/</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 1.666667</span></span></code></pre></div>
+<p><em>Exponentiation</em></p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">^</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 125</span></span></code></pre></div>
+<p><em>Modulus</em></p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+</div>
+</div>
+<div id="variables" class="section level3 unnumbered">
+<h3>Variables<a class="anchor" aria-label="anchor" href="#variables"><i class="fas fa-link"></i></a>
+</h3>
+<div id="what-are-variables" class="section level4 unnumbered">
+<h4>What Are Variables?<a class="anchor" aria-label="anchor" href="#what-are-variables"><i class="fas fa-link"></i></a>
+</h4>
+<p>Variables act as storage containers for data, including numbers, strings, vectors, and other complex data types. Variable assignment is a crucial aspect of programming and data management in R (Wickham, 2014).</p>
+</div>
+<div id="assignment-operators" class="section level4 unnumbered">
+<h4>Assignment Operators<a class="anchor" aria-label="anchor" href="#assignment-operators"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li>
+<strong>Leftward (<code>&lt;-</code>)</strong>: Assigns the value on the right to the variable on the left.</li>
+<li>
+<strong>Equal (<code>=</code>)</strong>: Can also be used for assignment, though <code>&lt;-</code> is traditionally preferred in R.</li>
+</ul>
+</div>
+<div id="examples-1" class="section level4 unnumbered">
+<h4>Examples<a class="anchor" aria-label="anchor" href="#examples-1"><i class="fas fa-link"></i></a>
+</h4>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Assigning a numerical value to a variable using &lt;-</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">20</span></span>
+<span></span>
+<span><span class="co"># Assigning a string value to a variable using =</span></span>
+<span><span class="va">text_variable</span> <span class="op">=</span> <span class="st">"Hello, World!"</span></span>
+<span></span>
+<span><span class="co"># Printing variables</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 10</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">text_variable</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "Hello, World!"</span></span></code></pre></div>
+</div>
+</div>
+<div id="functions" class="section level3 unnumbered">
+<h3>Functions<a class="anchor" aria-label="anchor" href="#functions"><i class="fas fa-link"></i></a>
+</h3>
+<div id="function-overview" class="section level4 unnumbered">
+<h4>Function Overview<a class="anchor" aria-label="anchor" href="#function-overview"><i class="fas fa-link"></i></a>
+</h4>
+<p>Functions are predefined sets of operations that perform specific tasks. Functions in R can be either built-in, such as <code><a href="https://rdrr.io/r/base/sum.html">sum()</a></code> or <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code>, or user-defined for more customized operations (Chambers, 2008).</p>
+</div>
+<div id="built-in-functions" class="section level4 unnumbered">
+<h4>Built-in Functions<a class="anchor" aria-label="anchor" href="#built-in-functions"><i class="fas fa-link"></i></a>
+</h4>
+<p>Examples of common built-in functions include: dz - <strong><code><a href="https://rdrr.io/r/base/sum.html">sum()</a></code></strong>: Calculates the sum of all the values in a numeric vector. - <strong><code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code></strong>: Calculates the arithmetic mean of a numeric vector. - <strong><code><a href="https://rdrr.io/r/base/MathFun.html">sqrt()</a></code></strong>: Calculates the square root of a number.</p>
+<p><em>Using sum function</em></p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 6</span></span></code></pre></div>
+<p><em>Using mean function</em></p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2.5</span></span></code></pre></div>
+<p><em>Using sqrt function</em></p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">16</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 4</span></span></code></pre></div>
+</div>
+<div id="user-defined-functions" class="section level4 unnumbered">
+<h4>User-Defined Functions<a class="anchor" aria-label="anchor" href="#user-defined-functions"><i class="fas fa-link"></i></a>
+</h4>
+<p>You can also create your own functions in R. These are particularly useful for tasks that you plan to repeat often.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Defining a function to calculate the square of a number</span></span>
+<span><span class="va">square_number</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">x</span> <span class="op">*</span> <span class="va">x</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Using the function</span></span>
+<span><span class="fu">square_number</span><span class="op">(</span><span class="fl">4</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 16</span></span></code></pre></div>
+<p>By understanding the basics of arithmetic operations, variable assignment, and function usage, you can lay a strong foundation for more complex statistical analyses and computational research in mass communications.</p>
+</div>
+</div>
+</div>
+<div id="data-structures-in-r" class="section level2" number="6.4">
+<h2>
+<span class="header-section-number">6.4</span> Data Structures in R<a class="anchor" aria-label="anchor" href="#data-structures-in-r"><i class="fas fa-link"></i></a>
+</h2>
+<p>Data structures are fundamental in R programming as they organize and store the data that one works with for analyses, visualizations, and other computational tasks. Understanding these structures is critical for effective manipulation of data and implementing various algorithms (Wickham &amp; Grolemund, 2017). Below are the primary data structures that R provides.</p>
+<div id="vectors" class="section level3 unnumbered">
+<h3>Vectors<a class="anchor" aria-label="anchor" href="#vectors"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-2" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-2"><i class="fas fa-link"></i></a>
+</h4>
+<p>Vectors are one-dimensional arrays used to hold elements of a single data type. This could be numeric, character, or logical data types. Vectors are often used for operations that require the application of a function to each element in the data set (Maindonald &amp; Braun, 2010).</p>
+</div>
+<div id="creating-vectors" class="section level4 unnumbered">
+<h4>Creating Vectors<a class="anchor" aria-label="anchor" href="#creating-vectors"><i class="fas fa-link"></i></a>
+</h4>
+<p>Vectors can be created using the <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> function, which combines elements into a vector.</p>
+<div id="examples-2" class="section level5 unnumbered">
+<h5>Examples<a class="anchor" aria-label="anchor" href="#examples-2"><i class="fas fa-link"></i></a>
+</h5>
+<p><em>Creating a numeric vector</em></p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># </span></span>
+<span><span class="va">numeric_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<p><em>Creating a character vector</em></p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="va">character_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span><span class="op">)</span></span></code></pre></div>
+<p><em>Creating a logical vector</em></p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">logical_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="operations-on-vectors" class="section level4 unnumbered">
+<h4>Operations on Vectors<a class="anchor" aria-label="anchor" href="#operations-on-vectors"><i class="fas fa-link"></i></a>
+</h4>
+<p>You can perform various operations on vectors like addition, subtraction, or applying a function to each element.</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Adding two vectors</span></span>
+<span><span class="va">sum_vector</span> <span class="op">&lt;-</span> <span class="va">numeric_vector</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Calculating mean of a numeric vector</span></span>
+<span><span class="va">mean_value</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">numeric_vector</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="matrices" class="section level3 unnumbered">
+<h3>Matrices<a class="anchor" aria-label="anchor" href="#matrices"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-3" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-3"><i class="fas fa-link"></i></a>
+</h4>
+<p>Matrices are two-dimensional arrays that hold elements of the same data type. They are used in various applications, including image processing, linear algebra, and statistical analyses (Ripley, 2001).</p>
+</div>
+<div id="creating-matrices" class="section level4 unnumbered">
+<h4>Creating Matrices<a class="anchor" aria-label="anchor" href="#creating-matrices"><i class="fas fa-link"></i></a>
+</h4>
+<p>Matrices can be created using the <code><a href="https://rdrr.io/r/base/matrix.html">matrix()</a></code> function.</p>
+<div id="examples-3" class="section level5 unnumbered">
+<h5>Examples<a class="anchor" aria-label="anchor" href="#examples-3"><i class="fas fa-link"></i></a>
+</h5>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Creating a numeric matrix</span></span>
+<span><span class="va">numeric_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span>, nrow<span class="op">=</span><span class="fl">2</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Creating a character matrix</span></span>
+<span><span class="va">character_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span><span class="op">)</span>, nrow<span class="op">=</span><span class="fl">2</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="operations-on-matrices" class="section level4 unnumbered">
+<h4>Operations on Matrices<a class="anchor" aria-label="anchor" href="#operations-on-matrices"><i class="fas fa-link"></i></a>
+</h4>
+<p>Various operations like matrix addition, multiplication, and transpose can be performed on matrices.</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Matrix addition</span></span>
+<span><span class="va">sum_matrix</span> <span class="op">&lt;-</span> <span class="va">numeric_matrix</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, nrow<span class="op">=</span><span class="fl">2</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="data-frames" class="section level3 unnumbered">
+<h3>Data Frames<a class="anchor" aria-label="anchor" href="#data-frames"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-4" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-4"><i class="fas fa-link"></i></a>
+</h4>
+<p>Data frames serve as the fundamental data structure for data analysis in R. They are similar to matrices but allow different types of variables in different columns, which makes them extremely versatile (Chambers, 2008).</p>
+</div>
+<div id="creating-data-frames" class="section level4 unnumbered">
+<h4>Creating Data Frames<a class="anchor" aria-label="anchor" href="#creating-data-frames"><i class="fas fa-link"></i></a>
+</h4>
+<p>Data frames can be created using the <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function.</p>
+<div id="examples-4" class="section level5 unnumbered">
+<h5>Examples<a class="anchor" aria-label="anchor" href="#examples-4"><i class="fas fa-link"></i></a>
+</h5>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Creating a data frame</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>Name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span><span class="op">)</span>, Age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">23</span>, <span class="fl">45</span><span class="op">)</span>, Gender <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"F"</span>, <span class="st">"M"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="operations-on-data-frames" class="section level4 unnumbered">
+<h4>Operations on Data Frames<a class="anchor" aria-label="anchor" href="#operations-on-data-frames"><i class="fas fa-link"></i></a>
+</h4>
+<p>Various operations like subsetting, merging, and sorting can be performed on data frames.</p>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Subsetting data frame by column</span></span>
+<span><span class="va">subset_df</span> <span class="op">&lt;-</span> <span class="va">df</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Name"</span>, <span class="st">"Age"</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
+</div>
+</div>
+<div id="lists" class="section level3 unnumbered">
+<h3>Lists<a class="anchor" aria-label="anchor" href="#lists"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-5" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-5"><i class="fas fa-link"></i></a>
+</h4>
+<p>Lists are an ordered collection of objects, which can be of different types and structures, including vectors, matrices, and even other lists (Wickham &amp; Grolemund, 2017).</p>
+</div>
+<div id="creating-lists" class="section level4 unnumbered">
+<h4>Creating Lists<a class="anchor" aria-label="anchor" href="#creating-lists"><i class="fas fa-link"></i></a>
+</h4>
+<p>Lists can be created using the <code><a href="https://rdrr.io/r/base/list.html">list()</a></code> function.</p>
+<div id="examples-5" class="section level5 unnumbered">
+<h5>Examples<a class="anchor" aria-label="anchor" href="#examples-5"><i class="fas fa-link"></i></a>
+</h5>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Creating a list</span></span>
+<span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>Name <span class="op">=</span> <span class="st">"Alice"</span>, Age <span class="op">=</span> <span class="fl">23</span>, Scores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">90</span>, <span class="fl">85</span>, <span class="fl">88</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="operations-on-lists" class="section level4 unnumbered">
+<h4>Operations on Lists<a class="anchor" aria-label="anchor" href="#operations-on-lists"><i class="fas fa-link"></i></a>
+</h4>
+<p>Lists can be modified by adding, deleting, or updating list elements.</p>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Updating a list element</span></span>
+<span><span class="va">my_list</span><span class="op">$</span><span class="va">Name</span> <span class="op">&lt;-</span> <span class="st">"Bob"</span></span>
+<span></span>
+<span><span class="co"># Adding a new list element</span></span>
+<span><span class="va">my_list</span><span class="op">$</span><span class="va">Email</span> <span class="op">&lt;-</span> <span class="st">"bob@email.com"</span></span></code></pre></div>
+<p>By understanding these primary data structures, students in Mass Communications can gain a strong foundation for more complex data analyses relevant to their field, whether it involves analyzing large sets of textual data, audience metrics, or other forms of media data.</p>
+</div>
+</div>
+</div>
+<div id="installing-and-loading-libraries" class="section level2" number="6.5">
+<h2>
+<span class="header-section-number">6.5</span> Installing and Loading Libraries<a class="anchor" aria-label="anchor" href="#installing-and-loading-libraries"><i class="fas fa-link"></i></a>
+</h2>
+<p>Libraries, or packages as they are often called, are bundles of pre-written code that provide additional functionality to the base R environment. In the realm of mass communications, these packages can extend R’s capabilities to perform tasks like text analysis, social network analysis, and even web scraping (Cranefield &amp; Yoong, 2007; Lewis, Zamith, &amp; Hermida, 2013). As a result, understanding how to install and load libraries is a fundamental skill.</p>
+<div id="installation" class="section level3 unnumbered">
+<h3>Installation<a class="anchor" aria-label="anchor" href="#installation"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-6" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-6"><i class="fas fa-link"></i></a>
+</h4>
+<p>The installation process essentially adds the package files to your R environment, making it possible for you to use the package’s built-in functions, data sets, and other utilities (Wickham &amp; Grolemund, 2017).</p>
+</div>
+<div id="installing-from-cran" class="section level4 unnumbered">
+<h4>Installing from CRAN<a class="anchor" aria-label="anchor" href="#installing-from-cran"><i class="fas fa-link"></i></a>
+</h4>
+<p>The Comprehensive R Archive Network (CRAN) serves as the primary repository for R packages. The following command installs a package from CRAN:</p>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># To install the ggplot2 package</span></span>
+<span><span class="co"># install.packages("ggplot2", repos = 'http://cran.us.r-project.org')</span></span></code></pre></div>
+</div>
+<div id="installing-from-github" class="section level4 unnumbered">
+<h4>Installing from GitHub<a class="anchor" aria-label="anchor" href="#installing-from-github"><i class="fas fa-link"></i></a>
+</h4>
+<p>Sometimes, packages may not be available on CRAN and could be hosted on other platforms like GitHub. The <code>devtools</code> package allows you to install these:</p>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># First install devtools if you haven't</span></span>
+<span><span class="co"># install.packages("devtools", repos = 'http://cran.us.r-project.org')</span></span>
+<span></span>
+<span><span class="co"># Use devtools to install a package from GitHub</span></span>
+<span><span class="co"># devtools::install_github("username/package_name")</span></span></code></pre></div>
+</div>
+<div id="dependencies" class="section level4 unnumbered">
+<h4>Dependencies<a class="anchor" aria-label="anchor" href="#dependencies"><i class="fas fa-link"></i></a>
+</h4>
+<p>Some packages depend on other packages to function correctly. Usually, dependencies are automatically installed, but you can ensure this by setting the <code>dependencies</code> argument to <code>TRUE</code>.</p>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># To install ggplot2 along with its dependencies</span></span>
+<span><span class="co"># install.packages("ggplot2", dependencies = TRUE, repos = 'http://cran.us.r-project.org')</span></span></code></pre></div>
+</div>
+</div>
+<div id="loading" class="section level3 unnumbered">
+<h3>Loading<a class="anchor" aria-label="anchor" href="#loading"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-7" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-7"><i class="fas fa-link"></i></a>
+</h4>
+<p>Once installed, a package must be loaded into the current R session to utilize its functions. This is a crucial step; otherwise, attempts to use the package’s functions will result in errors (Wickham, 2015).</p>
+</div>
+<div id="loading-a-package" class="section level4 unnumbered">
+<h4>Loading a Package<a class="anchor" aria-label="anchor" href="#loading-a-package"><i class="fas fa-link"></i></a>
+</h4>
+<p>You can load an installed package using the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function:</p>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># To load the ggplot2 package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="unloading-a-package" class="section level4 unnumbered">
+<h4>Unloading a Package<a class="anchor" aria-label="anchor" href="#unloading-a-package"><i class="fas fa-link"></i></a>
+</h4>
+<p>To unload a package, you can use the <code><a href="https://rdrr.io/r/base/detach.html">detach()</a></code> function:</p>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># To unload the ggplot2 package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/detach.html">detach</a></span><span class="op">(</span><span class="st">"package:ggplot2"</span>, unload<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div id="checking-loaded-packages" class="section level4 unnumbered">
+<h4>Checking Loaded Packages<a class="anchor" aria-label="anchor" href="#checking-loaded-packages"><i class="fas fa-link"></i></a>
+</h4>
+<p>To check which packages are currently loaded in the session, you can use the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function:</p>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># To get information about the session, including loaded packages</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt; R version 4.3.2 (2023-10-31 ucrt)</span></span>
+<span><span class="co">#&gt; Platform: x86_64-w64-mingw32/x64 (64-bit)</span></span>
+<span><span class="co">#&gt; Running under: Windows 10 x64 (build 19045)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Matrix products: default</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; locale:</span></span>
+<span><span class="co">#&gt; [1] LC_COLLATE=English_United States.utf8 </span></span>
+<span><span class="co">#&gt; [2] LC_CTYPE=English_United States.utf8   </span></span>
+<span><span class="co">#&gt; [3] LC_MONETARY=English_United States.utf8</span></span>
+<span><span class="co">#&gt; [4] LC_NUMERIC=C                          </span></span>
+<span><span class="co">#&gt; [5] LC_TIME=English_United States.utf8    </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; time zone: America/Chicago</span></span>
+<span><span class="co">#&gt; tzcode source: internal</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; attached base packages:</span></span>
+<span><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets </span></span>
+<span><span class="co">#&gt; [6] methods   base     </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
+<span><span class="co">#&gt;  [1] vctrs_0.6.4       cli_3.6.1         knitr_1.45       </span></span>
+<span><span class="co">#&gt;  [4] rlang_1.1.2       xfun_0.41         generics_0.1.3   </span></span>
+<span><span class="co">#&gt;  [7] jsonlite_1.8.7    glue_1.6.2        colorspace_2.1-0 </span></span>
+<span><span class="co">#&gt; [10] htmltools_0.5.7   sass_0.4.7        fansi_1.0.5      </span></span>
+<span><span class="co">#&gt; [13] scales_1.2.1      rmarkdown_2.25    grid_4.3.2       </span></span>
+<span><span class="co">#&gt; [16] tibble_3.2.1      munsell_0.5.0     evaluate_0.23    </span></span>
+<span><span class="co">#&gt; [19] jquerylib_0.1.4   fastmap_1.1.1     yaml_2.3.7       </span></span>
+<span><span class="co">#&gt; [22] lifecycle_1.0.3   memoise_2.0.1     bookdown_0.37    </span></span>
+<span><span class="co">#&gt; [25] compiler_4.3.2    dplyr_1.1.3       fs_1.6.3         </span></span>
+<span><span class="co">#&gt; [28] pkgconfig_2.0.3   downlit_0.4.3     rstudioapi_0.15.0</span></span>
+<span><span class="co">#&gt; [31] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0 </span></span>
+<span><span class="co">#&gt; [34] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   </span></span>
+<span><span class="co">#&gt; [37] bslib_0.5.1       tools_4.3.2       withr_2.5.2      </span></span>
+<span><span class="co">#&gt; [40] gtable_0.3.4      xml2_1.3.5        cachem_1.0.8</span></span></code></pre></div>
+<p>Understanding the installation and loading process for libraries will enable you to extend R’s native functionalities, a vital skill in today’s data-driven landscape in mass communications.</p>
+</div>
+</div>
+</div>
+<div id="creating-and-managing-projects" class="section level2" number="6.6">
+<h2>
+<span class="header-section-number">6.6</span> Creating and Managing Projects<a class="anchor" aria-label="anchor" href="#creating-and-managing-projects"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the realm of mass communications research and practice, a multitude of projects often run concurrently, whether it’s data analysis for audience segmentation, sentiment analysis for social media content, or exploratory research in emerging media technologies. Thus, the ability to efficiently manage these projects is crucial. RStudio provides an intuitive way to create and manage projects, thereby organizing your work effectively (RStudio Team, 2020).</p>
+<div id="new-projects" class="section level3 unnumbered">
+<h3>New Projects<a class="anchor" aria-label="anchor" href="#new-projects"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-8" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-8"><i class="fas fa-link"></i></a>
+</h4>
+<p>Creating a new project in RStudio essentially initializes a new workspace—a dedicated folder in which R scripts, data files, and other essential resources can be stored (Wickham, 2015).</p>
+</div>
+<div id="steps-to-create-a-new-project" class="section level4 unnumbered">
+<h4>Steps to Create a New Project<a class="anchor" aria-label="anchor" href="#steps-to-create-a-new-project"><i class="fas fa-link"></i></a>
+</h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Launch RStudio</strong>: If RStudio isn’t open, launch the application.</p></li>
+<li>
+<p><strong>Navigate to New Project</strong>:</p>
+<ul>
+<li>Go to the RStudio menu.</li>
+<li>Select <code>File</code> and then <code>New Project</code>. This will open a dialog box.</li>
+</ul>
+</li>
+<li>
+<p><strong>Select Project Type</strong>:</p>
+<ul>
+<li>You can choose to start a new directory, create a project in an existing directory, or even check out a project from a version control repository like Git.</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Options</strong>:</p>
+<ul>
+<li>Name your project.</li>
+<li>Choose the directory where it will reside.</li>
+<li>If you want version control, you can initialize a Git repository.</li>
+</ul>
+</li>
+<li><p><strong>Create Project</strong>: Once configured, click <code>Create Project</code> to initialize the new workspace.</p></li>
+</ol>
+<p>Here is a conceptual demonstration of how to initialize a new project:</p>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># This is a conceptual code snippet and won't execute</span></span>
+<span><span class="co"># Navigate to File -&gt; New Project in RStudio</span></span>
+<span><span class="co"># Choose project type and directory</span></span>
+<span><span class="co"># Name your project "My_Comm_Project"</span></span>
+<span><span class="co"># Optionally, initialize a Git repository</span></span>
+<span><span class="co"># Click "Create Project"</span></span></code></pre></div>
+</div>
+</div>
+<div id="existing-projects" class="section level3 unnumbered">
+<h3>Existing Projects<a class="anchor" aria-label="anchor" href="#existing-projects"><i class="fas fa-link"></i></a>
+</h3>
+<div id="overview-9" class="section level4 unnumbered">
+<h4>Overview<a class="anchor" aria-label="anchor" href="#overview-9"><i class="fas fa-link"></i></a>
+</h4>
+<p>Working on existing projects is equally straightforward. Each RStudio project has an associated <code>.Rproj</code> file that stores metadata and settings for that project (Wickham, 2015).</p>
+</div>
+<div id="steps-to-open-an-existing-project" class="section level4 unnumbered">
+<h4>Steps to Open an Existing Project<a class="anchor" aria-label="anchor" href="#steps-to-open-an-existing-project"><i class="fas fa-link"></i></a>
+</h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Launch RStudio</strong>: If it is not already open, launch the RStudio application.</p></li>
+<li>
+<p><strong>Navigate to Project File</strong>:</p>
+<ul>
+<li>Use your operating system’s file explorer to navigate to the folder containing the <code>.Rproj</code> file.</li>
+<li>Double-click on the <code>.Rproj</code> file to open the project in RStudio.</li>
+</ul>
+<p><em>OR</em></p>
+<ul>
+<li>Within RStudio, go to <code>File -&gt; Open Project</code> and navigate to the <code>.Rproj</code> file.</li>
+</ul>
+</li>
+</ol>
+<p>Here’s a conceptual guide to open an existing project:</p>
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># This is a conceptual code snippet and won't execute</span></span>
+<span><span class="co"># Navigate to File -&gt; Open Project in RStudio</span></span>
+<span><span class="co"># Browse to locate your .Rproj file, e.g., "My_Old_Comm_Project.Rproj"</span></span>
+<span><span class="co"># Click "Open"</span></span></code></pre></div>
+<p>Understanding how to create and manage projects in RStudio is pivotal for structured and efficient work, especially in the complex and multifaceted landscape of mass communications.</p>
+<p>Exhaustively expand the following sections with consideration for this being an upper-level undergrad textbook for communication and media students. Please include code examples when relevant. For code examples, do not require external data or sources.</p>
+
+</div>
+</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -127,9 +768,47 @@
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#introduction-to-r-and-rstudio"><span class="header-section-number">6</span> Introduction to R and RStudio</a></li>
-<li><a class="nav-link" href="#basics-of-r-programming-language">Basics of R Programming Language</a></li>
-<li><a class="nav-link" href="#r-packages-for-social-media-data-analysis">R Packages for Social Media Data Analysis</a></li>
-<li><a class="nav-link" href="#hands-on-exercises-getting-started-with-r">Hands-On Exercises: Getting Started with R</a></li>
+<li>
+<a class="nav-link" href="#installing-r-and-rstudio"><span class="header-section-number">6.1</span> Installing R and RStudio</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#installing-r">Installing R</a></li>
+<li><a class="nav-link" href="#installing-rstudio">Installing RStudio</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#navigating-the-rstudio-interface"><span class="header-section-number">6.2</span> Navigating the RStudio Interface</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#console">Console</a></li>
+<li><a class="nav-link" href="#script-editor">Script Editor</a></li>
+<li><a class="nav-link" href="#environment">Environment</a></li>
+<li><a class="nav-link" href="#plots-packages-help-viewer">Plots, Packages, Help, Viewer</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#basic-operations-in-r"><span class="header-section-number">6.3</span> Basic Operations in R</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#arithmetic-operations">Arithmetic Operations</a></li>
+<li><a class="nav-link" href="#variables">Variables</a></li>
+<li><a class="nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#data-structures-in-r"><span class="header-section-number">6.4</span> Data Structures in R</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#vectors">Vectors</a></li>
+<li><a class="nav-link" href="#matrices">Matrices</a></li>
+<li><a class="nav-link" href="#data-frames">Data Frames</a></li>
+<li><a class="nav-link" href="#lists">Lists</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#installing-and-loading-libraries"><span class="header-section-number">6.5</span> Installing and Loading Libraries</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#installation">Installation</a></li>
+<li><a class="nav-link" href="#loading">Loading</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#creating-and-managing-projects"><span class="header-section-number">6.6</span> Creating and Managing Projects</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#new-projects">New Projects</a></li>
+<li><a class="nav-link" href="#existing-projects">Existing Projects</a></li>
+</ul>
+</li>
 </ul>
 
       <div class="book-extra">
@@ -146,7 +825,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-02-06.</p>
+    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-02-15.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
