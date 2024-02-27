@@ -7,7 +7,11 @@
 <title>Chapter 6 Introduction to R and RStudio | Social Media Analytics</title>
 <meta name="author" content="AP Leith">
 <meta name="description" content="6.1 Installing R and RStudio  Installing R The installation of R serves as a pre-requisite to utilizing RStudio, as the latter is essentially an IDE built on top of the R environment. Below are...">
+<<<<<<< HEAD
 <meta name="generator" content="bookdown 0.36 with bs4_book()">
+=======
+<meta name="generator" content="bookdown 0.37 with bs4_book()">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <meta property="og:title" content="Chapter 6 Introduction to R and RStudio | Social Media Analytics">
 <meta property="og:type" content="book">
 <meta property="og:description" content="6.1 Installing R and RStudio  Installing R The installation of R serves as a pre-requisite to utilizing RStudio, as the latter is essentially an IDE built on top of the R environment. Below are...">
@@ -16,7 +20,11 @@
 <meta name="twitter:description" content="6.1 Installing R and RStudio  Installing R The installation of R serves as a pre-requisite to utilizing RStudio, as the latter is essentially an IDE built on top of the R environment. Below are...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<<<<<<< HEAD
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.0/transition.js"></script><script src="libs/bs3compat-0.6.0/tabs.js"></script><script src="libs/bs3compat-0.6.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+=======
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -52,8 +60,13 @@
 <li><a class="" href="data-collection-tools.html"><span class="header-section-number">5</span> Data Collection Tools</a></li>
 <li><a class="active" href="introduction-to-r-and-rstudio.html"><span class="header-section-number">6</span> Introduction to R and RStudio</a></li>
 <li><a class="" href="data-storage-and-management.html"><span class="header-section-number">7</span> Data Storage and Management</a></li>
+<<<<<<< HEAD
 <li><a class="" href="content-analysis-techniques.html"><span class="header-section-number">8</span> Content Analysis Techniques</a></li>
 <li><a class="" href="sentiment-analysis-basics.html"><span class="header-section-number">9</span> Sentiment Analysis Basics</a></li>
+=======
+<li><a class="" href="sentiment-analysis-basics.html"><span class="header-section-number">8</span> Sentiment Analysis Basics</a></li>
+<li><a class="" href="content-analysis-techniques.html"><span class="header-section-number">9</span> Content Analysis Techniques</a></li>
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <li><a class="" href="inferential-analysis.html"><span class="header-section-number">10</span> Inferential Analysis</a></li>
 <li><a class="" href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to CANVA for Social Media Campaigns</a></li>
 <li><a class="" href="setting-smart-goals-for-social-media-campaigns.html"><span class="header-section-number">12</span> Setting SMART Goals for Social Media Campaigns</a></li>
@@ -256,15 +269,29 @@
 <p>To install a package, you can run the command <code>install.packages("package_name")</code>.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Example code to install the 'ggplot2' package </span></span>
+<<<<<<< HEAD
 <span><span class="co">#install.packages("ggplot2")</span></span></code></pre></div>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
+=======
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span>, repos <span class="op">=</span> <span class="st">'http://cran.us.r-project.org'</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Installing package into 'C:/Users/aleith/AppData/Local/R/win-library/4.3'</span></span>
+<span><span class="co">#&gt; (as 'lib' is unspecified)</span></span>
+<span><span class="co">#&gt; package 'ggplot2' successfully unpacked and MD5 sums checked</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; The downloaded binary packages are in</span></span>
+<span><span class="co">#&gt;  C:\Users\aleith\AppData\Local\Temp\RtmpMhBkCq\downloaded_packages</span></span></code></pre></div>
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 </div>
 <div id="help" class="section level4 unnumbered">
 <h4>Help<a class="anchor" aria-label="anchor" href="#help"><i class="fas fa-link"></i></a>
 </h4>
 <p>The Help tab provides access to R documentation, including details about functions and packages. You can invoke help for a specific function using the <code>?</code> command.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Accessing Help for the 'mean' function</span></span>
 <span><span class="op">?</span><span class="va">mean</span></span>
 <span><span class="co">#&gt; starting httpd help server ... done</span></span></code></pre></div>
@@ -313,6 +340,7 @@
 </h4>
 <p>You can execute these basic arithmetic operations directly in the R console.</p>
 <p><em>Addition</em></p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fl">5</span> <span class="op">+</span> <span class="fl">3</span></span>
 <span><span class="co">#&gt; [1] 8</span></span></code></pre></div>
@@ -334,6 +362,29 @@
 <span><span class="co">#&gt; [1] 125</span></span></code></pre></div>
 <p><em>Modulus</em></p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">+</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 8</span></span></code></pre></div>
+<p><em>Subtraction</em></p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">-</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
+<p><em>Multiplication</em></p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">*</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 15</span></span></code></pre></div>
+<p><em>Division</em></p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">/</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 1.666667</span></span></code></pre></div>
+<p><em>Exponentiation</em></p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fl">5</span> <span class="op">^</span> <span class="fl">3</span></span>
+<span><span class="co">#&gt; [1] 125</span></span></code></pre></div>
+<p><em>Modulus</em></p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="fl">5</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">3</span></span>
 <span><span class="co">#&gt; [1] 2</span></span></code></pre></div>
 </div>
@@ -359,7 +410,11 @@
 <div id="examples-1" class="section level4 unnumbered">
 <h4>Examples<a class="anchor" aria-label="anchor" href="#examples-1"><i class="fas fa-link"></i></a>
 </h4>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Assigning a numerical value to a variable using &lt;-</span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
 <span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fl">20</span></span>
@@ -387,6 +442,7 @@
 </h4>
 <p>Examples of common built-in functions include: dz - <strong><code><a href="https://rdrr.io/r/base/sum.html">sum()</a></code></strong>: Calculates the sum of all the values in a numeric vector. - <strong><code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code></strong>: Calculates the arithmetic mean of a numeric vector. - <strong><code><a href="https://rdrr.io/r/base/MathFun.html">sqrt()</a></code></strong>: Calculates the square root of a number.</p>
 <p><em>Using sum function</em></p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 6</span></span></code></pre></div>
@@ -396,6 +452,17 @@
 <span><span class="co">#&gt; [1] 2.5</span></span></code></pre></div>
 <p><em>Using sqrt function</em></p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 6</span></span></code></pre></div>
+<p><em>Using mean function</em></p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 2.5</span></span></code></pre></div>
+<p><em>Using sqrt function</em></p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op">(</span><span class="fl">16</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 4</span></span></code></pre></div>
 </div>
@@ -403,7 +470,11 @@
 <h4>User-Defined Functions<a class="anchor" aria-label="anchor" href="#user-defined-functions"><i class="fas fa-link"></i></a>
 </h4>
 <p>You can also create your own functions in R. These are particularly useful for tasks that you plan to repeat often.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Defining a function to calculate the square of a number</span></span>
 <span><span class="va">square_number</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">x</span> <span class="op">*</span> <span class="va">x</span><span class="op">)</span></span>
@@ -437,6 +508,7 @@
 <h5>Examples<a class="anchor" aria-label="anchor" href="#examples-2"><i class="fas fa-link"></i></a>
 </h5>
 <p><em>Creating a numeric vector</em></p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># </span></span>
 <span><span class="va">numeric_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
@@ -446,6 +518,17 @@
 <span><span class="va">character_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span><span class="op">)</span></span></code></pre></div>
 <p><em>Creating a logical vector</em></p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># </span></span>
+<span><span class="va">numeric_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span></code></pre></div>
+<p><em>Creating a character vector</em></p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="va">character_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span><span class="op">)</span></span></code></pre></div>
+<p><em>Creating a logical vector</em></p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="va">logical_vector</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
@@ -453,7 +536,11 @@
 <h4>Operations on Vectors<a class="anchor" aria-label="anchor" href="#operations-on-vectors"><i class="fas fa-link"></i></a>
 </h4>
 <p>You can perform various operations on vectors like addition, subtraction, or applying a function to each element.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Adding two vectors</span></span>
 <span><span class="va">sum_vector</span> <span class="op">&lt;-</span> <span class="va">numeric_vector</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span></span>
 <span></span>
@@ -476,7 +563,11 @@
 <div id="examples-3" class="section level5 unnumbered">
 <h5>Examples<a class="anchor" aria-label="anchor" href="#examples-3"><i class="fas fa-link"></i></a>
 </h5>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Creating a numeric matrix</span></span>
 <span><span class="va">numeric_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span>, nrow<span class="op">=</span><span class="fl">2</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span>
 <span></span>
@@ -488,7 +579,11 @@
 <h4>Operations on Matrices<a class="anchor" aria-label="anchor" href="#operations-on-matrices"><i class="fas fa-link"></i></a>
 </h4>
 <p>Various operations like matrix addition, multiplication, and transpose can be performed on matrices.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Matrix addition</span></span>
 <span><span class="va">sum_matrix</span> <span class="op">&lt;-</span> <span class="va">numeric_matrix</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, nrow<span class="op">=</span><span class="fl">2</span>, ncol<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -508,7 +603,11 @@
 <div id="examples-4" class="section level5 unnumbered">
 <h5>Examples<a class="anchor" aria-label="anchor" href="#examples-4"><i class="fas fa-link"></i></a>
 </h5>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Creating a data frame</span></span>
 <span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>Name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span><span class="op">)</span>, Age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">23</span>, <span class="fl">45</span><span class="op">)</span>, Gender <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"F"</span>, <span class="st">"M"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -517,7 +616,11 @@
 <h4>Operations on Data Frames<a class="anchor" aria-label="anchor" href="#operations-on-data-frames"><i class="fas fa-link"></i></a>
 </h4>
 <p>Various operations like subsetting, merging, and sorting can be performed on data frames.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Subsetting data frame by column</span></span>
 <span><span class="va">subset_df</span> <span class="op">&lt;-</span> <span class="va">df</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Name"</span>, <span class="st">"Age"</span><span class="op">)</span><span class="op">]</span></span></code></pre></div>
 </div>
@@ -537,7 +640,11 @@
 <div id="examples-5" class="section level5 unnumbered">
 <h5>Examples<a class="anchor" aria-label="anchor" href="#examples-5"><i class="fas fa-link"></i></a>
 </h5>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Creating a list</span></span>
 <span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>Name <span class="op">=</span> <span class="st">"Alice"</span>, Age <span class="op">=</span> <span class="fl">23</span>, Scores <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">90</span>, <span class="fl">85</span>, <span class="fl">88</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -546,7 +653,11 @@
 <h4>Operations on Lists<a class="anchor" aria-label="anchor" href="#operations-on-lists"><i class="fas fa-link"></i></a>
 </h4>
 <p>Lists can be modified by adding, deleting, or updating list elements.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># Updating a list element</span></span>
 <span><span class="va">my_list</span><span class="op">$</span><span class="va">Name</span> <span class="op">&lt;-</span> <span class="st">"Bob"</span></span>
 <span></span>
@@ -573,7 +684,11 @@
 <h4>Installing from CRAN<a class="anchor" aria-label="anchor" href="#installing-from-cran"><i class="fas fa-link"></i></a>
 </h4>
 <p>The Comprehensive R Archive Network (CRAN) serves as the primary repository for R packages. The following command installs a package from CRAN:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># To install the ggplot2 package</span></span>
 <span><span class="co"># install.packages("ggplot2", repos = 'http://cran.us.r-project.org')</span></span></code></pre></div>
 </div>
@@ -581,7 +696,11 @@
 <h4>Installing from GitHub<a class="anchor" aria-label="anchor" href="#installing-from-github"><i class="fas fa-link"></i></a>
 </h4>
 <p>Sometimes, packages may not be available on CRAN and could be hosted on other platforms like GitHub. The <code>devtools</code> package allows you to install these:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># First install devtools if you haven't</span></span>
 <span><span class="co"># install.packages("devtools", repos = 'http://cran.us.r-project.org')</span></span>
 <span></span>
@@ -592,7 +711,11 @@
 <h4>Dependencies<a class="anchor" aria-label="anchor" href="#dependencies"><i class="fas fa-link"></i></a>
 </h4>
 <p>Some packages depend on other packages to function correctly. Usually, dependencies are automatically installed, but you can ensure this by setting the <code>dependencies</code> argument to <code>TRUE</code>.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># To install ggplot2 along with its dependencies</span></span>
 <span><span class="co"># install.packages("ggplot2", dependencies = TRUE, repos = 'http://cran.us.r-project.org')</span></span></code></pre></div>
 </div>
@@ -609,7 +732,11 @@
 <h4>Loading a Package<a class="anchor" aria-label="anchor" href="#loading-a-package"><i class="fas fa-link"></i></a>
 </h4>
 <p>You can load an installed package using the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># To load the ggplot2 package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -617,7 +744,11 @@
 <h4>Unloading a Package<a class="anchor" aria-label="anchor" href="#unloading-a-package"><i class="fas fa-link"></i></a>
 </h4>
 <p>To unload a package, you can use the <code><a href="https://rdrr.io/r/base/detach.html">detach()</a></code> function:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># To unload the ggplot2 package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/detach.html">detach</a></span><span class="op">(</span><span class="st">"package:ggplot2"</span>, unload<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -625,12 +756,20 @@
 <h4>Checking Loaded Packages<a class="anchor" aria-label="anchor" href="#checking-loaded-packages"><i class="fas fa-link"></i></a>
 </h4>
 <p>To check which packages are currently loaded in the session, you can use the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># To get information about the session, including loaded packages</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; R version 4.3.2 (2023-10-31 ucrt)</span></span>
 <span><span class="co">#&gt; Platform: x86_64-w64-mingw32/x64 (64-bit)</span></span>
+<<<<<<< HEAD
 <span><span class="co">#&gt; Running under: Windows 11 x64 (build 22621)</span></span>
+=======
+<span><span class="co">#&gt; Running under: Windows 10 x64 (build 19045)</span></span>
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Matrix products: default</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -657,12 +796,21 @@
 <span><span class="co">#&gt; [13] scales_1.2.1      rmarkdown_2.25    grid_4.3.2       </span></span>
 <span><span class="co">#&gt; [16] tibble_3.2.1      munsell_0.5.0     evaluate_0.23    </span></span>
 <span><span class="co">#&gt; [19] jquerylib_0.1.4   fastmap_1.1.1     yaml_2.3.7       </span></span>
+<<<<<<< HEAD
 <span><span class="co">#&gt; [22] lifecycle_1.0.4   memoise_2.0.1     bookdown_0.36    </span></span>
 <span><span class="co">#&gt; [25] compiler_4.3.2    dplyr_1.1.4       fs_1.6.3         </span></span>
 <span><span class="co">#&gt; [28] pkgconfig_2.0.3   downlit_0.4.3     rstudioapi_0.15.0</span></span>
 <span><span class="co">#&gt; [31] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0 </span></span>
 <span><span class="co">#&gt; [34] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   </span></span>
 <span><span class="co">#&gt; [37] bslib_0.6.0       tools_4.3.2       withr_2.5.2      </span></span>
+=======
+<span><span class="co">#&gt; [22] lifecycle_1.0.3   memoise_2.0.1     bookdown_0.37    </span></span>
+<span><span class="co">#&gt; [25] compiler_4.3.2    dplyr_1.1.3       fs_1.6.3         </span></span>
+<span><span class="co">#&gt; [28] pkgconfig_2.0.3   downlit_0.4.3     rstudioapi_0.15.0</span></span>
+<span><span class="co">#&gt; [31] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0 </span></span>
+<span><span class="co">#&gt; [34] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   </span></span>
+<span><span class="co">#&gt; [37] bslib_0.5.1       tools_4.3.2       withr_2.5.2      </span></span>
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <span><span class="co">#&gt; [40] gtable_0.3.4      xml2_1.3.5        cachem_1.0.8</span></span></code></pre></div>
 <p>Understanding the installation and loading process for libraries will enable you to extend R’s native functionalities, a vital skill in today’s data-driven landscape in mass communications.</p>
 </div>
@@ -710,7 +858,11 @@
 <li><p><strong>Create Project</strong>: Once configured, click <code>Create Project</code> to initialize the new workspace.</p></li>
 </ol>
 <p>Here is a conceptual demonstration of how to initialize a new project:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># This is a conceptual code snippet and won't execute</span></span>
 <span><span class="co"># Navigate to File -&gt; New Project in RStudio</span></span>
 <span><span class="co"># Choose project type and directory</span></span>
@@ -745,7 +897,11 @@
 </li>
 </ol>
 <p>Here’s a conceptual guide to open an existing project:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+=======
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 <code class="sourceCode R"><span><span class="co"># This is a conceptual code snippet and won't execute</span></span>
 <span><span class="co"># Navigate to File -&gt; Open Project in RStudio</span></span>
 <span><span class="co"># Browse to locate your .Rproj file, e.g., "My_Old_Comm_Project.Rproj"</span></span>
@@ -821,7 +977,11 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
+<<<<<<< HEAD
     <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-02-26.</p>
+=======
+    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-02-15.</p>
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
   </div>
 
   <div class="col-12 col-md-6 mt-3">

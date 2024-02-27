@@ -171,6 +171,7 @@ To install a package, you can run the command `install.packages("package_name")`
 
 ```r
 # Example code to install the 'ggplot2' package 
+<<<<<<< HEAD
 #install.packages("ggplot2")
 ```
 
@@ -181,6 +182,17 @@ library(ggplot2)
 
 
 
+=======
+install.packages("ggplot2", repos = 'http://cran.us.r-project.org')
+#> Installing package into 'C:/Users/aleith/AppData/Local/R/win-library/4.3'
+#> (as 'lib' is unspecified)
+#> package 'ggplot2' successfully unpacked and MD5 sums checked
+#> 
+#> The downloaded binary packages are in
+#> 	C:\Users\aleith\AppData\Local\Temp\Rtmpcv0B4I\downloaded_packages
+```
+
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 #### Help {.unnumbered}
 
 The Help tab provides access to R documentation, including details about functions and packages. You can invoke help for a specific function using the `?` command.
@@ -573,7 +585,11 @@ To check which packages are currently loaded in the session, you can use the `se
 sessionInfo()
 #> R version 4.3.2 (2023-10-31 ucrt)
 #> Platform: x86_64-w64-mingw32/x64 (64-bit)
+<<<<<<< HEAD
 #> Running under: Windows 11 x64 (build 22621)
+=======
+#> Running under: Windows 10 x64 (build 19045)
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 #> 
 #> Matrix products: default
 #> 
@@ -599,8 +615,13 @@ sessionInfo()
 #> [10] scales_1.2.1      fansi_1.0.5       rmarkdown_2.25   
 #> [13] grid_4.3.2        evaluate_0.23     munsell_0.5.0    
 #> [16] tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7       
+<<<<<<< HEAD
 #> [19] lifecycle_1.0.4   bookdown_0.36     compiler_4.3.2   
 #> [22] dplyr_1.1.4       pkgconfig_2.0.3   rstudioapi_0.15.0
+=======
+#> [19] lifecycle_1.0.3   bookdown_0.37     compiler_4.3.2   
+#> [22] dplyr_1.1.3       pkgconfig_2.0.3   rstudioapi_0.15.0
+>>>>>>> 73c20ff754896f2a5f0b0a18c333b7bfefc9859e
 #> [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0 
 #> [28] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   
 #> [31] withr_2.5.2       tools_4.3.2       gtable_0.3.4
