@@ -60,7 +60,7 @@ zara$brand <- "ZARA"
 
 Here, we append a new column to each brand's dataset, labeling the tweets accordingly. This annotation allows us to retain the brand identity even after merging the datasets, which is critical for brand-specific sentiment analysis.
 
-### Data Merging
+### Data Merging {.unnumbered}
 
 The final preparation step before analysis is to merge the datasets into a singular dataset.
 
@@ -71,7 +71,7 @@ fast_fashion <- bind_rows(gap, hm, uniqlo, zara)
 
 Utilizing `bind_rows` from the `dplyr` package ensures that our data from multiple sources is combined seamlessly into one dataframe. This integrated data structure enables us to conduct comprehensive sentiment analysis across multiple brands simultaneously, comparing and contrasting the public perception of each brand in the fast fashion industry.
 
-### Data Preprocessing
+### Data Preprocessing {.unnumbered}
 
 To extract meaningful insights from tweet data, it's imperative to clean and preprocess the text. This process involves removing extraneous content and standardizing the data format.
 
@@ -240,7 +240,7 @@ sentiment_scores_norm$brand <- sentiment_scores$brand  # Add the brand column ba
 
 In this code segment, the `normalize_sentiments` function is defined to rescale sentiment scores. We then apply this function to each sentiment score column within our `sentiment_scores` data frame, excluding the `brand` column, and reattach the `brand` column afterward.
 
-### Customizing Radar Chart Appearance
+### Customizing Radar Chart Appearance {.unnumbered}
 
 Next, we define the aesthetics for the radar charts by setting the fill colors with transparency and the line colors for each brand.
 
@@ -256,7 +256,7 @@ colors_line <- c("#fabed4", "#ffd8b1", "#aaffc3", "#dcbeff")
 
 The `alpha()` function from the `scales` package adds transparency to the fill colors, enhancing the visual overlay of the radar charts. The `colors_fill` vector specifies the fill colors with adjusted alpha for transparency, while `colors_line` contains corresponding opaque colors for the outlines of each radar chart.
 
-### Constructing Radar Charts
+### Constructing Radar Charts {.unnumbered}
 
 The primary function to create radar charts for each brand is `create_radar_chart`. It extracts the data for a given brand, adds necessary columns for plotting, and then plots the radar chart using the `radarchart` function from the `fmsb` package.
 
@@ -289,7 +289,7 @@ create_radar_chart <- function(brand_name, colors_fill, colors_line) {
 
 This function takes the brand name and color settings as arguments, prepares the brand-specific data for the radar chart, and draws the chart. It also sets the number of axis segments (`seg`), customizes the line colors (`pcol`), the fill colors (`pfcol`), and other stylistic elements of the grid lines and labels. The title of each chart is set to include the brand name, making it clear which brand's sentiment analysis is being visualized.
 
-### Displaying Radar Charts for All Brands
+### Displaying Radar Charts for All Brands {.unnumbered}
 
 To visualize the sentiment distributions for all brands in our dataset, we iterate through the list of unique brands, applying the `create_radar_chart` function to each.
 
@@ -315,7 +315,7 @@ The resulting visualizations provide a multi-faceted view of the sentiment profi
 Through the normalization process and careful visualization design, this chapter illustrates how radar charts can be an effective tool for displaying complex sentiment data in an accessible and visually appealing format.
 
 
-### Cleaning and Preprocessing Social Media Data
+### Cleaning and Preprocessing Social Media Data {.unnumbered}
 
 The first step in analyzing social media data involves cleaning and preprocessing the text to remove noise and standardize the format for analysis.
 
@@ -337,7 +337,7 @@ fast_fashion <- fast_fashion %>%
 
 In this section, we demonstrate how to use a combination of `str_replace_all` and `iconv` functions to remove unwanted characters and whitespace from the tweets. These steps include stripping HTML entities, retweets, mentions, punctuation, numbers, and hyperlinks. Such cleaning is vital for accurate sentiment analysis, as it focuses on the relevant text content.
 
-### Custom Sentiment Analysis
+### Custom Sentiment Analysis {.unnumbered}
 
 Customizing sentiment analysis to the context of the data often yields more accurate results. For instance, a brand name may not carry intrinsic sentiment and should be excluded from the analysis.
 
@@ -360,7 +360,7 @@ emo_sum_df <- data.frame(emotion = names(emo_sum_rm_vr), count = emo_sum_rm_vr) 
 
 The script above details how to prepare tweet content for sentiment analysis by removing the brand name "Gap" and executing a custom function `get_nrc_sentiment` to retrieve sentiment scores for the remaining text.
 
-### Combining Sentiment Data with Original Data
+### Combining Sentiment Data with Original Data {.unnumbered}
 
 After obtaining sentiment scores, we combine them with the original data to maintain context and facilitate further analysis.
 
@@ -370,7 +370,7 @@ fast_fashion_nrc <- cbind(fast_fashion, emotions_rm_vr)
 
 This simple `cbind` operation attaches the sentiment data directly to the original `fast_fashion` dataset, preserving all original information for subsequent steps.
 
-### Calculating Sentiment Scores
+### Calculating Sentiment Scores {.unnumbered}
 
 Sentiment scores can be computed as the difference between positive and negative sentiment counts to understand the overall sentiment polarity of the tweets.
 
@@ -381,7 +381,7 @@ fast_fashion_nrc <- fast_fashion_nrc %>%
 
 The above mutation creates a new `sentiment_score` variable, providing a single, continuous measure of sentiment for each tweet, ranging from negative to positive.
 
-### Time Series Analysis of Sentiment Scores
+### Time Series Analysis of Sentiment Scores {.unnumbered}
 
 Time series analysis is a powerful tool for uncovering trends over time. In this case, we're interested in understanding how sentiment towards each brand evolves daily.
 
@@ -397,7 +397,7 @@ fast_fashion_daily <- fast_fashion_nrc %>%
 
 The `lubridate` package is used to ensure the date information is properly formatted, enabling grouping and summarization of sentiment scores by day and brand.
 
-### Visualizing Trends in Sentiment Scores
+### Visualizing Trends in Sentiment Scores {.unnumbered}
 
 The final visualization step involves creating a scatter plot overlaid with a regression line, highlighting trends in sentiment scores over time.
 

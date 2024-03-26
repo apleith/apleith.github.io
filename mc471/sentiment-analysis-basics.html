@@ -55,7 +55,7 @@
 <li><a class="" href="content-analysis-techniques.html"><span class="header-section-number">8</span> Content Analysis Techniques</a></li>
 <li><a class="active" href="sentiment-analysis-basics.html"><span class="header-section-number">9</span> Sentiment Analysis Basics</a></li>
 <li><a class="" href="inferential-analysis.html"><span class="header-section-number">10</span> Inferential Analysis</a></li>
-<li><a class="" href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to CANVA for Social Media Campaigns</a></li>
+<li><a class="" href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to Canva for Social Media Campaigns</a></li>
 <li><a class="" href="setting-smart-goals-for-social-media-campaigns.html"><span class="header-section-number">12</span> Setting SMART Goals for Social Media Campaigns</a></li>
 <li><a class="" href="swot-analysis-in-social-media-planning.html"><span class="header-section-number">13</span> SWOT Analysis in Social Media Planning</a></li>
 <li><a class="" href="developing-effective-social-media-campaign-timelines.html"><span class="header-section-number">14</span> Developing Effective Social Media Campaign Timelines</a></li>
@@ -126,9 +126,8 @@
 <span><span class="va">zara</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"ZARA"</span></span></code></pre></div>
 <p>Here, we append a new column to each brand’s dataset, labeling the tweets accordingly. This annotation allows us to retain the brand identity even after merging the datasets, which is critical for brand-specific sentiment analysis.</p>
 </div>
-<div id="data-merging" class="section level3" number="9.2.4">
-<h3>
-<span class="header-section-number">9.2.4</span> Data Merging<a class="anchor" aria-label="anchor" href="#data-merging"><i class="fas fa-link"></i></a>
+<div id="data-merging" class="section level3 unnumbered">
+<h3>Data Merging<a class="anchor" aria-label="anchor" href="#data-merging"><i class="fas fa-link"></i></a>
 </h3>
 <p>The final preparation step before analysis is to merge the datasets into a singular dataset.</p>
 <div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
@@ -136,9 +135,8 @@
 <span><span class="va">fast_fashion</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">gap</span>, <span class="va">hm</span>, <span class="va">uniqlo</span>, <span class="va">zara</span><span class="op">)</span></span></code></pre></div>
 <p>Utilizing <code>bind_rows</code> from the <code>dplyr</code> package ensures that our data from multiple sources is combined seamlessly into one dataframe. This integrated data structure enables us to conduct comprehensive sentiment analysis across multiple brands simultaneously, comparing and contrasting the public perception of each brand in the fast fashion industry.</p>
 </div>
-<div id="data-preprocessing" class="section level3" number="9.2.5">
-<h3>
-<span class="header-section-number">9.2.5</span> Data Preprocessing<a class="anchor" aria-label="anchor" href="#data-preprocessing"><i class="fas fa-link"></i></a>
+<div id="data-preprocessing" class="section level3 unnumbered">
+<h3>Data Preprocessing<a class="anchor" aria-label="anchor" href="#data-preprocessing"><i class="fas fa-link"></i></a>
 </h3>
 <p>To extract meaningful insights from tweet data, it’s imperative to clean and preprocess the text. This process involves removing extraneous content and standardizing the data format.</p>
 <div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
@@ -155,9 +153,9 @@
 <span>           <span class="fu"><a href="https://rdrr.io/r/base/iconv.html">iconv</a></span><span class="op">(</span><span class="st">"UTF-8"</span>, <span class="st">"ASCII"</span>, sub<span class="op">=</span><span class="st">""</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>In this code snippet, the <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function from <code>dplyr</code> and various <code><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all()</a></code> functions from <code>stringr</code> are utilized to remove HTML entities, retweet and via texts, usernames, punctuation, numbers, URLs, and extra whitespace. The <code><a href="https://stringr.tidyverse.org/reference/str_trim.html">str_trim()</a></code> function trims whitespace from the beginning and end of tweets, and <code><a href="https://rdrr.io/r/base/iconv.html">iconv()</a></code> converts the text encoding from UTF-8 to ASCII, replacing any non-ASCII characters with an empty string. These steps are crucial in creating a clean text corpus for analysis.</p>
 </div>
-<div id="lexicon-acquisition" class="section level3" number="9.2.6">
+<div id="lexicon-acquisition" class="section level3" number="9.2.4">
 <h3>
-<span class="header-section-number">9.2.6</span> Lexicon Acquisition<a class="anchor" aria-label="anchor" href="#lexicon-acquisition"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.4</span> Lexicon Acquisition<a class="anchor" aria-label="anchor" href="#lexicon-acquisition"><i class="fas fa-link"></i></a>
 </h3>
 <p>For sentiment analysis, we utilize the NRC Word-Emotion Association Lexicon, which associates words with sentiment and emotion categories.</p>
 <div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
@@ -165,9 +163,9 @@
 <span><span class="va">nrc_lexicon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/get_sentiments.html">get_sentiments</a></span><span class="op">(</span><span class="st">"nrc"</span><span class="op">)</span> </span></code></pre></div>
 <p>The <code><a href="https://rdrr.io/pkg/tidytext/man/get_sentiments.html">get_sentiments()</a></code> function retrieves the lexicon, providing a foundational dataset for identifying sentiments within the tweets. This lexicon will enable us to evaluate the emotional content of the tweets quantitatively.</p>
 </div>
-<div id="sentiment-mapping" class="section level3" number="9.2.7">
+<div id="sentiment-mapping" class="section level3" number="9.2.5">
 <h3>
-<span class="header-section-number">9.2.7</span> Sentiment Mapping<a class="anchor" aria-label="anchor" href="#sentiment-mapping"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.5</span> Sentiment Mapping<a class="anchor" aria-label="anchor" href="#sentiment-mapping"><i class="fas fa-link"></i></a>
 </h3>
 <p>The following code breaks down tweet content into individual words and matches them with sentiment categories from the NRC lexicon.</p>
 <div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
@@ -177,9 +175,9 @@
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">nrc_lexicon</span>, by <span class="op">=</span> <span class="st">"word"</span><span class="op">)</span></span></code></pre></div>
 <p><code><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html">unnest_tokens()</a></code> tokenizes the tweets into individual words, and <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join()</a></code> merges these words with the NRC lexicon. This operation effectively tags each word with its associated sentiment(s), laying the groundwork for sentiment score computation.</p>
 </div>
-<div id="sentiment-score-compilation" class="section level3" number="9.2.8">
+<div id="sentiment-score-compilation" class="section level3" number="9.2.6">
 <h3>
-<span class="header-section-number">9.2.8</span> Sentiment Score Compilation<a class="anchor" aria-label="anchor" href="#sentiment-score-compilation"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.6</span> Sentiment Score Compilation<a class="anchor" aria-label="anchor" href="#sentiment-score-compilation"><i class="fas fa-link"></i></a>
 </h3>
 <p>Finally, we compile sentiment scores for each brand by counting the number of occurrences of each sentiment and normalizing these counts.</p>
 <div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
@@ -193,9 +191,9 @@
 <p>Here, <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> aggregates the number of each sentiment for each brand, and <code><a href="https://tidyr.tidyverse.org/reference/spread.html">spread()</a></code> reshapes the data, making it easier to analyze. The subsequent <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> operations calculate the total sentiment counts and normalize the counts by the total. The final sentiment scores represent the relative frequency of each sentiment for each brand.</p>
 <p>Through these stages, we transform raw tweet data into structured, quantifiable sentiment scores, enabling a nuanced understanding of brand sentiment within the fast fashion industry. These scores can then inform various marketing and branding strategies, providing valuable insights into public perception and consumer sentiment.</p>
 </div>
-<div id="visualizing-overall-sentiment-by-brand" class="section level3" number="9.2.9">
+<div id="visualizing-overall-sentiment-by-brand" class="section level3" number="9.2.7">
 <h3>
-<span class="header-section-number">9.2.9</span> Visualizing Overall Sentiment by Brand<a class="anchor" aria-label="anchor" href="#visualizing-overall-sentiment-by-brand"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.7</span> Visualizing Overall Sentiment by Brand<a class="anchor" aria-label="anchor" href="#visualizing-overall-sentiment-by-brand"><i class="fas fa-link"></i></a>
 </h3>
 <p>Visualizing data is crucial for interpreting the results of sentiment analysis effectively. One method is to compare the overall sentiment for different brands. Here we utilize a bar plot to display the positive and negative sentiment scores side-by-side for each brand.</p>
 <div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
@@ -211,9 +209,9 @@
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>In this code, <code>ggplot</code> creates a bar plot where each brand’s positive sentiment scores are represented above the x-axis, and negative scores are mirrored below. This mirrored bar plot provides an immediate visual comparison, showcasing the balance of sentiment each brand receives on social media. By customizing the fill colors, we differentiate positive from negative sentiment, enabling an intuitive understanding of the data.</p>
 </div>
-<div id="refining-sentiment-lexicons" class="section level3" number="9.2.10">
+<div id="refining-sentiment-lexicons" class="section level3" number="9.2.8">
 <h3>
-<span class="header-section-number">9.2.10</span> Refining Sentiment Lexicons<a class="anchor" aria-label="anchor" href="#refining-sentiment-lexicons"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.8</span> Refining Sentiment Lexicons<a class="anchor" aria-label="anchor" href="#refining-sentiment-lexicons"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sentiment analysis often requires customization of lexicons to align with the context of the data. For instance, the word “gap” might be frequent in fashion-related tweets but not carry sentiment value. In such cases, we remove it from the lexicon:</p>
 <div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
@@ -222,9 +220,9 @@
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">word</span> <span class="op">!=</span> <span class="st">"gap"</span><span class="op">)</span></span></code></pre></div>
 <p>By filtering out the word “gap” from the NRC lexicon, we prevent it from skewing our sentiment analysis results, thus refining the accuracy of our study.</p>
 </div>
-<div id="sentiment-mapping-and-score-compilation" class="section level3" number="9.2.11">
+<div id="sentiment-mapping-and-score-compilation" class="section level3" number="9.2.9">
 <h3>
-<span class="header-section-number">9.2.11</span> Sentiment Mapping and Score Compilation<a class="anchor" aria-label="anchor" href="#sentiment-mapping-and-score-compilation"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.9</span> Sentiment Mapping and Score Compilation<a class="anchor" aria-label="anchor" href="#sentiment-mapping-and-score-compilation"><i class="fas fa-link"></i></a>
 </h3>
 <p>Once we have a tailored lexicon, we can map the tweet words to the lexicon entries and compile the sentiment scores for each brand:</p>
 <div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
@@ -243,9 +241,9 @@
 <p>This code segment is at the heart of sentiment analysis. The <code>unnest_tokens</code> function from the <code>tidytext</code> package tokenizes the tweets, breaking down the text into individual words. These words are then matched to the sentiment lexicon using <code>inner_join</code>. After joining, we count and spread the sentiments across different columns corresponding to each sentiment type, creating a wide format of data. The <code>mutate</code> and <code>across</code> functions are then used to normalize these counts by dividing each sentiment count by the total count of sentiments, giving us a proportion of each sentiment for every brand.</p>
 <p>Normalization is essential as it allows us to compare sentiment distributions across brands regardless of the number of tweets per brand, ensuring a level comparison field. The resulting <code>sentiment_scores</code> dataframe provides a brand-wise sentiment summary, ready for further analysis and visualization.</p>
 </div>
-<div id="visualizing-the-distribution-of-emotions-by-brand" class="section level3" number="9.2.12">
+<div id="visualizing-the-distribution-of-emotions-by-brand" class="section level3" number="9.2.10">
 <h3>
-<span class="header-section-number">9.2.12</span> Visualizing the Distribution of Emotions by Brand<a class="anchor" aria-label="anchor" href="#visualizing-the-distribution-of-emotions-by-brand"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.10</span> Visualizing the Distribution of Emotions by Brand<a class="anchor" aria-label="anchor" href="#visualizing-the-distribution-of-emotions-by-brand"><i class="fas fa-link"></i></a>
 </h3>
 <p>The distribution of various emotions across brands can be visualized using a bar plot, which allows for comparison of the prominence of different emotions in the social media presence of each brand.</p>
 <div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
@@ -268,15 +266,15 @@
 <p>This <code>ggplot</code> bar plot visualizes the score of each emotion by brand, with the emotions on the y-axis and their corresponding scores on the x-axis. The use of <code><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip()</a></code> swaps the axes, making the chart more readable, especially when dealing with long emotion labels. The <code>scale_fill_brewer</code> function applies a color palette that helps distinguish between brands visually.</p>
 <p>This visualization uncovers which emotions are most frequently associated with each brand, providing valuable insights into public sentiment that can inform marketing strategies and brand management.</p>
 </div>
-<div id="introduction-to-radar-chart-visualization" class="section level3" number="9.2.13">
+<div id="introduction-to-radar-chart-visualization" class="section level3" number="9.2.11">
 <h3>
-<span class="header-section-number">9.2.13</span> Introduction to Radar Chart Visualization<a class="anchor" aria-label="anchor" href="#introduction-to-radar-chart-visualization"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.11</span> Introduction to Radar Chart Visualization<a class="anchor" aria-label="anchor" href="#introduction-to-radar-chart-visualization"><i class="fas fa-link"></i></a>
 </h3>
 <p>Radar charts, also known as spider or web charts, offer a compelling way to display multivariate data in the form of a two-dimensional chart of three or more quantitative variables. They are particularly useful for visualizing performance analysis or survey data and, in our context, the distribution of sentiment across different emotional dimensions for brands in the fast fashion industry.</p>
 </div>
-<div id="preparing-data-for-radar-charts" class="section level3" number="9.2.14">
+<div id="preparing-data-for-radar-charts" class="section level3" number="9.2.12">
 <h3>
-<span class="header-section-number">9.2.14</span> Preparing Data for Radar Charts<a class="anchor" aria-label="anchor" href="#preparing-data-for-radar-charts"><i class="fas fa-link"></i></a>
+<span class="header-section-number">9.2.12</span> Preparing Data for Radar Charts<a class="anchor" aria-label="anchor" href="#preparing-data-for-radar-charts"><i class="fas fa-link"></i></a>
 </h3>
 <p>For a radar chart, data must be normalized to ensure each variable contributes equally to the final plot. Normalization scales the variables to a range of [0, 1], allowing for a fair comparison across different emotions.</p>
 <div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
@@ -292,9 +290,8 @@
 <span><span class="va">sentiment_scores_norm</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="va">sentiment_scores</span><span class="op">$</span><span class="va">brand</span>  <span class="co"># Add the brand column back</span></span></code></pre></div>
 <p>In this code segment, the <code>normalize_sentiments</code> function is defined to rescale sentiment scores. We then apply this function to each sentiment score column within our <code>sentiment_scores</code> data frame, excluding the <code>brand</code> column, and reattach the <code>brand</code> column afterward.</p>
 </div>
-<div id="customizing-radar-chart-appearance" class="section level3" number="9.2.15">
-<h3>
-<span class="header-section-number">9.2.15</span> Customizing Radar Chart Appearance<a class="anchor" aria-label="anchor" href="#customizing-radar-chart-appearance"><i class="fas fa-link"></i></a>
+<div id="customizing-radar-chart-appearance" class="section level3 unnumbered">
+<h3>Customizing Radar Chart Appearance<a class="anchor" aria-label="anchor" href="#customizing-radar-chart-appearance"><i class="fas fa-link"></i></a>
 </h3>
 <p>Next, we define the aesthetics for the radar charts by setting the fill colors with transparency and the line colors for each brand.</p>
 <div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
@@ -307,9 +304,8 @@
 <span><span class="va">colors_line</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#fabed4"</span>, <span class="st">"#ffd8b1"</span>, <span class="st">"#aaffc3"</span>, <span class="st">"#dcbeff"</span><span class="op">)</span></span></code></pre></div>
 <p>The <code><a href="https://scales.r-lib.org/reference/alpha.html">alpha()</a></code> function from the <code>scales</code> package adds transparency to the fill colors, enhancing the visual overlay of the radar charts. The <code>colors_fill</code> vector specifies the fill colors with adjusted alpha for transparency, while <code>colors_line</code> contains corresponding opaque colors for the outlines of each radar chart.</p>
 </div>
-<div id="constructing-radar-charts" class="section level3" number="9.2.16">
-<h3>
-<span class="header-section-number">9.2.16</span> Constructing Radar Charts<a class="anchor" aria-label="anchor" href="#constructing-radar-charts"><i class="fas fa-link"></i></a>
+<div id="constructing-radar-charts" class="section level3 unnumbered">
+<h3>Constructing Radar Charts<a class="anchor" aria-label="anchor" href="#constructing-radar-charts"><i class="fas fa-link"></i></a>
 </h3>
 <p>The primary function to create radar charts for each brand is <code>create_radar_chart</code>. It extracts the data for a given brand, adds necessary columns for plotting, and then plots the radar chart using the <code>radarchart</code> function from the <code>fmsb</code> package.</p>
 <div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
@@ -339,9 +335,8 @@
 <span><span class="op">}</span></span></code></pre></div>
 <p>This function takes the brand name and color settings as arguments, prepares the brand-specific data for the radar chart, and draws the chart. It also sets the number of axis segments (<code>seg</code>), customizes the line colors (<code>pcol</code>), the fill colors (<code>pfcol</code>), and other stylistic elements of the grid lines and labels. The title of each chart is set to include the brand name, making it clear which brand’s sentiment analysis is being visualized.</p>
 </div>
-<div id="displaying-radar-charts-for-all-brands" class="section level3" number="9.2.17">
-<h3>
-<span class="header-section-number">9.2.17</span> Displaying Radar Charts for All Brands<a class="anchor" aria-label="anchor" href="#displaying-radar-charts-for-all-brands"><i class="fas fa-link"></i></a>
+<div id="displaying-radar-charts-for-all-brands" class="section level3 unnumbered">
+<h3>Displaying Radar Charts for All Brands<a class="anchor" aria-label="anchor" href="#displaying-radar-charts-for-all-brands"><i class="fas fa-link"></i></a>
 </h3>
 <p>To visualize the sentiment distributions for all brands in our dataset, we iterate through the list of unique brands, applying the <code>create_radar_chart</code> function to each.</p>
 <div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
@@ -361,9 +356,8 @@
 <p>The resulting visualizations provide a multi-faceted view of the sentiment profiles for the different brands, facilitating comparative analysis and deeper insights into brand perception in the social media landscape.</p>
 <p>Through the normalization process and careful visualization design, this chapter illustrates how radar charts can be an effective tool for displaying complex sentiment data in an accessible and visually appealing format.</p>
 </div>
-<div id="cleaning-and-preprocessing-social-media-data" class="section level3" number="9.2.18">
-<h3>
-<span class="header-section-number">9.2.18</span> Cleaning and Preprocessing Social Media Data<a class="anchor" aria-label="anchor" href="#cleaning-and-preprocessing-social-media-data"><i class="fas fa-link"></i></a>
+<div id="cleaning-and-preprocessing-social-media-data" class="section level3 unnumbered">
+<h3>Cleaning and Preprocessing Social Media Data<a class="anchor" aria-label="anchor" href="#cleaning-and-preprocessing-social-media-data"><i class="fas fa-link"></i></a>
 </h3>
 <p>The first step in analyzing social media data involves cleaning and preprocessing the text to remove noise and standardize the format for analysis.</p>
 <div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
@@ -382,9 +376,8 @@
 <span>           <span class="fu"><a href="https://rdrr.io/r/base/iconv.html">iconv</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"UTF-8"</span>, <span class="st">"ASCII"</span>, sub<span class="op">=</span><span class="st">""</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>In this section, we demonstrate how to use a combination of <code>str_replace_all</code> and <code>iconv</code> functions to remove unwanted characters and whitespace from the tweets. These steps include stripping HTML entities, retweets, mentions, punctuation, numbers, and hyperlinks. Such cleaning is vital for accurate sentiment analysis, as it focuses on the relevant text content.</p>
 </div>
-<div id="custom-sentiment-analysis" class="section level3" number="9.2.19">
-<h3>
-<span class="header-section-number">9.2.19</span> Custom Sentiment Analysis<a class="anchor" aria-label="anchor" href="#custom-sentiment-analysis"><i class="fas fa-link"></i></a>
+<div id="custom-sentiment-analysis" class="section level3 unnumbered">
+<h3>Custom Sentiment Analysis<a class="anchor" aria-label="anchor" href="#custom-sentiment-analysis"><i class="fas fa-link"></i></a>
 </h3>
 <p>Customizing sentiment analysis to the context of the data often yields more accurate results. For instance, a brand name may not carry intrinsic sentiment and should be excluded from the analysis.</p>
 <div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
@@ -404,18 +397,16 @@
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">count</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>The script above details how to prepare tweet content for sentiment analysis by removing the brand name “Gap” and executing a custom function <code>get_nrc_sentiment</code> to retrieve sentiment scores for the remaining text.</p>
 </div>
-<div id="combining-sentiment-data-with-original-data" class="section level3" number="9.2.20">
-<h3>
-<span class="header-section-number">9.2.20</span> Combining Sentiment Data with Original Data<a class="anchor" aria-label="anchor" href="#combining-sentiment-data-with-original-data"><i class="fas fa-link"></i></a>
+<div id="combining-sentiment-data-with-original-data" class="section level3 unnumbered">
+<h3>Combining Sentiment Data with Original Data<a class="anchor" aria-label="anchor" href="#combining-sentiment-data-with-original-data"><i class="fas fa-link"></i></a>
 </h3>
 <p>After obtaining sentiment scores, we combine them with the original data to maintain context and facilitate further analysis.</p>
 <div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">fast_fashion_nrc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://amices.org/mice/reference/cbind.html">cbind</a></span><span class="op">(</span><span class="va">fast_fashion</span>, <span class="va">emotions_rm_vr</span><span class="op">)</span></span></code></pre></div>
 <p>This simple <code>cbind</code> operation attaches the sentiment data directly to the original <code>fast_fashion</code> dataset, preserving all original information for subsequent steps.</p>
 </div>
-<div id="calculating-sentiment-scores" class="section level3" number="9.2.21">
-<h3>
-<span class="header-section-number">9.2.21</span> Calculating Sentiment Scores<a class="anchor" aria-label="anchor" href="#calculating-sentiment-scores"><i class="fas fa-link"></i></a>
+<div id="calculating-sentiment-scores" class="section level3 unnumbered">
+<h3>Calculating Sentiment Scores<a class="anchor" aria-label="anchor" href="#calculating-sentiment-scores"><i class="fas fa-link"></i></a>
 </h3>
 <p>Sentiment scores can be computed as the difference between positive and negative sentiment counts to understand the overall sentiment polarity of the tweets.</p>
 <div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
@@ -423,9 +414,8 @@
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>sentiment_score <span class="op">=</span> <span class="va">positive</span> <span class="op">-</span> <span class="va">negative</span><span class="op">)</span></span></code></pre></div>
 <p>The above mutation creates a new <code>sentiment_score</code> variable, providing a single, continuous measure of sentiment for each tweet, ranging from negative to positive.</p>
 </div>
-<div id="time-series-analysis-of-sentiment-scores" class="section level3" number="9.2.22">
-<h3>
-<span class="header-section-number">9.2.22</span> Time Series Analysis of Sentiment Scores<a class="anchor" aria-label="anchor" href="#time-series-analysis-of-sentiment-scores"><i class="fas fa-link"></i></a>
+<div id="time-series-analysis-of-sentiment-scores" class="section level3 unnumbered">
+<h3>Time Series Analysis of Sentiment Scores<a class="anchor" aria-label="anchor" href="#time-series-analysis-of-sentiment-scores"><i class="fas fa-link"></i></a>
 </h3>
 <p>Time series analysis is a powerful tool for uncovering trends over time. In this case, we’re interested in understanding how sentiment towards each brand evolves daily.</p>
 <div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
@@ -438,9 +428,8 @@
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>daily_sentiment_score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">sentiment_score</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">'drop'</span><span class="op">)</span></span></code></pre></div>
 <p>The <code>lubridate</code> package is used to ensure the date information is properly formatted, enabling grouping and summarization of sentiment scores by day and brand.</p>
 </div>
-<div id="visualizing-trends-in-sentiment-scores" class="section level3" number="9.2.23">
-<h3>
-<span class="header-section-number">9.2.23</span> Visualizing Trends in Sentiment Scores<a class="anchor" aria-label="anchor" href="#visualizing-trends-in-sentiment-scores"><i class="fas fa-link"></i></a>
+<div id="visualizing-trends-in-sentiment-scores" class="section level3 unnumbered">
+<h3>Visualizing Trends in Sentiment Scores<a class="anchor" aria-label="anchor" href="#visualizing-trends-in-sentiment-scores"><i class="fas fa-link"></i></a>
 </h3>
 <p>The final visualization step involves creating a scatter plot overlaid with a regression line, highlighting trends in sentiment scores over time.</p>
 <div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
@@ -477,26 +466,26 @@
 <li><a class="nav-link" href="#introduction-to-required-libraries"><span class="header-section-number">9.2.1</span> Introduction to Required Libraries</a></li>
 <li><a class="nav-link" href="#data-ingestion"><span class="header-section-number">9.2.2</span> Data Ingestion</a></li>
 <li><a class="nav-link" href="#data-annotation"><span class="header-section-number">9.2.3</span> Data Annotation</a></li>
-<li><a class="nav-link" href="#data-merging"><span class="header-section-number">9.2.4</span> Data Merging</a></li>
-<li><a class="nav-link" href="#data-preprocessing"><span class="header-section-number">9.2.5</span> Data Preprocessing</a></li>
-<li><a class="nav-link" href="#lexicon-acquisition"><span class="header-section-number">9.2.6</span> Lexicon Acquisition</a></li>
-<li><a class="nav-link" href="#sentiment-mapping"><span class="header-section-number">9.2.7</span> Sentiment Mapping</a></li>
-<li><a class="nav-link" href="#sentiment-score-compilation"><span class="header-section-number">9.2.8</span> Sentiment Score Compilation</a></li>
-<li><a class="nav-link" href="#visualizing-overall-sentiment-by-brand"><span class="header-section-number">9.2.9</span> Visualizing Overall Sentiment by Brand</a></li>
-<li><a class="nav-link" href="#refining-sentiment-lexicons"><span class="header-section-number">9.2.10</span> Refining Sentiment Lexicons</a></li>
-<li><a class="nav-link" href="#sentiment-mapping-and-score-compilation"><span class="header-section-number">9.2.11</span> Sentiment Mapping and Score Compilation</a></li>
-<li><a class="nav-link" href="#visualizing-the-distribution-of-emotions-by-brand"><span class="header-section-number">9.2.12</span> Visualizing the Distribution of Emotions by Brand</a></li>
-<li><a class="nav-link" href="#introduction-to-radar-chart-visualization"><span class="header-section-number">9.2.13</span> Introduction to Radar Chart Visualization</a></li>
-<li><a class="nav-link" href="#preparing-data-for-radar-charts"><span class="header-section-number">9.2.14</span> Preparing Data for Radar Charts</a></li>
-<li><a class="nav-link" href="#customizing-radar-chart-appearance"><span class="header-section-number">9.2.15</span> Customizing Radar Chart Appearance</a></li>
-<li><a class="nav-link" href="#constructing-radar-charts"><span class="header-section-number">9.2.16</span> Constructing Radar Charts</a></li>
-<li><a class="nav-link" href="#displaying-radar-charts-for-all-brands"><span class="header-section-number">9.2.17</span> Displaying Radar Charts for All Brands</a></li>
-<li><a class="nav-link" href="#cleaning-and-preprocessing-social-media-data"><span class="header-section-number">9.2.18</span> Cleaning and Preprocessing Social Media Data</a></li>
-<li><a class="nav-link" href="#custom-sentiment-analysis"><span class="header-section-number">9.2.19</span> Custom Sentiment Analysis</a></li>
-<li><a class="nav-link" href="#combining-sentiment-data-with-original-data"><span class="header-section-number">9.2.20</span> Combining Sentiment Data with Original Data</a></li>
-<li><a class="nav-link" href="#calculating-sentiment-scores"><span class="header-section-number">9.2.21</span> Calculating Sentiment Scores</a></li>
-<li><a class="nav-link" href="#time-series-analysis-of-sentiment-scores"><span class="header-section-number">9.2.22</span> Time Series Analysis of Sentiment Scores</a></li>
-<li><a class="nav-link" href="#visualizing-trends-in-sentiment-scores"><span class="header-section-number">9.2.23</span> Visualizing Trends in Sentiment Scores</a></li>
+<li><a class="nav-link" href="#data-merging">Data Merging</a></li>
+<li><a class="nav-link" href="#data-preprocessing">Data Preprocessing</a></li>
+<li><a class="nav-link" href="#lexicon-acquisition"><span class="header-section-number">9.2.4</span> Lexicon Acquisition</a></li>
+<li><a class="nav-link" href="#sentiment-mapping"><span class="header-section-number">9.2.5</span> Sentiment Mapping</a></li>
+<li><a class="nav-link" href="#sentiment-score-compilation"><span class="header-section-number">9.2.6</span> Sentiment Score Compilation</a></li>
+<li><a class="nav-link" href="#visualizing-overall-sentiment-by-brand"><span class="header-section-number">9.2.7</span> Visualizing Overall Sentiment by Brand</a></li>
+<li><a class="nav-link" href="#refining-sentiment-lexicons"><span class="header-section-number">9.2.8</span> Refining Sentiment Lexicons</a></li>
+<li><a class="nav-link" href="#sentiment-mapping-and-score-compilation"><span class="header-section-number">9.2.9</span> Sentiment Mapping and Score Compilation</a></li>
+<li><a class="nav-link" href="#visualizing-the-distribution-of-emotions-by-brand"><span class="header-section-number">9.2.10</span> Visualizing the Distribution of Emotions by Brand</a></li>
+<li><a class="nav-link" href="#introduction-to-radar-chart-visualization"><span class="header-section-number">9.2.11</span> Introduction to Radar Chart Visualization</a></li>
+<li><a class="nav-link" href="#preparing-data-for-radar-charts"><span class="header-section-number">9.2.12</span> Preparing Data for Radar Charts</a></li>
+<li><a class="nav-link" href="#customizing-radar-chart-appearance">Customizing Radar Chart Appearance</a></li>
+<li><a class="nav-link" href="#constructing-radar-charts">Constructing Radar Charts</a></li>
+<li><a class="nav-link" href="#displaying-radar-charts-for-all-brands">Displaying Radar Charts for All Brands</a></li>
+<li><a class="nav-link" href="#cleaning-and-preprocessing-social-media-data">Cleaning and Preprocessing Social Media Data</a></li>
+<li><a class="nav-link" href="#custom-sentiment-analysis">Custom Sentiment Analysis</a></li>
+<li><a class="nav-link" href="#combining-sentiment-data-with-original-data">Combining Sentiment Data with Original Data</a></li>
+<li><a class="nav-link" href="#calculating-sentiment-scores">Calculating Sentiment Scores</a></li>
+<li><a class="nav-link" href="#time-series-analysis-of-sentiment-scores">Time Series Analysis of Sentiment Scores</a></li>
+<li><a class="nav-link" href="#visualizing-trends-in-sentiment-scores">Visualizing Trends in Sentiment Scores</a></li>
 </ul>
 </li>
 </ul>
@@ -515,7 +504,7 @@
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-03-14.</p>
+    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-03-26.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
