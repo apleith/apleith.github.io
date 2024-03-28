@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 10 Statistical Analysis | Social Media Analytics</title>
+<meta name="author" content="AP Leith">
+<meta name="description" content="10.1 Load Data  Introduction to Required Libraries To embark on sentiment analysis within the fast fashion industry, we must first set the stage with the right tools. This involves loading several...">
+<meta name="generator" content="bookdown 0.36 with bs4_book()">
+<meta property="og:title" content="Chapter 10 Statistical Analysis | Social Media Analytics">
+<meta property="og:type" content="book">
+<meta property="og:description" content="10.1 Load Data  Introduction to Required Libraries To embark on sentiment analysis within the fast fashion industry, we must first set the stage with the right tools. This involves loading several...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 10 Statistical Analysis | Social Media Analytics">
+<meta name="twitter:description" content="10.1 Load Data  Introduction to Required Libraries To embark on sentiment analysis within the fast fashion industry, we must first set the stage with the right tools. This involves loading several...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.0/transition.js"></script><script src="libs/bs3compat-0.6.0/tabs.js"></script><script src="libs/bs3compat-0.6.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="An R Guide for Media Researchers">Social Media Analytics</a>:
+        <small class="text-muted">An R Guide for Media Researchers</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface</a></li>
+<li><a class="" href="introduction-to-social-media-types.html"><span class="header-section-number">1</span> Introduction to Social Media Types</a></li>
+<li><a class="" href="fundamentals-of-social-media-platforms.html"><span class="header-section-number">2</span> Fundamentals of Social Media Platforms</a></li>
+<li><a class="" href="social-media-metrics-and-kpis.html"><span class="header-section-number">3</span> Social Media Metrics and KPIs</a></li>
+<li><a class="" href="studying-successful-social-media-campaigns.html"><span class="header-section-number">4</span> Studying Successful Social Media Campaigns</a></li>
+<li><a class="" href="data-collection-tools.html"><span class="header-section-number">5</span> Data Collection Tools</a></li>
+<li><a class="" href="introduction-to-r-and-rstudio.html"><span class="header-section-number">6</span> Introduction to R and RStudio</a></li>
+<li><a class="" href="data-storage-and-management.html"><span class="header-section-number">7</span> Data Storage and Management</a></li>
+<li><a class="" href="content-analysis-techniques.html"><span class="header-section-number">8</span> Content Analysis Techniques</a></li>
+<li><a class="" href="sentiment-analysis-basics.html"><span class="header-section-number">9</span> Sentiment Analysis Basics</a></li>
+<li><a class="active" href="statistical-analysis.html"><span class="header-section-number">10</span> Statistical Analysis</a></li>
+<li><a class="" href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to Canva for Social Media Campaigns</a></li>
+<li><a class="" href="setting-smart-goals-for-social-media-campaigns.html"><span class="header-section-number">12</span> Setting SMART Goals for Social Media Campaigns</a></li>
+<li><a class="" href="swot-analysis-in-social-media-planning.html"><span class="header-section-number">13</span> SWOT Analysis in Social Media Planning</a></li>
+<li><a class="" href="developing-effective-social-media-campaign-timelines.html"><span class="header-section-number">14</span> Developing Effective Social Media Campaign Timelines</a></li>
+<li><a class="" href="finalizing-and-presenting-the-social-media-campaign-pitch.html"><span class="header-section-number">15</span> Finalizing and Presenting the Social Media Campaign Pitch</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="statistical-analysis" class="section level1" number="10">
+<h1>
+<span class="header-section-number">10</span> Statistical Analysis<a class="anchor" aria-label="anchor" href="#statistical-analysis"><i class="fas fa-link"></i></a>
+</h1>
+<div id="load-data" class="section level2" number="10.1">
+<h2>
+<span class="header-section-number">10.1</span> Load Data<a class="anchor" aria-label="anchor" href="#load-data"><i class="fas fa-link"></i></a>
+</h2>
+<div id="introduction-to-required-libraries-1" class="section level3 unnumbered">
+<h3>Introduction to Required Libraries<a class="anchor" aria-label="anchor" href="#introduction-to-required-libraries-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>To embark on sentiment analysis within the fast fashion industry, we must first set the stage with the right tools. This involves loading several R libraries, each serving a unique purpose in our data analysis journey.</p>
+<div class="sourceCode" id="cb125"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Loading the required libraries</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>  <span class="co"># For data manipulation and visualization</span></span>
+<span><span class="co">#&gt; Warning: package 'tidyverse' was built under R version</span></span>
+<span><span class="co">#&gt; 4.3.3</span></span>
+<span><span class="co">#&gt; ── Attaching core tidyverse packages ──── tidyverse 2.0.0 ──</span></span>
+<span><span class="co">#&gt; ✔ dplyr     1.1.4     ✔ readr     2.1.4</span></span>
+<span><span class="co">#&gt; ✔ forcats   1.0.0     ✔ stringr   1.5.1</span></span>
+<span><span class="co">#&gt; ✔ ggplot2   3.4.4     ✔ tibble    3.2.1</span></span>
+<span><span class="co">#&gt; ✔ lubridate 1.9.3     ✔ tidyr     1.3.0</span></span>
+<span><span class="co">#&gt; ✔ purrr     1.0.2     </span></span>
+<span><span class="co">#&gt; ── Conflicts ────────────────────── tidyverse_conflicts() ──</span></span>
+<span><span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span></span>
+<span><span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span></span>
+<span><span class="co">#&gt; ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/juliasilge/tidytext">tidytext</a></span><span class="op">)</span>   <span class="co"># For text mining tasks</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span>  <span class="co"># For manipulating date-time data</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/EmilHvitfeldt/textdata">textdata</a></span><span class="op">)</span>   <span class="co"># To access the NRC sentiment lexicon</span></span>
+<span><span class="co">#&gt; Warning: package 'textdata' was built under R version 4.3.3</span></span></code></pre></div>
+<p>The <code>tidyverse</code> collection of packages offers a versatile suite for data manipulation and visualization, streamlining many routine data analysis tasks. <code>tidytext</code> provides specialized functions for text mining, a vital step in sentiment analysis. With <code>lubridate</code>, handling and interpreting date-time information becomes intuitive, enhancing our ability to analyze trends over time. Lastly, <code>textdata</code> grants us access to various lexicons and text datasets, such as the NRC Word-Emotion Association Lexicon, an essential resource for quantifying the sentiment conveyed by text.</p>
+</div>
+<div id="data-ingestion-1" class="section level3 unnumbered">
+<h3>Data Ingestion<a class="anchor" aria-label="anchor" href="#data-ingestion-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>The analysis begins by sourcing tweet datasets corresponding to several key players in the fast fashion industry.</p>
+<div class="sourceCode" id="cb126"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Reading in the data for each brand</span></span>
+<span><span class="va">gap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/gap.csv"</span><span class="op">)</span></span>
+<span><span class="va">hm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/hm.csv"</span><span class="op">)</span></span>
+<span><span class="va">uniqlo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/uniqlo_uk.csv"</span><span class="op">)</span></span>
+<span><span class="va">zara</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/zara.csv"</span><span class="op">)</span></span></code></pre></div>
+<p>In this step, we read the tweet data for each brand from CSV files into R. Each dataset contains a wealth of information extracted from social media, serving as a rich source for sentiment analysis.</p>
+</div>
+<div id="data-annotation-1" class="section level3 unnumbered">
+<h3>Data Annotation<a class="anchor" aria-label="anchor" href="#data-annotation-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>Once the datasets are loaded, we need to distinguish tweets from each brand within our unified analysis framework.</p>
+<div class="sourceCode" id="cb127"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Annotating data with brand names</span></span>
+<span><span class="va">gap</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"Gap"</span></span>
+<span><span class="va">hm</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"H&amp;M"</span></span>
+<span><span class="va">uniqlo</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"UNIQLO"</span></span>
+<span><span class="va">zara</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"ZARA"</span></span></code></pre></div>
+<p>In the forthcoming section, we delve into statistical analyses pivotal for social media analytics, particularly within the domain of fast fashion. Utilizing R, a prominent statistical computing environment, we explore measures of central tendency—mean, median, and mode—each shedding light on different facets of social media engagement data. These analyses are instrumental in understanding patterns, trends, and outliers in social media behavior, thereby offering valuable insights for strategic planning and content optimization.</p>
+</div>
+<div id="setting-the-stage-with-r" class="section level3" number="10.1.1">
+<h3>
+<span class="header-section-number">10.1.1</span> Setting the Stage with R<a class="anchor" aria-label="anchor" href="#setting-the-stage-with-r"><i class="fas fa-link"></i></a>
+</h3>
+<p>First, we prepare our R environment to ensure clarity in our numerical outputs, eschewing scientific notation for readability:</p>
+<div class="sourceCode" id="cb128"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">999</span><span class="op">)</span></span></code></pre></div>
+<p>This command, <code>options(scipen = 999)</code>, adjusts R’s preference for displaying numbers, making it favor plain numeric representation over scientific notation. This is particularly helpful when dealing with social media metrics, which can range from small to large values but are more intuitively understood in their standard form.</p>
+</div>
+<div id="analyzing-likes-mean-calculation" class="section level3" number="10.1.2">
+<h3>
+<span class="header-section-number">10.1.2</span> Analyzing Likes: Mean Calculation<a class="anchor" aria-label="anchor" href="#analyzing-likes-mean-calculation"><i class="fas fa-link"></i></a>
+</h3>
+<p>Our exploration begins with the calculation of the mean number of likes for posts within a dataset labeled <code>fast_fashion_nrc</code>:</p>
+<div class="sourceCode" id="cb129"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">mean_likes</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Likes_Count</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mean_likes</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>mean
+&lt;dbl&gt;
+106.2683</code></pre>
+<p>The <code>mean(Likes_Count, na.rm = TRUE)</code> function computes the average number of likes per post, explicitly instructing R to ignore any missing values (<code>na.rm = TRUE</code>). The resulting mean of 106.2683 signifies that, on average, posts in this dataset received approximately 106 likes. This average is a fundamental descriptor, providing a snapshot of engagement levels, yet it doesn’t account for the distribution’s shape or outliers.</p>
+</div>
+<div id="exploring-post-length-median-calculation" class="section level3" number="10.1.3">
+<h3>
+<span class="header-section-number">10.1.3</span> Exploring Post Length: Median Calculation<a class="anchor" aria-label="anchor" href="#exploring-post-length-median-calculation"><i class="fas fa-link"></i></a>
+</h3>
+<p>Subsequently, we assess the median post length:</p>
+<div class="sourceCode" id="cb131"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">median_length</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>median <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/median.html">median</a></span><span class="op">(</span><span class="va">Post_Length</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">median_length</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>median
+&lt;dbl&gt;
+132</code></pre>
+<p>Here, <code>median(Post_Length, na.rm = TRUE)</code> calculates the middle value in the distribution of post lengths, again excluding missing values. The median of 132 suggests that half the posts are shorter and half are longer than this value. Unlike the mean, the median is less sensitive to extreme values, offering a robust measure of central tendency for skewed distributions.</p>
+</div>
+<div id="investigating-replies-mode-calculation" class="section level3" number="10.1.4">
+<h3>
+<span class="header-section-number">10.1.4</span> Investigating Replies: Mode Calculation<a class="anchor" aria-label="anchor" href="#investigating-replies-mode-calculation"><i class="fas fa-link"></i></a>
+</h3>
+<p>Lastly, we explore the mode of replies count:</p>
+<div class="sourceCode" id="cb133"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://andrisignorell.github.io/DescTools/">DescTools</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mode_replies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://andrisignorell.github.io/DescTools/reference/Mode.html">Mode</a></span><span class="op">(</span><span class="va">fast_fashion_nrc</span><span class="op">$</span><span class="va">Replies_Count</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mode_replies</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>[1] 280
+attr(,"freq")
+[1] 286</code></pre>
+<p>The <code>Mode(fast_fashion_nrc$Replies_Count)</code> function from the <code>DescTools</code> package identifies the most frequent number of replies received by posts, which, in this case, is 280. This frequency is corroborated by the attribute <code>freq</code>, showing that 286 posts received exactly 280 replies each. The mode, particularly relevant in categorical data analysis, here highlights the most common level of interaction—a key insight for content creators aiming to maximize engagement.</p>
+<p>In this chapter, we delve into the statistical examination of retweets within the realm of social media analytics, particularly focusing on a dataset from the fast fashion industry, referred to as <code>fast_fashion_nrc</code>. This dataset offers a fertile ground for understanding the dynamics of user engagement through retweets, a key metric in social media’s virality and spread of content. Through R programming language, we explore various statistical measures that shed light on the distribution, variability, and overall patterns of retweets.</p>
+</div>
+<div id="calculating-the-range-of-retweets" class="section level3" number="10.1.5">
+<h3>
+<span class="header-section-number">10.1.5</span> Calculating the Range of Retweets<a class="anchor" aria-label="anchor" href="#calculating-the-range-of-retweets"><i class="fas fa-link"></i></a>
+</h3>
+<p>To gauge the spread of retweets across posts, we calculate the range, which is the difference between the maximum and minimum values of retweets:</p>
+<div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">retweets_range</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>Range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">Retweets_Count</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">Retweets_Count</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">retweets_range</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>Range
+&lt;int&gt;
+2318</code></pre>
+<p>This computation, <code>max(Retweets_Count, na.rm = TRUE) - min(Retweets_Count, na.rm = TRUE)</code>, signifies the extent of variability within the retweets count, ignoring any missing data (<code>na.rm = TRUE</code>). A range of 2318 indicates a substantial disparity between the most and least shared posts. While informative on variability, the range does not account for the distribution between these extremes.</p>
+</div>
+<div id="standard-deviation-of-retweets" class="section level3" number="10.1.6">
+<h3>
+<span class="header-section-number">10.1.6</span> Standard Deviation of Retweets<a class="anchor" aria-label="anchor" href="#standard-deviation-of-retweets"><i class="fas fa-link"></i></a>
+</h3>
+<p>To further understand the variability, we calculate the standard deviation, which measures the average distance of each data point from the mean:</p>
+<div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">sd_retweets</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>sd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">Retweets_Count</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">sd_retweets</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>sd
+&lt;dbl&gt;
+61.19467</code></pre>
+<p>The function <code>sd(Retweets_Count, na.rm = TRUE)</code> computes the standard deviation, with missing values omitted. A standard deviation of 61.19467 suggests retweets are, on average, spread out by about 61 units from the mean, providing insights into the distribution’s dispersion around the mean retweet count.</p>
+</div>
+<div id="summary-statistics" class="section level3" number="10.1.7">
+<h3>
+<span class="header-section-number">10.1.7</span> Summary Statistics<a class="anchor" aria-label="anchor" href="#summary-statistics"><i class="fas fa-link"></i></a>
+</h3>
+<p>A comprehensive overview of retweets is given by the <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> function:</p>
+<div class="sourceCode" id="cb139"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">fast_fashion_nrc</span><span class="op">$</span><span class="va">Retweets_Count</span><span class="op">)</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   0.00    6.00   18.00   22.81   32.00 2318.00 </code></pre>
+<p>This output presents a snapshot of the dataset’s distribution, including the minimum, first quartile, median, mean, third quartile, and maximum retweet counts. Notably, the median (18 retweets) differs from the mean (22.81 retweets), hinting at a skewed distribution. The quartiles further delineate the distribution, with 50% of the data falling between 6 and 32 retweets.</p>
+</div>
+<div id="detailed-distribution-analysis-with-skimr" class="section level3" number="10.1.8">
+<h3>
+<span class="header-section-number">10.1.8</span> Detailed Distribution Analysis with <code>skimr</code><a class="anchor" aria-label="anchor" href="#detailed-distribution-analysis-with-skimr"><i class="fas fa-link"></i></a>
+</h3>
+<p>For a more detailed analysis, we employ the <code>skimr</code> package:</p>
+<div class="sourceCode" id="cb141"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/skimr/">skimr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim</a></span><span class="op">(</span><span class="va">fast_fashion_nrc</span><span class="op">$</span><span class="va">Retweets_Count</span><span class="op">)</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>skim_variable n_missing complete_rate mean     sd      p0  p25 p50 p75 p100    hist
+1             data       0            1    22.80738 61.19467 0   6   18  32  2318    ▇▁▁▁▁</code></pre>
+<p>The <code><a href="https://docs.ropensci.org/skimr/reference/skim.html">skim()</a></code> function provides a succinct summary, reaffirming the mean and standard deviation calculations, and illustrates the distribution of retweets through quartiles and a histogram. The histogram, represented as <code>▇▁▁▁▁</code>, visually indicates the concentration of data towards the lower end of the retweet count, with a long tail extending towards the maximum (2318 retweets).</p>
+<p>In this section of the chapter, we explore the application of t-tests within the context of social media analytics for the fast fashion industry, using a dataset designated as <code>fast_fashion_nrc</code>. T-tests are statistical tests that compare the means of two groups to ascertain if they are significantly different from each other. They are particularly useful in social media analytics for comparing metrics such as sentiment scores, engagement rates, or any quantitative measure that could vary between two different conditions or groups.</p>
+</div>
+<div id="dataset-segmentation-by-brand" class="section level3" number="10.1.9">
+<h3>
+<span class="header-section-number">10.1.9</span> Dataset Segmentation by Brand<a class="anchor" aria-label="anchor" href="#dataset-segmentation-by-brand"><i class="fas fa-link"></i></a>
+</h3>
+<p>Initially, we segment our dataset into two subsets based on the brand associated with each social media post. This segmentation allows for focused comparisons between two prominent brands within the dataset, Gap and UNIQLO:</p>
+<div class="sourceCode" id="cb143"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Split data sets</span></span>
+<span><span class="va">brand_gap</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">brand</span> <span class="op">==</span> <span class="st">'Gap'</span><span class="op">)</span></span>
+<span><span class="va">brand_uniqlo</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">brand</span> <span class="op">==</span> <span class="st">'UNIQLO'</span><span class="op">)</span></span></code></pre></div>
+<p>The <code>filter</code> function from the dplyr package is used to create two subsets of the data, <code>brand_gap</code> and <code>brand_uniqlo</code>, by isolating posts related to each brand.</p>
+</div>
+<div id="independent-two-sample-t-test" class="section level3" number="10.1.10">
+<h3>
+<span class="header-section-number">10.1.10</span> Independent Two-Sample t-test<a class="anchor" aria-label="anchor" href="#independent-two-sample-t-test"><i class="fas fa-link"></i></a>
+</h3>
+<p>We then conduct an independent two-sample t-test to compare the sentiment scores associated with Gap and UNIQLO’s social media posts:</p>
+<div class="sourceCode" id="cb144"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">brand_gap</span><span class="op">$</span><span class="va">sentiment_score</span>, <span class="va">brand_uniqlo</span><span class="op">$</span><span class="va">sentiment_score</span><span class="op">)</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>    Welch Two Sample t-test
+
+data:  brand_gap$sentiment_score and brand_uniqlo$sentiment_score
+t = -19.097, df = 2532.2, p-value &lt; 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.262395 -1.027293
+sample estimates:
+mean of x mean of y 
+0.9840319 2.1288760 </code></pre>
+<p>The Welch Two Sample t-test, a variant of the t-test that does not assume equal variances between the two groups, indicates a significant difference in sentiment scores between Gap and UNIQLO posts. With a t-value of -19.097 and a practically zero p-value, we reject the null hypothesis that there is no difference in means, concluding a significant difference in sentiment scores. The negative t-value suggests that Gap’s sentiment scores are lower on average than those of UNIQLO. The confidence interval further specifies the estimated range of the difference in means, reinforcing the significant disparity.</p>
+</div>
+<div id="paired-sample-t-test" class="section level3" number="10.1.11">
+<h3>
+<span class="header-section-number">10.1.11</span> Paired Sample t-test<a class="anchor" aria-label="anchor" href="#paired-sample-t-test"><i class="fas fa-link"></i></a>
+</h3>
+<p>Next, we apply a paired sample t-test to compare two related metrics within the same dataset, specifically retweets and replies counts for posts:</p>
+<div class="sourceCode" id="cb146"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">paired_t_test_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/t.test.html">t.test</a></span><span class="op">(</span><span class="va">fast_fashion_nrc</span><span class="op">$</span><span class="va">Retweets_Count</span>, <span class="va">fast_fashion_nrc</span><span class="op">$</span><span class="va">Replies_Count</span>, paired <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">paired_t_test_result</span></span></code></pre></div>
+<p>Output:</p>
+<pre><code>    Paired t-test
+
+data:  fast_fashion_nrc$Retweets_Count and fast_fashion_nrc$Replies_Count
+t = -49.27, df = 4635, p-value &lt; 2.2e-16
+alternative hypothesis: true mean difference is not equal to 0
+95 percent confidence interval:
+ -72.39551 -66.85470
+sample estimates:
+mean difference 
+      -69.62511 </code></pre>
+<p>In the paired sample t-test, we assess whether the mean difference between each pair of observations (i.e., retweets and replies for the same post) is zero. The test yields a t-value of -49.27 and a p-value significantly less than 0.05, leading us to reject the null hypothesis and conclude a significant difference between the mean retweets and replies counts. The mean difference and its confidence interval suggest that, on average, there are significantly more replies than retweets per post, with the exact difference quantified in the output.</p>
+<p>In this section, we delve into the use of Analysis of Variance (ANOVA) and linear regression models to analyze social media data from the fast fashion industry, as captured in the <code>fast_fashion_nrc</code> dataset. These statistical methods are crucial for examining the influence of various factors on social media metrics, such as sentiment scores and likes, and for understanding the relationships between different variables.</p>
+</div>
+<div id="one-way-anova" class="section level3" number="10.1.12">
+<h3>
+<span class="header-section-number">10.1.12</span> One-Way ANOVA<a class="anchor" aria-label="anchor" href="#one-way-anova"><i class="fas fa-link"></i></a>
+</h3>
+<p>First, we conduct a one-way ANOVA to investigate the impact of brand affiliation (Gap, H&amp;M, UNIQLO, and ZARA) on the sentiment scores of social media posts:</p>
+<div class="sourceCode" id="cb148"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">one_way_aov</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">sentiment_score</span> <span class="op">~</span> <span class="va">brand</span>, data <span class="op">=</span> <span class="va">fast_fashion_nrc</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">one_way_aov</span><span class="op">)</span></span></code></pre></div>
+<p>The ANOVA results indicate a significant effect of brand on sentiment scores, with a highly significant p-value (&lt; 2.2e-16), suggesting that the mean sentiment scores differ across brands.</p>
+<p>Following the ANOVA, we apply the Tukey’s Honestly Significant Difference (HSD) test to pinpoint which specific brand comparisons are driving these differences:</p>
+<div class="sourceCode" id="cb149"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/TukeyHSD.html">TukeyHSD</a></span><span class="op">(</span><span class="va">one_way_aov</span><span class="op">)</span></span></code></pre></div>
+<p>The Tukey HSD test reveals significant differences between all pairs of brands, indicating distinct perceptions and engagements across the brands. For instance, UNIQLO has a higher mean sentiment score compared to Gap, while ZARA’s score is lower compared to UNIQLO, highlighting the nuanced brand sentiment landscape within the fast fashion industry.</p>
+</div>
+<div id="two-way-anova" class="section level3" number="10.1.13">
+<h3>
+<span class="header-section-number">10.1.13</span> Two-Way ANOVA<a class="anchor" aria-label="anchor" href="#two-way-anova"><i class="fas fa-link"></i></a>
+</h3>
+<p>Next, we expand our analysis to a two-way ANOVA to explore the combined effects of brand and image presence (categorized into 5 groups based on the image’s characteristics) on the likes received by posts:</p>
+<div class="sourceCode" id="cb150"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">two_way_aov</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">Likes_Count</span> <span class="op">~</span> <span class="va">brand</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">Image.s.</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">fast_fashion_nrc</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">two_way_aov</span><span class="op">)</span></span></code></pre></div>
+<p>The two-way ANOVA results underscore significant main effects for both brand and image characteristics on likes count, as well as a significant interaction effect between these two factors. This suggests that the impact of brand on likes is not uniform across different image characteristics, indicating a complex interplay between content elements in driving social media engagement.</p>
+<p>Tukey’s HSD test for the brand factor:</p>
+<div class="sourceCode" id="cb151"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/TukeyHSD.html">TukeyHSD</a></span><span class="op">(</span><span class="va">two_way_aov</span>, which <span class="op">=</span> <span class="st">"brand"</span><span class="op">)</span></span></code></pre></div>
+<p>This test highlights specific brand comparisons that significantly affect likes counts, further delineating the influence of brand identity on social media performance.</p>
+</div>
+<div id="simple-linear-regression" class="section level3" number="10.1.14">
+<h3>
+<span class="header-section-number">10.1.14</span> Simple Linear Regression<a class="anchor" aria-label="anchor" href="#simple-linear-regression"><i class="fas fa-link"></i></a>
+</h3>
+<p>We also employ a simple linear regression model to examine the relationship between post length and retweets count:</p>
+<div class="sourceCode" id="cb152"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">simple_lm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Retweets_Count</span> <span class="op">~</span> <span class="va">Post_Length</span>, data <span class="op">=</span> <span class="va">fast_fashion_nrc</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">simple_lm</span><span class="op">)</span></span></code></pre></div>
+<p>The regression output indicates no significant relationship between post length and retweets count (p-value: 0.998), suggesting that the length of a post does not predict the number of retweets it will receive.</p>
+</div>
+<div id="multiple-linear-regression" class="section level3" number="10.1.15">
+<h3>
+<span class="header-section-number">10.1.15</span> Multiple Linear Regression<a class="anchor" aria-label="anchor" href="#multiple-linear-regression"><i class="fas fa-link"></i></a>
+</h3>
+<p>Finally, a multiple linear regression model is fitted to explore the combined effects of post length, sentiment score, and post date on retweets count:</p>
+<div class="sourceCode" id="cb153"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">multi_lm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Retweets_Count</span> <span class="op">~</span> <span class="va">Post_Length</span> <span class="op">+</span> <span class="va">sentiment_score</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="va">Tweet_DateTime</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">fast_fashion_nrc</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">multi_lm</span><span class="op">)</span></span></code></pre></div>
+<p>This model reveals a significant negative relationship between sentiment score and retweets count, indicating that posts with lower sentiment scores tend to receive more retweets. The date of the post shows a marginally significant effect, hinting at temporal variations in retweet behavior.</p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="sentiment-analysis-basics.html"><span class="header-section-number">9</span> Sentiment Analysis Basics</a></div>
+<div class="next"><a href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to Canva for Social Media Campaigns</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#statistical-analysis"><span class="header-section-number">10</span> Statistical Analysis</a></li>
+<li>
+<a class="nav-link" href="#load-data"><span class="header-section-number">10.1</span> Load Data</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introduction-to-required-libraries-1">Introduction to Required Libraries</a></li>
+<li><a class="nav-link" href="#data-ingestion-1">Data Ingestion</a></li>
+<li><a class="nav-link" href="#data-annotation-1">Data Annotation</a></li>
+<li><a class="nav-link" href="#setting-the-stage-with-r"><span class="header-section-number">10.1.1</span> Setting the Stage with R</a></li>
+<li><a class="nav-link" href="#analyzing-likes-mean-calculation"><span class="header-section-number">10.1.2</span> Analyzing Likes: Mean Calculation</a></li>
+<li><a class="nav-link" href="#exploring-post-length-median-calculation"><span class="header-section-number">10.1.3</span> Exploring Post Length: Median Calculation</a></li>
+<li><a class="nav-link" href="#investigating-replies-mode-calculation"><span class="header-section-number">10.1.4</span> Investigating Replies: Mode Calculation</a></li>
+<li><a class="nav-link" href="#calculating-the-range-of-retweets"><span class="header-section-number">10.1.5</span> Calculating the Range of Retweets</a></li>
+<li><a class="nav-link" href="#standard-deviation-of-retweets"><span class="header-section-number">10.1.6</span> Standard Deviation of Retweets</a></li>
+<li><a class="nav-link" href="#summary-statistics"><span class="header-section-number">10.1.7</span> Summary Statistics</a></li>
+<li><a class="nav-link" href="#detailed-distribution-analysis-with-skimr"><span class="header-section-number">10.1.8</span> Detailed Distribution Analysis with skimr</a></li>
+<li><a class="nav-link" href="#dataset-segmentation-by-brand"><span class="header-section-number">10.1.9</span> Dataset Segmentation by Brand</a></li>
+<li><a class="nav-link" href="#independent-two-sample-t-test"><span class="header-section-number">10.1.10</span> Independent Two-Sample t-test</a></li>
+<li><a class="nav-link" href="#paired-sample-t-test"><span class="header-section-number">10.1.11</span> Paired Sample t-test</a></li>
+<li><a class="nav-link" href="#one-way-anova"><span class="header-section-number">10.1.12</span> One-Way ANOVA</a></li>
+<li><a class="nav-link" href="#two-way-anova"><span class="header-section-number">10.1.13</span> Two-Way ANOVA</a></li>
+<li><a class="nav-link" href="#simple-linear-regression"><span class="header-section-number">10.1.14</span> Simple Linear Regression</a></li>
+<li><a class="nav-link" href="#multiple-linear-regression"><span class="header-section-number">10.1.15</span> Multiple Linear Regression</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-03-27.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
