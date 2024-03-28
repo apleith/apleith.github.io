@@ -573,7 +573,7 @@ To check which packages are currently loaded in the session, you can use the `se
 sessionInfo()
 #> R version 4.3.2 (2023-10-31 ucrt)
 #> Platform: x86_64-w64-mingw32/x64 (64-bit)
-#> Running under: Windows 10 x64 (build 19045)
+#> Running under: Windows 11 x64 (build 22631)
 #> 
 #> Matrix products: default
 #> 
@@ -593,13 +593,13 @@ sessionInfo()
 #> [6] methods   base     
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] vctrs_0.6.5       cli_3.6.1         knitr_1.45       
-#>  [4] rlang_1.1.1       xfun_0.41         generics_0.1.3   
+#>  [1] vctrs_0.6.4       cli_3.6.1         knitr_1.45       
+#>  [4] rlang_1.1.2       xfun_0.41         generics_0.1.3   
 #>  [7] glue_1.6.2        colorspace_2.1-0  htmltools_0.5.7  
-#> [10] scales_1.3.0      fansi_1.0.6       rmarkdown_2.25   
+#> [10] scales_1.2.1      fansi_1.0.5       rmarkdown_2.25   
 #> [13] grid_4.3.2        evaluate_0.23     munsell_0.5.0    
-#> [16] tibble_3.2.1      fastmap_1.1.1     yaml_2.3.8       
-#> [19] lifecycle_1.0.4   bookdown_0.37     compiler_4.3.2   
+#> [16] tibble_3.2.1      fastmap_1.1.1     yaml_2.3.7       
+#> [19] lifecycle_1.0.4   bookdown_0.36     compiler_4.3.2   
 #> [22] dplyr_1.1.4       pkgconfig_2.0.3   rstudioapi_0.15.0
 #> [25] digest_0.6.33     R6_2.5.1          tidyselect_1.2.0 
 #> [28] utf8_1.2.4        pillar_1.9.0      magrittr_2.0.3   
