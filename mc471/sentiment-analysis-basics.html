@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 9 Sentiment Analysis Basics | Social Media Analytics</title>
+<meta name="author" content="AP Leith">
+<meta name="description" content="9.1 Introduction In the digital age, social media platforms have emerged as the town squares of the internet—a place where opinions are freely shared, and narratives are crafted and disseminated...">
+<meta name="generator" content="bookdown 0.36 with bs4_book()">
+<meta property="og:title" content="Chapter 9 Sentiment Analysis Basics | Social Media Analytics">
+<meta property="og:type" content="book">
+<meta property="og:description" content="9.1 Introduction In the digital age, social media platforms have emerged as the town squares of the internet—a place where opinions are freely shared, and narratives are crafted and disseminated...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 9 Sentiment Analysis Basics | Social Media Analytics">
+<meta name="twitter:description" content="9.1 Introduction In the digital age, social media platforms have emerged as the town squares of the internet—a place where opinions are freely shared, and narratives are crafted and disseminated...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.6.0/transition.js"></script><script src="libs/bs3compat-0.6.0/tabs.js"></script><script src="libs/bs3compat-0.6.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="An R Guide for Media Researchers">Social Media Analytics</a>:
+        <small class="text-muted">An R Guide for Media Researchers</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Preface</a></li>
+<li><a class="" href="introduction-to-social-media-types.html"><span class="header-section-number">1</span> Introduction to Social Media Types</a></li>
+<li><a class="" href="fundamentals-of-social-media-platforms.html"><span class="header-section-number">2</span> Fundamentals of Social Media Platforms</a></li>
+<li><a class="" href="social-media-metrics-and-kpis.html"><span class="header-section-number">3</span> Social Media Metrics and KPIs</a></li>
+<li><a class="" href="studying-successful-social-media-campaigns.html"><span class="header-section-number">4</span> Studying Successful Social Media Campaigns</a></li>
+<li><a class="" href="data-collection-tools.html"><span class="header-section-number">5</span> Data Collection Tools</a></li>
+<li><a class="" href="introduction-to-r-and-rstudio.html"><span class="header-section-number">6</span> Introduction to R and RStudio</a></li>
+<li><a class="" href="data-storage-and-management.html"><span class="header-section-number">7</span> Data Storage and Management</a></li>
+<li><a class="" href="content-analysis-techniques.html"><span class="header-section-number">8</span> Content Analysis Techniques</a></li>
+<li><a class="active" href="sentiment-analysis-basics.html"><span class="header-section-number">9</span> Sentiment Analysis Basics</a></li>
+<li><a class="" href="statistical-analysis.html"><span class="header-section-number">10</span> Statistical Analysis</a></li>
+<li><a class="" href="introduction-to-canva-for-social-media-campaigns.html"><span class="header-section-number">11</span> Introduction to Canva for Social Media Campaigns</a></li>
+<li><a class="" href="setting-smart-goals-for-social-media-campaigns.html"><span class="header-section-number">12</span> Setting SMART Goals for Social Media Campaigns</a></li>
+<li><a class="" href="swot-analysis-in-social-media-planning.html"><span class="header-section-number">13</span> SWOT Analysis in Social Media Planning</a></li>
+<li><a class="" href="developing-effective-social-media-campaign-timelines.html"><span class="header-section-number">14</span> Developing Effective Social Media Campaign Timelines</a></li>
+<li><a class="" href="finalizing-and-presenting-the-social-media-campaign-pitch.html"><span class="header-section-number">15</span> Finalizing and Presenting the Social Media Campaign Pitch</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="sentiment-analysis-basics" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> Sentiment Analysis Basics<a class="anchor" aria-label="anchor" href="#sentiment-analysis-basics"><i class="fas fa-link"></i></a>
+</h1>
+<div id="introduction-1" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> Introduction<a class="anchor" aria-label="anchor" href="#introduction-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the digital age, social media platforms have emerged as the town squares of the internet—a place where opinions are freely shared, and narratives are crafted and disseminated by individuals and brands alike. Amidst this vast expanse of digital conversation, sentiment analysis stands out as a critical tool, offering insights into the public’s perceptions, emotions, and opinions. This chapter delves into the nuanced world of sentiment analysis within the context of social media analytics, guiding readers through the processes and methodologies that enable the transformation of raw social media data into meaningful sentiment insights.</p>
+<p>The journey begins with an exploration of sentiment analysis—what it is, why it matters, and how it can be leveraged to glean insights from the cacophony of voices on social media platforms. We discuss the theoretical underpinnings of sentiment analysis, including the psychological and linguistic theories that inform our understanding of sentiment and emotion in text. From the technical perspective, we cover the spectrum of approaches to sentiment analysis, from rule-based methods leveraging sentiment lexicons to sophisticated machine learning algorithms that learn from large datasets.</p>
+<p>Following the theoretical overview, the chapter transitions to practical applications, focusing on the fast fashion industry as a case study. We introduce the R programming language as a powerful tool for performing sentiment analysis, highlighting its rich ecosystem of packages designed for data manipulation, text mining, and visualization. Through a series of code examples, we demonstrate the process of cleaning and preprocessing tweet data, a necessary step to ensure the accuracy and reliability of sentiment analysis.</p>
+<p>Key to our practical exploration is the use of the NRC Word-Emotion Association Lexicon, a resource that categorizes words into sentiment and emotion categories. We show how to customize this lexicon to suit specific analytical needs, such as excluding brand names that may skew analysis results. Our guide includes detailed instructions for mapping tweet content to lexicon entries, compiling sentiment scores, and normalizing these scores to facilitate comparative analysis across brands.</p>
+<p>As we dive deeper into the analysis, we emphasize the importance of visualizing sentiment data to uncover trends and patterns. Using R’s visualization capabilities, we illustrate how to create compelling graphics, including bar plots that compare sentiment scores across brands and radar charts that display the distribution of emotions for each brand. These visualizations serve as a lens through which we can observe the shifting sands of public sentiment over time.</p>
+<p>Finally, we address the challenges and limitations of sentiment analysis, from the nuances of sarcasm and irony in text to the evolving nature of language on social media platforms. We conclude the chapter by reflecting on the future of sentiment analysis, considering advances in natural language processing and artificial intelligence that promise to enhance our ability to understand and interpret the emotions conveyed in text.</p>
+<p>This chapter aims to equip readers with the knowledge and skills to conduct sentiment analysis on social media data, offering a window into the public’s heart and mind. Whether you are a marketer seeking to gauge brand sentiment, a data scientist exploring the landscape of public opinion, or a student eager to learn about the intersection of technology and human emotion, this journey through sentiment analysis in social media analytics offers valuable insights and practical knowledge.</p>
+</div>
+<div id="sentiment-analysis-in-the-fast-fashion-industry-using-r" class="section level2" number="9.2">
+<h2>
+<span class="header-section-number">9.2</span> Sentiment Analysis in the Fast Fashion Industry Using R<a class="anchor" aria-label="anchor" href="#sentiment-analysis-in-the-fast-fashion-industry-using-r"><i class="fas fa-link"></i></a>
+</h2>
+<div id="introduction-to-required-libraries" class="section level3" number="9.2.1">
+<h3>
+<span class="header-section-number">9.2.1</span> Introduction to Required Libraries<a class="anchor" aria-label="anchor" href="#introduction-to-required-libraries"><i class="fas fa-link"></i></a>
+</h3>
+<p>To embark on sentiment analysis within the fast fashion industry, we must first set the stage with the right tools. This involves loading several R libraries, each serving a unique purpose in our data analysis journey.</p>
+<div class="sourceCode" id="cb102"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Loading the required libraries</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>  <span class="co"># For data manipulation and visualization</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/juliasilge/tidytext">tidytext</a></span><span class="op">)</span>   <span class="co"># For text mining tasks</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span>  <span class="co"># For manipulating date-time data</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/EmilHvitfeldt/textdata">textdata</a></span><span class="op">)</span>   <span class="co"># To access the NRC sentiment lexicon</span></span></code></pre></div>
+<p>The <code>tidyverse</code> collection of packages offers a versatile suite for data manipulation and visualization, streamlining many routine data analysis tasks. <code>tidytext</code> provides specialized functions for text mining, a vital step in sentiment analysis. With <code>lubridate</code>, handling and interpreting date-time information becomes intuitive, enhancing our ability to analyze trends over time. Lastly, <code>textdata</code> grants us access to various lexicons and text datasets, such as the NRC Word-Emotion Association Lexicon, an essential resource for quantifying the sentiment conveyed by text.</p>
+</div>
+<div id="data-ingestion" class="section level3" number="9.2.2">
+<h3>
+<span class="header-section-number">9.2.2</span> Data Ingestion<a class="anchor" aria-label="anchor" href="#data-ingestion"><i class="fas fa-link"></i></a>
+</h3>
+<p>The analysis begins by sourcing tweet datasets corresponding to several key players in the fast fashion industry.</p>
+<div class="sourceCode" id="cb103"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Reading in the data for each brand</span></span>
+<span><span class="va">gap</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/gap.csv"</span><span class="op">)</span></span>
+<span><span class="va">hm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/hm.csv"</span><span class="op">)</span></span>
+<span><span class="va">uniqlo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/uniqlo_uk.csv"</span><span class="op">)</span></span>
+<span><span class="va">zara</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data/zara.csv"</span><span class="op">)</span></span></code></pre></div>
+<p>In this step, we read the tweet data for each brand from CSV files into R. Each dataset contains a wealth of information extracted from social media, serving as a rich source for sentiment analysis.</p>
+</div>
+<div id="data-annotation" class="section level3" number="9.2.3">
+<h3>
+<span class="header-section-number">9.2.3</span> Data Annotation<a class="anchor" aria-label="anchor" href="#data-annotation"><i class="fas fa-link"></i></a>
+</h3>
+<p>Once the datasets are loaded, we need to distinguish tweets from each brand within our unified analysis framework.</p>
+<div class="sourceCode" id="cb104"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Annotating data with brand names</span></span>
+<span><span class="va">gap</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"Gap"</span></span>
+<span><span class="va">hm</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"H&amp;M"</span></span>
+<span><span class="va">uniqlo</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"UNIQLO"</span></span>
+<span><span class="va">zara</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="st">"ZARA"</span></span></code></pre></div>
+<p>Here, we append a new column to each brand’s dataset, labeling the tweets accordingly. This annotation allows us to retain the brand identity even after merging the datasets, which is critical for brand-specific sentiment analysis.</p>
+</div>
+<div id="data-merging" class="section level3 unnumbered">
+<h3>Data Merging<a class="anchor" aria-label="anchor" href="#data-merging"><i class="fas fa-link"></i></a>
+</h3>
+<p>The final preparation step before analysis is to merge the datasets into a singular dataset.</p>
+<div class="sourceCode" id="cb105"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Merging datasets into a single dataframe</span></span>
+<span><span class="va">fast_fashion</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">gap</span>, <span class="va">hm</span>, <span class="va">uniqlo</span>, <span class="va">zara</span><span class="op">)</span></span></code></pre></div>
+<p>Utilizing <code>bind_rows</code> from the <code>dplyr</code> package ensures that our data from multiple sources is combined seamlessly into one dataframe. This integrated data structure enables us to conduct comprehensive sentiment analysis across multiple brands simultaneously, comparing and contrasting the public perception of each brand in the fast fashion industry.</p>
+</div>
+<div id="data-preprocessing" class="section level3 unnumbered">
+<h3>Data Preprocessing<a class="anchor" aria-label="anchor" href="#data-preprocessing"><i class="fas fa-link"></i></a>
+</h3>
+<p>To extract meaningful insights from tweet data, it’s imperative to clean and preprocess the text. This process involves removing extraneous content and standardizing the data format.</p>
+<div class="sourceCode" id="cb106"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Streamlining the cleaning and preprocessing of tweet content</span></span>
+<span><span class="va">fast_fashion</span> <span class="op">&lt;-</span> <span class="va">fast_fashion</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Tweet_Content <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="va">Tweet_Content</span>, <span class="st">"&amp;amp"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"(RT|via)((?:\\b\\W*@\\w+)+)"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"@\\w+"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"[[:punct:]]"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"[[:digit:]]"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"http\\w+"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"[ \t]{2,}"</span>, <span class="st">" "</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_trim.html">str_trim</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://rdrr.io/r/base/iconv.html">iconv</a></span><span class="op">(</span><span class="st">"UTF-8"</span>, <span class="st">"ASCII"</span>, sub<span class="op">=</span><span class="st">""</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>In this code snippet, the <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function from <code>dplyr</code> and various <code><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all()</a></code> functions from <code>stringr</code> are utilized to remove HTML entities, retweet and via texts, usernames, punctuation, numbers, URLs, and extra whitespace. The <code><a href="https://stringr.tidyverse.org/reference/str_trim.html">str_trim()</a></code> function trims whitespace from the beginning and end of tweets, and <code><a href="https://rdrr.io/r/base/iconv.html">iconv()</a></code> converts the text encoding from UTF-8 to ASCII, replacing any non-ASCII characters with an empty string. These steps are crucial in creating a clean text corpus for analysis.</p>
+</div>
+<div id="lexicon-acquisition" class="section level3" number="9.2.4">
+<h3>
+<span class="header-section-number">9.2.4</span> Lexicon Acquisition<a class="anchor" aria-label="anchor" href="#lexicon-acquisition"><i class="fas fa-link"></i></a>
+</h3>
+<p>For sentiment analysis, we utilize the NRC Word-Emotion Association Lexicon, which associates words with sentiment and emotion categories.</p>
+<div class="sourceCode" id="cb107"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Leveraging the NRC sentiment lexicon for analysis</span></span>
+<span><span class="va">nrc_lexicon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/get_sentiments.html">get_sentiments</a></span><span class="op">(</span><span class="st">"nrc"</span><span class="op">)</span> </span></code></pre></div>
+<p>The <code><a href="https://rdrr.io/pkg/tidytext/man/get_sentiments.html">get_sentiments()</a></code> function retrieves the lexicon, providing a foundational dataset for identifying sentiments within the tweets. This lexicon will enable us to evaluate the emotional content of the tweets quantitatively.</p>
+</div>
+<div id="sentiment-mapping" class="section level3" number="9.2.5">
+<h3>
+<span class="header-section-number">9.2.5</span> Sentiment Mapping<a class="anchor" aria-label="anchor" href="#sentiment-mapping"><i class="fas fa-link"></i></a>
+</h3>
+<p>The following code breaks down tweet content into individual words and matches them with sentiment categories from the NRC lexicon.</p>
+<div class="sourceCode" id="cb108"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Mapping tweet words to lexicon entries and analyzing sentiment</span></span>
+<span><span class="va">fast_fashion_sentiment</span> <span class="op">&lt;-</span> <span class="va">fast_fashion</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html">unnest_tokens</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">Tweet_Content</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">nrc_lexicon</span>, by <span class="op">=</span> <span class="st">"word"</span><span class="op">)</span></span></code></pre></div>
+<p><code><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html">unnest_tokens()</a></code> tokenizes the tweets into individual words, and <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join()</a></code> merges these words with the NRC lexicon. This operation effectively tags each word with its associated sentiment(s), laying the groundwork for sentiment score computation.</p>
+</div>
+<div id="sentiment-score-compilation" class="section level3" number="9.2.6">
+<h3>
+<span class="header-section-number">9.2.6</span> Sentiment Score Compilation<a class="anchor" aria-label="anchor" href="#sentiment-score-compilation"><i class="fas fa-link"></i></a>
+</h3>
+<p>Finally, we compile sentiment scores for each brand by counting the number of occurrences of each sentiment and normalizing these counts.</p>
+<div class="sourceCode" id="cb109"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Compiling sentiment scores by brand</span></span>
+<span><span class="va">sentiment_scores</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_sentiment</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">brand</span>, <span class="va">sentiment</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span><span class="op">(</span><span class="va">sentiment</span>, <span class="va">n</span>, fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Total <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/colSums.html">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="op">~</span> <span class="va">.</span> <span class="op">/</span> <span class="va">Total</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">Total</span><span class="op">)</span></span></code></pre></div>
+<p>Here, <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> aggregates the number of each sentiment for each brand, and <code><a href="https://tidyr.tidyverse.org/reference/spread.html">spread()</a></code> reshapes the data, making it easier to analyze. The subsequent <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> operations calculate the total sentiment counts and normalize the counts by the total. The final sentiment scores represent the relative frequency of each sentiment for each brand.</p>
+<p>Through these stages, we transform raw tweet data into structured, quantifiable sentiment scores, enabling a nuanced understanding of brand sentiment within the fast fashion industry. These scores can then inform various marketing and branding strategies, providing valuable insights into public perception and consumer sentiment.</p>
+</div>
+<div id="visualizing-overall-sentiment-by-brand" class="section level3" number="9.2.7">
+<h3>
+<span class="header-section-number">9.2.7</span> Visualizing Overall Sentiment by Brand<a class="anchor" aria-label="anchor" href="#visualizing-overall-sentiment-by-brand"><i class="fas fa-link"></i></a>
+</h3>
+<p>Visualizing data is crucial for interpreting the results of sentiment analysis effectively. One method is to compare the overall sentiment for different brands. Here we utilize a bar plot to display the positive and negative sentiment scores side-by-side for each brand.</p>
+<div class="sourceCode" id="cb110"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Visualizing positive and negative sentiment scores by brand</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">sentiment_scores</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">brand</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">positive</span>, fill <span class="op">=</span> <span class="st">"Positive"</span><span class="op">)</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="op">-</span><span class="va">negative</span>, fill <span class="op">=</span> <span class="st">"Negative"</span><span class="op">)</span>, stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Positive"</span> <span class="op">=</span> <span class="st">"#5B84B1FF"</span>, <span class="st">"Negative"</span> <span class="op">=</span> <span class="st">"#FC766AFF"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Comparative Sentiment Scores by Brand"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Sentiment Score"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Brand"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>In this code, <code>ggplot</code> creates a bar plot where each brand’s positive sentiment scores are represented above the x-axis, and negative scores are mirrored below. This mirrored bar plot provides an immediate visual comparison, showcasing the balance of sentiment each brand receives on social media. By customizing the fill colors, we differentiate positive from negative sentiment, enabling an intuitive understanding of the data.</p>
+</div>
+<div id="refining-sentiment-lexicons" class="section level3" number="9.2.8">
+<h3>
+<span class="header-section-number">9.2.8</span> Refining Sentiment Lexicons<a class="anchor" aria-label="anchor" href="#refining-sentiment-lexicons"><i class="fas fa-link"></i></a>
+</h3>
+<p>Sentiment analysis often requires customization of lexicons to align with the context of the data. For instance, the word “gap” might be frequent in fashion-related tweets but not carry sentiment value. In such cases, we remove it from the lexicon:</p>
+<div class="sourceCode" id="cb111"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Adjusting the sentiment lexicon to exclude specific words</span></span>
+<span><span class="va">nrc_lexicon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/get_sentiments.html">get_sentiments</a></span><span class="op">(</span><span class="st">"nrc"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">word</span> <span class="op">!=</span> <span class="st">"gap"</span><span class="op">)</span></span></code></pre></div>
+<p>By filtering out the word “gap” from the NRC lexicon, we prevent it from skewing our sentiment analysis results, thus refining the accuracy of our study.</p>
+</div>
+<div id="sentiment-mapping-and-score-compilation" class="section level3" number="9.2.9">
+<h3>
+<span class="header-section-number">9.2.9</span> Sentiment Mapping and Score Compilation<a class="anchor" aria-label="anchor" href="#sentiment-mapping-and-score-compilation"><i class="fas fa-link"></i></a>
+</h3>
+<p>Once we have a tailored lexicon, we can map the tweet words to the lexicon entries and compile the sentiment scores for each brand:</p>
+<div class="sourceCode" id="cb112"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Mapping tweet content to the NRC sentiment lexicon</span></span>
+<span><span class="va">fast_fashion_sentiment</span> <span class="op">&lt;-</span> <span class="va">fast_fashion</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html">unnest_tokens</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">Tweet_Content</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">nrc_lexicon</span>, by <span class="op">=</span> <span class="st">"word"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Compiling normalized sentiment scores by brand</span></span>
+<span><span class="va">sentiment_scores</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_sentiment</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">brand</span>, <span class="va">sentiment</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/spread.html">spread</a></span><span class="op">(</span><span class="va">sentiment</span>, <span class="va">n</span>, fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Total <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/colSums.html">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">.</span>, <span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, <span class="op">~</span> <span class="va">.</span> <span class="op">/</span> <span class="va">Total</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">Total</span><span class="op">)</span></span></code></pre></div>
+<p>This code segment is at the heart of sentiment analysis. The <code>unnest_tokens</code> function from the <code>tidytext</code> package tokenizes the tweets, breaking down the text into individual words. These words are then matched to the sentiment lexicon using <code>inner_join</code>. After joining, we count and spread the sentiments across different columns corresponding to each sentiment type, creating a wide format of data. The <code>mutate</code> and <code>across</code> functions are then used to normalize these counts by dividing each sentiment count by the total count of sentiments, giving us a proportion of each sentiment for every brand.</p>
+<p>Normalization is essential as it allows us to compare sentiment distributions across brands regardless of the number of tweets per brand, ensuring a level comparison field. The resulting <code>sentiment_scores</code> dataframe provides a brand-wise sentiment summary, ready for further analysis and visualization.</p>
+</div>
+<div id="visualizing-the-distribution-of-emotions-by-brand" class="section level3" number="9.2.10">
+<h3>
+<span class="header-section-number">9.2.10</span> Visualizing the Distribution of Emotions by Brand<a class="anchor" aria-label="anchor" href="#visualizing-the-distribution-of-emotions-by-brand"><i class="fas fa-link"></i></a>
+</h3>
+<p>The distribution of various emotions across brands can be visualized using a bar plot, which allows for comparison of the prominence of different emotions in the social media presence of each brand.</p>
+<div class="sourceCode" id="cb113"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Transforming sentiment scores for visualization</span></span>
+<span><span class="va">emotion_scores_long</span> <span class="op">&lt;-</span> <span class="va">sentiment_scores</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">brand</span>, <span class="va">anger</span>, <span class="va">anticipation</span>, <span class="va">disgust</span>, <span class="va">fear</span>, <span class="va">joy</span>, <span class="va">sadness</span>, <span class="va">surprise</span>, <span class="va">trust</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="op">-</span><span class="va">brand</span>, names_to <span class="op">=</span> <span class="st">"emotion"</span>, values_to <span class="op">=</span> <span class="st">"score"</span><span class="op">)</span></span></code></pre></div>
+<p>In this transformation, <code>pivot_longer</code> reshapes the data from wide to long format. Each row now corresponds to a single emotion score for a brand, making it suitable for plotting.</p>
+<div class="sourceCode" id="cb114"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Creating a bar plot for emotion distribution by brand</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">emotion_scores_long</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">emotion</span>, y <span class="op">=</span> <span class="va">score</span>, fill <span class="op">=</span> <span class="va">brand</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span>, position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Set3"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Emotion Distribution by Brand"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Emotion"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Score"</span>,</span>
+<span>       fill <span class="op">=</span> <span class="st">"Brand"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>This <code>ggplot</code> bar plot visualizes the score of each emotion by brand, with the emotions on the y-axis and their corresponding scores on the x-axis. The use of <code><a href="https://ggplot2.tidyverse.org/reference/coord_flip.html">coord_flip()</a></code> swaps the axes, making the chart more readable, especially when dealing with long emotion labels. The <code>scale_fill_brewer</code> function applies a color palette that helps distinguish between brands visually.</p>
+<p>This visualization uncovers which emotions are most frequently associated with each brand, providing valuable insights into public sentiment that can inform marketing strategies and brand management.</p>
+</div>
+<div id="introduction-to-radar-chart-visualization" class="section level3" number="9.2.11">
+<h3>
+<span class="header-section-number">9.2.11</span> Introduction to Radar Chart Visualization<a class="anchor" aria-label="anchor" href="#introduction-to-radar-chart-visualization"><i class="fas fa-link"></i></a>
+</h3>
+<p>Radar charts, also known as spider or web charts, offer a compelling way to display multivariate data in the form of a two-dimensional chart of three or more quantitative variables. They are particularly useful for visualizing performance analysis or survey data and, in our context, the distribution of sentiment across different emotional dimensions for brands in the fast fashion industry.</p>
+</div>
+<div id="preparing-data-for-radar-charts" class="section level3" number="9.2.12">
+<h3>
+<span class="header-section-number">9.2.12</span> Preparing Data for Radar Charts<a class="anchor" aria-label="anchor" href="#preparing-data-for-radar-charts"><i class="fas fa-link"></i></a>
+</h3>
+<p>For a radar chart, data must be normalized to ensure each variable contributes equally to the final plot. Normalization scales the variables to a range of [0, 1], allowing for a fair comparison across different emotions.</p>
+<div class="sourceCode" id="cb115"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://minato.sip21c.org/msb/">fmsb</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Normalize the data for radar chart which requires data to be in [0,1] for all variables</span></span>
+<span><span class="va">normalize_sentiments</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">scores</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="op">(</span><span class="va">scores</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">scores</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">scores</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">scores</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="va">sentiment_scores_norm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">sentiment_scores</span><span class="op">[</span>, <span class="op">-</span><span class="fl">1</span><span class="op">]</span>, <span class="va">normalize_sentiments</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">sentiment_scores_norm</span><span class="op">$</span><span class="va">brand</span> <span class="op">&lt;-</span> <span class="va">sentiment_scores</span><span class="op">$</span><span class="va">brand</span>  <span class="co"># Add the brand column back</span></span></code></pre></div>
+<p>In this code segment, the <code>normalize_sentiments</code> function is defined to rescale sentiment scores. We then apply this function to each sentiment score column within our <code>sentiment_scores</code> data frame, excluding the <code>brand</code> column, and reattach the <code>brand</code> column afterward.</p>
+</div>
+<div id="customizing-radar-chart-appearance" class="section level3 unnumbered">
+<h3>Customizing Radar Chart Appearance<a class="anchor" aria-label="anchor" href="#customizing-radar-chart-appearance"><i class="fas fa-link"></i></a>
+</h3>
+<p>Next, we define the aesthetics for the radar charts by setting the fill colors with transparency and the line colors for each brand.</p>
+<div class="sourceCode" id="cb116"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Define fill and line colors with transparency for visual distinction</span></span>
+<span><span class="va">colors_fill</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://scales.r-lib.org/reference/alpha.html">alpha</a></span><span class="op">(</span><span class="st">"#fabed4"</span>, <span class="fl">0.3</span><span class="op">)</span>,</span>
+<span>                 <span class="fu"><a href="https://scales.r-lib.org/reference/alpha.html">alpha</a></span><span class="op">(</span><span class="st">"#ffd8b1"</span>, <span class="fl">0.3</span><span class="op">)</span>,</span>
+<span>                 <span class="fu"><a href="https://scales.r-lib.org/reference/alpha.html">alpha</a></span><span class="op">(</span><span class="st">"#aaffc3"</span>, <span class="fl">0.3</span><span class="op">)</span>,</span>
+<span>                 <span class="fu"><a href="https://scales.r-lib.org/reference/alpha.html">alpha</a></span><span class="op">(</span><span class="st">"#dcbeff"</span>, <span class="fl">0.3</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">colors_line</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#fabed4"</span>, <span class="st">"#ffd8b1"</span>, <span class="st">"#aaffc3"</span>, <span class="st">"#dcbeff"</span><span class="op">)</span></span></code></pre></div>
+<p>The <code><a href="https://scales.r-lib.org/reference/alpha.html">alpha()</a></code> function from the <code>scales</code> package adds transparency to the fill colors, enhancing the visual overlay of the radar charts. The <code>colors_fill</code> vector specifies the fill colors with adjusted alpha for transparency, while <code>colors_line</code> contains corresponding opaque colors for the outlines of each radar chart.</p>
+</div>
+<div id="constructing-radar-charts" class="section level3 unnumbered">
+<h3>Constructing Radar Charts<a class="anchor" aria-label="anchor" href="#constructing-radar-charts"><i class="fas fa-link"></i></a>
+</h3>
+<p>The primary function to create radar charts for each brand is <code>create_radar_chart</code>. It extracts the data for a given brand, adds necessary columns for plotting, and then plots the radar chart using the <code>radarchart</code> function from the <code>fmsb</code> package.</p>
+<div class="sourceCode" id="cb117"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Function to generate radar charts for each brand</span></span>
+<span><span class="va">create_radar_chart</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">brand_name</span>, <span class="va">colors_fill</span>, <span class="va">colors_line</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">brand_data</span> <span class="op">&lt;-</span> <span class="va">sentiment_scores_norm</span><span class="op">[</span><span class="va">sentiment_scores_norm</span><span class="op">$</span><span class="va">brand</span> <span class="op">==</span> <span class="va">brand_name</span>, <span class="op">]</span></span>
+<span>  </span>
+<span>  <span class="co"># Add columns for the maximum and minimum values required by radarchart</span></span>
+<span>  <span class="va">brand_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://amices.org/mice/reference/cbind.html">rbind</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">brand_data</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span><span class="op">)</span>,  <span class="co"># Max values row, assuming normalized data</span></span>
+<span>                      <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">brand_data</span><span class="op">)</span> <span class="op">-</span> <span class="fl">1</span><span class="op">)</span>,  <span class="co"># Min values row</span></span>
+<span>                      <span class="va">brand_data</span><span class="op">[</span><span class="op">-</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>               <span class="co"># Data without the brand column</span></span>
+<span>  </span>
+<span>  <span class="co"># Creating the radar chart</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/fmsb/man/radarchart.html">radarchart</a></span><span class="op">(</span><span class="va">brand_data</span>, </span>
+<span>             axistype <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>             seg <span class="op">=</span> <span class="fl">5</span>,</span>
+<span>             pcol <span class="op">=</span> <span class="va">colors_line</span><span class="op">[</span><span class="va">brands</span> <span class="op">==</span> <span class="va">brand_name</span><span class="op">]</span>, </span>
+<span>             pfcol <span class="op">=</span> <span class="va">colors_fill</span><span class="op">[</span><span class="va">brands</span> <span class="op">==</span> <span class="va">brand_name</span><span class="op">]</span>,</span>
+<span>             plwd <span class="op">=</span> <span class="fl">2</span>,</span>
+<span>             cglcol <span class="op">=</span> <span class="st">"#cccccc"</span>, </span>
+<span>             cglty <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>             axislabcol <span class="op">=</span> <span class="st">"#cccccc"</span>,</span>
+<span>             caxislabels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0.2</span><span class="op">)</span>,</span>
+<span>             cglwd <span class="op">=</span> <span class="fl">0.8</span>,</span>
+<span>             vlcex <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ggtitle</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">brand_name</span>, <span class="st">"Sentiment Analysis"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>This function takes the brand name and color settings as arguments, prepares the brand-specific data for the radar chart, and draws the chart. It also sets the number of axis segments (<code>seg</code>), customizes the line colors (<code>pcol</code>), the fill colors (<code>pfcol</code>), and other stylistic elements of the grid lines and labels. The title of each chart is set to include the brand name, making it clear which brand’s sentiment analysis is being visualized.</p>
+</div>
+<div id="displaying-radar-charts-for-all-brands" class="section level3 unnumbered">
+<h3>Displaying Radar Charts for All Brands<a class="anchor" aria-label="anchor" href="#displaying-radar-charts-for-all-brands"><i class="fas fa-link"></i></a>
+</h3>
+<p>To visualize the sentiment distributions for all brands in our dataset, we iterate through the list of unique brands, applying the <code>create_radar_chart</code> function to each.</p>
+<div class="sourceCode" id="cb118"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">brands</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">sentiment_scores_norm</span><span class="op">$</span><span class="va">brand</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Configure the plotting area to display multiple charts</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Set up a 2x2 grid layout</span></span>
+<span></span>
+<span><span class="co"># Loop through the brands and create a radar chart for each</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">brand</span> <span class="kw">in</span> <span class="va">brands</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">create_radar_chart</span><span class="op">(</span><span class="va">brand</span>, <span class="va">colors_fill</span>, <span class="va">colors_line</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Reset graphics parameters to default</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mfrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>In the loop, we call <code>create_radar_chart</code> for each brand, which will create and plot a radar chart on a 2x2 grid layout. The <code>par(mfrow = c(2, 2))</code> function call configures the plotting area to accommodate four charts (one for each brand). After plotting, <code>par(mfrow = c(1, 1))</code> is used to reset the plotting area to default.</p>
+<p>The resulting visualizations provide a multi-faceted view of the sentiment profiles for the different brands, facilitating comparative analysis and deeper insights into brand perception in the social media landscape.</p>
+<p>Through the normalization process and careful visualization design, this chapter illustrates how radar charts can be an effective tool for displaying complex sentiment data in an accessible and visually appealing format.</p>
+</div>
+<div id="cleaning-and-preprocessing-social-media-data" class="section level3 unnumbered">
+<h3>Cleaning and Preprocessing Social Media Data<a class="anchor" aria-label="anchor" href="#cleaning-and-preprocessing-social-media-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>The first step in analyzing social media data involves cleaning and preprocessing the text to remove noise and standardize the format for analysis.</p>
+<div class="sourceCode" id="cb119"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://stringr.tidyverse.org">stringr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">fast_fashion</span> <span class="op">&lt;-</span> <span class="va">fast_fashion</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Tweet_Content <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="va">Tweet_Content</span>, <span class="st">"&amp;amp"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"(RT|via)((?:\\b\\W*@\\w+)+)"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"@\\w+"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"[[:punct:]]"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"[[:digit:]]"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"http\\w+"</span>, <span class="st">""</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_replace.html">str_replace_all</a></span><span class="op">(</span><span class="st">"[ \t]{2,}"</span>, <span class="st">" "</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_trim.html">str_trim</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>           <span class="fu"><a href="https://rdrr.io/r/base/iconv.html">iconv</a></span><span class="op">(</span><span class="va">.</span>, <span class="st">"UTF-8"</span>, <span class="st">"ASCII"</span>, sub<span class="op">=</span><span class="st">""</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>In this section, we demonstrate how to use a combination of <code>str_replace_all</code> and <code>iconv</code> functions to remove unwanted characters and whitespace from the tweets. These steps include stripping HTML entities, retweets, mentions, punctuation, numbers, and hyperlinks. Such cleaning is vital for accurate sentiment analysis, as it focuses on the relevant text content.</p>
+</div>
+<div id="custom-sentiment-analysis" class="section level3 unnumbered">
+<h3>Custom Sentiment Analysis<a class="anchor" aria-label="anchor" href="#custom-sentiment-analysis"><i class="fas fa-link"></i></a>
+</h3>
+<p>Customizing sentiment analysis to the context of the data often yields more accurate results. For instance, a brand name may not carry intrinsic sentiment and should be excluded from the analysis.</p>
+<div class="sourceCode" id="cb120"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/juliasilge/tidytext">tidytext</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/mjockers/syuzhet">syuzhet</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Remove the word "Gap" from the Tweet_Content column before performing sentiment analysis</span></span>
+<span><span class="va">fast_fashion</span><span class="op">$</span><span class="va">Tweet_Content</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">"\\bGap\\b"</span>, <span class="st">""</span>, <span class="va">fast_fashion</span><span class="op">$</span><span class="va">Tweet_Content</span>, ignore.case <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Assuming get_nrc_sentiment() is your custom or a specific package function that requires a character vector</span></span>
+<span><span class="va">emotions_rm_vr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/syuzhet/man/get_nrc_sentiment.html">get_nrc_sentiment</a></span><span class="op">(</span><span class="va">fast_fashion</span><span class="op">$</span><span class="va">Tweet_Content</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Aggregate sentiment scores</span></span>
+<span><span class="va">emo_sum_rm_vr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colSums.html">colSums</a></span><span class="op">(</span><span class="va">emotions_rm_vr</span><span class="op">[</span>, <span class="op">-</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span>  <span class="co"># Assuming the first column is not a sentiment score (e.g., tweet ID or text)</span></span>
+<span><span class="va">emo_sum_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>emotion <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">emo_sum_rm_vr</span><span class="op">)</span>, count <span class="op">=</span> <span class="va">emo_sum_rm_vr</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">count</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>The script above details how to prepare tweet content for sentiment analysis by removing the brand name “Gap” and executing a custom function <code>get_nrc_sentiment</code> to retrieve sentiment scores for the remaining text.</p>
+</div>
+<div id="combining-sentiment-data-with-original-data" class="section level3 unnumbered">
+<h3>Combining Sentiment Data with Original Data<a class="anchor" aria-label="anchor" href="#combining-sentiment-data-with-original-data"><i class="fas fa-link"></i></a>
+</h3>
+<p>After obtaining sentiment scores, we combine them with the original data to maintain context and facilitate further analysis.</p>
+<div class="sourceCode" id="cb121"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fast_fashion_nrc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://amices.org/mice/reference/cbind.html">cbind</a></span><span class="op">(</span><span class="va">fast_fashion</span>, <span class="va">emotions_rm_vr</span><span class="op">)</span></span></code></pre></div>
+<p>This simple <code>cbind</code> operation attaches the sentiment data directly to the original <code>fast_fashion</code> dataset, preserving all original information for subsequent steps.</p>
+</div>
+<div id="calculating-sentiment-scores" class="section level3 unnumbered">
+<h3>Calculating Sentiment Scores<a class="anchor" aria-label="anchor" href="#calculating-sentiment-scores"><i class="fas fa-link"></i></a>
+</h3>
+<p>Sentiment scores can be computed as the difference between positive and negative sentiment counts to understand the overall sentiment polarity of the tweets.</p>
+<div class="sourceCode" id="cb122"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">fast_fashion_nrc</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>sentiment_score <span class="op">=</span> <span class="va">positive</span> <span class="op">-</span> <span class="va">negative</span><span class="op">)</span></span></code></pre></div>
+<p>The above mutation creates a new <code>sentiment_score</code> variable, providing a single, continuous measure of sentiment for each tweet, ranging from negative to positive.</p>
+</div>
+<div id="time-series-analysis-of-sentiment-scores" class="section level3 unnumbered">
+<h3>Time Series Analysis of Sentiment Scores<a class="anchor" aria-label="anchor" href="#time-series-analysis-of-sentiment-scores"><i class="fas fa-link"></i></a>
+</h3>
+<p>Time series analysis is a powerful tool for uncovering trends over time. In this case, we’re interested in understanding how sentiment towards each brand evolves daily.</p>
+<div class="sourceCode" id="cb123"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org">lubridate</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Ensure Tweet_DateTime is in Date format</span></span>
+<span><span class="va">fast_fashion_daily</span> <span class="op">&lt;-</span> <span class="va">fast_fashion_nrc</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Tweet_Date <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="va">Tweet_DateTime</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">brand</span>, <span class="va">Tweet_Date</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>daily_sentiment_score <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">sentiment_score</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">'drop'</span><span class="op">)</span></span></code></pre></div>
+<p>The <code>lubridate</code> package is used to ensure the date information is properly formatted, enabling grouping and summarization of sentiment scores by day and brand.</p>
+</div>
+<div id="visualizing-trends-in-sentiment-scores" class="section level3 unnumbered">
+<h3>Visualizing Trends in Sentiment Scores<a class="anchor" aria-label="anchor" href="#visualizing-trends-in-sentiment-scores"><i class="fas fa-link"></i></a>
+</h3>
+<p>The final visualization step involves creating a scatter plot overlaid with a regression line, highlighting trends in sentiment scores over time.</p>
+<div class="sourceCode" id="cb124"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">fast_fashion_daily</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Tweet_Date</span>, y <span class="op">=</span> <span class="va">daily_sentiment_score</span>, color <span class="op">=</span> <span class="va">brand</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Scatter points</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span>, se <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Overlay linear regression line, se = TRUE includes the confidence interval shading</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_color_brewer</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"Set1"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Daily Sentiment Score by Brand Over Time"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Date"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Average Daily Sentiment Score"</span>,</span>
+<span>       color <span class="op">=</span> <span class="st">"Brand"</span><span class="op">)</span> <span class="op">+</span></span>
+<span> </span>
+<span></span>
+<span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>This plot, created with <code>ggplot2</code>, displays scatter points representing daily average sentiment scores, with a regression line indicating the trend. The use of color distinguishes the brands, and the inclusion of a confidence interval around the regression line provides a visual indication of the reliability of the trend estimate.</p>
+<p>Through these stages, students learn the comprehensive process of sentiment analysis from raw social media data to insightful visualizations, demonstrating the power of R for data-driven decision-making in marketing and brand management.</p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="content-analysis-techniques.html"><span class="header-section-number">8</span> Content Analysis Techniques</a></div>
+<div class="next"><a href="statistical-analysis.html"><span class="header-section-number">10</span> Statistical Analysis</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#sentiment-analysis-basics"><span class="header-section-number">9</span> Sentiment Analysis Basics</a></li>
+<li><a class="nav-link" href="#introduction-1"><span class="header-section-number">9.1</span> Introduction</a></li>
+<li>
+<a class="nav-link" href="#sentiment-analysis-in-the-fast-fashion-industry-using-r"><span class="header-section-number">9.2</span> Sentiment Analysis in the Fast Fashion Industry Using R</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#introduction-to-required-libraries"><span class="header-section-number">9.2.1</span> Introduction to Required Libraries</a></li>
+<li><a class="nav-link" href="#data-ingestion"><span class="header-section-number">9.2.2</span> Data Ingestion</a></li>
+<li><a class="nav-link" href="#data-annotation"><span class="header-section-number">9.2.3</span> Data Annotation</a></li>
+<li><a class="nav-link" href="#data-merging">Data Merging</a></li>
+<li><a class="nav-link" href="#data-preprocessing">Data Preprocessing</a></li>
+<li><a class="nav-link" href="#lexicon-acquisition"><span class="header-section-number">9.2.4</span> Lexicon Acquisition</a></li>
+<li><a class="nav-link" href="#sentiment-mapping"><span class="header-section-number">9.2.5</span> Sentiment Mapping</a></li>
+<li><a class="nav-link" href="#sentiment-score-compilation"><span class="header-section-number">9.2.6</span> Sentiment Score Compilation</a></li>
+<li><a class="nav-link" href="#visualizing-overall-sentiment-by-brand"><span class="header-section-number">9.2.7</span> Visualizing Overall Sentiment by Brand</a></li>
+<li><a class="nav-link" href="#refining-sentiment-lexicons"><span class="header-section-number">9.2.8</span> Refining Sentiment Lexicons</a></li>
+<li><a class="nav-link" href="#sentiment-mapping-and-score-compilation"><span class="header-section-number">9.2.9</span> Sentiment Mapping and Score Compilation</a></li>
+<li><a class="nav-link" href="#visualizing-the-distribution-of-emotions-by-brand"><span class="header-section-number">9.2.10</span> Visualizing the Distribution of Emotions by Brand</a></li>
+<li><a class="nav-link" href="#introduction-to-radar-chart-visualization"><span class="header-section-number">9.2.11</span> Introduction to Radar Chart Visualization</a></li>
+<li><a class="nav-link" href="#preparing-data-for-radar-charts"><span class="header-section-number">9.2.12</span> Preparing Data for Radar Charts</a></li>
+<li><a class="nav-link" href="#customizing-radar-chart-appearance">Customizing Radar Chart Appearance</a></li>
+<li><a class="nav-link" href="#constructing-radar-charts">Constructing Radar Charts</a></li>
+<li><a class="nav-link" href="#displaying-radar-charts-for-all-brands">Displaying Radar Charts for All Brands</a></li>
+<li><a class="nav-link" href="#cleaning-and-preprocessing-social-media-data">Cleaning and Preprocessing Social Media Data</a></li>
+<li><a class="nav-link" href="#custom-sentiment-analysis">Custom Sentiment Analysis</a></li>
+<li><a class="nav-link" href="#combining-sentiment-data-with-original-data">Combining Sentiment Data with Original Data</a></li>
+<li><a class="nav-link" href="#calculating-sentiment-scores">Calculating Sentiment Scores</a></li>
+<li><a class="nav-link" href="#time-series-analysis-of-sentiment-scores">Time Series Analysis of Sentiment Scores</a></li>
+<li><a class="nav-link" href="#visualizing-trends-in-sentiment-scores">Visualizing Trends in Sentiment Scores</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Social Media Analytics</strong>: An R Guide for Media Researchers" was written by AP Leith<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. It was last built on 2024-03-26.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
