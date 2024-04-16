@@ -174,4 +174,10 @@ forecasting-and-scenario-planning
 the-role-of-continuous-monitoring
 revisiting-and-updating-swot-analysis
 developing-effective-social-media-campaign-timelines
+introduction-2
+components-of-a-social-media-campaign-timeline
+setting-up-timelines
+phases-of-campaign-timeline-development
+integration-of-analytical-tools-into-the-timeline
+risks-and-mitigation-in-timeline-planning
 finalizing-and-presenting-the-social-media-campaign-pitch

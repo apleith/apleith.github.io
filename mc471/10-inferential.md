@@ -10,9 +10,12 @@ To embark on sentiment analysis within the fast fashion industry, we must first 
 ```r
 # Loading the required libraries
 library(tidyverse)  # For data manipulation and visualization
+#> Warning: package 'tidyverse' was built under R version
+#> 4.3.3
+#> Warning: package 'dplyr' was built under R version 4.3.3
 #> ── Attaching core tidyverse packages ──── tidyverse 2.0.0 ──
-#> ✔ dplyr     1.1.3     ✔ readr     2.1.4
-#> ✔ forcats   1.0.0     ✔ stringr   1.5.0
+#> ✔ dplyr     1.1.4     ✔ readr     2.1.4
+#> ✔ forcats   1.0.0     ✔ stringr   1.5.1
 #> ✔ ggplot2   3.4.4     ✔ tibble    3.2.1
 #> ✔ lubridate 1.9.3     ✔ tidyr     1.3.0
 #> ✔ purrr     1.0.2     
@@ -23,7 +26,6 @@ library(tidyverse)  # For data manipulation and visualization
 library(tidytext)   # For text mining tasks
 library(lubridate)  # For manipulating date-time data
 library(textdata)   # To access the NRC sentiment lexicon
-#> Warning: package 'textdata' was built under R version 4.3.3
 ```
 
 The `tidyverse` collection of packages offers a versatile suite for data manipulation and visualization, streamlining many routine data analysis tasks. `tidytext` provides specialized functions for text mining, a vital step in sentiment analysis. With `lubridate`, handling and interpreting date-time information becomes intuitive, enhancing our ability to analyze trends over time. Lastly, `textdata` grants us access to various lexicons and text datasets, such as the NRC Word-Emotion Association Lexicon, an essential resource for quantifying the sentiment conveyed by text.
