@@ -1,36 +1,120 @@
-section {
-	display: grid;
-	width: 480px;
-	margin: auto;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&family=Oswald&family=Roboto&display=swap');
+
+/* Root variables for custom colors and fonts */
+:root {
+    --color1: #fef8f4; /* Background */
+    --color2: #645E5D; /* Text color */
+    --color3: #2b231e; /* Secondary text color */
+    --color4: #ea4335; /* Accent color */
+    --font1: "Oswald"; /* Font for headers */
+    --font2: "Fira Sans Extra Condensed"; /* Font for links */
+    --font3: "Roboto"; /* Font for body text */
 }
 
-.images-div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 1em;
+/* Reset and Basic Styling */
+body {
+    background-color: var(--color1); /* Light background */
+    font-family: var(--font3);
+    color: var(--color2); /* Darker text */
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    background-
 }
 
-.profile-div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: -.5em;
+/* Profile Section Styling */
+.profile-section {
+    padding: 30px 0;
 }
 
-.link-div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 2em;
-	border: 1px solid #4b4f5f;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	padding: 0;
-	padding-bottom: .5em;
+.profile-info h2 {
+    font-family: var(--font1);
+    color: var(--color4);
+    font-size: 5.25em;
+    margin: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
-h6 {
+.profile-info h3 {
+    font-family: var(--font2);
+    font-color: var(--color2);
+    font-weight: 750;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.profile-info h4 {
+	font-family: var(--font1);
+	color: var(--color4);
+	font-size: 2em;
+	margin: 25px 0 0 0;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.profile-info h5 {
+	font-family: var(--font1);
+	color: var(--color4);
 	font-size: 1.5em;
-	padding-top: .5em
+	margin: 20px 0 0 0;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.profile-info p {
+	font-family: var(--font3);
+	color: var(--color3);
+	font-weight: 750;
+}
+
+/* Office hours specific styling */
+.office-hours p {
+	margin: 5px 0;
+}
+
+/* Link Section Styling */
+.links-section {
+	margin-top: 20px;
+}
+
+/* Uniform button styling for all link items */
+.link-item {
+	margin: 10px 0;
+}
+
+.link-item a {
+	font-family: var(--font2);
+	font-size: 18px;
+	color: var(--color3); /* Accent color */
+	text-decoration: none;
+	border: 2px solid var(--color3);
+	/* Border around link buttons */
+	padding: 8px 16px;
+	border-radius: 5px;
+	display: inline-block;
+	width: 25%; /* Set uniform width for all buttons */
+	text-align: center;
+	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+	font-weight: 900;
+}
+
+/* Hover effect for link items */
+.link-item a:hover {
+	background-color: var(--color3);
+	color: var(--color4); /* Light text on dark background */
+	border: 2px solid var(--color1);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .profile-section, .links-section {
+        padding: 15px;
+    }
+
+    .link-item a {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
 }
