@@ -8,6 +8,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	font-size: 1.5em;
 }
 
 .container {
@@ -18,7 +19,9 @@ body {
 button {
 	margin: 10px;
 	color: #025474;
+	font-size: 1.5em;
 }
+
 p {
 	text-align: center;
 }

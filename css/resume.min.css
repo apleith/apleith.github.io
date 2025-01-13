@@ -1,200 +1,251 @@
-/*!
- * Start Bootstrap - Resume v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/resume)
- * Copyright 2013-2017 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
- */
+/* Global Variables and Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Lexend:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
- @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Changa&display=swap');
-
-
-:root{
-	--c: #025474;
-	--m: #eb943e;
-	--y: #4b4f5f;
-	--dg: #e8d6b9;
-	--lg: #5c544e;
-	--ca: "Changa";
-	--ps2: "Changa One";
+:root {
+	--white-color: #ffffff;
+	--10-grey-color: #f2f2f2;
+	--90-grey-color: #1a1a1a;
+	--black-color: #000000;
+	--accent-one: #69d2e7;
+	--accent-two: #b5d2ad;
+	--accent-three: #a388ee;
+	--accent-four: #e3a018;
+	--accent-five: #FF69B4;
+	--accent-six: #FF6B6B;
+	--header-font: "Lexend";
+	--body-font: "Public Sans";
 }
 
-body{
-	font-family: var(--ca);
-	color: var(--lg);
-	background-color: var(--dg)
+/* Global Styles */
+body {
+	font-family: var(--body-font);
+	color: var(--90-grey-color);
+	max-width: 1440px;
+	margin: auto;
+	font-size: 1em;
+	line-height: 2em;
 }
 
-@media (min-width:992px){
-	body{
-		padding-top:0;
-		padding-left:17rem;
-		
-	}
+.wrapper {
+	padding: 50px;
 }
 
-h1,h2,h3,h4,h5,h6{
-	font-family: var(--ps2);
-	font-weight:700;
-	text-transform:uppercase;
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--header-font);
+	font-weight: 700;
+	font-style: normal;
+	text-transform: uppercase;
 }
 
-h1{
-	font-size:6.5rem;
-	line-height:5.5rem;
-	color: var(--c);
+h1 {
+	font-weight: 900;
+	font-size: 2.5rem;
 }
 
-h2{
-	font-size:3.5rem;
-	color: var(--c);
+h2 {
+	font-size: 1.75rem;
 }
 
 h3 {
-	color: var(--m);
+	font-size: 1.25rem;
+	background-color: var(--10-grey-color);
 }
 
-h6 {
-	color: var(--y);
+a {
+	color: var(--90-grey-color);
 }
 
-ul li .author{
-	color: var(--c);
-	font-weight: 900;
+
+
+nav {
+	background-color: var(--10-grey-color);
 }
 
-.d-block{
-	font-family: var(--ps2);
-	color: #555555;
+nav .navbar.nav-item {
+	background-color: var(--10-grey-color) !important;
 }
 
-.subheading{
-	text-transform:uppercase;
-	font-weight:500;
-	font-family: var(--ps2);
-	font-size:1rem;
-	color:  var(--y);
+nav .navbar-nav .nav-item .nav-link {
+	font-size: 1em;
+	font-family: var(--body-font);
 }
 
-.list-social-icons a{
-	color: var(--c);
+.box-top {
+	background-color: var(--10-grey-color);
+	background-image: url("../images/buttons.svg");
+	background-repeat: no-repeat;
+	background-size: auto 300%;
+	border: 2px solid var(--90-grey-color);
+	border-bottom: none;
+	margin: 20px 0px -20px 0px;
+	border-radius: 20px 20px 0px 0px;
+	padding-right: 15px;
+	padding-top: 2px;
+	height: 2em;
 }
 
-.list-social-icons a:hover{
-	color: var(--m);
+.box-top h4 {
+	line-height: 1.5;
+	height: 1.25em;
+	font-size: 1em;
+	vertical-align: middle;
+	text-align: right;
+	font-family: var(--body-font);
+	font-weight: bolder;
+	text-transform: lowercase;
+	color: var(--90-grey-color);
 }
 
-.list-social-icons a .fa-lg{
-	font-size:1.75rem
+.text-box {
+	background-color: var(--10-grey-color);
+	padding: 20px 10px;
+	border: 2px solid var(--90-grey-color);
+	margin: 20px 0px;
 }
 
-.list-icons{
-	font-size:3rem;
+.grid-dots {
+	background-image: url(../images/grid.png);
+	background-size: 75%;
+	background-repeat: repeat;
+	background-position: 0 0;
+}
+
+.text-primary {
+	color: var(--90-grey-color) !important;
+}
+
+.filler {
+	height: 5vh;
 }
 
 .list-inline-item {
-	color: var(--lg);
+	font-size: 2em;
 }
 
-.list-inline-item:hover {
-	color: var(--m);
+section {
+	padding-top: 50px
 }
 
-#sideNav .list-icons .list-inline-item i:hover{
-	color: var(--m);
+#about h1 {
+	color: var(--accent-one);
+	font-size: 4em;
 }
 
-#sideNav .navbar-nav .nav-item .nav-link{
-	font-weight: 600;
-	text-transform:uppercase;
-	font-family:  var(--ps2);
-	color: var(--lg);
+#about h3 {
+	font-size: 2.5rem;
 }
 
-#sideNav .navbar-nav .nav-item .nav-link:hover{
-	color: var(--m);
+#about .box-top {
+	background-color: var(--accent-one);
 }
 
-#sideNav .navbar-nav .nav-item .nav-link:focus{
-	color: var(--m);
+#about .box-top:hover, #about .text-box:hover {
+	box-shadow: 10px 10px var(--accent-one);
 }
 
-@media (min-width:992px){
-	#sideNav{
-		text-align:center;
-		position:fixed;
-		top:0;
-		left:0;
-		display:flex;
-		flex-direction:column;
-		width:17rem;
-		height:100vh
-	}
-	#sideNav .navbar-brand{
-		display:flex;
-		margin:auto auto 0;
-		padding:.5rem
-	}
-	#sideNav .navbar-brand .img-profile{
-		max-width:10rem;
-		max-height:10rem;
-	}
-	#sideNav .navbar-collapse{
-		display:flex;
-		align-items:flex-start;
-		flex-grow:0;
-		width:100%;
-		margin-bottom:auto
-	}
-	#sideNav .navbar-collapse .navbar-nav{
-		flex-direction:column;
-		width:100%
-	}
-	#sideNav .navbar-collapse .navbar-nav .nav-item{
-		display:block
-	}
-	#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link{
-		display:block
-	}
+#about-link:hover {
+	border: var(--90-grey-color) 2px solid;
+	border-radius: 20px;
+  background-color: var(--accent-one);
+  color: var(--10-grey-color) !important;
 }
 
-section.resume-section{
-	border-bottom:1px solid  var(--lg);
-	padding-top:5rem!important;
-	padding-bottom:5rem!important
+#about a:hover {
+	color: var(--accent-one);
 }
 
-section.resume-section .resume-item .resume-date{
-	min-width:none
+#employment h1 {
+	color: var(--accent-two)
 }
 
-@media (min-width:768px){
-	section.resume-section{
-		min-height:100vh
-	}
-	section.resume-section .resume-item .resume-date{
-		min-width:18rem
-	}
+#employment .box-top {
+	background-color: var(--accent-two);
 }
 
-@media (min-width:992px){
-	section.resume-section{
-		padding-top:3rem!important;
-		padding-bottom:3rem!important
-	}
+.history {
+	line-height: 1em;
 }
 
-.bg-primary{
-	background-color: var(--dg)!important
+#employment .box-top:hover, #employment .text-box:hover {
+	box-shadow: 10px 10px var(--accent-two);
 }
 
-.text-primary{
-	color: var(--m) !important;
+#employment-link:hover {
+	border: var(--90-grey-color) 2px solid;
+	border-radius: 20px;
+  background-color: var(--accent-two);
+  color: var(--10-grey-color) !important;
 }
 
-a{
-	color: var(--lg);
+#employment a:hover {
+	color: var(--accent-two);
 }
 
-a:active,a:focus,a:hover{
-	color: var(--m);
-	text-decoration: none;
+#education h1 {
+	color: var(--accent-three)
+}
+
+#education .box-top {
+	background-color: var(--accent-three);
+}
+
+#education .box-top:hover, #education .text-box:hover {
+	box-shadow: 10px 10px var(--accent-three);
+}
+
+#education-link:hover {
+	border: var(--90-grey-color) 2px solid;
+	border-radius: 20px;
+  background-color: var(--accent-three);
+  color: var(--10-grey-color) !important;
+}
+
+#education a:hover {
+	color: var(--accent-three)
+}
+
+#skills h1 {
+	color: var(--accent-four)
+}
+
+#skills .box-top {
+	background-color: var(--accent-four);
+}
+
+#skills .box-top:hover, #skills .text-box:hover {
+	box-shadow: 10px 10px var(--accent-four);
+}
+
+#skills-link:hover {
+	border: var(--90-grey-color) 2px solid;
+	border-radius: 20px;
+  background-color: var(--accent-four);
+  color: var(--10-grey-color) !important;
+}
+
+#skills a:hover {
+	color: var(--accent-four)
+}
+
+#research h1, #research h2 {
+	color: var(--accent-five)
+}
+
+#research .box-top {
+	background-color: var(--accent-five);
+}
+
+#research .box-top:hover, #research .text-box:hover {
+	box-shadow: 10px 10px var(--accent-five);
+}
+
+#research-link:hover {
+	border: var(--90-grey-color) 2px solid;
+	border-radius: 20px;
+  background-color: var(--accent-five);
+  color: var(--10-grey-color) !important;
+}
+
+#research a:hover {
+	color: var(--accent-five)
 }
