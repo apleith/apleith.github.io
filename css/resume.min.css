@@ -227,6 +227,11 @@ section {
 	color: var(--accent-four)
 }
 
+#skills img {
+	width: auto;
+	height: 33px;
+}
+
 #research h1, #research h2 {
 	color: var(--accent-five)
 }
