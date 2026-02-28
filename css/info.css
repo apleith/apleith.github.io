@@ -1,120 +1,235 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&family=Oswald&family=Roboto&display=swap');
-
-/* Root variables for custom colors and fonts */
+/* =============================================
+   INFO PAGE — AP LEITH
+   Bauhaus design system (matches main site)
+   Font: Jost (loaded via link tag in HTML)
+============================================= */
 :root {
-    --color1: #fef8f4; /* Background */
-    --color2: #645E5D; /* Text color */
-    --color3: #2b231e; /* Secondary text color */
-    --color4: #ea4335; /* Accent color */
-    --font1: "Oswald"; /* Font for headers */
-    --font2: "Fira Sans Extra Condensed"; /* Font for links */
-    --font3: "Roboto"; /* Font for body text */
+  --cream:  #F5F0E8;
+  --black:  #111111;
+  --red:    #D62828;
+  --yellow: #F7B731;
+  --blue:   #1A4FA0;
+  --gray:   #888888;
+  --border: 3px solid #111111;
 }
 
-/* Reset and Basic Styling */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
 body {
-    background-color: var(--color1); /* Light background */
-    font-family: var(--font3);
-    color: var(--color2); /* Darker text */
-    margin: 0;
-    padding: 0;
-    font-weight: 500;
-    background-
+  font-family: 'Jost', sans-serif;
+  background: var(--cream);
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Profile Section Styling */
-.profile-section {
-    padding: 30px 0;
+/* ── UTILITIES ── */
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;
 }
 
-.profile-info h2 {
-    font-family: var(--font1);
-    color: var(--color4);
-    font-size: 5.25em;
-    margin: 5px;
-    text-transform: uppercase;
-    font-weight: 900;
+.skip-link {
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed; top: 0; left: 0; width: auto; height: auto;
+  padding: 0.5rem 1rem; background: var(--yellow); color: var(--black);
+  font-weight: 700; z-index: 9999; overflow: visible;
+  font-family: 'Jost', sans-serif; font-size: 0.875rem; text-decoration: none;
 }
 
-.profile-info h3 {
-    font-family: var(--font2);
-    font-color: var(--color2);
-    font-weight: 750;
-    font-size: 1.5em;
-    margin: 0;
+/* ── HEADER ── */
+.site-header {
+  background: var(--black);
+  border-bottom: 4px solid var(--red);
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
 
-.profile-info h4 {
-	font-family: var(--font1);
-	color: var(--color4);
-	font-size: 2em;
-	margin: 25px 0 0 0;
-	text-transform: uppercase;
-	font-weight: 900;
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+.back-link:hover { color: var(--yellow); }
+
+.header-stripes {
+  display: flex;
+  width: 60px;
+  flex-shrink: 0;
+}
+.header-stripes span { flex: 1; }
+.header-stripes span:nth-child(1) { background: var(--red); }
+.header-stripes span:nth-child(2) { background: var(--yellow); }
+.header-stripes span:nth-child(3) { background: var(--blue); }
+
+/* ── MAIN LAYOUT ── */
+main {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.profile-info h5 {
-	font-family: var(--font1);
-	color: var(--color4);
-	font-size: 1.5em;
-	margin: 20px 0 0 0;
-	text-transform: uppercase;
-	font-weight: 900;
+/* ── PROFILE ── */
+.profile h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.profile h1 em {
+  font-style: normal;
+  color: var(--red);
 }
 
-.profile-info p {
-	font-family: var(--font3);
-	color: var(--color3);
-	font-weight: 750;
+.profile-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  border-left: 5px solid var(--yellow);
+  padding-left: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
 }
 
-/* Office hours specific styling */
-.office-hours p {
-	margin: 5px 0;
+.profile-subtitle {
+  font-size: 0.78rem;
+  font-weight: 300;
+  padding-left: calc(0.875rem + 5px);
+  color: var(--gray);
 }
 
-/* Link Section Styling */
-.links-section {
-	margin-top: 20px;
+/* ── OFFICE HOURS ── */
+.office-hours h2 { margin-bottom: 1rem; }
+
+.section-label {
+  display: inline-block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: var(--black);
+  color: var(--cream);
+  padding: 4px 12px;
 }
 
-/* Uniform button styling for all link items */
-.link-item {
-	margin: 10px 0;
+.hours-location {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--blue);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.link-item a {
-	font-family: var(--font2);
-	font-size: 18px;
-	color: var(--color3); /* Accent color */
-	text-decoration: none;
-	border: 2px solid var(--color3);
-	/* Border around link buttons */
-	padding: 8px 16px;
-	border-radius: 5px;
-	display: inline-block;
-	width: 25%; /* Set uniform width for all buttons */
-	text-align: center;
-	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-	font-weight: 900;
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: var(--border);
 }
 
-/* Hover effect for link items */
-.link-item a:hover {
-	background-color: var(--color3);
-	color: var(--color4); /* Light text on dark background */
-	border: 2px solid var(--color1);
+.hours-item {
+  padding: 1rem 1.25rem;
+}
+.hours-item:first-child {
+  border-right: var(--border);
 }
 
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-    .profile-section, .links-section {
-        padding: 15px;
-    }
+.hours-type {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.3rem;
+}
 
-    .link-item a {
-        font-size: 16px;
-        padding: 6px 12px;
-    }
+.hours-time {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ── LINKS ── */
+.links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: var(--border);
+}
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1.25rem;
+  background: transparent;
+  color: var(--black);
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-bottom: var(--border);
+  transition: background 0.15s, color 0.15s;
+}
+.link-btn:last-child { border-bottom: none; }
+.link-btn:hover {
+  background: var(--black);
+  color: var(--cream);
+}
+.link-btn i { width: 1.2em; text-align: center; flex-shrink: 0; }
+
+.link-btn-primary {
+  background: var(--red);
+  color: var(--cream);
+}
+.link-btn-primary:hover {
+  background: var(--black);
+  color: var(--cream);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black);
+  color: rgba(245, 240, 232, 0.5);
+  border-top: 4px solid var(--red);
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 480px) {
+  main { padding: 2rem 1rem; gap: 2rem; }
+  .hours-grid { grid-template-columns: 1fr; }
+  .hours-item:first-child { border-right: none; border-bottom: var(--border); }
 }
