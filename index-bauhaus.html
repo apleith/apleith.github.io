@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Alex P. Leith, PhD — Associate Professor of Mass Communications at SIUE, Chair of the SIM Lab." />
+  <title>AP LEITH</title>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/IpFA8Ci.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* =============================================
+       BAUHAUS DESIGN SYSTEM — AP LEITH
+       Color palette: Classic Primary
+       Font: Jost (geometric sans)
+    ============================================= */
+    :root {
+      --cream:  #F5F0E8;
+      --black:  #111111;
+      --red:    #D62828;
+      --yellow: #F7B731;
+      --blue:   #1A4FA0;
+      --gray:   #888888;
+      --border: 3px solid #111111;
+      --border-thick: 5px solid #111111;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── UTILITIES ── */
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap;
+    }
+
+    /* ══════════════════════════════════════════
+       NAVIGATION
+    ══════════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      background: var(--black);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      border-bottom: 4px solid var(--red);
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-logo em { color: var(--yellow); font-style: normal; }
+
+    /* Bauhaus stripe accent beside logo */
+    .nav-accent {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-left: 1rem;
+      flex-shrink: 0;
+    }
+    .nav-accent span {
+      display: block;
+      width: 20px;
+      height: 3px;
+    }
+    .nav-accent span:nth-child(1) { background: var(--red); }
+    .nav-accent span:nth-child(2) { background: var(--yellow); }
+    .nav-accent span:nth-child(3) { background: var(--blue); }
+
+    .nav-logo-wrap { display: flex; align-items: center; }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: stretch;
+      height: 56px;
+    }
+    .nav-links li a {
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      border-left: 1px solid rgba(255,255,255,0.12);
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-links li a:hover,
+    .nav-links li a.active { background: var(--red); color: var(--cream); }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 2px solid var(--cream);
+      padding: 5px 7px;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: var(--cream);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ══════════════════════════════════════════
+       LAYOUT SHELL
+    ══════════════════════════════════════════ */
+    main { margin-top: 56px; }
+    section { border-bottom: var(--border-thick); }
+
+    /* Shared section header band */
+    .section-header {
+      background: var(--black);
+      color: var(--cream);
+      padding: 1.25rem 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      border-bottom: var(--border);
+    }
+    .sh-index {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      flex-shrink: 0;
+    }
+    .section-header h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .sh-rule {
+      flex: 1;
+      height: 3px;
+    }
+    .sh-rule.red    { background: var(--red); }
+    .sh-rule.yellow { background: var(--yellow); }
+    .sh-rule.blue   { background: var(--blue); }
+    .sh-rule.white  { background: rgba(255,255,255,0.3); }
+
+    /* ══════════════════════════════════════════
+       01 — ABOUT
+    ══════════════════════════════════════════ */
+    #about {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      min-height: calc(100vh - 56px);
+    }
+
+    .about-left {
+      background: var(--black);
+      border-right: var(--border-thick);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Color stripe bar at top */
+    .about-stripes {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+    .about-stripes span {
+      display: block;
+      height: 14px;
+    }
+    .about-stripes span:nth-child(1) { background: var(--red); }
+    .about-stripes span:nth-child(2) { background: var(--yellow); }
+    .about-stripes span:nth-child(3) { background: var(--blue); }
+
+    /* Large background circle decoration */
+    .about-geo-circle {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 40px solid rgba(247,183,49,0.12);
+      top: 80px;
+      right: -40px;
+      pointer-events: none;
+    }
+
+    .about-photo {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .about-photo img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .about-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 3.5rem;
+      position: relative;
+    }
+
+    /* Subtle grid dot background */
+    .about-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(17,17,17,0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: var(--blue);
+      color: var(--cream);
+      padding: 3px 10px;
+      margin-bottom: 1.75rem;
+      position: relative;
+      z-index: 1;
+      align-self: flex-start;
+    }
+
+    .about-right h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .about-right h1 em {
+      font-style: normal;
+      color: var(--red);
+    }
+
+    .about-subtitle {
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      border-left: 5px solid var(--yellow);
+      padding-left: 0.875rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-bio {
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 58ch;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.55rem 1.15rem;
+      border: 2px solid var(--black);
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      line-height: 1;
+    }
+    .btn-red  { background: var(--red);    color: var(--cream); border-color: var(--red);  }
+    .btn-red:hover  { background: var(--black); border-color: var(--black); }
+    .btn-blue { background: var(--blue);   color: var(--cream); border-color: var(--blue); }
+    .btn-blue:hover { background: var(--black); border-color: var(--black); }
+    .btn-outline { background: transparent; color: var(--black); }
+    .btn-outline:hover { background: var(--black); color: var(--cream); }
+
+    /* ══════════════════════════════════════════
+       02 — EMPLOYMENT
+    ══════════════════════════════════════════ */
+    #employment .emp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .emp-summary {
+      padding: 2.5rem;
+      border-right: var(--border);
+    }
+    .emp-summary p {
+      font-weight: 300;
+      line-height: 1.85;
+      font-size: 0.95rem;
+    }
+
+    .emp-positions { padding: 2.5rem; }
+
+    .position-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 1.25rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(17,17,17,0.12);
+    }
+    .position-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .pos-year-block {
+      width: 56px;
+      flex-shrink: 0;
+      padding-top: 3px;
+    }
+    .pos-year {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--cream);
+      background: var(--blue);
+      display: block;
+      padding: 2px 5px;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .pos-year.red { background: var(--red); }
+    .pos-year.yellow { background: var(--yellow); color: var(--black); }
+
+    .pos-details h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+    }
+    .pos-org {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--blue);
+      margin-top: 2px;
+    }
+    .pos-date {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--gray);
+    }
+
+    /* ══════════════════════════════════════════
+       03 — EDUCATION
+    ══════════════════════════════════════════ */
+    #education .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 2.5rem;
+      gap: 2rem;
+    }
+
+    .edu-card {
+      border: var(--border);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Top color bar */
+    .edu-card::before {
+      content: '';
+      display: block;
+      height: 8px;
+      position: absolute;
+      top: 0; left: 0; right: 0;
+    }
+    .edu-card:nth-child(1)::before { background: var(--red); }
+    .edu-card:nth-child(2)::before { background: var(--blue); }
+    .edu-card:nth-child(3)::before { background: var(--yellow); }
+
+    /* Giant ghost year */
+    .edu-year-ghost {
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(17,17,17,0.1);
+      letter-spacing: -0.04em;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+    .edu-degree {
+      font-size: 1rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .edu-school { font-weight: 700; font-size: 0.875rem; }
+    .edu-field  { font-weight: 300; font-size: 0.8rem; color: var(--gray); margin-top: 2px; }
+
+    /* ══════════════════════════════════════════
+       04 — SKILLS
+    ══════════════════════════════════════════ */
+    #skills .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill-card {
+      padding: 2rem;
+      border-right: var(--border);
+      border-bottom: var(--border);
+    }
+    /* Remove right border on last in each row */
+    .skill-card:nth-child(3n) { border-right: none; }
+    /* Remove bottom border on last row */
+    .skill-card:nth-child(4),
+    .skill-card:nth-child(5),
+    .skill-card:nth-child(6) { border-bottom: none; }
+
+    .skill-card h3 {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid;
+    }
+    .skill-card:nth-child(1) h3,
+    .skill-card:nth-child(4) h3 { color: var(--red);  border-color: var(--red); }
+    .skill-card:nth-child(2) h3,
+    .skill-card:nth-child(5) h3 { color: var(--blue); border-color: var(--blue); }
+    .skill-card:nth-child(3) h3,
+    .skill-card:nth-child(6) h3 { color: #b38900; border-color: var(--yellow); }
+
+    .skill-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    .skill-icons img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ══════════════════════════════════════════
+       05 — PROJECTS
+    ══════════════════════════════════════════ */
+    #projects .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      border-right: var(--border);
+      border-bottom: var(--border);
+    }
+    .project-card:nth-child(2n) { border-right: none; }
+    .project-card:nth-child(5),
+    .project-card:nth-child(6) { border-bottom: none; }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.5rem;
+      border-bottom: var(--border);
+    }
+    /* Alternating header colors */
+    .project-card:nth-child(1) .project-header { background: var(--red);    color: var(--cream); }
+    .project-card:nth-child(2) .project-header { background: var(--blue);   color: var(--cream); }
+    .project-card:nth-child(3) .project-header { background: var(--yellow); color: var(--black); }
+    .project-card:nth-child(4) .project-header { background: var(--black);  color: var(--cream); }
+    .project-card:nth-child(5) .project-header { background: var(--blue);   color: var(--cream); }
+    .project-card:nth-child(6) .project-header { background: var(--red);    color: var(--cream); }
+
+    .project-header h3 {
+      font-size: 0.8rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .project-lang {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    .project-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-body p {
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1.75;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    /* ══════════════════════════════════════════
+       06 — RESEARCH
+    ══════════════════════════════════════════ */
+    #research .research-content {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .research-sub h3 {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cream);
+      display: inline-block;
+      padding: 4px 12px;
+      margin-bottom: 1.25rem;
+    }
+    .research-sub:nth-child(1) h3 { background: var(--blue); }
+    .research-sub:nth-child(2) h3 { background: var(--red); }
+    .research-sub:nth-child(3) h3 { background: var(--black); }
+    .research-sub:nth-child(4) h3 { background: var(--blue); }
+
+    .pub-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .pub-list li {
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1.75;
+      padding: 0.875rem 1rem 0.875rem 1.25rem;
+      border-left: 4px solid;
+      background: rgba(17,17,17,0.03);
+    }
+    .research-sub:nth-child(1) .pub-list li { border-color: var(--blue); }
+    .research-sub:nth-child(2) .pub-list li { border-color: var(--red); }
+    .research-sub:nth-child(3) .pub-list li { border-color: var(--black); }
+    .research-sub:nth-child(4) .pub-list li { border-color: var(--blue); }
+
+    .pub-list li b  { font-weight: 700; }
+    .pub-list li em { font-style: italic; }
+    .pub-list li a  { color: var(--blue); word-break: break-all; }
+    .pub-list li a:hover { color: var(--red); }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    footer {
+      background: var(--black);
+      color: var(--cream);
+      border-top: 5px solid var(--red);
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .footer-logo {
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .footer-logo em { color: var(--yellow); font-style: normal; }
+
+    .footer-icons {
+      display: flex;
+      gap: 1.25rem;
+    }
+    .footer-icons a {
+      color: var(--cream);
+      font-size: 1.25rem;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-icons a:hover { color: var(--yellow); }
+
+    .footer-copy {
+      width: 100%;
+      font-size: 0.7rem;
+      font-weight: 300;
+      opacity: 0.5;
+      letter-spacing: 0.05em;
+    }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 56px; left: 0; right: 0;
+        background: var(--black);
+        border-top: 1px solid rgba(255,255,255,0.1);
+        z-index: 199;
+      }
+      .nav-links li a {
+        height: auto;
+        padding: 1rem 2rem;
+        border-left: none;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        font-size: 0.75rem;
+      }
+      .nav-toggle { display: flex; }
+
+      /* About */
+      #about {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .about-left {
+        height: 55vw;
+        max-height: 320px;
+        border-right: none;
+        border-bottom: var(--border-thick);
+      }
+      .about-right { padding: 2rem; }
+      .about-right h1 { font-size: 2.5rem; }
+
+      /* Employment */
+      #employment .emp-grid { grid-template-columns: 1fr; }
+      .emp-summary { border-right: none; border-bottom: var(--border); }
+
+      /* Education */
+      #education .edu-grid { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem; }
+
+      /* Skills */
+      #skills .skills-grid { grid-template-columns: 1fr 1fr; }
+      .skill-card:nth-child(3n)   { border-right: var(--border); }
+      .skill-card:nth-child(2n)   { border-right: none; }
+      .skill-card:nth-child(4),
+      .skill-card:nth-child(5),
+      .skill-card:nth-child(6)    { border-bottom: var(--border); }
+      .skill-card:last-child,
+      .skill-card:nth-last-child(-n+2):nth-child(odd) { border-bottom: none; }
+
+      /* Projects */
+      #projects .projects-grid { grid-template-columns: 1fr; }
+      .project-card             { border-right: none; }
+      .project-card:nth-child(5),
+      .project-card:nth-child(6) { border-bottom: var(--border); }
+      .project-card:last-child   { border-bottom: none; }
+
+      /* Section header */
+      .section-header { padding: 1rem 1.5rem; }
+      #research .research-content { padding: 1.5rem; }
+    }
+
+    @media (max-width: 500px) {
+      nav { padding: 0 1rem; }
+      .about-right { padding: 1.5rem; }
+      .about-right h1 { font-size: 2rem; }
+      #skills .skills-grid { grid-template-columns: 1fr; }
+      .skill-card { border-right: none !important; border-bottom: var(--border) !important; }
+      .skill-card:last-child { border-bottom: none !important; }
+      #education .edu-grid { padding: 1rem; }
+      .emp-summary, .emp-positions { padding: 1.5rem; }
+      footer { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body id="page-top">
+
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-logo-wrap">
+      <a href="#about" class="nav-logo">AP&nbsp;<em>LEITH</em></a>
+      <div class="nav-accent" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#employment">Employment</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ════════════════════════════════════════
+         01 — ABOUT
+    ════════════════════════════════════════ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-left">
+        <div class="about-stripes" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="about-geo-circle" aria-hidden="true"></div>
+        <div class="about-photo">
+          <img src="images/headshot.png" alt="Alex P. Leith, PhD" />
+        </div>
+      </div>
+      <div class="about-right">
+        <span class="section-tag">01 &mdash; About</span>
+        <h1 id="about-heading">Alex P.<br /><em>Leith,</em>&nbsp;PhD</h1>
+        <p class="about-subtitle">
+          Associate Professor of Mass Communications &nbsp;&middot;&nbsp;
+          Chair, <a href="https://sim-lab-siue.github.io/" target="_blank" style="color:inherit;text-decoration:underline;">SIM Lab @ SIUE</a>
+        </p>
+        <p class="about-bio">
+          I am a researcher of social platforms and how they impact the lives of their users. I have historically studied mediated relationships between media figures and their fans, and am now studying emerging social platforms and their capacity to address historic inequities present in traditional social environments. I am also a dedicated educator, teaching courses in research methods, data analytics, web design, and social media analytics, and I chair the SIM Lab at SIUE where I mentor students in research and data science.
+        </p>
+        <div class="about-links">
+          <a href="https://github.com/apleith" class="btn btn-outline" target="_blank" rel="noopener">
+            <i class="fab fa-github" aria-hidden="true"></i> apleith
+          </a>
+          <a href="https://github.com/SIM-Lab-SIUE" class="btn btn-blue" target="_blank" rel="noopener">
+            <i class="fab fa-github" aria-hidden="true"></i> SIM Lab
+          </a>
+          <a href="files/Leith_CV.pdf" class="btn btn-red" target="_blank" rel="noopener">
+            <i class="fas fa-file-pdf" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         02 — EMPLOYMENT
+    ════════════════════════════════════════ -->
+    <section id="employment" aria-labelledby="employment-heading">
+      <div class="section-header">
+        <span class="sh-index">02</span>
+        <h2 id="employment-heading">Employment</h2>
+        <div class="sh-rule yellow" aria-hidden="true"></div>
+      </div>
+      <div class="emp-grid">
+        <div class="emp-summary">
+          <p>As an Associate Professor in the Department of Mass Communications at Southern Illinois University Edwardsville, I teach and mentor students in research methods, data analytics, web design, and social media analytics. I teach undergraduate and graduate courses including Research Methods in Mass Media and Social Media Analytics, and mentor students through capstone projects and theses.</p>
+        </div>
+        <div class="emp-positions">
+
+          <div class="position-item">
+            <div class="pos-year-block">
+              <span class="pos-year red">2019<br />Now</span>
+            </div>
+            <div class="pos-details">
+              <h3>Associate Professor</h3>
+              <div class="pos-org">SIU Edwardsville — Mass Communications</div>
+              <div class="pos-date">Aug 2019 – Present</div>
+            </div>
+          </div>
+
+          <div class="position-item">
+            <div class="pos-year-block">
+              <span class="pos-year">2012<br />2017</span>
+            </div>
+            <div class="pos-details">
+              <h3>Graduate Associate</h3>
+              <div class="pos-org">Michigan State University</div>
+              <div class="pos-date">Sep 2012 – May 2017</div>
+            </div>
+          </div>
+
+          <div class="position-item">
+            <div class="pos-year-block">
+              <span class="pos-year">2010<br />2012</span>
+            </div>
+            <div class="pos-details">
+              <h3>Graduate Associate</h3>
+              <div class="pos-org">SIU Edwardsville</div>
+              <div class="pos-date">Aug 2010 – May 2012</div>
+            </div>
+          </div>
+
+          <div class="position-item">
+            <div class="pos-year-block">
+              <span class="pos-year yellow">2011<br />2012</span>
+            </div>
+            <div class="pos-details">
+              <h3>Adjunct Instructor</h3>
+              <div class="pos-org">St. Louis College of Pharmacy &middot; McKendree University &middot; SIUE</div>
+              <div class="pos-date">Aug 2011 – May 2012</div>
+            </div>
+          </div>
+
+          <div class="position-item">
+            <div class="pos-year-block">
+              <span class="pos-year yellow">2008<br />2009</span>
+            </div>
+            <div class="pos-details">
+              <h3>Marketing Manager</h3>
+              <div class="pos-org">BYU-Idaho</div>
+              <div class="pos-date">Aug 2008 – Aug 2009</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         03 — EDUCATION
+    ════════════════════════════════════════ -->
+    <section id="education" aria-labelledby="education-heading">
+      <div class="section-header">
+        <span class="sh-index">03</span>
+        <h2 id="education-heading">Education</h2>
+        <div class="sh-rule red" aria-hidden="true"></div>
+      </div>
+      <div class="edu-grid">
+
+        <div class="edu-card">
+          <span class="edu-year-ghost" aria-hidden="true">2019</span>
+          <div class="edu-degree">Doctor of Philosophy</div>
+          <div class="edu-school">Michigan State University</div>
+          <div class="edu-field">Information and Media</div>
+        </div>
+
+        <div class="edu-card">
+          <span class="edu-year-ghost" aria-hidden="true">2012</span>
+          <div class="edu-degree">Master of Arts</div>
+          <div class="edu-school">SIU Edwardsville</div>
+          <div class="edu-field">Speech Communication</div>
+        </div>
+
+        <div class="edu-card">
+          <span class="edu-year-ghost" aria-hidden="true">2009</span>
+          <div class="edu-degree">Bachelor of Science</div>
+          <div class="edu-school">BYU-Idaho</div>
+          <div class="edu-field">Communication</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         04 — SKILLS
+    ════════════════════════════════════════ -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="section-header">
+        <span class="sh-index">04</span>
+        <h2 id="skills-heading">Skills</h2>
+        <div class="sh-rule blue" aria-hidden="true"></div>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <h3>Data Science</h3>
+          <div class="skill-icons">
+            <img src="img/icons/rstudio.svg"    alt="RStudio"    title="RStudio" />
+            <img src="img/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" />
+            <img src="img/icons/github.svg"     alt="GitHub"     title="GitHub" />
+            <img src="img/icons/python.svg"     alt="Python"     title="Python" />
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Data Visualization</h3>
+          <div class="skill-icons">
+            <img src="img/icons/rstudio.svg"           alt="RStudio"    title="RStudio" />
+            <img src="img/icons/tableau.svg"           alt="Tableau"    title="Tableau" />
+            <img src="img/icons/adobe-illustrator.svg" alt="Illustrator" title="Adobe Illustrator" />
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>3D &amp; VR Design</h3>
+          <div class="skill-icons">
+            <img src="img/icons/unity.svg"   alt="Unity"   title="Unity" />
+            <img src="img/icons/blender.svg" alt="Blender" title="Blender" />
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Web Design</h3>
+          <div class="skill-icons">
+            <img src="img/icons/html5.svg"       alt="HTML5"       title="HTML5" />
+            <img src="img/icons/css3-shield.svg" alt="CSS3"        title="CSS3" />
+            <img src="img/icons/js.svg"          alt="JavaScript"  title="JavaScript" />
+            <img src="img/icons/bootstrap.svg"   alt="Bootstrap"   title="Bootstrap" />
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Print Design</h3>
+          <div class="skill-icons">
+            <img src="img/icons/adobe-photoshop.svg"  alt="Photoshop" title="Adobe Photoshop" />
+            <img src="img/icons/adobe-illustrator.svg" alt="Illustrator" title="Adobe Illustrator" />
+            <img src="img/icons/adobe-indesign.svg"   alt="InDesign"  title="Adobe InDesign" />
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3>Broadcast Media</h3>
+          <div class="skill-icons">
+            <img src="img/icons/adobe-premiere.svg" alt="Premiere" title="Adobe Premiere" />
+            <img src="img/icons/adobe-audition.svg" alt="Audition" title="Adobe Audition" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         05 — PROJECTS
+    ════════════════════════════════════════ -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section-header">
+        <span class="sh-index">05</span>
+        <h2 id="projects-heading">Projects</h2>
+        <div class="sh-rule yellow" aria-hidden="true"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>The Cage</h3>
+            <span class="project-lang">TypeScript / Next.js</span>
+          </div>
+          <div class="project-body">
+            <p>A web application for broadcast engineering students at SIUE to reserve and manage production equipment. Built for the SIM Lab to streamline equipment checkout and reduce scheduling conflicts in the Mass Communications department.</p>
+            <div class="project-links">
+              <a href="https://github.com/SIM-Lab-SIUE/the-cage" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Vibes to Variables</h3>
+            <span class="project-lang">Open Textbook</span>
+          </div>
+          <div class="project-body">
+            <p>An open-access field guide to Open Media Science — a living textbook covering research methods, data analysis, and scientific communication for mass communications students. Designed to make rigorous research methods approachable and practical.</p>
+            <div class="project-links">
+              <a href="https://github.com/SIM-Lab-SIUE/vibes-to-variables" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Liaison Program</h3>
+            <span class="project-lang">SCSS / R</span>
+          </div>
+          <div class="project-body">
+            <p>Course website and R coursework package for MC 451 (Research Methods in Mass Media) and MC 501. Combines the <em>coursepackR</em> R library with an Obsidian-powered course vault and lesson site, delivering a fully integrated research methods curriculum.</p>
+            <div class="project-links">
+              <a href="https://github.com/SIM-Lab-SIUE/liaison-program" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> liaison-program
+              </a>
+              <a href="https://github.com/SIM-Lab-SIUE/coursepackR" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> coursepackR
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Open WebUI / DeepSeek</h3>
+            <span class="project-lang">Python / Docker</span>
+          </div>
+          <div class="project-body">
+            <p>A one-click launcher for Open WebUI with DeepSeek-R1 via Docker and Ollama, alongside a monorepo of research-focused tools built on local LLMs. Designed to support open media science workflows without cloud dependency or proprietary API costs.</p>
+            <div class="project-links">
+              <a href="https://github.com/apleith/open-webui-launcher" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> open-webui-launcher
+              </a>
+              <a href="https://github.com/apleith/DeepSeek-R1-Monorepo" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> DeepSeek Monorepo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>MC Careers Dashboard</h3>
+            <span class="project-lang">Svelte</span>
+          </div>
+          <div class="project-body">
+            <p>A career exploration dashboard for Mass Communications students at SIUE. Built with Svelte to help students visualize career pathways, explore job categories, and understand opportunities in the evolving media industry landscape.</p>
+            <div class="project-links">
+              <a href="https://github.com/SIM-Lab-SIUE/mc-careers-dashboard" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Research Tools</h3>
+            <span class="project-lang">Python / R</span>
+          </div>
+          <div class="project-body">
+            <p>A collection of research data tools: a PostgreSQL-backed Twitch chat logger used in dissertation research on parasocial relationships, an R analysis of Hate Raids examining targeted harassment on livestreaming platforms, and a banned-word checker for validating documents against prohibited term lists.</p>
+            <div class="project-links">
+              <a href="https://github.com/apleith/dissertation_logger" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> dissertation_logger
+              </a>
+              <a href="https://github.com/apleith/hate-raids" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> hate-raids
+              </a>
+              <a href="https://github.com/SIM-Lab-SIUE/banned-word-checker" class="btn btn-outline" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> banned-word-checker
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         06 — RESEARCH
+    ════════════════════════════════════════ -->
+    <section id="research" aria-labelledby="research-heading">
+      <div class="section-header">
+        <span class="sh-index">06</span>
+        <h2 id="research-heading">Research</h2>
+        <div class="sh-rule red" aria-hidden="true"></div>
+      </div>
+      <div class="research-content">
+
+        <!-- Journal Publications -->
+        <div class="research-sub">
+          <h3>Journal Publications</h3>
+          <ul class="pub-list">
+            <li>
+              <b>Leith, A.P.</b>, Lim, C., Foxman, M., Beyea, D., &amp; Jeong, D.C. (2025). Stress and coping in VRChat: A mixed-method case study of the use of VRChat as a coping tool during the COVID-19 pandemic. <em>Computers in Human Behavior Reports, 20</em>(100843).
+              <a href="https://doi.org/10.1016/j.chbr.2025.100843" target="_blank" rel="noopener">https://doi.org/10.1016/j.chbr.2025.100843</a>
+            </li>
+            <li>
+              Beyea, D., Foxman, M., Ratan, R., Klebig, B., <b>Leith, A. P.</b>, &amp; Chen, V. H. H. (2025). Metaverse-mediated communication: A call for theory-driven XR research [Editorial]. <em>Journal of Media Psychology: Theories, Methods, and Applications</em>, <em>37</em>(2), 61–63.
+              <a href="https://doi.org/10.1027/1864-1105/a000465" target="_blank" rel="noopener">https://doi.org/10.1027/1864-1105/a000465</a>
+            </li>
+            <li>
+              Beyea, D., Lim, C., Lover, A., Foxman, M., Ratan, R., &amp; <b>Leith, A. P.</b> (2025). Zoom fatigue in review: A meta-analytical examination of videoconferencing fatigue's antecedents. <em>Computers in Human Behavior Reports, 17</em>(100571).
+              <a href="https://doi.org/10.1016/j.chbr.2024.100571" target="_blank" rel="noopener">https://doi.org/10.1016/j.chbr.2024.100571</a>
+            </li>
+            <li>
+              Lim, C., <b>Leith, A. P.</b>, Ratan, R., &amp; Bouzek, D. (2025). Meeting needs: How social interaction anxiety, zoom fatigue, relatedness, and demographics predict virtual meeting feature preferences. <em>Computers in Human Behavior Reports</em>, <em>18</em>, 100673.
+              <a href="https://doi.org/10.1016/j.chbr.2025.100673" target="_blank" rel="noopener">https://doi.org/10.1016/j.chbr.2025.100673</a>
+            </li>
+            <li>
+              Lim, C., Ratan, R., Foxman, M., Beyea, D., Jeong, D., &amp; <b>Leith, A. P.</b> (2025). Examining attitudes about the virtual workplace: Associations between Zoom fatigue, impression management, and virtual meeting adoption intent. <em>PLOS One</em>.
+              <a href="https://doi.org/10.1371/journal.pone.0312354" target="_blank" rel="noopener">https://doi.org/10.1371/journal.pone.0312354</a>
+            </li>
+            <li>
+              Ratan, R. A., Lin, Q., Lim, C., Park, R., Lover, A., Han, E., Jang, D., <b>Leith, A. P.</b>, &amp; Bailenson, J. N. (2025). Time matters in VR: Students benefit from longer VR class duration, but certain outcomes decline after 45 minutes, with large individual variance. <em>Computers &amp; Education, 14</em>(3), 466–477.
+              <a href="https://doi.org/10.1016/j.compedu.2025.105328" target="_blank" rel="noopener">https://doi.org/10.1016/j.compedu.2025.105328</a>
+            </li>
+            <li>
+              Foxman, M., Beyea, D., <b>Leith, A.P.</b>, Ratan, R. A., Chen, V. H. H., &amp; Klebig, B. (2022). Beyond genre: Classifying virtual reality experiences. <em>IEEE Transactions on Games</em>, <em>14</em>(3), 466–477.
+              <a href="https://doi.org/10.1109/TG.2021.3119521" target="_blank" rel="noopener">https://doi.org/10.1109/TG.2021.3119521</a>
+            </li>
+            <li>
+              <b>Leith, A. P.</b>, &amp; Gheen, E. (2022). Twitch in the time of quarantine: The role of engagement in needs fulfillment. <em>Psychology of Popular Media, 11</em>(3), 275–280.
+              <a href="https://doi.org/10.1037/ppm0000372" target="_blank" rel="noopener">https://doi.org/10.1037/ppm0000372</a>
+            </li>
+            <li>
+              <b>Leith, A. P.</b> (2021). Parasocial cues: The ubiquity of parasocial relationships on Twitch. <em>Communication Monographs</em>, <em>88</em>, 111–129.
+              <a href="https://doi.org/10.1080/03637751.2020.1868544" target="_blank" rel="noopener">https://doi.org/10.1080/03637751.2020.1868544</a>
+            </li>
+            <li>
+              Ratan, R., Fordham, J., <b>Leith, A. P.</b>, &amp; Williams, D. (2019). Women keep it real: Avatar gender choice in League of Legends. <em>Cyberpsychology, Behavior, and Social Networking</em>, <em>22</em>, 254–257.
+            </li>
+            <li>
+              DeGroot, J. M., &amp; <b>Leith, A. P.</b> (2018). R.I.P. Kutner: Parasocial grief following the death of a television character. <em>OMEGA – Journal of Death and Dying</em>, <em>77</em>, 199–216.
+              <a href="https://doi.org/10.1177/0030222815600450" target="_blank" rel="noopener">https://doi.org/10.1177/0030222815600450</a>
+            </li>
+            <li>
+              <b>Leith, A. P.</b>, Ratan, R. A., &amp; Wohn, D. Y. (2016). The (de)evolution of evolution games: Analyzing the accuracy of evolution depiction in video games. <em>Journal of Science Education and Technology</em>, <em>25</em>, 655–664.
+              <a href="https://doi.org/10.1007/s10956-016-9620-x" target="_blank" rel="noopener">https://doi.org/10.1007/s10956-016-9620-x</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Book Chapters -->
+        <div class="research-sub">
+          <h3>Book Chapters</h3>
+          <ul class="pub-list">
+            <li>
+              Fordham, J., <b>Leith, A. P.</b>, &amp; Ratan, R. A. (2017). League of Legends: Summoning a league of their own. In J. Banks, R. Mejia, &amp; A. Adams (Eds.), <em>100 greatest video game franchises</em> (pp. 102–104). Rowan &amp; Littlefield.
+            </li>
+            <li>
+              <b>Leith, A. P.</b>, &amp; Fordham, J. (2017). Assassin's Creed: Leap of faith through historiophoty. In J. Banks, R. Mejia, &amp; A. Adams (Eds.), <em>100 greatest video game franchises</em> (pp. 11–12). Rowan &amp; Littlefield.
+            </li>
+            <li>
+              <b>Leith, A. P.</b>, &amp; Ratan, R. A. (2017). Super Smash Bros.: Fight with the one that brung ya. In J. Banks, R. Mejia, &amp; A. Adams (Eds.), <em>100 greatest video game franchises</em> (pp. 178–180). Rowan &amp; Littlefield.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Conference Proceedings -->
+        <div class="research-sub">
+          <h3>Conference Proceedings</h3>
+          <ul class="pub-list">
+            <li>
+              Lim, C., <b>Leith, A. P.</b>, Foxman, M., Ratan, R., &amp; Klebig, B. (2025, January). The Hyperpersonal Model of Communication in virtual meetings: Exploring the roles of fatigue, social interaction anxiety, muting, and avatar use in meeting engagement. <em>Proceedings of the 58th Hawaii International Conference on System Sciences.</em>
+              <a href="https://scholarspace.manoa.hawaii.edu/bitstreams/cd137c26-7fcf-49f8-b2eb-7b44f328eb5e/download" target="_blank" rel="noopener">[PDF]</a>
+            </li>
+            <li>
+              Milik, O., Jang, D., Foxman, M., Klebig, B., Bayea, D., <b>Leith, A. P.</b>, &amp; Ratan, R. (2024, November). Focusing on virtual groups: A method for focus group interviews in XR/VR group settings. <em>AoIR Selected Papers of Internet Research, 2024.</em>
+            </li>
+            <li>
+              Foxman, M., Bouzek, D., Lim, C., Ratan, R., Klebig, B., <b>Leith, A. P.</b>, &amp; Beyea, D. (2024, July). Making a virtual playground: Values-based game design in meeting platforms. <em>DiGRA 2024: Playgrounds.</em>
+              <a href="https://dl.digra.org/index.php/dl/article/view/2299/2296" target="_blank" rel="noopener">[PDF]</a>
+            </li>
+            <li>
+              Lim, C., Foxman, M., <b>Leith, A. P.</b>, Meshi, D., &amp; Ratan, R. (2024, July). Wanting playfulness to counter fatigue from virtual meetings. <em>DiGRA 2024: Playgrounds.</em>
+              <a href="https://dl.digra.org/index.php/dl/article/view/2267/2264" target="_blank" rel="noopener">[PDF]</a>
+            </li>
+            <li>
+              Foxman, M., Bouzek, D., Ratan, R. A., &amp; <b>Leith, A. P.</b> (2023, June). Virtually Limited: Boundaries of play in virtual reality production. <em>DiGRA 2023: Limits and Margins of Games.</em>
+              <a href="https://dl.digra.org/index.php/dl/article/view/1979/1978" target="_blank" rel="noopener">[PDF]</a>
+            </li>
+            <li>
+              <b>Leith, A. P.</b>, Foxman, M., Onuche, M., Ratan, R., &amp; Lim, C. (2023, June). Mixed feelings and realities: Joyful to nauseating sentiments about VR on Twitter. <em>DiGRA 2023: Limits and Margins of Games.</em>
+              <a href="https://dl.digra.org/index.php/dl/article/view/2105/2104" target="_blank" rel="noopener">[PDF]</a>
+            </li>
+            <li>
+              Foxman, M., <b>Leith, A. P.</b>, Beyea, D., Klebig, B., Chen, V. H. H., &amp; Ratan, R. (2020, November). Virtual reality genres: Comparing preferences in immersive experiences and games. <em>CHI PLAY '20.</em>
+              <a href="https://doi.org/10.1145/3383668.3419881" target="_blank" rel="noopener">https://doi.org/10.1145/3383668.3419881</a>
+            </li>
+            <li>
+              <b>Leith, A. P.</b> (2018, October). Playing games for others: Constructing a gameplay livestreaming taxonomy. In R. Ratan, B. Winn, &amp; E. LaPensée (Eds.), <em>Proceedings of Meaningful Play 2018</em> (pp. 372–379). ETC Press.
+              <a href="https://doi.org/10.1184/R1/9995969.v1" target="_blank" rel="noopener">https://doi.org/10.1184/R1/9995969.v1</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Conference Presentations -->
+        <div class="research-sub">
+          <h3>Conference Presentations</h3>
+          <ul class="pub-list">
+            <li><b>Leith, A. P.</b>, Lim, C., Foxman, M., Beyea, D., &amp; Jeong, D. (2025, June). Stress and coping in VRChat. <em>ICA 75th Annual Conference.</em> Denver, CO.</li>
+            <li><b>Leith, A. P.</b>, Foxman, M., Lim, C., &amp; Beyea, D. (2025, June). What ASD finds in VRChat: The potential for VR to address communication barriers. <em>ICA 75th Annual Conference.</em> Denver, CO.</li>
+            <li>Mlikik, O., Ratan, R., Chen, V., Swati, S., Foxman, M., &amp; <b>Leith, A. P.</b> (2025, June). Looking beyond meet space: Presenting a research platform in VRChat. <em>ICA 75th Annual Conference.</em> Denver, CO.</li>
+            <li>Beyea, D., Lim, C., Lover, A., Foxman, M., Ratan, R., &amp; <b>Leith, A. P.</b> (2024, June). Zoom fatigue? A meta-analytical examination of videoconferencing fatigue antecedents. <em>ICA 74th Annual Conference.</em> Gold Coast, QLD.</li>
+            <li>Foxman, M., Bouzek, D., Lim, C., &amp; <b>Leith, A. P.</b> (2024, June). Playing from home: Identity, cohesion, and communication for remote game makers. <em>ICA 74th Annual Conference.</em> Gold Coast, QLD.</li>
+            <li>Lim, C., Foxman, M., Ratan, R., Beyea, D., Jeong, D., &amp; <b>Leith, A. P.</b> (2024, June). Touch-up my Zoom fatigue. <em>ICA 74th Annual Conference.</em> Gold Coast, QLD.</li>
+            <li>Foxman, M., <b>Leith, A. P.</b>, Ratan, R., &amp; Bouzek, D. (2023, May). Playfully virtual: Finding authentic communication in videoconferencing. <em>ICA 73rd Annual Conference.</em> Toronto, ON.</li>
+            <li><b>Leith, A. P.</b>, Foxman, M., Onuche, M., &amp; Bouzek, D. (2023, May). Diffusion of gratification: The reception of VR as a modality for remote work and meetings. <em>ICA 73rd Annual Conference.</em> Toronto, ON.</li>
+            <li><b>Leith, A. P.</b>, Foxman, M., Ratan, R., &amp; Lim, C. (2023, May). Feelings for meetings: A sentiment analysis of videoconferencing platforms a year apart. <em>ICA 73rd Annual Conference.</em> Toronto, ON.</li>
+            <li>Foxman, M., <b>Leith, A. P.</b>, Sulzdorf-Liszkiewicz, A., Beyea, D., Klebig, B., Graciano, L., Bouzek, D., &amp; Ratan, R. A. (2022, October). Playing at work: Finding and designing play into virtual meetings. <em>Meaningful Play 2022.</em> East Lansing, MI.</li>
+            <li>Foxman, M., Beyea, D. G., <b>Leith, A. P.</b>, Ratan, R. A., Chen, V. H. H., &amp; Klebig, B. (2021, May). Hardly just hardware: Understanding games and genres in virtual reality experiences. <em>ICA 71st Annual Conference.</em> Virtual.</li>
+            <li><b>Leith, A. P.</b> (2020, May). When watching isn't enough: Human agents and their influence of gameplay through synchronous chat. <em>ICA 70th Annual Conference.</em> Gold Coast, AUS.</li>
+            <li><b>Leith, A. P.</b> (2019, August). The affective messaging of gameplay livestream viewers. <em>DiGRA 2019.</em> Kyoto, Japan.</li>
+            <li><b>Leith, A. P.</b> (2018, October). Giving you your space: Examining gamespace expandability. <em>Meaningful Play 2018.</em> East Lansing, MI.</li>
+            <li><b>Leith, A. P.</b> (2015, November). Busking on a digital pitch: Investigating Internet-based gameplay broadcasting. <em>NCA 101st Annual Convention.</em> Las Vegas, NV.</li>
+            <li><b>Leith, A. P.</b> (2015, November). Understanding the implications of uses and gratifications in gameplay viewing. <em>NCA 101st Annual Convention.</em> Las Vegas, NV.</li>
+            <li>Boehmer, J. H., &amp; <b>Leith, A. P.</b> (2015, March). Tweeting the World Cup: Soccer teams' use of dialogic communication during the 2014 World Cup. <em>Eighth Summit on Communication and Sport.</em> Charlotte, NC.</li>
+            <li><b>Leith, A. P.</b> (2014, November). Learning to play: Academic impacts of digital gameplay among disadvantaged African American students. <em>NCA 100th Annual Conference.</em> Chicago, IL.</li>
+            <li>Huang, T. K., Cotton, S. R., &amp; <b>Leith, A. P.</b> (2014, May). The impact of emotional costs on students' IT use and academic performance. <em>ICA 64th Annual Conference.</em> Seattle, WA.</li>
+            <li><b>Leith, A. P.</b> (2013, June). A more accessible celebrity: A case for parasocial interactions with YouTube personalities. <em>IAMCR 2013 Conference.</em> Dublin, Ireland.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-logo">AP <em>LEITH</em></div>
+    <div class="footer-icons">
+      <a href="https://github.com/apleith" target="_blank" rel="noopener" aria-label="GitHub — apleith">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/SIM-Lab-SIUE" target="_blank" rel="noopener" aria-label="SIM Lab GitHub">
+        <i class="fas fa-flask" aria-hidden="true"></i>
+      </a>
+      <a href="files/Leith_CV.pdf" target="_blank" rel="noopener" aria-label="Download CV">
+        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Alex P. Leith &middot; Southern Illinois University Edwardsville</p>
+  </footer>
+
+  <script>
+    // ── Mobile nav toggle ──
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ── Active nav link on scroll ──
+    const sections = document.querySelectorAll('section[id]');
+    const navAs    = document.querySelectorAll('.nav-links a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAs.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-50% 0px -49% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>
