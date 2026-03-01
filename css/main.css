@@ -485,20 +485,7 @@ section { border-bottom: var(--border-thick); }
 .skill-card:nth-child(3n+2) h3 { color: var(--blue); border-color: var(--blue); }
 .skill-card:nth-child(3n)   h3 { color: #b38900;     border-color: var(--yellow); }
 
-.skill-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-}
-.skill-icons img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  display: block;
-}
-
-/* Text-tag skill chips for method/domain cards */
+/* Skill chips */
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
