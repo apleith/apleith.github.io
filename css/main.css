@@ -790,10 +790,19 @@ footer {
     min-height: auto;
   }
   .about-left {
-    height: 55vw;
-    max-height: 320px;
+    height: 72vw;
+    max-height: 420px;
     border-right: none;
     border-bottom: var(--border-thick);
+  }
+  .about-photo {
+    align-items: stretch;
+    padding-top: 0;
+  }
+  .about-photo img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
   }
   .about-right { padding: 2rem; }
   .about-right h1 { font-size: 2.5rem; }
