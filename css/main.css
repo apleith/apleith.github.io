@@ -402,6 +402,27 @@ section { border-bottom: var(--border-thick); }
   font-weight: 300;
   color: var(--gray);
 }
+.pos-bullets {
+  list-style: none;
+  margin-top: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.pos-bullets li {
+  font-size: 0.82rem;
+  font-weight: 300;
+  line-height: 1.55;
+  padding-left: 1rem;
+  position: relative;
+}
+.pos-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: var(--red);
+}
 
 /* ══════════════════════════════════════════
    03 — EDUCATION
@@ -700,6 +721,7 @@ section { border-bottom: var(--border-thick); }
 .research-sub:nth-child(2) .pub-list li { border-color: var(--red); }
 .research-sub:nth-child(3) .pub-list li { border-color: var(--black); }
 .research-sub:nth-child(4) .pub-list li { border-color: var(--blue); }
+.research-sub:nth-child(5) .pub-list li { border-color: var(--red); }
 
 .pub-list li b  { font-weight: 700; }
 .pub-list li em { font-style: italic; }
