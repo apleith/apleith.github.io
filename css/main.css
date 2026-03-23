@@ -600,199 +600,8 @@ section { border-bottom: var(--border-thick); }
 .footer-contact a:hover { opacity: 1; text-decoration: underline; }
 
 /* ══════════════════════════════════════════
-   02 — EMPLOYMENT (legacy — not in new layout)
-══════════════════════════════════════════ */
-#employment .emp-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.emp-summary {
-  padding: 2.5rem;
-  border-right: var(--border);
-}
-.emp-summary p {
-  font-weight: 300;
-  line-height: 1.85;
-  font-size: 0.95rem;
-}
-
-.emp-positions { padding: 2.5rem; }
-
-.position-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0 1.25rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(17,17,17,0.12);
-}
-.position-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.pos-year-block {
-  width: 56px;
-  flex-shrink: 0;
-  padding-top: 3px;
-}
-.pos-year {
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--cream);
-  background: var(--blue);
-  display: block;
-  padding: 2px 5px;
-  text-align: center;
-  line-height: 1.4;
-}
-.pos-year.red { background: var(--red); }
-.pos-year.yellow { background: var(--yellow); color: var(--black); }
-
-.pos-details h3 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
-}
-.pos-org {
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--blue);
-  margin-top: 2px;
-}
-.pos-date {
-  font-size: 0.75rem;
-  font-weight: 300;
-  color: var(--gray);
-}
-.pos-bullets {
-  list-style: none;
-  margin-top: 0.65rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-.pos-bullets li {
-  font-size: 0.82rem;
-  font-weight: 300;
-  line-height: 1.55;
-  padding-left: 1rem;
-  position: relative;
-}
-.pos-bullets li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  font-weight: 700;
-  color: var(--red);
-}
-
-/* ══════════════════════════════════════════
-   03 — EDUCATION
-══════════════════════════════════════════ */
-#education .edu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 2.5rem;
-  gap: 2rem;
-}
-
-.edu-card {
-  border: var(--border);
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-/* Top color bar */
-.edu-card::before {
-  content: '';
-  display: block;
-  height: 8px;
-  position: absolute;
-  top: 0; left: 0; right: 0;
-}
-.edu-card:nth-child(1)::before { background: var(--red); }
-.edu-card:nth-child(2)::before { background: var(--blue); }
-.edu-card:nth-child(3)::before { background: var(--yellow); }
-
-/* Giant ghost year */
-.edu-year-ghost {
-  font-size: 5rem;
-  font-weight: 900;
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 2px rgba(17,17,17,0.1);
-  letter-spacing: -0.04em;
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-  display: block;
-}
-.edu-degree {
-  font-size: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-}
-.edu-school { font-weight: 700; font-size: 0.875rem; }
-.edu-field  { font-weight: 300; font-size: 0.8rem; color: var(--gray); margin-top: 2px; }
-
-/* ══════════════════════════════════════════
-   04 — SKILLS
-══════════════════════════════════════════ */
-#skills .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.skill-card {
-  padding: 2rem;
-  border-right: var(--border);
-  border-bottom: var(--border);
-}
-/* Remove right border on last column */
-.skill-card:nth-child(3n) { border-right: none; }
-/* Remove bottom border on last row (3 cards) */
-.skill-card:nth-last-child(-n+3) { border-bottom: none; }
-
-.skill-card h3 {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  padding-bottom: 0.6rem;
-  margin-bottom: 1.25rem;
-  border-bottom: 3px solid;
-}
-/* Cycle colors across any number of cards */
-.skill-card:nth-child(3n+1) h3 { color: var(--red);  border-color: var(--red); }
-.skill-card:nth-child(3n+2) h3 { color: var(--blue); border-color: var(--blue); }
-.skill-card:nth-child(3n)   h3 { color: #b38900;     border-color: var(--yellow); }
-
-/* Skill chips */
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-.skill-tag {
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  padding: 3px 9px;
-  border: 1.5px solid var(--black);
-  line-height: 1.5;
-}
-
-/* ══════════════════════════════════════════
    05 — PROJECTS
 ══════════════════════════════════════════ */
-#projects .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .project-card {
   display: flex;
   flex-direction: column;
@@ -845,22 +654,10 @@ section { border-bottom: var(--border-thick); }
   flex: 1;
   margin-bottom: 1.25rem;
 }
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
 
 /* ══════════════════════════════════════════
    06 — GRANTS
 ══════════════════════════════════════════ */
-#grants .grants-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  padding: 2.5rem;
-}
-
 .grant-card {
   border: var(--border);
   overflow: hidden;
@@ -942,15 +739,8 @@ section { border-bottom: var(--border-thick); }
 .grant-card.pending   .grant-role { border-color: #a07800;     color: #a07800; }
 
 /* ══════════════════════════════════════════
-   07 — RESEARCH
+  PUBLICATION LIST STYLES
 ══════════════════════════════════════════ */
-#research .research-content {
-  padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
 .research-sub h3 {
   font-size: 0.62rem;
   font-weight: 700;
@@ -1106,33 +896,8 @@ footer {
   /* Current Projects */
   #current-projects .grants-grid { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem; }
 
-  /* Employment (legacy) */
-  #employment .emp-grid { grid-template-columns: 1fr; }
-  .emp-summary { border-right: none; border-bottom: var(--border); }
-
-  /* Education (legacy) */
-  #education .edu-grid { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem; }
-
-  /* Skills (legacy) — 2-col at tablet */
-  #skills .skills-grid { grid-template-columns: 1fr 1fr; }
-  .skill-card:nth-child(3n)          { border-right: var(--border); }
-  .skill-card:nth-child(2n)          { border-right: none; }
-  .skill-card:nth-last-child(-n+3)   { border-bottom: var(--border); }
-  .skill-card:last-child,
-  .skill-card:nth-last-child(-n+2):nth-child(odd) { border-bottom: none; }
-  /* Grants (legacy) */
-  #grants .grants-grid { grid-template-columns: 1fr; gap: 1.25rem; padding: 1.5rem; }
-
-  /* Projects (legacy) */
-  #projects .projects-grid { grid-template-columns: 1fr; }
-  .project-card             { border-right: none; }
-  .project-card:nth-child(5),
-  .project-card:nth-child(6) { border-bottom: var(--border); }
-  .project-card:last-child   { border-bottom: none; }
-
   /* Section header */
   .section-header { padding: 1rem 1.5rem; }
-  #research .research-content { padding: 1.5rem; }
 }
 
 @media (max-width: 500px) {
@@ -1142,10 +907,5 @@ footer {
   .domain-card { padding: 1.5rem; }
   .engage-card { padding: 1.5rem; }
   .stat-item { padding: 1.25rem 1.5rem; }
-  #skills .skills-grid { grid-template-columns: 1fr; }
-  .skill-card { border-right: none !important; border-bottom: var(--border) !important; }
-  .skill-card:last-child { border-bottom: none !important; }
-  #education .edu-grid { padding: 1rem; }
-  .emp-summary, .emp-positions { padding: 1.5rem; }
   footer { padding: 1.5rem; }
 }
