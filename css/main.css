@@ -310,7 +310,7 @@ h2.h {
 
 /* ---- stats strip ---------------------------------------------------------- */
 .stats {
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(4, 1fr);
   border: 1px solid var(--hairline); border-radius: 12px;
   background: rgba(255,255,255,0.015); overflow: hidden; margin-bottom: 26px;
 }
@@ -321,7 +321,7 @@ h2.h {
   color: var(--ink); letter-spacing: -0.01em; margin-bottom: 7px;
 }
 .stat:nth-child(1) .n { color: var(--s-amber); }
-.stat:nth-child(3) .n { color: var(--s-teal); }
+.stat:nth-child(2) .n { color: var(--s-teal); }
 .stat .l { font: 400 0.76rem/1.35 var(--font-mono); color: var(--muted); }
 
 /* ---- intro bar ------------------------------------------------------------ */
