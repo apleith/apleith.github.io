@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Aperture emblem">
+  <circle cx="120" cy="120" r="95" fill="none" stroke="#646E7C" stroke-opacity="0.42" stroke-width="1"/>
+  <circle cx="120" cy="120" r="58" fill="none" stroke="#646E7C" stroke-opacity="0.32" stroke-width="1"/>
+  <path d="M 86.65 45.09 A 82 82 0 0 1 153.35 45.09" fill="none" stroke="#0072B2" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 168.20 53.66 A 82 82 0 0 1 201.55 111.43" fill="none" stroke="#009E73" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 201.55 128.57 A 82 82 0 0 1 168.20 186.34" fill="none" stroke="#E69F00" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 153.35 194.91 A 82 82 0 0 1 86.65 194.91" fill="none" stroke="#E05A4A" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 71.80 186.34 A 82 82 0 0 1 38.45 128.57" fill="none" stroke="#CC79A7" stroke-width="13" stroke-linecap="round"/>
+  <path d="M 38.45 111.43 A 82 82 0 0 1 71.80 53.66" fill="none" stroke="#7A79C0" stroke-width="13" stroke-linecap="round"/>
+  <polygon points="137.00,90.56 154.00,120.00 137.00,149.44 103.00,149.44 86.00,120.00 103.00,90.56" fill="none" stroke="#CED3D9" stroke-opacity="0.5" stroke-width="1.4"/>
+  <line x1="137.00" y1="90.56" x2="154.50" y2="60.24" stroke="#646E7C" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="154.00" y1="120.00" x2="189.00" y2="120.00" stroke="#646E7C" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="137.00" y1="149.44" x2="154.50" y2="179.76" stroke="#646E7C" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="103.00" y1="149.44" x2="85.50" y2="179.76" stroke="#646E7C" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="86.00" y1="120.00" x2="51.00" y2="120.00" stroke="#646E7C" stroke-opacity="0.5" stroke-width="1"/>
+  <line x1="103.00" y1="90.56" x2="85.50" y2="60.24" stroke="#646E7C" stroke-opacity="0.5" stroke-width="1"/>
+  <circle cx="120" cy="117.00" r="8.2" fill="#CED3D9"/>
+  <polygon points="115.80,121.51 124.20,121.51 126.80,137.00 113.20,137.00" fill="#CED3D9"/>
+</svg>

@@ -1,0 +1,15 @@
+Fonts self-hosted for apleith.com. All four are licensed under the SIL Open
+Font License, Version 1.1 (https://scripts.sil.org/OFL). Subset to Latin and
+common punctuation, converted to WOFF2. Original copyright holders:
+
+  archivo.woff2       Archivo            (c) The Archivo Project Authors
+                                         https://github.com/Omnibus-Type/Archivo
+  jakarta.woff2       Plus Jakarta Sans  (c) 2020 Tokotype
+                                         https://github.com/tokotype/PlusJakartaSans
+  spline-mono.woff2   Spline Sans Mono   (c) The Spline Sans Mono Project Authors
+                                         https://github.com/SorkinType/SplineSansMono
+  newsreader.woff2    Newsreader         (c) 2019 Production Type
+                                         https://github.com/productiontype/Newsreader
+
+The OFL permits redistribution and web embedding. Full license text ships with
+each upstream project at the URLs above.

@@ -17,6 +17,36 @@ blockers: "None."
 
 GitHub Pages site for Dr. Alex Leith's personal/faculty homepage at `apleith.com`. Repo: [`apleith/apleith.github.io`](https://github.com/apleith/apleith.github.io). On-disk: `D:\OneDrive - Southern Illinois University Edwardsville\websites\apleith.github.io\`.
 
+## 2026-07-19 — "Instrument" rebrand (retires IDE/Dracula)
+
+Full identity rebuild to the shared **AURA Lab × SIM DAD LLC** system, derived from the joint
+wallpaper (`C:\pythia\brand\wallpapers\aura-simdad-wallpaper.py`). The IDE/Dracula chrome is retired.
+
+### What changed
+- **New design system** — dark graph-paper ground (`#101113→#1B1E24`), aperture-ring emblem, the
+  colorblind-safe **Okabe-Ito + AURA-brick** 6-color spectrum color-coding the six sections, SIUE red
+  (`#E5182D`) as a single institutional accent tick. Type: Archivo (display) · Plus Jakarta Sans (body)
+  · Spline Sans Mono (labels) · Newsreader (citations).
+- **`css/main.css`** — rewritten (instrument system); old IDE/Dracula sheet archived to
+  `css/_archive/main-ide-dracula.css`.
+- **`index.html` / `info.html`** — rebuilt on a shared shell: sticky brand bar, right **spectrum rail**
+  (scrollspy) that collapses to a top progress bar < 1100px, hero with inline-SVG emblem, section cards.
+- **`js/main.js`** — rewritten to IntersectionObserver scrollspy + progress bar; old script archived to
+  `js/_archive/main-ide.js`. Drops the fake Ln/Col + tab logic.
+- **Self-contained** — fonts self-hosted as WOFF2 in `fonts/` (dropped Google Fonts + cdnjs Font Awesome
+  + imgur favicon); icons are inline SVG. Emblem/favicon/OG assets generated from
+  `brand/wallpapers` geometry (`images/aperture.svg`, `favicon.svg/png`, `images/og-card.png`).
+- **`theory/`** — dead microsite (rebuilt on AURA Lab); `theory/index.html` now redirects to
+  `aura-lab-siue.github.io`, old page preserved in `theory/_archive/`.
+- **Accessibility** — WCAG 2.1 AA + 2.2: verified contrast (accent-text uses ≥4.5 variants), color never
+  the sole cue, `:focus-visible` rings, `scroll-margin-top`, ≥24px targets, reduced-motion + forced-colors +
+  prefers-contrast handling.
+
+### Verification
+Served locally, checked in Chrome (narrow viewport): hero, all six section-coded sections, stats strip,
+scrollspy progress bar tracks section hue, footer; zero console errors. `files/Leith_CV.pdf` untouched.
+Desktop rail (≥1100px) verified by markup + CSS media query (side-panel constrained the screenshot width).
+
 ## 2026-05-21 PM — Phase 2: info.html → contact.md SHIPPED
 
 ### What changed
