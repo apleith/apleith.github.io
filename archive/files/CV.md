@@ -57,10 +57,6 @@ Beyea, D., Foxman, M., Ratan, R., Klebig, B., Leith, A. P., & Chen, V. H. H. (20
 Funding
 External Funding (Completed)
 NSF FW-HTF-R, Co-PI. Virtual Meeting Support for Enhanced Well-Being and Equity for Game Developers. $1,599,851; 2021-2025.
-External Funding (Pending)
-NSF Future CoRe (HCC), PI. Distributed AI Agents for Scalable Interaction Modeling and Feedback Aggregation in Technical Learning. $496,521; 06/2026-05/2030; SIUE.
-Wellcome (University of Zambia), Co-Investigator—SIUE Lead. AI- and IoT-Driven Innovations for Malaria and Insect Vector Surveillance and Control. $800,044; 01/2026-12/2030; UNZA.
-NSF Collaborative Research, PI (SIUE site). Improving Equity and Wellbeing in Virtual Classrooms via AI-enhanced Avatars. $49,999; 05/2025-05/2028; SIUE.
 Internal Funding
 Leith, A. P. (2023-2024). OER Adoption, Adaptation, and Implementation Incentive Program. $6,088.
 Leith, A. P. (2021-2022). New Faculty Incentive Program. $2,000.

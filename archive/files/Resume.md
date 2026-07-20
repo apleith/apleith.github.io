@@ -22,12 +22,11 @@ Southern Illinois University Edwardsville — Dept. of Mass Communications | Dir
 •	Directed the SIM Lab; oversaw 10+ concurrent research projects spanning social VR, virtual meetings, parasocial media, and AI-mediated communication; co-led cross-institutional team of 30+ researchers and developers across MSU, SIUE, and partner institutions.
 •	Executed a 5-study mixed-methods NSF research program on virtual meeting platform design: NLP/STM corpus analysis (1.4M+ tweets); large-scale survey (N=2,448); semi-structured interviews (N=38); controlled experiment on UI features; and prototype/user testing of a VR meeting platform — identifying a 45-minute engagement threshold with direct design implications.
 •	Co-PI on NSF FW-HTF-R ($1,599,851; completed 2025): produced 13 peer-reviewed publications, 7 conference proceedings, and formal data partnerships with VRChat and Riot Games.
-•	PI on NSF Future CoRe ($496,521 submitted): developing distributed AI agents for scalable interaction modeling and automated feedback in technical learning environments.
 •	Designed and ran a 15-week longitudinal VR class study (30 participants, 377 surveys, 22 sessions): produced first empirical threshold data on optimal VR session duration and social presence outcomes.
 •	Engineered and maintained PostgreSQL databases for NSF research corpora: 1.4M+ VRChat tweets and 1.4M+ remote work tweets; built R-based ingestion pipelines enabling efficient STM and sentiment querying.
 •	Co-founded Meaningful XR (meaningfulxr.org), an annual peer-reviewed academic conference for XR research, now in its third year (MXR 2026, University of Oregon Portland).
 •	Taught 490+ students across research methods, data analytics, social media analytics, and web design courses; designed all syllabi from scratch; published open-access OER textbook on quantitative methods in R.
-•	Secured $70,458 in direct NSF funding; two additional grants pending ($496,521 + $49,999 NSF; $800,044 Wellcome/UNZA as Co-I).
+•	Secured $70,458 in direct NSF funding.
 Graduate Research Assistant	Sep 2012 – May 2017
 Michigan State University — Dept. of Media & Information  |  East Lansing, MI
 •	Designed and built a distributed PostgreSQL + Python data pipeline (Raspberry Pi cluster) to collect 321M+ Twitch chat messages across 117,943 channels; developed original NLP verbal immediacy scoring methodology — github.com/apleith/dissertation_logger
@@ -58,9 +57,6 @@ SELECTED PUBLICATIONS
 Full publication list: apleith.github.io
 GRANTS & FUNDING
 •	NSF FW-HTF-R, Co-PI (Completed): Virtual Meeting Support for Well-Being and Equity for Game Developers — $1,599,851 (2021–2025)
-•	NSF Future CoRe (HCC), PI (Submitted/Under Review): Distributed AI Agents for Scalable Interaction Modeling — $496,521 (2026–2030)
-•	Wellcome/UNZA, Co-I — SIUE Lead (Submitted/Under Review): AI- and IoT-Driven Malaria Surveillance — $800,044 (2026–2030)
-•	NSF Collaborative Research, PI — SIUE Site (Submitted/Under Review): Equity in Virtual Classrooms via AI-Enhanced Avatars — $49,999 (2025–2028)
 •	OER Adoption & Implementation Incentive — $6,088 (2023–2024)
 EDUCATION
 Ph.D., Information and Media	2019
