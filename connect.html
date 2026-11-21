@@ -75,6 +75,12 @@
   .field-row input[aria-invalid="true"]{border-color:var(--pink)}
   .err{margin:.35rem 0 0;color:var(--pink);font-size:.85rem;font-weight:600}
   .err[hidden]{display:none}
+  .or{margin:.9rem 0 .5rem;color:var(--soft);font-size:.9rem}
+  .split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+  .alt-btn{flex-direction:column;gap:.1rem;border-radius:12px;padding:.6rem .75rem;color:var(--ink);background:transparent;border:1px solid var(--ring)}
+  .alt-btn:hover{border-color:var(--muted);background:var(--ground)}
+  .alt-btn b{font-weight:600;font-size:.95rem}
+  .alt-btn span{font-weight:500;font-size:.8rem;color:var(--soft);overflow-wrap:anywhere}
   .fine{margin:.85rem 0 0;color:var(--muted);font-size:.85rem;line-height:1.45}
   .alt{display:inline-block;margin-top:.6rem;color:var(--pink);font-weight:600;font-size:.9rem;text-underline-offset:.2em}
   .mine{margin-top:1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
@@ -144,10 +150,15 @@
           <label for="where">Where we met <span>(optional)</span></label>
           <input id="where" name="where" type="text" autocapitalize="sentences" enterkeyhint="send" placeholder="Conference, session, or hallway" />
         </div>
-        <button class="btn send" type="submit">
+        <button class="btn send" type="submit" data-to="alex.leith@gmail.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
           Open my email
         </button>
+        <p class="or" id="or-h">Or send it to the inbox that fits:</p>
+        <div class="split" role="group" aria-labelledby="or-h">
+          <button class="btn alt-btn" type="submit" data-to="aleith@siue.edu"><b>Academic</b><span>aleith@siue.edu</span></button>
+          <button class="btn alt-btn" type="submit" data-to="ap@simdadllc.com"><b>Business</b><span>ap@simdadllc.com</span></button>
+        </div>
       </form>
       <p class="fine">Nothing is saved or tracked on this page. I get only what you send, and I use it to follow up with you.</p>
       <a class="alt" href="https://www.linkedin.com/in/apleith/">No email app? Connect on LinkedIn</a>
@@ -235,7 +246,7 @@
   });
 
   // Give-back: build a prefilled email in the visitor's own mail app. No server, no storage.
-  const SWAP_TO = "aleith@siue.edu";
+  const SWAP_TO = "alex.leith@gmail.com";   // default inbox (Enter key and the main button)
   const form = document.getElementById("swap");
   const who = document.getElementById("who");
   const whoErr = document.getElementById("who-err");
@@ -255,7 +266,8 @@
       "",
       ""
     ].join("\r\n");
-    window.location.href = `mailto:${SWAP_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const to = (e.submitter && e.submitter.dataset.to) || SWAP_TO;
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 </script>
 </body>
