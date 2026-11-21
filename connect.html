@@ -49,12 +49,36 @@
   .roles{list-style:none;margin:1.25rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem 1.5rem;font-weight:600;font-size:.95rem}
   .roles span{display:block;color:var(--muted);font-weight:500;font-size:.85rem}
   .intro{margin:1.5rem 0 0;color:var(--soft);max-width:40ch}
-  .save{margin-top:1.5rem;display:inline-flex;align-items:center;gap:.55rem;font:600 .95rem var(--body);cursor:pointer;
-    color:var(--ground);background:var(--ink);border:0;border-radius:999px;padding:.8rem 1.35rem;
-    transition:background-color .15s ease-out,transform .15s ease-out}
-  .save:hover{background:#fff}
-  .save:active{transform:translateY(1px)}
-  .save svg{width:1rem;height:1rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:600 1rem var(--body);cursor:pointer;
+    border-radius:999px;padding:.85rem 1.4rem;min-height:3rem;
+    transition:background-color .15s ease-out,border-color .15s ease-out,transform .15s ease-out}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:1rem;height:1rem}
+  .send{color:var(--ground);background:var(--ink);border:0;width:100%}
+  .send:hover{background:#fff}
+  .save{color:var(--ink);background:transparent;border:1px solid var(--ring)}
+  .save:hover{border-color:var(--muted);background:var(--raise)}
+
+  /* ---- give-back: the visitor's half of the swap ---- */
+  .swap{margin-top:2rem;padding:1.35rem 1.25rem 1.4rem;background:var(--raise);border:1px solid var(--hair);border-radius:14px}
+  .swap h2{margin:0 0 .3rem;font-size:1.3rem}
+  .swap .lede{margin:0 0 1.1rem;color:var(--soft);font-size:.95rem}
+  .field-row{margin:0 0 .9rem}
+  .field-row label{display:block;font-weight:600;font-size:.9rem;margin:0 0 .35rem}
+  .field-row label span{color:var(--muted);font-weight:500}
+  .field-row input{width:100%;font:500 1rem var(--body);color:var(--ink);caret-color:var(--pink);
+    background:var(--ground);border:1px solid var(--ring);border-radius:10px;padding:.75rem .85rem;min-height:3rem;
+    transition:border-color .15s ease-out}
+  .field-row input::placeholder{color:var(--muted);opacity:1}
+  .field-row input:hover{border-color:#4a4f57}
+  .field-row input:focus-visible{outline:3px solid var(--focus);outline-offset:1px;border-color:var(--focus)}
+  .field-row input[aria-invalid="true"]{border-color:var(--pink)}
+  .err{margin:.35rem 0 0;color:var(--pink);font-size:.85rem;font-weight:600}
+  .err[hidden]{display:none}
+  .fine{margin:.85rem 0 0;color:var(--muted);font-size:.85rem;line-height:1.45}
+  .alt{display:inline-block;margin-top:.6rem;color:var(--pink);font-weight:600;font-size:.9rem;text-underline-offset:.2em}
+  .mine{margin-top:1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
+  .mine p{margin:0;color:var(--soft);font-size:.95rem}
 
   /* ---- sections ---- */
   main{padding-bottom:3rem}
@@ -105,11 +129,36 @@
       <li>Director<span>AURA Lab, SIUE</span></li>
       <li>Founder<span>SIM DAD LLC</span></li>
     </ul>
-    <p class="intro">Thanks for scanning. I wear three hats. Pick the door that fits why we crossed paths, or save my contact.</p>
-    <button class="save" id="vcard" type="button">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg>
-      Save my contact
-    </button>
+    <p class="intro">Thanks for scanning. I wear three hats. Send me your contact, save mine, or pick the door that fits why we crossed paths.</p>
+
+    <section class="swap" aria-labelledby="swap-h">
+      <h2 id="swap-h">Send me yours</h2>
+      <p class="lede">Two fields, then your email app opens with a short note to me. Hit send and I have your contact.</p>
+      <form id="swap" novalidate>
+        <div class="field-row">
+          <label for="who">Your name</label>
+          <input id="who" name="who" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" required aria-describedby="who-err" />
+          <p class="err" id="who-err" hidden>Add your name so I know who wrote.</p>
+        </div>
+        <div class="field-row">
+          <label for="where">Where we met <span>(optional)</span></label>
+          <input id="where" name="where" type="text" autocapitalize="sentences" enterkeyhint="send" placeholder="Conference, session, or hallway" />
+        </div>
+        <button class="btn send" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+          Open my email
+        </button>
+      </form>
+      <p class="fine">Nothing is saved or tracked on this page. I get only what you send, and I use it to follow up with you.</p>
+      <a class="alt" href="https://www.linkedin.com/in/apleith/">No email app? Connect on LinkedIn</a>
+    </section>
+
+    <div class="mine">
+      <button class="btn save" id="vcard" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><polyline points="7 10 12 15 17 10"/><path d="M5 21h14"/></svg>
+        Save my contact
+      </button>
+    </div>
   </header>
 
   <main>
@@ -183,6 +232,30 @@
     const blob=new Blob([vcf],{type:"text/vcard"});
     const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="AP-Leith.vcf";
     document.body.appendChild(a);a.click();a.remove();
+  });
+
+  // Give-back: build a prefilled email in the visitor's own mail app. No server, no storage.
+  const SWAP_TO = "aleith@siue.edu";
+  const form = document.getElementById("swap");
+  const who = document.getElementById("who");
+  const whoErr = document.getElementById("who-err");
+  const where = document.getElementById("where");
+  who.addEventListener("input",()=>{ if(who.value.trim()){ who.removeAttribute("aria-invalid"); whoErr.hidden=true; } });
+  where.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); form.requestSubmit(); } });
+  form.addEventListener("submit",e=>{
+    e.preventDefault();
+    const name = who.value.trim();
+    const met = where.value.trim();
+    if(!name){ who.setAttribute("aria-invalid","true"); whoErr.hidden=false; who.focus(); return; }
+    const subject = met ? `${name}, from ${met}` : `${name}, from your card`;
+    const body = [
+      "Hi Alex.",
+      "",
+      met ? `This is ${name}. We met at ${met}.` : `This is ${name}. We met and you gave me your card.`,
+      "",
+      ""
+    ].join("\r\n");
+    window.location.href = `mailto:${SWAP_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 </script>
 </body>
