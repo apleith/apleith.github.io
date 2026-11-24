@@ -6,7 +6,7 @@
 
    Accessibility: WCAG 2.1 AA + 2.2.
    Contrast vs ground #101113 (verified):
-     ink #EFEBE3 ~15:1 · teal 5.5 · amber 8.3 · brick 5.1 · pink 6.1 · indigo 4.7
+     ink #EFEBE3 ~15:1 · teal 6.3 · amber 8.3 · brick 6.2 · pink 6.1 · indigo 6.2
      blue #0072B2 3.6 (graphical/large only) -> text uses --s-blue-text 4.5+
    Color is never the sole cue: every hue is paired with a number/label/icon.
    ============================================================================= */
@@ -50,11 +50,11 @@
 
   /* spectrum — Okabe-Ito + AURA brick */
   --s-blue:   #0072b2;  --s-blue-text: #4fa6db;
-  --s-teal:   #009e73;
+  --s-teal:   #00a97b;
   --s-amber:  #e69f00;
-  --s-brick:  #e05a4a;
+  --s-brick:  #e87061;
   --s-pink:   #cc79a7;
-  --s-indigo: #7a79c0;
+  --s-indigo: #8e8dcc;
 
   --focus: #f3c14b;       /* focus ring — high contrast on ground */
 
@@ -116,6 +116,7 @@ a:hover { color: var(--ink); }
 .skip-link {
   position: absolute; left: 12px; top: -60px;
   background: var(--ink); color: var(--ground-top);
+  display: inline-flex; align-items: center; min-height: 44px;
   padding: 10px 16px; border-radius: 8px; font: 600 0.9rem var(--font-mono);
   z-index: 100; transition: top 0.15s ease;
 }
@@ -132,7 +133,7 @@ a:hover { color: var(--ink); }
   border-bottom: 1px solid var(--hairline-2);
 }
 .brand {
-  display: inline-flex; align-items: center; gap: 11px;
+  display: inline-flex; align-items: center; gap: 11px; min-height: 44px;
   color: var(--ink); text-decoration: none;
   font: 800 0.98rem/1 var(--font-display);
   letter-spacing: 0.14em; text-transform: uppercase;
@@ -228,8 +229,11 @@ h2.h {
   margin: 0 0 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 0 10px;
 }
 .role .sep { width: 2px; height: 15px; background: var(--siue-red); display: inline-block; }
-.role a { color: var(--s-teal); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--s-teal) 45%, transparent); }
-.role a:hover { color: var(--ink); border-color: var(--ink); }
+.role a, .id-half .role-o a {
+  color: var(--s-teal); padding: 14px 0;
+  text-decoration: underline 1px color-mix(in srgb, var(--s-teal) 45%, transparent); text-underline-offset: 3px;
+}
+.role a:hover, .id-half .role-o a:hover { color: var(--ink); text-decoration-color: var(--ink); }
 
 /* dual-identity signature — two equal halves split by the SIUE-red tick,
    echoing the wallpaper's "AURA LAB | SIM DAD LLC" lockup */
@@ -239,8 +243,6 @@ h2.h {
 .id-half { display: flex; flex-direction: column; gap: 3px; }
 .id-half .role-t { font: 700 0.98rem/1.3 var(--font-display); color: var(--ink); letter-spacing: -0.005em; }
 .id-half .role-o { font: 400 0.86rem/1.4 var(--font-body); color: var(--muted); }
-.id-half .role-o a { color: var(--s-teal); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--s-teal) 45%, transparent); }
-.id-half .role-o a:hover { color: var(--ink); border-color: var(--ink); }
 .id-div { width: 2px; align-self: stretch; background: var(--siue-red); flex: 0 0 auto; border-radius: 2px; }
 @media (max-width: 560px) {
   .identity { flex-direction: column; gap: 12px; }
@@ -293,6 +295,7 @@ h2.h {
   margin: 10px 0 0; letter-spacing: 0.01em;
 }
 .panel a { color: var(--s-blue-text); }
+.panel .meta a { padding: 15px 0; }
 
 /* grant variant */
 .panel.grant .grant-top {
@@ -339,7 +342,7 @@ h2.h {
 }
 .contact-line a { color: var(--s-pink); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--s-pink) 45%, transparent); }
 .contact-line a:hover { color: var(--ink); border-color: var(--ink); }
-.contact-line .sep { color: var(--slate); }
+.contact-line .sep { color: var(--muted); }
 
 /* ---- publications --------------------------------------------------------- */
 .pubs { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
